@@ -1,0 +1,54 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /home/dieter/Develop/esp/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/home/dieter/Develop/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/bin/ld: cannot find crt1-sim.o: Datei oder Verzeichnis nicht gefunden
+/home/dieter/Develop/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/bin/ld: cannot find _vectors.o: Datei oder Verzeichnis nicht gefunden
+/home/dieter/Develop/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/bin/ld: cannot find -lsim
+/home/dieter/Develop/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/bin/ld: cannot find -lhandlers-sim
+/home/dieter/Develop/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/bin/ld: cannot find -lhal
+collect2: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /home/dieter/Develop/esp/xtensa-esp32-elf/bin/xtensa-esp32-elf-g++ 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/home/dieter/Develop/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/bin/ld: cannot find crt1-sim.o: Datei oder Verzeichnis nicht gefunden
+/home/dieter/Develop/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/bin/ld: cannot find _vectors.o: Datei oder Verzeichnis nicht gefunden
+/home/dieter/Develop/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/bin/ld: cannot find -lsim
+/home/dieter/Develop/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/bin/ld: cannot find -lhandlers-sim
+/home/dieter/Develop/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/bin/ld: cannot find -lhal
+collect2: error: ld returned 1 exit status
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /home/dieter/Develop/others/esp-idf-m5stick/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_44c34/fast"
+/usr/bin/make -f CMakeFiles/cmTC_44c34.dir/build.make CMakeFiles/cmTC_44c34.dir/build
+make[1]: Verzeichnis „/home/dieter/Develop/others/esp-idf-m5stick/CMakeFiles/CMakeTmp“ wird betreten
+Building C object CMakeFiles/cmTC_44c34.dir/testCCompiler.c.o
+/home/dieter/Develop/esp/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc    -o CMakeFiles/cmTC_44c34.dir/testCCompiler.c.o   -c /home/dieter/Develop/others/esp-idf-m5stick/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_44c34
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_44c34.dir/link.txt --verbose=1
+/home/dieter/Develop/esp/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc      CMakeFiles/cmTC_44c34.dir/testCCompiler.c.o  -o cmTC_44c34 
+/home/dieter/Develop/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/bin/ld: cannot find crt1-sim.o: Datei oder Verzeichnis nicht gefunden
+/home/dieter/Develop/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/bin/ld: cannot find _vectors.o: Datei oder Verzeichnis nicht gefunden
+/home/dieter/Develop/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/bin/ld: cannot find -lsim
+/home/dieter/Develop/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/bin/ld: cannot find -lhandlers-sim
+/home/dieter/Develop/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/bin/ld: cannot find -lhal
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_44c34.dir/build.make:97: recipe for target 'cmTC_44c34' failed
+make[1]: *** [cmTC_44c34] Error 1
+make[1]: Verzeichnis „/home/dieter/Develop/others/esp-idf-m5stick/CMakeFiles/CMakeTmp“ wird verlassen
+Makefile:126: recipe for target 'cmTC_44c34/fast' failed
+make: *** [cmTC_44c34/fast] Error 2
+
+
