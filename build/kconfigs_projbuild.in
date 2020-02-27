@@ -1,0 +1,5 @@
+source "/home/dieter/Development/esp-idf/components/app_update/Kconfig.projbuild"
+source "/home/dieter/Development/M5_Projekt_Ei/components/arduino/Kconfig.projbuild"
+source "/home/dieter/Development/esp-idf/components/bootloader/Kconfig.projbuild"
+source "/home/dieter/Development/esp-idf/components/esptool_py/Kconfig.projbuild"
+source "/home/dieter/Development/esp-idf/components/partition_table/Kconfig.projbuild"
