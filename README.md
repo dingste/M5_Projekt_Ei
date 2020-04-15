@@ -1,4 +1,9 @@
 # esp-idf-m5stick
+
+current for Stick
+should also work with stack
+including GATT
+
 Example code for driving M5Stick OLED display using ESP-IDF's SPI driver.   
 
 ```

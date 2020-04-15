@@ -137,13 +137,13 @@ esp_app_desc:
 	.word	-1412606926
 	.word	0
 	.zero	8
-	.string	"e8ac629-dirty"
+	.string	"6ef057c-dirty"
 	.zero	18
 	.string	"m5Stick"
 	.zero	24
-	.string	"18:38:16"
+	.string	"10:00:06"
 	.zero	7
-	.string	"Feb 28 2020"
+	.string	"Apr 15 2020"
 	.zero	4
 	.string	"v4.1-dev-1086-g93a8603c5-dirty"
 	.zero	1
