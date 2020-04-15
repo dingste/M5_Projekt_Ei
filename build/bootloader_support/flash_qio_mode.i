@@ -1002,36 +1002,6 @@ __attribute__((__noreturn__)) void
 
 
 # 21 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h"
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 1
-# 17 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h"
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
-       
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 1 3 4
-# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
-void __assert (const char *, int, const char *)
-     __attribute__ ((__noreturn__));
-void __assert_func (const char *, int, const char *, const char *)
-     __attribute__ ((__noreturn__));
-# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-# 18 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 2
-# 21 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-
-
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h"
-       
-# 24 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-# 26 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
 # 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
 
 # 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
@@ -1945,7 +1915,20 @@ _putchar_unlocked(int _c)
 # 797 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
 
 # 18 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
+# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
+       
 
+
+
+# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 1 3 4
+# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
+void __assert (const char *, int, const char *)
+     __attribute__ ((__noreturn__));
+void __assert_func (const char *, int, const char *, const char *)
+     __attribute__ ((__noreturn__));
+# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
+# 19 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h" 2
 
 
 
@@ -1970,15 +1953,6 @@ void _esp_error_check_failed_without_abort(esp_err_t rc, const char *file, int l
 # 21 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
 # 1 "/home/dieter/Development/esp-idf/components/xtensa/include/esp_attr.h" 1
 # 22 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h" 2
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/spi_reg.h" 1
-# 18 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/spi_reg.h"
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/spi_reg.h" 2
-# 27 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h" 2
 # 132 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
 typedef enum {
     ESP_ROM_SPIFLASH_QIO_MODE = 0,
@@ -2756,7 +2730,20 @@ extern spi_dev_t SPI1;
 extern spi_dev_t SPI2;
 extern spi_dev_t SPI3;
 # 27 "/home/dieter/Development/esp-idf/components/bootloader_support/src/flash_qio_mode.c" 2
+# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/spi_reg.h" 1
+# 18 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/spi_reg.h"
+# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 1
+# 20 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h"
+# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 1
+# 21 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
 
+
+# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h" 1
+# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h"
+       
+# 24 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
+# 19 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/spi_reg.h" 2
+# 28 "/home/dieter/Development/esp-idf/components/bootloader_support/src/flash_qio_mode.c" 2
 
 
 

@@ -1147,37 +1147,6 @@ typedef __gnuc_va_list va_list;
 # 19 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
 # 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdbool.h" 1 3 4
 # 20 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
-
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h"
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 1
-# 17 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h"
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
-       
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 1 3 4
-# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
-void __assert (const char *, int, const char *)
-     __attribute__ ((__noreturn__));
-void __assert_func (const char *, int, const char *, const char *)
-     __attribute__ ((__noreturn__));
-# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-# 18 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 2
-# 21 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-
-
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h"
-       
-# 24 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-# 26 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
 # 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
 
 # 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
@@ -3108,7 +3077,28 @@ _putchar_unlocked(int _c)
 # 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h" 1
 # 14 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h"
        
-# 24 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h"
+
+
+
+# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
+# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
+       
+
+
+
+# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 1 3 4
+# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
+void __assert (const char *, int, const char *)
+     __attribute__ ((__noreturn__));
+void __assert_func (const char *, int, const char *, const char *)
+     __attribute__ ((__noreturn__));
+# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
+# 19 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h" 2
+
+
+
+
+
 
 # 24 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h"
 typedef int32_t esp_err_t;
@@ -3314,203 +3304,6 @@ void heap_caps_dump_all(void);
 # 338 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
 size_t heap_caps_get_allocated_size( void *ptr );
 # 88 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 2
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-       
-
-
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/include/esp_attr.h" 1
-# 23 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 2
-# 61 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-typedef struct {
-    const char *name;
-    uint32_t caps[3];
-    
-# 64 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-   _Bool 
-# 64 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-        aliased_iram;
-    
-# 65 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-   _Bool 
-# 65 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-        startup_stack;
-} soc_memory_type_desc_t;
-
-
-extern const soc_memory_type_desc_t soc_memory_types[];
-extern const size_t soc_memory_type_count;
-
-
-
-typedef struct
-{
-    intptr_t start;
-    size_t size;
-    size_t type;
-    intptr_t iram_address;
-} soc_memory_region_t;
-
-extern const soc_memory_region_t soc_memory_regions[];
-extern const size_t soc_memory_region_count;
-
-
-
-
-typedef struct
-{
-    intptr_t start;
-    intptr_t end;
-} soc_reserved_region_t;
-# 136 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-size_t soc_get_available_memory_regions(soc_memory_region_t *regions);
-
-
-
-
-
-size_t soc_get_available_memory_region_max_count(void);
-
-inline static 
-# 144 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 144 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "0"))) esp_ptr_dma_capable(const void *p)
-{
-    return (intptr_t)p >= 0x3FFAE000 && (intptr_t)p < 0x40000000;
-}
-
-inline static 
-# 149 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 149 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "1"))) esp_ptr_word_aligned(const void *p)
-{
-    return ((intptr_t)p) % 4 == 0;
-}
-
-inline static 
-# 154 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 154 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "2"))) esp_ptr_executable(const void *p)
-{
-    intptr_t ip = (intptr_t) p;
-    return (ip >= 0x400D0000 && ip < 0x40400000)
-        || (ip >= 0x40080000 && ip < 0x400A0000)
-        || (ip >= 0x400C0000 && ip < 0x400C2000);
-}
-
-inline static 
-# 162 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 162 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "3"))) esp_ptr_byte_accessible(const void *p)
-{
-    intptr_t ip = (intptr_t) p;
-    
-# 165 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-   _Bool 
-# 165 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-        r;
-    r = (ip >= 0x3FF90000 && ip < 0x40000000);
-
-
-
-
-
-
-
-    return r;
-}
-
-inline static 
-# 177 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 177 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "4"))) esp_ptr_internal(const void *p) {
-    
-# 178 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-   _Bool 
-# 178 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-        r;
-    r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x400C2000);
-    r |= ((intptr_t)p >= 0x50000000 && (intptr_t)p < 0x50002000);
-    return r;
-}
-
-
-inline static 
-# 185 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 185 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "5"))) esp_ptr_external_ram(const void *p) {
-    return ((intptr_t)p >= 0x3F800000 && (intptr_t)p < 0x3FC00000);
-}
-
-inline static 
-# 189 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 189 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "6"))) esp_ptr_in_iram(const void *p) {
-
-    return ((intptr_t)p >= 0x40080000 && (intptr_t)p < 0x400A0000);
-
-
-
-}
-
-inline static 
-# 197 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 197 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "7"))) esp_ptr_in_drom(const void *p) {
-    return ((intptr_t)p >= 0x3F400000 && (intptr_t)p < 0x3F800000);
-}
-
-inline static 
-# 201 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 201 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "8"))) esp_ptr_in_dram(const void *p) {
-    return ((intptr_t)p >= 0x3FFAE000 && (intptr_t)p < 0x40000000);
-}
-
-inline static 
-# 205 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 205 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "9"))) esp_ptr_in_diram_dram(const void *p) {
-    return ((intptr_t)p >= 0x3FFE0000 && (intptr_t)p < 0x40000000);
-}
-
-inline static 
-# 209 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 209 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "10"))) esp_ptr_in_diram_iram(const void *p) {
-    return ((intptr_t)p >= 0x400A0000 && (intptr_t)p < 0x400C0000);
-}
-
-
-inline static 
-# 214 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 214 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "11"))) esp_stack_ptr_is_sane(uint32_t sp)
-{
-
-    return !(sp < 0x3FFAE000 + 0x10 || sp > 0x40000000 - 0x10 || ((sp & 0xF) != 0));
-}
-# 93 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 2
 # 117 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h"
 typedef uint8_t StackType_t;
 typedef int BaseType_t;
@@ -3530,7 +3323,8 @@ typedef unsigned int UBaseType_t;
 # 132 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 2
 
 
-
+# 1 "/home/dieter/Development/esp-idf/components/xtensa/include/esp_attr.h" 1
+# 135 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 2
 
 
 
@@ -3608,7 +3402,11 @@ void vApplicationSleep( TickType_t xExpectedIdleTime );
 # 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/mpu_wrappers.h" 1
 # 128 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h" 2
 # 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h" 1
-# 24 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
+# 23 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
+# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h" 1
+# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h"
+       
+# 24 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h" 2
 # 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_idf_version.h" 1
 # 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_idf_version.h"
        
@@ -3751,7 +3549,7 @@ BaseType_t xPortInterruptedFromISRContext(void);
 
 
 
-static inline uint32_t __attribute__((section(".iram1" "." "12"))) xPortGetCoreID(void) {
+static inline uint32_t __attribute__((section(".iram1" "." "0"))) xPortGetCoreID(void) {
     uint32_t id;
     __asm__ __volatile__ (
         "rsr.prid %0\n"
@@ -3768,7 +3566,7 @@ static inline
 # 221 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h" 3 4
              _Bool 
 # 221 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h"
-                  __attribute__((section(".iram1" "." "13"))) xPortCanYield(void)
+                  __attribute__((section(".iram1" "." "1"))) xPortCanYield(void)
 {
     uint32_t ps_reg = 0;
 
@@ -4190,7 +3988,7 @@ typedef enum
           TaskHandle_t * const pvCreatedTask,
           const BaseType_t xCoreID);
 # 432 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
- static inline __attribute__((section(".iram1" "." "14"))) BaseType_t xTaskCreate(
+ static inline __attribute__((section(".iram1" "." "2"))) BaseType_t xTaskCreate(
    TaskFunction_t pvTaskCode,
    const char * const pcName,
    const uint32_t usStackDepth,
@@ -4740,22 +4538,14 @@ typedef enum {
     BTC_PID_BLUFI,
     BTC_PID_DM_SEC,
     BTC_PID_ALARM,
-# 74 "/home/dieter/Development/esp-idf/components/bt/common/btc/include/btc/btc_task.h"
-    BTC_PID_PROV,
-    BTC_PID_MODEL,
-    BTC_PID_HEALTH_CLIENT,
-    BTC_PID_HEALTH_SERVER,
-    BTC_PID_CONFIG_CLIENT,
-    BTC_PID_CONFIG_SERVER,
-    BTC_PID_GENERIC_CLIENT,
-    BTC_PID_LIGHTING_CLIENT,
-    BTC_PID_SENSOR_CLIENT,
-    BTC_PID_TIME_SCENE_CLIENT,
-    BTC_PID_GENERIC_SERVER,
-    BTC_PID_LIGHTING_SERVER,
-    BTC_PID_SENSOR_SERVER,
-    BTC_PID_TIME_SCENE_SERVER,
 
+    BTC_PID_GAP_BT,
+    BTC_PID_PRF_QUE,
+    BTC_PID_A2DP,
+    BTC_PID_AVRC_CT,
+    BTC_PID_AVRC_TG,
+    BTC_PID_SPP,
+# 89 "/home/dieter/Development/esp-idf/components/bt/common/btc/include/btc/btc_task.h"
     BTC_PID_NUM,
 } btc_pid_t;
 
@@ -6276,7 +6066,219 @@ typedef struct {
 # 31 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h" 2
 
 
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h" 1
+# 22 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdpdefs.h" 1
+# 23 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h" 2
+# 72 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+typedef void (tSDP_DISC_CMPL_CB) (UINT16 result);
+typedef void (tSDP_DISC_CMPL_CB2) (UINT16 result, void *user_data);
 
+typedef struct {
+    BD_ADDR peer_addr;
+    UINT16 peer_mtu;
+} tSDP_DR_OPEN;
+
+typedef struct {
+    UINT8 *p_data;
+    UINT16 data_len;
+} tSDP_DR_DATA;
+
+typedef union {
+    tSDP_DR_OPEN open;
+    tSDP_DR_DATA data;
+} tSDP_DATA;
+
+
+typedef void (tSDP_DISC_RES_CB) (UINT16 event, tSDP_DATA *p_data);
+
+
+typedef struct {
+    union {
+        UINT8 u8;
+        UINT16 u16;
+        UINT32 u32;
+        UINT8 array[4];
+        struct t_sdp_disc_attr *p_sub_attr;
+    } v;
+
+} tSDP_DISC_ATVAL;
+
+typedef struct t_sdp_disc_attr {
+    struct t_sdp_disc_attr *p_next_attr;
+    UINT16 attr_id;
+    UINT16 attr_len_type;
+    tSDP_DISC_ATVAL attr_value;
+} tSDP_DISC_ATTR;
+
+typedef struct t_sdp_disc_rec {
+    tSDP_DISC_ATTR *p_first_attr;
+    struct t_sdp_disc_rec *p_next_rec;
+    UINT32 time_read;
+    BD_ADDR remote_bd_addr;
+} tSDP_DISC_REC;
+
+typedef struct {
+    UINT32 mem_size;
+    UINT32 mem_free;
+    tSDP_DISC_REC *p_first_rec;
+    UINT16 num_uuid_filters;
+    tBT_UUID uuid_filters[3];
+    UINT16 num_attr_filters;
+    UINT16 attr_filters[15];
+    UINT8 *p_free_mem;
+
+    UINT8 *raw_data;
+    UINT32 raw_size;
+    UINT32 raw_used;
+
+} tSDP_DISCOVERY_DB;
+
+
+typedef struct {
+    UINT16 protocol_uuid;
+    UINT16 num_params;
+    UINT16 params[2];
+} tSDP_PROTOCOL_ELEM;
+
+typedef struct {
+    UINT16 num_elems;
+    tSDP_PROTOCOL_ELEM list_elem[3];
+} tSDP_PROTO_LIST_ELEM;
+
+
+
+
+typedef struct t_sdp_di_record {
+    UINT16 vendor;
+    UINT16 vendor_id_source;
+    UINT16 product;
+    UINT16 version;
+    BOOLEAN primary_record;
+    char client_executable_url[400];
+    char service_description[400];
+    char documentation_url[400];
+} tSDP_DI_RECORD;
+
+
+typedef struct t_sdp_di_get_record {
+    UINT16 spec_id;
+    tSDP_DI_RECORD rec;
+} tSDP_DI_GET_RECORD;
+# 187 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_InitDiscoveryDb (tSDP_DISCOVERY_DB *p_db, UINT32 len,
+                                    UINT16 num_uuid,
+                                    tBT_UUID *p_uuid_list,
+                                    UINT16 num_attr,
+                                    UINT16 *p_attr_list);
+# 202 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_CancelServiceSearch (tSDP_DISCOVERY_DB *p_db);
+# 213 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_ServiceSearchRequest (UINT8 *p_bd_addr,
+        tSDP_DISCOVERY_DB *p_db,
+        tSDP_DISC_CMPL_CB *p_cb);
+# 231 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_ServiceSearchAttributeRequest (UINT8 *p_bd_addr,
+        tSDP_DISCOVERY_DB *p_db,
+        tSDP_DISC_CMPL_CB *p_cb);
+# 249 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_ServiceSearchAttributeRequest2 (UINT8 *p_bd_addr,
+        tSDP_DISCOVERY_DB *p_db,
+        tSDP_DISC_CMPL_CB2 *p_cb, void *user_data);
+# 267 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern tSDP_DISC_REC *SDP_FindAttributeInDb (tSDP_DISCOVERY_DB *p_db,
+        UINT16 attr_id,
+        tSDP_DISC_REC *p_start_rec);
+# 282 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern tSDP_DISC_ATTR *SDP_FindAttributeInRec (tSDP_DISC_REC *p_rec,
+        UINT16 attr_id);
+# 298 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern tSDP_DISC_REC *SDP_FindServiceInDb (tSDP_DISCOVERY_DB *p_db,
+        UINT16 service_uuid,
+        tSDP_DISC_REC *p_start_rec);
+# 319 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern tSDP_DISC_REC *SDP_FindServiceUUIDInDb (tSDP_DISCOVERY_DB *p_db,
+        tBT_UUID *p_uuid,
+        tSDP_DISC_REC *p_start_rec);
+# 336 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_FindServiceUUIDInRec_128bit(tSDP_DISC_REC *p_rec, tBT_UUID *p_uuid);
+# 350 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern tSDP_DISC_REC *SDP_FindServiceInDb_128bit(tSDP_DISCOVERY_DB *p_db,
+        tSDP_DISC_REC *p_start_rec);
+# 364 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_FindProtocolListElemInRec (tSDP_DISC_REC *p_rec,
+        UINT16 layer_uuid,
+        tSDP_PROTOCOL_ELEM *p_elem);
+# 380 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_FindAddProtoListsElemInRec (tSDP_DISC_REC *p_rec,
+        UINT16 layer_uuid,
+        tSDP_PROTOCOL_ELEM *p_elem);
+# 399 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_FindProfileVersionInRec (tSDP_DISC_REC *p_rec,
+        UINT16 profile_uuid,
+        UINT16 *p_version);
+# 418 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern UINT32 SDP_CreateRecord (void);
+# 434 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_DeleteRecord (UINT32 handle);
+# 450 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern INT32 SDP_ReadRecord(UINT32 handle, UINT8 *p_data, INT32 *p_data_len);
+# 466 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddAttribute (UINT32 handle, UINT16 attr_id,
+                                 UINT8 attr_type, UINT32 attr_len,
+                                 UINT8 *p_val);
+# 485 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddSequence (UINT32 handle, UINT16 attr_id,
+                                UINT16 num_elem, UINT8 type[],
+                                UINT8 len[], UINT8 *p_val[]);
+# 502 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddUuidSequence (UINT32 handle, UINT16 attr_id,
+                                    UINT16 num_uuids, UINT16 *p_uuids);
+# 518 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddProtocolList (UINT32 handle, UINT16 num_elem,
+                                    tSDP_PROTOCOL_ELEM *p_elem_list);
+# 534 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddAdditionProtoLists (UINT32 handle, UINT16 num_elem,
+        tSDP_PROTO_LIST_ELEM *p_proto_list);
+# 550 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddProfileDescriptorList (UINT32 handle,
+        UINT16 profile_uuid,
+        UINT16 version);
+# 567 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddLanguageBaseAttrIDList (UINT32 handle,
+        UINT16 lang, UINT16 char_enc,
+        UINT16 base_id);
+# 584 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddServiceClassIdList (UINT32 handle,
+        UINT16 num_services,
+        UINT16 *p_service_uuids);
+# 599 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_DeleteAttribute (UINT32 handle, UINT16 attr_id);
+# 613 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern UINT16 SDP_SetLocalDiRecord (tSDP_DI_RECORD *device_info,
+                                    UINT32 *p_handle);
+# 625 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern UINT16 SDP_DiDiscover (BD_ADDR remote_device,
+                              tSDP_DISCOVERY_DB *p_db, UINT32 len,
+                              tSDP_DISC_CMPL_CB *p_cb);
+# 639 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern UINT8 SDP_GetNumDiRecords (tSDP_DISCOVERY_DB *p_db);
+# 652 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern UINT16 SDP_GetDiRecord (UINT8 getRecordIndex,
+                               tSDP_DI_GET_RECORD *device_info,
+                               tSDP_DISCOVERY_DB *p_db);
+# 667 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern UINT8 SDP_SetTraceLevel (UINT8 new_level);
+# 679 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+UINT32 SDP_ConnOpen (UINT8 *p_bd_addr, tSDP_DISC_RES_CB *p_rcb,
+                     tSDP_DISC_CMPL_CB *p_cb);
+# 691 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+BOOLEAN SDP_WriteData (UINT32 handle, BT_HDR *p_msg);
+# 704 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+BOOLEAN SDP_ConnClose (UINT32 handle);
+# 718 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+BOOLEAN SDP_FindServiceUUIDInRec(tSDP_DISC_REC *p_rec, tBT_UUID *p_uuid);
+# 34 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h" 2
 
 
 
@@ -7420,6 +7422,12 @@ tBTM_STATUS BTM_VendorSpecificCommand(UINT16 opcode,
                                       UINT8 param_len,
                                       UINT8 *p_param_buf,
                                       tBTM_VSC_CMPL_CB *p_cb);
+# 2098 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
+UINT8 BTM_AllocateSCN(void);
+# 2111 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
+BOOLEAN BTM_TryAllocateSCN(UINT8 scn);
+# 2125 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
+BOOLEAN BTM_FreeSCN(UINT8 scn);
 # 2140 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
 UINT8 BTM_SetTraceLevel (UINT8 new_level);
 # 2155 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
@@ -7488,6 +7496,18 @@ tBTM_INQ_INFO *BTM_InqDbNext (tBTM_INQ_INFO *p_cur);
 tBTM_STATUS BTM_ClearInqDb (BD_ADDR p_bda);
 # 2641 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
 tBTM_STATUS BTM_ReadInquiryRspTxPower (tBTM_CMPL_CB *p_cb);
+# 2660 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
+tBTM_STATUS BTM_StartDiscovery (tBTM_CMPL_CB *p_cmpl_cb,
+                                BD_ADDR_PTR p_rem_addr);
+# 2676 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
+tSDP_DISC_REC *BTM_FindAttribute (UINT16 attr_id,
+                                  tSDP_DISC_REC *p_start_rec);
+# 2692 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
+tSDP_DISC_REC *BTM_FindService (UINT16 service_uuid,
+                                tSDP_DISC_REC *p_start_rec);
+# 2708 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
+void BTM_SetDiscoveryParams (UINT16 num_uuid, tBT_UUID *p_uuid_list,
+                             UINT16 num_attr, UINT16 *p_attr_list);
 # 2725 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
 tBTM_STATUS BTM_SetLinkPolicy (BD_ADDR remote_bda,
                                UINT16 *settings);
@@ -7709,11 +7729,7 @@ tBTM_STATUS BTM_SetAfhChannels (AFH_CHANNELS channels, tBTM_CMPL_CB *p_afh_chann
 tBTM_STATUS BTM_BleSetChannels (BLE_CHANNELS channels, tBTM_CMPL_CB *p_ble_channels_cmpl_cback);
 # 31 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h" 2
 
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h" 1
-# 22 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdpdefs.h" 1
-# 23 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h" 2
-# 33 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h" 2
+
 
 
 # 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h" 1
@@ -9239,6 +9255,16 @@ typedef UINT8 tBTA_DM_SWITCH_EVT;
 typedef void (tBTA_DM_SWITCH_CBACK)(tBTA_DM_SWITCH_EVT event, tBTA_STATUS status);
 # 1367 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
 typedef UINT8 tBTA_DM_ROUTE_PATH;
+
+
+
+
+
+typedef tSDP_DI_RECORD tBTA_DI_RECORD;
+
+typedef tSDP_DI_GET_RECORD tBTA_DI_GET_RECORD;
+
+typedef tSDP_DISCOVERY_DB tBTA_DISCOVERY_DB;
 # 1392 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
 typedef UINT8 tBTA_DM_LINK_TYPE;
 # 1423 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
@@ -9273,6 +9299,12 @@ extern void BTA_DmSearch(tBTA_DM_INQ *p_dm_inq, tBTA_SERVICE_MASK services,
                          tBTA_DM_SEARCH_CBACK *p_cback);
 # 1574 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
 extern void BTA_DmSearchCancel(void);
+# 1588 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
+extern void BTA_DmDiscover(BD_ADDR bd_addr, tBTA_SERVICE_MASK services,
+                           tBTA_DM_SEARCH_CBACK *p_cback, BOOLEAN sdp_search);
+# 1602 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
+extern void BTA_DmDiscoverUUID(BD_ADDR bd_addr, tBT_UUID *uuid,
+                               tBTA_DM_SEARCH_CBACK *p_cback, BOOLEAN sdp_search);
 # 1615 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
 tBTA_STATUS BTA_DmGetCachedRemoteName(BD_ADDR remote_device, UINT8 **pp_cached_name);
 # 1630 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
@@ -9305,6 +9337,9 @@ extern tBTA_STATUS BTA_DmRemoveDevice(BD_ADDR bd_addr, tBT_TRANSPORT transport);
 extern void BTA_GetEirService( UINT8 *p_eir, tBTA_SERVICE_MASK *p_services );
 # 1798 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
 extern UINT16 BTA_DmGetConnectionState( BD_ADDR bd_addr );
+# 1810 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
+extern tBTA_STATUS BTA_DmSetLocalDiRecord( tBTA_DI_RECORD *p_device_info,
+        UINT32 *p_handle );
 # 1829 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
 extern void BTA_DmCloseACL(BD_ADDR bd_addr, BOOLEAN remove_dev, tBTA_TRANSPORT transport);
 # 1842 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
@@ -9498,10 +9533,8 @@ future_t **btc_main_get_future_p(btc_main_future_type_t type);
 void btc_main_call_handler(btc_msg_t *msg);
 # 27 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c" 2
 # 1 "/home/dieter/Development/esp-idf/components/bt/common/btc/include/btc/btc_manage.h" 1
-# 21 "/home/dieter/Development/esp-idf/components/bt/common/btc/include/btc/btc_manage.h"
-extern void *btc_profile_cb_tab[BTC_PID_NUM];
-
-
+# 23 "/home/dieter/Development/esp-idf/components/bt/common/btc/include/btc/btc_manage.h"
+extern void **btc_profile_cb_tab;
 
 
 void esp_profile_cb_reset(void);
@@ -10417,7 +10450,7 @@ typedef struct {
 } esp_btc_creat_tab_t;
 
 
-
+extern esp_btc_creat_tab_t *btc_creat_tab_env_ptr;
 
 
 
@@ -11863,7 +11896,17 @@ esp_err_t esp_ble_get_current_conn_params(esp_bd_addr_t bd_addr, esp_gap_conn_pa
 # 1294 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_gap_ble_set_channels(esp_gap_ble_channels channels);
 # 20 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/profile/std/include/btc_gap_ble.h" 2
-# 31 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/profile/std/include/btc_gap_ble.h"
+
+
+
+extern tBTA_BLE_ADV_DATA *gl_bta_adv_data_ptr;
+extern tBTA_BLE_ADV_DATA *gl_bta_scan_rsp_data_ptr;
+
+
+
+
+
+
 typedef enum {
     BTC_GAP_BLE_ACT_CFG_ADV_DATA = 0,
     BTC_GAP_BLE_ACT_SET_SCAN_PARAM,
@@ -13086,7 +13129,9 @@ struct blufi_frag_hdr {
 typedef struct blufi_frag_hdr blufi_frag_hdr_t;
 
 
-extern tBLUFI_ENV blufi_env;
+
+
+extern tBLUFI_ENV *blufi_env_ptr;
 # 183 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/profile/esp/blufi/include/blufi_int.h"
 void btc_blufi_protocol_handler(uint8_t type, uint8_t *data, int len);
 
@@ -13189,9 +13234,9 @@ typedef struct
 } btc_dm_cb_t;
 
 
-extern btc_dm_cb_t btc_dm_cb;
 
 
+extern btc_dm_cb_t *btc_dm_cb_ptr;
 
 
 
@@ -14510,2707 +14555,679 @@ void BTA_GATTS_SendServiceChangeIndication(tBTA_GATTS_IF server_if, BD_ADDR remo
 extern void BTA_GATTS_Listen(tBTA_GATTS_IF server_if, BOOLEAN start,
                              BD_ADDR_PTR target_bda);
 # 37 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c" 2
-# 60 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c"
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_prov.h" 1
-# 25 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_prov.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_access.h" 1
-# 14 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_access.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 15 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_access.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_types.h" 1
-# 18 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_types.h"
-typedef signed char s8_t;
-typedef signed short s16_t;
-typedef signed int s32_t;
-typedef signed long long s64_t;
 
-typedef unsigned char u8_t;
-typedef unsigned short u16_t;
-typedef unsigned int u32_t;
-typedef unsigned long long u64_t;
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/include/btc/btc_profile_queue.h" 1
+# 29 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/include/btc/btc_profile_queue.h"
+typedef enum {
+    BTC_PRF_QUE_CONNECT = 0,
+    BTC_PRF_QUE_ADVANCE
+} btc_prf_que_act_t;
 
-typedef int bt_mesh_atomic_t;
-# 16 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_access.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h" 1
-# 17 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 18 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_types.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_trace.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h" 2
-# 195 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h"
-static inline unsigned int find_msb_set(u32_t op)
+typedef bt_status_t (*btc_connect_cb_t) (bt_bdaddr_t *bda, uint16_t uuid);
+
+typedef struct connect_node_t {
+    bt_bdaddr_t bda;
+    uint16_t uuid;
+    
+# 39 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/include/btc/btc_profile_queue.h" 3 4
+   _Bool 
+# 39 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/include/btc/btc_profile_queue.h"
+        busy;
+    btc_connect_cb_t connect_cb;
+} connect_node_t;
+
+
+typedef union {
+
+    connect_node_t connect_node;
+} btc_prf_que_args_t;
+
+bt_status_t btc_queue_connect(uint16_t uuid, const bt_bdaddr_t *bda, btc_connect_cb_t connect_cb);
+void btc_queue_advance(void);
+bt_status_t btc_queue_connect_next(void);
+void btc_queue_release(void);
+
+void btc_profile_queue_handler(btc_msg_t *msg);
+# 39 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c" 2
+
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/profile/std/include/btc_gap_bt.h" 1
+# 21 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/profile/std/include/btc_gap_bt.h"
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h" 1
+# 31 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+typedef struct {
+    uint32_t reserved_2: 2;
+    uint32_t minor: 6;
+    uint32_t major: 5;
+    uint32_t service: 11;
+    uint32_t reserved_8: 8;
+} esp_bt_cod_t;
+
+
+typedef enum {
+    ESP_BT_SET_COD_MAJOR_MINOR = 0x01,
+    ESP_BT_SET_COD_SERVICE_CLASS = 0x02,
+    ESP_BT_CLR_COD_SERVICE_CLASS = 0x04,
+    ESP_BT_SET_COD_ALL = 0x08,
+    ESP_BT_INIT_COD = 0x0a,
+} esp_bt_cod_mode_t;
+
+
+typedef uint8_t esp_bt_gap_afh_channels[10];
+
+
+
+typedef enum {
+    ESP_BT_NON_CONNECTABLE,
+    ESP_BT_CONNECTABLE,
+} esp_bt_connection_mode_t;
+
+typedef enum {
+    ESP_BT_NON_DISCOVERABLE,
+    ESP_BT_LIMITED_DISCOVERABLE,
+    ESP_BT_GENERAL_DISCOVERABLE,
+} esp_bt_discovery_mode_t;
+
+
+typedef enum {
+    ESP_BT_GAP_DEV_PROP_BDNAME = 1,
+    ESP_BT_GAP_DEV_PROP_COD,
+    ESP_BT_GAP_DEV_PROP_RSSI,
+    ESP_BT_GAP_DEV_PROP_EIR,
+} esp_bt_gap_dev_prop_type_t;
+# 79 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+typedef struct {
+    esp_bt_gap_dev_prop_type_t type;
+    int len;
+    void *val;
+} esp_bt_gap_dev_prop_t;
+
+
+typedef enum {
+    ESP_BT_EIR_TYPE_FLAGS = 0x01,
+    ESP_BT_EIR_TYPE_INCMPL_16BITS_UUID = 0x02,
+    ESP_BT_EIR_TYPE_CMPL_16BITS_UUID = 0x03,
+    ESP_BT_EIR_TYPE_INCMPL_32BITS_UUID = 0x04,
+    ESP_BT_EIR_TYPE_CMPL_32BITS_UUID = 0x05,
+    ESP_BT_EIR_TYPE_INCMPL_128BITS_UUID = 0x06,
+    ESP_BT_EIR_TYPE_CMPL_128BITS_UUID = 0x07,
+    ESP_BT_EIR_TYPE_SHORT_LOCAL_NAME = 0x08,
+    ESP_BT_EIR_TYPE_CMPL_LOCAL_NAME = 0x09,
+    ESP_BT_EIR_TYPE_TX_POWER_LEVEL = 0x0a,
+    ESP_BT_EIR_TYPE_URL = 0x24,
+    ESP_BT_EIR_TYPE_MANU_SPECIFIC = 0xff,
+} esp_bt_eir_type_t;
+# 111 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+typedef struct {
+    
+# 112 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h" 3 4
+   _Bool 
+# 112 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+                           fec_required;
+    
+# 113 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h" 3 4
+   _Bool 
+# 113 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+                           include_txpower;
+    
+# 114 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h" 3 4
+   _Bool 
+# 114 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+                           include_uuid;
+    uint8_t flag;
+    uint16_t manufacturer_len;
+    uint8_t *p_manufacturer_data;
+    uint16_t url_len;
+    uint8_t *p_url;
+} esp_bt_eir_data_t;
+
+
+typedef enum {
+    ESP_BT_COD_SRVC_NONE = 0,
+    ESP_BT_COD_SRVC_LMTD_DISCOVER = 0x1,
+    ESP_BT_COD_SRVC_POSITIONING = 0x8,
+    ESP_BT_COD_SRVC_NETWORKING = 0x10,
+    ESP_BT_COD_SRVC_RENDERING = 0x20,
+    ESP_BT_COD_SRVC_CAPTURING = 0x40,
+    ESP_BT_COD_SRVC_OBJ_TRANSFER = 0x80,
+    ESP_BT_COD_SRVC_AUDIO = 0x100,
+    ESP_BT_COD_SRVC_TELEPHONY = 0x200,
+    ESP_BT_COD_SRVC_INFORMATION = 0x400,
+} esp_bt_cod_srvc_t;
+
+typedef enum{
+    ESP_BT_PIN_TYPE_VARIABLE = 0,
+    ESP_BT_PIN_TYPE_FIXED = 1,
+} esp_bt_pin_type_t;
+
+
+typedef uint8_t esp_bt_pin_code_t[16];
+
+typedef enum {
+    ESP_BT_SP_IOCAP_MODE = 0,
+
+} esp_bt_sp_param_t;
+
+
+
+
+
+
+typedef uint8_t esp_bt_io_cap_t;
+
+
+
+
+
+
+typedef enum {
+    ESP_BT_COD_MAJOR_DEV_MISC = 0,
+    ESP_BT_COD_MAJOR_DEV_COMPUTER = 1,
+    ESP_BT_COD_MAJOR_DEV_PHONE = 2,
+    ESP_BT_COD_MAJOR_DEV_LAN_NAP = 3,
+    ESP_BT_COD_MAJOR_DEV_AV = 4,
+    ESP_BT_COD_MAJOR_DEV_PERIPHERAL = 5,
+    ESP_BT_COD_MAJOR_DEV_IMAGING = 6,
+    ESP_BT_COD_MAJOR_DEV_WEARABLE = 7,
+    ESP_BT_COD_MAJOR_DEV_TOY = 8,
+    ESP_BT_COD_MAJOR_DEV_HEALTH = 9,
+    ESP_BT_COD_MAJOR_DEV_UNCATEGORIZED = 31,
+} esp_bt_cod_major_dev_t;
+# 191 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+typedef enum {
+    ESP_BT_GAP_DISCOVERY_STOPPED,
+    ESP_BT_GAP_DISCOVERY_STARTED,
+} esp_bt_gap_discovery_state_t;
+
+
+typedef enum {
+    ESP_BT_GAP_DISC_RES_EVT = 0,
+    ESP_BT_GAP_DISC_STATE_CHANGED_EVT,
+    ESP_BT_GAP_RMT_SRVCS_EVT,
+    ESP_BT_GAP_RMT_SRVC_REC_EVT,
+    ESP_BT_GAP_AUTH_CMPL_EVT,
+    ESP_BT_GAP_PIN_REQ_EVT,
+    ESP_BT_GAP_CFM_REQ_EVT,
+    ESP_BT_GAP_KEY_NOTIF_EVT,
+    ESP_BT_GAP_KEY_REQ_EVT,
+    ESP_BT_GAP_READ_RSSI_DELTA_EVT,
+    ESP_BT_GAP_CONFIG_EIR_DATA_EVT,
+    ESP_BT_GAP_SET_AFH_CHANNELS_EVT,
+    ESP_BT_GAP_READ_REMOTE_NAME_EVT,
+    ESP_BT_GAP_EVT_MAX,
+} esp_bt_gap_cb_event_t;
+
+
+typedef enum {
+    ESP_BT_INQ_MODE_GENERAL_INQUIRY,
+    ESP_BT_INQ_MODE_LIMITED_INQUIRY,
+} esp_bt_inq_mode_t;
+
+
+
+
+
+
+typedef union {
+
+
+
+    struct disc_res_param {
+        esp_bd_addr_t bda;
+        int num_prop;
+        esp_bt_gap_dev_prop_t *prop;
+    } disc_res;
+
+
+
+
+    struct disc_state_changed_param {
+        esp_bt_gap_discovery_state_t state;
+    } disc_st_chg;
+
+
+
+
+    struct rmt_srvcs_param {
+        esp_bd_addr_t bda;
+        esp_bt_status_t stat;
+        int num_uuids;
+        esp_bt_uuid_t *uuid_list;
+    } rmt_srvcs;
+
+
+
+
+    struct rmt_srvc_rec_param {
+        esp_bd_addr_t bda;
+        esp_bt_status_t stat;
+    } rmt_srvc_rec;
+
+
+
+
+    struct read_rssi_delta_param {
+        esp_bd_addr_t bda;
+        esp_bt_status_t stat;
+        int8_t rssi_delta;
+    } read_rssi_delta;
+
+
+
+
+    struct config_eir_data_param {
+        esp_bt_status_t stat;
+
+
+
+
+        uint8_t eir_type_num;
+        esp_bt_eir_type_t eir_type[12];
+    } config_eir_data;
+
+
+
+
+    struct auth_cmpl_param {
+        esp_bd_addr_t bda;
+        esp_bt_status_t stat;
+        uint8_t device_name[(248) + 1];
+    } auth_cmpl;
+
+
+
+
+    struct pin_req_param {
+        esp_bd_addr_t bda;
+        
+# 296 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h" 3 4
+       _Bool 
+# 296 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+            min_16_digit;
+    } pin_req;
+
+
+
+
+    struct cfm_req_param {
+        esp_bd_addr_t bda;
+        uint32_t num_val;
+    } cfm_req;
+
+
+
+
+    struct key_notif_param {
+        esp_bd_addr_t bda;
+        uint32_t passkey;
+    } key_notif;
+
+
+
+
+    struct key_req_param {
+        esp_bd_addr_t bda;
+    } key_req;
+
+
+
+
+    struct set_afh_channels_param {
+        esp_bt_status_t stat;
+    } set_afh_channels;
+
+
+
+
+    struct read_rmt_name_param {
+        esp_bt_status_t stat;
+        uint8_t rmt_name[(248) + 1];
+    } read_rmt_name;
+
+} esp_bt_gap_cb_param_t;
+
+
+
+
+
+
+typedef void (* esp_bt_gap_cb_t)(esp_bt_gap_cb_event_t event, esp_bt_gap_cb_param_t *param);
+
+
+
+
+
+
+static inline uint32_t esp_bt_gap_get_cod_srvc(uint32_t cod)
 {
-    if (!op) {
-        return 0;
-    }
-    return 32 - __builtin_clz(op);
+    return (cod & (0xffe000)) >> (13);
 }
-# 217 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h"
-static inline unsigned int find_lsb_set(u32_t op)
+
+
+
+
+
+
+static inline uint32_t esp_bt_gap_get_cod_major_dev(uint32_t cod)
 {
-    return __builtin_ffs(op);
+    return (cod & (0x1f00)) >> (8);
 }
-# 232 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h"
-static inline void sys_put_be16(u16_t val, u8_t dst[2])
+
+
+
+
+
+
+static inline uint32_t esp_bt_gap_get_cod_minor_dev(uint32_t cod)
 {
-    dst[0] = val >> 8;
-    dst[1] = val;
+    return (cod & (0xfc)) >> (2);
 }
-# 247 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h"
-static inline void sys_put_be32(u32_t val, u8_t dst[4])
+
+
+
+
+
+
+static inline uint32_t esp_bt_gap_get_cod_format_type(uint32_t cod)
 {
-    sys_put_be16(val >> 16, dst);
-    sys_put_be16(val, &dst[2]);
+    return (cod & (0x03));
 }
-# 262 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h"
-static inline void sys_put_le16(u16_t val, u8_t dst[2])
-{
-    dst[0] = val;
-    dst[1] = val >> 8;
-}
-# 277 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h"
-static inline void sys_put_le32(u32_t val, u8_t dst[4])
-{
-    sys_put_le16(val, dst);
-    sys_put_le16(val >> 16, &dst[2]);
-}
-# 292 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h"
-static inline void sys_put_le64(u64_t val, u8_t dst[8])
-{
-    sys_put_le32(val, dst);
-    sys_put_le32(val >> 32, &dst[4]);
-}
-# 308 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h"
-static inline u16_t sys_get_be16(const u8_t src[2])
-{
-    return ((u16_t)src[0] << 8) | src[1];
-}
-# 323 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h"
-static inline u32_t sys_get_be32(const u8_t src[4])
-{
-    return ((u32_t)sys_get_be16(&src[0]) << 16) | sys_get_be16(&src[2]);
-}
-# 338 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h"
-static inline u16_t sys_get_le16(const u8_t src[2])
-{
-    return ((u16_t)src[1] << 8) | src[0];
-}
-# 353 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h"
-static inline u32_t sys_get_le32(const u8_t src[4])
-{
-    return ((u32_t)sys_get_le16(&src[2]) << 16) | sys_get_le16(&src[0]);
-}
-# 368 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h"
-static inline u64_t sys_get_le64(const u8_t src[8])
-{
-    return ((u64_t)sys_get_le32(&src[4]) << 32) | sys_get_le32(&src[0]);
-}
-
-const char *bt_hex(const void *buf, size_t len);
-
-void mem_rcopy(u8_t *dst, u8_t const *src, u16_t len);
-
-void _set(void *to, uint8_t val, unsigned int len);
-
-unsigned int _copy(uint8_t *to, unsigned int to_len,
-                   const uint8_t *from, unsigned int from_len);
-
-void _set(void *to, uint8_t val, unsigned int len);
-
-uint8_t _double_byte(uint8_t a);
-
-int _compare(const uint8_t *a, const uint8_t *b, size_t size);
-# 401 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h"
-static inline void sys_memcpy_swap(void *dst, const void *src, size_t length)
-{
-    do { if (!(((src < dst && (src + length) <= dst) || (src > dst && (dst + length) <= src)))) { ets_printf("ASSERTION FAIL [%s] @ %s:%d:\n\t", "((src < dst && (src + length) <= dst) || (src > dst && (dst + length) <= src))",
-
-                                                              "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h"
-# 403 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h"
-    ,
-
-                                                              405
-# 403 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h"
-    ); ets_printf("Source and destination buffers must not overlap"); for (;;); } } while ((0))
-
-                                                               ;
-
-    src += length - 1;
-
-    for (; length > 0; length--) {
-        *((u8_t *)dst++) = *((u8_t *)src--);
-    }
-}
-# 424 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h"
-static inline void sys_mem_swap(void *buf, size_t length)
-{
-    size_t i;
-
-    for (i = 0; i < (length / 2); i++) {
-        u8_t tmp = ((u8_t *)buf)[i];
-
-        ((u8_t *)buf)[i] = ((u8_t *)buf)[length - 1 - i];
-        ((u8_t *)buf)[length - 1 - i] = tmp;
-    }
-}
-# 17 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_access.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h" 1
-# 14 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 15 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h" 2
-
-
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 21 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h" 2
-
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h" 1
-# 23 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h" 2
-
-
-
-
-
-struct _snode {
-    struct _snode *next;
-};
-
-typedef struct _snode sys_snode_t;
-
-struct _slist {
-    sys_snode_t *head;
-    sys_snode_t *tail;
-};
-
-typedef struct _slist sys_slist_t;
-# 192 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h"
-static inline void sys_slist_init(sys_slist_t *list)
-{
-    list->head = 
-# 194 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h" 3 4
-                ((void *)0)
-# 194 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h"
-                    ;
-    list->tail = 
-# 195 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h" 3 4
-                ((void *)0)
-# 195 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h"
-                    ;
-}
-# 207 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h"
+# 393 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
 static inline 
-# 207 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h" 3 4
+# 393 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h" 3 4
              _Bool 
-# 207 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h"
-                  sys_slist_is_empty(sys_slist_t *list)
+# 393 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+                  esp_bt_gap_is_valid_cod(uint32_t cod)
 {
-    return (!list->head);
-}
-# 219 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h"
-static inline sys_snode_t *sys_slist_peek_head(sys_slist_t *list)
-{
-    return list->head;
-}
-# 231 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h"
-static inline sys_snode_t *sys_slist_peek_tail(sys_slist_t *list)
-{
-    return list->tail;
-}
-# 245 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h"
-static inline sys_snode_t *sys_slist_peek_next_no_check(sys_snode_t *node)
-{
-    return node->next;
-}
-# 257 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h"
-static inline sys_snode_t *sys_slist_peek_next(sys_snode_t *node)
-{
-    return node ? sys_slist_peek_next_no_check(node) : 
-# 259 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h" 3 4
-                                                      ((void *)0)
-# 259 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h"
-                                                          ;
-}
-# 270 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h"
-static inline void sys_slist_prepend(sys_slist_t *list,
-                                     sys_snode_t *node)
-{
-    node->next = list->head;
-    list->head = node;
-
-    if (!list->tail) {
-        list->tail = list->head;
-    }
-}
-# 289 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h"
-static inline void sys_slist_append(sys_slist_t *list,
-                                    sys_snode_t *node)
-{
-    node->next = 
-# 292 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h" 3 4
-                ((void *)0)
-# 292 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h"
-                    ;
-
-    if (!list->tail) {
-        list->tail = node;
-        list->head = node;
-    } else {
-        list->tail->next = node;
-        list->tail = node;
-    }
-}
-# 314 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h"
-static inline void sys_slist_append_list(sys_slist_t *list,
-        void *head, void *tail)
-{
-    if (!list->tail) {
-        list->head = (sys_snode_t *)head;
-        list->tail = (sys_snode_t *)tail;
-    } else {
-        list->tail->next = (sys_snode_t *)head;
-        list->tail = (sys_snode_t *)tail;
-    }
-}
-# 335 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h"
-static inline void sys_slist_merge_slist(sys_slist_t *list,
-        sys_slist_t *list_to_append)
-{
-    sys_slist_append_list(list, list_to_append->head,
-                          list_to_append->tail);
-    sys_slist_init(list_to_append);
-}
-# 352 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h"
-static inline void sys_slist_insert(sys_slist_t *list,
-                                    sys_snode_t *prev,
-                                    sys_snode_t *node)
-{
-    if (!prev) {
-        sys_slist_prepend(list, node);
-    } else if (!prev->next) {
-        sys_slist_append(list, node);
-    } else {
-        node->next = prev->next;
-        prev->next = node;
-    }
-}
-# 376 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h"
-static inline sys_snode_t *sys_slist_get_not_empty(sys_slist_t *list)
-{
-    sys_snode_t *node = list->head;
-
-    list->head = node->next;
-    if (list->tail == node) {
-        list->tail = list->head;
-    }
-
-    return node;
-}
-# 397 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h"
-static inline sys_snode_t *sys_slist_get(sys_slist_t *list)
-{
-    return sys_slist_is_empty(list) ? 
-# 399 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h" 3 4
-                                     ((void *)0) 
-# 399 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h"
-                                          : sys_slist_get_not_empty(list);
-}
-# 412 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h"
-static inline void sys_slist_remove(sys_slist_t *list,
-                                    sys_snode_t *prev_node,
-                                    sys_snode_t *node)
-{
-    if (!prev_node) {
-        list->head = node->next;
-
-
-        if (list->tail == node) {
-            list->tail = list->head;
-        }
-    } else {
-        prev_node->next = node->next;
-
-
-        if (list->tail == node) {
-            list->tail = prev_node;
-        }
-    }
-
-    node->next = 
-# 432 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h" 3 4
-                ((void *)0)
-# 432 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h"
-                    ;
-}
-# 445 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h"
-static inline 
-# 445 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h" 3 4
-             _Bool 
-# 445 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h"
-                  sys_slist_find_and_remove(sys_slist_t *list,
-        sys_snode_t *node)
-{
-    sys_snode_t *prev = 
-# 448 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h" 3 4
-                       ((void *)0)
-# 448 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h"
-                           ;
-    sys_snode_t *test;
-
-    for (test = sys_slist_peek_head(list); test; test = sys_slist_peek_next(test)) {
-        if (test == node) {
-            sys_slist_remove(list, prev, node);
-            return 
-# 454 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h" 3 4
-                  1
-# 454 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h"
-                      ;
-        }
-
-        prev = test;
-    }
-
-    return 
-# 460 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h" 3 4
-          0
-# 460 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h"
-               ;
-}
-# 18 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_kernel.h" 1
-# 11 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_kernel.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/mutex.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/mutex.h"
-typedef SemaphoreHandle_t osi_mutex_t;
-
-int osi_mutex_new(osi_mutex_t *mutex);
-
-int osi_mutex_lock(osi_mutex_t *mutex, uint32_t timeout);
-
-void osi_mutex_unlock(osi_mutex_t *mutex);
-
-void osi_mutex_free(osi_mutex_t *mutex);
-
-
-int osi_mutex_global_init(void);
-
-void osi_mutex_global_deinit(void);
-
-void osi_mutex_global_lock(void);
-
-void osi_mutex_global_unlock(void);
-# 12 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_kernel.h" 2
-
-
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_atomic.h" 1
-# 18 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_atomic.h"
-typedef bt_mesh_atomic_t bt_mesh_atomic_val_t;
-# 42 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_atomic.h"
-extern bt_mesh_atomic_val_t bt_mesh_atomic_inc(bt_mesh_atomic_t *target);
-# 61 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_atomic.h"
-extern bt_mesh_atomic_val_t bt_mesh_atomic_dec(bt_mesh_atomic_t *target);
-# 80 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_atomic.h"
-extern bt_mesh_atomic_val_t bt_mesh_atomic_get(const bt_mesh_atomic_t *target);
-# 105 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_atomic.h"
-extern bt_mesh_atomic_val_t bt_mesh_atomic_set(bt_mesh_atomic_t *target, bt_mesh_atomic_val_t value);
-# 126 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_atomic.h"
-extern bt_mesh_atomic_val_t bt_mesh_atomic_or(bt_mesh_atomic_t *target, bt_mesh_atomic_val_t value);
-# 147 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_atomic.h"
-extern bt_mesh_atomic_val_t bt_mesh_atomic_and(bt_mesh_atomic_t *target, bt_mesh_atomic_val_t value);
-# 189 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_atomic.h"
-static inline int bt_mesh_atomic_test_bit(const bt_mesh_atomic_t *target, int bit)
-{
-    bt_mesh_atomic_val_t val = bt_mesh_atomic_get(((target) + ((bit) / (sizeof(bt_mesh_atomic_val_t) * 8))));
-
-    return (1 & (val >> (bit & ((sizeof(bt_mesh_atomic_val_t) * 8) - 1))));
-}
-# 207 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_atomic.h"
-static inline int bt_mesh_atomic_test_and_clear_bit(bt_mesh_atomic_t *target, int bit)
-{
-    bt_mesh_atomic_val_t mask = (1 << ((bit) & ((sizeof(bt_mesh_atomic_val_t) * 8) - 1)));
-    bt_mesh_atomic_val_t old;
-
-    old = bt_mesh_atomic_and(((target) + ((bit) / (sizeof(bt_mesh_atomic_val_t) * 8))), ~mask);
-
-    return (old & mask) != 0;
-}
-# 228 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_atomic.h"
-static inline int bt_mesh_atomic_test_and_set_bit(bt_mesh_atomic_t *target, int bit)
-{
-    bt_mesh_atomic_val_t mask = (1 << ((bit) & ((sizeof(bt_mesh_atomic_val_t) * 8) - 1)));
-    bt_mesh_atomic_val_t old;
-
-    old = bt_mesh_atomic_or(((target) + ((bit) / (sizeof(bt_mesh_atomic_val_t) * 8))), mask);
-
-    return (old & mask) != 0;
-}
-# 249 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_atomic.h"
-static inline void bt_mesh_atomic_clear_bit(bt_mesh_atomic_t *target, int bit)
-{
-    bt_mesh_atomic_val_t mask = (1 << ((bit) & ((sizeof(bt_mesh_atomic_val_t) * 8) - 1)));
-
-    (void)bt_mesh_atomic_and(((target) + ((bit) / (sizeof(bt_mesh_atomic_val_t) * 8))), ~mask);
-}
-# 267 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_atomic.h"
-static inline void bt_mesh_atomic_set_bit(bt_mesh_atomic_t *target, int bit)
-{
-    bt_mesh_atomic_val_t mask = (1 << ((bit) & ((sizeof(bt_mesh_atomic_val_t) * 8) - 1)));
-
-    (void)bt_mesh_atomic_or(((target) + ((bit) / (sizeof(bt_mesh_atomic_val_t) * 8))), mask);
-}
-# 286 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_atomic.h"
-static inline void bt_mesh_atomic_set_bit_to(bt_mesh_atomic_t *target, int bit, 
-# 286 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_atomic.h" 3 4
-                                                                               _Bool 
-# 286 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_atomic.h"
-                                                                                    val)
-{
-    bt_mesh_atomic_val_t mask = (1 << ((bit) & ((sizeof(bt_mesh_atomic_val_t) * 8) - 1)));
-
-    if (val) {
-        (void)bt_mesh_atomic_or(((target) + ((bit) / (sizeof(bt_mesh_atomic_val_t) * 8))), mask);
-    } else {
-        (void)bt_mesh_atomic_and(((target) + ((bit) / (sizeof(bt_mesh_atomic_val_t) * 8))), ~mask);
-    }
-}
-# 15 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_kernel.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h" 1
-# 23 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 24 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h" 2
-
-
-
-
-
-
-
-struct _dnode {
-    union {
-        struct _dnode *head;
-        struct _dnode *next;
-    };
-    union {
-        struct _dnode *tail;
-        struct _dnode *prev;
-    };
-};
-
-typedef struct _dnode sys_dlist_t;
-typedef struct _dnode sys_dnode_t;
-# 190 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h"
-static inline void sys_dlist_init(sys_dlist_t *list)
-{
-    list->head = (sys_dnode_t *)list;
-    list->tail = (sys_dnode_t *)list;
-}
-# 207 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h"
-static inline int sys_dlist_is_head(sys_dlist_t *list, sys_dnode_t *node)
-{
-    return list->head == node;
-}
-# 221 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h"
-static inline int sys_dlist_is_tail(sys_dlist_t *list, sys_dnode_t *node)
-{
-    return list->tail == node;
-}
-# 234 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h"
-static inline int sys_dlist_is_empty(sys_dlist_t *list)
-{
-    return list->head == list;
-}
-# 249 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h"
-static inline int sys_dlist_has_multiple_nodes(sys_dlist_t *list)
-{
-    return list->head != list->tail;
-}
-# 262 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h"
-static inline sys_dnode_t *sys_dlist_peek_head(sys_dlist_t *list)
-{
-    return sys_dlist_is_empty(list) ? 
-# 264 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h" 3 4
-                                     ((void *)0) 
-# 264 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h"
-                                          : list->head;
-}
-# 277 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h"
-static inline sys_dnode_t *sys_dlist_peek_head_not_empty(sys_dlist_t *list)
-{
-    return list->head;
-}
-# 293 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h"
-static inline sys_dnode_t *sys_dlist_peek_next_no_check(sys_dlist_t *list,
-        sys_dnode_t *node)
-{
-    return (node == list->tail) ? 
-# 296 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h" 3 4
-                                 ((void *)0) 
-# 296 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h"
-                                      : node->next;
-}
-# 309 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h"
-static inline sys_dnode_t *sys_dlist_peek_next(sys_dlist_t *list,
-        sys_dnode_t *node)
-{
-    return node ? sys_dlist_peek_next_no_check(list, node) : 
-# 312 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h" 3 4
-                                                            ((void *)0)
-# 312 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h"
-                                                                ;
-}
-# 323 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h"
-static inline sys_dnode_t *sys_dlist_peek_tail(sys_dlist_t *list)
-{
-    return sys_dlist_is_empty(list) ? 
-# 325 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h" 3 4
-                                     ((void *)0) 
-# 325 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h"
-                                          : list->tail;
-}
-# 339 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h"
-static inline void sys_dlist_append(sys_dlist_t *list, sys_dnode_t *node)
-{
-    node->next = list;
-    node->prev = list->tail;
-
-    list->tail->next = node;
-    list->tail = node;
-}
-# 359 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h"
-static inline void sys_dlist_prepend(sys_dlist_t *list, sys_dnode_t *node)
-{
-    node->next = list->head;
-    node->prev = list;
-
-    list->head->prev = node;
-    list->head = node;
-}
-# 381 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h"
-static inline void sys_dlist_insert_after(sys_dlist_t *list,
-        sys_dnode_t *insert_point, sys_dnode_t *node)
-{
-    if (!insert_point) {
-        sys_dlist_prepend(list, node);
-    } else {
-        node->next = insert_point->next;
-        node->prev = insert_point;
-        insert_point->next->prev = node;
-        insert_point->next = node;
-    }
-}
-# 407 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h"
-static inline void sys_dlist_insert_before(sys_dlist_t *list,
-        sys_dnode_t *insert_point, sys_dnode_t *node)
-{
-    if (!insert_point) {
-        sys_dlist_append(list, node);
-    } else {
-        node->prev = insert_point->prev;
-        node->next = insert_point;
-        insert_point->prev->next = node;
-        insert_point->prev = node;
-    }
-}
-# 437 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h"
-static inline void sys_dlist_insert_at(sys_dlist_t *list, sys_dnode_t *node,
-                                       int (*cond)(sys_dnode_t *, void *), void *data)
-{
-    if (sys_dlist_is_empty(list)) {
-        sys_dlist_append(list, node);
-    } else {
-        sys_dnode_t *pos = sys_dlist_peek_head(list);
-
-        while (pos && !cond(pos, data)) {
-            pos = sys_dlist_peek_next(list, pos);
-        }
-        sys_dlist_insert_before(list, pos, node);
-    }
-}
-# 463 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h"
-static inline void sys_dlist_remove(sys_dnode_t *node)
-{
-    node->prev->next = node->next;
-    node->next->prev = node->prev;
-}
-# 479 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h"
-static inline sys_dnode_t *sys_dlist_get(sys_dlist_t *list)
-{
-    sys_dnode_t *node;
-
-    if (sys_dlist_is_empty(list)) {
+    if (esp_bt_gap_get_cod_format_type(cod) == (0x00) &&
+            esp_bt_gap_get_cod_srvc(cod) != ESP_BT_COD_SRVC_NONE) {
         return 
-# 484 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h" 3 4
-              ((void *)0)
-# 484 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h"
+# 397 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h" 3 4
+              1
+# 397 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
                   ;
     }
 
-    node = list->head;
-    sys_dlist_remove(node);
-    return node;
+    return 
+# 400 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h" 3 4
+          0
+# 400 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+               ;
 }
-# 16 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_kernel.h" 2
-# 35 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_kernel.h"
-struct k_work;
-# 48 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_kernel.h"
-typedef void (*k_work_handler_t)(struct k_work *work);
-
-typedef sys_dlist_t _wait_q_t;
-
-struct k_work {
-    void *_reserved;
-    k_work_handler_t handler;
-    int index;
-};
-# 145 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_kernel.h"
-u32_t k_uptime_get_32(void);
-
-struct k_delayed_work {
-    struct k_work work;
-};
-# 183 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_kernel.h"
-int k_delayed_work_submit(struct k_delayed_work *work, s32_t delay);
-
-int k_delayed_work_submit_periodic(struct k_delayed_work *work, s32_t period);
-# 198 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_kernel.h"
-s32_t k_delayed_work_remaining_get(struct k_delayed_work *work);
-# 221 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_kernel.h"
-static inline void k_work_submit(struct k_work *work)
-{
-    if (work && work->handler) {
-        work->handler(work);
-    }
-}
-# 238 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_kernel.h"
-static inline void k_work_init(struct k_work *work, k_work_handler_t handler)
-{
-    work->handler = handler;
-}
-
-int k_delayed_work_cancel(struct k_delayed_work *work);
-
-int k_delayed_work_free(struct k_delayed_work *work);
-
-void k_delayed_work_init(struct k_delayed_work *work, k_work_handler_t handler);
-# 257 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_kernel.h"
-s64_t k_uptime_get(void);
-# 269 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_kernel.h"
-void k_sleep(s32_t duration);
-
-unsigned int bt_mesh_irq_lock(void);
-void bt_mesh_irq_unlock(unsigned int key);
-
-void bt_mesh_k_init(void);
-# 19 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h" 2
-# 97 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-struct net_buf_simple {
-
-    u8_t *data;
-
-
-    u16_t len;
-
-
-    u16_t size;
-
-
-
-
-    u8_t *__buf;
-};
-# 147 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-static inline void net_buf_simple_init(struct net_buf_simple *buf,
-                                       size_t reserve_head)
-{
-    if (!buf->__buf) {
-        buf->__buf = (u8_t *)buf + sizeof(*buf);
-    }
-
-    buf->data = buf->__buf + reserve_head;
-    buf->len = 0;
-}
-# 165 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-static inline void net_buf_simple_reset(struct net_buf_simple *buf)
-{
-    buf->len = 0;
-    buf->data = buf->__buf;
-}
-# 182 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-void *net_buf_simple_add(struct net_buf_simple *buf, size_t len);
-# 196 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-void *net_buf_simple_add_mem(struct net_buf_simple *buf, const void *mem,
-                             size_t len);
-# 210 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-u8_t *net_buf_simple_add_u8(struct net_buf_simple *buf, u8_t val);
-# 222 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-void net_buf_simple_add_le16(struct net_buf_simple *buf, u16_t val);
-# 234 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-void net_buf_simple_add_be16(struct net_buf_simple *buf, u16_t val);
-# 246 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-void net_buf_simple_add_le32(struct net_buf_simple *buf, u32_t val);
-# 258 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-void net_buf_simple_add_be32(struct net_buf_simple *buf, u32_t val);
-# 271 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-void *net_buf_simple_push(struct net_buf_simple *buf, size_t len);
-# 282 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-void net_buf_simple_push_le16(struct net_buf_simple *buf, u16_t val);
-# 293 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-void net_buf_simple_push_be16(struct net_buf_simple *buf, u16_t val);
-# 303 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-void net_buf_simple_push_u8(struct net_buf_simple *buf, u8_t val);
-# 316 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-void *net_buf_simple_pull(struct net_buf_simple *buf, size_t len);
-# 329 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-void *net_buf_simple_pull_mem(struct net_buf_simple *buf, size_t len);
-# 341 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-u8_t net_buf_simple_pull_u8(struct net_buf_simple *buf);
-# 353 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-u16_t net_buf_simple_pull_le16(struct net_buf_simple *buf);
-# 365 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-u16_t net_buf_simple_pull_be16(struct net_buf_simple *buf);
-# 377 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-u32_t net_buf_simple_pull_le32(struct net_buf_simple *buf);
-# 389 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-u32_t net_buf_simple_pull_be32(struct net_buf_simple *buf);
-# 400 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-static inline u8_t *net_buf_simple_tail(struct net_buf_simple *buf)
-{
-    return buf->data + buf->len;
-}
-# 414 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-size_t net_buf_simple_headroom(struct net_buf_simple *buf);
-# 425 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-size_t net_buf_simple_tailroom(struct net_buf_simple *buf);
-# 434 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-struct net_buf_simple_state {
-
-    u16_t offset;
-
-    u16_t len;
-};
-# 449 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-static inline void net_buf_simple_save(struct net_buf_simple *buf,
-                                       struct net_buf_simple_state *state)
-{
-    state->offset = net_buf_simple_headroom(buf);
-    state->len = buf->len;
-}
-# 465 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-static inline void net_buf_simple_restore(struct net_buf_simple *buf,
-        struct net_buf_simple_state *state)
-{
-    buf->data = buf->__buf + state->offset;
-    buf->len = state->len;
-}
-# 480 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-void net_buf_simple_reserve(struct net_buf_simple *buf, size_t reserve);
-# 499 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-struct net_buf {
-    union {
-
-        sys_snode_t node;
-
-
-        struct net_buf *frags;
-    };
-
-
-    u8_t ref;
-
-
-    u8_t flags;
-
-
-    struct net_buf_pool *pool;
-
-
-
-
-    union {
-
-        struct {
-
-            u8_t *data;
-
-
-            u16_t len;
-
-
-            u16_t size;
-
-
-
-
-
-            u8_t *__buf;
-        };
-
-        struct net_buf_simple b;
-    };
-
-
-    u8_t user_data[4] 
-# 543 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h" 3 4
-                                                   __attribute__((__aligned__(
-# 543 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-                                                   sizeof(int)
-# 543 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h" 3 4
-                                                   )))
-# 543 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-                                                                  ;
-};
-
-struct net_buf_data_cb {
-    u8_t *(*alloc)(struct net_buf *buf, size_t *size, s32_t timeout);
-    u8_t *(*ref)(struct net_buf *buf, u8_t *data);
-    void (*unref)(struct net_buf *buf, u8_t *data);
-};
-
-struct net_buf_data_alloc {
-    const struct net_buf_data_cb *cb;
-    void *alloc_data;
-};
-
-struct net_buf_pool {
-
-    const u16_t buf_count;
-
-
-    u16_t uninit_count;
-
-
-
-    s16_t avail_count;
-
-
-    const u16_t pool_size;
-
-
-    const char *name;
-
-
-
-    void (*const destroy)(struct net_buf *buf);
-
-
-    const struct net_buf_data_alloc *alloc;
-
-
-    struct net_buf *const __bufs;
-};
-# 607 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-struct net_buf_pool_fixed {
-    size_t data_size;
-    u8_t *data_pool;
-};
-
-
-extern const struct net_buf_data_cb net_buf_fixed_cb;
-# 694 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-int net_buf_id(struct net_buf *buf);
-# 716 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-struct net_buf *net_buf_alloc_fixed(struct net_buf_pool *pool, s32_t timeout);
-# 733 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-void net_buf_reset(struct net_buf *buf);
-# 756 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-void net_buf_slist_put(sys_slist_t *list, struct net_buf *buf);
-# 769 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-struct net_buf *net_buf_slist_get(sys_slist_t *list);
-# 784 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-void net_buf_unref(struct net_buf *buf);
-# 794 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-struct net_buf *net_buf_ref(struct net_buf *buf);
-# 803 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-static inline void *net_buf_user_data(struct net_buf *buf)
-{
-    return (void *)buf->user_data;
-}
-# 18 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_access.h" 2
-# 55 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_access.h"
-struct bt_mesh_elem {
-
-    u16_t addr;
-
-
-    const u16_t loc;
-
-    const u8_t model_count;
-    const u8_t vnd_model_count;
-
-    struct bt_mesh_model *const models;
-    struct bt_mesh_model *const vnd_models;
-};
-# 130 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_access.h"
-struct bt_mesh_msg_ctx {
-
-    u16_t net_idx;
-
-
-    u16_t app_idx;
-
-
-    u16_t addr;
-
-
-    u16_t recv_dst;
-
-
-    u8_t recv_ttl: 7;
-
-
-    u8_t send_rel: 1;
-
-
-    u8_t send_ttl;
-
-
-
-    u32_t recv_op;
-
-
-    struct bt_mesh_model *model;
-
-
-
-    
-# 161 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_access.h" 3 4
-   _Bool 
-# 161 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_access.h"
-        srv_send;
-};
-
-struct bt_mesh_model_op {
-
-    const u32_t opcode;
-
-
-    const size_t min_len;
-
-
-    void (*const func)(struct bt_mesh_model *model,
-                       struct bt_mesh_msg_ctx *ctx,
-                       struct net_buf_simple *buf);
-};
-# 280 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_access.h"
-struct bt_mesh_model_pub {
-
-    struct bt_mesh_model *mod;
-
-    u16_t addr;
-    u16_t key;
-
-    u8_t ttl;
-    u8_t retransmit;
-    u8_t period;
-    u16_t period_div: 4,
-          cred: 1,
-          fast_period: 1,
-          count: 3;
-
-    u32_t period_start;
-# 304 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_access.h"
-    struct net_buf_simple *msg;
-# 318 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_access.h"
-    int (*update)(struct bt_mesh_model *mod);
-
-
-    u8_t dev_role;
-
-
-    struct k_delayed_work timer;
-};
-# 343 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_access.h"
-struct bt_mesh_model {
-    union {
-        const u16_t id;
-        struct {
-            u16_t company;
-            u16_t id;
-        } vnd;
-    };
-
-
-    u8_t elem_idx;
-    u8_t model_idx;
-    u16_t flags;
-
-
-    struct bt_mesh_elem *elem;
-
-
-    struct bt_mesh_model_pub *const pub;
-
-
-    u16_t keys[3];
-
-
-    u16_t groups[3];
-
-    const struct bt_mesh_model_op *const op;
-
-
-    void *user_data;
-};
-
-struct bt_mesh_send_cb {
-    void (*start)(u16_t duration, int err, void *cb_data);
-    void (*end)(int err, void *cb_data);
-};
-
-void bt_mesh_model_msg_init(struct net_buf_simple *msg, u32_t opcode);
-# 399 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_access.h"
-int bt_mesh_model_send(struct bt_mesh_model *model,
-                       struct bt_mesh_msg_ctx *ctx,
-                       struct net_buf_simple *msg,
-                       const struct bt_mesh_send_cb *cb,
-                       void *cb_data);
-# 419 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_access.h"
-int bt_mesh_model_publish(struct bt_mesh_model *model);
-# 428 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_access.h"
-struct bt_mesh_elem *bt_mesh_model_elem(struct bt_mesh_model *mod);
-
-
-struct bt_mesh_comp {
-    u16_t cid;
-    u16_t pid;
-    u16_t vid;
-
-    size_t elem_count;
-    struct bt_mesh_elem *elem;
-};
-# 26 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_prov.h" 2
-
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_access.h" 1
-# 16 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h" 2
-# 24 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-typedef enum {
-    BLE_MESH_NO_OUTPUT = 0,
-    BLE_MESH_BLINK = (1UL << (0)),
-    BLE_MESH_BEEP = (1UL << (1)),
-    BLE_MESH_VIBRATE = (1UL << (2)),
-    BLE_MESH_DISPLAY_NUMBER = (1UL << (3)),
-    BLE_MESH_DISPLAY_STRING = (1UL << (4)),
-} bt_mesh_output_action_t;
-
-typedef enum {
-    BLE_MESH_NO_INPUT = 0,
-    BLE_MESH_PUSH = (1UL << (0)),
-    BLE_MESH_TWIST = (1UL << (1)),
-    BLE_MESH_ENTER_NUMBER = (1UL << (2)),
-    BLE_MESH_ENTER_STRING = (1UL << (3)),
-} bt_mesh_input_action_t;
-
-typedef enum {
-    BLE_MESH_PROV_ADV = (1UL << (0)),
-    BLE_MESH_PROV_GATT = (1UL << (1)),
-} bt_mesh_prov_bearer_t;
-
-typedef enum {
-    BLE_MESH_PROV_OOB_OTHER = (1UL << (0)),
-    BLE_MESH_PROV_OOB_URI = (1UL << (1)),
-    BLE_MESH_PROV_OOB_2D_CODE = (1UL << (2)),
-    BLE_MESH_PROV_OOB_BAR_CODE = (1UL << (3)),
-    BLE_MESH_PROV_OOB_NFC = (1UL << (4)),
-    BLE_MESH_PROV_OOB_NUMBER = (1UL << (5)),
-    BLE_MESH_PROV_OOB_STRING = (1UL << (6)),
-
-    BLE_MESH_PROV_OOB_ON_BOX = (1UL << (11)),
-    BLE_MESH_PROV_OOB_IN_BOX = (1UL << (12)),
-    BLE_MESH_PROV_OOB_ON_PAPER = (1UL << (13)),
-    BLE_MESH_PROV_OOB_IN_MANUAL = (1UL << (14)),
-    BLE_MESH_PROV_OOB_ON_DEV = (1UL << (15)),
-} bt_mesh_prov_oob_info_t;
-
-
-struct bt_mesh_prov {
-# 302 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-};
-# 315 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-int bt_mesh_input_string(const char *str);
-# 326 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-int bt_mesh_input_number(u32_t num);
-# 336 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-int bt_mesh_prov_enable(bt_mesh_prov_bearer_t bearers);
-# 346 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-int bt_mesh_prov_disable(bt_mesh_prov_bearer_t bearers);
-
-
-
-
-
-
-# 352 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h" 3 4
-_Bool 
-# 352 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-    bt_mesh_is_provisioner_en(void);
-# 363 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-u8_t bt_mesh_set_fast_prov_action(u8_t action);
-# 376 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-int bt_mesh_prov_input_string(const char *str);
-# 387 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-int bt_mesh_prov_input_number(u32_t num);
-# 397 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-int bt_mesh_provisioner_enable(bt_mesh_prov_bearer_t bearers);
-# 407 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-int bt_mesh_provisioner_disable(bt_mesh_prov_bearer_t bearers);
-# 463 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-int bt_mesh_init(const struct bt_mesh_prov *prov,
-                 const struct bt_mesh_comp *comp);
-# 476 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-void bt_mesh_reset(void);
-# 488 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-int bt_mesh_suspend(void);
-# 497 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-int bt_mesh_resume(void);
-# 514 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-int bt_mesh_provision(const u8_t net_key[16], u16_t net_idx,
-                      u8_t flags, u32_t iv_index, u16_t addr,
-                      const u8_t dev_key[16]);
-# 527 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-
-# 527 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h" 3 4
-_Bool 
-# 527 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-    bt_mesh_is_provisioned(void);
-# 537 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-void bt_mesh_iv_update_test(
-# 537 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h" 3 4
-                           _Bool 
-# 537 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-                                enable);
-# 547 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-
-# 547 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h" 3 4
-_Bool 
-# 547 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-    bt_mesh_iv_update(void);
-# 563 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-int bt_mesh_lpn_set(
-# 563 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h" 3 4
-                   _Bool 
-# 563 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-                        enable, 
-# 563 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h" 3 4
-                                _Bool 
-# 563 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-                                     force);
-# 572 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-int bt_mesh_lpn_poll(void);
-# 581 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-void bt_mesh_lpn_set_cb(void (*cb)(u16_t friend_addr, 
-# 581 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h" 3 4
+# 410 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_register_callback(esp_bt_gap_cb_t callback);
+# 425 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_set_scan_mode(esp_bt_connection_mode_t c_mode, esp_bt_discovery_mode_t d_mode);
+# 442 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_start_discovery(esp_bt_inq_mode_t mode, uint8_t inq_len, uint8_t num_rsps);
+# 453 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_cancel_discovery(void);
+# 464 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_get_remote_services(esp_bd_addr_t remote_bda);
+# 476 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_get_remote_service_record(esp_bd_addr_t remote_bda, esp_bt_uuid_t *uuid);
+# 488 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+uint8_t *esp_bt_gap_resolve_eir_data(uint8_t *eir, esp_bt_eir_type_t type, uint8_t *length);
+# 502 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_config_eir_data(esp_bt_eir_data_t *eir_data);
+# 519 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_set_cod(esp_bt_cod_t cod, esp_bt_cod_mode_t mode);
+# 530 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_get_cod(esp_bt_cod_t *cod);
+# 542 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_read_rssi_delta(esp_bd_addr_t remote_addr);
+# 554 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_remove_bond_device(esp_bd_addr_t bd_addr);
+# 564 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+int esp_bt_gap_get_bond_device_num(void);
+# 581 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_get_bond_device_list(int *dev_num, esp_bd_addr_t *dev_list);
+# 598 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_set_pin(esp_bt_pin_type_t pin_type, uint8_t pin_code_len, esp_bt_pin_code_t pin_code);
+# 613 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_pin_reply(esp_bd_addr_t bd_addr, 
+# 613 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h" 3 4
                                                      _Bool 
-# 581 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-                                                          established));
-# 590 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-void bt_mesh_friend_set_cb(void (*cb)(
-# 590 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h" 3 4
-                                     _Bool 
-# 590 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
-                                          establish, u16_t lpn_addr, u8_t reason));
-# 28 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_prov.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h" 1
-# 18 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_bearer_adapt.h" 1
-# 16 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_bearer_adapt.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_uuid.h" 1
-# 27 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_uuid.h"
-enum {
-    BLE_MESH_UUID_TYPE_16,
-    BLE_MESH_UUID_TYPE_32,
-    BLE_MESH_UUID_TYPE_128,
-};
+# 613 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+                                                          accept, uint8_t pin_code_len, esp_bt_pin_code_t pin_code);
+# 628 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_set_security_param(esp_bt_sp_param_t param_type,
+                                        void *value, uint8_t len);
+# 644 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_ssp_passkey_reply(esp_bd_addr_t bd_addr, 
+# 644 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h" 3 4
+                                                             _Bool 
+# 644 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+                                                                  accept, uint32_t passkey);
+# 658 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_ssp_confirm_reply(esp_bd_addr_t bd_addr, 
+# 658 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h" 3 4
+                                                             _Bool 
+# 658 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+                                                                  accept);
+# 676 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_set_afh_channels(esp_bt_gap_afh_channels channels);
+# 688 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_read_remote_name(esp_bd_addr_t remote_bda);
+# 22 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/profile/std/include/btc_gap_bt.h" 2
 
-
-struct bt_mesh_uuid {
-    u8_t type;
-};
-
-struct bt_mesh_uuid_16 {
-    struct bt_mesh_uuid uuid;
-    u16_t val;
-};
-
-struct bt_mesh_uuid_32 {
-    struct bt_mesh_uuid uuid;
-    u32_t val;
-};
-
-struct bt_mesh_uuid_128 {
-    struct bt_mesh_uuid uuid;
-    u8_t val[16];
-};
-# 17 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_bearer_adapt.h" 2
-# 162 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_bearer_adapt.h"
-enum {
-    BLE_MESH_GATT_ITER_STOP = 0,
-    BLE_MESH_GATT_ITER_CONTINUE,
-};
-
-
-enum {
-
-    BLE_MESH_GATT_PERM_NONE = 0,
-
-
-    BLE_MESH_GATT_PERM_READ = (1UL << (0)),
-
-
-    BLE_MESH_GATT_PERM_WRITE = (1UL << (1)),
-
-
-
-
-
-    BLE_MESH_GATT_PERM_READ_ENCRYPT = (1UL << (2)),
-
-
-
-
-
-    BLE_MESH_GATT_PERM_WRITE_ENCRYPT = (1UL << (3)),
-
-
-
-
-
-
-    BLE_MESH_GATT_PERM_READ_AUTHEN = (1UL << (4)),
-
-
-
-
-
-
-    BLE_MESH_GATT_PERM_WRITE_AUTHEN = (1UL << (5)),
-
-
-
-
-
-
-    BLE_MESH_GATT_PERM_PREPARE_WRITE = (1UL << (6)),
-};
-
-
-enum {
-
-    BLE_MESH_ADV_OPT_NONE = 0,
-
-
-
-
-    BLE_MESH_ADV_OPT_CONNECTABLE = (1UL << (0)),
-# 230 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_bearer_adapt.h"
-    BLE_MESH_ADV_OPT_ONE_TIME = (1UL << (1)),
-};
-# 313 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_bearer_adapt.h"
-struct bt_mesh_gatt_char {
-
-    const struct bt_mesh_uuid *uuid;
-
-    u8_t properties;
-};
-
-
-struct bt_mesh_gatt_service {
-
-    struct bt_mesh_gatt_attr *attrs;
-
-    u16_t attr_count;
-    sys_snode_t node;
-};
-
-struct bt_mesh_ecb_param {
-    u8_t key[16];
-    u8_t clear_text[16];
-    u8_t cipher_text[16];
-} 
-# 333 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_bearer_adapt.h" 3 4
- __attribute__((__packed__))
-# 333 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_bearer_adapt.h"
-         ;
-
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/utl.h" 1
+# 45 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/utl.h"
 typedef struct {
-    u8_t type;
-    u8_t val[6];
-} bt_mesh_addr_t;
+    UINT8 minor;
+    UINT8 major;
+    UINT16 service;
+} tBTA_UTL_COD;
+# 73 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/utl.h"
+extern INT16 utl_str2int(const char *p_s);
+# 88 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/utl.h"
+extern int utl_strucmp(const char *p_s, const char *p_t);
+# 102 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/utl.h"
+extern UINT8 utl_itoa(UINT16 i, char *p_s);
+# 116 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/utl.h"
+extern void utl_freebuf(void **p);
+# 137 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/utl.h"
+extern BOOLEAN utl_set_device_class(tBTA_UTL_COD *p_cod, UINT8 cmd);
+# 152 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/utl.h"
+extern BOOLEAN utl_get_device_class(tBTA_UTL_COD *p_cod);
+# 165 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/utl.h"
+extern BOOLEAN utl_isintstr(const char *p_s);
+# 178 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/utl.h"
+extern BOOLEAN utl_isdialstr(const char *p_s);
+# 24 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/profile/std/include/btc_gap_bt.h" 2
+
+
+typedef enum {
+    BTC_GAP_BT_SEARCH_DEVICES_EVT = 0,
+    BTC_GAP_BT_SEARCH_SERVICES_EVT,
+    BTC_GAP_BT_SEARCH_SERVICE_RECORD_EVT,
+    BTC_GAP_BT_AUTH_CMPL_EVT,
+    BTC_GAP_BT_PIN_REQ_EVT,
+    BTC_GAP_BT_CFM_REQ_EVT,
+    BTC_GAP_BT_KEY_NOTIF_EVT,
+    BTC_GAP_BT_KEY_REQ_EVT,
+    BTC_GAP_BT_READ_RSSI_DELTA_EVT,
+    BTC_GAP_BT_CONFIG_EIR_DATA_EVT,
+    BTC_GAP_BT_SET_AFH_CHANNELS_EVT,
+    BTC_GAP_BT_READ_REMOTE_NAME_EVT,
+}btc_gap_bt_evt_t;
+
+typedef enum {
+    BTC_GAP_BT_ACT_SET_SCAN_MODE = 0,
+    BTC_GAP_BT_ACT_START_DISCOVERY,
+    BTC_GAP_BT_ACT_CANCEL_DISCOVERY,
+    BTC_GAP_BT_ACT_GET_REMOTE_SERVICES,
+    BTC_GAP_BT_ACT_GET_REMOTE_SERVICE_RECORD,
+    BTC_GAP_BT_ACT_SET_COD,
+    BTC_GAP_BT_ACT_READ_RSSI_DELTA,
+    BTC_GAP_BT_ACT_REMOVE_BOND_DEVICE,
+    BTC_GAP_BT_ACT_SET_PIN_TYPE,
+    BTC_GAP_BT_ACT_PIN_REPLY,
+    BTC_GAP_BT_ACT_SET_SECURITY_PARAM,
+    BTC_GAP_BT_ACT_PASSKEY_REPLY,
+    BTC_GAP_BT_ACT_CONFIRM_REPLY,
+    BTC_GAP_BT_ACT_CONFIG_EIR,
+    BTC_GAP_BT_ACT_SET_AFH_CHANNELS,
+    BTC_GAP_BT_ACT_READ_REMOTE_NAME,
+} btc_gap_bt_act_t;
+
+
+typedef union {
+
+    struct set_bt_scan_mode_args {
+        esp_bt_connection_mode_t c_mode;
+        esp_bt_discovery_mode_t d_mode;
+    } set_scan_mode;
+
+
+    struct start_disc_args {
+        esp_bt_inq_mode_t mode;
+        uint8_t inq_len;
+        uint8_t num_rsps;
+    } start_disc;
+
+
+    bt_bdaddr_t bda;
+
+
+    struct get_rmt_srv_rcd_args {
+        bt_bdaddr_t bda;
+        esp_bt_uuid_t uuid;
+    } get_rmt_srv_rcd;
+
+
+    struct set_cod_args {
+       esp_bt_cod_t cod;
+       esp_bt_cod_mode_t mode;
+    } set_cod;
+
+
+    struct bt_read_rssi_delta_args {
+        bt_bdaddr_t bda;
+    } read_rssi_delta;
+
+
+    struct rm_bond_device_args {
+       bt_bdaddr_t bda;
+    } rm_bond_device;
+
+
+    struct set_pin_type_args {
+        esp_bt_pin_type_t pin_type;
+        uint8_t pin_code_len;
+        esp_bt_pin_code_t pin_code;
+    } set_pin_type;
 
 
-
-
-
-struct bt_mesh_adv_data {
-    u8_t type;
-    u8_t data_len;
-    const u8_t *data;
-};
-# 380 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_bearer_adapt.h"
-struct bt_mesh_adv_param {
-
-    u8_t options;
-
-
-    u16_t interval_min;
-
-
-    u16_t interval_max;
-};
-
-
-struct bt_mesh_scan_param {
-
-    u8_t type;
-
-
-
-
-    u8_t filter_dup;
-
-
-    u16_t interval;
-
-
-    u16_t window;
-};
-
-struct bt_mesh_conn {
-    u16_t handle;
-    bt_mesh_atomic_t ref;
-};
-# 424 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_bearer_adapt.h"
-typedef void bt_mesh_scan_cb_t(const bt_mesh_addr_t *addr, s8_t rssi,
-                               u8_t adv_type, struct net_buf_simple *buf);
-# 437 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_bearer_adapt.h"
-typedef void (*bt_mesh_dh_key_cb_t)(const u8_t key[32], const u8_t idx);
-# 448 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_bearer_adapt.h"
-typedef u8_t (*bt_mesh_gatt_attr_func_t)(const struct bt_mesh_gatt_attr *attr,
-        void *user_data);
-# 461 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_bearer_adapt.h"
-struct bt_mesh_conn_cb {
-# 471 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_bearer_adapt.h"
-    void (*connected)(struct bt_mesh_conn *conn, u8_t err);
-# 481 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_bearer_adapt.h"
-    void (*disconnected)(struct bt_mesh_conn *conn, u8_t reason);
-};
-
-struct bt_mesh_prov_conn_cb {
-    void (*connected)(bt_mesh_addr_t *addr, struct bt_mesh_conn *conn, int id);
-
-    void (*disconnected)(bt_mesh_addr_t *addr, struct bt_mesh_conn *conn, u8_t reason);
-
-    ssize_t (*prov_write_descr)(bt_mesh_addr_t *addr, struct bt_mesh_conn *conn);
-
-    ssize_t (*prov_notify)(struct bt_mesh_conn *conn, u8_t *data, u16_t len);
-
-    ssize_t (*proxy_write_descr)(bt_mesh_addr_t *addr, struct bt_mesh_conn *conn);
-
-    ssize_t (*proxy_notify)(struct bt_mesh_conn *conn, u8_t *data, u16_t len);
-};
-
-
-struct bt_mesh_gatt_attr {
-
-    const struct bt_mesh_uuid *uuid;
-# 514 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_bearer_adapt.h"
-    ssize_t (*read)(struct bt_mesh_conn *conn,
-                    const struct bt_mesh_gatt_attr *attr,
-                    void *buf, u16_t len,
-                    u16_t offset);
-# 531 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_bearer_adapt.h"
-    ssize_t (*write)(struct bt_mesh_conn *conn,
-                     const struct bt_mesh_gatt_attr *attr,
-                     const void *buf, u16_t len,
-                     u16_t offset, u8_t flags);
-
-
-    void *user_data;
-
-    u16_t handle;
-
-    u8_t perm;
-};
-# 639 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_bearer_adapt.h"
-esp_err_t bt_mesh_host_init(void);
-
-int bt_le_adv_start(const struct bt_mesh_adv_param *param,
-                    const struct bt_mesh_adv_data *ad, size_t ad_len,
-                    const struct bt_mesh_adv_data *sd, size_t sd_len);
-
-int bt_le_adv_stop(void);
-
-int bt_le_scan_start(const struct bt_mesh_scan_param *param, bt_mesh_scan_cb_t cb);
-
-int bt_le_scan_stop(void);
-
-void bt_mesh_gatts_conn_cb_register(struct bt_mesh_conn_cb *cb);
-
-int bt_mesh_gatts_disconnect(struct bt_mesh_conn *conn, u8_t reason);
-
-int bt_mesh_gatts_service_register(struct bt_mesh_gatt_service *svc);
-
-int bt_mesh_gatts_service_unregister(struct bt_mesh_gatt_service *svc);
-
-ssize_t bt_mesh_gatts_attr_read_included(struct bt_mesh_conn *conn,
-        const struct bt_mesh_gatt_attr *attr,
-        void *buf, u16_t len, u16_t offset);
-
-ssize_t bt_mesh_gatts_attr_read(struct bt_mesh_conn *conn, const struct bt_mesh_gatt_attr *attr,
-                                void *buf, u16_t buf_len, u16_t offset,
-                                const void *value, u16_t value_len);
-
-ssize_t bt_mesh_gatts_attr_read_service(struct bt_mesh_conn *conn,
-                                        const struct bt_mesh_gatt_attr *attr,
-                                        void *buf, u16_t len, u16_t offset);
-
-ssize_t bt_mesh_gatts_attr_read_chrc(struct bt_mesh_conn *conn,
-                                     const struct bt_mesh_gatt_attr *attr, void *buf,
-                                     u16_t len, u16_t offset);
-
-int bt_mesh_gatts_notify(struct bt_mesh_conn *conn, const struct bt_mesh_gatt_attr *attr,
-                         const void *data, u16_t len);
-
-u16_t bt_mesh_gatt_get_mtu(struct bt_mesh_conn *conn);
-
-
-int bt_mesh_gatts_service_stop(struct bt_mesh_gatt_service *svc);
-int bt_mesh_gatts_service_start(struct bt_mesh_gatt_service *svc);
-
-void bt_mesh_gattc_conn_cb_register(struct bt_mesh_prov_conn_cb *cb);
-
-u8_t bt_mesh_gattc_get_free_conn_count(void);
-
-u16_t bt_mesh_gattc_get_service_uuid(struct bt_mesh_conn *conn);
-
-int bt_mesh_gattc_conn_create(const bt_mesh_addr_t *addr, u16_t service_uuid);
-
-void bt_gattc_conn_close(struct bt_mesh_conn *conn);
-
-void bt_mesh_gattc_exchange_mtu(u8_t index);
-
-u16_t bt_mesh_gattc_get_mtu_info(struct bt_mesh_conn *conn);
-
-int bt_mesh_gattc_write_no_rsp(struct bt_mesh_conn *conn, const struct bt_mesh_gatt_attr *attr,
-                               const void *data, u16_t len);
-
-void bt_mesh_gattc_disconnect(struct bt_mesh_conn *conn);
-
-struct bt_mesh_conn *bt_mesh_conn_ref(struct bt_mesh_conn *conn);
-
-void bt_mesh_conn_unref(struct bt_mesh_conn *conn);
-
-void bt_mesh_gatt_init(void);
-
-void bt_mesh_adapt_init(void);
-
-int bt_mesh_rand(void *buf, size_t len);
-
-void bt_mesh_set_private_key(const u8_t pri_key[32]);
-
-const u8_t *bt_mesh_pub_key_get(void);
-
-
-# 717 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_bearer_adapt.h" 3 4
-_Bool 
-# 717 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_bearer_adapt.h"
-    bt_mesh_check_public_key(const uint8_t key[64]);
-
-int bt_mesh_dh_key_gen(const u8_t remote_pk[64], bt_mesh_dh_key_cb_t cb, const u8_t idx);
-
-int bt_mesh_encrypt_le(const u8_t key[16], const u8_t plaintext[16],
-                       u8_t enc_data[16]);
-
-int bt_mesh_encrypt_be(const u8_t key[16], const u8_t plaintext[16],
-                       u8_t enc_data[16]);
-
-enum {
-    BLE_MESH_EXCEP_LIST_ADD = 0,
-    BLE_MESH_EXCEP_LIST_REMOVE,
-    BLE_MESH_EXCEP_LIST_CLEAN,
-};
-
-enum {
-    BLE_MESH_EXCEP_INFO_ADV_ADDR = 0,
-    BLE_MESH_EXCEP_INFO_MESH_LINK_ID,
-    BLE_MESH_EXCEP_INFO_MESH_BEACON,
-    BLE_MESH_EXCEP_INFO_MESH_PROV_ADV,
-    BLE_MESH_EXCEP_INFO_MESH_PROXY_ADV,
-};
-
-enum {
-    BLE_MESH_EXCEP_CLEAN_ADDR_LIST = (1UL << (0)),
-    BLE_MESH_EXCEP_CLEAN_MESH_LINK_ID_LIST = (1UL << (1)),
-    BLE_MESH_EXCEP_CLEAN_MESH_BEACON_LIST = (1UL << (2)),
-    BLE_MESH_EXCEP_CLEAN_MESH_PROV_ADV_LIST = (1UL << (3)),
-    BLE_MESH_EXCEP_CLEAN_MESH_PROXY_ADV_LIST = (1UL << (4)),
-    BLE_MESH_EXCEP_CLEAN_ALL_LIST = 0xFFFF,
-};
-
-int bt_mesh_update_exceptional_list(u8_t sub_code, u8_t type, void *info);
-# 19 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h" 2
-# 42 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h"
-struct bt_mesh_unprov_dev_add {
-    u8_t addr[6];
-    u8_t addr_type;
-    u8_t uuid[16];
-    u16_t oob_info;
-    u8_t bearer;
-};
-
-struct bt_mesh_device_delete {
-    u8_t addr[6];
-    u8_t addr_type;
-    u8_t uuid[16];
-};
-
-
-
-
-
-struct bt_mesh_prov_data_info {
-    union {
-        u16_t net_idx;
-        u8_t flags;
-        u32_t iv_index;
-    };
-    u8_t flag;
-};
-# 76 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h"
-void provisioner_pbg_count_dec(void);
-# 85 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h"
-void provisioner_clear_link_conn_info(const u8_t addr[6]);
-# 94 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h"
-void provisioner_pb_adv_recv(struct net_buf_simple *buf);
-# 105 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h"
-int provisioner_set_prov_conn(const u8_t addr[6], struct bt_mesh_conn *conn);
-# 116 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h"
-int provisioner_pb_gatt_open(struct bt_mesh_conn *conn, u8_t *addr);
-# 127 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h"
-int provisioner_pb_gatt_close(struct bt_mesh_conn *conn, u8_t reason);
-# 138 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h"
-int provisioner_pb_gatt_recv(struct bt_mesh_conn *conn, struct net_buf_simple *buf);
-# 148 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h"
-int provisioner_prov_init(const struct bt_mesh_prov *prov_info);
-# 159 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h"
-void provisioner_unprov_beacon_recv(struct net_buf_simple *buf);
-
-void provisioner_prov_adv_ind_recv(struct net_buf_simple *buf, const bt_mesh_addr_t *addr);
-
-
-
-
-
-
-const struct bt_mesh_prov *provisioner_get_prov_info(void);
-
-
-
-
-
-
-int provisioner_prov_reset_all_nodes(void);
-# 195 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h"
-int bt_mesh_provisioner_add_unprov_dev(struct bt_mesh_unprov_dev_add *add_dev, u8_t flags);
-
-
-
-
-
-
-
-int bt_mesh_provisioner_delete_device(struct bt_mesh_device_delete *del_dev);
-# 217 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h"
-int bt_mesh_provisioner_set_dev_uuid_match(u8_t offset, u8_t length,
-        const u8_t *match, 
-# 218 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h" 3 4
-                          _Bool 
-# 218 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h"
-                               prov_flag);
-# 234 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h"
-typedef void (*unprov_adv_pkt_cb_t)(const u8_t addr[6], const u8_t addr_type,
-                                    const u8_t adv_type, const u8_t dev_uuid[16],
-                                    u16_t oob_info, bt_mesh_prov_bearer_t bearer);
-# 247 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h"
-int bt_mesh_prov_adv_pkt_cb_register(unprov_adv_pkt_cb_t cb);
-# 256 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h"
-int bt_mesh_provisioner_set_prov_data_info(struct bt_mesh_prov_data_info *info);
-# 267 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h"
-int bt_mesh_prov_set_oob_input_data(const u8_t idx, const u8_t *val, 
-# 267 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h" 3 4
-                                                                    _Bool 
-# 267 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h"
-                                                                         num_flag);
-# 279 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h"
-int bt_mesh_prov_set_oob_output_data(const u8_t idx, const u8_t *num, u8_t size, 
-# 279 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h" 3 4
-                                                                                _Bool 
-# 279 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h"
-                                                                                     num_flag);
-# 290 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h"
-int bt_mesh_prov_read_oob_pub_key(const u8_t idx, const u8_t pub_key_x[32], const u8_t pub_key_y[32]);
-# 301 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h"
-void provisioner_set_fast_prov_flag(
-# 301 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h" 3 4
-                                   _Bool 
-# 301 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h"
-                                        flag);
-# 311 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h"
-u8_t provisioner_set_fast_prov_net_idx(const u8_t *net_key, u16_t net_idx);
-
-
-
-
-
-
-u16_t provisioner_get_fast_prov_net_idx(void);
-# 328 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h"
-u8_t bt_mesh_set_fast_prov_unicast_addr_range(u16_t min, u16_t max);
-# 338 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h"
-void bt_mesh_set_fast_prov_flags_iv_index(u8_t flags, u32_t iv_index);
-# 29 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_prov.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_proxy.h" 1
-# 14 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_proxy.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 15 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_proxy.h" 2
-# 31 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_proxy.h"
-int bt_mesh_proxy_identity_enable(void);
-# 21 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h" 2
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/mesh.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/mesh.h"
-struct bt_mesh_net;
-# 25 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/proxy_server.h" 1
-# 13 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/proxy_server.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h" 1
-# 14 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_kernel.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h" 2
-# 34 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
-struct bt_mesh_app_key {
-    u16_t net_idx;
-    u16_t app_idx;
-    
-# 37 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h" 3 4
-   _Bool 
-# 37 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
-         updated;
-    struct bt_mesh_app_keys {
-        u8_t id;
-        u8_t val[16];
-    } keys[2];
-};
-
-struct bt_mesh_subnet {
-    u32_t beacon_sent;
-    u8_t beacons_last;
-
-
-    u8_t beacons_cur;
-
-
-
-    u8_t beacon_cache[21];
-
-    u16_t net_idx;
-
-    
-# 57 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h" 3 4
-   _Bool 
-# 57 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
-         kr_flag;
-    u8_t kr_phase;
-
-    u8_t node_id;
-    u32_t node_id_start;
-
-    u8_t auth[8];
-
-    struct bt_mesh_subnet_keys {
-        u8_t net[16];
-        u8_t nid;
-        u8_t enc[16];
-        u8_t net_id[8];
-
-
-
-        u8_t privacy[16];
-        u8_t beacon[16];
-    } keys[2];
-};
-
-struct bt_mesh_rpl {
-    u16_t src;
-    
-# 80 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h" 3 4
-   _Bool 
-# 80 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
-         old_iv;
-
-
-
-    u32_t seq;
-};
-# 95 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
-struct bt_mesh_friend {
-    u16_t lpn;
-    u8_t recv_delay;
-    u8_t fsn: 1,
-          send_last: 1,
-          pending_req: 1,
-          sec_update: 1,
-          pending_buf: 1,
-          valid: 1,
-          established: 1;
-    s32_t poll_to;
-    u8_t num_elem;
-    u16_t lpn_counter;
-    u16_t counter;
-
-    u16_t net_idx;
-
-    u16_t sub_list[0];
-
-    struct k_delayed_work timer;
-
-    struct bt_mesh_friend_seg {
-        sys_slist_t queue;
-
-
-
-
-
-        u8_t seg_count;
-    } seg[0];
-
-    struct net_buf *last;
-
-    sys_slist_t queue;
-    u32_t queue_size;
-
-
-    struct {
-        u32_t start;
-        u16_t frnd;
-        u16_t repeat_sec;
-        struct k_delayed_work timer;
-    } clear;
-};
-# 147 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
-struct bt_mesh_lpn {
-    enum 
-# 148 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h" 3 4
-        __attribute__((__packed__)) 
-# 148 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
-                 {
-        BLE_MESH_LPN_DISABLED,
-        BLE_MESH_LPN_CLEAR,
-        BLE_MESH_LPN_TIMER,
-        BLE_MESH_LPN_ENABLED,
-        BLE_MESH_LPN_REQ_WAIT,
-        BLE_MESH_LPN_WAIT_OFFER,
-        BLE_MESH_LPN_ESTABLISHED,
-        BLE_MESH_LPN_RECV_DELAY,
-        BLE_MESH_LPN_WAIT_UPDATE,
-        BLE_MESH_LPN_OFFER_RECV,
-    } state;
-
-
-    u8_t xact_next;
-    u8_t xact_pending;
-    u8_t sent_req;
-
-
-
-
-    u16_t frnd;
-
-
-    u8_t recv_win;
-
-    u8_t req_attempts;
-
-    s32_t poll_timeout;
-
-    u8_t groups_changed: 1,
-          pending_poll: 1,
-          disable: 1,
-          fsn: 1,
-          established: 1,
-          clear_success: 1;
-
-
-    u8_t queue_size;
-
-
-    u16_t counter;
-
-
-    u16_t old_friend;
-
-
-    u16_t adv_duration;
-
-
-    struct k_delayed_work timer;
-
-
-    u16_t groups[0];
-
-
-    bt_mesh_atomic_t added[1 + ((0) - 1) / (sizeof(bt_mesh_atomic_val_t) * 8)];
-    bt_mesh_atomic_t pending[1 + ((0) - 1) / (sizeof(bt_mesh_atomic_val_t) * 8)];
-    bt_mesh_atomic_t to_remove[1 + ((0) - 1) / (sizeof(bt_mesh_atomic_val_t) * 8)];
-};
-
-
-enum {
-    BLE_MESH_VALID,
-    BLE_MESH_SUSPENDED,
-    BLE_MESH_IVU_IN_PROGRESS,
-    BLE_MESH_IVU_INITIATOR,
-    BLE_MESH_IVU_TEST,
-    BLE_MESH_IVU_PENDING,
-
-
-    BLE_MESH_RPL_PENDING,
-    BLE_MESH_KEYS_PENDING,
-    BLE_MESH_NET_PENDING,
-    BLE_MESH_IV_PENDING,
-    BLE_MESH_SEQ_PENDING,
-    BLE_MESH_HB_PUB_PENDING,
-    BLE_MESH_CFG_PENDING,
-    BLE_MESH_MOD_PENDING,
-
-
-    BLE_MESH_FLAG_COUNT,
-};
-
-struct bt_mesh_net {
-    u32_t iv_index;
-    u32_t seq;
-
-    bt_mesh_atomic_t flags[1 + ((BLE_MESH_FLAG_COUNT) - 1) / (sizeof(bt_mesh_atomic_val_t) * 8)];
-
-
-    struct k_work local_work;
-    sys_slist_t local_queue;
-# 252 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
-    u8_t ivu_duration;
-
-
-    struct k_delayed_work ivu_timer;
-
-    u8_t dev_key[16];
-
-    struct bt_mesh_app_key app_keys[3];
-
-    struct bt_mesh_subnet sub[3];
-
-    struct bt_mesh_rpl rpl[10];
-# 276 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
-};
-
-
-enum bt_mesh_net_if {
-    BLE_MESH_NET_IF_ADV,
-    BLE_MESH_NET_IF_LOCAL,
-    BLE_MESH_NET_IF_PROXY,
-    BLE_MESH_NET_IF_PROXY_CFG,
-};
-
-
-struct bt_mesh_net_rx {
-    struct bt_mesh_subnet *sub;
-    struct bt_mesh_msg_ctx ctx;
-    u32_t seq;
-    u8_t old_iv: 1,
-           new_key: 1,
-           friend_cred: 1,
-           ctl: 1,
-           net_if: 2,
-           local_match: 1,
-           friend_match: 1;
-    u16_t msg_cache_idx;
-    s8_t rssi;
-};
-
-
-struct bt_mesh_net_tx {
-    struct bt_mesh_subnet *sub;
-    struct bt_mesh_msg_ctx *ctx;
-    u16_t src;
-    u8_t xmit;
-    u8_t friend_cred: 1,
-          aszmic: 1,
-          aid: 6;
-};
-
-extern struct bt_mesh_net bt_mesh;
-# 322 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
-int bt_mesh_net_keys_create(struct bt_mesh_subnet_keys *keys,
-                            const u8_t key[16]);
-
-int bt_mesh_net_create(u16_t idx, u8_t flags, const u8_t key[16],
-                       u32_t iv_index);
-
-u8_t bt_mesh_net_flags(struct bt_mesh_subnet *sub);
-
-
-# 330 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h" 3 4
-_Bool 
-# 330 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
-    bt_mesh_kr_update(struct bt_mesh_subnet *sub, u8_t new_kr, 
-# 330 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h" 3 4
-                                                               _Bool 
-# 330 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
-                                                                    new_key);
-
-void bt_mesh_net_revoke_keys(struct bt_mesh_subnet *sub);
-
-int bt_mesh_net_beacon_update(struct bt_mesh_subnet *sub);
-
-void bt_mesh_rpl_reset(void);
-
-
-# 338 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h" 3 4
-_Bool 
-# 338 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
-    bt_mesh_net_iv_update(u32_t iv_index, 
-# 338 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h" 3 4
-                                          _Bool 
-# 338 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
-                                               iv_update);
-
-void bt_mesh_net_sec_update(struct bt_mesh_subnet *sub);
-
-struct bt_mesh_subnet *bt_mesh_subnet_get(u16_t net_idx);
-
-struct bt_mesh_subnet *bt_mesh_subnet_find(const u8_t net_id[8], u8_t flags,
-        u32_t iv_index, const u8_t auth[8],
+    struct pin_reply_args {
+        bt_bdaddr_t bda;
         
-# 346 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h" 3 4
+# 110 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/profile/std/include/btc_gap_bt.h" 3 4
        _Bool 
-# 346 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
-            *new_key);
-
-int bt_mesh_net_encode(struct bt_mesh_net_tx *tx, struct net_buf_simple *buf,
-                       
-# 349 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h" 3 4
-                      _Bool 
-# 349 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
-                           proxy);
-
-int bt_mesh_net_send(struct bt_mesh_net_tx *tx, struct net_buf *buf,
-                     const struct bt_mesh_send_cb *cb, void *cb_data);
-
-int bt_mesh_net_resend(struct bt_mesh_subnet *sub, struct net_buf *buf,
-                       
-# 355 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h" 3 4
-                      _Bool 
-# 355 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
-                           new_key, const struct bt_mesh_send_cb *cb,
-                       void *cb_data);
-
-int bt_mesh_net_decode(struct net_buf_simple *data, enum bt_mesh_net_if net_if,
-                       struct bt_mesh_net_rx *rx, struct net_buf_simple *buf);
-
-void bt_mesh_net_recv(struct net_buf_simple *data, s8_t rssi,
-                      enum bt_mesh_net_if net_if);
-
-u32_t bt_mesh_next_seq(void);
-
-void bt_mesh_net_start(void);
-
-void bt_mesh_net_init(void);
-
-
-struct friend_cred {
-    u16_t net_idx;
-    u16_t addr;
-
-    u16_t lpn_counter;
-    u16_t frnd_counter;
-
-    struct {
-        u8_t nid;
-        u8_t enc[16];
-        u8_t privacy[16];
-    } cred[2];
-};
-
-int friend_cred_get(struct bt_mesh_subnet *sub, u16_t addr, u8_t *nid,
-                    const u8_t **enc, const u8_t **priv);
-int friend_cred_set(struct friend_cred *cred, u8_t idx, const u8_t net_key[16]);
-void friend_cred_refresh(u16_t net_idx);
-int friend_cred_update(struct bt_mesh_subnet *sub);
-struct friend_cred *friend_cred_create(struct bt_mesh_subnet *sub, u16_t addr,
-                                       u16_t lpn_counter, u16_t frnd_counter);
-void friend_cred_clear(struct friend_cred *cred);
-int friend_cred_del(u16_t net_idx, u16_t addr);
-
-static inline void send_cb_finalize(const struct bt_mesh_send_cb *cb,
-                                    void *cb_data)
-{
-    if (!cb) {
-        return;
-    }
-
-    if (cb->start) {
-        cb->start(0, 0, cb_data);
-    }
-
-    if (cb->end) {
-        cb->end(0, cb_data);
-    }
-}
-# 14 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/proxy_server.h" 2
-# 24 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/proxy_server.h"
-int bt_mesh_set_device_name(const char *name);
-
-int bt_mesh_proxy_send(struct bt_mesh_conn *conn, u8_t type,
-                       struct net_buf_simple *msg);
-
-int bt_mesh_proxy_prov_enable(void);
-int bt_mesh_proxy_prov_disable(
-# 30 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/proxy_server.h" 3 4
-                              _Bool 
-# 30 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/proxy_server.h"
-                                   disconnect);
-
-int bt_mesh_proxy_gatt_enable(void);
-int bt_mesh_proxy_gatt_disable(void);
-void bt_mesh_proxy_gatt_disconnect(void);
-
-void bt_mesh_proxy_beacon_send(struct bt_mesh_subnet *sub);
-
-struct net_buf_simple *bt_mesh_proxy_get_buf(void);
-
-s32_t bt_mesh_proxy_adv_start(void);
-void bt_mesh_proxy_adv_stop(void);
-
-void bt_mesh_proxy_identity_start(struct bt_mesh_subnet *sub);
-void bt_mesh_proxy_identity_stop(struct bt_mesh_subnet *sub);
-
+# 110 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/profile/std/include/btc_gap_bt.h"
+            accept;
+        uint8_t pin_code_len;
+        esp_bt_pin_code_t pin_code;
+    } pin_reply;
 
-# 46 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/proxy_server.h" 3 4
-_Bool 
-# 46 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/proxy_server.h"
-    bt_mesh_proxy_relay(struct net_buf_simple *buf, u16_t dst);
-void bt_mesh_proxy_addr_add(struct net_buf_simple *buf, u16_t addr);
-
-int bt_mesh_proxy_init(void);
-# 26 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/foundation.h" 1
-# 120 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/foundation.h"
-int bt_mesh_cfg_srv_init(struct bt_mesh_model *model, 
-# 120 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/foundation.h" 3 4
-                                                     _Bool 
-# 120 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/foundation.h"
-                                                          primary);
-int bt_mesh_health_srv_init(struct bt_mesh_model *model, 
-# 121 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/foundation.h" 3 4
-                                                        _Bool 
-# 121 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/foundation.h"
-                                                             primary);
-
-int bt_mesh_cfg_cli_init(struct bt_mesh_model *model, 
-# 123 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/foundation.h" 3 4
-                                                     _Bool 
-# 123 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/foundation.h"
-                                                          primary);
-int bt_mesh_health_cli_init(struct bt_mesh_model *model, 
-# 124 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/foundation.h" 3 4
-                                                        _Bool 
-# 124 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/foundation.h"
-                                                             primary);
-
-void bt_mesh_cfg_reset(void);
-
-void bt_mesh_heartbeat(u16_t src, u16_t dst, u8_t hops, u16_t feat);
-
-void bt_mesh_attention(struct bt_mesh_model *model, u8_t time);
 
-u8_t *bt_mesh_label_uuid_get(u16_t addr);
+    struct set_sec_param_args {
+        esp_bt_sp_param_t param_type;
+        uint8_t len;
+        uint8_t *value;
+    } set_security_param;
 
-struct bt_mesh_hb_pub *bt_mesh_hb_pub_get(void);
-void bt_mesh_hb_pub_disable(void);
-struct bt_mesh_cfg_srv *bt_mesh_cfg_get(void);
 
-u8_t bt_mesh_net_transmit_get(void);
-u8_t bt_mesh_relay_get(void);
-u8_t bt_mesh_friend_get(void);
-u8_t bt_mesh_relay_retransmit_get(void);
-u8_t bt_mesh_beacon_get(void);
-u8_t bt_mesh_gatt_proxy_get(void);
-u8_t bt_mesh_default_ttl_get(void);
+    struct passkey_reply_args {
+       bt_bdaddr_t bda;
+       
+# 125 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/profile/std/include/btc_gap_bt.h" 3 4
+      _Bool 
+# 125 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/profile/std/include/btc_gap_bt.h"
+           accept;
+       uint32_t passkey;
+    } passkey_reply;
 
-void bt_mesh_subnet_del(struct bt_mesh_subnet *sub, 
-# 146 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/foundation.h" 3 4
-                                                   _Bool 
-# 146 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/foundation.h"
-                                                        store);
 
-struct bt_mesh_app_key *bt_mesh_app_key_alloc(u16_t app_idx);
-void bt_mesh_app_key_del(struct bt_mesh_app_key *key, 
-# 149 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/foundation.h" 3 4
-                                                     _Bool 
-# 149 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/foundation.h"
-                                                          store);
+    struct confirm_reply_args {
+       bt_bdaddr_t bda;
+       
+# 132 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/profile/std/include/btc_gap_bt.h" 3 4
+      _Bool 
+# 132 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/profile/std/include/btc_gap_bt.h"
+           accept;
+    } confirm_reply;
 
-static inline void key_idx_pack(struct net_buf_simple *buf,
-                                u16_t idx1, u16_t idx2)
-{
-    net_buf_simple_add_le16(buf, idx1 | ((idx2 & 0x00f) << 12));
-    net_buf_simple_add_u8(buf, idx2 >> 4);
-}
 
-static inline void key_idx_unpack(struct net_buf_simple *buf,
-                                  u16_t *idx1, u16_t *idx2)
-{
-    *idx1 = sys_get_le16(&buf->data[0]) & 0xfff;
-    *idx2 = sys_get_le16(&buf->data[1]) >> 4;
-    net_buf_simple_pull(buf, 3);
-}
-# 27 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_main.h" 1
-# 26 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_main.h"
-struct bt_mesh_node_t {
-    char node_name[31];
-    u8_t dev_uuid[16];
-    u16_t oob_info;
-    u16_t unicast_addr;
-    u8_t element_num;
-    u16_t net_idx;
-    u8_t flags;
-    u32_t iv_index;
-    u8_t dev_key[16];
-} 
-# 36 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_main.h" 3 4
- __attribute__((__packed__))
-# 36 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_main.h"
-         ;
+    struct config_eir_args {
+       esp_bt_eir_data_t eir_data;
+    } config_eir;
 
 
+    struct set_afh_channels_args {
+       esp_bt_gap_afh_channels channels;
+    } set_afh_channels;
 
-int provisioner_node_provision(int node_index, const u8_t uuid[16], u16_t oob_info,
-                               u16_t unicast_addr, u8_t element_num, u16_t net_idx,
-                               u8_t flags, u32_t iv_index, const u8_t dev_key[16]);
 
-int provisioner_node_reset(int node_index);
+    bt_bdaddr_t rmt_name_bda;
 
-int provisioner_upper_reset_all_nodes(void);
+} btc_gap_bt_args_t;
 
-int provisioner_upper_init(void);
+void btc_gap_bt_call_handler(btc_msg_t *msg);
+void btc_gap_bt_cb_handler(btc_msg_t *msg);
+void btc_gap_bt_arg_deep_copy(btc_msg_t *msg, void *p_dest, void *p_src);
+void btc_gap_bt_busy_level_updated(uint8_t bl_flags);
 
+esp_err_t btc_gap_bt_get_cod(esp_bt_cod_t *cod);
+# 41 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c" 2
 
 
-const u8_t *provisioner_net_key_get(u16_t net_idx);
 
-struct bt_mesh_subnet *provisioner_subnet_get(u16_t net_idx);
 
 
-# 56 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_main.h" 3 4
-_Bool 
-# 56 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_main.h"
-    provisioner_check_msg_dst_addr(u16_t dst_addr);
 
-const u8_t *provisioner_dev_key_get(u16_t dst_addr);
 
-struct bt_mesh_app_key *provisioner_app_key_find(u16_t app_idx);
-
-u32_t provisioner_get_prov_node_count(void);
-
-
-
-int bt_mesh_provisioner_store_node_info(struct bt_mesh_node_t *node_info);
-
-int bt_mesh_provisioner_get_all_node_unicast_addr(struct net_buf_simple *buf);
-
-int bt_mesh_provisioner_set_node_name(int node_index, const char *name);
-
-const char *bt_mesh_provisioner_get_node_name(int node_index);
-
-int bt_mesh_provisioner_get_node_index(const char *name);
-
-struct bt_mesh_node_t *bt_mesh_provisioner_get_node_info(u16_t unicast_addr);
-
-u32_t bt_mesh_provisioner_get_net_key_count(void);
-
-u32_t bt_mesh_provisioner_get_app_key_count(void);
-
-int bt_mesh_provisioner_local_app_key_add(const u8_t app_key[16], u16_t net_idx, u16_t *app_idx);
-
-const u8_t *bt_mesh_provisioner_local_app_key_get(u16_t net_idx, u16_t app_idx);
-
-int bt_mesh_provisioner_local_app_key_delete(u16_t net_idx, u16_t app_idx);
-
-int bt_mesh_provisioner_local_net_key_add(const u8_t net_key[16], u16_t *net_idx);
-
-const u8_t *bt_mesh_provisioner_local_net_key_get(u16_t net_idx);
-
-int bt_mesh_provisioner_local_net_key_delete(u16_t net_idx);
-
-int bt_mesh_provisioner_get_own_unicast_addr(u16_t *addr, u8_t *elem_num);
-
-
-int bt_mesh_provisioner_bind_local_model_app_idx(u16_t elem_addr, u16_t mod_id,
-        u16_t cid, u16_t app_idx);
-
-
-int bt_mesh_provisioner_bind_local_app_net_idx(u16_t net_idx, u16_t app_idx);
-
-
-int bt_mesh_provisioner_print_local_element_info(void);
-
-
-
-const u8_t *fast_prov_dev_key_get(u16_t dst_addr);
-
-struct bt_mesh_subnet *fast_prov_subnet_get(u16_t net_idx);
-
-struct bt_mesh_app_key *fast_prov_app_key_find(u16_t net_idx, u16_t app_idx);
-
-u8_t bt_mesh_set_fast_prov_net_idx(u16_t net_idx);
-
-u8_t bt_mesh_add_fast_prov_net_key(const u8_t net_key[16]);
-
-const u8_t *bt_mesh_get_fast_prov_net_key(u16_t net_idx);
-
-const u8_t *bt_mesh_get_fast_prov_app_key(u16_t net_idx, u16_t app_idx);
-# 28 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h" 2
-
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_models/common/include/model_opcode.h" 1
-# 30 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_common.h" 1
-# 25 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_common.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h" 1
-# 26 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_common.h" 2
-# 36 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_common.h"
-struct net_buf_simple *bt_mesh_alloc_buf(u16_t size);
-# 45 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_common.h"
-void bt_mesh_free_buf(struct net_buf_simple *buf);
-# 59 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_common.h"
-u8_t bt_mesh_get_device_role(struct bt_mesh_model *model, 
-# 59 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_common.h" 3 4
-                                                         _Bool 
-# 59 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_common.h"
-                                                              srv_send);
-# 31 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h" 2
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_bt_main.h" 1
-# 27 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_bt_main.h"
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/profile/std/include/btc_spp.h" 1
+# 20 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/profile/std/include/btc_spp.h"
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_spp_api.h" 1
+# 25 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_spp_api.h"
 typedef enum {
-    ESP_BLUEDROID_STATUS_UNINITIALIZED = 0,
-    ESP_BLUEDROID_STATUS_INITIALIZED,
-    ESP_BLUEDROID_STATUS_ENABLED
-} esp_bluedroid_status_t;
-
-
-
-
-
-
-
-esp_bluedroid_status_t esp_bluedroid_get_status(void);
-# 48 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_bt_main.h"
-esp_err_t esp_bluedroid_enable(void);
-# 57 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_bt_main.h"
-esp_err_t esp_bluedroid_disable(void);
-# 66 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_bt_main.h"
-esp_err_t esp_bluedroid_init(void);
-# 75 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_bt_main.h"
-esp_err_t esp_bluedroid_deinit(void);
-# 35 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h" 2
-# 53 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
-typedef uint8_t esp_ble_mesh_octet16_t[16];
-
-
-
-typedef uint8_t esp_ble_mesh_octet8_t[8];
-# 183 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
-typedef uint32_t esp_ble_mesh_cb_t;
+    ESP_SPP_SUCCESS = 0,
+    ESP_SPP_FAILURE,
+    ESP_SPP_BUSY,
+    ESP_SPP_NO_DATA,
+    ESP_SPP_NO_RESOURCE
+} esp_spp_status_t;
+# 41 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_spp_api.h"
+typedef uint16_t esp_spp_sec_t;
 
 typedef enum {
-    ESP_BLE_MESH_TYPE_PROV_CB,
-    ESP_BLE_MESH_TYPE_OUTPUT_NUM_CB,
-    ESP_BLE_MESH_TYPE_OUTPUT_STR_CB,
-    ESP_BLE_MESH_TYPE_INTPUT_CB,
-    ESP_BLE_MESH_TYPE_LINK_OPEN_CB,
-    ESP_BLE_MESH_TYPE_LINK_CLOSE_CB,
-    ESP_BLE_MESH_TYPE_COMPLETE_CB,
-    ESP_BLE_MESH_TYPE_RESET_CB,
-} esp_ble_mesh_cb_type_t;
+    ESP_SPP_ROLE_MASTER = 0,
+    ESP_SPP_ROLE_SLAVE = 1,
+} esp_spp_role_t;
+
+typedef enum {
+    ESP_SPP_MODE_CB = 0,
+    ESP_SPP_MODE_VFS = 1,
+} esp_spp_mode_t;
+
+
+
+
 
 
 typedef enum {
-    ESP_BLE_MESH_NO_OOB,
-    ESP_BLE_MESH_STATIC_OOB,
-    ESP_BLE_MESH_OUTPUT_OOB,
-    ESP_BLE_MESH_INPUT_OOB,
-} esp_ble_mesh_oob_method_t;
+    ESP_SPP_INIT_EVT = 0,
+    ESP_SPP_DISCOVERY_COMP_EVT = 8,
+    ESP_SPP_OPEN_EVT = 26,
+    ESP_SPP_CLOSE_EVT = 27,
+    ESP_SPP_START_EVT = 28,
+    ESP_SPP_CL_INIT_EVT = 29,
+    ESP_SPP_DATA_IND_EVT = 30,
+    ESP_SPP_CONG_EVT = 31,
+    ESP_SPP_WRITE_EVT = 33,
+    ESP_SPP_SRV_OPEN_EVT = 34,
+} esp_spp_cb_event_t;
 
-
-typedef enum {
-    ESP_BLE_MESH_NO_OUTPUT = 0,
-    ESP_BLE_MESH_BLINK = (1UL << (0)),
-    ESP_BLE_MESH_BEEP = (1UL << (1)),
-    ESP_BLE_MESH_VIBRATE = (1UL << (2)),
-    ESP_BLE_MESH_DISPLAY_NUMBER = (1UL << (3)),
-    ESP_BLE_MESH_DISPLAY_STRING = (1UL << (4)),
-} esp_ble_mesh_output_action_t;
-
-
-typedef enum {
-    ESP_BLE_MESH_NO_INPUT = 0,
-    ESP_BLE_MESH_PUSH = (1UL << (0)),
-    ESP_BLE_MESH_TWIST = (1UL << (1)),
-    ESP_BLE_MESH_ENTER_NUMBER = (1UL << (2)),
-    ESP_BLE_MESH_ENTER_STRING = (1UL << (3)),
-} esp_ble_mesh_input_action_t;
-
-
-typedef enum {
-    ESP_BLE_MESH_PROV_ADV = (1UL << (0)),
-    ESP_BLE_MESH_PROV_GATT = (1UL << (1)),
-} esp_ble_mesh_prov_bearer_t;
-
-
-typedef enum {
-    ESP_BLE_MESH_PROV_OOB_OTHER = (1UL << (0)),
-    ESP_BLE_MESH_PROV_OOB_URI = (1UL << (1)),
-    ESP_BLE_MESH_PROV_OOB_2D_CODE = (1UL << (2)),
-    ESP_BLE_MESH_PROV_OOB_BAR_CODE = (1UL << (3)),
-    ESP_BLE_MESH_PROV_OOB_NFC = (1UL << (4)),
-    ESP_BLE_MESH_PROV_OOB_NUMBER = (1UL << (5)),
-    ESP_BLE_MESH_PROV_OOB_STRING = (1UL << (6)),
-
-    ESP_BLE_MESH_PROV_OOB_ON_BOX = (1UL << (11)),
-    ESP_BLE_MESH_PROV_OOB_IN_BOX = (1UL << (12)),
-    ESP_BLE_MESH_PROV_OOB_ON_PAPER = (1UL << (13)),
-    ESP_BLE_MESH_PROV_OOB_IN_MANUAL = (1UL << (14)),
-    ESP_BLE_MESH_PROV_OOB_ON_DEV = (1UL << (15)),
-} esp_ble_mesh_prov_oob_info_t;
-# 308 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
-typedef uint8_t UINT8;
-typedef uint16_t UINT16;
-typedef uint32_t UINT32;
-typedef uint64_t UINT64;
-
-
-typedef UINT8 BT_OCTET32[32];
-
-
-
-
-
-
-
-typedef uint8_t esp_ble_mesh_bd_addr_t[6];
-
-
-typedef enum {
-    ESP_BLE_MESH_ADDR_TYPE_PUBLIC = 0x00,
-    ESP_BLE_MESH_ADDR_TYPE_RANDOM = 0x01,
-    ESP_BLE_MESH_ADDR_TYPE_RPA_PUBLIC = 0x02,
-    ESP_BLE_MESH_ADDR_TYPE_RPA_RANDOM = 0x03,
-} esp_ble_mesh_addr_type_t;
-
-typedef struct esp_ble_mesh_model esp_ble_mesh_model_t;
-
-
-
-
-typedef struct {
-
-    uint16_t element_addr;
-
-
-    const uint16_t location;
-
-    const uint8_t sig_model_count;
-    const uint8_t vnd_model_count;
-
-    esp_ble_mesh_model_t *sig_models;
-    esp_ble_mesh_model_t *vnd_models;
-} esp_ble_mesh_elem_t;
-
-
-
-
-typedef struct {
-
-    esp_ble_mesh_model_t *model;
-
-    uint16_t publish_addr;
-    uint16_t app_idx;
-
-    uint8_t ttl;
-    uint8_t retransmit;
-
-    uint8_t period;
-    uint16_t period_div: 4,
-             cred: 1,
-             fast_period: 1,
-             count: 3;
-
-    uint32_t period_start;
-# 379 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
-    struct net_buf_simple *msg;
-
-
-    esp_ble_mesh_cb_t update;
-
-
-    uint8_t dev_role;
-
-
-    struct k_delayed_work timer;
-} esp_ble_mesh_model_pub_t;
-# 424 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
-typedef struct {
-    const uint32_t opcode;
-    const size_t min_len;
-    esp_ble_mesh_cb_t param_cb;
-} esp_ble_mesh_model_op_t;
-# 439 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
-struct esp_ble_mesh_model {
-
-    union {
-        const uint16_t model_id;
-        struct {
-            uint16_t company_id;
-            uint16_t model_id;
-        } vnd;
-    };
-
-
-    uint8_t element_idx;
-    uint8_t model_idx;
-    uint16_t flags;
-
-
-    esp_ble_mesh_elem_t *element;
-
-
-    esp_ble_mesh_model_pub_t *const pub;
-
-
-    uint16_t keys[3];
-
-
-    uint16_t groups[3];
-
-
-    esp_ble_mesh_model_op_t *op;
-
-
-    void *user_data;
-};
-# 481 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
-typedef struct {
-
-    uint16_t net_idx;
-
-
-    uint16_t app_idx;
-
-
-    uint16_t addr;
-
-
-    uint16_t recv_dst;
-
-
-    uint8_t recv_ttl: 7;
-
-
-    uint8_t send_rel: 1;
-
-
-    uint8_t send_ttl;
-
-
-    uint32_t recv_op;
-
-
-    esp_ble_mesh_model_t *model;
-
-
-    
-# 510 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h" 3 4
-   _Bool 
-# 510 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
-        srv_send;
-} esp_ble_mesh_msg_ctx_t;
-
-
-
-
-typedef struct {
-# 613 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
-} esp_ble_mesh_prov_t;
-
-
-
-
-typedef struct {
-    uint16_t cid;
-    uint16_t pid;
-    uint16_t vid;
-
-    size_t element_count;
-    esp_ble_mesh_elem_t *elements;
-} esp_ble_mesh_comp_t;
-
-
-typedef enum {
-    ROLE_NODE = 0,
-    ROLE_PROVISIONER,
-    ROLE_FAST_PROV,
-} esp_ble_mesh_dev_role_t;
-
-
-typedef uint8_t esp_ble_mesh_dev_add_flag_t;
-
-
-
-
-
-typedef struct {
-    esp_ble_mesh_bd_addr_t addr;
-    esp_ble_mesh_addr_type_t addr_type;
-    uint8_t uuid[16];
-    uint16_t oob_info;
-
-    esp_ble_mesh_prov_bearer_t bearer;
-} esp_ble_mesh_unprov_dev_add_t;
-
-
-
-
-typedef struct {
-    union {
-        struct {
-            esp_ble_mesh_bd_addr_t addr;
-            esp_ble_mesh_addr_type_t addr_type;
-        };
-        uint8_t uuid[16];
-    };
-    uint8_t flag;
-} esp_ble_mesh_device_delete_t;
-
-
-
-
-
-typedef struct {
-    union {
-        uint16_t net_idx;
-        uint8_t flags;
-        uint32_t iv_index;
-    };
-    uint8_t flag;
-} esp_ble_mesh_prov_data_info_t;
-
-
-typedef struct {
-    uint16_t unicast_min;
-    uint16_t unicast_max;
-    uint16_t net_idx;
-    uint8_t flags;
-    uint32_t iv_index;
-    uint8_t offset;
-    uint8_t match_len;
-    uint8_t match_val[16];
-} esp_ble_mesh_fast_prov_info_t;
-
-
-typedef enum {
-    FAST_PROV_ACT_NONE,
-    FAST_PROV_ACT_ENTER,
-    FAST_PROV_ACT_SUSPEND,
-    FAST_PROV_ACT_EXIT,
-    FAST_PROV_ACT_MAX,
-} esp_ble_mesh_fast_prov_action_t;
-
-
-typedef enum {
-    PROXY_FILTER_WHITELIST,
-    PROXY_FILTER_BLACKLIST,
-} esp_ble_mesh_proxy_filter_type_t;
-
-
-typedef enum {
-    ESP_BLE_MESH_PROV_REGISTER_COMP_EVT,
-    ESP_BLE_MESH_NODE_SET_UNPROV_DEV_NAME_COMP_EVT,
-    ESP_BLE_MESH_NODE_PROV_ENABLE_COMP_EVT,
-    ESP_BLE_MESH_NODE_PROV_DISABLE_COMP_EVT,
-    ESP_BLE_MESH_NODE_PROV_LINK_OPEN_EVT,
-    ESP_BLE_MESH_NODE_PROV_LINK_CLOSE_EVT,
-    ESP_BLE_MESH_NODE_PROV_OOB_PUB_KEY_EVT,
-    ESP_BLE_MESH_NODE_PROV_OUTPUT_NUMBER_EVT,
-    ESP_BLE_MESH_NODE_PROV_OUTPUT_STRING_EVT,
-    ESP_BLE_MESH_NODE_PROV_INPUT_EVT,
-    ESP_BLE_MESH_NODE_PROV_COMPLETE_EVT,
-    ESP_BLE_MESH_NODE_PROV_RESET_EVT,
-    ESP_BLE_MESH_NODE_PROV_SET_OOB_PUB_KEY_COMP_EVT,
-    ESP_BLE_MESH_NODE_PROV_INPUT_NUMBER_COMP_EVT,
-    ESP_BLE_MESH_NODE_PROV_INPUT_STRING_COMP_EVT,
-    ESP_BLE_MESH_NODE_PROXY_IDENTITY_ENABLE_COMP_EVT,
-    ESP_BLE_MESH_NODE_PROXY_GATT_ENABLE_COMP_EVT,
-    ESP_BLE_MESH_NODE_PROXY_GATT_DISABLE_COMP_EVT,
-    ESP_BLE_MESH_PROVISIONER_PROV_ENABLE_COMP_EVT,
-    ESP_BLE_MESH_PROVISIONER_PROV_DISABLE_COMP_EVT,
-    ESP_BLE_MESH_PROVISIONER_RECV_UNPROV_ADV_PKT_EVT,
-    ESP_BLE_MESH_PROVISIONER_PROV_READ_OOB_PUB_KEY_EVT,
-    ESP_BLE_MESH_PROVISIONER_PROV_INPUT_EVT,
-    ESP_BLE_MESH_PROVISIONER_PROV_OUTPUT_EVT,
-    ESP_BLE_MESH_PROVISIONER_PROV_LINK_OPEN_EVT,
-    ESP_BLE_MESH_PROVISIONER_PROV_LINK_CLOSE_EVT,
-    ESP_BLE_MESH_PROVISIONER_PROV_COMPLETE_EVT,
-    ESP_BLE_MESH_PROVISIONER_ADD_UNPROV_DEV_COMP_EVT,
-    ESP_BLE_MESH_PROVISIONER_DELETE_DEV_COMP_EVT,
-    ESP_BLE_MESH_PROVISIONER_SET_DEV_UUID_MATCH_COMP_EVT,
-    ESP_BLE_MESH_PROVISIONER_SET_PROV_DATA_INFO_COMP_EVT,
-    ESP_BLE_MESH_PROVISIONER_PROV_READ_OOB_PUB_KEY_COMP_EVT,
-    ESP_BLE_MESH_PROVISIONER_PROV_INPUT_NUMBER_COMP_EVT,
-    ESP_BLE_MESH_PROVISIONER_PROV_INPUT_STRING_COMP_EVT,
-    ESP_BLE_MESH_PROVISIONER_SET_NODE_NAME_COMP_EVT,
-    ESP_BLE_MESH_PROVISIONER_ADD_LOCAL_APP_KEY_COMP_EVT,
-    ESP_BLE_MESH_PROVISIONER_BIND_APP_KEY_TO_MODEL_COMP_EVT,
-    ESP_BLE_MESH_PROVISIONER_ADD_LOCAL_NET_KEY_COMP_EVT,
-    ESP_BLE_MESH_SET_FAST_PROV_INFO_COMP_EVT,
-    ESP_BLE_MESH_SET_FAST_PROV_ACTION_COMP_EVT,
-    ESP_BLE_MESH_HEARTBEAT_MESSAGE_RECV_EVT,
-    ESP_BLE_MESH_LPN_ENABLE_COMP_EVT,
-    ESP_BLE_MESH_LPN_DISABLE_COMP_EVT,
-    ESP_BLE_MESH_LPN_POLL_COMP_EVT,
-    ESP_BLE_MESH_LPN_FRIENDSHIP_ESTABLISH_EVT,
-    ESP_BLE_MESH_LPN_FRIENDSHIP_TERMINATE_EVT,
-    ESP_BLE_MESH_FRIEND_FRIENDSHIP_ESTABLISH_EVT,
-    ESP_BLE_MESH_FRIEND_FRIENDSHIP_TERMINATE_EVT,
-    ESP_BLE_MESH_PROXY_CLIENT_RECV_ADV_PKT_EVT,
-    ESP_BLE_MESH_PROXY_CLIENT_CONNECTED_EVT,
-    ESP_BLE_MESH_PROXY_CLIENT_DISCONNECTED_EVT,
-    ESP_BLE_MESH_PROXY_CLIENT_RECV_FILTER_STATUS_EVT,
-    ESP_BLE_MESH_PROXY_CLIENT_CONNECT_COMP_EVT,
-    ESP_BLE_MESH_PROXY_CLIENT_DISCONNECT_COMP_EVT,
-    ESP_BLE_MESH_PROXY_CLIENT_SET_FILTER_TYPE_COMP_EVT,
-    ESP_BLE_MESH_PROXY_CLIENT_ADD_FILTER_ADDR_COMP_EVT,
-    ESP_BLE_MESH_PROXY_CLIENT_REMOVE_FILTER_ADDR_COMP_EVT,
-    ESP_BLE_MESH_PROV_EVT_MAX,
-} esp_ble_mesh_prov_cb_event_t;
 
 
 
@@ -17219,5451 +15236,945 @@ typedef union {
 
 
 
-    struct ble_mesh_prov_register_comp_param {
-        int err_code;
-    } prov_register_comp;
+    struct spp_init_evt_param {
+        esp_spp_status_t status;
+    } init;
 
 
 
-    struct ble_mesh_set_unprov_dev_name_comp_param {
-        int err_code;
-    } node_set_unprov_dev_name_comp;
 
+    struct spp_discovery_comp_evt_param {
+        esp_spp_status_t status;
+        uint8_t scn_num;
+        uint8_t scn[31];
+    } disc_comp;
 
 
-    struct ble_mesh_prov_enable_comp_param {
-        int err_code;
-    } node_prov_enable_comp;
 
 
+    struct spp_open_evt_param {
+        esp_spp_status_t status;
+        uint32_t handle;
+        int fd;
+        esp_bd_addr_t rem_bda;
+    } open;
 
-    struct ble_mesh_prov_disable_comp_param {
-        int err_code;
-    } node_prov_disable_comp;
 
 
 
-    struct ble_mesh_link_open_evt_param {
-        esp_ble_mesh_prov_bearer_t bearer;
-    } node_prov_link_open;
+    struct spp_srv_open_evt_param {
+        esp_spp_status_t status;
+        uint32_t handle;
+        uint32_t new_listen_handle;
+        int fd;
+        esp_bd_addr_t rem_bda;
+    } srv_open;
 
 
 
-    struct ble_mesh_link_close_evt_param {
-        esp_ble_mesh_prov_bearer_t bearer;
-    } node_prov_link_close;
-
-
-
-    struct ble_mesh_output_num_evt_param {
-        esp_ble_mesh_output_action_t action;
-        uint32_t number;
-    } node_prov_output_num;
-
-
-
-    struct ble_mesh_output_str_evt_param {
-        char string[8];
-    } node_prov_output_str;
-
-
-
-    struct ble_mesh_input_evt_param {
-        esp_ble_mesh_input_action_t action;
-        uint8_t size;
-    } node_prov_input;
-
-
-
-    struct ble_mesh_provision_complete_evt_param {
-        uint16_t net_idx;
-        uint8_t net_key[16];
-        uint16_t addr;
-        uint8_t flags;
-        uint32_t iv_index;
-    } node_prov_complete;
-
-
-
-    struct ble_mesh_provision_reset_param {
-
-    } node_prov_reset;
-
-
-
-    struct ble_mesh_set_oob_pub_key_comp_param {
-        int err_code;
-    } node_prov_set_oob_pub_key_comp;
-
-
-
-    struct ble_mesh_input_number_comp_param {
-        int err_code;
-    } node_prov_input_num_comp;
-
-
-
-    struct ble_mesh_input_string_comp_param {
-        int err_code;
-    } node_prov_input_str_comp;
-
-
-
-    struct ble_mesh_proxy_identity_enable_comp_param {
-        int err_code;
-    } node_proxy_identity_enable_comp;
-
-
-
-    struct ble_mesh_proxy_gatt_enable_comp_param {
-        int err_code;
-    } node_proxy_gatt_enable_comp;
-
-
-
-    struct ble_mesh_proxy_gatt_disable_comp_param {
-        int err_code;
-    } node_proxy_gatt_disable_comp;
-
-
-
-    struct ble_mesh_provisioner_recv_unprov_adv_pkt_param {
-        uint8_t dev_uuid[16];
-        esp_ble_mesh_bd_addr_t addr;
-        esp_ble_mesh_addr_type_t addr_type;
-        uint16_t oob_info;
-        uint8_t adv_type;
-        esp_ble_mesh_prov_bearer_t bearer;
-    } provisioner_recv_unprov_adv_pkt;
-
-
-
-    struct ble_mesh_provisioner_prov_enable_comp_param {
-        int err_code;
-    } provisioner_prov_enable_comp;
-
-
-
-    struct ble_mesh_provisioner_prov_disable_comp_param {
-        int err_code;
-    } provisioner_prov_disable_comp;
-
-
-
-    struct ble_mesh_provisioner_link_open_evt_param {
-        esp_ble_mesh_prov_bearer_t bearer;
-    } provisioner_prov_link_open;
-
-
-
-    struct ble_mesh_provisioner_prov_read_oob_pub_key_evt_param {
-        uint8_t link_idx;
-    } provisioner_prov_read_oob_pub_key;
-
-
-
-    struct ble_mesh_provisioner_prov_input_evt_param {
-        esp_ble_mesh_oob_method_t method;
-        esp_ble_mesh_output_action_t action;
-        uint8_t size;
-        uint8_t link_idx;
-    } provisioner_prov_input;
-
-
-
-    struct ble_mesh_provisioner_prov_output_evt_param {
-        esp_ble_mesh_oob_method_t method;
-        esp_ble_mesh_input_action_t action;
-        uint8_t size;
-        uint8_t link_idx;
-        union {
-            char string[8];
-            uint32_t number;
-        };
-    } provisioner_prov_output;
-
-
-
-    struct ble_mesh_provisioner_link_close_evt_param {
-        esp_ble_mesh_prov_bearer_t bearer;
-        uint8_t reason;
-    } provisioner_prov_link_close;
-
-
-
-    struct ble_mesh_provisioner_prov_comp_param {
-        int node_idx;
-        esp_ble_mesh_octet16_t device_uuid;
-        uint16_t unicast_addr;
-        uint8_t element_num;
-        uint16_t netkey_idx;
-    } provisioner_prov_complete;
-
-
-
-    struct ble_mesh_provisioner_add_unprov_dev_comp_param {
-        int err_code;
-    } provisioner_add_unprov_dev_comp;
-
-
-
-    struct ble_mesh_provisioner_delete_dev_comp_param {
-        int err_code;
-    } provisioner_delete_dev_comp;
-
-
-
-    struct ble_mesh_provisioner_set_dev_uuid_match_comp_param {
-        int err_code;
-    } provisioner_set_dev_uuid_match_comp;
-
-
-
-    struct ble_mesh_provisioner_set_prov_data_info_comp_param {
-        int err_code;
-    } provisioner_set_prov_data_info_comp;
-
-
-
-    struct ble_mesh_provisioner_prov_read_oob_pub_key_comp_param {
-        int err_code;
-    } provisioner_prov_read_oob_pub_key_comp;
-
-
-
-    struct ble_mesh_provisioner_prov_input_num_comp_param {
-        int err_code;
-    } provisioner_prov_input_num_comp;
-
-
-
-    struct ble_mesh_provisioner_prov_input_str_comp_param {
-        int err_code;
-    } provisioner_prov_input_str_comp;
-
-
-
-    struct ble_mesh_provisioner_set_node_name_comp_param {
-        int err_code;
-        int node_index;
-    } provisioner_set_node_name_comp;
-
-
-
-    struct ble_mesh_provisioner_add_local_app_key_comp_param {
-        int err_code;
-        uint16_t app_idx;
-    } provisioner_add_app_key_comp;
-
-
-
-    struct ble_mesh_provisioner_bind_local_mod_app_comp_param {
-        int err_code;
-    } provisioner_bind_app_key_to_model_comp;
-
-
-
-    struct ble_mesh_provisioner_add_local_net_key_comp_param {
-        int err_code;
-        uint16_t net_idx;
-    } provisioner_add_net_key_comp;
-
-
-
-    struct ble_mesh_set_fast_prov_info_comp_param {
-        uint8_t status_unicast;
-        uint8_t status_net_idx;
-        uint8_t status_match;
-    } set_fast_prov_info_comp;
-
-
-
-    struct ble_mesh_set_fast_prov_action_comp_param {
-        uint8_t status_action;
-    } set_fast_prov_action_comp;
-
-
-
-    struct ble_mesh_heartbeat_msg_recv_param {
-        uint8_t hops;
-        uint16_t feature;
-    } heartbeat_msg_recv;
-
-
-
-    struct ble_mesh_lpn_enable_comp_param {
-        int err_code;
-    } lpn_enable_comp;
-
-
-
-    struct ble_mesh_lpn_disable_comp_param {
-        int err_code;
-    } lpn_disable_comp;
-
-
-
-    struct ble_mesh_lpn_poll_comp_param {
-        int err_code;
-    } lpn_poll_comp;
-
-
-
-    struct ble_mesh_lpn_friendship_establish_param {
-        uint16_t friend_addr;
-    } lpn_friendship_establish;
-
-
-
-    struct ble_mesh_lpn_friendship_terminate_param {
-        uint16_t friend_addr;
-    } lpn_friendship_terminate;
-
-
-
-    struct ble_mesh_friend_friendship_establish_param {
-        uint16_t lpn_addr;
-    } frnd_friendship_establish;
-
-
-
-    struct ble_mesh_friend_friendship_terminate_param {
-        uint16_t lpn_addr;
-
-        enum {
-            ESP_BLE_MESH_FRND_FRIENDSHIP_TERMINATE_ESTABLISH_FAIL,
-            ESP_BLE_MESH_FRND_FRIENDSHIP_TERMINATE_POLL_TIMEOUT,
-            ESP_BLE_MESH_FRND_FRIENDSHIP_TERMINATE_RECV_FRND_REQ,
-            ESP_BLE_MESH_FRND_FRIENDSHIP_TERMINATE_RECV_FRND_CLEAR,
-            ESP_BLE_MESH_FRND_FRIENDSHIP_TERMINATE_DISABLE,
-        } reason;
-    } frnd_friendship_terminate;
-
-
-
-    struct ble_mesh_proxy_client_recv_adv_pkt_param {
-        esp_ble_mesh_bd_addr_t addr;
-        esp_ble_mesh_addr_type_t addr_type;
-        uint16_t net_idx;
-        uint8_t net_id[8];
-    } proxy_client_recv_adv_pkt;
-
-
-
-    struct ble_mesh_proxy_client_connected_param {
-        esp_ble_mesh_bd_addr_t addr;
-        esp_ble_mesh_addr_type_t addr_type;
-        uint8_t conn_handle;
-        uint16_t net_idx;
-    } proxy_client_connected;
-
-
-
-    struct ble_mesh_proxy_client_disconnected_param {
-        esp_ble_mesh_bd_addr_t addr;
-        esp_ble_mesh_addr_type_t addr_type;
-        uint8_t conn_handle;
-        uint16_t net_idx;
-        uint8_t reason;
-    } proxy_client_disconnected;
-
-
-
-    struct ble_mesh_proxy_client_recv_filter_status_param {
-        uint8_t conn_handle;
-        uint16_t server_addr;
-        uint16_t net_idx;
-        uint8_t filter_type;
-        uint16_t list_size;
-    } proxy_client_recv_filter_status;
-
-
-
-    struct ble_mesh_proxy_client_connect_comp_param {
-        int err_code;
-        esp_ble_mesh_bd_addr_t addr;
-        esp_ble_mesh_addr_type_t addr_type;
-        uint16_t net_idx;
-    } proxy_client_connect_comp;
-
-
-
-    struct ble_mesh_proxy_client_disconnect_comp_param {
-        int err_code;
-        uint8_t conn_handle;
-    } proxy_client_disconnect_comp;
-
-
-
-    struct ble_mesh_proxy_client_set_filter_type_comp_param {
-        int err_code;
-        uint8_t conn_handle;
-        uint16_t net_idx;
-    } proxy_client_set_filter_type_comp;
-
-
-
-    struct ble_mesh_proxy_client_add_filter_addr_comp_param {
-        int err_code;
-        uint8_t conn_handle;
-        uint16_t net_idx;
-    } proxy_client_add_filter_addr_comp;
-
-
-
-    struct ble_mesh_proxy_client_remove_filter_addr_comp_param {
-        int err_code;
-        uint8_t conn_handle;
-        uint16_t net_idx;
-    } proxy_client_remove_filter_addr_comp;
-} esp_ble_mesh_prov_cb_param_t;
-# 1241 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
-typedef uint32_t esp_ble_mesh_opcode_config_client_get_t;
-# 1268 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
-typedef uint32_t esp_ble_mesh_opcode_config_client_set_t;
-# 1305 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
-typedef uint32_t esp_ble_mesh_opcode_config_status_t;
-# 1336 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
-typedef uint8_t esp_ble_mesh_cfg_status_t;
-# 1362 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
-typedef uint32_t esp_ble_mesh_opcode_health_client_get_t;
-# 1373 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
-typedef uint32_t esp_ble_mesh_opcode_health_client_set_t;
-# 1390 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
-typedef uint32_t esp_ble_mesh_health_model_status_t;
-# 1402 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
-typedef uint32_t esp_ble_mesh_generic_message_opcode_t;
-# 1501 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
-typedef uint32_t esp_ble_mesh_sensor_message_opcode_t;
-# 1530 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
-typedef uint32_t esp_ble_mesh_time_scene_message_opcode_t;
-# 1575 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
-typedef uint32_t esp_ble_mesh_light_message_opcode_t;
-# 1681 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
-typedef uint32_t esp_ble_mesh_opcode_t;
-
-
-
-
-
-
-typedef uint8_t esp_ble_mesh_model_status_t;
-# 1699 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
-typedef struct {
-    uint32_t cli_op;
-    uint32_t status_op;
-} esp_ble_mesh_client_op_pair_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    int op_pair_size;
-    const esp_ble_mesh_client_op_pair_t *op_pair;
-    uint32_t publish_status;
-    void *internal_data;
-    uint8_t msg_role;
-} esp_ble_mesh_client_t;
-
-
-typedef struct {
-    esp_ble_mesh_opcode_t opcode;
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_msg_ctx_t ctx;
-    int32_t msg_timeout;
-
-    uint8_t msg_role;
-} esp_ble_mesh_client_common_param_t;
-
-
-
-
-
-
-enum {
-    ESP_BLE_MESH_SERVER_TRANS_TIMER_START,
-    ESP_BLE_MESH_SERVER_FLAG_MAX,
-};
-
-
-typedef struct {
-    
-# 1736 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h" 3 4
-   _Bool 
-# 1736 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
-        just_started;
-
-    uint8_t trans_time;
-    uint8_t remain_time;
-    uint8_t delay;
-    uint32_t quo_tt;
-    uint32_t counter;
-    uint32_t total_duration;
-    int64_t start_timestamp;
-# 1755 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
-    bt_mesh_atomic_t flag[1 + ((ESP_BLE_MESH_SERVER_FLAG_MAX) - 1) / (sizeof(bt_mesh_atomic_val_t) * 8)];
-    struct k_delayed_work timer;
-} esp_ble_mesh_state_transition_t;
-
-
-typedef struct {
-    uint8_t tid;
-    uint16_t src;
-    uint16_t dst;
-    int64_t timestamp;
-} esp_ble_mesh_last_msg_info_t;
-
-
-
-
-
-typedef struct {
-# 1787 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
-    uint8_t get_auto_rsp : 1,
-            set_auto_rsp : 1,
-            status_auto_rsp : 1;
-} esp_ble_mesh_server_rsp_ctrl_t;
-
-
-
-
-typedef union {
-    struct {
-        uint8_t onoff;
-    } gen_onoff;
-    struct {
-        int16_t level;
-    } gen_level;
-    struct {
-        uint8_t onpowerup;
-    } gen_onpowerup;
-    struct {
-        uint16_t power;
-    } gen_power_actual;
-    struct {
-        uint16_t lightness;
-    } light_lightness_actual;
-    struct {
-        uint16_t lightness;
-    } light_lightness_linear;
-    struct {
-        uint16_t lightness;
-    } light_ctl_lightness;
-    struct {
-        uint16_t temperature;
-        int16_t delta_uv;
-    } light_ctl_temp_delta_uv;
-    struct {
-        uint16_t lightness;
-    } light_hsl_lightness;
-    struct {
-        uint16_t hue;
-    } light_hsl_hue;
-    struct {
-        uint16_t saturation;
-    } light_hsl_saturation;
-    struct {
-        uint16_t lightness;
-    } light_xyl_lightness;
-    struct {
-        uint8_t onoff;
-    } light_lc_light_onoff;
-} esp_ble_mesh_server_state_value_t;
-
-
-typedef enum {
-    ESP_BLE_MESH_GENERIC_ONOFF_STATE,
-    ESP_BLE_MESH_GENERIC_LEVEL_STATE,
-    ESP_BLE_MESH_GENERIC_ONPOWERUP_STATE,
-    ESP_BLE_MESH_GENERIC_POWER_ACTUAL_STATE,
-    ESP_BLE_MESH_LIGHT_LIGHTNESS_ACTUAL_STATE,
-    ESP_BLE_MESH_LIGHT_LIGHTNESS_LINEAR_STATE,
-    ESP_BLE_MESH_LIGHT_CTL_LIGHTNESS_STATE,
-    ESP_BLE_MESH_LIGHT_CTL_TEMP_DELTA_UV_STATE,
-    ESP_BLE_MESH_LIGHT_HSL_LIGHTNESS_STATE,
-    ESP_BLE_MESH_LIGHT_HSL_HUE_STATE,
-    ESP_BLE_MESH_LIGHT_HSL_SATURATION_STATE,
-    ESP_BLE_MESH_LIGHT_XYL_LIGHTNESS_STATE,
-    ESP_BLE_MESH_LIGHT_LC_LIGHT_ONOFF_STATE,
-    ESP_BLE_MESH_SERVER_MODEL_STATE_MAX,
-} esp_ble_mesh_server_state_type_t;
-
-
-typedef enum {
-    ESP_BLE_MESH_MODEL_OPERATION_EVT,
-    ESP_BLE_MESH_MODEL_SEND_COMP_EVT,
-    ESP_BLE_MESH_MODEL_PUBLISH_COMP_EVT,
-    ESP_BLE_MESH_CLIENT_MODEL_RECV_PUBLISH_MSG_EVT,
-    ESP_BLE_MESH_CLIENT_MODEL_SEND_TIMEOUT_EVT,
-    ESP_BLE_MESH_MODEL_PUBLISH_UPDATE_EVT,
-    ESP_BLE_MESH_SERVER_MODEL_UPDATE_STATE_COMP_EVT,
-    ESP_BLE_MESH_MODEL_EVT_MAX,
-} esp_ble_mesh_model_cb_event_t;
-
-
-
-
-typedef union {
-
-
-
-    struct ble_mesh_model_operation_evt_param {
-        uint32_t opcode;
-        esp_ble_mesh_model_t *model;
-        esp_ble_mesh_msg_ctx_t *ctx;
-        uint16_t length;
-        uint8_t *msg;
-    } model_operation;
-
-
-
-    struct ble_mesh_model_send_comp_param {
-        int err_code;
-        uint32_t opcode;
-        esp_ble_mesh_model_t *model;
-        esp_ble_mesh_msg_ctx_t *ctx;
-    } model_send_comp;
-
-
-
-    struct ble_mesh_model_publish_comp_param {
-        int err_code;
-        esp_ble_mesh_model_t *model;
-    } model_publish_comp;
-
-
-
-    struct ble_mesh_mod_recv_publish_msg_param {
-        uint32_t opcode;
-        esp_ble_mesh_model_t *model;
-        esp_ble_mesh_msg_ctx_t *ctx;
-        uint16_t length;
-        uint8_t *msg;
-    } client_recv_publish_msg;
-
-
-
-    struct ble_mesh_client_model_send_timeout_param {
-        uint32_t opcode;
-        esp_ble_mesh_model_t *model;
-        esp_ble_mesh_msg_ctx_t *ctx;
-    } client_send_timeout;
-
-
-
-    struct ble_mesh_model_publish_update_evt_param {
-        esp_ble_mesh_model_t *model;
-    } model_publish_update;
-
-
-
-    struct ble_mesh_server_model_update_state_comp_param {
-        int err_code;
-        esp_ble_mesh_model_t *model;
-        esp_ble_mesh_server_state_type_t type;
-    } server_model_update_state;
-} esp_ble_mesh_model_cb_param_t;
-# 30 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_prov.h" 2
-
-typedef enum {
-    BTC_BLE_MESH_ACT_MESH_INIT = 0,
-    BTC_BLE_MESH_ACT_PROV_ENABLE,
-    BTC_BLE_MESH_ACT_PROV_DISABLE,
-    BTC_BLE_MESH_ACT_NODE_RESET,
-    BTC_BLE_MESH_ACT_SET_OOB_PUB_KEY,
-    BTC_BLE_MESH_ACT_INPUT_NUMBER,
-    BTC_BLE_MESH_ACT_INPUT_STRING,
-    BTC_BLE_MESH_ACT_SET_DEVICE_NAME,
-    BTC_BLE_MESH_ACT_PROXY_IDENTITY_ENABLE,
-    BTC_BLE_MESH_ACT_PROXY_GATT_ENABLE,
-    BTC_BLE_MESH_ACT_PROXY_GATT_DISABLE,
-    BTC_BLE_MESH_ACT_PROVISIONER_READ_OOB_PUB_KEY,
-    BTC_BLE_MESH_ACT_PROVISIONER_INPUT_STR,
-    BTC_BLE_MESH_ACT_PROVISIONER_INPUT_NUM,
-    BTC_BLE_MESH_ACT_PROVISIONER_ENABLE,
-    BTC_BLE_MESH_ACT_PROVISIONER_DISABLE,
-    BTC_BLE_MESH_ACT_PROVISIONER_DEV_ADD,
-    BTC_BLE_MESH_ACT_PROVISIONER_DEV_DEL,
-    BTC_BLE_MESH_ACT_PROVISIONER_SET_DEV_UUID_MATCH,
-    BTC_BLE_MESH_ACT_PROVISIONER_SET_PROV_DATA_INFO,
-    BTC_BLE_MESH_ACT_PROVISIONER_SET_NODE_NAME,
-    BTC_BLE_MESH_ACT_PROVISIONER_SET_LOCAL_APP_KEY,
-    BTC_BLE_MESH_ACT_PROVISIONER_BIND_LOCAL_MOD_APP,
-    BTC_BLE_MESH_ACT_PROVISIONER_ADD_LOCAL_NET_KEY,
-    BTC_BLE_MESH_ACT_SET_FAST_PROV_INFO,
-    BTC_BLE_MESH_ACT_SET_FAST_PROV_ACTION,
-    BTC_BLE_MESH_ACT_LPN_ENABLE,
-    BTC_BLE_MESH_ACT_LPN_DISABLE,
-    BTC_BLE_MESH_ACT_LPN_POLL,
-    BTC_BLE_MESH_ACT_PROXY_CLIENT_CONNECT,
-    BTC_BLE_MESH_ACT_PROXY_CLIENT_DISCONNECT,
-    BTC_BLE_MESH_ACT_PROXY_CLIENT_SET_FILTER_TYPE,
-    BTC_BLE_MESH_ACT_PROXY_CLIENT_ADD_FILTER_ADDR,
-    BTC_BLE_MESH_ACT_PROXY_CLIENT_REMOVE_FILTER_ADDR,
-} btc_ble_mesh_prov_act_t;
-
-typedef enum {
-    BTC_BLE_MESH_ACT_MODEL_PUBLISH,
-    BTC_BLE_MESH_ACT_SERVER_MODEL_SEND,
-    BTC_BLE_MESH_ACT_CLIENT_MODEL_SEND,
-    BTC_BLE_MESH_ACT_SERVER_MODEL_UPDATE_STATE,
-} btc_ble_mesh_model_act_t;
-
-typedef union {
-    struct ble_mesh_init_args {
-        esp_ble_mesh_prov_t *prov;
-        esp_ble_mesh_comp_t *comp;
-        SemaphoreHandle_t semaphore;
-    } mesh_init;
-    struct ble_mesh_node_prov_enable_args {
-        esp_ble_mesh_prov_bearer_t bearers;
-    } node_prov_enable;
-    struct ble_mesh_node_prov_disable_args {
-        esp_ble_mesh_prov_bearer_t bearers;
-    } node_prov_disable;
-    struct ble_mesh_set_oob_pub_key_args {
-        uint8_t pub_key_x[32];
-        uint8_t pub_key_y[32];
-        uint8_t private_key[32];
-    } set_oob_pub_key;
-    struct ble_mesh_node_input_num_args {
-        uint32_t number;
-    } input_number;
-    struct ble_mesh_node_input_str_args {
-        char string[8];
-    } input_string;
-    struct ble_mesh_set_device_name_args {
-        char name[29];
-    } set_device_name;
-    struct ble_mesh_provisioner_read_oob_pub_key_args {
-        uint8_t link_idx;
-        uint8_t pub_key_x[32];
-        uint8_t pub_key_y[32];
-    } provisioner_read_oob_pub_key;
-    struct ble_mesh_provisioner_input_str_args {
-        char string[8];
-        uint8_t link_idx;
-    } provisioner_input_str;
-    struct ble_mesh_provisioner_input_num_args {
-        uint32_t number;
-        uint8_t link_idx;
-    } provisioner_input_num;
-    struct ble_mesh_provisioner_enable_args {
-        esp_ble_mesh_prov_bearer_t bearers;
-    } provisioner_enable;
-    struct ble_mesh_provisioner_disable_args {
-        esp_ble_mesh_prov_bearer_t bearers;
-    } provisioner_disable;
-    struct ble_mesh_provisioner_dev_add_args {
-        esp_ble_mesh_unprov_dev_add_t add_dev;
-        esp_ble_mesh_dev_add_flag_t flags;
-    } provisioner_dev_add;
-    struct ble_mesh_provisioner_dev_del_args {
-        esp_ble_mesh_device_delete_t del_dev;
-    } provisioner_dev_del;
-    struct ble_mesh_provisioner_set_dev_uuid_match_args {
-        uint8_t offset;
-        uint8_t match_len;
-        uint8_t match_val[16];
+    struct spp_close_evt_param {
+        esp_spp_status_t status;
+        uint32_t port_status;
+        uint32_t handle;
         
-# 131 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_prov.h" 3 4
+# 119 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_spp_api.h" 3 4
        _Bool 
-# 131 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_prov.h"
-            prov_after_match;
-    } set_dev_uuid_match;
-    struct ble_mesh_provisioner_set_prov_net_idx_args {
-        esp_ble_mesh_prov_data_info_t prov_data;
-    } set_prov_data_info;
-    struct ble_mesh_provisioner_set_node_name_args {
-        int index;
-        char name[31];
-    } set_node_name;
-    struct ble_mesh_provisioner_add_local_app_key_args {
-        uint8_t app_key[16];
-        uint16_t net_idx;
-        uint16_t app_idx;
-    } add_local_app_key;
-    struct ble_mesh_provisioner_bind_local_mod_app_args {
-        uint16_t elem_addr;
-        uint16_t model_id;
-        uint16_t cid;
-        uint16_t app_idx;
-    } local_mod_app_bind;
-    struct ble_mesh_provisioner_add_local_net_key_args {
-        uint8_t net_key[16];
-        uint16_t net_idx;
-    } add_local_net_key;
-    struct ble_mesh_set_fast_prov_info_args {
-        uint16_t unicast_min;
-        uint16_t unicast_max;
-        uint16_t net_idx;
-        uint8_t flags;
-        uint32_t iv_index;
-        uint8_t offset;
-        uint8_t match_len;
-        uint8_t match_val[16];
-    } set_fast_prov_info;
-    struct ble_mesh_set_fast_prov_action_args {
-        uint8_t action;
-    } set_fast_prov_action;
-    struct ble_mesh_lpn_enable_args {
+# 119 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_spp_api.h"
+                           async;
+    } close;
 
-    } lpn_enable;
-    struct ble_mesh_lpn_disable_args {
+
+
+
+    struct spp_start_evt_param {
+        esp_spp_status_t status;
+        uint32_t handle;
+        uint8_t sec_id;
         
-# 172 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_prov.h" 3 4
+# 129 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_spp_api.h" 3 4
        _Bool 
-# 172 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_prov.h"
-            force;
-    } lpn_disable;
-    struct ble_mesh_lpn_poll_args {
+# 129 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_spp_api.h"
+                           use_co;
+    } start;
 
-    } lpn_poll;
-    struct ble_mesh_proxy_client_connect_args {
-        uint8_t addr[6];
-        uint8_t addr_type;
-        uint16_t net_idx;
-    } proxy_client_connect;
-    struct ble_mesh_proxy_client_disconnect_args {
-        uint8_t conn_handle;
-    } proxy_client_disconnect;
-    struct ble_mesh_proxy_client_set_filter_type_args {
-        uint8_t conn_handle;
-        uint16_t net_idx;
-        uint8_t filter_type;
-    } proxy_client_set_filter_type;
-    struct ble_mesh_proxy_client_add_filter_addr_args {
-        uint8_t conn_handle;
-        uint16_t net_idx;
-        uint16_t addr_num;
-        uint16_t *addr;
-    } proxy_client_add_filter_addr;
-    struct ble_mesh_proxy_client_remove_filter_addr_args {
-        uint8_t conn_handle;
-        uint16_t net_idx;
-        uint16_t addr_num;
-        uint16_t *addr;
-    } proxy_client_remove_filter_addr;
-} btc_ble_mesh_prov_args_t;
 
-typedef union {
-    struct ble_mesh_model_publish_args {
-        esp_ble_mesh_model_t *model;
-        uint8_t device_role;
-    } model_publish;
-    struct ble_mesh_model_send_args {
-        esp_ble_mesh_model_t *model;
-        esp_ble_mesh_msg_ctx_t *ctx;
-        uint32_t opcode;
+
+    struct spp_cl_init_evt_param {
+        esp_spp_status_t status;
+        uint32_t handle;
+        uint8_t sec_id;
         
-# 213 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_prov.h" 3 4
+# 138 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_spp_api.h" 3 4
        _Bool 
-# 213 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_prov.h"
-            need_rsp;
-        uint16_t length;
+# 138 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_spp_api.h"
+                           use_co;
+    } cl_init;
+
+
+
+
+    struct spp_write_evt_param {
+        esp_spp_status_t status;
+        uint32_t handle;
+        int len;
+        
+# 148 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_spp_api.h" 3 4
+       _Bool 
+# 148 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_spp_api.h"
+                           cong;
+    } write;
+
+
+
+
+    struct spp_data_ind_evt_param {
+        esp_spp_status_t status;
+        uint32_t handle;
+        uint16_t len;
         uint8_t *data;
-        uint8_t device_role;
-        int32_t msg_timeout;
-    } model_send;
-    struct ble_mesh_server_model_update_state_args {
-        esp_ble_mesh_model_t *model;
-        esp_ble_mesh_server_state_type_t type;
-        esp_ble_mesh_server_state_value_t *value;
-    } model_update_state;
-} btc_ble_mesh_model_args_t;
+    } data_ind;
 
-void btc_ble_mesh_prov_arg_deep_copy(btc_msg_t *msg, void *p_dest, void *p_src);
 
-void btc_ble_mesh_model_arg_deep_copy(btc_msg_t *msg, void *p_dest, void *p_src);
 
-int btc_ble_mesh_client_model_init(esp_ble_mesh_model_t *model);
 
-int32_t btc_ble_mesh_model_pub_period_get(esp_ble_mesh_model_t *mod);
+    struct spp_cong_evt_param {
+        esp_spp_status_t status;
+        uint32_t handle;
+        
+# 167 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_spp_api.h" 3 4
+       _Bool 
+# 167 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_spp_api.h"
+                           cong;
+    } cong;
+} esp_spp_cb_param_t;
 
-uint16_t btc_ble_mesh_get_primary_addr(void);
 
-uint16_t *btc_ble_mesh_model_find_group(esp_ble_mesh_model_t *mod, uint16_t addr);
 
-esp_ble_mesh_elem_t *btc_ble_mesh_elem_find(u16_t addr);
 
-uint8_t btc_ble_mesh_elem_count(void);
 
-esp_ble_mesh_model_t *btc_ble_mesh_model_find_vnd(const esp_ble_mesh_elem_t *elem,
-        uint16_t company, uint16_t id);
 
-esp_ble_mesh_model_t *btc_ble_mesh_model_find(const esp_ble_mesh_elem_t *elem,
-        uint16_t id);
+typedef void (esp_spp_cb_t)(esp_spp_cb_event_t event, esp_spp_cb_param_t *param);
+# 188 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_spp_api.h"
+esp_err_t esp_spp_register_callback(esp_spp_cb_t callback);
+# 199 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_spp_api.h"
+esp_err_t esp_spp_init(esp_spp_mode_t mode);
+# 208 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_spp_api.h"
+esp_err_t esp_spp_deinit(void);
+# 223 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_spp_api.h"
+esp_err_t esp_spp_start_discovery(esp_bd_addr_t bd_addr);
+# 241 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_spp_api.h"
+esp_err_t esp_spp_connect(esp_spp_sec_t sec_mask,
+                          esp_spp_role_t role, uint8_t remote_scn, esp_bd_addr_t peer_bd_addr);
+# 253 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_spp_api.h"
+esp_err_t esp_spp_disconnect(uint32_t handle);
+# 273 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_spp_api.h"
+esp_err_t esp_spp_start_srv(esp_spp_sec_t sec_mask,
+                            esp_spp_role_t role, uint8_t local_scn, const char *name);
+# 288 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_spp_api.h"
+esp_err_t esp_spp_write(uint32_t handle, int len, uint8_t *p_data);
+# 298 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_spp_api.h"
+esp_err_t esp_spp_vfs_register(void);
+# 21 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/profile/std/include/btc_spp.h" 2
 
-const esp_ble_mesh_comp_t *btc_ble_mesh_comp_get(void);
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h" 1
+# 31 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h" 1
+# 30 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2cdefs.h" 1
+# 31 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h" 2
+# 64 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+typedef UINT8 tL2CAP_CHNL_PRIORITY;
 
-void btc_ble_mesh_model_call_handler(btc_msg_t *msg);
-void btc_ble_mesh_model_cb_handler(btc_msg_t *msg);
 
-void btc_ble_mesh_prov_call_handler(btc_msg_t *msg);
-void btc_ble_mesh_prov_cb_handler(btc_msg_t *msg);
-# 61 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_health_model.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_health_model.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_health_model_api.h" 1
-# 125 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_health_model_api.h"
-typedef struct {
-
-    esp_ble_mesh_cb_t fault_clear;
-
-
-    esp_ble_mesh_cb_t fault_test;
-
-
-    esp_ble_mesh_cb_t attention_on;
-
-
-    esp_ble_mesh_cb_t attention_off;
-} esp_ble_mesh_health_srv_cb_t;
-
-
-
-
-typedef struct {
-    uint8_t id_count;
-    const uint8_t *test_ids;
-    uint16_t company_id;
-    uint8_t prev_test_id;
-    uint8_t current_faults[32];
-    uint8_t registered_faults[32];
-} __attribute__((packed)) esp_ble_mesh_health_test_t;
-
-
-typedef struct {
-
-    esp_ble_mesh_model_t *model;
-
-
-    esp_ble_mesh_health_srv_cb_t health_cb;
-
-
-    struct k_delayed_work attention_timer;
-
-
-    
-# 163 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_health_model_api.h" 3 4
-   _Bool 
-# 163 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_health_model_api.h"
-        attention_timer_start;
-
-
-    esp_ble_mesh_health_test_t health_test;
-} esp_ble_mesh_health_srv_t;
-
-
-typedef struct {
-    uint16_t company_id;
-} esp_ble_mesh_health_fault_get_t;
-
-
-typedef struct {
-    uint8_t attention;
-} esp_ble_mesh_health_attention_set_t;
-
-
-typedef struct {
-    uint8_t fast_period_divisor;
-} esp_ble_mesh_health_period_set_t;
-
-
-typedef struct {
-    uint16_t company_id;
-    uint8_t test_id;
-} esp_ble_mesh_health_fault_test_t;
-
-
-typedef struct {
-    uint16_t company_id;
-} esp_ble_mesh_health_fault_clear_t;
-
-
-
-
-
-
-
-typedef union {
-    esp_ble_mesh_health_fault_get_t fault_get;
-} esp_ble_mesh_health_client_get_state_t;
-# 216 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_health_model_api.h"
-typedef union {
-    esp_ble_mesh_health_attention_set_t attention_set;
-    esp_ble_mesh_health_period_set_t period_set;
-    esp_ble_mesh_health_fault_test_t fault_test;
-    esp_ble_mesh_health_fault_clear_t fault_clear;
-} esp_ble_mesh_health_client_set_state_t;
-
-
-typedef struct {
-    uint8_t test_id;
-    uint16_t company_id;
-    struct net_buf_simple *fault_array;
-} esp_ble_mesh_health_current_status_cb_t;
-
-
-typedef struct {
-    uint8_t test_id;
-    uint16_t company_id;
-    struct net_buf_simple *fault_array;
-} esp_ble_mesh_health_fault_status_cb_t;
-
-
-typedef struct {
-    uint8_t fast_period_divisor;
-} esp_ble_mesh_health_period_status_cb_t;
-
-
-typedef struct {
-    uint8_t attention;
-} esp_ble_mesh_health_attention_status_cb_t;
-
-
-
-
-typedef union {
-    esp_ble_mesh_health_current_status_cb_t current_status;
-    esp_ble_mesh_health_fault_status_cb_t fault_status;
-    esp_ble_mesh_health_period_status_cb_t period_status;
-    esp_ble_mesh_health_attention_status_cb_t attention_status;
-} esp_ble_mesh_health_client_common_cb_param_t;
-
-
-typedef struct {
-    int error_code;
-    esp_ble_mesh_client_common_param_t *params;
-    esp_ble_mesh_health_client_common_cb_param_t status_cb;
-} esp_ble_mesh_health_client_cb_param_t;
-
-
-typedef enum {
-    ESP_BLE_MESH_HEALTH_CLIENT_GET_STATE_EVT,
-    ESP_BLE_MESH_HEALTH_CLIENT_SET_STATE_EVT,
-    ESP_BLE_MESH_HEALTH_CLIENT_PUBLISH_EVT,
-    ESP_BLE_MESH_HEALTH_CLIENT_TIMEOUT_EVT,
-    ESP_BLE_MESH_HEALTH_CLIENT_EVT_MAX,
-} esp_ble_mesh_health_client_cb_event_t;
-
-
-typedef struct {
-    int error_code;
-    esp_ble_mesh_elem_t *element;
-} esp_ble_mesh_health_fault_update_comp_cb_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    uint16_t company_id;
-} esp_ble_mesh_health_fault_clear_cb_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    uint8_t test_id;
-    uint16_t company_id;
-} esp_ble_mesh_health_fault_test_cb_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    uint8_t time;
-} esp_ble_mesh_health_attention_on_cb_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-} esp_ble_mesh_health_attention_off_cb_t;
-
-
-
-
-typedef union {
-    esp_ble_mesh_health_fault_update_comp_cb_t fault_update_comp;
-    esp_ble_mesh_health_fault_clear_cb_t fault_clear;
-    esp_ble_mesh_health_fault_test_cb_t fault_test;
-    esp_ble_mesh_health_attention_on_cb_t attention_on;
-    esp_ble_mesh_health_attention_off_cb_t attention_off;
-} esp_ble_mesh_health_server_cb_param_t;
-
-
-typedef enum {
-    ESP_BLE_MESH_HEALTH_SERVER_FAULT_UPDATE_COMP_EVT,
-    ESP_BLE_MESH_HEALTH_SERVER_FAULT_CLEAR_EVT,
-    ESP_BLE_MESH_HEALTH_SERVER_FAULT_TEST_EVT,
-    ESP_BLE_MESH_HEALTH_SERVER_ATTENTION_ON_EVT,
-    ESP_BLE_MESH_HEALTH_SERVER_ATTENTION_OFF_EVT,
-    ESP_BLE_MESH_HEALTH_SERVER_EVT_MAX,
-} esp_ble_mesh_health_server_cb_event_t;
-# 333 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_health_model_api.h"
-typedef void (* esp_ble_mesh_health_client_cb_t)(esp_ble_mesh_health_client_cb_event_t event,
-        esp_ble_mesh_health_client_cb_param_t *param);
-
-
-
-
-
-
-typedef void (* esp_ble_mesh_health_server_cb_t)(esp_ble_mesh_health_server_cb_event_t event,
-        esp_ble_mesh_health_server_cb_param_t *param);
-# 352 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_health_model_api.h"
-esp_err_t esp_ble_mesh_register_health_client_callback(esp_ble_mesh_health_client_cb_t callback);
-# 362 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_health_model_api.h"
-esp_err_t esp_ble_mesh_register_health_server_callback(esp_ble_mesh_health_server_cb_t callback);
-# 377 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_health_model_api.h"
-esp_err_t esp_ble_mesh_health_client_get_state(esp_ble_mesh_client_common_param_t *params,
-        esp_ble_mesh_health_client_get_state_t *get_state);
-# 393 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_health_model_api.h"
-esp_err_t esp_ble_mesh_health_client_set_state(esp_ble_mesh_client_common_param_t *params,
-        esp_ble_mesh_health_client_set_state_t *set_state);
-# 404 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_health_model_api.h"
-esp_err_t esp_ble_mesh_health_server_fault_update(esp_ble_mesh_elem_t *element);
-# 21 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_health_model.h" 2
-
-typedef enum {
-    BTC_BLE_MESH_ACT_HEALTH_CLIENT_GET_STATE,
-    BTC_BLE_MESH_ACT_HEALTH_CLIENT_SET_STATE,
-    BTC_BLE_MESH_ACT_HEALTH_CLIENT_MAX,
-} btc_ble_mesh_health_client_act_t;
-
-typedef union {
-    struct ble_mesh_health_client_get_state_reg_args {
-        esp_ble_mesh_client_common_param_t *params;
-        esp_ble_mesh_health_client_get_state_t *get_state;
-    } health_client_get_state;
-    struct ble_mesh_health_client_set_state_reg_args {
-        esp_ble_mesh_client_common_param_t *params;
-        esp_ble_mesh_health_client_set_state_t *set_state;
-    } health_client_set_state;
-} btc_ble_mesh_health_client_args_t;
-
-typedef enum {
-    BTC_BLE_MESH_EVT_HEALTH_CLIENT_GET_STATE,
-    BTC_BLE_MESH_EVT_HEALTH_CLIENT_SET_STATE,
-    BTC_BLE_MESH_EVT_HEALTH_CLIENT_PUBLISH,
-    BTC_BLE_MESH_EVT_HEALTH_CLIENT_TIMEOUT,
-    BTC_BLE_MESH_EVT_HEALTH_CLIENT_MAX,
-} btc_ble_mesh_health_client_evt_t;
-
-void btc_ble_mesh_health_client_arg_deep_copy(btc_msg_t *msg, void *p_dest, void *p_src);
-
-void btc_ble_mesh_health_client_call_handler(btc_msg_t *msg);
-
-void btc_ble_mesh_health_client_cb_handler(btc_msg_t *msg);
-
-void btc_ble_mesh_health_publish_callback(u32_t opcode,
-        struct bt_mesh_model *model,
-        struct bt_mesh_msg_ctx *ctx,
-        struct net_buf_simple *buf);
-
-void bt_mesh_health_client_cb_evt_to_btc(u32_t opcode, u8_t evt_type,
-        struct bt_mesh_model *model,
-        struct bt_mesh_msg_ctx *ctx,
-        const u8_t *val, u16_t len);
-
-typedef enum {
-    BTC_BLE_MESH_ACT_HEALTH_SERVER_FAULT_UPDATE,
-    BTC_BLE_MESH_ACT_HEALTH_SERVER_MAX,
-} btc_ble_mesh_health_server_act_t;
-
-typedef union {
-    struct ble_mesh_health_server_fault_update_args {
-        esp_ble_mesh_elem_t *element;
-    } health_fault_update;
-} btc_ble_mesh_health_server_args_t;
-
-void btc_ble_mesh_health_server_call_handler(btc_msg_t *msg);
-
-void btc_ble_mesh_health_server_cb_handler(btc_msg_t *msg);
-
-void btc_ble_mesh_health_server_arg_deep_copy(btc_msg_t *msg, void *p_dest, void *p_src);
-
-void btc_ble_mesh_health_server_fault_clear(struct bt_mesh_model *model, u16_t company_id);
-
-void btc_ble_mesh_health_server_fault_test(struct bt_mesh_model *model, u8_t test_id, u16_t company_id);
-
-void btc_ble_mesh_health_server_attention_on(struct bt_mesh_model *model, u8_t time);
-
-void btc_ble_mesh_health_server_attention_off(struct bt_mesh_model *model);
-# 62 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_config_model.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_config_model.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_config_model_api.h" 1
-# 49 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_config_model_api.h"
-typedef struct esp_ble_mesh_cfg_srv {
-    esp_ble_mesh_model_t *model;
-
-    uint8_t net_transmit;
-    uint8_t relay;
-    uint8_t relay_retransmit;
-    uint8_t beacon;
-    uint8_t gatt_proxy;
-    uint8_t friend_state;
-    uint8_t default_ttl;
-
-
-    struct {
-        struct k_delayed_work timer;
-
-        uint16_t dst;
-        uint16_t count;
-        uint8_t period;
-        uint8_t ttl;
-        uint16_t feature;
-        uint16_t net_idx;
-    } heartbeat_pub;
-
-
-    struct {
-        int64_t expiry;
-
-        uint16_t src;
-        uint16_t dst;
-        uint16_t count;
-        uint8_t min_hops;
-        uint8_t max_hops;
-
-
-        esp_ble_mesh_cb_t heartbeat_recv_cb;
-    } heartbeat_sub;
-} esp_ble_mesh_cfg_srv_t;
-
-
-typedef struct {
-    uint8_t page;
-} esp_ble_mesh_cfg_composition_data_get_t;
-
-
-typedef struct {
-    uint16_t element_addr;
-    uint16_t model_id;
-    uint16_t company_id;
-} esp_ble_mesh_cfg_model_pub_get_t;
-
-
-typedef struct {
-    uint16_t element_addr;
-    uint16_t model_id;
-} esp_ble_mesh_cfg_sig_model_sub_get_t;
-
-
-typedef struct {
-    uint16_t element_addr;
-    uint16_t model_id;
-    uint16_t company_id;
-} esp_ble_mesh_cfg_vnd_model_sub_get_t;
-
-
-typedef struct {
-    uint16_t net_idx;
-} esp_ble_mesh_cfg_app_key_get_t;
-
-
-typedef struct {
-    uint16_t net_idx;
-} esp_ble_mesh_cfg_node_identity_get_t;
-
-
-typedef struct {
-    uint16_t element_addr;
-    uint16_t model_id;
-} esp_ble_mesh_cfg_sig_model_app_get_t;
-
-
-typedef struct {
-    uint16_t element_addr;
-    uint16_t model_id;
-    uint16_t company_id;
-} esp_ble_mesh_cfg_vnd_model_app_get_t;
-
-
-typedef struct {
-    uint16_t net_idx;
-} esp_ble_mesh_cfg_kr_phase_get_t;
-
-
-typedef struct {
-    uint16_t lpn_addr;
-} esp_ble_mesh_cfg_lpn_polltimeout_get_t;
-
-
-typedef struct {
-    uint8_t beacon;
-} esp_ble_mesh_cfg_beacon_set_t;
-
-
-typedef struct {
-    uint8_t ttl;
-} esp_ble_mesh_cfg_default_ttl_set_t;
-
-
-typedef struct {
-    uint8_t friend_state;
-} esp_ble_mesh_cfg_friend_set_t;
-
-
-typedef struct {
-    uint8_t gatt_proxy;
-} esp_ble_mesh_cfg_gatt_proxy_set_t;
-
-
-typedef struct {
-    uint8_t relay;
-    uint8_t relay_retransmit;
-} esp_ble_mesh_cfg_relay_set_t;
-
-
-typedef struct {
-    uint16_t net_idx;
-    uint8_t net_key[16];
-} esp_ble_mesh_cfg_net_key_add_t;
-
-
-typedef struct {
-    uint16_t net_idx;
-    uint16_t app_idx;
-    uint8_t app_key[16];
-} esp_ble_mesh_cfg_app_key_add_t;
-
-
-typedef struct {
-    uint16_t element_addr;
-    uint16_t model_app_idx;
-    uint16_t model_id;
-    uint16_t company_id;
-} esp_ble_mesh_cfg_model_app_bind_t;
-
-
-typedef struct {
-    uint16_t element_addr;
-    uint16_t publish_addr;
-    uint16_t publish_app_idx;
-    
-# 197 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_config_model_api.h" 3 4
-   _Bool 
-# 197 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_config_model_api.h"
-            cred_flag;
-    uint8_t publish_ttl;
-    uint8_t publish_period;
-    uint8_t publish_retransmit;
-    uint16_t model_id;
-    uint16_t company_id;
-} esp_ble_mesh_cfg_model_pub_set_t;
-
-
-typedef struct {
-    uint16_t element_addr;
-    uint16_t sub_addr;
-    uint16_t model_id;
-    uint16_t company_id;
-} esp_ble_mesh_cfg_model_sub_add_t;
-
-
-typedef struct {
-    uint16_t element_addr;
-    uint16_t sub_addr;
-    uint16_t model_id;
-    uint16_t company_id;
-} esp_ble_mesh_cfg_model_sub_delete_t;
-
-
-typedef struct {
-    uint16_t element_addr;
-    uint16_t sub_addr;
-    uint16_t model_id;
-    uint16_t company_id;
-} esp_ble_mesh_cfg_model_sub_overwrite_t;
-
-
-typedef struct {
-    uint16_t element_addr;
-    uint8_t label_uuid[16];
-    uint16_t model_id;
-    uint16_t company_id;
-} esp_ble_mesh_cfg_model_sub_va_add_t;
-
-
-typedef struct {
-    uint16_t element_addr;
-    uint8_t label_uuid[16];
-    uint16_t model_id;
-    uint16_t company_id;
-} esp_ble_mesh_cfg_model_sub_va_delete_t;
-
-
-typedef struct {
-    uint16_t element_addr;
-    uint8_t label_uuid[16];
-    uint16_t model_id;
-    uint16_t company_id;
-} esp_ble_mesh_cfg_model_sub_va_overwrite_t;
-
-
-typedef struct {
-    uint16_t element_addr;
-    uint8_t label_uuid[16];
-    uint16_t publish_app_idx;
-    
-# 258 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_config_model_api.h" 3 4
-   _Bool 
-# 258 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_config_model_api.h"
-            cred_flag;
-    uint8_t publish_ttl;
-    uint8_t publish_period;
-    uint8_t publish_retransmit;
-    uint16_t model_id;
-    uint16_t company_id;
-} esp_ble_mesh_cfg_model_pub_va_set_t;
-
-
-typedef struct {
-    uint16_t element_addr;
-    uint16_t model_id;
-    uint16_t company_id;
-} esp_ble_mesh_cfg_model_sub_delete_all_t;
-
-
-typedef struct {
-    uint16_t net_idx;
-    uint8_t net_key[16];
-} esp_ble_mesh_cfg_net_key_update_t;
-
-
-typedef struct {
-    uint16_t net_idx;
-} esp_ble_mesh_cfg_net_key_delete_t;
-
-
-typedef struct {
-    uint16_t net_idx;
-    uint16_t app_idx;
-    uint8_t app_key[16];
-} esp_ble_mesh_cfg_app_key_update_t;
-
-
-typedef struct {
-    uint16_t net_idx;
-    uint16_t app_idx;
-} esp_ble_mesh_cfg_app_key_delete_t;
-
-
-typedef struct {
-    uint16_t net_idx;
-    uint8_t identity;
-} esp_ble_mesh_cfg_node_identity_set_t;
-
-
-typedef struct {
-    uint16_t element_addr;
-    uint16_t model_app_idx;
-    uint16_t model_id;
-    uint16_t company_id;
-} esp_ble_mesh_cfg_model_app_unbind_t;
-
-
-typedef struct {
-    uint16_t net_idx;
-    uint8_t transition;
-} esp_ble_mesh_cfg_kr_phase_set_t;
-
-
-typedef struct {
-    uint8_t net_transmit;
-} esp_ble_mesh_cfg_net_transmit_set_t;
-
-
-typedef struct {
-    uint16_t dst;
-    uint8_t count;
-    uint8_t period;
-    uint8_t ttl;
-    uint16_t feature;
-    uint16_t net_idx;
-} esp_ble_mesh_cfg_heartbeat_pub_set_t;
-
-
-typedef struct {
-    uint16_t src;
-    uint16_t dst;
-    uint8_t period;
-} esp_ble_mesh_cfg_heartbeat_sub_set_t;
-# 351 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_config_model_api.h"
-typedef union {
-    esp_ble_mesh_cfg_model_pub_get_t model_pub_get;
-    esp_ble_mesh_cfg_composition_data_get_t comp_data_get;
-    esp_ble_mesh_cfg_sig_model_sub_get_t sig_model_sub_get;
-    esp_ble_mesh_cfg_vnd_model_sub_get_t vnd_model_sub_get;
-    esp_ble_mesh_cfg_app_key_get_t app_key_get;
-    esp_ble_mesh_cfg_node_identity_get_t node_identity_get;
-    esp_ble_mesh_cfg_sig_model_app_get_t sig_model_app_get;
-    esp_ble_mesh_cfg_vnd_model_app_get_t vnd_model_app_get;
-    esp_ble_mesh_cfg_kr_phase_get_t kr_phase_get;
-    esp_ble_mesh_cfg_lpn_polltimeout_get_t lpn_pollto_get;
-} esp_ble_mesh_cfg_client_get_state_t;
-# 385 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_config_model_api.h"
-typedef union {
-    esp_ble_mesh_cfg_beacon_set_t beacon_set;
-    esp_ble_mesh_cfg_default_ttl_set_t default_ttl_set;
-    esp_ble_mesh_cfg_friend_set_t friend_set;
-    esp_ble_mesh_cfg_gatt_proxy_set_t gatt_proxy_set;
-    esp_ble_mesh_cfg_relay_set_t relay_set;
-    esp_ble_mesh_cfg_net_key_add_t net_key_add;
-    esp_ble_mesh_cfg_app_key_add_t app_key_add;
-    esp_ble_mesh_cfg_model_app_bind_t model_app_bind;
-    esp_ble_mesh_cfg_model_pub_set_t model_pub_set;
-    esp_ble_mesh_cfg_model_sub_add_t model_sub_add;
-    esp_ble_mesh_cfg_model_sub_delete_t model_sub_delete;
-    esp_ble_mesh_cfg_model_sub_overwrite_t model_sub_overwrite;
-    esp_ble_mesh_cfg_model_sub_va_add_t model_sub_va_add;
-    esp_ble_mesh_cfg_model_sub_va_delete_t model_sub_va_delete;
-    esp_ble_mesh_cfg_model_sub_va_overwrite_t model_sub_va_overwrite;
-    esp_ble_mesh_cfg_heartbeat_pub_set_t heartbeat_pub_set;
-    esp_ble_mesh_cfg_heartbeat_sub_set_t heartbeat_sub_set;
-    esp_ble_mesh_cfg_model_pub_va_set_t model_pub_va_set;
-    esp_ble_mesh_cfg_model_sub_delete_all_t model_sub_delete_all;
-    esp_ble_mesh_cfg_net_key_update_t net_key_update;
-    esp_ble_mesh_cfg_net_key_delete_t net_key_delete;
-    esp_ble_mesh_cfg_app_key_update_t app_key_update;
-    esp_ble_mesh_cfg_app_key_delete_t app_key_delete;
-    esp_ble_mesh_cfg_node_identity_set_t node_identity_set;
-    esp_ble_mesh_cfg_model_app_unbind_t model_app_unbind;
-    esp_ble_mesh_cfg_kr_phase_set_t kr_phase_set;
-    esp_ble_mesh_cfg_net_transmit_set_t net_transmit_set;
-} esp_ble_mesh_cfg_client_set_state_t;
-
-
-typedef struct {
-    uint8_t beacon;
-} esp_ble_mesh_cfg_beacon_status_cb_t;
-
-
-typedef struct {
-    uint8_t page;
-    struct net_buf_simple *composition_data;
-} esp_ble_mesh_cfg_comp_data_status_cb_t;
-
-
-typedef struct {
-    uint8_t default_ttl;
-} esp_ble_mesh_cfg_default_ttl_status_cb_t;
-
-
-typedef struct {
-    uint8_t gatt_proxy;
-} esp_ble_mesh_cfg_gatt_proxy_status_cb_t;
-
-
-typedef struct {
-    uint8_t relay;
-    uint8_t retransmit;
-} esp_ble_mesh_cfg_relay_status_cb_t;
-
-
-typedef struct {
-    uint8_t status;
-    uint16_t element_addr;
-    uint16_t publish_addr;
-    uint16_t app_idx;
-    
-# 448 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_config_model_api.h" 3 4
-   _Bool 
-# 448 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_config_model_api.h"
-            cred_flag;
-    uint8_t ttl;
-    uint8_t period;
-    uint8_t transmit;
-    uint16_t company_id;
-    uint16_t model_id;
-} esp_ble_mesh_cfg_model_pub_status_cb_t;
-
-
-typedef struct {
-    uint8_t status;
-    uint16_t element_addr;
-    uint16_t sub_addr;
-    uint16_t company_id;
-    uint16_t model_id;
-} esp_ble_mesh_cfg_model_sub_status_cb_t;
-
-
-typedef struct {
-    uint8_t status;
-    uint16_t net_idx;
-} esp_ble_mesh_cfg_net_key_status_cb_t;
-
-
-typedef struct {
-    uint8_t status;
-    uint16_t net_idx;
-    uint16_t app_idx;
-} esp_ble_mesh_cfg_app_key_status_cb_t;
-
-
-typedef struct {
-    uint8_t status;
-    uint16_t element_addr;
-    uint16_t app_idx;
-    uint16_t company_id;
-    uint16_t model_id;
-} esp_ble_mesh_cfg_mod_app_status_cb_t;
-
-
-typedef struct {
-    uint8_t friend_state;
-} esp_ble_mesh_cfg_friend_status_cb_t;
-
-
-typedef struct {
-    uint8_t status;
-    uint16_t dst;
-    uint8_t count;
-    uint8_t period;
-    uint8_t ttl;
-    uint16_t features;
-    uint16_t net_idx;
-} esp_ble_mesh_cfg_hb_pub_status_cb_t;
-
-
-typedef struct {
-    uint8_t status;
-    uint16_t src;
-    uint16_t dst;
-    uint8_t period;
-    uint8_t count;
-    uint8_t min_hops;
-    uint8_t max_hops;
-} esp_ble_mesh_cfg_hb_sub_status_cb_t;
-
-
-typedef struct {
-    uint8_t net_trans_count: 3;
-    uint8_t net_trans_step : 5;
-} esp_ble_mesh_cfg_net_trans_status_cb_t;
-
-
-typedef struct {
-    uint8_t status;
-    uint16_t element_addr;
-    uint16_t company_id;
-    uint16_t model_id;
-    struct net_buf_simple *sub_addr;
-} esp_ble_mesh_cfg_model_sub_list_cb_t;
-
-
-typedef struct {
-    struct net_buf_simple *net_idx;
-} esp_ble_mesh_cfg_net_key_list_cb_t;
-
-
-typedef struct {
-    uint8_t status;
-    uint16_t net_idx;
-    struct net_buf_simple *app_idx;
-} esp_ble_mesh_cfg_app_key_list_cb_t;
-
-
-typedef struct {
-    uint8_t status;
-    uint16_t net_idx;
-    uint8_t identity;
-} esp_ble_mesh_cfg_node_id_status_cb_t;
-
-
-typedef struct {
-    uint8_t status;
-    uint16_t element_addr;
-    uint16_t company_id;
-    uint16_t model_id;
-    struct net_buf_simple *app_idx;
-} esp_ble_mesh_cfg_model_app_list_cb_t;
-
-
-typedef struct {
-    uint8_t status;
-    uint16_t net_idx;
-    uint8_t phase;
-} esp_ble_mesh_cfg_kr_phase_status_cb_t;
-
-
-typedef struct {
-    uint16_t lpn_addr;
-    int32_t poll_timeout;
-} esp_ble_mesh_cfg_lpn_pollto_status_cb_t;
-
-
-
-
-typedef union {
-    esp_ble_mesh_cfg_beacon_status_cb_t beacon_status;
-    esp_ble_mesh_cfg_comp_data_status_cb_t comp_data_status;
-    esp_ble_mesh_cfg_default_ttl_status_cb_t default_ttl_status;
-    esp_ble_mesh_cfg_gatt_proxy_status_cb_t gatt_proxy_status;
-    esp_ble_mesh_cfg_relay_status_cb_t relay_status;
-    esp_ble_mesh_cfg_model_pub_status_cb_t model_pub_status;
-    esp_ble_mesh_cfg_model_sub_status_cb_t model_sub_status;
-    esp_ble_mesh_cfg_net_key_status_cb_t netkey_status;
-    esp_ble_mesh_cfg_app_key_status_cb_t appkey_status;
-    esp_ble_mesh_cfg_mod_app_status_cb_t model_app_status;
-    esp_ble_mesh_cfg_friend_status_cb_t friend_status;
-    esp_ble_mesh_cfg_hb_pub_status_cb_t heartbeat_pub_status;
-    esp_ble_mesh_cfg_hb_sub_status_cb_t heartbeat_sub_status;
-    esp_ble_mesh_cfg_net_trans_status_cb_t net_transmit_status;
-    esp_ble_mesh_cfg_model_sub_list_cb_t model_sub_list;
-    esp_ble_mesh_cfg_net_key_list_cb_t netkey_list;
-    esp_ble_mesh_cfg_app_key_list_cb_t appkey_list;
-    esp_ble_mesh_cfg_node_id_status_cb_t node_identity_status;
-    esp_ble_mesh_cfg_model_app_list_cb_t model_app_list;
-    esp_ble_mesh_cfg_kr_phase_status_cb_t kr_phase_status;
-    esp_ble_mesh_cfg_lpn_pollto_status_cb_t lpn_timeout_status;
-} esp_ble_mesh_cfg_client_common_cb_param_t;
-
-
-typedef struct {
-    int error_code;
-    esp_ble_mesh_client_common_param_t *params;
-    esp_ble_mesh_cfg_client_common_cb_param_t status_cb;
-} esp_ble_mesh_cfg_client_cb_param_t;
-
-
-typedef enum {
-    ESP_BLE_MESH_CFG_CLIENT_GET_STATE_EVT,
-    ESP_BLE_MESH_CFG_CLIENT_SET_STATE_EVT,
-    ESP_BLE_MESH_CFG_CLIENT_PUBLISH_EVT,
-    ESP_BLE_MESH_CFG_CLIENT_TIMEOUT_EVT,
-    ESP_BLE_MESH_CFG_CLIENT_EVT_MAX,
-} esp_ble_mesh_cfg_client_cb_event_t;
-
-
-
-
-
-typedef struct {
-    uint16_t element_addr;
-    uint16_t pub_addr;
-    uint16_t app_idx;
-    
-# 621 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_config_model_api.h" 3 4
-   _Bool 
-# 621 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_config_model_api.h"
-            cred_flag;
-    uint8_t pub_ttl;
-    uint8_t pub_period;
-    uint8_t pub_retransmit;
-    uint16_t company_id;
-    uint16_t model_id;
-} esp_ble_mesh_state_change_cfg_mod_pub_set_t;
-
-
-typedef struct {
-    uint16_t element_addr;
-    uint16_t sub_addr;
-    uint16_t company_id;
-    uint16_t model_id;
-} esp_ble_mesh_state_change_cfg_model_sub_add_t;
-
-
-typedef struct {
-    uint16_t element_addr;
-    uint16_t sub_addr;
-    uint16_t company_id;
-    uint16_t model_id;
-} esp_ble_mesh_state_change_cfg_model_sub_delete_t;
-
-
-typedef struct {
-    uint16_t net_idx;
-    uint8_t net_key[16];
-} esp_ble_mesh_state_change_cfg_netkey_add_t;
-
-
-typedef struct {
-    uint16_t net_idx;
-    uint8_t net_key[16];
-} esp_ble_mesh_state_change_cfg_netkey_update_t;
-
-
-typedef struct {
-    uint16_t net_idx;
-} esp_ble_mesh_state_change_cfg_netkey_delete_t;
-
-
-typedef struct {
-    uint16_t net_idx;
-    uint16_t app_idx;
-    uint8_t app_key[16];
-} esp_ble_mesh_state_change_cfg_appkey_add_t;
-
-
-typedef struct {
-    uint16_t net_idx;
-    uint16_t app_idx;
-    uint8_t app_key[16];
-} esp_ble_mesh_state_change_cfg_appkey_update_t;
-
-
-typedef struct {
-    uint16_t net_idx;
-    uint16_t app_idx;
-} esp_ble_mesh_state_change_cfg_appkey_delete_t;
-
-
-typedef struct {
-    uint16_t element_addr;
-    uint16_t app_idx;
-    uint16_t company_id;
-    uint16_t model_id;
-} esp_ble_mesh_state_change_cfg_model_app_bind_t;
-
-
-typedef struct {
-    uint16_t element_addr;
-    uint16_t app_idx;
-    uint16_t company_id;
-    uint16_t model_id;
-} esp_ble_mesh_state_change_cfg_model_app_unbind_t;
-
-
-typedef struct {
-    uint16_t net_idx;
-    uint8_t kr_phase;
-} esp_ble_mesh_state_change_cfg_kr_phase_set_t;
-
-
-
-
-typedef union {
-
-
-
-    esp_ble_mesh_state_change_cfg_mod_pub_set_t mod_pub_set;
-    esp_ble_mesh_state_change_cfg_model_sub_add_t mod_sub_add;
-    esp_ble_mesh_state_change_cfg_model_sub_delete_t mod_sub_delete;
-    esp_ble_mesh_state_change_cfg_netkey_add_t netkey_add;
-    esp_ble_mesh_state_change_cfg_netkey_update_t netkey_update;
-    esp_ble_mesh_state_change_cfg_netkey_delete_t netkey_delete;
-    esp_ble_mesh_state_change_cfg_appkey_add_t appkey_add;
-    esp_ble_mesh_state_change_cfg_appkey_update_t appkey_update;
-    esp_ble_mesh_state_change_cfg_appkey_delete_t appkey_delete;
-    esp_ble_mesh_state_change_cfg_model_app_bind_t mod_app_bind;
-    esp_ble_mesh_state_change_cfg_model_app_unbind_t mod_app_unbind;
-    esp_ble_mesh_state_change_cfg_kr_phase_set_t kr_phase_set;
-} esp_ble_mesh_cfg_server_state_change_t;
-
-
-
-
-typedef union {
-    esp_ble_mesh_cfg_server_state_change_t state_change;
-} esp_ble_mesh_cfg_server_cb_value_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_msg_ctx_t ctx;
-    esp_ble_mesh_cfg_server_cb_value_t value;
-} esp_ble_mesh_cfg_server_cb_param_t;
-
-
-typedef enum {
-    ESP_BLE_MESH_CFG_SERVER_STATE_CHANGE_EVT,
-    ESP_BLE_MESH_CFG_SERVER_EVT_MAX,
-} esp_ble_mesh_cfg_server_cb_event_t;
-# 754 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_config_model_api.h"
-typedef void (* esp_ble_mesh_cfg_client_cb_t)(esp_ble_mesh_cfg_client_cb_event_t event,
-        esp_ble_mesh_cfg_client_cb_param_t *param);
-
-
-
-
-
-
-typedef void (* esp_ble_mesh_cfg_server_cb_t)(esp_ble_mesh_cfg_server_cb_event_t event,
-        esp_ble_mesh_cfg_server_cb_param_t *param);
-# 773 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_config_model_api.h"
-esp_err_t esp_ble_mesh_register_config_client_callback(esp_ble_mesh_cfg_client_cb_t callback);
-# 783 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_config_model_api.h"
-esp_err_t esp_ble_mesh_register_config_server_callback(esp_ble_mesh_cfg_server_cb_t callback);
-# 798 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_config_model_api.h"
-esp_err_t esp_ble_mesh_config_client_get_state(esp_ble_mesh_client_common_param_t *params,
-        esp_ble_mesh_cfg_client_get_state_t *get_state);
-# 814 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_config_model_api.h"
-esp_err_t esp_ble_mesh_config_client_set_state(esp_ble_mesh_client_common_param_t *params,
-        esp_ble_mesh_cfg_client_set_state_t *set_state);
-# 21 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_config_model.h" 2
-
-typedef enum {
-    BTC_BLE_MESH_ACT_CONFIG_CLIENT_GET_STATE,
-    BTC_BLE_MESH_ACT_CONFIG_CLIENT_SET_STATE,
-    BTC_BLE_MESH_ACT_CONFIG_CLIENT_MAX,
-} btc_ble_mesh_config_client_act_t;
-
-typedef union {
-    struct ble_mesh_cfg_client_get_state_reg_args {
-        esp_ble_mesh_client_common_param_t *params;
-        esp_ble_mesh_cfg_client_get_state_t *get_state;
-    } cfg_client_get_state;
-    struct ble_mesh_cfg_client_set_state_reg_args {
-        esp_ble_mesh_client_common_param_t *params;
-        esp_ble_mesh_cfg_client_set_state_t *set_state;
-    } cfg_client_set_state;
-} btc_ble_mesh_config_client_args_t;
-
-typedef enum {
-    BTC_BLE_MESH_EVT_CONFIG_CLIENT_GET_STATE,
-    BTC_BLE_MESH_EVT_CONFIG_CLIENT_SET_STATE,
-    BTC_BLE_MESH_EVT_CONFIG_CLIENT_PUBLISH,
-    BTC_BLE_MESH_EVT_CONFIG_CLIENT_TIMEOUT,
-    BTC_BLE_MESH_EVT_CONFIG_CLIENT_MAX,
-} btc_ble_mesh_config_client_evt_t;
-
-void btc_ble_mesh_config_client_call_handler(btc_msg_t *msg);
-
-void btc_ble_mesh_config_client_cb_handler(btc_msg_t *msg);
-
-void btc_ble_mesh_config_client_arg_deep_copy(btc_msg_t *msg, void *p_dest, void *p_src);
-
-void btc_ble_mesh_config_client_publish_callback(u32_t opcode,
-        struct bt_mesh_model *model,
-        struct bt_mesh_msg_ctx *ctx,
-        struct net_buf_simple *buf);
-
-void bt_mesh_config_client_cb_evt_to_btc(u32_t opcode, u8_t evt_type,
-        struct bt_mesh_model *model,
-        struct bt_mesh_msg_ctx *ctx,
-        const u8_t *val, size_t len);
-
-void btc_ble_mesh_config_server_cb_handler(btc_msg_t *msg);
-
-typedef enum {
-    BTC_BLE_MESH_EVT_CONFIG_SERVER_STATE_CHANGE,
-    BTC_BLE_MESH_EVT_CONFIG_SERVER_MAX,
-} btc_ble_mesh_config_server_evt_t;
-
-void bt_mesh_config_server_cb_evt_to_btc(u8_t evt_type,
-        struct bt_mesh_model *model,
-        struct bt_mesh_msg_ctx *ctx,
-        const u8_t *val, size_t len);
-# 63 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_generic_model.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_generic_model.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h" 1
-# 159 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h"
-typedef struct {
-    
-# 160 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h" 3 4
-   _Bool 
-# 160 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h"
-           op_en;
-    uint8_t onoff;
-    uint8_t tid;
-    uint8_t trans_time;
-    uint8_t delay;
-} esp_ble_mesh_gen_onoff_set_t;
-
-
-typedef struct {
-    
-# 169 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h" 3 4
-   _Bool 
-# 169 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h"
-           op_en;
-    int16_t level;
-    uint8_t tid;
-    uint8_t trans_time;
-    uint8_t delay;
-} esp_ble_mesh_gen_level_set_t;
-
-
-typedef struct {
-    
-# 178 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h" 3 4
-   _Bool 
-# 178 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h"
-           op_en;
-    int32_t level;
-    uint8_t tid;
-    uint8_t trans_time;
-    uint8_t delay;
-} esp_ble_mesh_gen_delta_set_t;
-
-
-typedef struct {
-    
-# 187 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h" 3 4
-   _Bool 
-# 187 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h"
-           op_en;
-    int16_t delta_level;
-    uint8_t tid;
-    uint8_t trans_time;
-    uint8_t delay;
-} esp_ble_mesh_gen_move_set_t;
-
-
-typedef struct {
-    uint8_t trans_time;
-} esp_ble_mesh_gen_def_trans_time_set_t;
-
-
-typedef struct {
-    uint8_t onpowerup;
-} esp_ble_mesh_gen_onpowerup_set_t;
-
-
-typedef struct {
-    
-# 206 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h" 3 4
-   _Bool 
-# 206 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h"
-            op_en;
-    uint16_t power;
-    uint8_t tid;
-    uint8_t trans_time;
-    uint8_t delay;
-} esp_ble_mesh_gen_power_level_set_t;
-
-
-typedef struct {
-    uint16_t power;
-} esp_ble_mesh_gen_power_default_set_t;
-
-
-typedef struct {
-    uint16_t range_min;
-    uint16_t range_max;
-} esp_ble_mesh_gen_power_range_set_t;
-
-
-typedef struct {
-    int32_t global_latitude;
-    int32_t global_longitude;
-    int16_t global_altitude;
-} esp_ble_mesh_gen_loc_global_set_t;
-
-
-typedef struct {
-    int16_t local_north;
-    int16_t local_east;
-    int16_t local_altitude;
-    uint8_t floor_number;
-    uint16_t uncertainty;
-} esp_ble_mesh_gen_loc_local_set_t;
-
-
-typedef struct {
-    uint16_t property_id;
-} esp_ble_mesh_gen_user_property_get_t;
-
-
-typedef struct {
-    uint16_t property_id;
-    struct net_buf_simple *property_value;
-} esp_ble_mesh_gen_user_property_set_t;
-
-
-typedef struct {
-    uint16_t property_id;
-} esp_ble_mesh_gen_admin_property_get_t;
-
-
-typedef struct {
-    uint16_t property_id;
-    uint8_t user_access;
-    struct net_buf_simple *property_value;
-} esp_ble_mesh_gen_admin_property_set_t;
-
-
-typedef struct {
-    uint16_t property_id;
-} esp_ble_mesh_gen_manufacturer_property_get_t;
-
-
-typedef struct {
-    uint16_t property_id;
-    uint8_t user_access;
-} esp_ble_mesh_gen_manufacturer_property_set_t;
-
-
-typedef struct {
-    uint16_t property_id;
-} esp_ble_mesh_gen_client_properties_get_t;
-
-
-
-
-typedef union {
-    esp_ble_mesh_gen_user_property_get_t user_property_get;
-    esp_ble_mesh_gen_admin_property_get_t admin_property_get;
-    esp_ble_mesh_gen_manufacturer_property_get_t manufacturer_property_get;
-    esp_ble_mesh_gen_client_properties_get_t client_properties_get;
-} esp_ble_mesh_generic_client_get_state_t;
-
-
-
-
-typedef union {
-    esp_ble_mesh_gen_onoff_set_t onoff_set;
-    esp_ble_mesh_gen_level_set_t level_set;
-    esp_ble_mesh_gen_delta_set_t delta_set;
-    esp_ble_mesh_gen_move_set_t move_set;
-    esp_ble_mesh_gen_def_trans_time_set_t def_trans_time_set;
-    esp_ble_mesh_gen_onpowerup_set_t power_set;
-    esp_ble_mesh_gen_power_level_set_t power_level_set;
-    esp_ble_mesh_gen_power_default_set_t power_default_set;
-    esp_ble_mesh_gen_power_range_set_t power_range_set;
-    esp_ble_mesh_gen_loc_global_set_t loc_global_set;
-    esp_ble_mesh_gen_loc_local_set_t loc_local_set;
-    esp_ble_mesh_gen_user_property_set_t user_property_set;
-    esp_ble_mesh_gen_admin_property_set_t admin_property_set;
-    esp_ble_mesh_gen_manufacturer_property_set_t manufacturer_property_set;
-} esp_ble_mesh_generic_client_set_state_t;
-
-
-
-
-
-
-typedef struct {
-    
-# 315 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h" 3 4
-   _Bool 
-# 315 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h"
-           op_en;
-    uint8_t present_onoff;
-    uint8_t target_onoff;
-    uint8_t remain_time;
-} esp_ble_mesh_gen_onoff_status_cb_t;
-
-
-typedef struct {
-    
-# 323 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h" 3 4
-   _Bool 
-# 323 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h"
-           op_en;
-    int16_t present_level;
-    int16_t target_level;
-    uint8_t remain_time;
-} esp_ble_mesh_gen_level_status_cb_t;
-
-
-typedef struct {
-    uint8_t trans_time;
-} esp_ble_mesh_gen_def_trans_time_status_cb_t;
-
-
-typedef struct {
-    uint8_t onpowerup;
-} esp_ble_mesh_gen_onpowerup_status_cb_t;
-
-
-typedef struct {
-    
-# 341 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h" 3 4
-   _Bool 
-# 341 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h"
-            op_en;
-    uint16_t present_power;
-    uint16_t target_power;
-    uint8_t remain_time;
-} esp_ble_mesh_gen_power_level_status_cb_t;
-
-
-typedef struct {
-    uint16_t power;
-} esp_ble_mesh_gen_power_last_status_cb_t;
-
-
-typedef struct {
-    uint16_t power;
-} esp_ble_mesh_gen_power_default_status_cb_t;
-
-
-typedef struct {
-    uint8_t status_code;
-    uint16_t range_min;
-    uint16_t range_max;
-} esp_ble_mesh_gen_power_range_status_cb_t;
-
-
-typedef struct {
-    u32_t battery_level : 8;
-    u32_t time_to_discharge : 24;
-    u32_t time_to_charge : 24;
-    u32_t flags : 8;
-} esp_ble_mesh_gen_battery_status_cb_t;
-
-
-typedef struct {
-    int32_t global_latitude;
-    int32_t global_longitude;
-    int16_t global_altitude;
-} esp_ble_mesh_gen_loc_global_status_cb_t;
-
-
-typedef struct {
-    int16_t local_north;
-    int16_t local_east;
-    int16_t local_altitude;
-    uint8_t floor_number;
-    uint16_t uncertainty;
-} esp_ble_mesh_gen_loc_local_status_cb_t;
-
-
-typedef struct {
-    struct net_buf_simple *property_ids;
-} esp_ble_mesh_gen_user_properties_status_cb_t;
-
-
-typedef struct {
-    
-# 395 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h" 3 4
-   _Bool 
-# 395 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h"
-            op_en;
-    uint16_t property_id;
-    uint8_t user_access;
-    struct net_buf_simple *property_value;
-} esp_ble_mesh_gen_user_property_status_cb_t;
-
-
-typedef struct {
-    struct net_buf_simple *property_ids;
-} esp_ble_mesh_gen_admin_properties_status_cb_t;
-
-
-typedef struct {
-    
-# 408 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h" 3 4
-   _Bool 
-# 408 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h"
-            op_en;
-    uint16_t property_id;
-    uint8_t user_access;
-    struct net_buf_simple *property_value;
-} esp_ble_mesh_gen_admin_property_status_cb_t;
-
-
-typedef struct {
-    struct net_buf_simple *property_ids;
-} esp_ble_mesh_gen_manufacturer_properties_status_cb_t;
-
-
-typedef struct {
-    
-# 421 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h" 3 4
-   _Bool 
-# 421 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h"
-            op_en;
-    uint16_t property_id;
-    uint8_t user_access;
-    struct net_buf_simple *property_value;
-} esp_ble_mesh_gen_manufacturer_property_status_cb_t;
-
-
-typedef struct {
-    struct net_buf_simple *property_ids;
-} esp_ble_mesh_gen_client_properties_status_cb_t;
-
-
-
-
-typedef union {
-    esp_ble_mesh_gen_onoff_status_cb_t onoff_status;
-    esp_ble_mesh_gen_level_status_cb_t level_status;
-    esp_ble_mesh_gen_def_trans_time_status_cb_t def_trans_time_status;
-    esp_ble_mesh_gen_onpowerup_status_cb_t onpowerup_status;
-    esp_ble_mesh_gen_power_level_status_cb_t power_level_status;
-    esp_ble_mesh_gen_power_last_status_cb_t power_last_status;
-    esp_ble_mesh_gen_power_default_status_cb_t power_default_status;
-    esp_ble_mesh_gen_power_range_status_cb_t power_range_status;
-    esp_ble_mesh_gen_battery_status_cb_t battery_status;
-    esp_ble_mesh_gen_loc_global_status_cb_t location_global_status;
-    esp_ble_mesh_gen_loc_local_status_cb_t location_local_status;
-    esp_ble_mesh_gen_user_properties_status_cb_t user_properties_status;
-    esp_ble_mesh_gen_user_property_status_cb_t user_property_status;
-    esp_ble_mesh_gen_admin_properties_status_cb_t admin_properties_status;
-    esp_ble_mesh_gen_admin_property_status_cb_t admin_property_status;
-    esp_ble_mesh_gen_manufacturer_properties_status_cb_t manufacturer_properties_status;
-    esp_ble_mesh_gen_manufacturer_property_status_cb_t manufacturer_property_status;
-    esp_ble_mesh_gen_client_properties_status_cb_t client_properties_status;
-} esp_ble_mesh_gen_client_status_cb_t;
-
-
-typedef struct {
-    int error_code;
-    esp_ble_mesh_client_common_param_t *params;
-    esp_ble_mesh_gen_client_status_cb_t status_cb;
-} esp_ble_mesh_generic_client_cb_param_t;
-
-
-typedef enum {
-    ESP_BLE_MESH_GENERIC_CLIENT_GET_STATE_EVT,
-    ESP_BLE_MESH_GENERIC_CLIENT_SET_STATE_EVT,
-    ESP_BLE_MESH_GENERIC_CLIENT_PUBLISH_EVT,
-    ESP_BLE_MESH_GENERIC_CLIENT_TIMEOUT_EVT,
-    ESP_BLE_MESH_GENERIC_CLIENT_EVT_MAX,
-} esp_ble_mesh_generic_client_cb_event_t;
-# 481 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h"
-typedef void (* esp_ble_mesh_generic_client_cb_t)(esp_ble_mesh_generic_client_cb_event_t event,
-        esp_ble_mesh_generic_client_cb_param_t *param);
-# 492 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h"
-esp_err_t esp_ble_mesh_register_generic_client_callback(esp_ble_mesh_generic_client_cb_t callback);
-# 507 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h"
-esp_err_t esp_ble_mesh_generic_client_get_state(esp_ble_mesh_client_common_param_t *params,
-        esp_ble_mesh_generic_client_get_state_t *get_state);
-# 523 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h"
-esp_err_t esp_ble_mesh_generic_client_set_state(esp_ble_mesh_client_common_param_t *params,
-        esp_ble_mesh_generic_client_set_state_t *set_state);
-# 773 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h"
-typedef struct {
-    uint8_t onoff;
-    uint8_t target_onoff;
-} esp_ble_mesh_gen_onoff_state_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    esp_ble_mesh_gen_onoff_state_t state;
-    esp_ble_mesh_last_msg_info_t last;
-    esp_ble_mesh_state_transition_t transition;
-} esp_ble_mesh_gen_onoff_srv_t;
-
-
-typedef struct {
-    int16_t level;
-    int16_t target_level;
-
-
-
-
-
-
-
-    int16_t last_level;
-    int32_t last_delta;
-
-    
-# 801 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h" 3 4
-   _Bool 
-# 801 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h"
-        move_start;
-    
-# 802 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h" 3 4
-   _Bool 
-# 802 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h"
-        positive;
-} esp_ble_mesh_gen_level_state_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    esp_ble_mesh_gen_level_state_t state;
-    esp_ble_mesh_last_msg_info_t last;
-    esp_ble_mesh_state_transition_t transition;
-    int32_t tt_delta_level;
-} esp_ble_mesh_gen_level_srv_t;
-
-
-typedef struct {
-    uint8_t trans_time;
-} esp_ble_mesh_gen_def_trans_time_state_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    esp_ble_mesh_gen_def_trans_time_state_t state;
-} esp_ble_mesh_gen_def_trans_time_srv_t;
-
-
-typedef struct {
-    uint8_t onpowerup;
-} esp_ble_mesh_gen_onpowerup_state_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    esp_ble_mesh_gen_onpowerup_state_t *state;
-} esp_ble_mesh_gen_power_onoff_srv_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    esp_ble_mesh_gen_onpowerup_state_t *state;
-} esp_ble_mesh_gen_power_onoff_setup_srv_t;
-
-
-typedef struct {
-    uint16_t power_actual;
-    uint16_t target_power_actual;
-
-    uint16_t power_last;
-    uint16_t power_default;
-
-    uint8_t status_code;
-    uint16_t power_range_min;
-    uint16_t power_range_max;
-} esp_ble_mesh_gen_power_level_state_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    esp_ble_mesh_gen_power_level_state_t *state;
-    esp_ble_mesh_last_msg_info_t last;
-    esp_ble_mesh_state_transition_t transition;
-    int32_t tt_delta_level;
-} esp_ble_mesh_gen_power_level_srv_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    esp_ble_mesh_gen_power_level_state_t *state;
-} esp_ble_mesh_gen_power_level_setup_srv_t;
-
-
-typedef struct {
-    uint32_t battery_level : 8,
-             time_to_discharge : 24;
-    uint32_t time_to_charge : 24,
-             battery_flags : 8;
-} esp_ble_mesh_gen_battery_state_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    esp_ble_mesh_gen_battery_state_t state;
-} esp_ble_mesh_gen_battery_srv_t;
-
-
-typedef struct {
-    int32_t global_latitude;
-    int32_t global_longitude;
-    int16_t global_altitude;
-    int16_t local_north;
-    int16_t local_east;
-    int16_t local_altitude;
-    uint8_t floor_number;
-    uint16_t uncertainty;
-} esp_ble_mesh_gen_location_state_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    esp_ble_mesh_gen_location_state_t *state;
-} esp_ble_mesh_gen_location_srv_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    esp_ble_mesh_gen_location_state_t *state;
-} esp_ble_mesh_gen_location_setup_srv_t;
-
-
-typedef enum {
-    ESP_BLE_MESH_GEN_USER_ACCESS_PROHIBIT,
-    ESP_BLE_MESH_GEN_USER_ACCESS_READ,
-    ESP_BLE_MESH_GEN_USER_ACCESS_WRITE,
-    ESP_BLE_MESH_GEN_USER_ACCESS_READ_WRITE,
-} esp_ble_mesh_gen_user_prop_access_t;
-
-
-typedef enum {
-    ESP_BLE_MESH_GEN_ADMIN_NOT_USER_PROP,
-    ESP_BLE_MESH_GEN_ADMIN_ACCESS_READ,
-    ESP_BLE_MESH_GEN_ADMIN_ACCESS_WRITE,
-    ESP_BLE_MESH_GEN_ADMIN_ACCESS_READ_WRITE,
-} esp_ble_mesh_gen_admin_prop_access_t;
-
-
-typedef enum {
-    ESP_BLE_MESH_GEN_MANU_NOT_USER_PROP,
-    ESP_BLE_MESH_GEN_MANU_ACCESS_READ,
-} esp_ble_mesh_gen_manu_prop_access_t;
-
-
-typedef struct {
-    uint16_t id;
-    uint8_t user_access;
-    uint8_t admin_access;
-    uint8_t manu_access;
-    struct net_buf_simple *val;
-} esp_ble_mesh_generic_property_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    uint8_t property_count;
-    esp_ble_mesh_generic_property_t *properties;
-} esp_ble_mesh_gen_user_prop_srv_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    uint8_t property_count;
-    esp_ble_mesh_generic_property_t *properties;
-} esp_ble_mesh_gen_admin_prop_srv_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    uint8_t property_count;
-    esp_ble_mesh_generic_property_t *properties;
-} esp_ble_mesh_gen_manu_prop_srv_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    uint8_t id_count;
-    uint16_t *property_ids;
-} esp_ble_mesh_gen_client_prop_srv_t;
-
-
-typedef struct {
-    uint8_t onoff;
-} esp_ble_mesh_state_change_gen_onoff_set_t;
-
-
-typedef struct {
-    int16_t level;
-} esp_ble_mesh_state_change_gen_level_set_t;
-
-
-typedef struct {
-    int16_t level;
-} esp_ble_mesh_state_change_gen_delta_set_t;
-
-
-typedef struct {
-    int16_t level;
-} esp_ble_mesh_state_change_gen_move_set_t;
-
-
-typedef struct {
-    uint8_t trans_time;
-} esp_ble_mesh_state_change_gen_def_trans_time_set_t;
-
-
-typedef struct {
-    uint8_t onpowerup;
-} esp_ble_mesh_state_change_gen_onpowerup_set_t;
-
-
-typedef struct {
-    uint16_t power;
-} esp_ble_mesh_state_change_gen_power_level_set_t;
-
-
-typedef struct {
-    uint16_t power;
-} esp_ble_mesh_state_change_gen_power_default_set_t;
-
-
-typedef struct {
-    uint16_t range_min;
-    uint16_t range_max;
-} esp_ble_mesh_state_change_gen_power_range_set_t;
-
-
-typedef struct {
-    int32_t latitude;
-    int32_t longitude;
-    int16_t altitude;
-} esp_ble_mesh_state_change_gen_loc_global_set_t;
-
-
-typedef struct {
-    int16_t north;
-    int16_t east;
-    int16_t altitude;
-    uint8_t floor_number;
-    uint16_t uncertainty;
-} esp_ble_mesh_state_change_gen_loc_local_set_t;
-
-
-typedef struct {
-    uint16_t id;
-    struct net_buf_simple *value;
-} esp_ble_mesh_state_change_gen_user_property_set_t;
-
-
-typedef struct {
-    uint16_t id;
-    uint8_t access;
-    struct net_buf_simple *value;
-} esp_ble_mesh_state_change_gen_admin_property_set_t;
-
-
-typedef struct {
-    uint16_t id;
-    uint8_t access;
-} esp_ble_mesh_state_change_gen_manu_property_set_t;
-
-
-
-
-typedef union {
-
-
-
-    esp_ble_mesh_state_change_gen_onoff_set_t onoff_set;
-    esp_ble_mesh_state_change_gen_level_set_t level_set;
-    esp_ble_mesh_state_change_gen_delta_set_t delta_set;
-    esp_ble_mesh_state_change_gen_move_set_t move_set;
-    esp_ble_mesh_state_change_gen_def_trans_time_set_t def_trans_time_set;
-    esp_ble_mesh_state_change_gen_onpowerup_set_t onpowerup_set;
-    esp_ble_mesh_state_change_gen_power_level_set_t power_level_set;
-    esp_ble_mesh_state_change_gen_power_default_set_t power_default_set;
-    esp_ble_mesh_state_change_gen_power_range_set_t power_range_set;
-    esp_ble_mesh_state_change_gen_loc_global_set_t loc_global_set;
-    esp_ble_mesh_state_change_gen_loc_local_set_t loc_local_set;
-    esp_ble_mesh_state_change_gen_user_property_set_t user_property_set;
-    esp_ble_mesh_state_change_gen_admin_property_set_t admin_property_set;
-    esp_ble_mesh_state_change_gen_manu_property_set_t manu_property_set;
-} esp_ble_mesh_generic_server_state_change_t;
-
-
-typedef struct {
-    uint16_t property_id;
-} esp_ble_mesh_server_recv_gen_user_property_get_t;
-
-
-typedef struct {
-    uint16_t property_id;
-} esp_ble_mesh_server_recv_gen_admin_property_get_t;
-
-
-typedef struct {
-    uint16_t property_id;
-} esp_ble_mesh_server_recv_gen_manufacturer_property_get_t;
-
-
-typedef struct {
-    uint16_t property_id;
-} esp_ble_mesh_server_recv_gen_client_properties_get_t;
-
-
-
-
-typedef union {
-    esp_ble_mesh_server_recv_gen_user_property_get_t user_property;
-    esp_ble_mesh_server_recv_gen_admin_property_get_t admin_property;
-    esp_ble_mesh_server_recv_gen_manufacturer_property_get_t manu_property;
-    esp_ble_mesh_server_recv_gen_client_properties_get_t client_properties;
-} esp_ble_mesh_generic_server_recv_get_msg_t;
-
-
-typedef struct {
-    
-# 1116 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h" 3 4
-   _Bool 
-# 1116 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h"
-           op_en;
-    uint8_t onoff;
-    uint8_t tid;
-    uint8_t trans_time;
-    uint8_t delay;
-} esp_ble_mesh_server_recv_gen_onoff_set_t;
-
-
-typedef struct {
-    
-# 1125 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h" 3 4
-   _Bool 
-# 1125 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h"
-           op_en;
-    int16_t level;
-    uint8_t tid;
-    uint8_t trans_time;
-    uint8_t delay;
-} esp_ble_mesh_server_recv_gen_level_set_t;
-
-
-typedef struct {
-    
-# 1134 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h" 3 4
-   _Bool 
-# 1134 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h"
-           op_en;
-    int32_t delta_level;
-    uint8_t tid;
-    uint8_t trans_time;
-    uint8_t delay;
-} esp_ble_mesh_server_recv_gen_delta_set_t;
-
-
-typedef struct {
-    
-# 1143 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h" 3 4
-   _Bool 
-# 1143 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h"
-           op_en;
-    int16_t delta_level;
-    uint8_t tid;
-    uint8_t trans_time;
-    uint8_t delay;
-} esp_ble_mesh_server_recv_gen_move_set_t;
-
-
-typedef struct {
-    uint8_t trans_time;
-} esp_ble_mesh_server_recv_gen_def_trans_time_set_t;
-
-
-typedef struct {
-    uint8_t onpowerup;
-} esp_ble_mesh_server_recv_gen_onpowerup_set_t;
-
-
-typedef struct {
-    
-# 1162 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h" 3 4
-   _Bool 
-# 1162 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h"
-            op_en;
-    uint16_t power;
-    uint8_t tid;
-    uint8_t trans_time;
-    uint8_t delay;
-} esp_ble_mesh_server_recv_gen_power_level_set_t;
-
-
-typedef struct {
-    uint16_t power;
-} esp_ble_mesh_server_recv_gen_power_default_set_t;
-
-
-typedef struct {
-    uint16_t range_min;
-    uint16_t range_max;
-} esp_ble_mesh_server_recv_gen_power_range_set_t;
-
-
-typedef struct {
-    int32_t global_latitude;
-    int32_t global_longitude;
-    int16_t global_altitude;
-} esp_ble_mesh_server_recv_gen_loc_global_set_t;
-
-
-typedef struct {
-    int16_t local_north;
-    int16_t local_east;
-    int16_t local_altitude;
-    uint8_t floor_number;
-    uint16_t uncertainty;
-} esp_ble_mesh_server_recv_gen_loc_local_set_t;
-
-
-typedef struct {
-    uint16_t property_id;
-    struct net_buf_simple *property_value;
-} esp_ble_mesh_server_recv_gen_user_property_set_t;
-
-
-typedef struct {
-    uint16_t property_id;
-    uint8_t user_access;
-    struct net_buf_simple *property_value;
-} esp_ble_mesh_server_recv_gen_admin_property_set_t;
-
-
-typedef struct {
-    uint16_t property_id;
-    uint8_t user_access;
-} esp_ble_mesh_server_recv_gen_manufacturer_property_set_t;
-
-
-
-
-typedef union {
-    esp_ble_mesh_server_recv_gen_onoff_set_t onoff;
-    esp_ble_mesh_server_recv_gen_level_set_t level;
-    esp_ble_mesh_server_recv_gen_delta_set_t delta;
-    esp_ble_mesh_server_recv_gen_move_set_t move;
-    esp_ble_mesh_server_recv_gen_def_trans_time_set_t def_trans_time;
-    esp_ble_mesh_server_recv_gen_onpowerup_set_t onpowerup;
-    esp_ble_mesh_server_recv_gen_power_level_set_t power_level;
-    esp_ble_mesh_server_recv_gen_power_default_set_t power_default;
-    esp_ble_mesh_server_recv_gen_power_range_set_t power_range;
-    esp_ble_mesh_server_recv_gen_loc_global_set_t location_global;
-    esp_ble_mesh_server_recv_gen_loc_local_set_t location_local;
-    esp_ble_mesh_server_recv_gen_user_property_set_t user_property;
-    esp_ble_mesh_server_recv_gen_admin_property_set_t admin_property;
-    esp_ble_mesh_server_recv_gen_manufacturer_property_set_t manu_property;
-} esp_ble_mesh_generic_server_recv_set_msg_t;
-
-
-
-
-typedef union {
-    esp_ble_mesh_generic_server_state_change_t state_change;
-    esp_ble_mesh_generic_server_recv_get_msg_t get;
-    esp_ble_mesh_generic_server_recv_set_msg_t set;
-} esp_ble_mesh_generic_server_cb_value_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_msg_ctx_t ctx;
-    esp_ble_mesh_generic_server_cb_value_t value;
-} esp_ble_mesh_generic_server_cb_param_t;
-
-
-typedef enum {
-
-
-
-
-
-
-
-    ESP_BLE_MESH_GENERIC_SERVER_STATE_CHANGE_EVT,
-
-
-
-
-    ESP_BLE_MESH_GENERIC_SERVER_RECV_GET_MSG_EVT,
-
-
-
-
-    ESP_BLE_MESH_GENERIC_SERVER_RECV_SET_MSG_EVT,
-    ESP_BLE_MESH_GENERIC_SERVER_EVT_MAX,
-} esp_ble_mesh_generic_server_cb_event_t;
-# 1283 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h"
-typedef void (* esp_ble_mesh_generic_server_cb_t)(esp_ble_mesh_generic_server_cb_event_t event,
-        esp_ble_mesh_generic_server_cb_param_t *param);
-# 1294 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h"
-esp_err_t esp_ble_mesh_register_generic_server_callback(esp_ble_mesh_generic_server_cb_t callback);
-# 21 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_generic_model.h" 2
-
-typedef enum {
-    BTC_BLE_MESH_ACT_GENERIC_CLIENT_GET_STATE,
-    BTC_BLE_MESH_ACT_GENERIC_CLIENT_SET_STATE,
-    BTC_BLE_MESH_ACT_GENERIC_CLIENT_MAX,
-} btc_ble_mesh_generic_client_act_t;
-
-typedef union {
-    struct ble_mesh_generic_client_get_state_reg_args {
-        esp_ble_mesh_client_common_param_t *params;
-        esp_ble_mesh_generic_client_get_state_t *get_state;
-    } generic_client_get_state;
-    struct ble_mesh_generic_client_set_state_reg_args {
-        esp_ble_mesh_client_common_param_t *params;
-        esp_ble_mesh_generic_client_set_state_t *set_state;
-    } generic_client_set_state;
-} btc_ble_mesh_generic_client_args_t;
-
-typedef enum {
-    BTC_BLE_MESH_EVT_GENERIC_CLIENT_GET_STATE,
-    BTC_BLE_MESH_EVT_GENERIC_CLIENT_SET_STATE,
-    BTC_BLE_MESH_EVT_GENERIC_CLIENT_PUBLISH,
-    BTC_BLE_MESH_EVT_GENERIC_CLIENT_TIMEOUT,
-    BTC_BLE_MESH_EVT_GENERIC_CLIENT_MAX,
-} btc_ble_mesh_generic_client_evt_t;
-
-void btc_ble_mesh_generic_client_call_handler(btc_msg_t *msg);
-
-void btc_ble_mesh_generic_client_cb_handler(btc_msg_t *msg);
-
-void btc_ble_mesh_generic_client_arg_deep_copy(btc_msg_t *msg, void *p_dest, void *p_src);
-
-void btc_ble_mesh_generic_client_publish_callback(u32_t opcode,
-        struct bt_mesh_model *model,
-        struct bt_mesh_msg_ctx *ctx,
-        struct net_buf_simple *buf);
-
-void bt_mesh_generic_client_cb_evt_to_btc(u32_t opcode, u8_t evt_type,
-        struct bt_mesh_model *model,
-        struct bt_mesh_msg_ctx *ctx,
-        const u8_t *val, size_t len);
-
-typedef enum {
-    BTC_BLE_MESH_EVT_GENERIC_SERVER_STATE_CHANGE,
-    BTC_BLE_MESH_EVT_GENERIC_SERVER_RECV_GET_MSG,
-    BTC_BLE_MESH_EVT_GENERIC_SERVER_RECV_SET_MSG,
-    BTC_BLE_MESH_EVT_GENERIC_SERVER_MAX,
-} btc_ble_mesh_generic_server_evt_t;
-
-void bt_mesh_generic_server_cb_evt_to_btc(u8_t evt_type,
-        struct bt_mesh_model *model,
-        struct bt_mesh_msg_ctx *ctx,
-        const u8_t *val, size_t len);
-
-void btc_ble_mesh_generic_server_cb_handler(btc_msg_t *msg);
-# 64 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_lighting_model.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_lighting_model.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h" 1
-# 109 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-typedef struct {
-    
-# 110 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h" 3 4
-   _Bool 
-# 110 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-            op_en;
-    uint16_t lightness;
-    uint8_t tid;
-    uint8_t trans_time;
-    uint8_t delay;
-} esp_ble_mesh_light_lightness_set_t;
-
-
-typedef struct {
-    
-# 119 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h" 3 4
-   _Bool 
-# 119 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-            op_en;
-    uint16_t lightness;
-    uint8_t tid;
-    uint8_t trans_time;
-    uint8_t delay;
-} esp_ble_mesh_light_lightness_linear_set_t;
-
-
-typedef struct {
-    uint16_t lightness;
-} esp_ble_mesh_light_lightness_default_set_t;
-
-
-typedef struct {
-    uint16_t range_min;
-    uint16_t range_max;
-} esp_ble_mesh_light_lightness_range_set_t;
-
-
-typedef struct {
-    
-# 139 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h" 3 4
-   _Bool 
-# 139 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-            op_en;
-    uint16_t ctl_lightness;
-    uint16_t ctl_temperatrue;
-    int16_t ctl_delta_uv;
-    uint8_t tid;
-    uint8_t trans_time;
-    uint8_t delay;
-} esp_ble_mesh_light_ctl_set_t;
-
-
-typedef struct {
-    
-# 150 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h" 3 4
-   _Bool 
-# 150 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-            op_en;
-    uint16_t ctl_temperatrue;
-    int16_t ctl_delta_uv;
-    uint8_t tid;
-    uint8_t trans_time;
-    uint8_t delay;
-} esp_ble_mesh_light_ctl_temperature_set_t;
-
-
-typedef struct {
-    uint16_t range_min;
-    uint16_t range_max;
-} esp_ble_mesh_light_ctl_temperature_range_set_t;
-
-
-typedef struct {
-    uint16_t lightness;
-    uint16_t temperature;
-    int16_t delta_uv;
-} esp_ble_mesh_light_ctl_default_set_t;
-
-
-typedef struct {
-    
-# 173 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h" 3 4
-   _Bool 
-# 173 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-            op_en;
-    uint16_t hsl_lightness;
-    uint16_t hsl_hue;
-    uint16_t hsl_saturation;
-    uint8_t tid;
-    uint8_t trans_time;
-    uint8_t delay;
-} esp_ble_mesh_light_hsl_set_t;
-
-
-typedef struct {
-    
-# 184 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h" 3 4
-   _Bool 
-# 184 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-            op_en;
-    uint16_t hue;
-    uint8_t tid;
-    uint8_t trans_time;
-    uint8_t delay;
-} esp_ble_mesh_light_hsl_hue_set_t;
-
-
-typedef struct {
-    
-# 193 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h" 3 4
-   _Bool 
-# 193 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-            op_en;
-    uint16_t saturation;
-    uint8_t tid;
-    uint8_t trans_time;
-    uint8_t delay;
-} esp_ble_mesh_light_hsl_saturation_set_t;
-
-
-typedef struct {
-    uint16_t lightness;
-    uint16_t hue;
-    uint16_t saturation;
-} esp_ble_mesh_light_hsl_default_set_t;
-
-
-typedef struct {
-    uint16_t hue_range_min;
-    uint16_t hue_range_max;
-    uint16_t saturation_range_min;
-    uint16_t saturation_range_max;
-} esp_ble_mesh_light_hsl_range_set_t;
-
-
-typedef struct {
-    
-# 217 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h" 3 4
-   _Bool 
-# 217 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-            op_en;
-    uint16_t xyl_lightness;
-    uint16_t xyl_x;
-    uint16_t xyl_y;
-    uint8_t tid;
-    uint8_t trans_time;
-    uint8_t delay;
-} esp_ble_mesh_light_xyl_set_t;
-
-
-typedef struct {
-    uint16_t lightness;
-    uint16_t xyl_x;
-    uint16_t xyl_y;
-} esp_ble_mesh_light_xyl_default_set_t;
-
-
-typedef struct {
-    uint16_t xyl_x_range_min;
-    uint16_t xyl_x_range_max;
-    uint16_t xyl_y_range_min;
-    uint16_t xyl_y_range_max;
-} esp_ble_mesh_light_xyl_range_set_t;
-
-
-typedef struct {
-    uint8_t mode;
-} esp_ble_mesh_light_lc_mode_set_t;
-
-
-typedef struct {
-    uint8_t mode;
-} esp_ble_mesh_light_lc_om_set_t;
-
-
-typedef struct {
-    
-# 253 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h" 3 4
-   _Bool 
-# 253 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-           op_en;
-    uint8_t light_onoff;
-    uint8_t tid;
-    uint8_t trans_time;
-    uint8_t delay;
-} esp_ble_mesh_light_lc_light_onoff_set_t;
-
-
-typedef struct {
-    uint16_t property_id;
-} esp_ble_mesh_light_lc_property_get_t;
-
-
-typedef struct {
-    uint16_t property_id;
-    struct net_buf_simple *property_value;
-} esp_ble_mesh_light_lc_property_set_t;
-
-
-
-
-typedef union {
-    esp_ble_mesh_light_lc_property_get_t lc_property_get;
-} esp_ble_mesh_light_client_get_state_t;
-
-
-
-
-typedef union {
-    esp_ble_mesh_light_lightness_set_t lightness_set;
-    esp_ble_mesh_light_lightness_linear_set_t lightness_linear_set;
-    esp_ble_mesh_light_lightness_default_set_t lightness_default_set;
-    esp_ble_mesh_light_lightness_range_set_t lightness_range_set;
-    esp_ble_mesh_light_ctl_set_t ctl_set;
-    esp_ble_mesh_light_ctl_temperature_set_t ctl_temperature_set;
-    esp_ble_mesh_light_ctl_temperature_range_set_t ctl_temperature_range_set;
-    esp_ble_mesh_light_ctl_default_set_t ctl_default_set;
-    esp_ble_mesh_light_hsl_set_t hsl_set;
-    esp_ble_mesh_light_hsl_hue_set_t hsl_hue_set;
-    esp_ble_mesh_light_hsl_saturation_set_t hsl_saturation_set;
-    esp_ble_mesh_light_hsl_default_set_t hsl_default_set;
-    esp_ble_mesh_light_hsl_range_set_t hsl_range_set;
-    esp_ble_mesh_light_xyl_set_t xyl_set;
-    esp_ble_mesh_light_xyl_default_set_t xyl_default_set;
-    esp_ble_mesh_light_xyl_range_set_t xyl_range_set;
-    esp_ble_mesh_light_lc_mode_set_t lc_mode_set;
-    esp_ble_mesh_light_lc_om_set_t lc_om_set;
-    esp_ble_mesh_light_lc_light_onoff_set_t lc_light_onoff_set;
-    esp_ble_mesh_light_lc_property_set_t lc_property_set;
-} esp_ble_mesh_light_client_set_state_t;
-
-
-
-
-
-
-typedef struct {
-    
-# 310 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h" 3 4
-   _Bool 
-# 310 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-            op_en;
-    uint16_t present_lightness;
-    uint16_t target_lightness;
-    uint8_t remain_time;
-} esp_ble_mesh_light_lightness_status_cb_t;
-
-
-typedef struct {
-    
-# 318 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h" 3 4
-   _Bool 
-# 318 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-            op_en;
-    uint16_t present_lightness;
-    uint16_t target_lightness;
-    uint8_t remain_time;
-} esp_ble_mesh_light_lightness_linear_status_cb_t;
-
-
-typedef struct {
-    uint16_t lightness;
-} esp_ble_mesh_light_lightness_last_status_cb_t;
-
-
-typedef struct {
-    uint16_t lightness;
-} esp_ble_mesh_light_lightness_default_status_cb_t;
-
-
-typedef struct {
-    uint8_t status_code;
-    uint16_t range_min;
-    uint16_t range_max;
-} esp_ble_mesh_light_lightness_range_status_cb_t;
-
-
-typedef struct {
-    
-# 343 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h" 3 4
-   _Bool 
-# 343 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-            op_en;
-    uint16_t present_ctl_lightness;
-    uint16_t present_ctl_temperature;
-    uint16_t target_ctl_lightness;
-    uint16_t target_ctl_temperature;
-    uint8_t remain_time;
-} esp_ble_mesh_light_ctl_status_cb_t;
-
-
-typedef struct {
-    
-# 353 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h" 3 4
-   _Bool 
-# 353 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-            op_en;
-    uint16_t present_ctl_temperature;
-    uint16_t present_ctl_delta_uv;
-    uint16_t target_ctl_temperature;
-    uint16_t target_ctl_delta_uv;
-    uint8_t remain_time;
-} esp_ble_mesh_light_ctl_temperature_status_cb_t;
-
-
-typedef struct {
-    uint8_t status_code;
-    uint16_t range_min;
-    uint16_t range_max;
-} esp_ble_mesh_light_ctl_temperature_range_status_cb_t;
-
-
-typedef struct {
-    uint16_t lightness;
-    uint16_t temperature;
-    int16_t delta_uv;
-} esp_ble_mesh_light_ctl_default_status_cb_t;
-
-
-typedef struct {
-    
-# 377 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h" 3 4
-   _Bool 
-# 377 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-            op_en;
-    uint16_t hsl_lightness;
-    uint16_t hsl_hue;
-    uint16_t hsl_saturation;
-    uint8_t remain_time;
-} esp_ble_mesh_light_hsl_status_cb_t;
-
-
-typedef struct {
-    
-# 386 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h" 3 4
-   _Bool 
-# 386 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-         op_en;
-    uint16_t hsl_lightness_target;
-    uint16_t hsl_hue_target;
-    uint16_t hsl_saturation_target;
-    uint8_t remain_time;
-} esp_ble_mesh_light_hsl_target_status_cb_t;
-
-
-typedef struct {
-    
-# 395 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h" 3 4
-   _Bool 
-# 395 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-            op_en;
-    uint16_t present_hue;
-    uint16_t target_hue;
-    uint8_t remain_time;
-} esp_ble_mesh_light_hsl_hue_status_cb_t;
-
-
-typedef struct {
-    
-# 403 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h" 3 4
-   _Bool 
-# 403 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-            op_en;
-    uint16_t present_saturation;
-    uint16_t target_saturation;
-    uint8_t remain_time;
-} esp_ble_mesh_light_hsl_saturation_status_cb_t;
-
-
-typedef struct {
-    uint16_t lightness;
-    uint16_t hue;
-    uint16_t saturation;
-} esp_ble_mesh_light_hsl_default_status_cb_t;
-
-
-typedef struct {
-    uint8_t status_code;
-    uint16_t hue_range_min;
-    uint16_t hue_range_max;
-    uint16_t saturation_range_min;
-    uint16_t saturation_range_max;
-} esp_ble_mesh_light_hsl_range_status_cb_t;
-
-
-typedef struct {
-    
-# 427 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h" 3 4
-   _Bool 
-# 427 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-            op_en;
-    uint16_t xyl_lightness;
-    uint16_t xyl_x;
-    uint16_t xyl_y;
-    uint8_t remain_time;
-} esp_ble_mesh_light_xyl_status_cb_t;
-
-
-typedef struct {
-    
-# 436 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h" 3 4
-   _Bool 
-# 436 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-            op_en;
-    uint16_t target_xyl_lightness;
-    uint16_t target_xyl_x;
-    uint16_t target_xyl_y;
-    uint8_t remain_time;
-} esp_ble_mesh_light_xyl_target_status_cb_t;
-
-
-typedef struct {
-    uint16_t lightness;
-    uint16_t xyl_x;
-    uint16_t xyl_y;
-} esp_ble_mesh_light_xyl_default_status_cb_t;
-
-
-typedef struct {
-    uint8_t status_code;
-    uint16_t xyl_x_range_min;
-    uint16_t xyl_x_range_max;
-    uint16_t xyl_y_range_min;
-    uint16_t xyl_y_range_max;
-} esp_ble_mesh_light_xyl_range_status_cb_t;
-
-
-typedef struct {
-    uint8_t mode;
-} esp_ble_mesh_light_lc_mode_status_cb_t;
-
-
-typedef struct {
-    uint8_t mode;
-} esp_ble_mesh_light_lc_om_status_cb_t;
-
-
-typedef struct {
-    
-# 471 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h" 3 4
-   _Bool 
-# 471 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-           op_en;
-    uint8_t present_light_onoff;
-    uint8_t target_light_onoff;
-    uint8_t remain_time;
-} esp_ble_mesh_light_lc_light_onoff_status_cb_t;
-
-
-typedef struct {
-    uint16_t property_id;
-    struct net_buf_simple *property_value;
-} esp_ble_mesh_light_lc_property_status_cb_t;
-
-
-
-
-typedef union {
-    esp_ble_mesh_light_lightness_status_cb_t lightness_status;
-    esp_ble_mesh_light_lightness_linear_status_cb_t lightness_linear_status;
-    esp_ble_mesh_light_lightness_last_status_cb_t lightness_last_status;
-    esp_ble_mesh_light_lightness_default_status_cb_t lightness_default_status;
-    esp_ble_mesh_light_lightness_range_status_cb_t lightness_range_status;
-    esp_ble_mesh_light_ctl_status_cb_t ctl_status;
-    esp_ble_mesh_light_ctl_temperature_status_cb_t ctl_temperature_status;
-    esp_ble_mesh_light_ctl_temperature_range_status_cb_t ctl_temperature_range_status;
-    esp_ble_mesh_light_ctl_default_status_cb_t ctl_default_status;
-    esp_ble_mesh_light_hsl_status_cb_t hsl_status;
-    esp_ble_mesh_light_hsl_target_status_cb_t hsl_target_status;
-    esp_ble_mesh_light_hsl_hue_status_cb_t hsl_hue_status;
-    esp_ble_mesh_light_hsl_saturation_status_cb_t hsl_saturation_status;
-    esp_ble_mesh_light_hsl_default_status_cb_t hsl_default_status;
-    esp_ble_mesh_light_hsl_range_status_cb_t hsl_range_status;
-    esp_ble_mesh_light_xyl_status_cb_t xyl_status;
-    esp_ble_mesh_light_xyl_target_status_cb_t xyl_target_status;
-    esp_ble_mesh_light_xyl_default_status_cb_t xyl_default_status;
-    esp_ble_mesh_light_xyl_range_status_cb_t xyl_range_status;
-    esp_ble_mesh_light_lc_mode_status_cb_t lc_mode_status;
-    esp_ble_mesh_light_lc_om_status_cb_t lc_om_status;
-    esp_ble_mesh_light_lc_light_onoff_status_cb_t lc_light_onoff_status;
-    esp_ble_mesh_light_lc_property_status_cb_t lc_property_status;
-} esp_ble_mesh_light_client_status_cb_t;
-
-
-typedef struct {
-    int error_code;
-    esp_ble_mesh_client_common_param_t *params;
-    esp_ble_mesh_light_client_status_cb_t status_cb;
-} esp_ble_mesh_light_client_cb_param_t;
-
-
-typedef enum {
-    ESP_BLE_MESH_LIGHT_CLIENT_GET_STATE_EVT,
-    ESP_BLE_MESH_LIGHT_CLIENT_SET_STATE_EVT,
-    ESP_BLE_MESH_LIGHT_CLIENT_PUBLISH_EVT,
-    ESP_BLE_MESH_LIGHT_CLIENT_TIMEOUT_EVT,
-    ESP_BLE_MESH_LIGHT_CLIENT_EVT_MAX,
-} esp_ble_mesh_light_client_cb_event_t;
-# 537 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-typedef void (* esp_ble_mesh_light_client_cb_t)(esp_ble_mesh_light_client_cb_event_t event,
-        esp_ble_mesh_light_client_cb_param_t *param);
-# 548 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-esp_err_t esp_ble_mesh_register_light_client_callback(esp_ble_mesh_light_client_cb_t callback);
-# 563 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-esp_err_t esp_ble_mesh_light_client_get_state(esp_ble_mesh_client_common_param_t *params,
-        esp_ble_mesh_light_client_get_state_t *get_state);
-# 579 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-esp_err_t esp_ble_mesh_light_client_set_state(esp_ble_mesh_client_common_param_t *params,
-        esp_ble_mesh_light_client_set_state_t *set_state);
-# 838 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-typedef struct {
-    uint16_t lightness_linear;
-    uint16_t target_lightness_linear;
-
-    uint16_t lightness_actual;
-    uint16_t target_lightness_actual;
-
-    uint16_t lightness_last;
-    uint16_t lightness_default;
-
-    uint8_t status_code;
-    uint16_t lightness_range_min;
-    uint16_t lightness_range_max;
-} esp_ble_mesh_light_lightness_state_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    esp_ble_mesh_light_lightness_state_t *state;
-    esp_ble_mesh_last_msg_info_t last;
-    esp_ble_mesh_state_transition_t actual_transition;
-    esp_ble_mesh_state_transition_t linear_transition;
-    int32_t tt_delta_lightness_actual;
-    int32_t tt_delta_lightness_linear;
-} esp_ble_mesh_light_lightness_srv_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    esp_ble_mesh_light_lightness_state_t *state;
-} esp_ble_mesh_light_lightness_setup_srv_t;
-
-
-typedef struct {
-    uint16_t lightness;
-    uint16_t target_lightness;
-
-    uint16_t temperature;
-    uint16_t target_temperature;
-
-    int16_t delta_uv;
-    int16_t target_delta_uv;
-
-    uint8_t status_code;
-    uint16_t temperature_range_min;
-    uint16_t temperature_range_max;
-
-    uint16_t lightness_default;
-    uint16_t temperature_default;
-    int16_t delta_uv_default;
-} esp_ble_mesh_light_ctl_state_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    esp_ble_mesh_light_ctl_state_t *state;
-    esp_ble_mesh_last_msg_info_t last;
-    esp_ble_mesh_state_transition_t transition;
-    int32_t tt_delta_lightness;
-    int32_t tt_delta_temperature;
-    int32_t tt_delta_delta_uv;
-} esp_ble_mesh_light_ctl_srv_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    esp_ble_mesh_light_ctl_state_t *state;
-} esp_ble_mesh_light_ctl_setup_srv_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    esp_ble_mesh_light_ctl_state_t *state;
-    esp_ble_mesh_last_msg_info_t last;
-    esp_ble_mesh_state_transition_t transition;
-    int32_t tt_delta_temperature;
-    int32_t tt_delta_delta_uv;
-} esp_ble_mesh_light_ctl_temp_srv_t;
-
-
-typedef struct {
-    uint16_t lightness;
-    uint16_t target_lightness;
-
-    uint16_t hue;
-    uint16_t target_hue;
-
-    uint16_t saturation;
-    uint16_t target_saturation;
-
-    uint16_t lightness_default;
-    uint16_t hue_default;
-    uint16_t saturation_default;
-
-    uint8_t status_code;
-    uint16_t hue_range_min;
-    uint16_t hue_range_max;
-    uint16_t saturation_range_min;
-    uint16_t saturation_range_max;
-} esp_ble_mesh_light_hsl_state_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    esp_ble_mesh_light_hsl_state_t *state;
-    esp_ble_mesh_last_msg_info_t last;
-    esp_ble_mesh_state_transition_t transition;
-    int32_t tt_delta_lightness;
-    int32_t tt_delta_hue;
-    int32_t tt_delta_saturation;
-} esp_ble_mesh_light_hsl_srv_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    esp_ble_mesh_light_hsl_state_t *state;
-} esp_ble_mesh_light_hsl_setup_srv_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    esp_ble_mesh_light_hsl_state_t *state;
-    esp_ble_mesh_last_msg_info_t last;
-    esp_ble_mesh_state_transition_t transition;
-    int32_t tt_delta_hue;
-} esp_ble_mesh_light_hsl_hue_srv_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    esp_ble_mesh_light_hsl_state_t *state;
-    esp_ble_mesh_last_msg_info_t last;
-    esp_ble_mesh_state_transition_t transition;
-    int32_t tt_delta_saturation;
-} esp_ble_mesh_light_hsl_sat_srv_t;
-
-
-typedef struct {
-    uint16_t lightness;
-    uint16_t target_lightness;
-
-    uint16_t x;
-    uint16_t target_x;
-
-    uint16_t y;
-    uint16_t target_y;
-
-    uint16_t lightness_default;
-    uint16_t x_default;
-    uint16_t y_default;
-
-    uint8_t status_code;
-    uint16_t x_range_min;
-    uint16_t x_range_max;
-    uint16_t y_range_min;
-    uint16_t y_range_max;
-} esp_ble_mesh_light_xyl_state_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    esp_ble_mesh_light_xyl_state_t *state;
-    esp_ble_mesh_last_msg_info_t last;
-    esp_ble_mesh_state_transition_t transition;
-    int32_t tt_delta_lightness;
-    int32_t tt_delta_x;
-    int32_t tt_delta_y;
-} esp_ble_mesh_light_xyl_srv_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    esp_ble_mesh_light_xyl_state_t *state;
-} esp_ble_mesh_light_xyl_setup_srv_t;
-
-
-typedef struct {
-
-
-
-
-
-
-    uint32_t mode : 1,
-             occupancy_mode : 1,
-             light_onoff : 1,
-             target_light_onoff : 1,
-             occupancy : 1,
-             ambient_luxlevel : 24;
-# 1049 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-    uint16_t linear_output;
-} esp_ble_mesh_light_lc_state_t;
-
-
-
-
-
-
-
-typedef struct {
-
-
-
-
-
-    uint32_t time_occupancy_delay;
-
-
-
-
-    uint32_t time_fade_on;
-
-
-
-
-    uint32_t time_run_on;
-
-
-
-
-
-    uint32_t time_fade;
-
-
-
-
-    uint32_t time_prolong;
-
-
-
-
-
-
-    uint32_t time_fade_standby_auto;
-
-
-
-
-
-
-    uint32_t time_fade_standby_manual;
-
-
-
-
-
-    uint16_t lightness_on;
-
-
-
-
-    uint16_t lightness_prolong;
-
-
-
-
-    uint16_t lightness_standby;
-
-
-
-
-
-    uint16_t ambient_luxlevel_on;
-
-
-
-
-    uint16_t ambient_luxlevel_prolong;
-
-
-
-
-    uint16_t ambient_luxlevel_standby;
-
-
-
-
-
-
-
-    float regulator_kiu;
-
-
-
-
-
-
-
-    float regulator_kid;
-
-
-
-
-
-
-    float regulator_kpu;
-
-
-
-
-
-
-
-    float regulator_kpd;
-
-
-
-
-    int8_t regulator_accuracy;
-# 1177 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-    uint32_t set_occupancy_to_1_delay;
 
 
-} esp_ble_mesh_light_lc_property_state_t;
 
 
-typedef enum {
-    ESP_BLE_MESH_LC_OFF,
-    ESP_BLE_MESH_LC_STANDBY,
-    ESP_BLE_MESH_LC_FADE_ON,
-    ESP_BLE_MESH_LC_RUN,
-    ESP_BLE_MESH_LC_FADE,
-    ESP_BLE_MESH_LC_PROLONG,
-    ESP_BLE_MESH_LC_FADE_STANDBY_AUTO,
-    ESP_BLE_MESH_LC_FADE_STANDBY_MANUAL,
-} esp_ble_mesh_lc_state_t;
 
-
-typedef struct {
-
-
-
-
-
-
-
-    struct {
-        uint8_t fade_on;
-        uint8_t fade;
-        uint8_t fade_standby_auto;
-        uint8_t fade_standby_manual;
-    } trans_time;
-    esp_ble_mesh_lc_state_t state;
-    struct k_delayed_work timer;
-} esp_ble_mesh_light_lc_state_machine_t;
-
-
-typedef struct {
-    esp_ble_mesh_light_lc_state_t state;
-    esp_ble_mesh_light_lc_property_state_t prop_state;
-    esp_ble_mesh_light_lc_state_machine_t state_machine;
-} esp_ble_mesh_light_control_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    esp_ble_mesh_light_control_t *lc;
-    esp_ble_mesh_last_msg_info_t last;
-    esp_ble_mesh_state_transition_t transition;
-} esp_ble_mesh_light_lc_srv_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    esp_ble_mesh_light_control_t *lc;
-} esp_ble_mesh_light_lc_setup_srv_t;
-
-
-typedef struct {
-    uint16_t lightness;
-} esp_ble_mesh_state_change_light_lightness_set_t;
-
-
-typedef struct {
-    uint16_t lightness;
-} esp_ble_mesh_state_change_light_lightness_linear_set_t;
-
-
-typedef struct {
-    uint16_t lightness;
-} esp_ble_mesh_state_change_light_lightness_default_set_t;
-
-
-typedef struct {
-    uint16_t range_min;
-    uint16_t range_max;
-} esp_ble_mesh_state_change_light_lightness_range_set_t;
-
-
+typedef UINT8 tL2CAP_CHNL_DATA_RATE;
+# 134 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
 typedef struct {
-    uint16_t lightness;
-    uint16_t temperature;
-    int16_t delta_uv;
-} esp_ble_mesh_state_change_light_ctl_set_t;
 
 
-typedef struct {
-    uint16_t temperature;
-    int16_t delta_uv;
-} esp_ble_mesh_state_change_light_ctl_temperature_set_t;
-
-
-typedef struct {
-    uint16_t range_min;
-    uint16_t range_max;
-} esp_ble_mesh_state_change_light_ctl_temperature_range_set_t;
-
-
-typedef struct {
-    uint16_t lightness;
-    uint16_t temperature;
-    int16_t delta_uv;
-} esp_ble_mesh_state_change_light_ctl_default_set_t;
-
-
-typedef struct {
-    uint16_t lightness;
-    uint16_t hue;
-    uint16_t saturation;
-} esp_ble_mesh_state_change_light_hsl_set_t;
-
-
-typedef struct {
-    uint16_t hue;
-} esp_ble_mesh_state_change_light_hsl_hue_set_t;
-
-
-typedef struct {
-    uint16_t saturation;
-} esp_ble_mesh_state_change_light_hsl_saturation_set_t;
 
 
-typedef struct {
-    uint16_t lightness;
-    uint16_t hue;
-    uint16_t saturation;
-} esp_ble_mesh_state_change_light_hsl_default_set_t;
+    UINT8 mode;
 
+    UINT8 tx_win_sz;
+    UINT8 max_transmit;
+    UINT16 rtrans_tout;
+    UINT16 mon_tout;
+    UINT16 mps;
+} tL2CAP_FCR_OPTS;
 
-typedef struct {
-    uint16_t hue_range_min;
-    uint16_t hue_range_max;
-    uint16_t saturation_range_min;
-    uint16_t saturation_range_max;
-} esp_ble_mesh_state_change_light_hsl_range_set_t;
 
 
-typedef struct {
-    uint16_t lightness;
-    uint16_t x;
-    uint16_t y;
-} esp_ble_mesh_state_change_light_xyl_set_t;
 
 
 typedef struct {
-    uint16_t lightness;
-    uint16_t x;
-    uint16_t y;
-} esp_ble_mesh_state_change_light_xyl_default_set_t;
-
+    UINT16 result;
+    BOOLEAN mtu_present;
+    UINT16 mtu;
+    BOOLEAN qos_present;
+    FLOW_SPEC qos;
+    BOOLEAN flush_to_present;
+    UINT16 flush_to;
+    BOOLEAN fcr_present;
+    tL2CAP_FCR_OPTS fcr;
+    BOOLEAN fcs_present;
+    UINT8 fcs;
+    BOOLEAN ext_flow_spec_present;
+    tHCI_EXT_FLOW_SPEC ext_flow_spec;
+    UINT16 flags;
+} tL2CAP_CFG_INFO;
 
-typedef struct {
-    uint16_t x_range_min;
-    uint16_t x_range_max;
-    uint16_t y_range_min;
-    uint16_t y_range_max;
-} esp_ble_mesh_state_change_light_xyl_range_set_t;
 
 
-typedef struct {
-    uint8_t mode;
-} esp_ble_mesh_state_change_light_lc_mode_set_t;
 
+typedef struct
+{
+    UINT16 mtu;
+    UINT16 mps;
+    UINT16 credits;
+} tL2CAP_LE_CFG_INFO;
+# 188 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+typedef UINT16 tL2CAP_CH_CFG_BITS;
+# 200 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+typedef void (tL2CA_CONNECT_IND_CB) (BD_ADDR, UINT16, UINT16, UINT8);
 
-typedef struct {
-    uint8_t mode;
-} esp_ble_mesh_state_change_light_lc_om_set_t;
 
 
-typedef struct {
-    uint8_t onoff;
-} esp_ble_mesh_state_change_light_lc_light_onoff_set_t;
 
 
-typedef struct {
-    uint16_t property_id;
-    struct net_buf_simple *property_value;
-} esp_ble_mesh_state_change_light_lc_property_set_t;
 
+typedef void (tL2CA_CONNECT_CFM_CB) (UINT16, UINT16);
 
-typedef struct {
-    uint16_t property_id;
 
-    union {
-        uint8_t occupancy;
-        uint32_t set_occupancy_to_1_delay;
-        uint32_t ambient_luxlevel;
-    } state;
-} esp_ble_mesh_state_change_sensor_status_t;
 
 
 
+typedef void (tL2CA_CONNECT_PND_CB) (UINT16);
 
-typedef union {
 
 
 
-    esp_ble_mesh_state_change_light_lightness_set_t lightness_set;
-    esp_ble_mesh_state_change_light_lightness_linear_set_t lightness_linear_set;
-    esp_ble_mesh_state_change_light_lightness_default_set_t lightness_default_set;
-    esp_ble_mesh_state_change_light_lightness_range_set_t lightness_range_set;
-    esp_ble_mesh_state_change_light_ctl_set_t ctl_set;
-    esp_ble_mesh_state_change_light_ctl_temperature_set_t ctl_temp_set;
-    esp_ble_mesh_state_change_light_ctl_temperature_range_set_t ctl_temp_range_set;
-    esp_ble_mesh_state_change_light_ctl_default_set_t ctl_default_set;
-    esp_ble_mesh_state_change_light_hsl_set_t hsl_set;
-    esp_ble_mesh_state_change_light_hsl_hue_set_t hsl_hue_set;
-    esp_ble_mesh_state_change_light_hsl_saturation_set_t hsl_saturation_set;
-    esp_ble_mesh_state_change_light_hsl_default_set_t hsl_default_set;
-    esp_ble_mesh_state_change_light_hsl_range_set_t hsl_range_set;
-    esp_ble_mesh_state_change_light_xyl_set_t xyl_set;
-    esp_ble_mesh_state_change_light_xyl_default_set_t xyl_default_set;
-    esp_ble_mesh_state_change_light_xyl_range_set_t xyl_range_set;
-    esp_ble_mesh_state_change_light_lc_mode_set_t lc_mode_set;
-    esp_ble_mesh_state_change_light_lc_om_set_t lc_om_set;
-    esp_ble_mesh_state_change_light_lc_light_onoff_set_t lc_light_onoff_set;
-    esp_ble_mesh_state_change_light_lc_property_set_t lc_property_set;
-    esp_ble_mesh_state_change_sensor_status_t sensor_status;
-} esp_ble_mesh_lighting_server_state_change_t;
 
 
-typedef struct {
-    uint16_t property_id;
-} esp_ble_mesh_server_recv_light_lc_property_get_t;
+typedef void (tL2CA_CONFIG_IND_CB) (UINT16, tL2CAP_CFG_INFO *);
 
 
 
 
-typedef union {
-    esp_ble_mesh_server_recv_light_lc_property_get_t lc_property;
-} esp_ble_mesh_lighting_server_recv_get_msg_t;
 
 
-typedef struct {
-    
-# 1413 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h" 3 4
-   _Bool 
-# 1413 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-            op_en;
-    uint16_t lightness;
-    uint8_t tid;
-    uint8_t trans_time;
-    uint8_t delay;
-} esp_ble_mesh_server_recv_light_lightness_set_t;
+typedef void (tL2CA_CONFIG_CFM_CB) (UINT16, tL2CAP_CFG_INFO *);
 
 
-typedef struct {
-    
-# 1422 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h" 3 4
-   _Bool 
-# 1422 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-            op_en;
-    uint16_t lightness;
-    uint8_t tid;
-    uint8_t trans_time;
-    uint8_t delay;
-} esp_ble_mesh_server_recv_light_lightness_linear_set_t;
 
 
-typedef struct {
-    uint16_t lightness;
-} esp_ble_mesh_server_recv_light_lightness_default_set_t;
 
 
-typedef struct {
-    uint16_t range_min;
-    uint16_t range_max;
-} esp_ble_mesh_server_recv_light_lightness_range_set_t;
+typedef void (tL2CA_DISCONNECT_IND_CB) (UINT16, BOOLEAN);
 
 
-typedef struct {
-    
-# 1442 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h" 3 4
-   _Bool 
-# 1442 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-            op_en;
-    uint16_t lightness;
-    uint16_t temperature;
-    int16_t delta_uv;
-    uint8_t tid;
-    uint8_t trans_time;
-    uint8_t delay;
-} esp_ble_mesh_server_recv_light_ctl_set_t;
 
 
-typedef struct {
-    
-# 1453 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h" 3 4
-   _Bool 
-# 1453 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-            op_en;
-    uint16_t temperature;
-    int16_t delta_uv;
-    uint8_t tid;
-    uint8_t trans_time;
-    uint8_t delay;
-} esp_ble_mesh_server_recv_light_ctl_temperature_set_t;
 
 
-typedef struct {
-    uint16_t range_min;
-    uint16_t range_max;
-} esp_ble_mesh_server_recv_light_ctl_temperature_range_set_t;
+typedef void (tL2CA_DISCONNECT_CFM_CB) (UINT16, UINT16);
 
 
-typedef struct {
-    uint16_t lightness;
-    uint16_t temperature;
-    int16_t delta_uv;
-} esp_ble_mesh_server_recv_light_ctl_default_set_t;
 
 
-typedef struct {
-    
-# 1476 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h" 3 4
-   _Bool 
-# 1476 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-            op_en;
-    uint16_t lightness;
-    uint16_t hue;
-    uint16_t saturation;
-    uint8_t tid;
-    uint8_t trans_time;
-    uint8_t delay;
-} esp_ble_mesh_server_recv_light_hsl_set_t;
 
+typedef void (tL2CA_QOS_VIOLATION_IND_CB) (BD_ADDR);
 
-typedef struct {
-    
-# 1487 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h" 3 4
-   _Bool 
-# 1487 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-            op_en;
-    uint16_t hue;
-    uint8_t tid;
-    uint8_t trans_time;
-    uint8_t delay;
-} esp_ble_mesh_server_recv_light_hsl_hue_set_t;
 
 
-typedef struct {
-    
-# 1496 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h" 3 4
-   _Bool 
-# 1496 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-            op_en;
-    uint16_t saturation;
-    uint8_t tid;
-    uint8_t trans_time;
-    uint8_t delay;
-} esp_ble_mesh_server_recv_light_hsl_saturation_set_t;
 
 
-typedef struct {
-    uint16_t lightness;
-    uint16_t hue;
-    uint16_t saturation;
-} esp_ble_mesh_server_recv_light_hsl_default_set_t;
 
+typedef void (tL2CA_DATA_IND_CB) (UINT16, BT_HDR *);
 
-typedef struct {
-    uint16_t hue_range_min;
-    uint16_t hue_range_max;
-    uint16_t saturation_range_min;
-    uint16_t saturation_range_max;
-} esp_ble_mesh_server_recv_light_hsl_range_set_t;
 
 
-typedef struct {
-    
-# 1520 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h" 3 4
-   _Bool 
-# 1520 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-            op_en;
-    uint16_t lightness;
-    uint16_t x;
-    uint16_t y;
-    uint8_t tid;
-    uint8_t trans_time;
-    uint8_t delay;
-} esp_ble_mesh_server_recv_light_xyl_set_t;
 
 
-typedef struct {
-    uint16_t lightness;
-    uint16_t x;
-    uint16_t y;
-} esp_ble_mesh_server_recv_light_xyl_default_set_t;
 
 
-typedef struct {
-    uint16_t x_range_min;
-    uint16_t x_range_max;
-    uint16_t y_range_min;
-    uint16_t y_range_max;
-} esp_ble_mesh_server_recv_light_xyl_range_set_t;
+typedef void (tL2CA_ECHO_RSP_CB) (UINT16);
 
 
-typedef struct {
-    uint8_t mode;
-} esp_ble_mesh_server_recv_light_lc_mode_set_t;
 
 
-typedef struct {
-    uint8_t mode;
-} esp_ble_mesh_server_recv_light_lc_om_set_t;
+typedef void (tL2CA_ECHO_DATA_CB) (BD_ADDR, UINT16, UINT8 *);
+# 276 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+typedef void (tL2CA_CONGESTION_STATUS_CB) (UINT16, BOOLEAN);
+# 285 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+typedef void (tL2CA_NOCP_CB) (BD_ADDR);
+# 294 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+typedef void (tL2CA_TX_COMPLETE_CB) (UINT16, UINT16);
 
 
-typedef struct {
-    
-# 1556 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h" 3 4
-   _Bool 
-# 1556 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-           op_en;
-    uint8_t light_onoff;
-    uint8_t tid;
-    uint8_t trans_time;
-    uint8_t delay;
-} esp_ble_mesh_server_recv_light_lc_light_onoff_set_t;
 
 
-typedef struct {
-    uint16_t property_id;
-    struct net_buf_simple *property_value;
-} esp_ble_mesh_server_recv_light_lc_property_set_t;
-
-
-
-
-typedef union {
-    esp_ble_mesh_server_recv_light_lightness_set_t lightness;
-    esp_ble_mesh_server_recv_light_lightness_linear_set_t lightness_linear;
-    esp_ble_mesh_server_recv_light_lightness_default_set_t lightness_default;
-    esp_ble_mesh_server_recv_light_lightness_range_set_t lightness_range;
-    esp_ble_mesh_server_recv_light_ctl_set_t ctl;
-    esp_ble_mesh_server_recv_light_ctl_temperature_set_t ctl_temp;
-    esp_ble_mesh_server_recv_light_ctl_temperature_range_set_t ctl_temp_range;
-    esp_ble_mesh_server_recv_light_ctl_default_set_t ctl_default;
-    esp_ble_mesh_server_recv_light_hsl_set_t hsl;
-    esp_ble_mesh_server_recv_light_hsl_hue_set_t hsl_hue;
-    esp_ble_mesh_server_recv_light_hsl_saturation_set_t hsl_saturation;
-    esp_ble_mesh_server_recv_light_hsl_default_set_t hsl_default;
-    esp_ble_mesh_server_recv_light_hsl_range_set_t hsl_range;
-    esp_ble_mesh_server_recv_light_xyl_set_t xyl;
-    esp_ble_mesh_server_recv_light_xyl_default_set_t xyl_default;
-    esp_ble_mesh_server_recv_light_xyl_range_set_t xyl_range;
-    esp_ble_mesh_server_recv_light_lc_mode_set_t lc_mode;
-    esp_ble_mesh_server_recv_light_lc_om_set_t lc_om;
-    esp_ble_mesh_server_recv_light_lc_light_onoff_set_t lc_light_onoff;
-    esp_ble_mesh_server_recv_light_lc_property_set_t lc_property;
-} esp_ble_mesh_lighting_server_recv_set_msg_t;
 
 
 typedef struct {
-    struct net_buf_simple *data;
-} esp_ble_mesh_server_recv_sensor_status_t;
-
+    tL2CA_CONNECT_IND_CB *pL2CA_ConnectInd_Cb;
+    tL2CA_CONNECT_CFM_CB *pL2CA_ConnectCfm_Cb;
+    tL2CA_CONNECT_PND_CB *pL2CA_ConnectPnd_Cb;
+    tL2CA_CONFIG_IND_CB *pL2CA_ConfigInd_Cb;
+    tL2CA_CONFIG_CFM_CB *pL2CA_ConfigCfm_Cb;
+    tL2CA_DISCONNECT_IND_CB *pL2CA_DisconnectInd_Cb;
+    tL2CA_DISCONNECT_CFM_CB *pL2CA_DisconnectCfm_Cb;
+    tL2CA_QOS_VIOLATION_IND_CB *pL2CA_QoSViolationInd_Cb;
+    tL2CA_DATA_IND_CB *pL2CA_DataInd_Cb;
+    tL2CA_CONGESTION_STATUS_CB *pL2CA_CongestionStatus_Cb;
+    tL2CA_TX_COMPLETE_CB *pL2CA_TxComplete_Cb;
 
+} tL2CAP_APPL_INFO;
 
 
-typedef union {
-    esp_ble_mesh_server_recv_sensor_status_t sensor_status;
-} esp_ble_mesh_lighting_server_recv_status_msg_t;
 
 
-
-
-typedef union {
-    esp_ble_mesh_lighting_server_state_change_t state_change;
-    esp_ble_mesh_lighting_server_recv_get_msg_t get;
-    esp_ble_mesh_lighting_server_recv_set_msg_t set;
-    esp_ble_mesh_lighting_server_recv_status_msg_t status;
-} esp_ble_mesh_lighting_server_cb_value_t;
-
-
 typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_msg_ctx_t ctx;
-    esp_ble_mesh_lighting_server_cb_value_t value;
-} esp_ble_mesh_lighting_server_cb_param_t;
-
-
-typedef enum {
-
-
-
-
-
-
-
-    ESP_BLE_MESH_LIGHTING_SERVER_STATE_CHANGE_EVT,
-
-
-
+    UINT8 preferred_mode;
+    UINT8 allowed_modes;
+    UINT16 user_rx_buf_size;
+    UINT16 user_tx_buf_size;
+    UINT16 fcr_rx_buf_size;
+    UINT16 fcr_tx_buf_size;
 
-    ESP_BLE_MESH_LIGHTING_SERVER_RECV_GET_MSG_EVT,
+} tL2CAP_ERTM_INFO;
+# 362 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern UINT16 L2CA_Register (UINT16 psm, tL2CAP_APPL_INFO *p_cb_info);
+# 374 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern void L2CA_Deregister (UINT16 psm);
+# 386 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern UINT16 L2CA_AllocatePSM(void);
+# 400 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern UINT16 L2CA_ConnectReq (UINT16 psm, BD_ADDR p_bd_addr);
+# 413 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_ConnectRsp (BD_ADDR p_bd_addr, UINT8 id, UINT16 lcid,
+                                UINT16 result, UINT16 status);
+# 429 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern UINT16 L2CA_ErtmConnectReq (UINT16 psm, BD_ADDR p_bd_addr,
+                                   tL2CAP_ERTM_INFO *p_ertm_info);
 
 
 
 
-    ESP_BLE_MESH_LIGHTING_SERVER_RECV_SET_MSG_EVT,
 
 
 
+# 437 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h" 3 4
+_Bool 
+# 437 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+    L2CA_SetConnectionCallbacks(uint16_t local_cid, const tL2CAP_APPL_INFO *callbacks);
+# 451 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_ErtmConnectRsp (BD_ADDR p_bd_addr, UINT8 id, UINT16 lcid,
+                                     UINT16 result, UINT16 status,
+                                     tL2CAP_ERTM_INFO *p_ertm_info);
+# 464 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_ConfigReq (UINT16 cid, tL2CAP_CFG_INFO *p_cfg);
+# 476 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_ConfigRsp (UINT16 cid, tL2CAP_CFG_INFO *p_cfg);
+# 487 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_DisconnectReq (UINT16 cid);
+# 499 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_DisconnectRsp (UINT16 cid);
+# 516 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern UINT16 L2CA_RegisterLECoc (UINT16 psm, tL2CAP_APPL_INFO *p_cb_info);
+# 528 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern void L2CA_DeregisterLECoc (UINT16 psm);
+# 542 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern UINT16 L2CA_ConnectLECocReq (UINT16 psm, BD_ADDR p_bd_addr, tL2CAP_LE_CFG_INFO *p_cfg);
+# 555 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_ConnectLECocRsp (BD_ADDR p_bd_addr, UINT8 id, UINT16 lcid, UINT16 result,
+                                         UINT16 status, tL2CAP_LE_CFG_INFO *p_cfg);
+# 567 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_GetPeerLECocConfig (UINT16 lcid, tL2CAP_LE_CFG_INFO* peer_cfg);
+# 580 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern UINT8 L2CA_DataWrite (UINT16 cid, BT_HDR *p_data);
+# 593 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_Ping (BD_ADDR p_bd_addr, tL2CA_ECHO_RSP_CB *p_cb);
+# 605 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_Echo (BD_ADDR p_bd_addr, BT_HDR *p_data, tL2CA_ECHO_DATA_CB *p_callback);
 
-    ESP_BLE_MESH_LIGHTING_SERVER_RECV_STATUS_MSG_EVT,
-    ESP_BLE_MESH_LIGHTING_SERVER_EVT_MAX,
-} esp_ble_mesh_lighting_server_cb_event_t;
-# 1661 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-typedef void (* esp_ble_mesh_lighting_server_cb_t)(esp_ble_mesh_lighting_server_cb_event_t event,
-        esp_ble_mesh_lighting_server_cb_param_t *param);
-# 1672 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h"
-esp_err_t esp_ble_mesh_register_lighting_server_callback(esp_ble_mesh_lighting_server_cb_t callback);
-# 21 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_lighting_model.h" 2
 
-typedef enum {
-    BTC_BLE_MESH_ACT_LIGHTING_CLIENT_GET_STATE,
-    BTC_BLE_MESH_ACT_LIGHTING_CLIENT_SET_STATE,
-    BTC_BLE_MESH_ACT_LIGHTING_CLIENT_MAX,
-} btc_ble_mesh_lighting_client_act_t;
 
-typedef union {
-    struct ble_mesh_light_client_get_state_reg_args {
-        esp_ble_mesh_client_common_param_t *params;
-        esp_ble_mesh_light_client_get_state_t *get_state;
-    } light_client_get_state;
-    struct ble_mesh_light_client_set_state_reg_args {
-        esp_ble_mesh_client_common_param_t *params;
-        esp_ble_mesh_light_client_set_state_t *set_state;
-    } light_client_set_state;
-} btc_ble_mesh_lighting_client_args_t;
 
-typedef enum {
-    BTC_BLE_MESH_EVT_LIGHTING_CLIENT_GET_STATE,
-    BTC_BLE_MESH_EVT_LIGHTING_CLIENT_SET_STATE,
-    BTC_BLE_MESH_EVT_LIGHTING_CLIENT_PUBLISH,
-    BTC_BLE_MESH_EVT_LIGHTING_CLIENT_TIMEOUT,
-    BTC_BLE_MESH_EVT_LIGHTING_CLIENT_MAX,
-} btc_ble_mesh_lighting_client_evt_t;
 
-void btc_ble_mesh_lighting_client_call_handler(btc_msg_t *msg);
 
-void btc_ble_mesh_lighting_client_cb_handler(btc_msg_t *msg);
 
-void btc_ble_mesh_lighting_client_arg_deep_copy(btc_msg_t *msg, void *p_dest, void *p_src);
 
-void btc_ble_mesh_lighting_client_publish_callback(u32_t opcode,
-        struct bt_mesh_model *model,
-        struct bt_mesh_msg_ctx *ctx,
-        struct net_buf_simple *buf);
+# 613 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h" 3 4
+_Bool 
+# 613 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+    L2CA_GetIdentifiers(uint16_t lcid, uint16_t *rcid, uint16_t *handle);
+# 630 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_SetIdleTimeout (UINT16 cid, UINT16 timeout,
+                                    BOOLEAN is_global);
+# 653 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_SetIdleTimeoutByBdAddr(BD_ADDR bd_addr, UINT16 timeout,
+        tBT_TRANSPORT transport);
+# 667 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern UINT8 L2CA_SetTraceLevel (UINT8 trace_level);
+# 686 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern UINT8 L2CA_SetDesireRole (UINT8 new_role);
+# 697 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern UINT16 L2CA_LocalLoopbackReq (UINT16 psm, UINT16 handle, BD_ADDR p_bd_addr);
+# 713 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern UINT16 L2CA_FlushChannel (UINT16 lcid, UINT16 num_to_flush);
+# 727 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_SetAclPriority (BD_ADDR bd_addr, UINT8 priority);
+# 740 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_FlowControl (UINT16 cid, BOOLEAN data_enabled);
+# 751 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_SendTestSFrame (UINT16 cid, UINT8 sup_type,
+                                    UINT8 back_track);
+# 763 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_SetTxPriority (UINT16 cid, tL2CAP_CHNL_PRIORITY priority);
+# 777 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_RegForNoCPEvt(tL2CA_NOCP_CB *p_cb, BD_ADDR p_bda);
+# 788 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_SetChnlDataRate (UINT16 cid, tL2CAP_CHNL_DATA_RATE tx, tL2CAP_CHNL_DATA_RATE rx);
 
-void bt_mesh_lighting_client_cb_evt_to_btc(u32_t opcode, u8_t evt_type,
-        struct bt_mesh_model *model,
-        struct bt_mesh_msg_ctx *ctx,
-        const u8_t *val, size_t len);
+typedef void (tL2CA_RESERVE_CMPL_CBACK) (void);
+# 813 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_SetFlushTimeout (BD_ADDR bd_addr, UINT16 flush_tout);
+# 831 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern UINT8 L2CA_DataWriteEx (UINT16 cid, BT_HDR *p_data, UINT16 flags);
+# 843 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_SetChnlFlushability (UINT16 cid, BOOLEAN is_flushable);
+# 857 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_GetPeerFeatures (BD_ADDR bd_addr, UINT32 *p_ext_feat, UINT8 *p_chnl_mask);
+# 871 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_GetBDAddrbyHandle (UINT16 handle, BD_ADDR bd_addr);
+# 886 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern UINT8 L2CA_GetChnlFcrMode (UINT16 lcid);
+# 904 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+typedef void (tL2CA_UCD_DISCOVER_CB) (BD_ADDR, UINT8, UINT32);
 
-typedef enum {
-    BTC_BLE_MESH_EVT_LIGHTING_SERVER_STATE_CHANGE,
-    BTC_BLE_MESH_EVT_LIGHTING_SERVER_RECV_GET_MSG,
-    BTC_BLE_MESH_EVT_LIGHTING_SERVER_RECV_SET_MSG,
-    BTC_BLE_MESH_EVT_LIGHTING_SERVER_RECV_STATUS_MSG,
-    BTC_BLE_MESH_EVT_LIGHTING_SERVER_MAX,
-} btc_ble_mesh_lighting_server_evt_t;
 
-void bt_mesh_lighting_server_cb_evt_to_btc(u8_t evt_type,
-        struct bt_mesh_model *model,
-        struct bt_mesh_msg_ctx *ctx,
-        const u8_t *val, size_t len);
 
-void btc_ble_mesh_lighting_server_cb_handler(btc_msg_t *msg);
-# 65 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_sensor_model.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_sensor_model.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_sensor_model_api.h" 1
-# 45 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_sensor_model_api.h"
-typedef struct {
-    
-# 46 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_sensor_model_api.h" 3 4
-   _Bool 
-# 46 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_sensor_model_api.h"
-         op_en;
-    uint16_t property_id;
-} esp_ble_mesh_sensor_descriptor_get_t;
-
-
-typedef struct {
-    uint16_t property_id;
-} esp_ble_mesh_sensor_cadence_get_t;
 
 
-typedef struct {
-    uint16_t property_id;
-    uint8_t fast_cadence_period_divisor : 7,
-             status_trigger_type : 1;
-    struct net_buf_simple *status_trigger_delta_down;
-    struct net_buf_simple *status_trigger_delta_up;
-    uint8_t status_min_interval;
-    struct net_buf_simple *fast_cadence_low;
-    struct net_buf_simple *fast_cadence_high;
-} esp_ble_mesh_sensor_cadence_set_t;
-
-
-typedef struct {
-    uint16_t sensor_property_id;
-} esp_ble_mesh_sensor_settings_get_t;
+typedef void (tL2CA_UCD_DATA_CB) (BD_ADDR, BT_HDR *);
 
 
-typedef struct {
-    uint16_t sensor_property_id;
-    uint16_t sensor_setting_property_id;
-} esp_ble_mesh_sensor_setting_get_t;
 
 
-typedef struct {
-    uint16_t sensor_property_id;
-    uint16_t sensor_setting_property_id;
-    struct net_buf_simple *sensor_setting_raw;
-} esp_ble_mesh_sensor_setting_set_t;
 
 
-typedef struct {
-    
-# 87 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_sensor_model_api.h" 3 4
-   _Bool 
-# 87 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_sensor_model_api.h"
-            op_en;
-    uint16_t property_id;
-} esp_ble_mesh_sensor_get_t;
 
+typedef void (tL2CA_UCD_CONGESTION_STATUS_CB) (BD_ADDR, BOOLEAN);
 
-typedef struct {
-    uint16_t property_id;
-    struct net_buf_simple *raw_value_x;
-} esp_ble_mesh_sensor_column_get_t;
 
 
 typedef struct {
-    
-# 99 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_sensor_model_api.h" 3 4
-   _Bool 
-# 99 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_sensor_model_api.h"
-            op_en;
-    uint16_t property_id;
-    struct net_buf_simple *raw_value_x1;
-    struct net_buf_simple *raw_value_x2;
-} esp_ble_mesh_sensor_series_get_t;
-
-
-
-
-typedef union {
-    esp_ble_mesh_sensor_descriptor_get_t descriptor_get;
-    esp_ble_mesh_sensor_cadence_get_t cadence_get;
-    esp_ble_mesh_sensor_settings_get_t settings_get;
-    esp_ble_mesh_sensor_setting_get_t setting_get;
-    esp_ble_mesh_sensor_get_t sensor_get;
-    esp_ble_mesh_sensor_column_get_t column_get;
-    esp_ble_mesh_sensor_series_get_t series_get;
-} esp_ble_mesh_sensor_client_get_state_t;
+    tL2CA_UCD_DISCOVER_CB *pL2CA_UCD_Discover_Cb;
+    tL2CA_UCD_DATA_CB *pL2CA_UCD_Data_Cb;
+    tL2CA_UCD_CONGESTION_STATUS_CB *pL2CA_UCD_Congestion_Status_Cb;
+} tL2CAP_UCD_CB_INFO;
+# 939 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_UcdRegister ( UINT16 psm, tL2CAP_UCD_CB_INFO *p_cb_info );
+# 952 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_UcdDeregister ( UINT16 psm );
+# 969 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_UcdDiscover ( UINT16 psm, BD_ADDR rem_bda, UINT8 info_type );
+# 988 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern UINT16 L2CA_UcdDataWrite (UINT16 psm, BD_ADDR rem_bda, BT_HDR *p_buf, UINT16 flags);
+# 1002 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_UcdSetIdleTimeout ( BD_ADDR rem_bda, UINT16 timeout );
+# 1013 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_UCDSetTxPriority ( BD_ADDR rem_bda, tL2CAP_CHNL_PRIORITY priority );
+# 1029 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+typedef void (tL2CA_FIXED_CHNL_CB) (UINT16, BD_ADDR, BOOLEAN, UINT16, tBT_TRANSPORT);
 
 
 
 
-typedef union {
-    esp_ble_mesh_sensor_cadence_set_t cadence_set;
-    esp_ble_mesh_sensor_setting_set_t setting_set;
-} esp_ble_mesh_sensor_client_set_state_t;
 
 
+typedef void (tL2CA_FIXED_DATA_CB) (UINT16, BD_ADDR, BT_HDR *);
 
 
 
 
-typedef struct {
-    struct net_buf_simple *descriptor;
-} esp_ble_mesh_sensor_descriptor_status_cb_t;
-
-
-typedef struct {
-    uint16_t property_id;
-    struct net_buf_simple *sensor_cadence_value;
-} esp_ble_mesh_sensor_cadence_status_cb_t;
-
-
-typedef struct {
-    uint16_t sensor_property_id;
-    struct net_buf_simple *sensor_setting_property_ids;
-} esp_ble_mesh_sensor_settings_status_cb_t;
-
 
-typedef struct {
-    
-# 149 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_sensor_model_api.h" 3 4
-   _Bool 
-# 149 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_sensor_model_api.h"
-            op_en;
-    uint16_t sensor_property_id;
-    uint16_t sensor_setting_property_id;
-    uint8_t sensor_setting_access;
-    struct net_buf_simple *sensor_setting_raw;
-} esp_ble_mesh_sensor_setting_status_cb_t;
-
 
-typedef struct {
-    struct net_buf_simple *marshalled_sensor_data;
-} esp_ble_mesh_sensor_status_cb_t;
 
+typedef void (tL2CA_FIXED_CONGESTION_STATUS_CB) (BD_ADDR, BOOLEAN);
 
-typedef struct {
-    uint16_t property_id;
-    struct net_buf_simple *sensor_column_value;
-} esp_ble_mesh_sensor_column_status_cb_t;
 
 
 typedef struct {
-    uint16_t property_id;
-    struct net_buf_simple *sensor_series_value;
-} esp_ble_mesh_sensor_series_status_cb_t;
+    tL2CA_FIXED_CHNL_CB *pL2CA_FixedConn_Cb;
+    tL2CA_FIXED_DATA_CB *pL2CA_FixedData_Cb;
+    tL2CA_FIXED_CONGESTION_STATUS_CB *pL2CA_FixedCong_Cb;
+    tL2CAP_FCR_OPTS fixed_chnl_opts;
 
+    UINT16 default_idle_tout;
+    tL2CA_TX_COMPLETE_CB *pL2CA_FixedTxComplete_Cb;
+} tL2CAP_FIXED_CHNL_REG;
+# 1072 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_RegisterFixedChannel (UINT16 fixed_cid, tL2CAP_FIXED_CHNL_REG *p_freg);
+# 1087 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_ConnectFixedChnl (UINT16 fixed_cid, BD_ADDR bd_addr, tBLE_ADDR_TYPE bd_addr_type);
+# 1103 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern UINT16 L2CA_SendFixedChnlData (UINT16 fixed_cid, BD_ADDR rem_bda, BT_HDR *p_buf);
+# 1118 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_RemoveFixedChnl (UINT16 fixed_cid, BD_ADDR rem_bda);
+# 1137 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_SetFixedChannelTout (BD_ADDR rem_bda, UINT16 fixed_cid, UINT16 idle_tout);
+# 1155 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_GetCurrentConfig (UINT16 lcid,
+                                      tL2CAP_CFG_INFO **pp_our_cfg, tL2CAP_CH_CFG_BITS *p_our_cfg_bits,
+                                      tL2CAP_CFG_INFO **pp_peer_cfg, tL2CAP_CH_CFG_BITS *p_peer_cfg_bits);
+# 1173 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_CancelBleConnectReq (BD_ADDR rem_bda);
+# 1186 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_UpdateBleConnParams (BD_ADDR rem_bdRa, UINT16 min_int,
+        UINT16 max_int, UINT16 latency, UINT16 timeout);
+# 1201 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_EnableUpdateBleConnParams (BD_ADDR rem_bda, BOOLEAN enable);
+# 1212 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern UINT8 L2CA_GetBleConnRole (BD_ADDR bd_addr);
+# 1227 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern UINT16 L2CA_GetDisconnectReason (BD_ADDR remote_bda, tBT_TRANSPORT transport);
 
-
-
-typedef union {
-    esp_ble_mesh_sensor_descriptor_status_cb_t descriptor_status;
-    esp_ble_mesh_sensor_cadence_status_cb_t cadence_status;
-    esp_ble_mesh_sensor_settings_status_cb_t settings_status;
-    esp_ble_mesh_sensor_setting_status_cb_t setting_status;
-    esp_ble_mesh_sensor_status_cb_t sensor_status;
-    esp_ble_mesh_sensor_column_status_cb_t column_status;
-    esp_ble_mesh_sensor_series_status_cb_t series_status;
-} esp_ble_mesh_sensor_client_status_cb_t;
-
-
-typedef struct {
-    int error_code;
-
-
-    esp_ble_mesh_client_common_param_t *params;
-    esp_ble_mesh_sensor_client_status_cb_t status_cb;
-} esp_ble_mesh_sensor_client_cb_param_t;
-
-
-typedef enum {
-    ESP_BLE_MESH_SENSOR_CLIENT_GET_STATE_EVT,
-    ESP_BLE_MESH_SENSOR_CLIENT_SET_STATE_EVT,
-    ESP_BLE_MESH_SENSOR_CLIENT_PUBLISH_EVT,
-    ESP_BLE_MESH_SENSOR_CLIENT_TIMEOUT_EVT,
-    ESP_BLE_MESH_SENSOR_CLIENT_EVT_MAX,
-} esp_ble_mesh_sensor_client_cb_event_t;
-# 213 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_sensor_model_api.h"
-typedef void (* esp_ble_mesh_sensor_client_cb_t)(esp_ble_mesh_sensor_client_cb_event_t event,
-        esp_ble_mesh_sensor_client_cb_param_t *param);
-# 224 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_sensor_model_api.h"
-esp_err_t esp_ble_mesh_register_sensor_client_callback(esp_ble_mesh_sensor_client_cb_t callback);
-# 239 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_sensor_model_api.h"
-esp_err_t esp_ble_mesh_sensor_client_get_state(esp_ble_mesh_client_common_param_t *params,
-        esp_ble_mesh_sensor_client_get_state_t *get_state);
-# 255 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_sensor_model_api.h"
-esp_err_t esp_ble_mesh_sensor_client_set_state(esp_ble_mesh_client_common_param_t *params,
-        esp_ble_mesh_sensor_client_set_state_t *set_state);
-# 349 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_sensor_model_api.h"
-enum esp_ble_mesh_sensor_sample_func {
-    ESP_BLE_MESH_SAMPLE_FUNC_UNSPECIFIED,
-    ESP_BLE_MESH_SAMPLE_FUNC_INSTANTANEOUS,
-    ESP_BLE_MESH_SAMPLE_FUNC_ARITHMETIC_MEAN,
-    ESP_BLE_MESH_SAMPLE_FUNC_RMS,
-    ESP_BLE_MESH_SAMPLE_FUNC_MAXIMUM,
-    ESP_BLE_MESH_SAMPLE_FUNC_MINIMUM,
-    ESP_BLE_MESH_SAMPLE_FUNC_ACCUMULATED,
-    ESP_BLE_MESH_SAMPLE_FUNC_COUNT,
+extern BOOLEAN L2CA_CheckIsCongest(UINT16 fixed_cid, UINT16 handle);
+# 32 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/rfcdefs.h" 1
+# 33 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h" 2
+# 46 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+typedef UINT8 tBTA_JV_STATUS;
+# 75 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+enum {
+    BTA_JV_DISC_NONE,
+    BTA_JV_DISC_LIMITED,
+    BTA_JV_DISC_GENERAL
 };
+typedef UINT16 tBTA_JV_DISC;
+
+
+
+typedef UINT32 tBTA_JV_ROLE;
+# 101 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+typedef UINT8 tBTA_JV_PM_ID;
+# 111 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+enum {
+    BTA_JV_CONN_OPEN = 0,
+    BTA_JV_CONN_CLOSE,
+    BTA_JV_APP_OPEN,
+    BTA_JV_APP_CLOSE,
+    BTA_JV_SCO_OPEN,
+    BTA_JV_SCO_CLOSE,
+    BTA_JV_CONN_IDLE,
+    BTA_JV_CONN_BUSY,
+    BTA_JV_MAX_CONN_STATE
+};
+typedef UINT8 tBTA_JV_CONN_STATE;
+# 160 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+typedef UINT16 tBTA_JV_EVT;
 
 
 typedef struct {
-    uint32_t positive_tolerance : 12,
-             negative_tolerance : 12,
-             sampling_function : 8;
-    uint8_t measure_period;
-    uint8_t update_interval;
-} esp_ble_mesh_sensor_descriptor_t;
+    tBTA_JV_STATUS status;
+    tBTA_JV_DISC disc_mode;
+} tBTA_JV_SET_DISCOVER;
 
 
 typedef struct {
-    uint16_t property_id;
-    uint8_t access;
-    struct net_buf_simple *raw;
-} esp_ble_mesh_sensor_setting_t;
+    tBTA_JV_STATUS status;
+    UINT8 scn_num;
+    UINT8 scn[31];
+} tBTA_JV_DISCOVERY_COMP;
 
 
 typedef struct {
-    uint8_t period_divisor : 7,
-            trigger_type : 1;
-
-
-
-
-
-
-
-    struct net_buf_simple *trigger_delta_down;
-    struct net_buf_simple *trigger_delta_up;
-    uint8_t min_interval;
-    struct net_buf_simple *fast_cadence_low;
-    struct net_buf_simple *fast_cadence_high;
-} esp_ble_mesh_sensor_cadence_t;
+    tBTA_JV_STATUS status;
+    UINT32 handle;
+} tBTA_JV_CREATE_RECORD;
 
 
 typedef struct {
-
-
-
-
-
-
-
-    uint8_t format : 1,
-            length : 7;
-    struct net_buf_simple *raw_value;
-} esp_ble_mesh_sensor_data_t;
+    tBTA_JV_STATUS status;
+    UINT32 handle;
+    BD_ADDR rem_bda;
+    INT32 tx_mtu;
+} tBTA_JV_L2CAP_OPEN;
 
 
 typedef struct {
-    struct net_buf_simple *raw_value_x;
-    struct net_buf_simple *column_width;
-    struct net_buf_simple *raw_value_y;
-} esp_ble_mesh_sensor_series_column_t;
+    tBTA_JV_STATUS status;
+    UINT32 handle;
+    BD_ADDR rem_bda;
+    INT32 tx_mtu;
+    void **p_p_cback;
+    void **p_user_data;
+
+} tBTA_JV_L2CAP_LE_OPEN;
+
 
 
 typedef struct {
-    uint16_t sensor_property_id;
-
-
-    esp_ble_mesh_sensor_descriptor_t descriptor;
-
-
-
-
-
-
-    const uint8_t setting_count;
-    esp_ble_mesh_sensor_setting_t *settings;
-
-
-
-
-
-
-    esp_ble_mesh_sensor_cadence_t *cadence;
-
-    esp_ble_mesh_sensor_data_t sensor_data;
-
-    esp_ble_mesh_sensor_series_column_t series_column;
-} esp_ble_mesh_sensor_state_t;
+    tBTA_JV_STATUS status;
+    UINT32 handle;
+    BOOLEAN async;
+} tBTA_JV_L2CAP_CLOSE;
 
 
 typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    const uint8_t state_count;
-    esp_ble_mesh_sensor_state_t *states;
-} esp_ble_mesh_sensor_srv_t;
+    tBTA_JV_STATUS status;
+    UINT32 handle;
+    UINT8 sec_id;
+} tBTA_JV_L2CAP_START;
 
 
 typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    const uint8_t state_count;
-    esp_ble_mesh_sensor_state_t *states;
-} esp_ble_mesh_sensor_setup_srv_t;
+    tBTA_JV_STATUS status;
+    UINT32 handle;
+    UINT8 sec_id;
+} tBTA_JV_L2CAP_CL_INIT;
 
 
 typedef struct {
-    uint16_t property_id;
-    uint8_t period_divisor : 7,
-             trigger_type : 1;
-    struct net_buf_simple *trigger_delta_down;
-    struct net_buf_simple *trigger_delta_up;
-    uint8_t min_interval;
-    struct net_buf_simple *fast_cadence_low;
-    struct net_buf_simple *fast_cadence_high;
-} esp_ble_mesh_state_change_sensor_cadence_set_t;
+    tBTA_JV_STATUS status;
+    UINT32 handle;
+    BOOLEAN cong;
+} tBTA_JV_L2CAP_CONG;
 
 
 typedef struct {
-    uint16_t property_id;
-    uint16_t setting_property_id;
-    struct net_buf_simple *setting_value;
-} esp_ble_mesh_state_change_sensor_setting_set_t;
+    tBTA_JV_STATUS status;
+    UINT32 handle;
+    UINT32 req_id;
+    UINT8 *p_data;
 
+    UINT16 len;
+} tBTA_JV_L2CAP_READ;
+
+
+typedef struct {
+    tBTA_JV_STATUS status;
+    UINT32 handle;
+    UINT32 req_id;
+    UINT8 *p_data;
+
+    UINT16 len;
+} tBTA_JV_L2CAP_RECEIVE;
+
+
+typedef struct {
+    tBTA_JV_STATUS status;
+    UINT32 handle;
+    UINT32 req_id;
+    UINT16 len;
+    BOOLEAN cong;
+} tBTA_JV_L2CAP_WRITE;
+
+
+
+typedef struct {
+    tBTA_JV_STATUS status;
+    UINT16 channel;
+    BD_ADDR addr;
+    UINT32 req_id;
+    UINT16 len;
+    BOOLEAN cong;
+} tBTA_JV_L2CAP_WRITE_FIXED;
+
+
+typedef struct {
+    tBTA_JV_STATUS status;
+    UINT32 handle;
+    BD_ADDR rem_bda;
+} tBTA_JV_RFCOMM_OPEN;
+
+typedef struct {
+    tBTA_JV_STATUS status;
+    UINT32 handle;
+    UINT32 new_listen_handle;
+    BD_ADDR rem_bda;
+} tBTA_JV_RFCOMM_SRV_OPEN;
+
+
+
+typedef struct {
+    tBTA_JV_STATUS status;
+    UINT32 port_status;
+    UINT32 handle;
+    BOOLEAN async;
+} tBTA_JV_RFCOMM_CLOSE;
+
+
+typedef struct {
+    tBTA_JV_STATUS status;
+    UINT32 handle;
+    UINT8 sec_id;
+    BOOLEAN use_co;
+} tBTA_JV_RFCOMM_START;
+
+
+typedef struct {
+    tBTA_JV_STATUS status;
+    UINT32 handle;
+    UINT8 sec_id;
+    BOOLEAN use_co;
+} tBTA_JV_RFCOMM_CL_INIT;
+
+typedef struct {
+    UINT32 handle;
+    BT_HDR *p_buf;
+} tBTA_JV_DATA_IND;
+
+
+typedef struct {
+    UINT32 handle;
+    BT_HDR *p_buf;
+} tBTA_JV_LE_DATA_IND;
+
+
+
+typedef struct {
+    tBTA_JV_STATUS status;
+    UINT32 handle;
+    BOOLEAN cong;
+} tBTA_JV_RFCOMM_CONG;
+
+
+typedef struct {
+    tBTA_JV_STATUS status;
+    UINT32 handle;
+    UINT32 req_id;
+    UINT8 *p_data;
+
+    UINT16 len;
+} tBTA_JV_RFCOMM_READ;
+
+
+typedef struct {
+    tBTA_JV_STATUS status;
+    UINT32 handle;
+    UINT32 req_id;
+    int len;
+    BOOLEAN cong;
+} tBTA_JV_RFCOMM_WRITE;
+
+
+typedef struct {
+    tBTA_JV_STATUS status;
+    UINT32 handle;
+    tBTA_JV_PM_ID app_id;
+} tBTA_JV_SET_PM_PROFILE;
+
+
+typedef struct {
+    UINT32 handle;
+    tBTA_JV_CONN_STATE state;
+} tBTA_JV_NOTIFY_PM_STATE_CHANGE;
 
 
 
 typedef union {
+    tBTA_JV_STATUS status;
+    tBTA_JV_DISCOVERY_COMP disc_comp;
+    tBTA_JV_SET_DISCOVER set_discover;
+    UINT8 scn;
+    UINT16 psm;
+    tBTA_JV_CREATE_RECORD create_rec;
+    tBTA_JV_L2CAP_OPEN l2c_open;
+    tBTA_JV_L2CAP_CLOSE l2c_close;
+    tBTA_JV_L2CAP_START l2c_start;
+    tBTA_JV_L2CAP_CL_INIT l2c_cl_init;
+    tBTA_JV_L2CAP_CONG l2c_cong;
+    tBTA_JV_L2CAP_READ l2c_read;
+    tBTA_JV_L2CAP_WRITE l2c_write;
+    tBTA_JV_RFCOMM_OPEN rfc_open;
+    tBTA_JV_RFCOMM_SRV_OPEN rfc_srv_open;
+    tBTA_JV_RFCOMM_CLOSE rfc_close;
+    tBTA_JV_RFCOMM_START rfc_start;
+    tBTA_JV_RFCOMM_CL_INIT rfc_cl_init;
+    tBTA_JV_RFCOMM_CONG rfc_cong;
+    tBTA_JV_RFCOMM_READ rfc_read;
+    tBTA_JV_RFCOMM_WRITE rfc_write;
+    tBTA_JV_DATA_IND data_ind;
+
+    tBTA_JV_LE_DATA_IND le_data_ind;
+    tBTA_JV_L2CAP_LE_OPEN l2c_le_open;
+    tBTA_JV_L2CAP_WRITE_FIXED l2c_write_fixed;
+} tBTA_JV;
 
 
-
-    esp_ble_mesh_state_change_sensor_cadence_set_t sensor_cadence_set;
-    esp_ble_mesh_state_change_sensor_setting_set_t sensor_setting_set;
-} esp_ble_mesh_sensor_server_state_change_t;
+typedef void (tBTA_JV_DM_CBACK)(tBTA_JV_EVT event, tBTA_JV *p_data, void *user_data);
 
 
-typedef struct {
-    
-# 490 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_sensor_model_api.h" 3 4
-   _Bool 
-# 490 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_sensor_model_api.h"
-         op_en;
-    uint16_t property_id;
-} esp_ble_mesh_server_recv_sensor_descriptor_get_t;
+typedef void *(tBTA_JV_RFCOMM_CBACK)(tBTA_JV_EVT event, tBTA_JV *p_data, void *user_data);
 
 
-typedef struct {
-    uint16_t property_id;
-} esp_ble_mesh_server_recv_sensor_cadence_get_t;
-
-
-typedef struct {
-    uint16_t property_id;
-} esp_ble_mesh_server_recv_sensor_settings_get_t;
-
-
-typedef struct {
-    uint16_t property_id;
-    uint16_t setting_property_id;
-} esp_ble_mesh_server_recv_sensor_setting_get_t;
-
-
-typedef struct {
-    
-# 512 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_sensor_model_api.h" 3 4
-   _Bool 
-# 512 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_sensor_model_api.h"
-            op_en;
-    uint16_t property_id;
-} esp_ble_mesh_server_recv_sensor_get_t;
+typedef void (tBTA_JV_L2CAP_CBACK)(tBTA_JV_EVT event, tBTA_JV *p_data, void *user_Data);
 
 
 typedef struct {
-    uint16_t property_id;
-    struct net_buf_simple *raw_value_x;
-} esp_ble_mesh_server_recv_sensor_column_get_t;
-
-
-typedef struct {
-    
-# 524 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_sensor_model_api.h" 3 4
-   _Bool 
-# 524 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_sensor_model_api.h"
-            op_en;
-    uint16_t property_id;
-    struct net_buf_simple *raw_value;
-} esp_ble_mesh_server_recv_sensor_series_get_t;
-
-
-
-
-typedef union {
-    esp_ble_mesh_server_recv_sensor_descriptor_get_t sensor_descriptor;
-    esp_ble_mesh_server_recv_sensor_cadence_get_t sensor_cadence;
-    esp_ble_mesh_server_recv_sensor_settings_get_t sensor_settings;
-    esp_ble_mesh_server_recv_sensor_setting_get_t sensor_setting;
-    esp_ble_mesh_server_recv_sensor_get_t sensor_data;
-    esp_ble_mesh_server_recv_sensor_column_get_t sensor_column;
-    esp_ble_mesh_server_recv_sensor_series_get_t sensor_series;
-} esp_ble_mesh_sensor_server_recv_get_msg_t;
-
-
-typedef struct {
-    uint16_t property_id;
-    struct net_buf_simple *cadence;
-} esp_ble_mesh_server_recv_sensor_cadence_set_t;
-
-
-typedef struct {
-    uint16_t property_id;
-    uint16_t setting_property_id;
-    struct net_buf_simple *setting_raw;
-} esp_ble_mesh_server_recv_sensor_setting_set_t;
-
-
-
-
-typedef union {
-    esp_ble_mesh_server_recv_sensor_cadence_set_t sensor_cadence;
-    esp_ble_mesh_server_recv_sensor_setting_set_t sensor_setting;
-} esp_ble_mesh_sensor_server_recv_set_msg_t;
-
-
-
-
-typedef union {
-    esp_ble_mesh_sensor_server_state_change_t state_change;
-    esp_ble_mesh_sensor_server_recv_get_msg_t get;
-    esp_ble_mesh_sensor_server_recv_set_msg_t set;
-} esp_ble_mesh_sensor_server_cb_value_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_msg_ctx_t ctx;
-    esp_ble_mesh_sensor_server_cb_value_t value;
-} esp_ble_mesh_sensor_server_cb_param_t;
-
-
+    UINT16 sdp_raw_size;
+    UINT16 sdp_db_size;
+    UINT8 *p_sdp_raw_data;
+    tSDP_DISCOVERY_DB *p_sdp_db;
+} tBTA_JV_CFG;
+# 421 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+extern tBTA_JV_STATUS BTA_JvEnable(tBTA_JV_DM_CBACK *p_cback);
+# 432 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+extern void BTA_JvDisable(void);
+# 443 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+extern BOOLEAN BTA_JvIsEnable(void);
+# 455 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+extern BOOLEAN BTA_JvIsEncrypted(BD_ADDR bd_addr);
+# 478 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+extern tBTA_JV_STATUS BTA_JvGetChannelId(int conn_type, void *user_data,
+        INT32 channel);
+# 492 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+extern tBTA_JV_STATUS BTA_JvFreeChannel(UINT16 channel, int conn_type);
+# 507 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+extern tBTA_JV_STATUS BTA_JvStartDiscovery(BD_ADDR bd_addr, UINT16 num_uuid,
+        tBT_UUID *p_uuid_list, void *user_data);
+# 521 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+extern tBTA_JV_STATUS BTA_JvCreateRecordByUser(const char *name, UINT32 channel, void *user_data);
+# 533 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+extern tBTA_JV_STATUS BTA_JvDeleteRecord(UINT32 handle);
+# 550 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+extern tBTA_JV_STATUS BTA_JvL2capConnectLE(tBTA_SEC sec_mask, tBTA_JV_ROLE role,
+        const tL2CAP_ERTM_INFO *ertm_info, UINT16 remote_chan,
+        UINT16 rx_mtu, tL2CAP_CFG_INFO *cfg,
+        BD_ADDR peer_bd_addr, tBTA_JV_L2CAP_CBACK *p_cback, void *user_data);
+# 570 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+extern tBTA_JV_STATUS BTA_JvL2capConnect(tBTA_SEC sec_mask, tBTA_JV_ROLE role,
+        const tL2CAP_ERTM_INFO *ertm_info, UINT16 remote_psm,
+        UINT16 rx_mtu, tL2CAP_CFG_INFO *cfg,
+        BD_ADDR peer_bd_addr, tBTA_JV_L2CAP_CBACK *p_cback, void *user_data);
+# 585 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+extern tBTA_JV_STATUS BTA_JvL2capClose(UINT32 handle);
+# 598 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+extern tBTA_JV_STATUS BTA_JvL2capCloseLE(UINT32 handle);
+# 614 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+extern tBTA_JV_STATUS BTA_JvL2capStartServer(tBTA_SEC sec_mask, tBTA_JV_ROLE role,
+        const tL2CAP_ERTM_INFO *ertm_info,
+        UINT16 local_psm, UINT16 rx_mtu, tL2CAP_CFG_INFO *cfg,
+        tBTA_JV_L2CAP_CBACK *p_cback, void *user_data);
+# 634 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+extern tBTA_JV_STATUS BTA_JvL2capStartServerLE(tBTA_SEC sec_mask, tBTA_JV_ROLE role,
+        const tL2CAP_ERTM_INFO *ertm_info,
+        UINT16 local_chan, UINT16 rx_mtu, tL2CAP_CFG_INFO *cfg,
+        tBTA_JV_L2CAP_CBACK *p_cback, void *user_data);
+# 650 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+extern tBTA_JV_STATUS BTA_JvL2capStopServerLE(UINT16 local_chan, void *user_data);
+# 663 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+extern tBTA_JV_STATUS BTA_JvL2capStopServer(UINT16 local_psm, void *user_data);
+# 677 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+extern tBTA_JV_STATUS BTA_JvL2capRead(UINT32 handle, UINT32 req_id,
+                                      UINT8 *p_data, UINT16 len);
+# 693 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+extern tBTA_JV_STATUS BTA_JvL2capReceive(UINT32 handle, UINT32 req_id,
+        UINT8 *p_data, UINT16 len);
+# 707 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+extern tBTA_JV_STATUS BTA_JvL2capReady(UINT32 handle, UINT32 *p_data_size);
+# 722 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+extern tBTA_JV_STATUS BTA_JvL2capWrite(UINT32 handle, UINT32 req_id,
+                                       UINT8 *p_data, UINT16 len, void *user_data);
+# 739 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+extern tBTA_JV_STATUS BTA_JvL2capWriteFixed(UINT16 channel, BD_ADDR *addr, UINT32 req_id,
+        tBTA_JV_L2CAP_CBACK *p_cback,
+        UINT8 *p_data, UINT16 len, void *user_data);
+# 758 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+extern tBTA_JV_STATUS BTA_JvRfcommConnect(tBTA_SEC sec_mask,
+        tBTA_JV_ROLE role, UINT8 remote_scn, BD_ADDR peer_bd_addr,
+        tBTA_JV_RFCOMM_CBACK *p_cback, void *user_data);
+# 772 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+extern tBTA_JV_STATUS BTA_JvRfcommClose(UINT32 handle, void *user_data);
+# 789 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+extern tBTA_JV_STATUS BTA_JvRfcommStartServer(tBTA_SEC sec_mask,
+        tBTA_JV_ROLE role, UINT8 local_scn, UINT8 max_session,
+        tBTA_JV_RFCOMM_CBACK *p_cback, void *user_data);
+# 804 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+extern tBTA_JV_STATUS BTA_JvRfcommStopServer(UINT32 handle, void *user_data);
+# 818 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+extern tBTA_JV_STATUS BTA_JvRfcommRead(UINT32 handle, UINT32 req_id,
+                                       UINT8 *p_data, UINT16 len);
+# 832 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+extern tBTA_JV_STATUS BTA_JvRfcommReady(UINT32 handle, UINT32 *p_data_size);
+# 847 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+extern tBTA_JV_STATUS BTA_JvRfcommWrite(UINT32 handle, UINT32 req_id, int len, UINT8 *p_data);
+# 868 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+extern tBTA_JV_STATUS BTA_JvSetPmProfile(UINT32 handle, tBTA_JV_PM_ID app_id,
+        tBTA_JV_CONN_STATE init_st);
+# 881 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h"
+UINT16 BTA_JvRfcommGetPortHdl(UINT32 handle);
+# 23 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/profile/std/include/btc_spp.h" 2
+# 31 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/profile/std/include/btc_spp.h"
 typedef enum {
-
-
-
-
-
-
-
-    ESP_BLE_MESH_SENSOR_SERVER_STATE_CHANGE_EVT,
-
-
-
-
-    ESP_BLE_MESH_SENSOR_SERVER_RECV_GET_MSG_EVT,
-
-
-
-
-    ESP_BLE_MESH_SENSOR_SERVER_RECV_SET_MSG_EVT,
-    ESP_BLE_MESH_SENSOR_SERVER_EVT_MAX,
-} esp_ble_mesh_sensor_server_cb_event_t;
-# 611 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_sensor_model_api.h"
-typedef void (* esp_ble_mesh_sensor_server_cb_t)(esp_ble_mesh_sensor_server_cb_event_t event,
-        esp_ble_mesh_sensor_server_cb_param_t *param);
-# 622 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_sensor_model_api.h"
-esp_err_t esp_ble_mesh_register_sensor_server_callback(esp_ble_mesh_sensor_server_cb_t callback);
-# 21 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_sensor_model.h" 2
-
-typedef enum {
-    BTC_BLE_MESH_ACT_SENSOR_CLIENT_GET_STATE,
-    BTC_BLE_MESH_ACT_SENSOR_CLIENT_SET_STATE,
-    BTC_BLE_MESH_ACT_SENSOR_CLIENT_MAX,
-} btc_ble_mesh_sensor_client_act_t;
-
-typedef union {
-    struct ble_mesh_sensor_client_get_state_reg_args {
-        esp_ble_mesh_client_common_param_t *params;
-        esp_ble_mesh_sensor_client_get_state_t *get_state;
-    } sensor_client_get_state;
-    struct ble_mesh_sensor_client_set_state_reg_args {
-        esp_ble_mesh_client_common_param_t *params;
-        esp_ble_mesh_sensor_client_set_state_t *set_state;
-    } sensor_client_set_state;
-} btc_ble_mesh_sensor_client_args_t;
-
-typedef enum {
-    BTC_BLE_MESH_EVT_SENSOR_CLIENT_GET_STATE,
-    BTC_BLE_MESH_EVT_SENSOR_CLIENT_SET_STATE,
-    BTC_BLE_MESH_EVT_SENSOR_CLIENT_PUBLISH,
-    BTC_BLE_MESH_EVT_SENSOR_CLIENT_TIMEOUT,
-    BTC_BLE_MESH_EVT_SENSOR_CLIENT_MAX,
-} btc_ble_mesh_sensor_client_evt_t;
-
-void btc_ble_mesh_sensor_client_call_handler(btc_msg_t *msg);
-
-void btc_ble_mesh_sensor_client_cb_handler(btc_msg_t *msg);
-
-void btc_ble_mesh_sensor_client_arg_deep_copy(btc_msg_t *msg, void *p_dest, void *p_src);
-
-void btc_ble_mesh_sensor_client_publish_callback(u32_t opcode,
-        struct bt_mesh_model *model,
-        struct bt_mesh_msg_ctx *ctx,
-        struct net_buf_simple *buf);
-
-void bt_mesh_sensor_client_cb_evt_to_btc(u32_t opcode, u8_t evt_type,
-        struct bt_mesh_model *model,
-        struct bt_mesh_msg_ctx *ctx,
-        const u8_t *val, size_t len);
-
-typedef enum {
-    BTC_BLE_MESH_EVT_SENSOR_SERVER_STATE_CHANGE,
-    BTC_BLE_MESH_EVT_SENSOR_SERVER_RECV_GET_MSG,
-    BTC_BLE_MESH_EVT_SENSOR_SERVER_RECV_SET_MSG,
-    BTC_BLE_MESH_EVT_SENSOR_SERVER_MAX,
-} btc_ble_mesh_sensor_server_evt_t;
-
-void bt_mesh_sensor_server_cb_evt_to_btc(u8_t evt_type,
-        struct bt_mesh_model *model,
-        struct bt_mesh_msg_ctx *ctx,
-        const u8_t *val, size_t len);
-
-void btc_ble_mesh_sensor_server_cb_handler(btc_msg_t *msg);
-# 66 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_time_scene_model.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_time_scene_model.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_time_scene_model_api.h" 1
-# 77 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_time_scene_model_api.h"
-typedef struct {
-    uint8_t tai_seconds[5];
-    uint8_t sub_second;
-    uint8_t uncertainty;
-    uint16_t time_authority : 1;
-    uint16_t tai_utc_delta : 15;
-    uint8_t time_zone_offset;
-} esp_ble_mesh_time_set_t;
-
-
-typedef struct {
-    uint8_t time_zone_offset_new;
-    uint8_t tai_zone_change[5];
-} esp_ble_mesh_time_zone_set_t;
-
-
-typedef struct {
-    uint16_t tai_utc_delta_new : 15;
-    uint16_t padding : 1;
-    uint8_t tai_delta_change[5];
-} esp_ble_mesh_tai_utc_delta_set_t;
-
-
-typedef struct {
-    uint8_t time_role;
-} esp_ble_mesh_time_role_set_t;
-
-
-typedef struct {
-    uint16_t scene_number;
-} esp_ble_mesh_scene_store_t;
-
-
-typedef struct {
-    
-# 111 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_time_scene_model_api.h" 3 4
-   _Bool 
-# 111 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_time_scene_model_api.h"
-            op_en;
-    uint16_t scene_number;
-    uint8_t tid;
-    uint8_t trans_time;
-    uint8_t delay;
-} esp_ble_mesh_scene_recall_t;
-
-
-typedef struct {
-    uint16_t scene_number;
-} esp_ble_mesh_scene_delete_t;
-
-
-typedef struct {
-    uint8_t index;
-} esp_ble_mesh_scheduler_act_get_t;
-
-
-typedef struct {
-    uint64_t index : 4;
-    uint64_t year : 7;
-    uint64_t month : 12;
-    uint64_t day : 5;
-    uint64_t hour : 5;
-    uint64_t minute : 6;
-    uint64_t second : 6;
-    uint64_t day_of_week : 7;
-    uint64_t action : 4;
-    uint64_t trans_time : 8;
-    uint16_t scene_number;
-} esp_ble_mesh_scheduler_act_set_t;
-
-
+    BTC_SPP_ACT_INIT = 0,
+    BTC_SPP_ACT_UNINIT,
+    BTC_SPP_ACT_START_DISCOVERY,
+    BTC_SPP_ACT_CONNECT,
+    BTC_SPP_ACT_DISCONNECT,
+    BTC_SPP_ACT_START_SRV,
+    BTC_SPP_ACT_WRITE,
+} btc_spp_act_t;
 
 
 typedef union {
-    esp_ble_mesh_scheduler_act_get_t scheduler_act_get;
-} esp_ble_mesh_time_scene_client_get_state_t;
 
-
-
-
-typedef union {
-    esp_ble_mesh_time_set_t time_set;
-    esp_ble_mesh_time_zone_set_t time_zone_set;
-    esp_ble_mesh_tai_utc_delta_set_t tai_utc_delta_set;
-    esp_ble_mesh_time_role_set_t time_role_set;
-    esp_ble_mesh_scene_store_t scene_store;
-    esp_ble_mesh_scene_recall_t scene_recall;
-    esp_ble_mesh_scene_delete_t scene_delete;
-    esp_ble_mesh_scheduler_act_set_t scheduler_act_set;
-} esp_ble_mesh_time_scene_client_set_state_t;
-
-
-
-
-
-
-typedef struct {
-    uint8_t tai_seconds[5];
-    uint8_t sub_second;
-    uint8_t uncertainty;
-    uint16_t time_authority : 1;
-    uint16_t tai_utc_delta : 15;
-    uint8_t time_zone_offset;
-} esp_ble_mesh_time_status_cb_t;
-
-
-typedef struct {
-    uint8_t time_zone_offset_curr;
-    uint8_t time_zone_offset_new;
-    uint8_t tai_zone_change[5];
-} esp_ble_mesh_time_zone_status_cb_t;
-
-
-typedef struct {
-    uint16_t tai_utc_delta_curr : 15;
-    uint16_t padding_1 : 1;
-    uint16_t tai_utc_delta_new : 15;
-    uint16_t padding_2 : 1;
-    uint8_t tai_delta_change[5];
-} esp_ble_mesh_tai_utc_delta_status_cb_t;
-
-
-typedef struct {
-    uint8_t time_role;
-} esp_ble_mesh_time_role_status_cb_t;
-
-
-typedef struct {
-    
-# 201 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_time_scene_model_api.h" 3 4
-   _Bool 
-# 201 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_time_scene_model_api.h"
-            op_en;
-    uint8_t status_code;
-    uint16_t current_scene;
-    uint16_t target_scene;
-    uint8_t remain_time;
-} esp_ble_mesh_scene_status_cb_t;
-
-
-typedef struct {
-    uint8_t status_code;
-    uint16_t current_scene;
-    struct net_buf_simple *scenes;
-} esp_ble_mesh_scene_register_status_cb_t;
-
-
-typedef struct {
-    uint16_t schedules;
-} esp_ble_mesh_scheduler_status_cb_t;
-
-
-typedef struct {
-    uint64_t index : 4;
-    uint64_t year : 7;
-    uint64_t month : 12;
-    uint64_t day : 5;
-    uint64_t hour : 5;
-    uint64_t minute : 6;
-    uint64_t second : 6;
-    uint64_t day_of_week : 7;
-    uint64_t action : 4;
-    uint64_t trans_time : 8;
-    uint16_t scene_number;
-} esp_ble_mesh_scheduler_act_status_cb_t;
-
-
-
-
-typedef union {
-    esp_ble_mesh_time_status_cb_t time_status;
-    esp_ble_mesh_time_zone_status_cb_t time_zone_status;
-    esp_ble_mesh_tai_utc_delta_status_cb_t tai_utc_delta_status;
-    esp_ble_mesh_time_role_status_cb_t time_role_status;
-    esp_ble_mesh_scene_status_cb_t scene_status;
-    esp_ble_mesh_scene_register_status_cb_t scene_register_status;
-    esp_ble_mesh_scheduler_status_cb_t scheduler_status;
-    esp_ble_mesh_scheduler_act_status_cb_t scheduler_act_status;
-} esp_ble_mesh_time_scene_client_status_cb_t;
-
-
-typedef struct {
-    int error_code;
-    esp_ble_mesh_client_common_param_t *params;
-    esp_ble_mesh_time_scene_client_status_cb_t status_cb;
-} esp_ble_mesh_time_scene_client_cb_param_t;
-
-
-typedef enum {
-    ESP_BLE_MESH_TIME_SCENE_CLIENT_GET_STATE_EVT,
-    ESP_BLE_MESH_TIME_SCENE_CLIENT_SET_STATE_EVT,
-    ESP_BLE_MESH_TIME_SCENE_CLIENT_PUBLISH_EVT,
-    ESP_BLE_MESH_TIME_SCENE_CLIENT_TIMEOUT_EVT,
-    ESP_BLE_MESH_TIME_SCENE_CLIENT_EVT_MAX,
-} esp_ble_mesh_time_scene_client_cb_event_t;
-# 274 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_time_scene_model_api.h"
-typedef void (* esp_ble_mesh_time_scene_client_cb_t)(esp_ble_mesh_time_scene_client_cb_event_t event,
-        esp_ble_mesh_time_scene_client_cb_param_t *param);
-# 285 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_time_scene_model_api.h"
-esp_err_t esp_ble_mesh_register_time_scene_client_callback(esp_ble_mesh_time_scene_client_cb_t callback);
-# 299 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_time_scene_model_api.h"
-esp_err_t esp_ble_mesh_time_scene_client_get_state(esp_ble_mesh_client_common_param_t *params,
-        esp_ble_mesh_time_scene_client_get_state_t *get_state);
-# 314 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_time_scene_model_api.h"
-esp_err_t esp_ble_mesh_time_scene_client_set_state(esp_ble_mesh_client_common_param_t *params,
-        esp_ble_mesh_time_scene_client_set_state_t *set_state);
-# 482 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_time_scene_model_api.h"
-typedef struct {
-    struct {
-        uint8_t tai_seconds[5];
-        uint8_t subsecond;
-        uint8_t uncertainty;
-        uint8_t time_zone_offset_curr;
-        uint8_t time_zone_offset_new;
-        uint8_t tai_zone_change[5];
-        uint16_t time_authority : 1,
-                 tai_utc_delta_curr : 15;
-        uint16_t tai_utc_delta_new : 15;
-        uint8_t tai_delta_change[5];
-    } time;
-    uint8_t time_role;
-} esp_ble_mesh_time_state_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    esp_ble_mesh_time_state_t *state;
-} esp_ble_mesh_time_srv_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    esp_ble_mesh_time_state_t *state;
-} esp_ble_mesh_time_setup_srv_t;
-# 523 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_time_scene_model_api.h"
-typedef struct {
-    uint16_t scene_number;
-    uint8_t scene_type;
-
-
-
-
-    struct net_buf_simple *scene_value;
-} esp_ble_mesh_scene_register_t;
-# 553 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_time_scene_model_api.h"
-typedef struct {
-    const uint16_t scene_count;
-    esp_ble_mesh_scene_register_t *scenes;
-# 577 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_time_scene_model_api.h"
-    uint16_t current_scene;
-# 594 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_time_scene_model_api.h"
-    uint16_t target_scene;
-
-
-    uint8_t status_code;
-
-
-    
-# 600 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_time_scene_model_api.h" 3 4
-   _Bool 
-# 600 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_time_scene_model_api.h"
-        in_progress;
-} esp_ble_mesh_scenes_state_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    esp_ble_mesh_scenes_state_t *state;
-    esp_ble_mesh_last_msg_info_t last;
-    esp_ble_mesh_state_transition_t transition;
-} esp_ble_mesh_scene_srv_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    esp_ble_mesh_scenes_state_t *state;
-} esp_ble_mesh_scene_setup_srv_t;
-
-
-typedef struct {
-    
-# 621 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_time_scene_model_api.h" 3 4
-   _Bool 
-# 621 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_time_scene_model_api.h"
-        in_use;
-    uint64_t year : 7,
-             month : 12,
-             day : 5,
-             hour : 5,
-             minute : 6,
-             second : 6,
-             day_of_week : 7,
-             action : 4,
-             trans_time : 8;
-    uint16_t scene_number;
-} esp_ble_mesh_schedule_register_t;
-
-
-typedef struct {
-    const uint8_t schedule_count;
-    esp_ble_mesh_schedule_register_t *schedules;
-} esp_ble_mesh_scheduler_state_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    esp_ble_mesh_scheduler_state_t *state;
-} esp_ble_mesh_scheduler_srv_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_server_rsp_ctrl_t rsp_ctrl;
-    esp_ble_mesh_scheduler_state_t *state;
-} esp_ble_mesh_scheduler_setup_srv_t;
-
-
-typedef struct {
-    uint8_t tai_seconds[5];
-    uint8_t subsecond;
-    uint8_t uncertainty;
-    uint16_t time_authority : 1;
-    uint16_t tai_utc_delta_curr : 15;
-    uint8_t time_zone_offset_curr;
-} esp_ble_mesh_state_change_time_set_t;
-
-
-typedef struct {
-    uint8_t tai_seconds[5];
-    uint8_t subsecond;
-    uint8_t uncertainty;
-    uint16_t time_authority : 1;
-    uint16_t tai_utc_delta_curr : 15;
-    uint8_t time_zone_offset_curr;
-} esp_ble_mesh_state_change_time_status_t;
-
-
-typedef struct {
-    uint8_t time_zone_offset_new;
-    uint8_t tai_zone_change[5];
-} esp_ble_mesh_state_change_time_zone_set_t;
-
-
-typedef struct {
-    uint16_t tai_utc_delta_new : 15;
-    uint8_t tai_delta_change[5];
-} esp_ble_mesh_state_change_tai_utc_delta_set_t;
-
-
-typedef struct {
-    uint8_t time_role;
-} esp_ble_mesh_state_change_time_role_set_t;
-
-
-typedef struct {
-    uint16_t scene_number;
-} esp_ble_mesh_state_change_scene_store_t;
-
-
-typedef struct {
-    uint16_t scene_number;
-} esp_ble_mesh_state_change_scene_recall_t;
-
-
-typedef struct {
-    uint16_t scene_number;
-} esp_ble_mesh_state_change_scene_delete_t;
-
-
-typedef struct {
-    uint64_t index : 4;
-    uint64_t year : 7;
-    uint64_t month : 12;
-    uint64_t day : 5;
-    uint64_t hour : 5;
-    uint64_t minute : 6;
-    uint64_t second : 6;
-    uint64_t day_of_week : 7;
-    uint64_t action : 4;
-    uint64_t trans_time : 8;
-    uint16_t scene_number;
-} esp_ble_mesh_state_change_scheduler_act_set_t;
-
-
-
-
-typedef union {
-
-
-
-    esp_ble_mesh_state_change_time_set_t time_set;
-    esp_ble_mesh_state_change_time_status_t time_status;
-    esp_ble_mesh_state_change_time_zone_set_t time_zone_set;
-    esp_ble_mesh_state_change_tai_utc_delta_set_t tai_utc_delta_set;
-    esp_ble_mesh_state_change_time_role_set_t time_role_set;
-    esp_ble_mesh_state_change_scene_store_t scene_store;
-    esp_ble_mesh_state_change_scene_recall_t scene_recall;
-    esp_ble_mesh_state_change_scene_delete_t scene_delete;
-    esp_ble_mesh_state_change_scheduler_act_set_t scheduler_act_set;
-} esp_ble_mesh_time_scene_server_state_change_t;
-
-
-typedef struct {
-    uint8_t index;
-} esp_ble_mesh_server_recv_scheduler_act_get_t;
-
-
-
-
-typedef union {
-    esp_ble_mesh_server_recv_scheduler_act_get_t scheduler_act;
-} esp_ble_mesh_time_scene_server_recv_get_msg_t;
-
-
-typedef struct {
-    uint8_t tai_seconds[5];
-    uint8_t subsecond;
-    uint8_t uncertainty;
-    uint16_t time_authority : 1;
-    uint16_t tai_utc_delta : 15;
-    uint8_t time_zone_offset;
-} esp_ble_mesh_server_recv_time_set_t;
-
-
-typedef struct {
-    uint8_t time_zone_offset_new;
-    uint8_t tai_zone_change[5];
-} esp_ble_mesh_server_recv_time_zone_set_t;
-
-
-typedef struct {
-    uint16_t tai_utc_delta_new : 15;
-    uint16_t padding : 1;
-    uint8_t tai_delta_change[5];
-} esp_ble_mesh_server_recv_tai_utc_delta_set_t;
-
-
-typedef struct {
-    uint8_t time_role;
-} esp_ble_mesh_server_recv_time_role_set_t;
-
-
-typedef struct {
-    uint16_t scene_number;
-} esp_ble_mesh_server_recv_scene_store_t;
-
-
-typedef struct {
-    
-# 786 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_time_scene_model_api.h" 3 4
-   _Bool 
-# 786 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_time_scene_model_api.h"
-            op_en;
-    uint16_t scene_number;
-    uint8_t tid;
-    uint8_t trans_time;
-    uint8_t delay;
-} esp_ble_mesh_server_recv_scene_recall_t;
-
-
-typedef struct {
-    uint16_t scene_number;
-} esp_ble_mesh_server_recv_scene_delete_t;
-
-
-typedef struct {
-    uint64_t index : 4;
-    uint64_t year : 7;
-    uint64_t month : 12;
-    uint64_t day : 5;
-    uint64_t hour : 5;
-    uint64_t minute : 6;
-    uint64_t second : 6;
-    uint64_t day_of_week : 7;
-    uint64_t action : 4;
-    uint64_t trans_time : 8;
-    uint16_t scene_number;
-} esp_ble_mesh_server_recv_scheduler_act_set_t;
-
-
-
-
-typedef union {
-    esp_ble_mesh_server_recv_time_set_t time;
-    esp_ble_mesh_server_recv_time_zone_set_t time_zone;
-    esp_ble_mesh_server_recv_tai_utc_delta_set_t tai_utc_delta;
-    esp_ble_mesh_server_recv_time_role_set_t time_role;
-    esp_ble_mesh_server_recv_scene_store_t scene_store;
-    esp_ble_mesh_server_recv_scene_recall_t scene_recall;
-    esp_ble_mesh_server_recv_scene_delete_t scene_delete;
-    esp_ble_mesh_server_recv_scheduler_act_set_t scheduler_act;
-} esp_ble_mesh_time_scene_server_recv_set_msg_t;
-
-
-typedef struct {
-    uint8_t tai_seconds[5];
-    uint8_t subsecond;
-    uint8_t uncertainty;
-    uint16_t time_authority : 1;
-    uint16_t tai_utc_delta : 15;
-    uint8_t time_zone_offset;
-} esp_ble_mesh_server_recv_time_status_t;
-
-
-
-
-typedef union {
-    esp_ble_mesh_server_recv_time_status_t time_status;
-} esp_ble_mesh_time_scene_server_recv_status_msg_t;
-
-
-
-
-typedef union {
-    esp_ble_mesh_time_scene_server_state_change_t state_change;
-    esp_ble_mesh_time_scene_server_recv_get_msg_t get;
-    esp_ble_mesh_time_scene_server_recv_set_msg_t set;
-    esp_ble_mesh_time_scene_server_recv_status_msg_t status;
-} esp_ble_mesh_time_scene_server_cb_value_t;
-
-
-typedef struct {
-    esp_ble_mesh_model_t *model;
-    esp_ble_mesh_msg_ctx_t ctx;
-    esp_ble_mesh_time_scene_server_cb_value_t value;
-} esp_ble_mesh_time_scene_server_cb_param_t;
-
-
-typedef enum {
-
-
-
-
-
-
-
-    ESP_BLE_MESH_TIME_SCENE_SERVER_STATE_CHANGE_EVT,
-
-
-
-
-    ESP_BLE_MESH_TIME_SCENE_SERVER_RECV_GET_MSG_EVT,
-
-
-
-
-    ESP_BLE_MESH_TIME_SCENE_SERVER_RECV_SET_MSG_EVT,
-
-
-
-
-    ESP_BLE_MESH_TIME_SCENE_SERVER_RECV_STATUS_MSG_EVT,
-    ESP_BLE_MESH_TIME_SCENE_SERVER_EVT_MAX,
-} esp_ble_mesh_time_scene_server_cb_event_t;
-# 898 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_time_scene_model_api.h"
-typedef void (* esp_ble_mesh_time_scene_server_cb_t)(esp_ble_mesh_time_scene_server_cb_event_t event,
-        esp_ble_mesh_time_scene_server_cb_param_t *param);
-# 909 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_time_scene_model_api.h"
-esp_err_t esp_ble_mesh_register_time_scene_server_callback(esp_ble_mesh_time_scene_server_cb_t callback);
-# 21 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_time_scene_model.h" 2
-
-typedef enum {
-    BTC_BLE_MESH_ACT_TIME_SCENE_CLIENT_GET_STATE,
-    BTC_BLE_MESH_ACT_TIME_SCENE_CLIENT_SET_STATE,
-    BTC_BLE_MESH_ACT_TIME_SCENE_CLIENT_MAX,
-} btc_ble_mesh_time_scene_client_act_t;
-
-typedef union {
-    struct ble_mesh_time_scene_client_get_state_reg_args {
-        esp_ble_mesh_client_common_param_t *params;
-        esp_ble_mesh_time_scene_client_get_state_t *get_state;
-    } time_scene_client_get_state;
-    struct ble_mesh_time_scene_client_set_state_reg_args {
-        esp_ble_mesh_client_common_param_t *params;
-        esp_ble_mesh_time_scene_client_set_state_t *set_state;
-    } time_scene_client_set_state;
-} btc_ble_mesh_time_scene_client_args_t;
-
-typedef enum {
-    BTC_BLE_MESH_EVT_TIME_SCENE_CLIENT_GET_STATE,
-    BTC_BLE_MESH_EVT_TIME_SCENE_CLIENT_SET_STATE,
-    BTC_BLE_MESH_EVT_TIME_SCENE_CLIENT_PUBLISH,
-    BTC_BLE_MESH_EVT_TIME_SCENE_CLIENT_TIMEOUT,
-    BTC_BLE_MESH_EVT_TIME_SCENE_CLIENT_MAX,
-} btc_ble_mesh_time_scene_client_evt_t;
-
-void btc_ble_mesh_time_scene_client_call_handler(btc_msg_t *msg);
-
-void btc_ble_mesh_time_scene_client_cb_handler(btc_msg_t *msg);
-
-void btc_ble_mesh_time_scene_client_arg_deep_copy(btc_msg_t *msg, void *p_dest, void *p_src);
-
-void btc_ble_mesh_time_scene_client_publish_callback(u32_t opcode,
-        struct bt_mesh_model *model,
-        struct bt_mesh_msg_ctx *ctx,
-        struct net_buf_simple *buf);
-
-void bt_mesh_time_scene_client_cb_evt_to_btc(u32_t opcode, u8_t evt_type,
-        struct bt_mesh_model *model,
-        struct bt_mesh_msg_ctx *ctx,
-        const u8_t *val, size_t len);
-
-typedef enum {
-    BTC_BLE_MESH_EVT_TIME_SCENE_SERVER_STATE_CHANGE,
-    BTC_BLE_MESH_EVT_TIME_SCENE_SERVER_RECV_GET_MSG,
-    BTC_BLE_MESH_EVT_TIME_SCENE_SERVER_RECV_SET_MSG,
-    BTC_BLE_MESH_EVT_TIME_SCENE_SERVER_RECV_STATUS_MSG,
-    BTC_BLE_MESH_EVT_TIME_SCENE_SERVER_MAX,
-} btc_ble_mesh_time_scene_server_evt_t;
-
-void bt_mesh_time_scene_server_cb_evt_to_btc(u8_t evt_type,
-        struct bt_mesh_model *model,
-        struct bt_mesh_msg_ctx *ctx,
-        const u8_t *val, size_t len);
-
-void btc_ble_mesh_time_scene_server_cb_handler(btc_msg_t *msg);
-# 67 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c" 2
-
-
-
-
-
-
-
+    struct init_arg {
+        esp_spp_mode_t mode;
+    } init;
+
+    struct uninit_arg {
+    } uninit;
+
+
+    struct start_discovery_arg {
+        BD_ADDR bd_addr;
+        UINT16 num_uuid;
+        tBT_UUID *p_uuid_list;
+    } start_discovery;
+
+    struct connect_arg {
+        esp_spp_sec_t sec_mask;
+        esp_spp_role_t role;
+        UINT8 remote_scn;
+        esp_bd_addr_t peer_bd_addr;
+    } connect;
+
+    struct disconnect_arg {
+        UINT32 handle;
+    } disconnect;
+
+    struct start_srv_arg {
+        esp_spp_sec_t sec_mask;
+        esp_spp_role_t role;
+        UINT8 local_scn;
+        UINT8 max_session;
+        char name[32 + 1];
+    } start_srv;
+
+    struct write_arg {
+        UINT32 handle;
+        int len;
+        UINT8 *p_data;
+    } write;
+
+} btc_spp_args_t;
+
+
+void btc_spp_call_handler(btc_msg_t *msg);
+void btc_spp_cb_handler(btc_msg_t *msg);
+void btc_spp_arg_deep_copy(btc_msg_t *msg, void *p_dest, void *p_src);
+
+esp_err_t btc_spp_vfs_register(void);
+# 49 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c" 2
+# 74 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c"
 osi_thread_t *btc_thread;
 
 static const btc_func_t profile_tab[BTC_PID_NUM] = {
@@ -22728,42 +16239,24 @@ static const btc_func_t profile_tab[BTC_PID_NUM] = {
                                                          ((void *)0) 
 # 101 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c"
                                                                                  },
-# 125 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c"
-    [BTC_PID_PROV] = {btc_ble_mesh_prov_call_handler, btc_ble_mesh_prov_cb_handler },
-    [BTC_PID_MODEL] = {btc_ble_mesh_model_call_handler, btc_ble_mesh_model_cb_handler },
-    [BTC_PID_HEALTH_CLIENT] = {btc_ble_mesh_health_client_call_handler, btc_ble_mesh_health_client_cb_handler },
-    [BTC_PID_HEALTH_SERVER] = {btc_ble_mesh_health_server_call_handler, btc_ble_mesh_health_server_cb_handler },
-    [BTC_PID_CONFIG_CLIENT] = {btc_ble_mesh_config_client_call_handler, btc_ble_mesh_config_client_cb_handler },
-    [BTC_PID_CONFIG_SERVER] = {
-# 130 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c" 3 4
-                                  ((void *)0)
-# 130 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c"
-                                      , btc_ble_mesh_config_server_cb_handler },
-    [BTC_PID_GENERIC_CLIENT] = {btc_ble_mesh_generic_client_call_handler, btc_ble_mesh_generic_client_cb_handler },
-    [BTC_PID_LIGHTING_CLIENT] = {btc_ble_mesh_lighting_client_call_handler, btc_ble_mesh_lighting_client_cb_handler },
-    [BTC_PID_SENSOR_CLIENT] = {btc_ble_mesh_sensor_client_call_handler, btc_ble_mesh_sensor_client_cb_handler },
-    [BTC_PID_TIME_SCENE_CLIENT] = {btc_ble_mesh_time_scene_client_call_handler, btc_ble_mesh_time_scene_client_cb_handler},
-    [BTC_PID_GENERIC_SERVER] = {
-# 135 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c" 3 4
-                                  ((void *)0)
-# 135 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c"
-                                      , btc_ble_mesh_generic_server_cb_handler },
-    [BTC_PID_LIGHTING_SERVER] = {
-# 136 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c" 3 4
-                                  ((void *)0)
-# 136 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c"
-                                      , btc_ble_mesh_lighting_server_cb_handler },
-    [BTC_PID_SENSOR_SERVER] = {
-# 137 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c" 3 4
-                                  ((void *)0)
-# 137 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c"
-                                      , btc_ble_mesh_sensor_server_cb_handler },
-    [BTC_PID_TIME_SCENE_SERVER] = {
-# 138 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c" 3 4
-                                  ((void *)0)
-# 138 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c"
-                                      , btc_ble_mesh_time_scene_server_cb_handler},
 
+
+
+    [BTC_PID_GAP_BT] = {btc_gap_bt_call_handler, btc_gap_bt_cb_handler },
+
+    [BTC_PID_PRF_QUE] = {btc_profile_queue_handler, 
+# 107 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c" 3 4
+                                                         ((void *)0) 
+# 107 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c"
+                                                                                 },
+
+
+
+
+
+
+    [BTC_PID_SPP] = {btc_spp_call_handler, btc_spp_cb_handler },
+# 140 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c"
 };
 
 
@@ -22860,7 +16353,135 @@ bt_status_t btc_transfer_context(btc_msg_t *msg, void *arg, int arg_len, btc_arg
     return btc_task_post(&lmsg, 0xffffffffUL);
 
 }
-# 334 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c"
+
+
+
+static void btc_deinit_mem(void) {
+    if (btc_dm_cb_ptr) {
+        free((btc_dm_cb_ptr));
+        btc_dm_cb_ptr = 
+# 222 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c" 3 4
+                       ((void *)0)
+# 222 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c"
+                           ;
+    }
+
+    if (btc_profile_cb_tab) {
+        free((btc_profile_cb_tab));
+        btc_profile_cb_tab = 
+# 227 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c" 3 4
+                            ((void *)0)
+# 227 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c"
+                                ;
+    }
+
+
+    if (gl_bta_adv_data_ptr) {
+        free((gl_bta_adv_data_ptr));
+        gl_bta_adv_data_ptr = 
+# 233 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c" 3 4
+                             ((void *)0)
+# 233 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c"
+                                 ;
+    }
+
+    if (gl_bta_scan_rsp_data_ptr) {
+        free((gl_bta_scan_rsp_data_ptr));
+        gl_bta_scan_rsp_data_ptr = 
+# 238 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c" 3 4
+                                  ((void *)0)
+# 238 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c"
+                                      ;
+    }
+
+
+
+    if (btc_creat_tab_env_ptr) {
+        free((btc_creat_tab_env_ptr));
+        btc_creat_tab_env_ptr = 
+# 245 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c" 3 4
+                               ((void *)0)
+# 245 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c"
+                                   ;
+    }
+
+    if (blufi_env_ptr) {
+        free((blufi_env_ptr));
+        blufi_env_ptr = 
+# 250 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c" 3 4
+                       ((void *)0)
+# 250 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c"
+                           ;
+    }
+# 271 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c"
+}
+
+static bt_status_t btc_init_mem(void) {
+    if ((btc_dm_cb_ptr = (btc_dm_cb_t *)malloc((sizeof(btc_dm_cb_t)))) == 
+# 274 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c" 3 4
+                                                                           ((void *)0)
+# 274 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c"
+                                                                               ) {
+        goto error_exit;
+    }
+    memset((void *)btc_dm_cb_ptr, 0, sizeof(btc_dm_cb_t));
+
+    if ((btc_profile_cb_tab = (void **)malloc((sizeof(void *) * BTC_PID_NUM))) == 
+# 279 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c" 3 4
+                                                                                   ((void *)0)
+# 279 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c"
+                                                                                       ) {
+        goto error_exit;
+    }
+    memset((void *)btc_profile_cb_tab, 0, sizeof(void *) * BTC_PID_NUM);
+
+
+    if ((gl_bta_adv_data_ptr = (tBTA_BLE_ADV_DATA *)malloc((sizeof(tBTA_BLE_ADV_DATA)))) == 
+# 285 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c" 3 4
+                                                                                             ((void *)0)
+# 285 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c"
+                                                                                                 ) {
+        goto error_exit;
+    }
+    memset((void *)gl_bta_adv_data_ptr, 0, sizeof(tBTA_BLE_ADV_DATA));
+
+    if ((gl_bta_scan_rsp_data_ptr = (tBTA_BLE_ADV_DATA *)malloc((sizeof(tBTA_BLE_ADV_DATA)))) == 
+# 290 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c" 3 4
+                                                                                                  ((void *)0)
+# 290 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c"
+                                                                                                      ) {
+        goto error_exit;
+    }
+    memset((void *)gl_bta_scan_rsp_data_ptr, 0, sizeof(tBTA_BLE_ADV_DATA));
+
+
+
+    if ((btc_creat_tab_env_ptr = (esp_btc_creat_tab_t *)malloc((sizeof(esp_btc_creat_tab_t)))) == 
+# 297 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c" 3 4
+                                                                                                   ((void *)0)
+# 297 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c"
+                                                                                                       ) {
+        goto error_exit;
+    }
+    memset((void *)btc_creat_tab_env_ptr, 0, sizeof(esp_btc_creat_tab_t));
+
+    if ((blufi_env_ptr = (tBLUFI_ENV *)malloc((sizeof(tBLUFI_ENV)))) == 
+# 302 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c" 3 4
+                                                                         ((void *)0)
+# 302 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c"
+                                                                             ) {
+        goto error_exit;
+    }
+    memset((void *)blufi_env_ptr, 0, sizeof(tBLUFI_ENV));
+# 326 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c"
+    return BT_STATUS_SUCCESS;
+
+error_exit:;
+    btc_deinit_mem();
+    return BT_STATUS_NOMEM;
+}
+
+
 int btc_init(void)
 {
     btc_thread = osi_thread_create("BTC_TASK", (3072 + (512)), (( 25 ) - 6), ((0)), 2);
@@ -22871,7 +16492,14 @@ int btc_init(void)
                          ) {
         return BT_STATUS_NOMEM;
     }
-# 348 "/home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c"
+
+
+    if (btc_init_mem() != BT_STATUS_SUCCESS){
+        return BT_STATUS_NOMEM;
+    }
+
+
+
     btc_gap_callback_init();
 
 
@@ -22885,7 +16513,7 @@ int btc_init(void)
 void btc_deinit(void)
 {
 
-
+    btc_deinit_mem();
 
 
     osi_thread_free(btc_thread);

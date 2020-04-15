@@ -3796,7 +3796,7 @@ void bootloader_clock_configure(void)
 
     rtc_clk_config_t clk_cfg = { .xtal_freq = RTC_XTAL_FREQ_AUTO, .cpu_freq_mhz = 80, .fast_freq = RTC_FAST_FREQ_8M, .slow_freq = RTC_SLOW_FREQ_RTC, .clk_8m_div = 0, .slow_clk_dcap = 255, .clk_8m_dfreq = 172, };
 
-    clk_cfg.xtal_freq = 40;
+    clk_cfg.xtal_freq = 0;
     clk_cfg.cpu_freq_mhz = cpu_freq_mhz;
 
 

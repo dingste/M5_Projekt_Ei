@@ -988,36 +988,6 @@ __attribute__((__noreturn__)) void
 
 
 # 21 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h"
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 1
-# 17 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h"
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
-       
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 1 3 4
-# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
-void __assert (const char *, int, const char *)
-     __attribute__ ((__noreturn__));
-void __assert_func (const char *, int, const char *, const char *)
-     __attribute__ ((__noreturn__));
-# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-# 18 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 2
-# 21 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-
-
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h"
-       
-# 24 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-# 26 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
 # 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
 
 # 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
@@ -1398,19 +1368,7 @@ struct buffer_t {
 
 buffer_t *buffer_new(size_t size)
 {
-    
-# 32 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c" 3 4
-   ((
-# 32 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c"
-   size > 0
-# 32 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c" 3 4
-   ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c", 32, __func__, 
-# 32 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c"
-   "size > 0"
-# 32 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c" 3 4
-   ))
-# 32 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c"
-                   ;
+    do { if (!(size > 0)) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c", 32); }; } while (0);
 
     buffer_t *buffer = malloc((sizeof(buffer_t) + size));
     if (!buffer) {
@@ -1431,63 +1389,23 @@ buffer_t *buffer_new(size_t size)
 
 buffer_t *buffer_new_ref(const buffer_t *buf)
 {
-    
+    do { if (!(buf != 
 # 49 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c" 3 4
-   ((
+   ((void *)0)
 # 49 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c"
-   buf != 
-# 49 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c", 49, __func__, 
-# 49 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c"
-   "buf != NULL"
-# 49 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c" 3 4
-   ))
-# 49 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c"
-                      ;
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c", 49); }; } while (0);
     return buffer_new_slice(buf, buf->length);
 }
 
 buffer_t *buffer_new_slice(const buffer_t *buf, size_t slice_size)
 {
-    
+    do { if (!(buf != 
 # 55 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c" 3 4
-   ((
+   ((void *)0)
 # 55 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c"
-   buf != 
-# 55 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c", 55, __func__, 
-# 55 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c"
-   "buf != NULL"
-# 55 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c" 3 4
-   ))
-# 55 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c"
-                      ;
-    
-# 56 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c" 3 4
-   ((
-# 56 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c"
-   slice_size > 0
-# 56 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c" 3 4
-   ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c", 56, __func__, 
-# 56 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c"
-   "slice_size > 0"
-# 56 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c" 3 4
-   ))
-# 56 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c"
-                         ;
-    
-# 57 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c" 3 4
-   ((
-# 57 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c"
-   slice_size <= buf->length
-# 57 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c" 3 4
-   ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c", 57, __func__, 
-# 57 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c"
-   "slice_size <= buf->length"
-# 57 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c" 3 4
-   ))
-# 57 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c"
-                                    ;
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c", 55); }; } while (0);
+    do { if (!(slice_size > 0)) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c", 56); }; } while (0);
+    do { if (!(slice_size <= buf->length)) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c", 57); }; } while (0);
 
     buffer_t *ret = calloc(1, (sizeof(buffer_t)));
     if (!ret) {
@@ -1532,36 +1450,20 @@ void buffer_free(buffer_t *buffer)
 
 void *buffer_ptr(const buffer_t *buf)
 {
-    
+    do { if (!(buf != 
 # 94 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c" 3 4
-   ((
+   ((void *)0)
 # 94 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c"
-   buf != 
-# 94 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c", 94, __func__, 
-# 94 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c"
-   "buf != NULL"
-# 94 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c" 3 4
-   ))
-# 94 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c"
-                      ;
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c", 94); }; } while (0);
     return buf->root->data + buf->root->length - buf->length;
 }
 
 size_t buffer_length(const buffer_t *buf)
 {
-    
+    do { if (!(buf != 
 # 100 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c" 3 4
-   ((
+   ((void *)0)
 # 100 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c"
-   buf != 
-# 100 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c", 100, __func__, 
-# 100 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c"
-   "buf != NULL"
-# 100 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c" 3 4
-   ))
-# 100 "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c"
-                      ;
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/buffer.c", 100); }; } while (0);
     return buf->length;
 }

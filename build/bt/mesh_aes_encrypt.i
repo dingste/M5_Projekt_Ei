@@ -1062,36 +1062,6 @@ __attribute__((__noreturn__)) void
 
 
 # 21 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h"
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 1
-# 17 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h"
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
-       
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 1 3 4
-# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
-void __assert (const char *, int, const char *)
-     __attribute__ ((__noreturn__));
-void __assert_func (const char *, int, const char *, const char *)
-     __attribute__ ((__noreturn__));
-# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-# 18 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 2
-# 21 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-
-
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h"
-       
-# 24 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-# 26 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
 # 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
 
 # 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
@@ -1265,6 +1235,36 @@ void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint1
 # 131 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h" 2
 # 13 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_trace.h" 2
 # 20 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 1
+# 20 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h"
+# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 1
+# 17 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h"
+# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
+# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
+       
+
+
+
+# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 1 3 4
+# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
+
+# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
+void __assert (const char *, int, const char *)
+     __attribute__ ((__noreturn__));
+void __assert_func (const char *, int, const char *, const char *)
+     __attribute__ ((__noreturn__));
+# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
+# 18 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 2
+# 21 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
+
+
+# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h" 1
+# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h"
+       
+# 24 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
+# 21 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h" 2
+# 195 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h"
+
 # 195 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h"
 static inline unsigned int find_msb_set(u32_t op)
 {

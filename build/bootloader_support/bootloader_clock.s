@@ -85,7 +85,7 @@ bootloader_clock_configure:
 .LVL4:
 .L5:
 	.loc 1 44 9 view .LVU28
-	movi.n	a8, 0x50
+	movi.n	a9, 0x50
 	j	.L4
 .LVL5:
 .L3:
@@ -107,27 +107,23 @@ bootloader_clock_configure:
 	.loc 1 47 45 view .LVU34
 	bnei	a10, 2, .L5
 	.loc 1 49 22 view .LVU35
-	movi	a8, 0xf0
+	movi	a9, 0xf0
 .L4:
 .LVL7:
 	.loc 1 53 5 is_stmt 1 view .LVU36
 	.loc 1 53 22 is_stmt 0 view .LVU37
-	l32r	a9, .LC6
-	l32i.n	a10, a9, 0
-	l32i.n	a9, a9, 4
-	s32i.n	a10, sp, 0
-	s32i.n	a9, sp, 4
-	.loc 1 55 5 is_stmt 1 view .LVU38
-	.loc 1 55 23 is_stmt 0 view .LVU39
-	movi.n	a9, 0x28
-	s8i	a9, sp, 0
-	.loc 1 56 5 is_stmt 1 view .LVU40
-	.loc 1 56 26 is_stmt 0 view .LVU41
-	l32r	a10, .LC7
-	slli	a9, a8, 8
-	l32i.n	a8, sp, 0
+	l32r	a10, .LC6
+	.loc 1 56 26 view .LVU38
+	slli	a9, a9, 8
 .LVL8:
-	.loc 1 56 26 view .LVU42
+	.loc 1 53 22 view .LVU39
+	l32i.n	a8, a10, 0
+	l32i.n	a10, a10, 4
+	s32i.n	a10, sp, 4
+	.loc 1 55 5 is_stmt 1 view .LVU40
+	.loc 1 56 5 view .LVU41
+	.loc 1 56 26 is_stmt 0 view .LVU42
+	l32r	a10, .LC7
 	and	a8, a8, a10
 	or	a8, a8, a9
 	s32i.n	a8, sp, 0
@@ -13820,7 +13816,7 @@ bootloader_clock_configure:
 	.uleb128 .LVU18
 	.uleb128 .LVU36
 	.uleb128 .LVU36
-	.uleb128 .LVU42
+	.uleb128 .LVU39
 .LLST0:
 	.4byte	.LVL2
 	.4byte	.LVL7
@@ -13831,7 +13827,7 @@ bootloader_clock_configure:
 	.4byte	.LVL7
 	.4byte	.LVL8
 	.2byte	0x1
-	.byte	0x58
+	.byte	0x59
 	.4byte	0
 	.4byte	0
 .LVUS1:

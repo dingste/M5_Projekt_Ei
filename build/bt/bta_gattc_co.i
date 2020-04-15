@@ -1894,36 +1894,6 @@ __attribute__((__noreturn__)) void
 
 
 # 21 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h"
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 1
-# 17 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h"
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
-       
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 1 3 4
-# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
-void __assert (const char *, int, const char *)
-     __attribute__ ((__noreturn__));
-void __assert_func (const char *, int, const char *, const char *)
-     __attribute__ ((__noreturn__));
-# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-# 18 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 2
-# 21 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-
-
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h"
-       
-# 24 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-# 26 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
 # 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
 
 # 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
@@ -2321,6 +2291,29 @@ static inline void bt_rcopy(UINT8 *dst, UINT8 const *src, UINT16 len)
 # 43 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_target.h" 2
 # 2070 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_target.h"
 # 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_trace.h" 1
+# 22 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_trace.h"
+# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
+# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
+       
+
+
+
+# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 1 3 4
+# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
+
+# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
+void __assert (const char *, int, const char *)
+     __attribute__ ((__noreturn__));
+void __assert_func (const char *, int, const char *, const char *)
+     __attribute__ ((__noreturn__));
+# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
+# 23 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_trace.h" 2
+
+
+
+
+
+
 # 28 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_trace.h"
 static inline void trc_dump_buffer(const char *prefix, uint8_t *data, uint16_t len)
 {
@@ -3941,7 +3934,10 @@ void _esp_error_check_failed_without_abort(esp_err_t rc, const char *file, int l
 # 1 "/home/dieter/Development/esp-idf/components/xtensa/include/esp_attr.h" 1
 # 22 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h" 2
 
-
+# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h" 1
+# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h"
+       
+# 24 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h" 2
 # 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_idf_version.h" 1
 # 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_idf_version.h"
        
@@ -4661,195 +4657,6 @@ void heap_caps_dump_all(void);
 # 338 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
 size_t heap_caps_get_allocated_size( void *ptr );
 # 88 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 2
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-       
-# 61 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-typedef struct {
-    const char *name;
-    uint32_t caps[3];
-    
-# 64 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-   _Bool 
-# 64 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-        aliased_iram;
-    
-# 65 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-   _Bool 
-# 65 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-        startup_stack;
-} soc_memory_type_desc_t;
-
-
-extern const soc_memory_type_desc_t soc_memory_types[];
-extern const size_t soc_memory_type_count;
-
-
-
-typedef struct
-{
-    intptr_t start;
-    size_t size;
-    size_t type;
-    intptr_t iram_address;
-} soc_memory_region_t;
-
-extern const soc_memory_region_t soc_memory_regions[];
-extern const size_t soc_memory_region_count;
-
-
-
-
-typedef struct
-{
-    intptr_t start;
-    intptr_t end;
-} soc_reserved_region_t;
-# 136 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-size_t soc_get_available_memory_regions(soc_memory_region_t *regions);
-
-
-
-
-
-size_t soc_get_available_memory_region_max_count(void);
-
-inline static 
-# 144 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 144 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "0"))) esp_ptr_dma_capable(const void *p)
-{
-    return (intptr_t)p >= 0x3FFAE000 && (intptr_t)p < 0x40000000;
-}
-
-inline static 
-# 149 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 149 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "1"))) esp_ptr_word_aligned(const void *p)
-{
-    return ((intptr_t)p) % 4 == 0;
-}
-
-inline static 
-# 154 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 154 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "2"))) esp_ptr_executable(const void *p)
-{
-    intptr_t ip = (intptr_t) p;
-    return (ip >= 0x400D0000 && ip < 0x40400000)
-        || (ip >= 0x40080000 && ip < 0x400A0000)
-        || (ip >= 0x400C0000 && ip < 0x400C2000);
-}
-
-inline static 
-# 162 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 162 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "3"))) esp_ptr_byte_accessible(const void *p)
-{
-    intptr_t ip = (intptr_t) p;
-    
-# 165 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-   _Bool 
-# 165 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-        r;
-    r = (ip >= 0x3FF90000 && ip < 0x40000000);
-
-
-
-
-
-
-
-    return r;
-}
-
-inline static 
-# 177 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 177 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "4"))) esp_ptr_internal(const void *p) {
-    
-# 178 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-   _Bool 
-# 178 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-        r;
-    r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x400C2000);
-    r |= ((intptr_t)p >= 0x50000000 && (intptr_t)p < 0x50002000);
-    return r;
-}
-
-
-inline static 
-# 185 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 185 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "5"))) esp_ptr_external_ram(const void *p) {
-    return ((intptr_t)p >= 0x3F800000 && (intptr_t)p < 0x3FC00000);
-}
-
-inline static 
-# 189 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 189 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "6"))) esp_ptr_in_iram(const void *p) {
-
-    return ((intptr_t)p >= 0x40080000 && (intptr_t)p < 0x400A0000);
-
-
-
-}
-
-inline static 
-# 197 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 197 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "7"))) esp_ptr_in_drom(const void *p) {
-    return ((intptr_t)p >= 0x3F400000 && (intptr_t)p < 0x3F800000);
-}
-
-inline static 
-# 201 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 201 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "8"))) esp_ptr_in_dram(const void *p) {
-    return ((intptr_t)p >= 0x3FFAE000 && (intptr_t)p < 0x40000000);
-}
-
-inline static 
-# 205 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 205 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "9"))) esp_ptr_in_diram_dram(const void *p) {
-    return ((intptr_t)p >= 0x3FFE0000 && (intptr_t)p < 0x40000000);
-}
-
-inline static 
-# 209 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 209 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "10"))) esp_ptr_in_diram_iram(const void *p) {
-    return ((intptr_t)p >= 0x400A0000 && (intptr_t)p < 0x400C0000);
-}
-
-
-inline static 
-# 214 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 214 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "11"))) esp_stack_ptr_is_sane(uint32_t sp)
-{
-
-    return !(sp < 0x3FFAE000 + 0x10 || sp > 0x40000000 - 0x10 || ((sp & 0xF) != 0));
-}
-# 93 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 2
 # 117 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h"
 typedef uint8_t StackType_t;
 typedef int BaseType_t;
@@ -4991,7 +4798,7 @@ BaseType_t xPortInterruptedFromISRContext(void);
 
 
 
-static inline uint32_t __attribute__((section(".iram1" "." "12"))) xPortGetCoreID(void) {
+static inline uint32_t __attribute__((section(".iram1" "." "0"))) xPortGetCoreID(void) {
     uint32_t id;
     __asm__ __volatile__ (
         "rsr.prid %0\n"
@@ -5008,7 +4815,7 @@ static inline
 # 221 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h" 3 4
              _Bool 
 # 221 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h"
-                  __attribute__((section(".iram1" "." "13"))) xPortCanYield(void)
+                  __attribute__((section(".iram1" "." "1"))) xPortCanYield(void)
 {
     uint32_t ps_reg = 0;
 
@@ -5337,7 +5144,7 @@ typedef enum
           TaskHandle_t * const pvCreatedTask,
           const BaseType_t xCoreID);
 # 432 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
- static inline __attribute__((section(".iram1" "." "14"))) BaseType_t xTaskCreate(
+ static inline __attribute__((section(".iram1" "." "2"))) BaseType_t xTaskCreate(
    TaskFunction_t pvTaskCode,
    const char * const pcName,
    const uint32_t usStackDepth,
@@ -5965,7 +5772,219 @@ typedef struct {
 # 31 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h" 2
 
 
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h" 1
+# 22 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdpdefs.h" 1
+# 23 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h" 2
+# 72 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+typedef void (tSDP_DISC_CMPL_CB) (UINT16 result);
+typedef void (tSDP_DISC_CMPL_CB2) (UINT16 result, void *user_data);
 
+typedef struct {
+    BD_ADDR peer_addr;
+    UINT16 peer_mtu;
+} tSDP_DR_OPEN;
+
+typedef struct {
+    UINT8 *p_data;
+    UINT16 data_len;
+} tSDP_DR_DATA;
+
+typedef union {
+    tSDP_DR_OPEN open;
+    tSDP_DR_DATA data;
+} tSDP_DATA;
+
+
+typedef void (tSDP_DISC_RES_CB) (UINT16 event, tSDP_DATA *p_data);
+
+
+typedef struct {
+    union {
+        UINT8 u8;
+        UINT16 u16;
+        UINT32 u32;
+        UINT8 array[4];
+        struct t_sdp_disc_attr *p_sub_attr;
+    } v;
+
+} tSDP_DISC_ATVAL;
+
+typedef struct t_sdp_disc_attr {
+    struct t_sdp_disc_attr *p_next_attr;
+    UINT16 attr_id;
+    UINT16 attr_len_type;
+    tSDP_DISC_ATVAL attr_value;
+} tSDP_DISC_ATTR;
+
+typedef struct t_sdp_disc_rec {
+    tSDP_DISC_ATTR *p_first_attr;
+    struct t_sdp_disc_rec *p_next_rec;
+    UINT32 time_read;
+    BD_ADDR remote_bd_addr;
+} tSDP_DISC_REC;
+
+typedef struct {
+    UINT32 mem_size;
+    UINT32 mem_free;
+    tSDP_DISC_REC *p_first_rec;
+    UINT16 num_uuid_filters;
+    tBT_UUID uuid_filters[3];
+    UINT16 num_attr_filters;
+    UINT16 attr_filters[15];
+    UINT8 *p_free_mem;
+
+    UINT8 *raw_data;
+    UINT32 raw_size;
+    UINT32 raw_used;
+
+} tSDP_DISCOVERY_DB;
+
+
+typedef struct {
+    UINT16 protocol_uuid;
+    UINT16 num_params;
+    UINT16 params[2];
+} tSDP_PROTOCOL_ELEM;
+
+typedef struct {
+    UINT16 num_elems;
+    tSDP_PROTOCOL_ELEM list_elem[3];
+} tSDP_PROTO_LIST_ELEM;
+
+
+
+
+typedef struct t_sdp_di_record {
+    UINT16 vendor;
+    UINT16 vendor_id_source;
+    UINT16 product;
+    UINT16 version;
+    BOOLEAN primary_record;
+    char client_executable_url[400];
+    char service_description[400];
+    char documentation_url[400];
+} tSDP_DI_RECORD;
+
+
+typedef struct t_sdp_di_get_record {
+    UINT16 spec_id;
+    tSDP_DI_RECORD rec;
+} tSDP_DI_GET_RECORD;
+# 187 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_InitDiscoveryDb (tSDP_DISCOVERY_DB *p_db, UINT32 len,
+                                    UINT16 num_uuid,
+                                    tBT_UUID *p_uuid_list,
+                                    UINT16 num_attr,
+                                    UINT16 *p_attr_list);
+# 202 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_CancelServiceSearch (tSDP_DISCOVERY_DB *p_db);
+# 213 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_ServiceSearchRequest (UINT8 *p_bd_addr,
+        tSDP_DISCOVERY_DB *p_db,
+        tSDP_DISC_CMPL_CB *p_cb);
+# 231 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_ServiceSearchAttributeRequest (UINT8 *p_bd_addr,
+        tSDP_DISCOVERY_DB *p_db,
+        tSDP_DISC_CMPL_CB *p_cb);
+# 249 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_ServiceSearchAttributeRequest2 (UINT8 *p_bd_addr,
+        tSDP_DISCOVERY_DB *p_db,
+        tSDP_DISC_CMPL_CB2 *p_cb, void *user_data);
+# 267 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern tSDP_DISC_REC *SDP_FindAttributeInDb (tSDP_DISCOVERY_DB *p_db,
+        UINT16 attr_id,
+        tSDP_DISC_REC *p_start_rec);
+# 282 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern tSDP_DISC_ATTR *SDP_FindAttributeInRec (tSDP_DISC_REC *p_rec,
+        UINT16 attr_id);
+# 298 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern tSDP_DISC_REC *SDP_FindServiceInDb (tSDP_DISCOVERY_DB *p_db,
+        UINT16 service_uuid,
+        tSDP_DISC_REC *p_start_rec);
+# 319 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern tSDP_DISC_REC *SDP_FindServiceUUIDInDb (tSDP_DISCOVERY_DB *p_db,
+        tBT_UUID *p_uuid,
+        tSDP_DISC_REC *p_start_rec);
+# 336 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_FindServiceUUIDInRec_128bit(tSDP_DISC_REC *p_rec, tBT_UUID *p_uuid);
+# 350 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern tSDP_DISC_REC *SDP_FindServiceInDb_128bit(tSDP_DISCOVERY_DB *p_db,
+        tSDP_DISC_REC *p_start_rec);
+# 364 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_FindProtocolListElemInRec (tSDP_DISC_REC *p_rec,
+        UINT16 layer_uuid,
+        tSDP_PROTOCOL_ELEM *p_elem);
+# 380 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_FindAddProtoListsElemInRec (tSDP_DISC_REC *p_rec,
+        UINT16 layer_uuid,
+        tSDP_PROTOCOL_ELEM *p_elem);
+# 399 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_FindProfileVersionInRec (tSDP_DISC_REC *p_rec,
+        UINT16 profile_uuid,
+        UINT16 *p_version);
+# 418 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern UINT32 SDP_CreateRecord (void);
+# 434 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_DeleteRecord (UINT32 handle);
+# 450 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern INT32 SDP_ReadRecord(UINT32 handle, UINT8 *p_data, INT32 *p_data_len);
+# 466 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddAttribute (UINT32 handle, UINT16 attr_id,
+                                 UINT8 attr_type, UINT32 attr_len,
+                                 UINT8 *p_val);
+# 485 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddSequence (UINT32 handle, UINT16 attr_id,
+                                UINT16 num_elem, UINT8 type[],
+                                UINT8 len[], UINT8 *p_val[]);
+# 502 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddUuidSequence (UINT32 handle, UINT16 attr_id,
+                                    UINT16 num_uuids, UINT16 *p_uuids);
+# 518 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddProtocolList (UINT32 handle, UINT16 num_elem,
+                                    tSDP_PROTOCOL_ELEM *p_elem_list);
+# 534 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddAdditionProtoLists (UINT32 handle, UINT16 num_elem,
+        tSDP_PROTO_LIST_ELEM *p_proto_list);
+# 550 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddProfileDescriptorList (UINT32 handle,
+        UINT16 profile_uuid,
+        UINT16 version);
+# 567 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddLanguageBaseAttrIDList (UINT32 handle,
+        UINT16 lang, UINT16 char_enc,
+        UINT16 base_id);
+# 584 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddServiceClassIdList (UINT32 handle,
+        UINT16 num_services,
+        UINT16 *p_service_uuids);
+# 599 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_DeleteAttribute (UINT32 handle, UINT16 attr_id);
+# 613 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern UINT16 SDP_SetLocalDiRecord (tSDP_DI_RECORD *device_info,
+                                    UINT32 *p_handle);
+# 625 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern UINT16 SDP_DiDiscover (BD_ADDR remote_device,
+                              tSDP_DISCOVERY_DB *p_db, UINT32 len,
+                              tSDP_DISC_CMPL_CB *p_cb);
+# 639 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern UINT8 SDP_GetNumDiRecords (tSDP_DISCOVERY_DB *p_db);
+# 652 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern UINT16 SDP_GetDiRecord (UINT8 getRecordIndex,
+                               tSDP_DI_GET_RECORD *device_info,
+                               tSDP_DISCOVERY_DB *p_db);
+# 667 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern UINT8 SDP_SetTraceLevel (UINT8 new_level);
+# 679 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+UINT32 SDP_ConnOpen (UINT8 *p_bd_addr, tSDP_DISC_RES_CB *p_rcb,
+                     tSDP_DISC_CMPL_CB *p_cb);
+# 691 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+BOOLEAN SDP_WriteData (UINT32 handle, BT_HDR *p_msg);
+# 704 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+BOOLEAN SDP_ConnClose (UINT32 handle);
+# 718 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+BOOLEAN SDP_FindServiceUUIDInRec(tSDP_DISC_REC *p_rec, tBT_UUID *p_uuid);
+# 34 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h" 2
 
 
 
@@ -7109,6 +7128,12 @@ tBTM_STATUS BTM_VendorSpecificCommand(UINT16 opcode,
                                       UINT8 param_len,
                                       UINT8 *p_param_buf,
                                       tBTM_VSC_CMPL_CB *p_cb);
+# 2098 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
+UINT8 BTM_AllocateSCN(void);
+# 2111 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
+BOOLEAN BTM_TryAllocateSCN(UINT8 scn);
+# 2125 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
+BOOLEAN BTM_FreeSCN(UINT8 scn);
 # 2140 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
 UINT8 BTM_SetTraceLevel (UINT8 new_level);
 # 2155 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
@@ -7177,6 +7202,18 @@ tBTM_INQ_INFO *BTM_InqDbNext (tBTM_INQ_INFO *p_cur);
 tBTM_STATUS BTM_ClearInqDb (BD_ADDR p_bda);
 # 2641 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
 tBTM_STATUS BTM_ReadInquiryRspTxPower (tBTM_CMPL_CB *p_cb);
+# 2660 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
+tBTM_STATUS BTM_StartDiscovery (tBTM_CMPL_CB *p_cmpl_cb,
+                                BD_ADDR_PTR p_rem_addr);
+# 2676 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
+tSDP_DISC_REC *BTM_FindAttribute (UINT16 attr_id,
+                                  tSDP_DISC_REC *p_start_rec);
+# 2692 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
+tSDP_DISC_REC *BTM_FindService (UINT16 service_uuid,
+                                tSDP_DISC_REC *p_start_rec);
+# 2708 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
+void BTM_SetDiscoveryParams (UINT16 num_uuid, tBT_UUID *p_uuid_list,
+                             UINT16 num_attr, UINT16 *p_attr_list);
 # 2725 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
 tBTM_STATUS BTM_SetLinkPolicy (BD_ADDR remote_bda,
                                UINT16 *settings);
@@ -7398,11 +7435,7 @@ tBTM_STATUS BTM_SetAfhChannels (AFH_CHANNELS channels, tBTM_CMPL_CB *p_afh_chann
 tBTM_STATUS BTM_BleSetChannels (BLE_CHANNELS channels, tBTM_CMPL_CB *p_ble_channels_cmpl_cback);
 # 31 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h" 2
 
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h" 1
-# 22 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdpdefs.h" 1
-# 23 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h" 2
-# 33 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h" 2
+
 
 
 # 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h" 1
@@ -9041,6 +9074,16 @@ typedef UINT8 tBTA_DM_SWITCH_EVT;
 typedef void (tBTA_DM_SWITCH_CBACK)(tBTA_DM_SWITCH_EVT event, tBTA_STATUS status);
 # 1367 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
 typedef UINT8 tBTA_DM_ROUTE_PATH;
+
+
+
+
+
+typedef tSDP_DI_RECORD tBTA_DI_RECORD;
+
+typedef tSDP_DI_GET_RECORD tBTA_DI_GET_RECORD;
+
+typedef tSDP_DISCOVERY_DB tBTA_DISCOVERY_DB;
 # 1392 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
 typedef UINT8 tBTA_DM_LINK_TYPE;
 # 1423 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
@@ -9075,6 +9118,12 @@ extern void BTA_DmSearch(tBTA_DM_INQ *p_dm_inq, tBTA_SERVICE_MASK services,
                          tBTA_DM_SEARCH_CBACK *p_cback);
 # 1574 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
 extern void BTA_DmSearchCancel(void);
+# 1588 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
+extern void BTA_DmDiscover(BD_ADDR bd_addr, tBTA_SERVICE_MASK services,
+                           tBTA_DM_SEARCH_CBACK *p_cback, BOOLEAN sdp_search);
+# 1602 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
+extern void BTA_DmDiscoverUUID(BD_ADDR bd_addr, tBT_UUID *uuid,
+                               tBTA_DM_SEARCH_CBACK *p_cback, BOOLEAN sdp_search);
 # 1615 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
 tBTA_STATUS BTA_DmGetCachedRemoteName(BD_ADDR remote_device, UINT8 **pp_cached_name);
 # 1630 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
@@ -9107,6 +9156,9 @@ extern tBTA_STATUS BTA_DmRemoveDevice(BD_ADDR bd_addr, tBT_TRANSPORT transport);
 extern void BTA_GetEirService( UINT8 *p_eir, tBTA_SERVICE_MASK *p_services );
 # 1798 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
 extern UINT16 BTA_DmGetConnectionState( BD_ADDR bd_addr );
+# 1810 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
+extern tBTA_STATUS BTA_DmSetLocalDiRecord( tBTA_DI_RECORD *p_device_info,
+        UINT32 *p_handle );
 # 1829 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
 extern void BTA_DmCloseACL(BD_ADDR bd_addr, BOOLEAN remove_dev, tBTA_TRANSPORT transport);
 # 1842 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
@@ -11275,8 +11327,8 @@ TIMER_LIST_ENT tx_power_timer;
 tBTM_CMPL_CB *p_tx_power_cmpl_cb;
 
 
-
-
+TIMER_LIST_ENT afh_channels_timer;
+tBTM_CMPL_CB *p_afh_channels_cmpl_cb;
 
 
 
@@ -11735,7 +11787,7 @@ typedef struct {
 
     tACL_CONN acl_db[4];
 
-
+    UINT8 btm_scn[31];
 
     UINT16 btm_def_link_policy;
     UINT16 btm_def_link_super_tout;
@@ -11796,7 +11848,22 @@ typedef struct {
     BOOLEAN connect_only_paired;
     BOOLEAN security_mode_changed;
     BOOLEAN sec_req_pending;
-# 886 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h"
+
+    BOOLEAN pin_type_changed;
+
+
+
+
+
+    UINT8 pin_code_len_saved;
+
+
+
+    UINT8 pin_code_len;
+    PIN_CODE pin_code;
+    UINT8 disc_reason;
+    UINT16 disc_handle;
+
     tBTM_PAIRING_STATE pairing_state;
     UINT8 pairing_flags;
     BD_ADDR pairing_bda;
@@ -11841,9 +11908,14 @@ extern tBTM_CallbackFunc conn_param_update_cb;
 
 
 typedef UINT8 tBTM_SEC_ACTION;
-# 939 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h"
-extern tBTM_CB btm_cb;
-# 948 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h"
+# 941 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h"
+extern tBTM_CB *btm_cb_ptr;
+
+
+
+
+
+
 void btm_init (void);
 void btm_free (void);
 

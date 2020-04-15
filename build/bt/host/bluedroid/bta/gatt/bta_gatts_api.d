@@ -6,10 +6,6 @@ host/bluedroid/bta/gatt/bta_gatts_api.o: \
  /home/dieter/Development/M5_Projekt_Ei/build/include/sdkconfig.h \
  /home/dieter/Development/esp-idf/components/log/include/esp_log.h \
  /home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
- /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h \
- /home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h \
- /home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h \
- /home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/dieter/Development/esp-idf/components/log/include/esp_log_internal.h \
  /home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bluedroid_user_config.h \
  /home/dieter/Development/esp-idf/components/bt/common/include/bt_user_config.h \
@@ -17,6 +13,7 @@ host/bluedroid/bta/gatt/bta_gatts_api.o: \
  /home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/dyn_mem.h \
  /home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bluedroid_user_config.h \
  /home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_trace.h \
+ /home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h \
  /home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_sys.h \
  /home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_defs.h \
  /home/dieter/Development/esp-idf/components/lwip/port/esp32/include/arpa/inet.h \
@@ -41,6 +38,7 @@ host/bluedroid/bta/gatt/bta_gatts_api.o: \
  /home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h \
  /home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h \
  /home/dieter/Development/esp-idf/components/xtensa/include/esp_attr.h \
+ /home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/dieter/Development/esp-idf/components/esp_common/include/esp_idf_version.h \
  /home/dieter/Development/esp-idf/components/lwip/include/apps/sntp/sntp.h \
  /home/dieter/Development/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h \
@@ -63,7 +61,6 @@ host/bluedroid/bta/gatt/bta_gatts_api.o: \
  /home/dieter/Development/esp-idf/components/esp_common/include/esp_timer.h \
  /home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h \
  /home/dieter/Development/esp-idf/components/heap/include/multi_heap.h \
- /home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h \
  /home/dieter/Development/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/dieter/Development/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h \
@@ -82,9 +79,9 @@ host/bluedroid/bta/gatt/bta_gatts_api.o: \
  /home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h \
  /home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h \
  /home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcidefs.h \
- /home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h \
  /home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h \
  /home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdpdefs.h \
+ /home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h \
  /home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h \
  /home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_common_types.h \
  /home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/thread.h \
@@ -108,14 +105,6 @@ host/bluedroid/bta/gatt/bta_gatts_api.o: \
 
 /home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
 
-/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h:
-
-/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h:
-
-/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h:
-
-/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h:
-
 /home/dieter/Development/esp-idf/components/log/include/esp_log_internal.h:
 
 /home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bluedroid_user_config.h:
@@ -129,6 +118,8 @@ host/bluedroid/bta/gatt/bta_gatts_api.o: \
 /home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bluedroid_user_config.h:
 
 /home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_trace.h:
+
+/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h:
 
 /home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_sys.h:
 
@@ -178,6 +169,8 @@ host/bluedroid/bta/gatt/bta_gatts_api.o: \
 
 /home/dieter/Development/esp-idf/components/xtensa/include/esp_attr.h:
 
+/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h:
+
 /home/dieter/Development/esp-idf/components/esp_common/include/esp_idf_version.h:
 
 /home/dieter/Development/esp-idf/components/lwip/include/apps/sntp/sntp.h:
@@ -222,8 +215,6 @@ host/bluedroid/bta/gatt/bta_gatts_api.o: \
 
 /home/dieter/Development/esp-idf/components/heap/include/multi_heap.h:
 
-/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h:
-
 /home/dieter/Development/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
 /home/dieter/Development/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
@@ -260,11 +251,11 @@ host/bluedroid/bta/gatt/bta_gatts_api.o: \
 
 /home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcidefs.h:
 
-/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h:
-
 /home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h:
 
 /home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdpdefs.h:
+
+/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h:
 
 /home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h:
 

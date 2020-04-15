@@ -990,36 +990,6 @@ __attribute__((__noreturn__)) void
 
 
 # 21 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h"
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 1
-# 17 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h"
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
-       
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 1 3 4
-# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
-void __assert (const char *, int, const char *)
-     __attribute__ ((__noreturn__));
-void __assert_func (const char *, int, const char *, const char *)
-     __attribute__ ((__noreturn__));
-# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-# 18 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 2
-# 21 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-
-
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h"
-       
-# 24 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-# 26 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
 # 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
 
 # 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
@@ -1417,15 +1387,29 @@ static inline void bt_rcopy(UINT8 *dst, UINT8 const *src, UINT16 len)
 # 43 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_target.h" 2
 # 2070 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_target.h"
 # 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_trace.h" 1
-# 23 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_trace.h"
+# 22 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_trace.h"
+# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
+# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
+       
+
+
+
+# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 1 3 4
+# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
+
+# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
+void __assert (const char *, int, const char *)
+     __attribute__ ((__noreturn__));
+void __assert_func (const char *, int, const char *, const char *)
+     __attribute__ ((__noreturn__));
+# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
+# 23 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_trace.h" 2
 # 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 1 3 4
 # 36 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
 # 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
 # 37 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 2 3 4
 # 61 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
 # 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 1 3 4
-# 28 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
-
 # 28 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
 typedef __uint8_t u_int8_t;
 
@@ -3779,7 +3763,10 @@ void _esp_error_check_failed_without_abort(esp_err_t rc, const char *file, int l
 # 1 "/home/dieter/Development/esp-idf/components/xtensa/include/esp_attr.h" 1
 # 22 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h" 2
 
-
+# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h" 1
+# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h"
+       
+# 24 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h" 2
 # 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_idf_version.h" 1
 # 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_idf_version.h"
        
@@ -4499,195 +4486,6 @@ void heap_caps_dump_all(void);
 # 338 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
 size_t heap_caps_get_allocated_size( void *ptr );
 # 88 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 2
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-       
-# 61 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-typedef struct {
-    const char *name;
-    uint32_t caps[3];
-    
-# 64 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-   _Bool 
-# 64 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-        aliased_iram;
-    
-# 65 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-   _Bool 
-# 65 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-        startup_stack;
-} soc_memory_type_desc_t;
-
-
-extern const soc_memory_type_desc_t soc_memory_types[];
-extern const size_t soc_memory_type_count;
-
-
-
-typedef struct
-{
-    intptr_t start;
-    size_t size;
-    size_t type;
-    intptr_t iram_address;
-} soc_memory_region_t;
-
-extern const soc_memory_region_t soc_memory_regions[];
-extern const size_t soc_memory_region_count;
-
-
-
-
-typedef struct
-{
-    intptr_t start;
-    intptr_t end;
-} soc_reserved_region_t;
-# 136 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-size_t soc_get_available_memory_regions(soc_memory_region_t *regions);
-
-
-
-
-
-size_t soc_get_available_memory_region_max_count(void);
-
-inline static 
-# 144 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 144 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "0"))) esp_ptr_dma_capable(const void *p)
-{
-    return (intptr_t)p >= 0x3FFAE000 && (intptr_t)p < 0x40000000;
-}
-
-inline static 
-# 149 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 149 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "1"))) esp_ptr_word_aligned(const void *p)
-{
-    return ((intptr_t)p) % 4 == 0;
-}
-
-inline static 
-# 154 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 154 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "2"))) esp_ptr_executable(const void *p)
-{
-    intptr_t ip = (intptr_t) p;
-    return (ip >= 0x400D0000 && ip < 0x40400000)
-        || (ip >= 0x40080000 && ip < 0x400A0000)
-        || (ip >= 0x400C0000 && ip < 0x400C2000);
-}
-
-inline static 
-# 162 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 162 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "3"))) esp_ptr_byte_accessible(const void *p)
-{
-    intptr_t ip = (intptr_t) p;
-    
-# 165 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-   _Bool 
-# 165 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-        r;
-    r = (ip >= 0x3FF90000 && ip < 0x40000000);
-
-
-
-
-
-
-
-    return r;
-}
-
-inline static 
-# 177 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 177 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "4"))) esp_ptr_internal(const void *p) {
-    
-# 178 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-   _Bool 
-# 178 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-        r;
-    r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x400C2000);
-    r |= ((intptr_t)p >= 0x50000000 && (intptr_t)p < 0x50002000);
-    return r;
-}
-
-
-inline static 
-# 185 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 185 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "5"))) esp_ptr_external_ram(const void *p) {
-    return ((intptr_t)p >= 0x3F800000 && (intptr_t)p < 0x3FC00000);
-}
-
-inline static 
-# 189 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 189 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "6"))) esp_ptr_in_iram(const void *p) {
-
-    return ((intptr_t)p >= 0x40080000 && (intptr_t)p < 0x400A0000);
-
-
-
-}
-
-inline static 
-# 197 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 197 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "7"))) esp_ptr_in_drom(const void *p) {
-    return ((intptr_t)p >= 0x3F400000 && (intptr_t)p < 0x3F800000);
-}
-
-inline static 
-# 201 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 201 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "8"))) esp_ptr_in_dram(const void *p) {
-    return ((intptr_t)p >= 0x3FFAE000 && (intptr_t)p < 0x40000000);
-}
-
-inline static 
-# 205 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 205 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "9"))) esp_ptr_in_diram_dram(const void *p) {
-    return ((intptr_t)p >= 0x3FFE0000 && (intptr_t)p < 0x40000000);
-}
-
-inline static 
-# 209 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 209 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "10"))) esp_ptr_in_diram_iram(const void *p) {
-    return ((intptr_t)p >= 0x400A0000 && (intptr_t)p < 0x400C0000);
-}
-
-
-inline static 
-# 214 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 214 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "11"))) esp_stack_ptr_is_sane(uint32_t sp)
-{
-
-    return !(sp < 0x3FFAE000 + 0x10 || sp > 0x40000000 - 0x10 || ((sp & 0xF) != 0));
-}
-# 93 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 2
 # 117 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h"
 typedef uint8_t StackType_t;
 typedef int BaseType_t;
@@ -4829,7 +4627,7 @@ BaseType_t xPortInterruptedFromISRContext(void);
 
 
 
-static inline uint32_t __attribute__((section(".iram1" "." "12"))) xPortGetCoreID(void) {
+static inline uint32_t __attribute__((section(".iram1" "." "0"))) xPortGetCoreID(void) {
     uint32_t id;
     __asm__ __volatile__ (
         "rsr.prid %0\n"
@@ -4846,7 +4644,7 @@ static inline
 # 221 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h" 3 4
              _Bool 
 # 221 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h"
-                  __attribute__((section(".iram1" "." "13"))) xPortCanYield(void)
+                  __attribute__((section(".iram1" "." "1"))) xPortCanYield(void)
 {
     uint32_t ps_reg = 0;
 
@@ -5175,7 +4973,7 @@ typedef enum
           TaskHandle_t * const pvCreatedTask,
           const BaseType_t xCoreID);
 # 432 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
- static inline __attribute__((section(".iram1" "." "14"))) BaseType_t xTaskCreate(
+ static inline __attribute__((section(".iram1" "." "2"))) BaseType_t xTaskCreate(
    TaskFunction_t pvTaskCode,
    const char * const pcName,
    const uint32_t usStackDepth,
@@ -5963,7 +5761,219 @@ typedef struct {
 # 31 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h" 2
 
 
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h" 1
+# 22 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdpdefs.h" 1
+# 23 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h" 2
+# 72 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+typedef void (tSDP_DISC_CMPL_CB) (UINT16 result);
+typedef void (tSDP_DISC_CMPL_CB2) (UINT16 result, void *user_data);
 
+typedef struct {
+    BD_ADDR peer_addr;
+    UINT16 peer_mtu;
+} tSDP_DR_OPEN;
+
+typedef struct {
+    UINT8 *p_data;
+    UINT16 data_len;
+} tSDP_DR_DATA;
+
+typedef union {
+    tSDP_DR_OPEN open;
+    tSDP_DR_DATA data;
+} tSDP_DATA;
+
+
+typedef void (tSDP_DISC_RES_CB) (UINT16 event, tSDP_DATA *p_data);
+
+
+typedef struct {
+    union {
+        UINT8 u8;
+        UINT16 u16;
+        UINT32 u32;
+        UINT8 array[4];
+        struct t_sdp_disc_attr *p_sub_attr;
+    } v;
+
+} tSDP_DISC_ATVAL;
+
+typedef struct t_sdp_disc_attr {
+    struct t_sdp_disc_attr *p_next_attr;
+    UINT16 attr_id;
+    UINT16 attr_len_type;
+    tSDP_DISC_ATVAL attr_value;
+} tSDP_DISC_ATTR;
+
+typedef struct t_sdp_disc_rec {
+    tSDP_DISC_ATTR *p_first_attr;
+    struct t_sdp_disc_rec *p_next_rec;
+    UINT32 time_read;
+    BD_ADDR remote_bd_addr;
+} tSDP_DISC_REC;
+
+typedef struct {
+    UINT32 mem_size;
+    UINT32 mem_free;
+    tSDP_DISC_REC *p_first_rec;
+    UINT16 num_uuid_filters;
+    tBT_UUID uuid_filters[3];
+    UINT16 num_attr_filters;
+    UINT16 attr_filters[15];
+    UINT8 *p_free_mem;
+
+    UINT8 *raw_data;
+    UINT32 raw_size;
+    UINT32 raw_used;
+
+} tSDP_DISCOVERY_DB;
+
+
+typedef struct {
+    UINT16 protocol_uuid;
+    UINT16 num_params;
+    UINT16 params[2];
+} tSDP_PROTOCOL_ELEM;
+
+typedef struct {
+    UINT16 num_elems;
+    tSDP_PROTOCOL_ELEM list_elem[3];
+} tSDP_PROTO_LIST_ELEM;
+
+
+
+
+typedef struct t_sdp_di_record {
+    UINT16 vendor;
+    UINT16 vendor_id_source;
+    UINT16 product;
+    UINT16 version;
+    BOOLEAN primary_record;
+    char client_executable_url[400];
+    char service_description[400];
+    char documentation_url[400];
+} tSDP_DI_RECORD;
+
+
+typedef struct t_sdp_di_get_record {
+    UINT16 spec_id;
+    tSDP_DI_RECORD rec;
+} tSDP_DI_GET_RECORD;
+# 187 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_InitDiscoveryDb (tSDP_DISCOVERY_DB *p_db, UINT32 len,
+                                    UINT16 num_uuid,
+                                    tBT_UUID *p_uuid_list,
+                                    UINT16 num_attr,
+                                    UINT16 *p_attr_list);
+# 202 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_CancelServiceSearch (tSDP_DISCOVERY_DB *p_db);
+# 213 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_ServiceSearchRequest (UINT8 *p_bd_addr,
+        tSDP_DISCOVERY_DB *p_db,
+        tSDP_DISC_CMPL_CB *p_cb);
+# 231 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_ServiceSearchAttributeRequest (UINT8 *p_bd_addr,
+        tSDP_DISCOVERY_DB *p_db,
+        tSDP_DISC_CMPL_CB *p_cb);
+# 249 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_ServiceSearchAttributeRequest2 (UINT8 *p_bd_addr,
+        tSDP_DISCOVERY_DB *p_db,
+        tSDP_DISC_CMPL_CB2 *p_cb, void *user_data);
+# 267 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern tSDP_DISC_REC *SDP_FindAttributeInDb (tSDP_DISCOVERY_DB *p_db,
+        UINT16 attr_id,
+        tSDP_DISC_REC *p_start_rec);
+# 282 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern tSDP_DISC_ATTR *SDP_FindAttributeInRec (tSDP_DISC_REC *p_rec,
+        UINT16 attr_id);
+# 298 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern tSDP_DISC_REC *SDP_FindServiceInDb (tSDP_DISCOVERY_DB *p_db,
+        UINT16 service_uuid,
+        tSDP_DISC_REC *p_start_rec);
+# 319 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern tSDP_DISC_REC *SDP_FindServiceUUIDInDb (tSDP_DISCOVERY_DB *p_db,
+        tBT_UUID *p_uuid,
+        tSDP_DISC_REC *p_start_rec);
+# 336 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_FindServiceUUIDInRec_128bit(tSDP_DISC_REC *p_rec, tBT_UUID *p_uuid);
+# 350 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern tSDP_DISC_REC *SDP_FindServiceInDb_128bit(tSDP_DISCOVERY_DB *p_db,
+        tSDP_DISC_REC *p_start_rec);
+# 364 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_FindProtocolListElemInRec (tSDP_DISC_REC *p_rec,
+        UINT16 layer_uuid,
+        tSDP_PROTOCOL_ELEM *p_elem);
+# 380 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_FindAddProtoListsElemInRec (tSDP_DISC_REC *p_rec,
+        UINT16 layer_uuid,
+        tSDP_PROTOCOL_ELEM *p_elem);
+# 399 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_FindProfileVersionInRec (tSDP_DISC_REC *p_rec,
+        UINT16 profile_uuid,
+        UINT16 *p_version);
+# 418 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern UINT32 SDP_CreateRecord (void);
+# 434 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_DeleteRecord (UINT32 handle);
+# 450 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern INT32 SDP_ReadRecord(UINT32 handle, UINT8 *p_data, INT32 *p_data_len);
+# 466 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddAttribute (UINT32 handle, UINT16 attr_id,
+                                 UINT8 attr_type, UINT32 attr_len,
+                                 UINT8 *p_val);
+# 485 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddSequence (UINT32 handle, UINT16 attr_id,
+                                UINT16 num_elem, UINT8 type[],
+                                UINT8 len[], UINT8 *p_val[]);
+# 502 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddUuidSequence (UINT32 handle, UINT16 attr_id,
+                                    UINT16 num_uuids, UINT16 *p_uuids);
+# 518 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddProtocolList (UINT32 handle, UINT16 num_elem,
+                                    tSDP_PROTOCOL_ELEM *p_elem_list);
+# 534 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddAdditionProtoLists (UINT32 handle, UINT16 num_elem,
+        tSDP_PROTO_LIST_ELEM *p_proto_list);
+# 550 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddProfileDescriptorList (UINT32 handle,
+        UINT16 profile_uuid,
+        UINT16 version);
+# 567 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddLanguageBaseAttrIDList (UINT32 handle,
+        UINT16 lang, UINT16 char_enc,
+        UINT16 base_id);
+# 584 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddServiceClassIdList (UINT32 handle,
+        UINT16 num_services,
+        UINT16 *p_service_uuids);
+# 599 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_DeleteAttribute (UINT32 handle, UINT16 attr_id);
+# 613 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern UINT16 SDP_SetLocalDiRecord (tSDP_DI_RECORD *device_info,
+                                    UINT32 *p_handle);
+# 625 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern UINT16 SDP_DiDiscover (BD_ADDR remote_device,
+                              tSDP_DISCOVERY_DB *p_db, UINT32 len,
+                              tSDP_DISC_CMPL_CB *p_cb);
+# 639 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern UINT8 SDP_GetNumDiRecords (tSDP_DISCOVERY_DB *p_db);
+# 652 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern UINT16 SDP_GetDiRecord (UINT8 getRecordIndex,
+                               tSDP_DI_GET_RECORD *device_info,
+                               tSDP_DISCOVERY_DB *p_db);
+# 667 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern UINT8 SDP_SetTraceLevel (UINT8 new_level);
+# 679 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+UINT32 SDP_ConnOpen (UINT8 *p_bd_addr, tSDP_DISC_RES_CB *p_rcb,
+                     tSDP_DISC_CMPL_CB *p_cb);
+# 691 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+BOOLEAN SDP_WriteData (UINT32 handle, BT_HDR *p_msg);
+# 704 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+BOOLEAN SDP_ConnClose (UINT32 handle);
+# 718 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+BOOLEAN SDP_FindServiceUUIDInRec(tSDP_DISC_REC *p_rec, tBT_UUID *p_uuid);
+# 34 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h" 2
 
 
 
@@ -7107,6 +7117,12 @@ tBTM_STATUS BTM_VendorSpecificCommand(UINT16 opcode,
                                       UINT8 param_len,
                                       UINT8 *p_param_buf,
                                       tBTM_VSC_CMPL_CB *p_cb);
+# 2098 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
+UINT8 BTM_AllocateSCN(void);
+# 2111 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
+BOOLEAN BTM_TryAllocateSCN(UINT8 scn);
+# 2125 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
+BOOLEAN BTM_FreeSCN(UINT8 scn);
 # 2140 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
 UINT8 BTM_SetTraceLevel (UINT8 new_level);
 # 2155 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
@@ -7175,6 +7191,18 @@ tBTM_INQ_INFO *BTM_InqDbNext (tBTM_INQ_INFO *p_cur);
 tBTM_STATUS BTM_ClearInqDb (BD_ADDR p_bda);
 # 2641 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
 tBTM_STATUS BTM_ReadInquiryRspTxPower (tBTM_CMPL_CB *p_cb);
+# 2660 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
+tBTM_STATUS BTM_StartDiscovery (tBTM_CMPL_CB *p_cmpl_cb,
+                                BD_ADDR_PTR p_rem_addr);
+# 2676 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
+tSDP_DISC_REC *BTM_FindAttribute (UINT16 attr_id,
+                                  tSDP_DISC_REC *p_start_rec);
+# 2692 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
+tSDP_DISC_REC *BTM_FindService (UINT16 service_uuid,
+                                tSDP_DISC_REC *p_start_rec);
+# 2708 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
+void BTM_SetDiscoveryParams (UINT16 num_uuid, tBT_UUID *p_uuid_list,
+                             UINT16 num_attr, UINT16 *p_attr_list);
 # 2725 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
 tBTM_STATUS BTM_SetLinkPolicy (BD_ADDR remote_bda,
                                UINT16 *settings);
@@ -7396,11 +7424,7 @@ tBTM_STATUS BTM_SetAfhChannels (AFH_CHANNELS channels, tBTM_CMPL_CB *p_afh_chann
 tBTM_STATUS BTM_BleSetChannels (BLE_CHANNELS channels, tBTM_CMPL_CB *p_ble_channels_cmpl_cback);
 # 31 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h" 2
 
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h" 1
-# 22 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdpdefs.h" 1
-# 23 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h" 2
-# 33 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h" 2
+
 
 
 # 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h" 1
@@ -9039,6 +9063,16 @@ typedef UINT8 tBTA_DM_SWITCH_EVT;
 typedef void (tBTA_DM_SWITCH_CBACK)(tBTA_DM_SWITCH_EVT event, tBTA_STATUS status);
 # 1367 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
 typedef UINT8 tBTA_DM_ROUTE_PATH;
+
+
+
+
+
+typedef tSDP_DI_RECORD tBTA_DI_RECORD;
+
+typedef tSDP_DI_GET_RECORD tBTA_DI_GET_RECORD;
+
+typedef tSDP_DISCOVERY_DB tBTA_DISCOVERY_DB;
 # 1392 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
 typedef UINT8 tBTA_DM_LINK_TYPE;
 # 1423 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
@@ -9073,6 +9107,12 @@ extern void BTA_DmSearch(tBTA_DM_INQ *p_dm_inq, tBTA_SERVICE_MASK services,
                          tBTA_DM_SEARCH_CBACK *p_cback);
 # 1574 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
 extern void BTA_DmSearchCancel(void);
+# 1588 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
+extern void BTA_DmDiscover(BD_ADDR bd_addr, tBTA_SERVICE_MASK services,
+                           tBTA_DM_SEARCH_CBACK *p_cback, BOOLEAN sdp_search);
+# 1602 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
+extern void BTA_DmDiscoverUUID(BD_ADDR bd_addr, tBT_UUID *uuid,
+                               tBTA_DM_SEARCH_CBACK *p_cback, BOOLEAN sdp_search);
 # 1615 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
 tBTA_STATUS BTA_DmGetCachedRemoteName(BD_ADDR remote_device, UINT8 **pp_cached_name);
 # 1630 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
@@ -9105,6 +9145,9 @@ extern tBTA_STATUS BTA_DmRemoveDevice(BD_ADDR bd_addr, tBT_TRANSPORT transport);
 extern void BTA_GetEirService( UINT8 *p_eir, tBTA_SERVICE_MASK *p_services );
 # 1798 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
 extern UINT16 BTA_DmGetConnectionState( BD_ADDR bd_addr );
+# 1810 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
+extern tBTA_STATUS BTA_DmSetLocalDiRecord( tBTA_DI_RECORD *p_device_info,
+        UINT32 *p_handle );
 # 1829 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
 extern void BTA_DmCloseACL(BD_ADDR bd_addr, BOOLEAN remove_dev, tBTA_TRANSPORT transport);
 # 1842 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
@@ -10586,7 +10629,7 @@ enum {
     BTA_DM_API_CONFIG_EIR_EVT,
     BTA_DM_API_SET_AFH_CHANNELS_EVT,
 
-
+    BTA_DM_API_GET_REMOTE_NAME_EVT,
 
     BTA_DM_API_SET_VISIBILITY_EVT,
 
@@ -10599,10 +10642,17 @@ enum {
     BTA_DM_API_BOND_CANCEL_EVT,
     BTA_DM_API_SET_PIN_TYPE_EVT,
     BTA_DM_API_PIN_REPLY_EVT,
-# 79 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/include/bta_dm_int.h"
+
+
+
+    BTA_DM_PM_BTM_STATUS_EVT,
+    BTA_DM_PM_TIMER_EVT,
+
+
+
     BTA_DM_API_CONFIRM_EVT,
 
-
+    BTA_DM_API_KEY_REQ_EVT,
 
     BTA_DM_API_SET_ENCRYPTION_EVT,
 
@@ -10815,12 +10865,30 @@ typedef struct {
     tBT_UUID *p_uuid;
 
 } tBTA_DM_API_SEARCH;
-# 313 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/include/bta_dm_int.h"
+
+
+
+typedef struct {
+    BT_HDR hdr;
+    BD_ADDR bd_addr;
+    tBTA_SERVICE_MASK services;
+    tBTA_DM_SEARCH_CBACK *p_cback;
+    BOOLEAN sdp_search;
+    tBTA_TRANSPORT transport;
+
+    UINT8 num_uuid;
+    tBT_UUID *p_uuid;
+
+    tBT_UUID uuid;
+} tBTA_DM_API_DISCOVER;
+
+
+
 typedef struct {
     BT_HDR hdr;
     BD_ADDR bd_addr;
 
-
+    tBTA_DISCOVERY_DB *p_sdp_db;
 
     UINT32 len;
     tBTA_DM_SEARCH_CBACK *p_cback;
@@ -10943,7 +11011,28 @@ typedef struct {
 
     tBT_TRANSPORT transport;
 } tBTA_DM_ACL_CHANGE;
-# 462 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/include/bta_dm_int.h"
+
+
+
+typedef struct {
+
+    BT_HDR hdr;
+    BD_ADDR bd_addr;
+    tBTM_PM_STATUS status;
+    UINT16 value;
+    UINT8 hci_status;
+
+} tBTA_DM_PM_BTM_STATUS;
+
+
+typedef struct {
+    BT_HDR hdr;
+    BD_ADDR bd_addr;
+    tBTA_DM_PM_ACTION pm_request;
+} tBTA_DM_PM_TIMER;
+
+
+
 typedef struct {
     BT_HDR hdr;
     BD_ADDR bd_addr;
@@ -11320,7 +11409,7 @@ typedef union {
 
     tBTA_DM_API_SET_AFH_CHANNELS set_afh_channels;
 
-
+    tBTA_DM_API_GET_REMOTE_NAME get_rmt_name;
 
 
 
@@ -11338,7 +11427,7 @@ typedef union {
 
     tBTA_DM_API_SEARCH search;
 
-
+    tBTA_DM_API_DISCOVER discover;
 
     tBTA_DM_API_BOND bond;
 
@@ -11365,9 +11454,9 @@ typedef union {
     tBTA_DM_ACL_CHANGE acl_change;
 
 
+    tBTA_DM_PM_BTM_STATUS pm_status;
 
-
-
+    tBTA_DM_PM_TIMER pm_timer;
 
 
     tBTA_DM_API_DI_DISC di_disc;
@@ -11494,7 +11583,26 @@ typedef struct {
     tBTA_DM_SRVCS conn_srvc[10];
 
 } tBTA_DM_CONNECTED_SRVCS;
-# 1046 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/include/bta_dm_int.h"
+
+
+
+
+typedef struct {
+# 1032 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/include/bta_dm_int.h"
+    TIMER_LIST_ENT timer[3];
+
+    UINT8 srvc_id[3];
+    UINT8 pm_action[3];
+    UINT8 active;
+
+    BD_ADDR peer_bdaddr;
+    BOOLEAN in_use;
+} tBTA_PM_TIMER;
+
+
+
+
+
 typedef struct {
     BOOLEAN is_bta_dm_active;
     tBTA_DM_ACTIVE_LINK device_list;
@@ -11514,8 +11622,8 @@ typedef struct {
     UINT8 wbt_scn;
     UINT8 num_master_only;
 
-
-
+    UINT8 pm_id;
+    tBTA_PM_TIMER pm_timer[7];
 
     UINT32 role_policy_mask;
     UINT16 cur_policy;
@@ -11524,7 +11632,23 @@ typedef struct {
     BOOLEAN disable_pair_mode;
     BOOLEAN conn_paired_only;
     tBTA_DM_API_SEARCH search_msg;
-# 1092 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/include/bta_dm_int.h"
+
+
+    UINT16 page_scan_interval;
+    UINT16 page_scan_window;
+    UINT16 inquiry_scan_interval;
+    UINT16 inquiry_scan_window;
+
+
+    BD_ADDR pin_bd_addr;
+    DEV_CLASS pin_dev_class;
+    tBTA_DM_SEC_EVT pin_evt;
+    UINT32 num_val;
+    BOOLEAN just_works;
+
+
+
+
     TIMER_LIST_ENT app_ready_timer;
     UINT32 eir_uuid[(((UINT32)BTM_EIR_MAX_SERVICES / 32) + (((UINT32)BTM_EIR_MAX_SERVICES % 32) ? 1 : 0))];
 
@@ -11552,7 +11676,7 @@ typedef struct {
     tBTA_SERVICE_MASK services_to_search;
     tBTA_SERVICE_MASK services_found;
 
-
+    tSDP_DISCOVERY_DB *p_sdp_db;
 
     UINT16 state;
     BD_ADDR peer_bdaddr;
@@ -11564,7 +11688,7 @@ typedef struct {
     BOOLEAN wait_disc;
     BOOLEAN sdp_results;
 
-
+    tBT_UUID uuid;
 
     UINT8 peer_scn;
     BOOLEAN sdp_search;
@@ -11572,13 +11696,28 @@ typedef struct {
     tBTA_TRANSPORT transport;
 
     tBTA_DM_SEARCH_CBACK *p_scan_cback;
-# 1155 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/include/bta_dm_int.h"
+
+    tBTA_GATTC_IF client_if;
+    UINT8 num_uuid;
+    tBT_UUID *p_srvc_uuid;
+    UINT8 uuid_to_search;
+    BOOLEAN gatt_disc_active;
+    UINT16 conn_id;
+    UINT8 *p_ble_rawdata;
+    UINT32 ble_raw_size;
+    UINT32 ble_raw_used;
+    TIMER_LIST_ENT gatt_close_timer;
+    BD_ADDR pending_close_bda;
+
+
+
+
 } tBTA_DM_SEARCH_CB;
 
 
 typedef struct {
 
-
+    tSDP_DISCOVERY_DB *p_di_db;
 
     UINT8 di_num;
     UINT32 di_handle[3];
@@ -11655,13 +11794,25 @@ typedef struct {
     UINT16 lmp_sub_version;
     UINT8 lmp_version;
 } tBTA_DM_LMP_VER_INFO;
-# 1248 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/include/bta_dm_int.h"
+
+
+extern tBTA_DM_PM_CFG *const p_bta_dm_pm_cfg;
+extern tBTA_DM_PM_SPEC *const p_bta_dm_pm_spec;
+extern tBTM_PM_PWR_MD *const p_bta_dm_pm_md;
+
+
+
+
+
+
 extern tBTA_DM_EIR_CONF bta_dm_eir_cfg;
 extern tBTA_DM_EIR_CONF *p_bta_dm_eir_cfg;
 
 
 
-extern tBTA_DM_CB bta_dm_cb;
+
+
+extern tBTA_DM_CB *bta_dm_cb_ptr;
 
 
 
@@ -11669,7 +11820,7 @@ extern tBTA_DM_CB bta_dm_cb;
 
 
 
-extern tBTA_DM_SEARCH_CB bta_dm_search_cb;
+extern tBTA_DM_SEARCH_CB *bta_dm_search_cb_ptr;
 
 
 
@@ -11677,15 +11828,23 @@ extern tBTA_DM_SEARCH_CB bta_dm_search_cb;
 
 
 
-extern tBTA_DM_DI_CB bta_dm_di_cb;
+extern tBTA_DM_DI_CB *bta_dm_di_cb_ptr;
 
 
 
 
 
 
-extern tBTA_DM_CONNECTED_SRVCS bta_dm_conn_srvcs;
-# 1288 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/include/bta_dm_int.h"
+extern tBTA_DM_CONNECTED_SRVCS *bta_dm_conn_srvcs_ptr;
+
+
+
+
+
+
+extern UINT8 *g_disc_raw_data_buf;
+
+
 extern BOOLEAN bta_dm_sm_execute(BT_HDR *p_msg);
 extern void bta_dm_sm_disable( void );
 extern void bta_dm_sm_deinit(void);
@@ -11731,7 +11890,7 @@ extern void bta_dm_ble_set_scan_params(tBTA_DM_MSG *p_data);
 extern void bta_dm_ble_set_scan_fil_params(tBTA_DM_MSG *p_data);
 extern void bta_dm_ble_set_conn_scan_params (tBTA_DM_MSG *p_data);
 
-
+extern void bta_dm_close_gatt_conn(tBTA_DM_MSG *p_data);
 
 extern void bta_dm_ble_observe (tBTA_DM_MSG *p_data);
 extern void bta_dm_ble_scan (tBTA_DM_MSG *p_data);
@@ -11778,18 +11937,27 @@ extern void bta_dm_loc_oob(tBTA_DM_MSG *p_data);
 extern void bta_dm_oob_reply(tBTA_DM_MSG *p_data);
 extern void bta_dm_ci_io_req_act(tBTA_DM_MSG *p_data);
 extern void bta_dm_ci_rmt_oob_act(tBTA_DM_MSG *p_data);
-# 1390 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/include/bta_dm_int.h"
+
+
+
+extern void bta_dm_init_pm(void);
+extern void bta_dm_disable_pm(void);
+extern void bta_dm_pm_active(BD_ADDR peer_addr);
+extern void bta_dm_pm_btm_status(tBTA_DM_MSG *p_data);
+extern void bta_dm_pm_timer(tBTA_DM_MSG *p_data);
+
+
 extern UINT8 bta_dm_get_av_count(void);
 extern void bta_dm_search_start (tBTA_DM_MSG *p_data);
 extern void bta_dm_search_cancel (tBTA_DM_MSG *p_data);
 extern void bta_dm_discover (tBTA_DM_MSG *p_data);
 
-
+extern void bta_dm_di_disc (tBTA_DM_MSG *p_data);
 
 extern void bta_dm_inq_cmpl (tBTA_DM_MSG *p_data);
 extern void bta_dm_rmt_name (tBTA_DM_MSG *p_data);
 
-
+extern void bta_dm_sdp_result (tBTA_DM_MSG *p_data);
 
 extern void bta_dm_search_cmpl (tBTA_DM_MSG *p_data);
 extern void bta_dm_free_sdp_db (tBTA_DM_MSG *p_data);
@@ -12542,8 +12710,8 @@ TIMER_LIST_ENT tx_power_timer;
 tBTM_CMPL_CB *p_tx_power_cmpl_cb;
 
 
-
-
+TIMER_LIST_ENT afh_channels_timer;
+tBTM_CMPL_CB *p_afh_channels_cmpl_cb;
 
 
 
@@ -13002,7 +13170,7 @@ typedef struct {
 
     tACL_CONN acl_db[4];
 
-
+    UINT8 btm_scn[31];
 
     UINT16 btm_def_link_policy;
     UINT16 btm_def_link_super_tout;
@@ -13063,7 +13231,22 @@ typedef struct {
     BOOLEAN connect_only_paired;
     BOOLEAN security_mode_changed;
     BOOLEAN sec_req_pending;
-# 886 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h"
+
+    BOOLEAN pin_type_changed;
+
+
+
+
+
+    UINT8 pin_code_len_saved;
+
+
+
+    UINT8 pin_code_len;
+    PIN_CODE pin_code;
+    UINT8 disc_reason;
+    UINT16 disc_handle;
+
     tBTM_PAIRING_STATE pairing_state;
     UINT8 pairing_flags;
     BD_ADDR pairing_bda;
@@ -13108,9 +13291,14 @@ extern tBTM_CallbackFunc conn_param_update_cb;
 
 
 typedef UINT8 tBTM_SEC_ACTION;
-# 939 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h"
-extern tBTM_CB btm_cb;
-# 948 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h"
+# 941 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/btm/include/btm_int.h"
+extern tBTM_CB *btm_cb_ptr;
+
+
+
+
+
+
 void btm_init (void);
 void btm_free (void);
 
@@ -13390,10 +13578,8 @@ typedef struct {
     BOOLEAN reset_complete;
     UINT8 trace_level;
 } tBTU_CB;
-# 236 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btu.h"
-extern tBTU_CB btu_cb;
-
-
+# 238 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btu.h"
+extern tBTU_CB *btu_cb_ptr;
 
 
 
@@ -13614,6 +13800,43 @@ typedef struct {
     UINT16 fcr_tx_buf_size;
 
 } tL2CAP_ERTM_INFO;
+# 362 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern UINT16 L2CA_Register (UINT16 psm, tL2CAP_APPL_INFO *p_cb_info);
+# 374 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern void L2CA_Deregister (UINT16 psm);
+# 386 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern UINT16 L2CA_AllocatePSM(void);
+# 400 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern UINT16 L2CA_ConnectReq (UINT16 psm, BD_ADDR p_bd_addr);
+# 413 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_ConnectRsp (BD_ADDR p_bd_addr, UINT8 id, UINT16 lcid,
+                                UINT16 result, UINT16 status);
+# 429 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern UINT16 L2CA_ErtmConnectReq (UINT16 psm, BD_ADDR p_bd_addr,
+                                   tL2CAP_ERTM_INFO *p_ertm_info);
+
+
+
+
+
+
+
+# 437 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h" 3 4
+_Bool 
+# 437 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+    L2CA_SetConnectionCallbacks(uint16_t local_cid, const tL2CAP_APPL_INFO *callbacks);
+# 451 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_ErtmConnectRsp (BD_ADDR p_bd_addr, UINT8 id, UINT16 lcid,
+                                     UINT16 result, UINT16 status,
+                                     tL2CAP_ERTM_INFO *p_ertm_info);
+# 464 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_ConfigReq (UINT16 cid, tL2CAP_CFG_INFO *p_cfg);
+# 476 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_ConfigRsp (UINT16 cid, tL2CAP_CFG_INFO *p_cfg);
+# 487 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_DisconnectReq (UINT16 cid);
+# 499 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_DisconnectRsp (UINT16 cid);
 # 516 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
 extern UINT16 L2CA_RegisterLECoc (UINT16 psm, tL2CAP_APPL_INFO *p_cb_info);
 # 528 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
@@ -13627,7 +13850,17 @@ extern BOOLEAN L2CA_ConnectLECocRsp (BD_ADDR p_bd_addr, UINT8 id, UINT16 lcid, U
 extern BOOLEAN L2CA_GetPeerLECocConfig (UINT16 lcid, tL2CAP_LE_CFG_INFO* peer_cfg);
 # 580 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
 extern UINT8 L2CA_DataWrite (UINT16 cid, BT_HDR *p_data);
-# 613 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+# 593 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_Ping (BD_ADDR p_bd_addr, tL2CA_ECHO_RSP_CB *p_cb);
+# 605 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_Echo (BD_ADDR p_bd_addr, BT_HDR *p_data, tL2CA_ECHO_DATA_CB *p_callback);
+
+
+
+
+
+
+
 
 # 613 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h" 3 4
 _Bool 
@@ -13643,6 +13876,27 @@ extern BOOLEAN L2CA_SetIdleTimeoutByBdAddr(BD_ADDR bd_addr, UINT16 timeout,
 extern UINT8 L2CA_SetTraceLevel (UINT8 trace_level);
 # 686 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
 extern UINT8 L2CA_SetDesireRole (UINT8 new_role);
+# 697 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern UINT16 L2CA_LocalLoopbackReq (UINT16 psm, UINT16 handle, BD_ADDR p_bd_addr);
+# 713 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern UINT16 L2CA_FlushChannel (UINT16 lcid, UINT16 num_to_flush);
+# 727 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_SetAclPriority (BD_ADDR bd_addr, UINT8 priority);
+# 740 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_FlowControl (UINT16 cid, BOOLEAN data_enabled);
+# 751 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_SendTestSFrame (UINT16 cid, UINT8 sup_type,
+                                    UINT8 back_track);
+# 763 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_SetTxPriority (UINT16 cid, tL2CAP_CHNL_PRIORITY priority);
+# 777 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_RegForNoCPEvt(tL2CA_NOCP_CB *p_cb, BD_ADDR p_bda);
+# 788 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_SetChnlDataRate (UINT16 cid, tL2CAP_CHNL_DATA_RATE tx, tL2CAP_CHNL_DATA_RATE rx);
+
+typedef void (tL2CA_RESERVE_CMPL_CBACK) (void);
+# 813 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_SetFlushTimeout (BD_ADDR bd_addr, UINT16 flush_tout);
 # 831 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
 extern UINT8 L2CA_DataWriteEx (UINT16 cid, BT_HDR *p_data, UINT16 flags);
 # 843 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
@@ -13651,6 +13905,8 @@ extern BOOLEAN L2CA_SetChnlFlushability (UINT16 cid, BOOLEAN is_flushable);
 extern BOOLEAN L2CA_GetPeerFeatures (BD_ADDR bd_addr, UINT32 *p_ext_feat, UINT8 *p_chnl_mask);
 # 871 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
 extern BOOLEAN L2CA_GetBDAddrbyHandle (UINT16 handle, BD_ADDR bd_addr);
+# 886 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern UINT8 L2CA_GetChnlFcrMode (UINT16 lcid);
 # 904 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
 typedef void (tL2CA_UCD_DISCOVER_CB) (BD_ADDR, UINT8, UINT32);
 
@@ -13726,6 +13982,10 @@ extern UINT16 L2CA_SendFixedChnlData (UINT16 fixed_cid, BD_ADDR rem_bda, BT_HDR 
 extern BOOLEAN L2CA_RemoveFixedChnl (UINT16 fixed_cid, BD_ADDR rem_bda);
 # 1137 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
 extern BOOLEAN L2CA_SetFixedChannelTout (BD_ADDR rem_bda, UINT16 fixed_cid, UINT16 idle_tout);
+# 1155 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
+extern BOOLEAN L2CA_GetCurrentConfig (UINT16 lcid,
+                                      tL2CAP_CFG_INFO **pp_our_cfg, tL2CAP_CH_CFG_BITS *p_our_cfg_bits,
+                                      tL2CAP_CFG_INFO **pp_peer_cfg, tL2CAP_CH_CFG_BITS *p_peer_cfg_bits);
 # 1173 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
 extern BOOLEAN L2CA_CancelBleConnectReq (BD_ADDR rem_bda);
 # 1186 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h"
@@ -14410,16 +14670,16 @@ static void bta_dm_inq_cmpl_cb (void *p_result);
 static void bta_dm_service_search_remname_cback (BD_ADDR bd_addr, DEV_CLASS dc, BD_NAME bd_name);
 static void bta_dm_remname_cback (tBTM_REMOTE_DEV_NAME *p_remote_name);
 
-
+static void bta_dm_find_services ( BD_ADDR bd_addr);
 
 static void bta_dm_discover_next_device(void);
 
-
+static void bta_dm_sdp_callback (UINT16 sdp_status);
 
 
 static UINT8 bta_dm_authorize_cback (BD_ADDR bd_addr, DEV_CLASS dev_class, BD_NAME bd_name, UINT8 *service_name, UINT8 service_id, BOOLEAN is_originator);
 
-
+static UINT8 bta_dm_pin_cback (BD_ADDR bd_addr, DEV_CLASS dev_class, BD_NAME bd_name, BOOLEAN min_16_digit);
 
 static UINT8 bta_dm_new_link_key_cback(BD_ADDR bd_addr, DEV_CLASS dev_class, BD_NAME bd_name, LINK_KEY key, UINT8 key_type);
 static UINT8 bta_dm_authentication_complete_cback(BD_ADDR bd_addr, DEV_CLASS dev_class, BD_NAME bd_name, int result);
@@ -14433,14 +14693,14 @@ static void bta_dm_policy_cback(tBTA_SYS_CONN_STATUS status, UINT8 id, UINT8 app
 
 
 
-
+static UINT8 bta_dm_sp_cback (tBTM_SP_EVT event, tBTM_SP_EVT_DATA *p_data);
 
 
 static void bta_dm_set_eir (char *local_name);
 
-
-
-
+static void bta_dm_eir_search_services( tBTM_INQ_RESULTS *p_result,
+                                        tBTA_SERVICE_MASK *p_services_to_search,
+                                        tBTA_SERVICE_MASK *p_services_found);
 
 static void bta_dm_search_timer_cback (TIMER_LIST_ENT *p_tle);
 static void bta_dm_disable_conn_down_timer_cback (TIMER_LIST_ENT *p_tle);
@@ -14453,8 +14713,8 @@ static char *bta_dm_get_remname(void);
 static void bta_dm_bond_cancel_complete_cback(tBTM_STATUS result);
 
 
-
-
+static BOOLEAN bta_dm_read_remote_device_name (BD_ADDR bd_addr, tBT_TRANSPORT transport);
+static void bta_dm_discover_device(BD_ADDR remote_bd_addr);
 
 static void bta_dm_sys_hw_cback( tBTA_SYS_HW_EVT status );
 static void bta_dm_disable_search_and_disc(void);
@@ -14463,6 +14723,15 @@ static void bta_dm_disable_search_and_disc(void);
 
 static UINT8 bta_dm_ble_smp_cback (tBTM_LE_EVT event, BD_ADDR bda, tBTM_LE_EVT_DATA *p_data);
 static void bta_dm_ble_id_key_cback (UINT8 key_type, tBTM_BLE_LOCAL_KEYS *p_key);
+
+
+
+static void bta_dm_gattc_register(void);
+static void btm_dm_start_gatt_discovery(BD_ADDR bd_addr);
+static void bta_dm_cancel_gatt_discovery(BD_ADDR bd_addr);
+static void bta_dm_gattc_callback(tBTA_GATTC_EVT event, tBTA_GATTC *p_data);
+
+extern tBTA_DM_CONTRL_STATE bta_dm_pm_obtain_controller_state(void);
 # 128 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
 static void bta_dm_remove_sec_dev_entry(BD_ADDR remote_bd_addr);
 
@@ -14553,25 +14822,17 @@ const UINT32 bta_service_id_to_btm_srv_id_lkup_tbl [32] = {
 const tBTM_APPL_INFO bta_security = {
     &bta_dm_authorize_cback,
 
+    &bta_dm_pin_cback,
 
 
-    
-# 226 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
-   ((void *)0)
-# 226 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
-       ,
 
     &bta_dm_new_link_key_cback,
     &bta_dm_authentication_complete_cback,
     &bta_dm_bond_cancel_complete_cback,
 
+    &bta_dm_sp_cback,
 
 
-    
-# 234 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
-   ((void *)0)
-# 234 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
-       ,
 
 
     &bta_dm_ble_smp_cback,
@@ -14579,6 +14840,13 @@ const tBTM_APPL_INFO bta_security = {
 
 
 };
+
+
+
+
+
+
+UINT8 *g_disc_raw_data_buf;
 # 262 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
 void bta_dm_enable(tBTA_DM_MSG *p_data)
 {
@@ -14586,7 +14854,7 @@ void bta_dm_enable(tBTA_DM_MSG *p_data)
     tBTA_DM_ENABLE enable_event;
 
 
-    if ( bta_dm_cb.is_bta_dm_active == 
+    if ( (*bta_dm_cb_ptr).is_bta_dm_active == 
 # 268 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                       1 
 # 268 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -14614,10 +14882,10 @@ void bta_dm_enable(tBTA_DM_MSG *p_data)
                                       ((void *)0) 
 # 283 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
                                             ) {
-        bta_dm_cb.p_sec_cback = p_data->enable.p_sec_cback;
+        (*bta_dm_cb_ptr).p_sec_cback = p_data->enable.p_sec_cback;
     }
 
-    bta_dm_cb.is_bta_dm_active = 
+    (*bta_dm_cb_ptr).is_bta_dm_active = 
 # 287 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                 1
 # 287 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -14638,16 +14906,16 @@ void bta_dm_enable(tBTA_DM_MSG *p_data)
 # 308 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
 void bta_dm_init_cb(void)
 {
-    memset(&bta_dm_cb, 0, sizeof(bta_dm_cb));
+    memset(&(*bta_dm_cb_ptr), 0, sizeof((*bta_dm_cb_ptr)));
 }
 # 323 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
 void bta_dm_deinit_cb(void)
 {
-    bta_sys_free_timer(&bta_dm_cb.disable_timer);
+    bta_sys_free_timer(&(*bta_dm_cb_ptr).disable_timer);
 
-    bta_sys_free_timer(&bta_dm_cb.app_ready_timer);
+    bta_sys_free_timer(&(*bta_dm_cb_ptr).app_ready_timer);
 # 336 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
-    memset(&bta_dm_cb, 0, sizeof(bta_dm_cb));
+    memset(&(*bta_dm_cb_ptr), 0, sizeof((*bta_dm_cb_ptr)));
 }
 # 349 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
 static void bta_dm_eir_cfg_init(void)
@@ -14724,12 +14992,12 @@ static void bta_dm_sys_hw_cback( tBTA_SYS_HW_EVT status )
 
 
     if (status == BTA_SYS_HW_ERROR_EVT) {
-        if ( bta_dm_cb.p_sec_cback != 
+        if ( (*bta_dm_cb_ptr).p_sec_cback != 
 # 415 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                      ((void *)0) 
 # 415 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
                                           ) {
-            bta_dm_cb.p_sec_cback(26, 
+            (*bta_dm_cb_ptr).p_sec_cback(26, 
 # 416 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                                       ((void *)0)
 # 416 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -14739,12 +15007,12 @@ static void bta_dm_sys_hw_cback( tBTA_SYS_HW_EVT status )
     }
 
     if ( status == BTA_SYS_HW_OFF_EVT ) {
-        if ( bta_dm_cb.p_sec_cback != 
+        if ( (*bta_dm_cb_ptr).p_sec_cback != 
 # 422 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                      ((void *)0) 
 # 422 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
                                           ) {
-            bta_dm_cb.p_sec_cback(1, 
+            (*bta_dm_cb_ptr).p_sec_cback(1, 
 # 423 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                                      ((void *)0)
 # 423 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -14757,18 +15025,18 @@ static void bta_dm_sys_hw_cback( tBTA_SYS_HW_EVT status )
 
         bta_dm_eir_cfg_deinit();
 
-        bta_sys_free_timer(&bta_dm_search_cb.search_timer);
+        bta_sys_free_timer(&(*bta_dm_search_cb_ptr).search_timer);
 
 
+        bta_sys_free_timer(&(*bta_dm_search_cb_ptr).gatt_close_timer);
 
 
-
-        memset(&bta_dm_search_cb, 0x00, sizeof(bta_dm_search_cb));
+        memset(&(*bta_dm_search_cb_ptr), 0x00, sizeof((*bta_dm_search_cb_ptr)));
 
 
         bta_sys_hw_unregister( BTA_SYS_HW_BLUETOOTH );
 
-        bta_dm_cb.is_bta_dm_active = 
+        (*bta_dm_cb_ptr).is_bta_dm_active = 
 # 443 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                     0
 # 443 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -14785,7 +15053,7 @@ static void bta_dm_sys_hw_cback( tBTA_SYS_HW_EVT status )
 
 
 
-        temp_cback = bta_dm_cb.p_sec_cback;
+        temp_cback = (*bta_dm_cb_ptr).p_sec_cback;
 
         bta_dm_init_cb();
 
@@ -14793,23 +15061,23 @@ static void bta_dm_sys_hw_cback( tBTA_SYS_HW_EVT status )
         bta_dm_eir_cfg_init();
 
 
-        bta_dm_cb.p_sec_cback = temp_cback;
-        bta_dm_cb.is_bta_dm_active = 
+        (*bta_dm_cb_ptr).p_sec_cback = temp_cback;
+        (*bta_dm_cb_ptr).is_bta_dm_active = 
 # 465 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                     1
 # 465 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
                                         ;
 
-        bta_sys_free_timer(&bta_dm_search_cb.search_timer);
+        bta_sys_free_timer(&(*bta_dm_search_cb_ptr).search_timer);
+
+
+        bta_sys_free_timer(&(*bta_dm_search_cb_ptr).gatt_close_timer);
 
 
 
-
-
-
-        memset(&bta_dm_search_cb, 0x00, sizeof(bta_dm_search_cb));
-        memset(&bta_dm_conn_srvcs, 0x00, sizeof(bta_dm_conn_srvcs));
-        memset(&bta_dm_di_cb, 0, sizeof(tBTA_DM_DI_CB));
+        memset(&(*bta_dm_search_cb_ptr), 0x00, sizeof((*bta_dm_search_cb_ptr)));
+        memset(&(*bta_dm_conn_srvcs_ptr), 0x00, sizeof((*bta_dm_conn_srvcs_ptr)));
+        memset(&(*bta_dm_di_cb_ptr), 0, sizeof(tBTA_DM_DI_CB));
 
         memcpy(dev_class, p_bta_dm_cfg->dev_class, sizeof(dev_class));
         BTM_SetDeviceClass (dev_class);
@@ -14829,7 +15097,7 @@ static void bta_dm_sys_hw_cback( tBTA_SYS_HW_EVT status )
             BTM_BleLoadLocalKeys(1, (tBTM_BLE_LOCAL_KEYS *)&id_key);
         }
 
-
+        (*bta_dm_search_cb_ptr).conn_id = 0xFFFF;
 
 
 
@@ -14837,8 +15105,8 @@ static void bta_dm_sys_hw_cback( tBTA_SYS_HW_EVT status )
 
         BTM_SetDefaultLinkSuperTout(p_bta_dm_cfg->link_timeout);
         BTM_WritePageTimeout(p_bta_dm_cfg->page_timeout);
-        bta_dm_cb.cur_policy = p_bta_dm_cfg->policy_settings;
-        BTM_SetDefaultLinkPolicy(bta_dm_cb.cur_policy);
+        (*bta_dm_cb_ptr).cur_policy = p_bta_dm_cfg->policy_settings;
+        BTM_SetDefaultLinkPolicy((*bta_dm_cb_ptr).cur_policy);
         BTM_RegBusyLevelNotif (bta_dm_bl_change_cback, 
 # 506 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                                       ((void *)0)
@@ -14851,13 +15119,13 @@ static void bta_dm_sys_hw_cback( tBTA_SYS_HW_EVT status )
 
 
 
-
+        bta_dm_init_pm();
 
 
         bta_sys_policy_register((tBTA_SYS_CONN_CBACK *)bta_dm_policy_cback);
 
 
-
+        bta_dm_gattc_register();
 
 
     } else {
@@ -14881,11 +15149,11 @@ void bta_dm_disable (tBTA_DM_MSG *p_data)
     BTM_SetConnectability(0, 0, 0);
 
 
-
+    bta_dm_disable_pm();
 
 
     bta_dm_disable_search_and_disc();
-    bta_dm_cb.disabling = 
+    (*bta_dm_cb_ptr).disabling = 
 # 568 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                          1
 # 568 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -14902,16 +15170,16 @@ void bta_dm_disable (tBTA_DM_MSG *p_data)
 
         {if (appl_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_APPL", "\033[0;" "33" "m" "W" " (%d) %s: " "%s BTA_DISABLE_DELAY set to %d ms" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __FUNCTION__, 200); };}
                                                            ;
-        bta_sys_stop_timer(&bta_dm_cb.disable_timer);
-        bta_dm_cb.disable_timer.p_cback = (TIMER_CBACK *)&bta_dm_disable_conn_down_timer_cback;
-        bta_sys_start_timer(&bta_dm_cb.disable_timer, 0, 200);
+        bta_sys_stop_timer(&(*bta_dm_cb_ptr).disable_timer);
+        (*bta_dm_cb_ptr).disable_timer.p_cback = (TIMER_CBACK *)&bta_dm_disable_conn_down_timer_cback;
+        bta_sys_start_timer(&(*bta_dm_cb_ptr).disable_timer, 0, 200);
 
 
 
     } else {
-        bta_dm_cb.disable_timer.p_cback = (TIMER_CBACK *)&bta_dm_disable_timer_cback;
-        bta_dm_cb.disable_timer.param = 0;
-        bta_sys_start_timer(&bta_dm_cb.disable_timer, 0, 5000);
+        (*bta_dm_cb_ptr).disable_timer.p_cback = (TIMER_CBACK *)&bta_dm_disable_timer_cback;
+        (*bta_dm_cb_ptr).disable_timer.param = 0;
+        bta_sys_start_timer(&(*bta_dm_cb_ptr).disable_timer, 0, 5000);
     }
 
 
@@ -14935,11 +15203,11 @@ static void bta_dm_disable_timer_cback (TIMER_LIST_ENT *p_tle)
     {if (appl_trace_level >= 4 && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " " bta_dm_disable_timer_cback trial %d " "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", p_tle->param); };};
 
     if (BTM_GetNumAclLinks() && p_tle->param == 0) {
-        for (i = 0; i < bta_dm_cb.device_list.count; i++) {
+        for (i = 0; i < (*bta_dm_cb_ptr).device_list.count; i++) {
 
-            transport = bta_dm_cb.device_list.peer_device[i].transport;
+            transport = (*bta_dm_cb_ptr).device_list.peer_device[i].transport;
 
-            btm_remove_acl(bta_dm_cb.device_list.peer_device[i].peer_bdaddr, transport);
+            btm_remove_acl((*bta_dm_cb_ptr).device_list.peer_device[i].peer_bdaddr, transport);
             trigger_disc = 
 # 627 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                           1
@@ -14950,19 +15218,19 @@ static void bta_dm_disable_timer_cback (TIMER_LIST_ENT *p_tle)
 
 
         if (trigger_disc) {
-            bta_dm_cb.disable_timer.p_cback = (TIMER_CBACK *)&bta_dm_disable_timer_cback;
-            bta_dm_cb.disable_timer.param = 1;
-            bta_sys_start_timer(&bta_dm_cb.disable_timer, 0, 1500);
+            (*bta_dm_cb_ptr).disable_timer.p_cback = (TIMER_CBACK *)&bta_dm_disable_timer_cback;
+            (*bta_dm_cb_ptr).disable_timer.param = 1;
+            bta_sys_start_timer(&(*bta_dm_cb_ptr).disable_timer, 0, 1500);
         }
     } else {
-        bta_dm_cb.disabling = 
+        (*bta_dm_cb_ptr).disabling = 
 # 638 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                              0
 # 638 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
                                   ;
 
         bta_sys_remove_uuid(0X1200);
-        bta_dm_cb.p_sec_cback(1, 
+        (*bta_dm_cb_ptr).p_sec_cback(1, 
 # 641 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                                  ((void *)0)
 # 641 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -14974,17 +15242,81 @@ void bta_dm_set_dev_name (tBTA_DM_MSG *p_data)
 {
     BTM_SetLocalDeviceName((char *)p_data->set_name.name);
 
-
+    bta_dm_set_eir ((char *)p_data->set_name.name);
 
 }
 # 676 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
 void bta_dm_set_afh_channels (tBTA_DM_MSG *p_data)
 {
 
-
+    BTM_SetAfhChannels (p_data->set_afh_channels.channels, p_data->set_afh_channels.set_afh_cb);
 
 }
-# 754 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+# 693 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+static BOOLEAN bta_dm_read_remote_device_name (BD_ADDR bd_addr, tBT_TRANSPORT transport)
+{
+    tBTM_STATUS btm_status;
+
+    {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "bta_dm_read_remote_device_name" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL"); };};
+
+    bdcpy((*bta_dm_search_cb_ptr).peer_bdaddr, bd_addr);
+    (*bta_dm_search_cb_ptr).peer_name[0] = 0;
+
+    btm_status = BTM_ReadRemoteDeviceName ((*bta_dm_search_cb_ptr).peer_bdaddr,
+                                           (tBTM_CMPL_CB *) bta_dm_remname_cback,
+                                           transport);
+
+    if ( btm_status == BTM_CMD_STARTED ) {
+        {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "bta_dm_read_remote_device_name: BTM_ReadRemoteDeviceName is started" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL"); };};
+
+        return (
+# 709 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+               1
+# 709 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                   );
+    } else if ( btm_status == BTM_BUSY ) {
+        {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "bta_dm_read_remote_device_name: BTM_ReadRemoteDeviceName is busy" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL"); };};
+
+
+
+        BTM_SecAddRmtNameNotifyCallback(&bta_dm_service_search_remname_cback);
+
+        return (
+# 717 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+               1
+# 717 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                   );
+    } else {
+        {if (appl_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_APPL", "\033[0;" "33" "m" "W" " (%d) %s: " "bta_dm_read_remote_device_name: BTM_ReadRemoteDeviceName returns 0x%02X" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", btm_status); };};
+
+        return (
+# 721 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+               0
+# 721 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                    );
+    }
+}
+# 734 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+void bta_dm_read_rmt_name(tBTA_DM_MSG *p_data)
+{
+    {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "%s" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL",__func__); };};
+    bdcpy((*bta_dm_search_cb_ptr).peer_bdaddr, p_data->get_rmt_name.rmt_addr);
+    (*bta_dm_search_cb_ptr).peer_name[0] = 0;
+
+    tBTM_STATUS btm_status = BTM_ReadRemoteDeviceName((*bta_dm_search_cb_ptr).peer_bdaddr,
+                                                       (tBTM_CMPL_CB *) p_data->get_rmt_name.rmt_name_cb,
+                                                       (*bta_dm_search_cb_ptr).transport);
+
+    if (btm_status == BTM_CMD_STARTED) {
+        {if ((*btm_cb_ptr).trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_BTM", "D" " (%d) %s: " "%s: BTM_ReadRemoteDeviceName is started" "\033[0m" "\n", esp_log_timestamp(), "BT_BTM",__func__); };};
+    } else if (btm_status == BTM_BUSY) {
+        {if ((*btm_cb_ptr).trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_BTM", "D" " (%d) %s: " "%s: BTM_ReadRemoteDeviceName is busy" "\033[0m" "\n", esp_log_timestamp(), "BT_BTM",__func__); };};
+    } else {
+        {if ((*btm_cb_ptr).trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_BTM", "\033[0;" "33" "m" "W" " (%d) %s: " "%s: BTM_ReadRemoteDeviceName returns 0x%02X" "\033[0m" "\n", esp_log_timestamp(), "BT_BTM",__func__, btm_status); };};
+    }
+}
+
+
 void bta_dm_config_eir (tBTA_DM_MSG *p_data)
 {
     tBTA_DM_API_CONFIG_EIR *config_eir = &p_data->config_eir;
@@ -15108,9 +15440,9 @@ void bta_dm_set_visibility(tBTA_DM_MSG *p_data)
         }
 
 
-
-
-
+        BTM_SetDiscoverability(p_data->set_visibility.disc_mode,
+                               (*bta_dm_cb_ptr).inquiry_scan_window,
+                               (*bta_dm_cb_ptr).inquiry_scan_interval);
 
     }
 
@@ -15128,9 +15460,9 @@ void bta_dm_set_visibility(tBTA_DM_MSG *p_data)
         }
 
 
-
-
-
+        BTM_SetConnectability(p_data->set_visibility.conn_mode,
+                              (*bta_dm_cb_ptr).page_scan_window,
+                              (*bta_dm_cb_ptr).page_scan_interval);
 
     }
 
@@ -15138,13 +15470,13 @@ void bta_dm_set_visibility(tBTA_DM_MSG *p_data)
     if (p_data->set_visibility.pair_mode != 0x00FF ) {
 
         if (p_data->set_visibility.pair_mode == 0) {
-            bta_dm_cb.disable_pair_mode = 
+            (*bta_dm_cb_ptr).disable_pair_mode = 
 # 907 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                          1
 # 907 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
                                              ;
         } else {
-            bta_dm_cb.disable_pair_mode = 
+            (*bta_dm_cb_ptr).disable_pair_mode = 
 # 909 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                          0
 # 909 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -15157,13 +15489,13 @@ void bta_dm_set_visibility(tBTA_DM_MSG *p_data)
     if (p_data->set_visibility.conn_paired_only != 0x00FF) {
 
         if (p_data->set_visibility.conn_paired_only == 0) {
-            bta_dm_cb.conn_paired_only = 
+            (*bta_dm_cb_ptr).conn_paired_only = 
 # 918 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                         0
 # 918 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
                                              ;
         } else {
-            bta_dm_cb.conn_paired_only = 
+            (*bta_dm_cb_ptr).conn_paired_only = 
 # 920 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                         1
 # 920 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -15174,7 +15506,7 @@ void bta_dm_set_visibility(tBTA_DM_MSG *p_data)
 
 
     if (p_data->set_visibility.pair_mode != 0x00FF || p_data->set_visibility.conn_paired_only != 0x00FF) {
-        BTM_SetPairableMode((BOOLEAN)(!(bta_dm_cb.disable_pair_mode)), bta_dm_cb.conn_paired_only);
+        BTM_SetPairableMode((BOOLEAN)(!((*bta_dm_cb_ptr).disable_pair_mode)), (*bta_dm_cb_ptr).conn_paired_only);
     }
 
 }
@@ -15200,14 +15532,14 @@ static void bta_dm_process_remove_device(BD_ADDR bd_addr, tBT_TRANSPORT transpor
 # 950 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
                                    );
 
-    if (bta_dm_cb.p_sec_cback) {
+    if ((*bta_dm_cb_ptr).p_sec_cback) {
         tBTA_DM_SEC sec_event;
         bdcpy(sec_event.link_down.bd_addr, bd_addr);
         sec_event.link_down.status = 0x00;
         if (transport == 2){
-            bta_dm_cb.p_sec_cback(29, &sec_event);
+            (*bta_dm_cb_ptr).p_sec_cback(29, &sec_event);
         } else {
-            bta_dm_cb.p_sec_cback(25, &sec_event);
+            (*bta_dm_cb_ptr).p_sec_cback(25, &sec_event);
         }
 
     }
@@ -15233,7 +15565,7 @@ void bta_dm_remove_device(tBTA_DM_MSG *p_data)
     UINT8 transport = p_dev->transport;
 
     if (BTM_IsAclConnectionUp(p_dev->bd_addr, transport)) {
-        {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "%s: ACL Up count  %d" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __func__, bta_dm_cb.device_list.count); };};
+        {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "%s: ACL Up count  %d" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __func__, (*bta_dm_cb_ptr).device_list.count); };};
         continue_delete_dev = 
 # 985 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                              0
@@ -15241,12 +15573,12 @@ void bta_dm_remove_device(tBTA_DM_MSG *p_data)
                                   ;
 
 
-        for (int i = 0; i < bta_dm_cb.device_list.count; i++) {
-            if (!bdcmp(bta_dm_cb.device_list.peer_device[i].peer_bdaddr, p_dev->bd_addr)
-                && bta_dm_cb.device_list.peer_device[i].transport == transport) {
-                bta_dm_cb.device_list.peer_device[i].conn_state = 2;
-                btm_remove_acl( p_dev->bd_addr, bta_dm_cb.device_list.peer_device[i].transport);
-                {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "%s:transport = %d" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __func__, bta_dm_cb.device_list.peer_device[i].transport); };}
+        for (int i = 0; i < (*bta_dm_cb_ptr).device_list.count; i++) {
+            if (!bdcmp((*bta_dm_cb_ptr).device_list.peer_device[i].peer_bdaddr, p_dev->bd_addr)
+                && (*bta_dm_cb_ptr).device_list.peer_device[i].transport == transport) {
+                (*bta_dm_cb_ptr).device_list.peer_device[i].conn_state = 2;
+                btm_remove_acl( p_dev->bd_addr, (*bta_dm_cb_ptr).device_list.peer_device[i].transport);
+                {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "%s:transport = %d" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __func__, (*bta_dm_cb_ptr).device_list.peer_device[i].transport); };}
                                                                                 ;
                 break;
             }
@@ -15327,14 +15659,14 @@ void bta_dm_close_acl(tBTA_DM_MSG *p_data)
     {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "bta_dm_close_acl" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL"); };};
 
     if (BTM_IsAclConnectionUp(p_remove_acl->bd_addr, p_remove_acl->transport)) {
-        for (index = 0; index < bta_dm_cb.device_list.count; index ++) {
-            if (!bdcmp( bta_dm_cb.device_list.peer_device[index].peer_bdaddr, p_remove_acl->bd_addr)) {
+        for (index = 0; index < (*bta_dm_cb_ptr).device_list.count; index ++) {
+            if (!bdcmp( (*bta_dm_cb_ptr).device_list.peer_device[index].peer_bdaddr, p_remove_acl->bd_addr)) {
                 break;
             }
         }
-        if (index != bta_dm_cb.device_list.count) {
+        if (index != (*bta_dm_cb_ptr).device_list.count) {
             if (p_remove_acl->remove_dev) {
-                bta_dm_cb.device_list.peer_device[index].remove_dev_pending = 
+                (*bta_dm_cb_ptr).device_list.peer_device[index].remove_dev_pending = 
 # 1087 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                                                              1
 # 1087 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -15377,11 +15709,11 @@ void bta_dm_remove_all_acl(tBTA_DM_MSG *p_data)
 
     {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "%s link type = %d" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __func__, link_type); };};
 
-    for (UINT8 i = 0; i < bta_dm_cb.device_list.count; i++) {
+    for (UINT8 i = 0; i < (*bta_dm_cb_ptr).device_list.count; i++) {
         BD_ADDR addr = {0};
-        bdcpy(addr, bta_dm_cb.device_list.peer_device[i].peer_bdaddr);
+        bdcpy(addr, (*bta_dm_cb_ptr).device_list.peer_device[i].peer_bdaddr);
 
-        transport = bta_dm_cb.device_list.peer_device[i].transport;
+        transport = (*bta_dm_cb_ptr).device_list.peer_device[i].transport;
 
         if ((link_type == 0xFF) ||
                 ((link_type == 0x02) && (transport == 2)) ||
@@ -15413,7 +15745,7 @@ void bta_dm_bond (tBTA_DM_MSG *p_data)
     }
 
 
-    if (bta_dm_cb.p_sec_cback && (status != BTM_CMD_STARTED)) {
+    if ((*bta_dm_cb_ptr).p_sec_cback && (status != BTM_CMD_STARTED)) {
 
         memset(&sec_event, 0, sizeof(tBTA_DM_SEC));
         bdcpy(sec_event.auth_cmpl.bd_addr, p_data->bond.bd_addr);
@@ -15442,7 +15774,7 @@ void bta_dm_bond (tBTA_DM_MSG *p_data)
 
             bta_dm_remove_sec_dev_entry(p_data->bond.bd_addr);
         }
-        bta_dm_cb.p_sec_cback(3, &sec_event);
+        (*bta_dm_cb_ptr).p_sec_cback(3, &sec_event);
     }
 
 }
@@ -15455,10 +15787,10 @@ void bta_dm_bond_cancel (tBTA_DM_MSG *p_data)
     {if (appl_trace_level >= 4 && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " " bta_dm_bond_cancel " "\033[0m" "\n", esp_log_timestamp(), "BT_APPL"); };};
     status = BTM_SecBondCancel ( p_data->bond_cancel.bd_addr );
 
-    if (bta_dm_cb.p_sec_cback && (status != BTM_CMD_STARTED && status != BTM_SUCCESS)) {
+    if ((*bta_dm_cb_ptr).p_sec_cback && (status != BTM_CMD_STARTED && status != BTM_SUCCESS)) {
         sec_event.bond_cancel_cmpl.result = 1;
 
-        bta_dm_cb.p_sec_cback(9, &sec_event);
+        (*bta_dm_cb_ptr).p_sec_cback(9, &sec_event);
     }
 
 }
@@ -15466,13 +15798,35 @@ void bta_dm_bond_cancel (tBTA_DM_MSG *p_data)
 void bta_dm_set_pin_type (tBTA_DM_MSG *p_data)
 {
 
-
+    BTM_SetPinType (p_data->set_pin_type.pin_type, p_data->set_pin_type.p_pin, p_data->set_pin_type.pin_len);
 
 }
 # 1244 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
 void bta_dm_pin_reply (tBTA_DM_MSG *p_data)
 {
-# 1265 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+
+    UINT32 trusted_mask[(((UINT32)65 / 32) + (((UINT32)65 % 32) ? 1 : 0))];
+    UINT32 *current_trusted_mask;
+
+    current_trusted_mask = BTM_ReadTrustedMask(p_data->pin_reply.bd_addr);
+
+    if (current_trusted_mask) {
+        memcpy(trusted_mask, current_trusted_mask, sizeof(trusted_mask));
+    } else {
+        memset(trusted_mask, 0, sizeof(trusted_mask));
+    }
+
+    if (p_data->pin_reply.accept) {
+
+        BTM_PINCodeReply(p_data->pin_reply.bd_addr, BTM_SUCCESS, p_data->pin_reply.pin_len, p_data->pin_reply.p_pin, trusted_mask );
+    } else {
+        BTM_PINCodeReply(p_data->pin_reply.bd_addr, BTM_NOT_AUTHORIZED, 0, 
+# 1262 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                                                          ((void *)0)
+# 1262 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                                              , trusted_mask );
+    }
+
 }
 # 1277 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
 static void bta_dm_policy_cback(tBTA_SYS_CONN_STATUS status, UINT8 id, UINT8 app_id, BD_ADDR peer_addr)
@@ -15510,28 +15864,28 @@ static void bta_dm_policy_cback(tBTA_SYS_CONN_STATUS status, UINT8 id, UINT8 app
         BTM_SetLinkPolicy(p_dev->peer_bdaddr, &(p_dev->link_policy));
 
 
+        if (policy & (0x0004 | 0x0008)) {
 
-
-
-
+            bta_dm_pm_active(p_dev->peer_bdaddr);
+        }
 
         break;
 
     case 0x12:
 
-        bta_dm_cb.role_policy_mask &= ~mask;
-        if (0 == bta_dm_cb.role_policy_mask) {
+        (*bta_dm_cb_ptr).role_policy_mask &= ~mask;
+        if (0 == (*bta_dm_cb_ptr).role_policy_mask) {
 
-            bta_dm_cb.cur_policy |= 0x0001;
-            BTM_SetDefaultLinkPolicy(bta_dm_cb.cur_policy);
+            (*bta_dm_cb_ptr).cur_policy |= 0x0001;
+            BTM_SetDefaultLinkPolicy((*bta_dm_cb_ptr).cur_policy);
         }
         break;
 
     case 0x13:
 
-        bta_dm_cb.role_policy_mask |= mask;
-        bta_dm_cb.cur_policy &= ~0x0001;
-        BTM_SetDefaultLinkPolicy(bta_dm_cb.cur_policy);
+        (*bta_dm_cb_ptr).role_policy_mask |= mask;
+        (*bta_dm_cb_ptr).cur_policy &= ~0x0001;
+        BTM_SetDefaultLinkPolicy((*bta_dm_cb_ptr).cur_policy);
         break;
     }
 }
@@ -15548,6 +15902,20 @@ void bta_dm_confirm(tBTA_DM_MSG *p_data)
         res = BTM_SUCCESS;
     }
     BTM_ConfirmReqReply(res, p_data->confirm.bd_addr);
+}
+# 1367 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+void bta_dm_key_req(tBTA_DM_MSG *p_data)
+{
+    tBTM_STATUS res = BTM_NOT_AUTHORIZED;
+
+    if (p_data->key_req.accept == 
+# 1371 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                 1
+# 1371 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                     ) {
+        res = BTM_SUCCESS;
+    }
+    BTM_PasskeyReqReply(res, p_data->key_req.bd_addr, p_data->key_req.passkey);
 }
 # 1388 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
 void bta_dm_loc_oob(tBTA_DM_MSG *p_data)
@@ -15593,15 +15961,15 @@ void bta_dm_search_start (tBTA_DM_MSG *p_data)
     tBTM_INQUIRY_CMPL result;
 
 
-
-
+    UINT16 len = (UINT16)(sizeof(tBT_UUID) * p_data->search.num_uuid);
+    bta_dm_gattc_register();
 
 
     {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "%s avoid_scatter=%d" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __func__, p_bta_dm_cfg->avoid_scatter); };};
 
     if (p_bta_dm_cfg->avoid_scatter &&
             (p_data->search.rs_res == BTA_DM_RS_NONE) && bta_dm_check_av(BTA_DM_API_SEARCH_EVT)) {
-        memcpy(&bta_dm_cb.search_msg, &p_data->search, sizeof(tBTA_DM_API_SEARCH));
+        memcpy(&(*bta_dm_cb_ptr).search_msg, &p_data->search, sizeof(tBTA_DM_API_SEARCH));
         return;
     }
 
@@ -15611,9 +15979,34 @@ void bta_dm_search_start (tBTA_DM_MSG *p_data)
 # 1479 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
                       );
 
-    bta_dm_search_cb.p_search_cback = p_data->search.p_cback;
-    bta_dm_search_cb.services = p_data->search.services;
-# 1501 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+    (*bta_dm_search_cb_ptr).p_search_cback = p_data->search.p_cback;
+    (*bta_dm_search_cb_ptr).services = p_data->search.services;
+
+
+    utl_freebuf((void **)&(*bta_dm_search_cb_ptr).p_srvc_uuid);
+
+    if (((*bta_dm_search_cb_ptr).num_uuid = p_data->search.num_uuid) != 0 &&
+            p_data->search.p_uuid != 
+# 1488 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                    ((void *)0)
+# 1488 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                        ) {
+        if (((*bta_dm_search_cb_ptr).p_srvc_uuid = (tBT_UUID *)malloc((len))) == 
+# 1489 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                                                           ((void *)0)
+# 1489 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                                               ) {
+            {if (appl_trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_APPL", "\033[0;" "31" "m" "E" " (%d) %s: " "%s no resources" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __func__); };};
+
+            result.status = 1;
+            result.num_resp = 0;
+            bta_dm_inq_cmpl_cb ((void *)&result);
+            return;
+        }
+
+        memcpy((*bta_dm_search_cb_ptr).p_srvc_uuid, p_data->search.p_uuid, len);
+    }
+
     result.status = BTM_StartInquiry( (tBTM_INQ_PARMS *)&p_data->search.inq_params,
                                         bta_dm_inq_results_cb,
                                         (tBTM_CMPL_CB *) bta_dm_inq_cmpl_cb);
@@ -15649,7 +16042,7 @@ void bta_dm_search_cancel (tBTA_DM_MSG *p_data)
             }
         } else {
 
-            bta_dm_search_cb.cancel_pending = 
+            (*bta_dm_search_cb_ptr).cancel_pending = 
 # 1538 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                              1
 # 1538 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -15657,7 +16050,7 @@ void bta_dm_search_cancel (tBTA_DM_MSG *p_data)
         }
     }
 
-    else if (!bta_dm_search_cb.name_discover_done) {
+    else if (!(*bta_dm_search_cb_ptr).name_discover_done) {
         BTM_CancelRemoteDeviceName();
 
         if ((p_msg = (tBTA_DM_MSG *) malloc((sizeof(tBTA_DM_MSG)))) != 
@@ -15683,25 +16076,175 @@ void bta_dm_search_cancel (tBTA_DM_MSG *p_data)
     }
 
 
+    if ((*bta_dm_search_cb_ptr).gatt_disc_active) {
+        bta_dm_cancel_gatt_discovery((*bta_dm_search_cb_ptr).peer_bdaddr);
+    }
+
+}
+# 1577 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+void bta_dm_discover (tBTA_DM_MSG *p_data)
+{
+
+    UINT16 len = (UINT16)(sizeof(tBT_UUID) * p_data->discover.num_uuid);
+
+    {if (appl_trace_level >= 4 && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "%s services_to_search=0x%04X, sdp_search=%d" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __func__, p_data->discover.services, p_data->discover.sdp_search); };}
+                                                                            ;
 
 
+    (*bta_dm_search_cb_ptr).services = p_data->discover.services;
 
 
+    bta_dm_gattc_register();
+    utl_freebuf((void **)&(*bta_dm_search_cb_ptr).p_srvc_uuid);
+    if (((*bta_dm_search_cb_ptr).num_uuid = p_data->discover.num_uuid) != 0 &&
+            p_data->discover.p_uuid != 
+# 1592 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                      ((void *)0)
+# 1592 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                          ) {
+        if (((*bta_dm_search_cb_ptr).p_srvc_uuid = (tBT_UUID *)malloc((len))) == 
+# 1593 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                                                           ((void *)0)
+# 1593 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                                               ) {
+            p_data->discover.p_cback(4, 
+# 1594 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                                          ((void *)0)
+# 1594 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                              );
+            return;
+        }
+        memcpy((*bta_dm_search_cb_ptr).p_srvc_uuid, p_data->discover.p_uuid, len);
+    }
+    (*bta_dm_search_cb_ptr).uuid_to_search = (*bta_dm_search_cb_ptr).num_uuid;
+
+
+    (*bta_dm_search_cb_ptr).p_search_cback = p_data->discover.p_cback;
+    (*bta_dm_search_cb_ptr).sdp_search = p_data->discover.sdp_search;
+    (*bta_dm_search_cb_ptr).services_to_search = (*bta_dm_search_cb_ptr).services;
+    (*bta_dm_search_cb_ptr).service_index = 0;
+    (*bta_dm_search_cb_ptr).services_found = 0;
+    (*bta_dm_search_cb_ptr).peer_name[0] = 0;
+    (*bta_dm_search_cb_ptr).sdp_search = p_data->discover.sdp_search;
+    (*bta_dm_search_cb_ptr).p_btm_inq_info = BTM_InqDbRead (p_data->discover.bd_addr);
+    (*bta_dm_search_cb_ptr).transport = p_data->discover.transport;
+
+    (*bta_dm_search_cb_ptr).name_discover_done = 
+# 1612 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                         0
+# 1612 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                              ;
+    memcpy(&(*bta_dm_search_cb_ptr).uuid, &p_data->discover.uuid, sizeof(tBT_UUID));
+    bta_dm_discover_device(p_data->discover.bd_addr);
+}
+# 1626 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+void bta_dm_di_disc_cmpl(tBTA_DM_MSG *p_data)
+{
+    tBTA_DM_DI_DISC_CMPL di_disc;
+
+    memset(&di_disc, 0, sizeof(tBTA_DM_DI_DISC_CMPL));
+    bdcpy(di_disc.bd_addr, (*bta_dm_search_cb_ptr).peer_bdaddr);
+
+    if ((p_data->hdr.offset == 0x0000)
+            || (p_data->hdr.offset == 0xFFF4)) {
+        di_disc.num_record = SDP_GetNumDiRecords((*bta_dm_di_cb_ptr).p_di_db);
+    } else {
+        di_disc.result = 1;
+    }
+
+    (*bta_dm_di_cb_ptr).p_di_db = 
+# 1640 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                          ((void *)0)
+# 1640 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                              ;
+    (*bta_dm_search_cb_ptr).p_search_cback(5, (tBTA_DM_SEARCH *) &di_disc);
+}
+# 1654 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+static void bta_dm_di_disc_callback(UINT16 result)
+{
+    tBTA_DM_MSG *p_msg;
+
+    if ((p_msg = (tBTA_DM_MSG *) malloc((sizeof(tBTA_DM_MSG)))) != 
+# 1658 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                                                    ((void *)0)
+# 1658 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                                        ) {
+        p_msg->hdr.event = BTA_DM_SEARCH_CMPL_EVT;
+        p_msg->hdr.layer_specific = BTA_DM_API_DI_DISCOVER_EVT;
+        p_msg->hdr.offset = result;
+        bta_sys_sendmsg(p_msg);
+    }
 }
 # 1677 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
 static void bta_dm_disable_search_and_disc (void)
 {
 
+    tBTA_DM_DI_DISC_CMPL di_disc;
 
-
-    if (bta_dm_search_cb.state != BTA_DM_SEARCH_IDLE) {
+    if ((*bta_dm_search_cb_ptr).state != BTA_DM_SEARCH_IDLE) {
         bta_dm_search_cancel(
 # 1683 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                             ((void *)0)
 # 1683 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
                                 );
     }
-# 1695 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+
+    if ((*bta_dm_di_cb_ptr).p_di_db != 
+# 1686 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                               ((void *)0)
+# 1686 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                   ) {
+        memset(&di_disc, 0, sizeof(tBTA_DM_DI_DISC_CMPL));
+        bdcpy(di_disc.bd_addr, (*bta_dm_search_cb_ptr).peer_bdaddr);
+        di_disc.result = 1;
+
+        (*bta_dm_di_cb_ptr).p_di_db = 
+# 1691 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                              ((void *)0)
+# 1691 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                  ;
+        (*bta_dm_search_cb_ptr).p_search_cback(5, 
+# 1692 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                                                ((void *)0)
+# 1692 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                                    );
+    }
+
+}
+# 1708 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+void bta_dm_di_disc (tBTA_DM_MSG *p_data)
+{
+    UINT16 result = 1;
+    tBTA_DM_MSG *p_msg;
+
+    (*bta_dm_search_cb_ptr).p_search_cback = p_data->di_disc.p_cback;
+    bdcpy((*bta_dm_search_cb_ptr).peer_bdaddr, p_data->di_disc.bd_addr);
+    (*bta_dm_di_cb_ptr).p_di_db = p_data->di_disc.p_sdp_db;
+
+    if (((*bta_dm_search_cb_ptr).p_sdp_db = (tSDP_DISCOVERY_DB *)malloc((8000))) != 
+# 1717 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                                                                            ((void *)0)
+# 1717 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                                                                ) {
+        if ( SDP_DiDiscover((*bta_dm_search_cb_ptr).peer_bdaddr, p_data->di_disc.p_sdp_db,
+                            p_data->di_disc.len, bta_dm_di_disc_callback) == 0x0000) {
+            result = 0;
+        }
+    } else {
+        {if (appl_trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_APPL", "\033[0;" "31" "m" "E" " (%d) %s: " "No buffer to start DI discovery" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL"); };};
+    }
+
+    if ( result == 1 &&
+            (p_msg = (tBTA_DM_MSG *) malloc((sizeof(tBTA_DM_MSG)))) != 
+# 1727 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                                                        ((void *)0)
+# 1727 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                                            ) {
+        p_msg->hdr.event = BTA_DM_SEARCH_CMPL_EVT;
+        p_msg->hdr.layer_specific = BTA_DM_API_DI_DISCOVER_EVT;
+        p_data->hdr.offset = result;
+        bta_sys_sendmsg(p_msg);
+    }
 }
 # 1745 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
 void bta_dm_inq_cmpl (tBTA_DM_MSG *p_data)
@@ -15712,26 +16255,26 @@ void bta_dm_inq_cmpl (tBTA_DM_MSG *p_data)
     {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "bta_dm_inq_cmpl" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL"); };};
 
     data.inq_cmpl.num_resps = p_data->inq_cmpl.num;
-    bta_dm_search_cb.p_search_cback(1, &data);
+    (*bta_dm_search_cb_ptr).p_search_cback(1, &data);
 
-    if ((bta_dm_search_cb.p_btm_inq_info = BTM_InqDbFirst()) != 
+    if (((*bta_dm_search_cb_ptr).p_btm_inq_info = BTM_InqDbFirst()) != 
 # 1755 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                                                ((void *)0)
 # 1755 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
                                                                    ) {
 
-        bta_dm_search_cb.name_discover_done = 
+        (*bta_dm_search_cb_ptr).name_discover_done = 
 # 1757 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                              0
 # 1757 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
                                                   ;
-        bta_dm_search_cb.peer_name[0] = 0;
+        (*bta_dm_search_cb_ptr).peer_name[0] = 0;
 
-
+        bta_dm_discover_device((*bta_dm_search_cb_ptr).p_btm_inq_info->results.remote_bd_addr);
 
     } else {
 
-        bta_dm_search_cb.services = 0;
+        (*bta_dm_search_cb_ptr).services = 0;
 
         if ((p_msg = (tBTA_DM_MSG *) malloc((sizeof(tBTA_DM_MSG)))) != 
 # 1766 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
@@ -15749,15 +16292,15 @@ void bta_dm_rmt_name (tBTA_DM_MSG *p_data)
 {
     {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "bta_dm_rmt_name" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL"); };};
 
-    if ( p_data->rem_name.result.disc_res.bd_name[0] && bta_dm_search_cb.p_btm_inq_info) {
-        bta_dm_search_cb.p_btm_inq_info->appl_knows_rem_name = 
+    if ( p_data->rem_name.result.disc_res.bd_name[0] && (*bta_dm_search_cb_ptr).p_btm_inq_info) {
+        (*bta_dm_search_cb_ptr).p_btm_inq_info->appl_knows_rem_name = 
 # 1788 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                                               1
 # 1788 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
                                                                   ;
     }
 
-
+    bta_dm_discover_device((*bta_dm_search_cb_ptr).peer_bdaddr);
 
 }
 # 1805 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -15778,8 +16321,313 @@ void bta_dm_disc_rmt_name (tBTA_DM_MSG *p_data)
         }
     }
 
+    bta_dm_discover_device(p_data->rem_name.result.disc_res.bd_addr);
+
+}
+# 1832 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+void bta_dm_sdp_result (tBTA_DM_MSG *p_data)
+{
+    tSDP_DISC_REC *p_sdp_rec = 
+# 1834 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                ((void *)0)
+# 1834 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                    ;
+    tBTA_DM_MSG *p_msg;
+    BOOLEAN scn_found = 
+# 1836 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                0
+# 1836 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                     ;
+    UINT16 service = 0xFFFF;
+    tSDP_PROTOCOL_ELEM pe;
 
 
+    tBT_UUID *p_uuid = (*bta_dm_search_cb_ptr).p_srvc_uuid;
+    tBTA_DM_SEARCH result;
+    tBT_UUID service_uuid;
+
+
+    UINT32 num_uuids = 0;
+    UINT8 uuid_list[32][16];
+
+    if ((p_data->sdp_event.sdp_result == 0x0000)
+            || (p_data->sdp_event.sdp_result == 0xFFF0)
+            || (p_data->sdp_event.sdp_result == 0xFFF4)) {
+        {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "sdp_result::0x%x" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", p_data->sdp_event.sdp_result); };};
+        do {
+            p_sdp_rec = 
+# 1854 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                       ((void *)0)
+# 1854 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                           ;
+            if ( (*bta_dm_search_cb_ptr).service_index == (31 + 1) ) {
+                p_sdp_rec = SDP_FindServiceUUIDInDb((*bta_dm_search_cb_ptr).p_sdp_db, &(*bta_dm_search_cb_ptr).uuid, p_sdp_rec);
+                if (p_sdp_rec && SDP_FindProtocolListElemInRec(p_sdp_rec, 0x0003, &pe)) {
+                    (*bta_dm_search_cb_ptr).peer_scn = (UINT8) pe.params[0];
+                    scn_found = 
+# 1859 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                               1
+# 1859 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                   ;
+                }
+            } else {
+                service = bta_service_id_to_uuid_lkup_tbl[(*bta_dm_search_cb_ptr).service_index - 1];
+                p_sdp_rec = SDP_FindServiceInDb((*bta_dm_search_cb_ptr).p_sdp_db, service, p_sdp_rec);
+            }
+
+
+            if ((*bta_dm_search_cb_ptr).service_index == 32) {
+                if ((*bta_dm_search_cb_ptr).uuid_to_search != 0 && p_uuid != 
+# 1868 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                                                     ((void *)0)
+# 1868 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                                         ) {
+                    p_uuid += ((*bta_dm_search_cb_ptr).num_uuid - (*bta_dm_search_cb_ptr).uuid_to_search);
+
+                    service = p_uuid->uu.uuid16;
+                }
+
+                do {
+
+                    p_sdp_rec = SDP_FindServiceInDb((*bta_dm_search_cb_ptr).p_sdp_db,
+                                                    0, p_sdp_rec);
+                    if (p_sdp_rec) {
+                        if (SDP_FindServiceUUIDInRec(p_sdp_rec, &service_uuid)) {
+
+                            bdcpy (result.disc_ble_res.bd_addr, (*bta_dm_search_cb_ptr).peer_bdaddr);
+                            strncpy(((char *)result.disc_ble_res.bd_name),(bta_dm_get_remname()),((248)));
+                            result.disc_ble_res.bd_name[248] = 0;
+                            result.disc_ble_res.service.len = service_uuid.len;
+                            result.disc_ble_res.service.uu.uuid16 = service_uuid.uu.uuid16;
+
+                            (*bta_dm_search_cb_ptr).p_search_cback(3, &result);
+                        }
+                    }
+
+                    if ((*bta_dm_search_cb_ptr).uuid_to_search > 0) {
+                        break;
+                    }
+
+                } while (p_sdp_rec);
+            } else
+
+            {
+
+
+                if (((p_data->sdp_event.sdp_result == 0xFFF4) &&
+                        (*bta_dm_search_cb_ptr).services != 0x3FFFFFFF) ||
+                        (p_sdp_rec != 
+# 1903 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                     ((void *)0)
+# 1903 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                         )) {
+                    if (service != 0X1200 && service != 0) {
+                        UINT16 tmp_svc = 0xFFFF;
+                        (*bta_dm_search_cb_ptr).services_found |=
+                            (tBTA_SERVICE_MASK)((1 << ((*bta_dm_search_cb_ptr).service_index - 1)));
+                        tmp_svc = bta_service_id_to_uuid_lkup_tbl[(*bta_dm_search_cb_ptr).service_index - 1];
+
+                        sdpu_uuid16_to_uuid128(tmp_svc, uuid_list[num_uuids]);
+                        num_uuids++;
+                    }
+                }
+            }
+
+            if ((*bta_dm_search_cb_ptr).services == 0x3FFFFFFF &&
+                    (*bta_dm_search_cb_ptr).services_to_search == 0) {
+
+                if ( (*bta_dm_search_cb_ptr).service_index == 30 &&
+                        (*bta_dm_search_cb_ptr).uuid_to_search > 0) {
+                    (*bta_dm_search_cb_ptr).uuid_to_search --;
+                }
+
+                if ((*bta_dm_search_cb_ptr).uuid_to_search == 0 ||
+                        (*bta_dm_search_cb_ptr).service_index != 30)
+
+                    (*bta_dm_search_cb_ptr).service_index++;
+            } else {
+                break;
+            }
+        } while ((*bta_dm_search_cb_ptr).service_index <= 32);
+
+        {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "%s services_found = %04x" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __FUNCTION__, (*bta_dm_search_cb_ptr).services_found); };}
+                                                         ;
+
+
+        if ((*bta_dm_search_cb_ptr).services == 0x3FFFFFFF) {
+            p_sdp_rec = 
+# 1938 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                       ((void *)0)
+# 1938 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                           ;
+            do {
+                tBT_UUID temp_uuid;
+
+                p_sdp_rec = SDP_FindServiceInDb_128bit((*bta_dm_search_cb_ptr).p_sdp_db, p_sdp_rec);
+                if (p_sdp_rec) {
+                    if (SDP_FindServiceUUIDInRec_128bit(p_sdp_rec, &temp_uuid)) {
+                        memcpy(uuid_list[num_uuids], temp_uuid.uu.uuid128, 16);
+                        num_uuids++;
+                    }
+                }
+            } while (p_sdp_rec);
+        }
+
+        if ((*bta_dm_search_cb_ptr).services_to_search) {
+
+            bta_dm_free_sdp_db(
+# 1954 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                              ((void *)0)
+# 1954 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                  );
+            bta_dm_find_services((*bta_dm_search_cb_ptr).peer_bdaddr);
+        } else {
+
+
+
+            BTM_SecDeleteRmtNameNotifyCallback(&bta_dm_service_search_remname_cback);
+
+
+            if ((p_msg = (tBTA_DM_MSG *) malloc((sizeof(tBTA_DM_MSG)))) != 
+# 1963 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                                                            ((void *)0)
+# 1963 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                                                ) {
+                p_msg->hdr.event = BTA_DM_DISCOVERY_RESULT_EVT;
+                p_msg->disc_result.result.disc_res.result = 0;
+                p_msg->disc_result.result.disc_res.p_raw_data = 
+# 1966 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                                               ((void *)0)
+# 1966 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                                   ;
+                p_msg->disc_result.result.disc_res.raw_data_size = 0;
+                p_msg->disc_result.result.disc_res.num_uuids = num_uuids;
+                p_msg->disc_result.result.disc_res.p_uuid_list = 
+# 1969 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                                                ((void *)0)
+# 1969 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                                    ;
+                if (num_uuids > 0) {
+                    p_msg->disc_result.result.disc_res.p_uuid_list = (UINT8 *)malloc((num_uuids * 16));
+                    if (p_msg->disc_result.result.disc_res.p_uuid_list) {
+                        memcpy(p_msg->disc_result.result.disc_res.p_uuid_list, uuid_list,
+                               num_uuids * 16);
+                    } else {
+                        p_msg->disc_result.result.disc_res.num_uuids = 0;
+                        {if (appl_trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_APPL", "\033[0;" "31" "m" "E" " (%d) %s: " "%s: Unable to allocate memory for uuid_list" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __func__); };};
+                    }
+                }
+
+
+
+                if ( (*bta_dm_search_cb_ptr).p_sdp_db != 
+# 1983 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                                  ((void *)0) 
+# 1983 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                       && (*bta_dm_search_cb_ptr).p_sdp_db->raw_used != 0 &&
+                        (*bta_dm_search_cb_ptr).p_sdp_db->raw_data != 
+# 1984 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                                              ((void *)0)
+# 1984 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                                  ) {
+                    {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "%s raw_data used = 0x%x raw_data_ptr = %p" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __func__, (*bta_dm_search_cb_ptr).p_sdp_db->raw_used, (*bta_dm_search_cb_ptr).p_sdp_db->raw_data); };}
+
+
+                                                            ;
+
+                    p_msg->disc_result.result.disc_res.p_raw_data = malloc(((*bta_dm_search_cb_ptr).p_sdp_db->raw_used));
+                    if ( 
+# 1991 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                        ((void *)0) 
+# 1991 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                             != p_msg->disc_result.result.disc_res.p_raw_data ) {
+                        memcpy( p_msg->disc_result.result.disc_res.p_raw_data,
+                                    (*bta_dm_search_cb_ptr).p_sdp_db->raw_data,
+                                    (*bta_dm_search_cb_ptr).p_sdp_db->raw_used );
+
+                        p_msg->disc_result.result.disc_res.raw_data_size =
+                            (*bta_dm_search_cb_ptr).p_sdp_db->raw_used;
+
+                    } else {
+                        {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "%s Alloc failed to allocate %d bytes !!" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __func__, (*bta_dm_search_cb_ptr).p_sdp_db->raw_used); };}
+                                                                             ;
+                    }
+
+                    (*bta_dm_search_cb_ptr).p_sdp_db->raw_data = 
+# 2004 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                                         ((void *)0)
+# 2004 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                             ;
+                    (*bta_dm_search_cb_ptr).p_sdp_db->raw_used = 0;
+                    (*bta_dm_search_cb_ptr).p_sdp_db->raw_size = 0;
+                } else {
+                    {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "%s raw data size is 0 or raw_data is null!!" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __func__); };};
+                }
+
+                bta_dm_free_sdp_db(
+# 2011 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                  ((void *)0)
+# 2011 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                      );
+                p_msg->disc_result.result.disc_res.services = (*bta_dm_search_cb_ptr).services_found;
+
+
+                if ( scn_found ) {
+                    p_msg->disc_result.result.disc_res.result = (3 + (*bta_dm_search_cb_ptr).peer_scn);
+                    p_msg->disc_result.result.disc_res.services |= 0x40000000;
+
+                    {if (appl_trace_level >= 4 && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " " Piggy back the SCN over result field  SCN=%d" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", (*bta_dm_search_cb_ptr).peer_scn); };};
+
+                }
+                bdcpy (p_msg->disc_result.result.disc_res.bd_addr, (*bta_dm_search_cb_ptr).peer_bdaddr);
+                strncpy(((char *)p_msg->disc_result.result.disc_res.bd_name),(bta_dm_get_remname()),((248 - 1)))
+                                                                      ;
+
+
+                p_msg->disc_result.result.disc_res.bd_name[248 - 1] = 0;
+
+                bta_sys_sendmsg(p_msg);
+            }
+        }
+    } else {
+
+        if (p_data->sdp_event.sdp_result == 0xFFF1 || p_data->sdp_event.sdp_result == 0xFFF7
+                || p_data->sdp_event.sdp_result == 0xFFF6) {
+            (*bta_dm_search_cb_ptr).wait_disc = 
+# 2036 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                        0
+# 2036 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                             ;
+        }
+
+
+        free(((*bta_dm_search_cb_ptr).p_sdp_db));
+        (*bta_dm_search_cb_ptr).p_sdp_db = 
+# 2041 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                   ((void *)0)
+# 2041 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                       ;
+
+        BTM_SecDeleteRmtNameNotifyCallback(&bta_dm_service_search_remname_cback);
+
+        if ((p_msg = (tBTA_DM_MSG *) malloc((sizeof(tBTA_DM_MSG)))) != 
+# 2045 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                                                        ((void *)0)
+# 2045 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                                            ) {
+            p_msg->hdr.event = BTA_DM_DISCOVERY_RESULT_EVT;
+            p_msg->disc_result.result.disc_res.result = 1;
+            p_msg->disc_result.result.disc_res.services = (*bta_dm_search_cb_ptr).services_found;
+            bdcpy (p_msg->disc_result.result.disc_res.bd_addr, (*bta_dm_search_cb_ptr).peer_bdaddr);
+            strncpy(((char *)p_msg->disc_result.result.disc_res.bd_name),(bta_dm_get_remname()),((248 - 1)))
+                                                                  ;
+
+
+            p_msg->disc_result.result.disc_res.bd_name[248 - 1] = 0;
+
+            bta_sys_sendmsg(p_msg);
+        }
+    }
 }
 # 2071 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
 void bta_dm_search_cmpl (tBTA_DM_MSG *p_data)
@@ -15787,15 +16635,15 @@ void bta_dm_search_cmpl (tBTA_DM_MSG *p_data)
     {if (appl_trace_level >= 4 && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "%s" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __func__); };};
 
 
-
+    utl_freebuf((void **)&(*bta_dm_search_cb_ptr).p_srvc_uuid);
 
 
     if (p_data->hdr.layer_specific == BTA_DM_API_DI_DISCOVER_EVT) {
 
-
+        bta_dm_di_disc_cmpl(p_data);
 
     } else {
-        bta_dm_search_cb.p_search_cback(4, 
+        (*bta_dm_search_cb_ptr).p_search_cback(4, 
 # 2084 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                                              ((void *)0)
 # 2084 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -15809,8 +16657,8 @@ void bta_dm_disc_result (tBTA_DM_MSG *p_data)
 
 
 
-    if ((bta_dm_search_cb.services & ((0x3FFFFFFF | 0x40000000 ) & ~0x20000000))) {
-        bta_dm_search_cb.p_search_cback(2, &p_data->disc_result.result);
+    if (((*bta_dm_search_cb_ptr).services & ((0x3FFFFFFF | 0x40000000 ) & ~0x20000000))) {
+        (*bta_dm_search_cb_ptr).p_search_cback(2, &p_data->disc_result.result);
     }
 
 
@@ -15831,31 +16679,31 @@ void bta_dm_disc_result (tBTA_DM_MSG *p_data)
 # 2128 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
 void bta_dm_search_result (tBTA_DM_MSG *p_data)
 {
-    {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "%s searching:0x%04x, result:0x%04x" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __func__, bta_dm_search_cb.services, p_data->disc_result.result.disc_res.services); };}
+    {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "%s searching:0x%04x, result:0x%04x" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __func__, (*bta_dm_search_cb_ptr).services, p_data->disc_result.result.disc_res.services); };}
 
                                                                   ;
 
 
-    if (( !bta_dm_search_cb.services )
-            || (( bta_dm_search_cb.services ) && ( p_data->disc_result.result.disc_res.services ))) {
-        bta_dm_search_cb.p_search_cback(2, &p_data->disc_result.result);
+    if (( !(*bta_dm_search_cb_ptr).services )
+            || (( (*bta_dm_search_cb_ptr).services ) && ( p_data->disc_result.result.disc_res.services ))) {
+        (*bta_dm_search_cb_ptr).p_search_cback(2, &p_data->disc_result.result);
     }
 
 
-    if (!bta_dm_search_cb.wait_disc ) {
+    if (!(*bta_dm_search_cb_ptr).wait_disc ) {
 
-        if ( bta_dm_search_cb.p_btm_inq_info ) {
+        if ( (*bta_dm_search_cb_ptr).p_btm_inq_info ) {
             bta_dm_discover_next_device();
         }
     } else {
 
-        bta_dm_search_cb.sdp_results = 
+        (*bta_dm_search_cb_ptr).sdp_results = 
 # 2148 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                       1
 # 2148 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
                                           ;
-        bta_dm_search_cb.search_timer.p_cback = (TIMER_CBACK *)&bta_dm_search_timer_cback;
-        bta_sys_start_timer(&bta_dm_search_cb.search_timer, 0, 1000 * (4 + 1) );
+        (*bta_dm_search_cb_ptr).search_timer.p_cback = (TIMER_CBACK *)&bta_dm_search_timer_cback;
+        bta_sys_start_timer(&(*bta_dm_search_cb_ptr).search_timer, 0, 1000 * (4 + 1) );
     }
 
 }
@@ -15865,7 +16713,7 @@ static void bta_dm_search_timer_cback (TIMER_LIST_ENT *p_tle)
     (void)(p_tle);
 
     {if (appl_trace_level >= 4 && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "%s" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __func__); };};
-    bta_dm_search_cb.wait_disc = 
+    (*bta_dm_search_cb_ptr).wait_disc = 
 # 2170 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                 0
 # 2170 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -15875,24 +16723,47 @@ static void bta_dm_search_timer_cback (TIMER_LIST_ENT *p_tle)
     bta_dm_discover_next_device();
 
 }
+# 2188 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+void bta_dm_free_sdp_db (tBTA_DM_MSG *p_data)
+{
+    (void)(p_data);
+    if ((*bta_dm_search_cb_ptr).p_sdp_db) {
+        free(((*bta_dm_search_cb_ptr).p_sdp_db));
+        (*bta_dm_search_cb_ptr).p_sdp_db = 
+# 2193 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                   ((void *)0)
+# 2193 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                       ;
+    }
+}
 # 2207 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
 void bta_dm_queue_search (tBTA_DM_MSG *p_data)
 {
-    if (bta_dm_search_cb.p_search_queue) {
-        free((bta_dm_search_cb.p_search_queue));
+    if ((*bta_dm_search_cb_ptr).p_search_queue) {
+        free(((*bta_dm_search_cb_ptr).p_search_queue));
     }
 
-    bta_dm_search_cb.p_search_queue = (tBTA_DM_MSG *)malloc((sizeof(tBTA_DM_API_SEARCH)));
-    memcpy(bta_dm_search_cb.p_search_queue, p_data, sizeof(tBTA_DM_API_SEARCH));
+    (*bta_dm_search_cb_ptr).p_search_queue = (tBTA_DM_MSG *)malloc((sizeof(tBTA_DM_API_SEARCH)));
+    memcpy((*bta_dm_search_cb_ptr).p_search_queue, p_data, sizeof(tBTA_DM_API_SEARCH));
 
+}
+# 2228 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+void bta_dm_queue_disc (tBTA_DM_MSG *p_data)
+{
+    if ((*bta_dm_search_cb_ptr).p_search_queue) {
+        free(((*bta_dm_search_cb_ptr).p_search_queue));
+    }
+
+    (*bta_dm_search_cb_ptr).p_search_queue = (tBTA_DM_MSG *)malloc((sizeof(tBTA_DM_API_DISCOVER)));
+    memcpy((*bta_dm_search_cb_ptr).p_search_queue, p_data, sizeof(tBTA_DM_API_DISCOVER));
 }
 # 2248 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
 void bta_dm_search_clear_queue (tBTA_DM_MSG *p_data)
 {
     (void)(p_data);
-    if (bta_dm_search_cb.p_search_queue) {
-        free((bta_dm_search_cb.p_search_queue));
-        bta_dm_search_cb.p_search_queue = 
+    if ((*bta_dm_search_cb_ptr).p_search_queue) {
+        free(((*bta_dm_search_cb_ptr).p_search_queue));
+        (*bta_dm_search_cb_ptr).p_search_queue = 
 # 2253 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                          ((void *)0)
 # 2253 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -15903,9 +16774,9 @@ void bta_dm_search_clear_queue (tBTA_DM_MSG *p_data)
 void bta_dm_search_cancel_cmpl (tBTA_DM_MSG *p_data)
 {
     (void)(p_data);
-    if (bta_dm_search_cb.p_search_queue) {
-        bta_sys_sendmsg(bta_dm_search_cb.p_search_queue);
-        bta_dm_search_cb.p_search_queue = 
+    if ((*bta_dm_search_cb_ptr).p_search_queue) {
+        bta_sys_sendmsg((*bta_dm_search_cb_ptr).p_search_queue);
+        (*bta_dm_search_cb_ptr).p_search_queue = 
 # 2271 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                          ((void *)0)
 # 2271 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -15913,26 +16784,171 @@ void bta_dm_search_cancel_cmpl (tBTA_DM_MSG *p_data)
     }
 
 }
+# 2287 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+void bta_dm_search_cancel_transac_cmpl(tBTA_DM_MSG *p_data)
+{
+    (void)(p_data);
+    if ((*bta_dm_search_cb_ptr).p_sdp_db) {
+        free(((*bta_dm_search_cb_ptr).p_sdp_db));
+        (*bta_dm_search_cb_ptr).p_sdp_db = 
+# 2292 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                   ((void *)0)
+# 2292 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                       ;
+    }
+
+    bta_dm_search_cancel_notify(
+# 2295 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                               ((void *)0)
+# 2295 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                   );
+}
 # 2309 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
 void bta_dm_search_cancel_notify (tBTA_DM_MSG *p_data)
 {
     (void)(p_data);
-    if (bta_dm_search_cb.p_search_cback) {
-        bta_dm_search_cb.p_search_cback(6, 
+    if ((*bta_dm_search_cb_ptr).p_search_cback) {
+        (*bta_dm_search_cb_ptr).p_search_cback(6, 
 # 2313 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                                                       ((void *)0)
 # 2313 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
                                                                           );
     }
-    if (!bta_dm_search_cb.name_discover_done) {
+    if (!(*bta_dm_search_cb_ptr).name_discover_done) {
         BTM_CancelRemoteDeviceName();
     }
 
+    if ((*bta_dm_search_cb_ptr).gatt_disc_active) {
+        bta_dm_cancel_gatt_discovery((*bta_dm_search_cb_ptr).peer_bdaddr);
+    }
 
 
+}
+# 2336 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+static void bta_dm_find_services ( BD_ADDR bd_addr)
+{
+    tBT_UUID uuid;
+    tBTA_DM_MSG *p_msg;
+
+    memset (&uuid, 0, sizeof(tBT_UUID));
+
+    while ((*bta_dm_search_cb_ptr).service_index < 32) {
+        tBTA_SERVICE_MASK this_service_mask = (tBTA_SERVICE_MASK)((1 << ((*bta_dm_search_cb_ptr).service_index)));
+        if ( (*bta_dm_search_cb_ptr).services_to_search & this_service_mask) {
+            if (((*bta_dm_search_cb_ptr).p_sdp_db = (tSDP_DISCOVERY_DB *)malloc((8000))) != 
+# 2346 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                                                                                    ((void *)0)
+# 2346 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                                                                        ) {
+                {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "bta_dm_search_cb.services = %04x***********" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", (*bta_dm_search_cb_ptr).services); };};
+
+                if ((*bta_dm_search_cb_ptr).services == 0x3FFFFFFF ) {
+                    {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "%s services_to_search=%08x" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __func__, (*bta_dm_search_cb_ptr).services_to_search); };};
+                    if ((*bta_dm_search_cb_ptr).services_to_search & 0x00000001) {
+                        uuid.uu.uuid16 = bta_service_id_to_uuid_lkup_tbl[0];
+                        (*bta_dm_search_cb_ptr).services_to_search &= ~0x00000001;
+                    } else {
+                        uuid.uu.uuid16 = 0x0100;
+                        (*bta_dm_search_cb_ptr).services_to_search = 0;
+                    }
+                } else {
 
 
+                    if (this_service_mask == 0x20000000) {
+                        if ((*bta_dm_search_cb_ptr).uuid_to_search > 0 && (*bta_dm_search_cb_ptr).p_srvc_uuid) {
+                            memcpy(&uuid,
+                                   (const void *)((*bta_dm_search_cb_ptr).p_srvc_uuid +
+                                                  (*bta_dm_search_cb_ptr).num_uuid - (*bta_dm_search_cb_ptr).uuid_to_search),
+                                   sizeof(tBT_UUID));
 
+                            (*bta_dm_search_cb_ptr).uuid_to_search -- ;
+                        } else {
+                            uuid.uu.uuid16 = bta_service_id_to_uuid_lkup_tbl[(*bta_dm_search_cb_ptr).service_index];
+                        }
+
+
+                        if ((*bta_dm_search_cb_ptr).uuid_to_search == 0) {
+                            (*bta_dm_search_cb_ptr).services_to_search &=
+                                (tBTA_SERVICE_MASK)(~((1 << ((*bta_dm_search_cb_ptr).service_index))));
+                        }
+
+                    } else
+
+                    {
+
+                        (*bta_dm_search_cb_ptr).services_to_search &=
+                            (tBTA_SERVICE_MASK)(~((1 << ((*bta_dm_search_cb_ptr).service_index))));
+                        uuid.uu.uuid16 = bta_service_id_to_uuid_lkup_tbl[(*bta_dm_search_cb_ptr).service_index];
+                    }
+                }
+
+                if (uuid.len == 0) {
+                    uuid.len = 2;
+                }
+
+                if (this_service_mask == 0x40000000) {
+                    memcpy(&uuid, &(*bta_dm_search_cb_ptr).uuid, sizeof(tBT_UUID));
+                }
+
+                {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "%s search UUID = %04x" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __func__, uuid.uu.uuid16); };};
+                SDP_InitDiscoveryDb ((*bta_dm_search_cb_ptr).p_sdp_db, 8000, 1, &uuid, 0, 
+# 2398 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                                                                                ((void *)0)
+# 2398 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                                                                    );
+
+                memset(g_disc_raw_data_buf, 0, (1024));
+                (*bta_dm_search_cb_ptr).p_sdp_db->raw_data = g_disc_raw_data_buf;
+
+                (*bta_dm_search_cb_ptr).p_sdp_db->raw_size = (1024);
+
+                if (!SDP_ServiceSearchAttributeRequest (bd_addr, (*bta_dm_search_cb_ptr).p_sdp_db, &bta_dm_sdp_callback)) {
+
+
+                    free(((*bta_dm_search_cb_ptr).p_sdp_db));
+                    (*bta_dm_search_cb_ptr).p_sdp_db = 
+# 2409 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                               ((void *)0)
+# 2409 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                   ;
+                    (*bta_dm_search_cb_ptr).service_index = 32;
+
+                } else {
+
+                    if ((this_service_mask == 0x20000000 &&
+                            (*bta_dm_search_cb_ptr).uuid_to_search == 0) ||
+                            this_service_mask != 0x20000000)
+
+                        (*bta_dm_search_cb_ptr).service_index++;
+                    return;
+                }
+            } else {
+                {if (appl_trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_APPL", "\033[0;" "31" "m" "E" " (%d) %s: " "#### Failed to allocate SDP DB buffer! ####" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL"); };};
+            }
+        }
+
+        (*bta_dm_search_cb_ptr).service_index++;
+    }
+
+
+    if ((*bta_dm_search_cb_ptr).service_index >= 32) {
+        if ((p_msg = (tBTA_DM_MSG *) malloc((sizeof(tBTA_DM_MSG)))) != 
+# 2431 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                                                        ((void *)0)
+# 2431 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                                            ) {
+            p_msg->hdr.event = BTA_DM_DISCOVERY_RESULT_EVT;
+            p_msg->disc_result.result.disc_res.services = (*bta_dm_search_cb_ptr).services_found;
+            bdcpy (p_msg->disc_result.result.disc_res.bd_addr, (*bta_dm_search_cb_ptr).peer_bdaddr);
+            strncpy(((char *)p_msg->disc_result.result.disc_res.bd_name),(bta_dm_get_remname()),((248 - 1)))
+                                                                  ;
+
+
+            p_msg->disc_result.result.disc_res.bd_name[248 - 1] = 0;
+
+            bta_sys_sendmsg(p_msg);
+        }
+    }
 }
 # 2456 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
 static void bta_dm_discover_next_device(void)
@@ -15943,23 +16959,23 @@ static void bta_dm_discover_next_device(void)
     {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "bta_dm_discover_next_device" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL"); };};
 
 
-    if ((bta_dm_search_cb.p_btm_inq_info = BTM_InqDbNext(bta_dm_search_cb.p_btm_inq_info)) != 
+    if (((*bta_dm_search_cb_ptr).p_btm_inq_info = BTM_InqDbNext((*bta_dm_search_cb_ptr).p_btm_inq_info)) != 
 # 2464 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                                                                              ((void *)0)
 # 2464 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
                                                                                                  ) {
-        bta_dm_search_cb.name_discover_done = 
+        (*bta_dm_search_cb_ptr).name_discover_done = 
 # 2465 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                              0
 # 2465 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
                                                   ;
-        bta_dm_search_cb.peer_name[0] = 0;
+        (*bta_dm_search_cb_ptr).peer_name[0] = 0;
 
-
+        bta_dm_discover_device((*bta_dm_search_cb_ptr).p_btm_inq_info->results.remote_bd_addr);
 
     } else {
 
-        bta_dm_search_cb.services = 0;
+        (*bta_dm_search_cb_ptr).services = 0;
 
         if ((p_msg = (tBTA_DM_MSG *) malloc((sizeof(tBTA_DM_MSG)))) != 
 # 2474 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
@@ -15970,6 +16986,202 @@ static void bta_dm_discover_next_device(void)
             p_msg->hdr.layer_specific = BTA_DM_API_DISCOVER_EVT;
             bta_sys_sendmsg(p_msg);
         }
+    }
+}
+# 2492 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+static void bta_dm_discover_device(BD_ADDR remote_bd_addr)
+{
+    tBTA_DM_MSG *p_msg;
+    tBT_TRANSPORT transport = 1;
+
+
+    if ((*bta_dm_search_cb_ptr).transport == 0) {
+        tBT_DEVICE_TYPE dev_type;
+        tBLE_ADDR_TYPE addr_type;
+
+        BTM_ReadDevInfo(remote_bd_addr, &dev_type, &addr_type);
+        if (dev_type == 0x02 || addr_type == 0x01) {
+            transport = 2;
+        }
+    } else {
+        transport = (*bta_dm_search_cb_ptr).transport;
+    }
+
+
+
+    (*bta_dm_search_cb_ptr).transport = 0;
+
+    {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "%s BDA:0x%02X%02X%02X%02X%02X%02X" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __func__, remote_bd_addr[0], remote_bd_addr[1], remote_bd_addr[2], remote_bd_addr[3], remote_bd_addr[4], remote_bd_addr[5]); };}
+
+
+                                                          ;
+
+    bdcpy((*bta_dm_search_cb_ptr).peer_bdaddr, remote_bd_addr);
+
+    {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "%s name_discover_done = %d p_btm_inq_info %p state = %d, transport=%d" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __func__, (*bta_dm_search_cb_ptr).name_discover_done, (*bta_dm_search_cb_ptr).p_btm_inq_info, (*bta_dm_search_cb_ptr).state, transport); };}
+
+
+
+
+                               ;
+
+    if ((*bta_dm_search_cb_ptr).p_btm_inq_info) {
+        {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "%s appl_knows_rem_name %d" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __func__, (*bta_dm_search_cb_ptr).p_btm_inq_info->appl_knows_rem_name); };}
+                                                                              ;
+    }
+
+    if (((*bta_dm_search_cb_ptr).p_btm_inq_info)
+            && ((*bta_dm_search_cb_ptr).p_btm_inq_info->results.device_type == 0x02)
+            && ((*bta_dm_search_cb_ptr).state == BTA_DM_SEARCH_ACTIVE)) {
+
+        (*bta_dm_search_cb_ptr).name_discover_done = 
+# 2537 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                             1
+# 2537 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                 ;
+    }
+
+
+    if ((!(*bta_dm_search_cb_ptr).name_discover_done)
+            && (( (*bta_dm_search_cb_ptr).p_btm_inq_info == 
+# 2542 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                                    ((void *)0) 
+# 2542 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                         )
+                || ((*bta_dm_search_cb_ptr).p_btm_inq_info && (!(*bta_dm_search_cb_ptr).p_btm_inq_info->appl_knows_rem_name)))) {
+        if (bta_dm_read_remote_device_name((*bta_dm_search_cb_ptr).peer_bdaddr, transport) == 
+# 2544 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                                                                      1
+# 2544 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                                                          ) {
+            return;
+        }
+
+
+        (*bta_dm_search_cb_ptr).name_discover_done = 
+# 2549 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                             1
+# 2549 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                 ;
+    }
+
+
+    if ( (*bta_dm_search_cb_ptr).services ) {
+
+        (*bta_dm_search_cb_ptr).service_index = 0;
+        (*bta_dm_search_cb_ptr).services_found = 0;
+        (*bta_dm_search_cb_ptr).services_to_search = (*bta_dm_search_cb_ptr).services;
+
+        (*bta_dm_search_cb_ptr).uuid_to_search = (*bta_dm_search_cb_ptr).num_uuid;
+
+        if (((*bta_dm_search_cb_ptr).p_btm_inq_info != 
+# 2561 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                               ((void *)0)
+# 2561 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                   ) &&
+                (*bta_dm_search_cb_ptr).services != 0x40000000
+                && ((*bta_dm_search_cb_ptr).sdp_search == 
+# 2563 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                                  0
+# 2563 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                       )) {
+
+            bta_dm_eir_search_services( &(*bta_dm_search_cb_ptr).p_btm_inq_info->results,
+                                        &(*bta_dm_search_cb_ptr).services_to_search,
+                                        &(*bta_dm_search_cb_ptr).services_found );
+        }
+
+
+        if ((*bta_dm_search_cb_ptr).services_to_search) {
+
+
+
+            if (BTM_IsAclConnectionUp((*bta_dm_search_cb_ptr).peer_bdaddr, 1)) {
+                (*bta_dm_search_cb_ptr).wait_disc = 
+# 2576 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                            0
+# 2576 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                 ;
+            } else {
+                (*bta_dm_search_cb_ptr).wait_disc = 
+# 2578 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                            1
+# 2578 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                ;
+            }
+
+
+            if ( (*bta_dm_search_cb_ptr).p_btm_inq_info ) {
+                {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "%s p_btm_inq_info %p results.device_type 0x%x services_to_search 0x%x" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __func__, (*bta_dm_search_cb_ptr).p_btm_inq_info, (*bta_dm_search_cb_ptr).p_btm_inq_info->results.device_type, (*bta_dm_search_cb_ptr).services_to_search); };}
+
+
+
+                                                                     ;
+            }
+
+            if (transport == 2) {
+                if ((*bta_dm_search_cb_ptr).services_to_search & 0x20000000) {
+
+                    memset(g_disc_raw_data_buf, 0, (1024));
+                    (*bta_dm_search_cb_ptr).p_ble_rawdata = g_disc_raw_data_buf;
+
+                    (*bta_dm_search_cb_ptr).ble_raw_size = (1024);
+                    (*bta_dm_search_cb_ptr).ble_raw_used = 0;
+
+
+                    btm_dm_start_gatt_discovery((*bta_dm_search_cb_ptr).peer_bdaddr);
+                    return;
+                }
+            } else
+
+            {
+                (*bta_dm_search_cb_ptr).sdp_results = 
+# 2606 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                              0
+# 2606 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                   ;
+                bta_dm_find_services((*bta_dm_search_cb_ptr).peer_bdaddr);
+                return;
+            }
+        }
+    }
+
+
+    if ((p_msg = (tBTA_DM_MSG *) malloc((sizeof(tBTA_DM_MSG)))) != 
+# 2614 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                                                    ((void *)0)
+# 2614 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                                        ) {
+        p_msg->hdr.event = BTA_DM_DISCOVERY_RESULT_EVT;
+
+        memset(&(p_msg->disc_result.result), 0, sizeof(tBTA_DM_DISC_RES));
+        p_msg->disc_result.result.disc_res.result = 0;
+        p_msg->disc_result.result.disc_res.services = (*bta_dm_search_cb_ptr).services_found;
+        bdcpy (p_msg->disc_result.result.disc_res.bd_addr, (*bta_dm_search_cb_ptr).peer_bdaddr);
+        strncpy(((char *)p_msg->disc_result.result.disc_res.bd_name),((char *)(*bta_dm_search_cb_ptr).peer_name),((248 - 1)))
+                                                                            ;
+
+
+        p_msg->disc_result.result.disc_res.bd_name[248 - 1] = 0;
+
+        bta_sys_sendmsg(p_msg);
+    }
+}
+# 2640 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+static void bta_dm_sdp_callback (UINT16 sdp_status)
+{
+
+    tBTA_DM_SDP_RESULT *p_msg;
+
+    if ((p_msg = (tBTA_DM_SDP_RESULT *) malloc((sizeof(tBTA_DM_SDP_RESULT)))) != 
+# 2645 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                                                                  ((void *)0)
+# 2645 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                                                      ) {
+        p_msg->hdr.event = BTA_DM_SDP_RESULT_EVT;
+        p_msg->sdp_result = sdp_status;
+        bta_sys_sendmsg(p_msg);
+
     }
 }
 # 2662 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -16018,8 +17230,8 @@ static void bta_dm_inq_results_cb (tBTM_INQ_RESULTS *p_inq, UINT8 *p_eir)
 
     }
 
-    if (bta_dm_search_cb.p_search_cback) {
-        bta_dm_search_cb.p_search_cback(0, &result);
+    if ((*bta_dm_search_cb_ptr).p_search_cback) {
+        (*bta_dm_search_cb_ptr).p_search_cback(0, &result);
     }
 
     if (p_inq_info) {
@@ -16042,7 +17254,7 @@ static void bta_dm_inq_cmpl_cb (void *p_result)
 {
     tBTA_DM_MSG *p_msg;
 
-    if (bta_dm_search_cb.cancel_pending == 
+    if ((*bta_dm_search_cb_ptr).cancel_pending == 
 # 2721 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                           0
 # 2721 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -16059,7 +17271,7 @@ static void bta_dm_inq_cmpl_cb (void *p_result)
             bta_sys_sendmsg(p_msg);
         }
     } else {
-        bta_dm_search_cb.cancel_pending = 
+        (*bta_dm_search_cb_ptr).cancel_pending = 
 # 2730 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                          0
 # 2730 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -16092,7 +17304,7 @@ static void bta_dm_service_search_remname_cback (BD_ADDR bd_addr, DEV_CLASS dc, 
     {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "bta_dm_service_search_remname_cback name=<%s>" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", bd_name); };};
 
 
-    if (!bdcmp( bta_dm_search_cb.peer_bdaddr, bd_addr)) {
+    if (!bdcmp( (*bta_dm_search_cb_ptr).peer_bdaddr, bd_addr)) {
         rem_name.length = strlen((char *)bd_name);
         if (rem_name.length > (248 - 1)) {
             rem_name.length = (248 - 1);
@@ -16104,7 +17316,7 @@ static void bta_dm_service_search_remname_cback (BD_ADDR bd_addr, DEV_CLASS dc, 
         bta_dm_remname_cback(&rem_name);
     } else {
 
-        btm_status = BTM_ReadRemoteDeviceName (bta_dm_search_cb.peer_bdaddr,
+        btm_status = BTM_ReadRemoteDeviceName ((*bta_dm_search_cb_ptr).peer_bdaddr,
                                                (tBTM_CMPL_CB *) bta_dm_remname_cback,
                                                1);
         if ( btm_status == BTM_BUSY ) {
@@ -16129,19 +17341,19 @@ static void bta_dm_remname_cback (tBTM_REMOTE_DEV_NAME *p_remote_name)
     {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "bta_dm_remname_cback len = %d name=<%s>" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", p_remote_name->length, p_remote_name->remote_bd_name); };}
                                                    ;
 
-    bta_dm_search_cb.name_discover_done = 
+    (*bta_dm_search_cb_ptr).name_discover_done = 
 # 2807 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                          1
 # 2807 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
                                              ;
-    strncpy(((char *)bta_dm_search_cb.peer_name),((char *)p_remote_name->remote_bd_name),((248)));
-    bta_dm_search_cb.peer_name[248] = 0;
+    strncpy(((char *)(*bta_dm_search_cb_ptr).peer_name),((char *)p_remote_name->remote_bd_name),((248)));
+    (*bta_dm_search_cb_ptr).peer_name[248] = 0;
 
     BTM_SecDeleteRmtNameNotifyCallback(&bta_dm_service_search_remname_cback);
 
 
-    if (bta_dm_search_cb.transport == 2 ) {
-        GAP_BleReadPeerPrefConnParams (bta_dm_search_cb.peer_bdaddr);
+    if ((*bta_dm_search_cb_ptr).transport == 2 ) {
+        GAP_BleReadPeerPrefConnParams ((*bta_dm_search_cb_ptr).peer_bdaddr);
     }
 
 
@@ -16150,7 +17362,7 @@ static void bta_dm_remname_cback (tBTM_REMOTE_DEV_NAME *p_remote_name)
                                                                               ((void *)0)
 # 2819 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
                                                                                   ) {
-        bdcpy (p_msg->result.disc_res.bd_addr, bta_dm_search_cb.peer_bdaddr);
+        bdcpy (p_msg->result.disc_res.bd_addr, (*bta_dm_search_cb_ptr).peer_bdaddr);
         strncpy(((char *)p_msg->result.disc_res.bd_name),((char *)p_remote_name->remote_bd_name),((248)));
 
 
@@ -16178,7 +17390,7 @@ static UINT8 bta_dm_authorize_cback (BD_ADDR bd_addr, DEV_CLASS dev_class, BD_NA
     sec_event.authorize.bd_name[248 - 1] = 0;
 
 
-
+    sec_event.authorize.service = service_id;
 
 
     while (index < 32) {
@@ -16192,17 +17404,84 @@ static UINT8 bta_dm_authorize_cback (BD_ADDR bd_addr, DEV_CLASS dev_class, BD_NA
 
 
 
-    if (bta_dm_cb.p_sec_cback && (index < 32
+    if ((*bta_dm_cb_ptr).p_sec_cback && (index < 32
 
 
-
+                                  || (service_id >= (51 + 1) && service_id <= (65 - 1))
 
                                  )) {
-        bta_dm_cb.p_sec_cback(4, &sec_event);
+        (*bta_dm_cb_ptr).p_sec_cback(4, &sec_event);
         return BTM_CMD_STARTED;
     } else {
         return BTM_NOT_AUTHORIZED;
     }
+}
+# 2897 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+ static void bta_dm_pinname_cback (void *p_data)
+{
+    tBTM_REMOTE_DEV_NAME *p_result = (tBTM_REMOTE_DEV_NAME *)p_data;
+    tBTA_DM_SEC sec_event;
+    UINT32 bytes_to_copy;
+    tBTA_DM_SEC_EVT event = (*bta_dm_cb_ptr).pin_evt;
+
+    if (10 == event) {
+
+        bdcpy(sec_event.cfm_req.bd_addr, (*bta_dm_cb_ptr).pin_bd_addr);
+        {((UINT8 *)(sec_event.cfm_req.dev_class))[0] = ((UINT8 *)((*bta_dm_cb_ptr).pin_dev_class))[0]; ((UINT8 *)(sec_event.cfm_req.dev_class))[1] = ((UINT8 *)((*bta_dm_cb_ptr).pin_dev_class))[1]; ((UINT8 *)(sec_event.cfm_req.dev_class))[2] = ((UINT8 *)((*bta_dm_cb_ptr).pin_dev_class))[2];};
+
+        if (p_result && p_result->status == BTM_SUCCESS) {
+            bytes_to_copy = (p_result->length < (248 - 1))
+                            ? p_result->length : (248 - 1);
+            memcpy(sec_event.cfm_req.bd_name, p_result->remote_bd_name, bytes_to_copy);
+            sec_event.pin_req.bd_name[248 - 1] = 0;
+        } else {
+            sec_event.cfm_req.bd_name[0] = 0;
+        }
+
+        sec_event.key_notif.passkey = (*bta_dm_cb_ptr).num_val;
+
+
+        sec_event.cfm_req.just_works = (*bta_dm_cb_ptr).just_works;
+    } else {
+
+        bdcpy(sec_event.pin_req.bd_addr, (*bta_dm_cb_ptr).pin_bd_addr);
+        {((UINT8 *)(sec_event.pin_req.dev_class))[0] = ((UINT8 *)((*bta_dm_cb_ptr).pin_dev_class))[0]; ((UINT8 *)(sec_event.pin_req.dev_class))[1] = ((UINT8 *)((*bta_dm_cb_ptr).pin_dev_class))[1]; ((UINT8 *)(sec_event.pin_req.dev_class))[2] = ((UINT8 *)((*bta_dm_cb_ptr).pin_dev_class))[2];};
+
+        if (p_result && p_result->status == BTM_SUCCESS) {
+            bytes_to_copy = (p_result->length < (248 - 1))
+                            ? p_result->length : (248 - 1);
+            memcpy(sec_event.pin_req.bd_name, p_result->remote_bd_name, bytes_to_copy);
+            sec_event.pin_req.bd_name[248 - 1] = 0;
+        } else {
+            sec_event.pin_req.bd_name[0] = 0;
+        }
+
+        event = (*bta_dm_cb_ptr).pin_evt;
+        sec_event.key_notif.passkey = (*bta_dm_cb_ptr).num_val;
+    }
+
+    if ( (*bta_dm_cb_ptr).p_sec_cback ) {
+        (*bta_dm_cb_ptr).p_sec_cback(event, &sec_event);
+    }
+}
+# 2955 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+static UINT8 bta_dm_pin_cback (BD_ADDR bd_addr, DEV_CLASS dev_class, BD_NAME bd_name,
+                               BOOLEAN min_16_digit)
+{
+    tBTA_DM_SEC sec_event;
+
+    if (!(*bta_dm_cb_ptr).p_sec_cback) {
+        return BTM_NOT_AUTHORIZED;
+    }
+
+    bdcpy(sec_event.pin_req.bd_addr, bd_addr);
+    {((UINT8 *)(sec_event.pin_req.dev_class))[0] = ((UINT8 *)(dev_class))[0]; ((UINT8 *)(sec_event.pin_req.dev_class))[1] = ((UINT8 *)(dev_class))[1]; ((UINT8 *)(sec_event.pin_req.dev_class))[2] = ((UINT8 *)(dev_class))[2];};
+    strncpy(((char *)sec_event.pin_req.bd_name),((char *)bd_name),((248 - 1)));
+    sec_event.pin_req.bd_name[248 - 1] = 0;
+    sec_event.pin_req.min_16_digit = min_16_digit;
+
+    (*bta_dm_cb_ptr).p_sec_cback(2, &sec_event);
+    return BTM_CMD_STARTED;
 }
 # 2984 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
 static UINT8 bta_dm_new_link_key_cback(BD_ADDR bd_addr, DEV_CLASS dev_class,
@@ -16244,8 +17523,8 @@ static UINT8 bta_dm_new_link_key_cback(BD_ADDR bd_addr, DEV_CLASS dev_class,
 
         BTM_ReadDevInfo(bd_addr, &sec_event.auth_cmpl.dev_type, &sec_event.auth_cmpl.addr_type);
 
-        if (bta_dm_cb.p_sec_cback) {
-            bta_dm_cb.p_sec_cback(event, &sec_event);
+        if ((*bta_dm_cb_ptr).p_sec_cback) {
+            (*bta_dm_cb_ptr).p_sec_cback(event, &sec_event);
         }
     } else {
         {if (appl_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_APPL", "\033[0;" "33" "m" "W" " (%d) %s: " "%s() Received AMP Key" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __func__); };};
@@ -16272,14 +17551,181 @@ static UINT8 bta_dm_authentication_complete_cback(BD_ADDR bd_addr, DEV_CLASS dev
 
         sec_event.auth_cmpl.fail_reason = (UINT8)result;
 
-        if (bta_dm_cb.p_sec_cback) {
-            bta_dm_cb.p_sec_cback(3, &sec_event);
+        if ((*bta_dm_cb_ptr).p_sec_cback) {
+            (*bta_dm_cb_ptr).p_sec_cback(3, &sec_event);
         }
 
         bta_dm_remove_sec_dev_entry(bd_addr);
     }
 
     return BTM_SUCCESS;
+}
+# 3073 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+static UINT8 bta_dm_sp_cback (tBTM_SP_EVT event, tBTM_SP_EVT_DATA *p_data)
+{
+    tBTM_STATUS status = BTM_CMD_STARTED;
+    tBTA_DM_SEC sec_event;
+    tBTA_DM_SEC_EVT pin_evt = 11;
+
+    {if (appl_trace_level >= 4 && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "bta_dm_sp_cback: %d" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", event); };};
+    if (!(*bta_dm_cb_ptr).p_sec_cback) {
+        return BTM_NOT_AUTHORIZED;
+    }
+
+
+    switch (event) {
+    case BTM_SP_IO_REQ_EVT:
+
+
+        bta_dm_co_io_req(p_data->io_req.bd_addr, &p_data->io_req.io_cap,
+                         &p_data->io_req.oob_data, &p_data->io_req.auth_req, p_data->io_req.is_orig);
+
+
+
+
+
+        {if (appl_trace_level >= 4 && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "io mitm: %d oob_data:%d" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", p_data->io_req.auth_req, p_data->io_req.oob_data); };};
+        break;
+    case BTM_SP_IO_RSP_EVT:
+
+        bta_dm_co_io_rsp(p_data->io_rsp.bd_addr, p_data->io_rsp.io_cap,
+                         p_data->io_rsp.oob_data, p_data->io_rsp.auth_req );
+
+        break;
+
+    case BTM_SP_CFM_REQ_EVT:
+        pin_evt = 10;
+        (*bta_dm_cb_ptr).just_works = sec_event.cfm_req.just_works = p_data->cfm_req.just_works;
+        sec_event.cfm_req.loc_auth_req = p_data->cfm_req.loc_auth_req;
+        sec_event.cfm_req.rmt_auth_req = p_data->cfm_req.rmt_auth_req;
+        sec_event.cfm_req.loc_io_caps = p_data->cfm_req.loc_io_caps;
+        sec_event.cfm_req.rmt_io_caps = p_data->cfm_req.rmt_io_caps;
+
+
+
+
+
+    case BTM_SP_KEY_REQ_EVT:
+    case BTM_SP_KEY_NOTIF_EVT:
+
+        if (BTM_SP_CFM_REQ_EVT == event) {
+
+
+            if (p_data->cfm_req.bd_name[0] == 0) {
+                (*bta_dm_cb_ptr).pin_evt = pin_evt;
+                bdcpy((*bta_dm_cb_ptr).pin_bd_addr, p_data->cfm_req.bd_addr);
+                {((UINT8 *)((*bta_dm_cb_ptr).pin_dev_class))[0] = ((UINT8 *)(p_data->cfm_req.dev_class))[0]; ((UINT8 *)((*bta_dm_cb_ptr).pin_dev_class))[1] = ((UINT8 *)(p_data->cfm_req.dev_class))[1]; ((UINT8 *)((*bta_dm_cb_ptr).pin_dev_class))[2] = ((UINT8 *)(p_data->cfm_req.dev_class))[2];};
+                if ((BTM_ReadRemoteDeviceName(p_data->cfm_req.bd_addr, bta_dm_pinname_cback,
+                                              1)) == BTM_CMD_STARTED) {
+                    return BTM_CMD_STARTED;
+                }
+                {if (appl_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_APPL", "\033[0;" "33" "m" "W" " (%d) %s: " " bta_dm_sp_cback() -> Failed to start Remote Name Request  " "\033[0m" "\n", esp_log_timestamp(), "BT_APPL"); };};
+            } else {
+
+
+                bdcpy(sec_event.key_notif.bd_addr, p_data->cfm_req.bd_addr);
+                {((UINT8 *)(sec_event.key_notif.dev_class))[0] = ((UINT8 *)(p_data->cfm_req.dev_class))[0]; ((UINT8 *)(sec_event.key_notif.dev_class))[1] = ((UINT8 *)(p_data->cfm_req.dev_class))[1]; ((UINT8 *)(sec_event.key_notif.dev_class))[2] = ((UINT8 *)(p_data->cfm_req.dev_class))[2];};
+                strncpy(((char *)sec_event.key_notif.bd_name),((char *)p_data->cfm_req.bd_name),((248 - 1)))
+                                                                                 ;
+                sec_event.key_notif.bd_name[248 - 1] = 0;
+            }
+        }
+
+        (*bta_dm_cb_ptr).num_val = sec_event.key_notif.passkey = p_data->key_notif.passkey;
+        if (BTM_SP_KEY_NOTIF_EVT == event) {
+
+
+            if (p_data->key_notif.bd_name[0] == 0) {
+                (*bta_dm_cb_ptr).pin_evt = pin_evt;
+                bdcpy((*bta_dm_cb_ptr).pin_bd_addr, p_data->key_notif.bd_addr);
+                {((UINT8 *)((*bta_dm_cb_ptr).pin_dev_class))[0] = ((UINT8 *)(p_data->key_notif.dev_class))[0]; ((UINT8 *)((*bta_dm_cb_ptr).pin_dev_class))[1] = ((UINT8 *)(p_data->key_notif.dev_class))[1]; ((UINT8 *)((*bta_dm_cb_ptr).pin_dev_class))[2] = ((UINT8 *)(p_data->key_notif.dev_class))[2];};
+                if ((BTM_ReadRemoteDeviceName(p_data->key_notif.bd_addr, bta_dm_pinname_cback,
+                                              1)) == BTM_CMD_STARTED) {
+                    return BTM_CMD_STARTED;
+                }
+                {if (appl_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_APPL", "\033[0;" "33" "m" "W" " (%d) %s: " " bta_dm_sp_cback() -> Failed to start Remote Name Request  " "\033[0m" "\n", esp_log_timestamp(), "BT_APPL"); };};
+            } else {
+                bdcpy(sec_event.key_notif.bd_addr, p_data->key_notif.bd_addr);
+                {((UINT8 *)(sec_event.key_notif.dev_class))[0] = ((UINT8 *)(p_data->key_notif.dev_class))[0]; ((UINT8 *)(sec_event.key_notif.dev_class))[1] = ((UINT8 *)(p_data->key_notif.dev_class))[1]; ((UINT8 *)(sec_event.key_notif.dev_class))[2] = ((UINT8 *)(p_data->key_notif.dev_class))[2];};
+                strncpy(((char *)sec_event.key_notif.bd_name),((char *)p_data->key_notif.bd_name),((248 - 1)))
+                                                                                   ;
+                sec_event.key_notif.bd_name[248 - 1] = 0;
+            }
+        }
+
+        if (BTM_SP_KEY_REQ_EVT == event) {
+            pin_evt = 30;
+
+
+            if (p_data->key_notif.bd_name[0] == 0) {
+                (*bta_dm_cb_ptr).pin_evt = pin_evt;
+                bdcpy((*bta_dm_cb_ptr).pin_bd_addr, p_data->key_notif.bd_addr);
+                {((UINT8 *)((*bta_dm_cb_ptr).pin_dev_class))[0] = ((UINT8 *)(p_data->key_notif.dev_class))[0]; ((UINT8 *)((*bta_dm_cb_ptr).pin_dev_class))[1] = ((UINT8 *)(p_data->key_notif.dev_class))[1]; ((UINT8 *)((*bta_dm_cb_ptr).pin_dev_class))[2] = ((UINT8 *)(p_data->key_notif.dev_class))[2];};
+                if ((BTM_ReadRemoteDeviceName(p_data->key_notif.bd_addr, bta_dm_pinname_cback,
+                                              1)) == BTM_CMD_STARTED) {
+                    return BTM_CMD_STARTED;
+                }
+                {if (appl_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_APPL", "\033[0;" "33" "m" "W" " (%d) %s: " " bta_dm_sp_cback() -> Failed to start Remote Name Request  " "\033[0m" "\n", esp_log_timestamp(), "BT_APPL"); };};
+            } else {
+                bdcpy(sec_event.key_notif.bd_addr, p_data->key_notif.bd_addr);
+                {((UINT8 *)(sec_event.key_notif.dev_class))[0] = ((UINT8 *)(p_data->key_notif.dev_class))[0]; ((UINT8 *)(sec_event.key_notif.dev_class))[1] = ((UINT8 *)(p_data->key_notif.dev_class))[1]; ((UINT8 *)(sec_event.key_notif.dev_class))[2] = ((UINT8 *)(p_data->key_notif.dev_class))[2];};
+                strncpy(((char *)sec_event.key_notif.bd_name),((char *)p_data->key_notif.bd_name),((248 - 1)))
+                                                                                   ;
+                sec_event.key_notif.bd_name[248 - 1] = 0;
+            }
+        }
+        (*bta_dm_cb_ptr).p_sec_cback(pin_evt, &sec_event);
+
+        break;
+
+
+    case BTM_SP_LOC_OOB_EVT:
+        bta_dm_co_loc_oob((BOOLEAN)(p_data->loc_oob.status == BTM_SUCCESS),
+                          p_data->loc_oob.c, p_data->loc_oob.r);
+        break;
+
+    case BTM_SP_RMT_OOB_EVT:
+
+        if (p_data->rmt_oob.bd_name[0] == 0) {
+            (*bta_dm_cb_ptr).pin_evt = 12;
+            bdcpy((*bta_dm_cb_ptr).pin_bd_addr, p_data->rmt_oob.bd_addr);
+            {((UINT8 *)((*bta_dm_cb_ptr).pin_dev_class))[0] = ((UINT8 *)(p_data->rmt_oob.dev_class))[0]; ((UINT8 *)((*bta_dm_cb_ptr).pin_dev_class))[1] = ((UINT8 *)(p_data->rmt_oob.dev_class))[1]; ((UINT8 *)((*bta_dm_cb_ptr).pin_dev_class))[2] = ((UINT8 *)(p_data->rmt_oob.dev_class))[2];};
+            if ((BTM_ReadRemoteDeviceName(p_data->rmt_oob.bd_addr, bta_dm_pinname_cback,
+                                          1)) == BTM_CMD_STARTED) {
+                return BTM_CMD_STARTED;
+            }
+            {if (appl_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_APPL", "\033[0;" "33" "m" "W" " (%d) %s: " " bta_dm_sp_cback() -> Failed to start Remote Name Request  " "\033[0m" "\n", esp_log_timestamp(), "BT_APPL"); };};
+        }
+
+        bdcpy(sec_event.rmt_oob.bd_addr, p_data->rmt_oob.bd_addr);
+        {((UINT8 *)(sec_event.rmt_oob.dev_class))[0] = ((UINT8 *)(p_data->rmt_oob.dev_class))[0]; ((UINT8 *)(sec_event.rmt_oob.dev_class))[1] = ((UINT8 *)(p_data->rmt_oob.dev_class))[1]; ((UINT8 *)(sec_event.rmt_oob.dev_class))[2] = ((UINT8 *)(p_data->rmt_oob.dev_class))[2];};
+        strncpy(((char *)sec_event.rmt_oob.bd_name),((char *)p_data->rmt_oob.bd_name),((248 - 1)));
+        sec_event.rmt_oob.bd_name[248 - 1] = 0;
+
+        (*bta_dm_cb_ptr).p_sec_cback(12, &sec_event);
+
+        bta_dm_co_rmt_oob(p_data->rmt_oob.bd_addr);
+        break;
+
+    case BTM_SP_COMPLT_EVT:
+
+        break;
+
+    case BTM_SP_KEYPRESS_EVT:
+        memcpy(&sec_event.key_press, &p_data->key_press, sizeof(tBTM_SP_KEYPRESS));
+        (*bta_dm_cb_ptr).p_sec_cback(13, &sec_event);
+        break;
+
+    case BTM_SP_UPGRADE_EVT:
+        bta_dm_co_lk_upgrade(p_data->upgrade.bd_addr, &p_data->upgrade.upgrade );
+        break;
+
+    default:
+        status = BTM_NOT_AUTHORIZED;
+        break;
+    }
+    {if (appl_trace_level >= 4 && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "dm status: %d" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", status); };};
+    return status;
 }
 # 3254 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
 static void bta_dm_local_name_cback(UINT8 *p_name)
@@ -16289,8 +17735,8 @@ static void bta_dm_local_name_cback(UINT8 *p_name)
 
     sec_event.enable.status = 0;
 
-    if (bta_dm_cb.p_sec_cback) {
-        bta_dm_cb.p_sec_cback(0, &sec_event);
+    if ((*bta_dm_cb_ptr).p_sec_cback) {
+        (*bta_dm_cb_ptr).p_sec_cback(0, &sec_event);
     }
 
 }
@@ -16355,11 +17801,11 @@ static void bta_dm_bl_change_cback (tBTM_BL_EVENT_DATA *p_data)
 static void bta_dm_rs_cback (tBTM_ROLE_SWITCH_CMPL *p1)
 {
     (void)(p1);
-    {if (appl_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_APPL", "\033[0;" "33" "m" "W" " (%d) %s: " "bta_dm_rs_cback:%d" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", bta_dm_cb.rs_event); };};
-    if (bta_dm_cb.rs_event == BTA_DM_API_SEARCH_EVT) {
-        bta_dm_cb.search_msg.rs_res = BTA_DM_RS_OK;
-        bta_dm_cb.rs_event = 0;
-        bta_dm_search_start((tBTA_DM_MSG *)&bta_dm_cb.search_msg);
+    {if (appl_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_APPL", "\033[0;" "33" "m" "W" " (%d) %s: " "bta_dm_rs_cback:%d" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", (*bta_dm_cb_ptr).rs_event); };};
+    if ((*bta_dm_cb_ptr).rs_event == BTA_DM_API_SEARCH_EVT) {
+        (*bta_dm_cb_ptr).search_msg.rs_res = BTA_DM_RS_OK;
+        (*bta_dm_cb_ptr).rs_event = 0;
+        bta_dm_search_start((tBTA_DM_MSG *)&(*bta_dm_cb_ptr).search_msg);
     }
 }
 # 3352 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -16378,10 +17824,10 @@ static BOOLEAN bta_dm_check_av(UINT16 event)
     UINT8 i;
     tBTA_DM_PEER_DEVICE *p_dev;
 # 3368 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
-    {if (appl_trace_level >= 4 && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "bta_dm_check_av:%d" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", bta_dm_cb.cur_av_count); };};
-    if (bta_dm_cb.cur_av_count) {
-        for (i = 0; i < bta_dm_cb.device_list.count; i++) {
-            p_dev = &bta_dm_cb.device_list.peer_device[i];
+    {if (appl_trace_level >= 4 && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "bta_dm_check_av:%d" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", (*bta_dm_cb_ptr).cur_av_count); };};
+    if ((*bta_dm_cb_ptr).cur_av_count) {
+        for (i = 0; i < (*bta_dm_cb_ptr).device_list.count; i++) {
+            p_dev = &(*bta_dm_cb_ptr).device_list.peer_device[i];
             {if (appl_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_APPL", "\033[0;" "33" "m" "W" " (%d) %s: " "[%d]: state:%d, info:x%x, avoid_rs %d" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", i, p_dev->conn_state, p_dev->info, avoid_roleswitch); };}
                                                                                    ;
             if ((p_dev->conn_state == 1) && (p_dev->info & 0x20) &&
@@ -16393,7 +17839,7 @@ static BOOLEAN bta_dm_check_av(UINT16 event)
 
                 if (BTM_CMD_STARTED == BTM_SwitchRole (p_dev->peer_bdaddr, 0x00, (tBTM_CMPL_CB *)bta_dm_rs_cback)) {
 
-                    bta_dm_cb.rs_event = event;
+                    (*bta_dm_cb_ptr).rs_event = event;
                     switching = 
 # 3380 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                1
@@ -16433,21 +17879,21 @@ void bta_dm_acl_change(tBTA_DM_MSG *p_data)
 
     switch (p_data->acl_change.event) {
     case BTM_BL_UPDATE_EVT:
-        if ( bta_dm_cb.p_sec_cback ) {
+        if ( (*bta_dm_cb_ptr).p_sec_cback ) {
             conn.busy_level.level = p_data->acl_change.busy_level;
             conn.busy_level.level_flags = p_data->acl_change.busy_level_flags;
-            bta_dm_cb.p_sec_cback(8, &conn);
+            (*bta_dm_cb_ptr).p_sec_cback(8, &conn);
         }
         return;
 
     case BTM_BL_ROLE_CHG_EVT:
         p_dev = bta_dm_find_peer_device(p_bda);
         if (p_dev) {
-            {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "bta_dm_acl_change role chg info:x%x new_role:%d dev count:%d" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", p_dev->info, p_data->acl_change.new_role, bta_dm_cb.device_list.count); };}
+            {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "bta_dm_acl_change role chg info:x%x new_role:%d dev count:%d" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", p_dev->info, p_data->acl_change.new_role, (*bta_dm_cb_ptr).device_list.count); };}
                                                                                                    ;
             if (p_dev->info & 0x20) {
 
-                if (p_data->acl_change.new_role == 0x01 && bta_dm_cb.device_list.count > 1
+                if (p_data->acl_change.new_role == 0x01 && (*bta_dm_cb_ptr).device_list.count > 1
                         && p_data->acl_change.hci_status == 0x00) {
 
 
@@ -16482,8 +17928,8 @@ void bta_dm_acl_change(tBTA_DM_MSG *p_data)
             bta_sys_notify_role_chg(p_data->acl_change.bd_addr, p_data->acl_change.new_role, p_data->acl_change.hci_status);
             bdcpy(conn.role_chg.bd_addr, p_bda);
             conn.role_chg.new_role = (UINT8) p_data->acl_change.new_role;
-            if ( bta_dm_cb.p_sec_cback ) {
-                bta_dm_cb.p_sec_cback(14, (tBTA_DM_SEC *)&conn);
+            if ( (*bta_dm_cb_ptr).p_sec_cback ) {
+                (*bta_dm_cb_ptr).p_sec_cback(14, (tBTA_DM_SEC *)&conn);
             }
         }
         return;
@@ -16496,10 +17942,10 @@ void bta_dm_acl_change(tBTA_DM_MSG *p_data)
     }
 
     if (is_new) {
-        for (i = 0; i < bta_dm_cb.device_list.count; i++) {
-            if (!bdcmp( bta_dm_cb.device_list.peer_device[i].peer_bdaddr, p_bda)
+        for (i = 0; i < (*bta_dm_cb_ptr).device_list.count; i++) {
+            if (!bdcmp( (*bta_dm_cb_ptr).device_list.peer_device[i].peer_bdaddr, p_bda)
 
-                    && bta_dm_cb.device_list.peer_device[i].conn_handle == p_data->acl_change.handle
+                    && (*bta_dm_cb_ptr).device_list.peer_device[i].conn_handle == p_data->acl_change.handle
 
                ) {
                 break;
@@ -16507,15 +17953,15 @@ void bta_dm_acl_change(tBTA_DM_MSG *p_data)
 
         }
 
-        if (i == bta_dm_cb.device_list.count) {
-            if (bta_dm_cb.device_list.count < 7) {
-                bdcpy(bta_dm_cb.device_list.peer_device[bta_dm_cb.device_list.count].peer_bdaddr, p_bda);
-                bta_dm_cb.device_list.peer_device[bta_dm_cb.device_list.count].link_policy = bta_dm_cb.cur_policy;
-                bta_dm_cb.device_list.count++;
+        if (i == (*bta_dm_cb_ptr).device_list.count) {
+            if ((*bta_dm_cb_ptr).device_list.count < 7) {
+                bdcpy((*bta_dm_cb_ptr).device_list.peer_device[(*bta_dm_cb_ptr).device_list.count].peer_bdaddr, p_bda);
+                (*bta_dm_cb_ptr).device_list.peer_device[(*bta_dm_cb_ptr).device_list.count].link_policy = (*bta_dm_cb_ptr).cur_policy;
+                (*bta_dm_cb_ptr).device_list.count++;
 
-                bta_dm_cb.device_list.peer_device[i].conn_handle = p_data->acl_change.handle;
+                (*bta_dm_cb_ptr).device_list.peer_device[i].conn_handle = p_data->acl_change.handle;
                 if (p_data->acl_change.transport == 2) {
-                    bta_dm_cb.device_list.le_count++;
+                    (*bta_dm_cb_ptr).device_list.le_count++;
                 }
 
             } else {
@@ -16524,13 +17970,13 @@ void bta_dm_acl_change(tBTA_DM_MSG *p_data)
             }
         }
 
-        bta_dm_cb.device_list.peer_device[i].conn_state = 1;
-        bta_dm_cb.device_list.peer_device[i].pref_role = 0x00;
+        (*bta_dm_cb_ptr).device_list.peer_device[i].conn_state = 1;
+        (*bta_dm_cb_ptr).device_list.peer_device[i].pref_role = 0x00;
         bdcpy(conn.link_up.bd_addr, p_bda);
-        bta_dm_cb.device_list.peer_device[i].info = 0x00;
+        (*bta_dm_cb_ptr).device_list.peer_device[i].info = 0x00;
 
         conn.link_up.link_type = p_data->acl_change.transport;
-        bta_dm_cb.device_list.peer_device[i].transport = p_data->acl_change.transport;
+        (*bta_dm_cb_ptr).device_list.peer_device[i].transport = p_data->acl_change.transport;
 
 
         if (((
@@ -16544,25 +17990,25 @@ void bta_dm_acl_change(tBTA_DM_MSG *p_data)
 # 3506 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
                       != (p = BTM_ReadRemoteFeatures (p_bda))) && ((p)[5] & 0x02))) {
 
-            bta_dm_cb.device_list.peer_device[i].info = 0x10;
+            (*bta_dm_cb_ptr).device_list.peer_device[i].info = 0x10;
         }
-        {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "%s info: 0x%x" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __func__, bta_dm_cb.device_list.peer_device[i].info); };};
+        {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "%s info: 0x%x" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __func__, (*bta_dm_cb_ptr).device_list.peer_device[i].info); };};
 
-        if (bta_dm_cb.p_sec_cback) {
-            bta_dm_cb.p_sec_cback(5, (tBTA_DM_SEC *)&conn);
+        if ((*bta_dm_cb_ptr).p_sec_cback) {
+            (*bta_dm_cb_ptr).p_sec_cback(5, (tBTA_DM_SEC *)&conn);
         }
     } else {
-        for (i = 0; i < bta_dm_cb.device_list.count; i++) {
-            if (bdcmp( bta_dm_cb.device_list.peer_device[i].peer_bdaddr, p_bda)
+        for (i = 0; i < (*bta_dm_cb_ptr).device_list.count; i++) {
+            if (bdcmp( (*bta_dm_cb_ptr).device_list.peer_device[i].peer_bdaddr, p_bda)
 
-                    || bta_dm_cb.device_list.peer_device[i].transport != p_data->acl_change.transport
+                    || (*bta_dm_cb_ptr).device_list.peer_device[i].transport != p_data->acl_change.transport
 
                ) {
                 continue;
             }
 
-            if ( bta_dm_cb.device_list.peer_device[i].conn_state == 2 ) {
-                if (BTM_SecDeleteDevice(bta_dm_cb.device_list.peer_device[i].peer_bdaddr, bta_dm_cb.device_list.peer_device[i].transport)) {
+            if ( (*bta_dm_cb_ptr).device_list.peer_device[i].conn_state == 2 ) {
+                if (BTM_SecDeleteDevice((*bta_dm_cb_ptr).device_list.peer_device[i].peer_bdaddr, (*bta_dm_cb_ptr).device_list.peer_device[i].transport)) {
                     issue_unpair_cb = 
 # 3527 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                      1
@@ -16573,48 +18019,48 @@ void bta_dm_acl_change(tBTA_DM_MSG *p_data)
                 {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "%s: Unpairing: issue unpair CB = %d " "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __FUNCTION__, issue_unpair_cb); };};
             }
 
-            conn.link_down.is_removed = bta_dm_cb.device_list.peer_device[i].remove_dev_pending;
+            conn.link_down.is_removed = (*bta_dm_cb_ptr).device_list.peer_device[i].remove_dev_pending;
 
-            for (; i < bta_dm_cb.device_list.count ; i++) {
-                memcpy(&bta_dm_cb.device_list.peer_device[i], &bta_dm_cb.device_list.peer_device[i + 1], sizeof(bta_dm_cb.device_list.peer_device[i]));
+            for (; i < (*bta_dm_cb_ptr).device_list.count ; i++) {
+                memcpy(&(*bta_dm_cb_ptr).device_list.peer_device[i], &(*bta_dm_cb_ptr).device_list.peer_device[i + 1], sizeof((*bta_dm_cb_ptr).device_list.peer_device[i]));
             }
             break;
         }
-        if (bta_dm_cb.device_list.count) {
-            bta_dm_cb.device_list.count--;
+        if ((*bta_dm_cb_ptr).device_list.count) {
+            (*bta_dm_cb_ptr).device_list.count--;
         }
 
         if ((p_data->acl_change.transport == 2) &&
-                (bta_dm_cb.device_list.le_count)) {
-            bta_dm_cb.device_list.le_count--;
+                ((*bta_dm_cb_ptr).device_list.le_count)) {
+            (*bta_dm_cb_ptr).device_list.le_count--;
         }
         conn.link_down.link_type = p_data->acl_change.transport;
 
 
-        if (bta_dm_search_cb.wait_disc && !bdcmp(bta_dm_search_cb.peer_bdaddr, p_bda)) {
-            bta_dm_search_cb.wait_disc = 
+        if ((*bta_dm_search_cb_ptr).wait_disc && !bdcmp((*bta_dm_search_cb_ptr).peer_bdaddr, p_bda)) {
+            (*bta_dm_search_cb_ptr).wait_disc = 
 # 3552 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                         0
 # 3552 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
                                              ;
 
-            if (bta_dm_search_cb.sdp_results) {
+            if ((*bta_dm_search_cb_ptr).sdp_results) {
                 {if (appl_trace_level >= 4 && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " " timer stopped  " "\033[0m" "\n", esp_log_timestamp(), "BT_APPL"); };};
-                bta_sys_stop_timer(&bta_dm_search_cb.search_timer);
+                bta_sys_stop_timer(&(*bta_dm_search_cb_ptr).search_timer);
                 bta_dm_discover_next_device();
             }
 
         }
 
-        if (bta_dm_cb.disabling) {
+        if ((*bta_dm_cb_ptr).disabling) {
             if (!BTM_GetNumAclLinks()) {
-                bta_sys_stop_timer(&bta_dm_cb.disable_timer);
-                bta_dm_cb.disable_timer.p_cback = (TIMER_CBACK *)&bta_dm_disable_conn_down_timer_cback;
+                bta_sys_stop_timer(&(*bta_dm_cb_ptr).disable_timer);
+                (*bta_dm_cb_ptr).disable_timer.p_cback = (TIMER_CBACK *)&bta_dm_disable_conn_down_timer_cback;
 
 
 
 
-                bta_sys_start_timer(&bta_dm_cb.disable_timer, 0, 1000);
+                bta_sys_start_timer(&(*bta_dm_cb_ptr).disable_timer, 0, 1000);
             }
         }
         if (conn.link_down.is_removed) {
@@ -16637,13 +18083,13 @@ void bta_dm_acl_change(tBTA_DM_MSG *p_data)
 
         bdcpy(conn.link_down.bd_addr, p_bda);
         conn.link_down.reason = (UINT8) btm_get_acl_disc_reason_code();
-        if ( bta_dm_cb.p_sec_cback ) {
-            bta_dm_cb.p_sec_cback(6, &conn);
+        if ( (*bta_dm_cb_ptr).p_sec_cback ) {
+            (*bta_dm_cb_ptr).p_sec_cback(6, &conn);
             if ( issue_unpair_cb ) {
                 if (p_data->acl_change.transport == 2) {
-                    bta_dm_cb.p_sec_cback(29, &conn);
+                    (*bta_dm_cb_ptr).p_sec_cback(29, &conn);
                 } else {
-                    bta_dm_cb.p_sec_cback(25, &conn);
+                    (*bta_dm_cb_ptr).p_sec_cback(25, &conn);
                 }
             }
         }
@@ -16663,7 +18109,7 @@ static void bta_dm_disable_conn_down_timer_cback (TIMER_LIST_ENT *p_tle)
 
 
 
-
+    bta_dm_disable_pm();
 
 
 
@@ -16680,7 +18126,7 @@ static void bta_dm_disable_conn_down_timer_cback (TIMER_LIST_ENT *p_tle)
         bta_sys_sendmsg(sys_enable_event);
     }
 
-    bta_dm_cb.disabling = 
+    (*bta_dm_cb_ptr).disabling = 
 # 3630 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                          0
 # 3630 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -16726,7 +18172,7 @@ static void bta_dm_rm_cback(tBTA_SYS_CONN_STATUS status, UINT8 id, UINT8 app_id,
             }
 
             if (18 == id) {
-                bta_dm_cb.cur_av_count = bta_dm_get_av_count();
+                (*bta_dm_cb_ptr).cur_av_count = bta_dm_get_av_count();
             }
         } else if ( status == 0x06) {
             if (p_dev) {
@@ -16735,10 +18181,10 @@ static void bta_dm_rm_cback(tBTA_SYS_CONN_STATUS status, UINT8 id, UINT8 app_id,
 
 
             if (18 == id) {
-                bta_dm_cb.cur_av_count = bta_dm_get_av_count();
+                (*bta_dm_cb_ptr).cur_av_count = bta_dm_get_av_count();
             }
         }
-        {if (appl_trace_level >= 4 && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "bta_dm_rm_cback:%d, status:%d" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", bta_dm_cb.cur_av_count, status); };};
+        {if (appl_trace_level >= 4 && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "bta_dm_rm_cback:%d, status:%d" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", (*bta_dm_cb_ptr).cur_av_count, status); };};
     }
 
 
@@ -16772,13 +18218,13 @@ static void bta_dm_remove_sec_dev_entry(BD_ADDR remote_bd_addr)
         {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "%s ACL is not down. Schedule for  Dev Removal when ACL closes" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __FUNCTION__); };}
                                       ;
         BTM_SecClearSecurityFlags (remote_bd_addr);
-        for (index = 0; index < bta_dm_cb.device_list.count; index ++) {
-            if (!bdcmp( bta_dm_cb.device_list.peer_device[index].peer_bdaddr, remote_bd_addr)) {
+        for (index = 0; index < (*bta_dm_cb_ptr).device_list.count; index ++) {
+            if (!bdcmp( (*bta_dm_cb_ptr).device_list.peer_device[index].peer_bdaddr, remote_bd_addr)) {
                 break;
             }
         }
-        if (index != bta_dm_cb.device_list.count) {
-            bta_dm_cb.device_list.peer_device[index].remove_dev_pending = 
+        if (index != (*bta_dm_cb_ptr).device_list.count) {
+            (*bta_dm_cb_ptr).device_list.peer_device[index].remove_dev_pending = 
 # 3747 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                                                          1
 # 3747 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -16787,7 +18233,7 @@ static void bta_dm_remove_sec_dev_entry(BD_ADDR remote_bd_addr)
             {if (appl_trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_APPL", "\033[0;" "31" "m" "E" " (%d) %s: " " %s Device does not exist in DB" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __FUNCTION__); };};
         }
     } else {
-        BTM_SecDeleteDevice (remote_bd_addr, bta_dm_cb.device_list.peer_device[index].transport);
+        BTM_SecDeleteDevice (remote_bd_addr, (*bta_dm_cb_ptr).device_list.peer_device[index].transport);
 
 
         BTA_GATTC_CancelOpen(0, remote_bd_addr, 
@@ -16815,7 +18261,7 @@ static void bta_dm_adjust_roles(BOOLEAN delay_role_switch)
 # 3778 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
                                   ;
 
-    UINT8 br_count = bta_dm_cb.device_list.count - bta_dm_cb.device_list.le_count;
+    UINT8 br_count = (*bta_dm_cb_ptr).device_list.count - (*bta_dm_cb_ptr).device_list.le_count;
 
 
 
@@ -16824,7 +18270,7 @@ static void bta_dm_adjust_roles(BOOLEAN delay_role_switch)
 
 
         if ( (p_bta_dm_rm_cfg[0].cfg == BTA_DM_NO_SCATTERNET) ||
-                (bta_dm_cb.cur_av_count && br_count > 1) ) {
+                ((*bta_dm_cb_ptr).cur_av_count && br_count > 1) ) {
 
             L2CA_SetDesireRole (0x00);
             set_master_role = 
@@ -16835,13 +18281,13 @@ static void bta_dm_adjust_roles(BOOLEAN delay_role_switch)
 
         }
 
-        for (i = 0; i < bta_dm_cb.device_list.count; i++) {
-            if (bta_dm_cb.device_list.peer_device[i].conn_state == 1
+        for (i = 0; i < (*bta_dm_cb_ptr).device_list.count; i++) {
+            if ((*bta_dm_cb_ptr).device_list.peer_device[i].conn_state == 1
 
-                    && bta_dm_cb.device_list.peer_device[i].transport == 1
+                    && (*bta_dm_cb_ptr).device_list.peer_device[i].transport == 1
 
                ) {
-                if (!set_master_role && (bta_dm_cb.device_list.peer_device[i].pref_role != 0x00)
+                if (!set_master_role && ((*bta_dm_cb_ptr).device_list.peer_device[i].pref_role != 0x00)
                         && (p_bta_dm_rm_cfg[0].cfg == BTA_DM_PARTIAL_SCATTERNET)) {
                     L2CA_SetDesireRole (0x00);
                     set_master_role = 
@@ -16851,7 +18297,7 @@ static void bta_dm_adjust_roles(BOOLEAN delay_role_switch)
                                          ;
                 }
 
-                if ((bta_dm_cb.device_list.peer_device[i].pref_role == 0x02)
+                if (((*bta_dm_cb_ptr).device_list.peer_device[i].pref_role == 0x02)
                         || (br_count > 1)) {
 
 
@@ -16860,22 +18306,22 @@ static void bta_dm_adjust_roles(BOOLEAN delay_role_switch)
 
 
 
-                    if (bta_dm_cb.device_list.peer_device[i].pref_role != 0x03 &&
+                    if ((*bta_dm_cb_ptr).device_list.peer_device[i].pref_role != 0x03 &&
                             delay_role_switch == 
 # 3818 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                                 0
 # 3818 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
                                                      ) {
-                        BTM_SwitchRole (bta_dm_cb.device_list.peer_device[i].peer_bdaddr,
+                        BTM_SwitchRole ((*bta_dm_cb_ptr).device_list.peer_device[i].peer_bdaddr,
                                         0x00, 
 # 3820 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                                         ((void *)0)
 # 3820 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
                                                             );
                     } else {
-                        bta_dm_cb.switch_delay_timer.p_cback =
+                        (*bta_dm_cb_ptr).switch_delay_timer.p_cback =
                             (TIMER_CBACK *)&bta_dm_delay_role_switch_cback;
-                        bta_sys_start_timer(&bta_dm_cb.switch_delay_timer, 0, 500);
+                        bta_sys_start_timer(&(*bta_dm_cb_ptr).switch_delay_timer, 0, 500);
                     }
                 }
 
@@ -16898,12 +18344,12 @@ static void bta_dm_adjust_roles(BOOLEAN delay_role_switch)
 # 3855 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
 static char *bta_dm_get_remname(void)
 {
-    char *p_name = (char *)bta_dm_search_cb.peer_name;
+    char *p_name = (char *)(*bta_dm_search_cb_ptr).peer_name;
     char *p_temp;
 
 
     if (*p_name == '\0') {
-        if ((p_temp = BTM_SecReadDevName(bta_dm_search_cb.peer_bdaddr)) != 
+        if ((p_temp = BTM_SecReadDevName((*bta_dm_search_cb_ptr).peer_bdaddr)) != 
 # 3862 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                                                           ((void *)0)
 # 3862 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -16925,8 +18371,8 @@ static void bta_dm_bond_cancel_complete_cback(tBTM_STATUS result)
         sec_event.bond_cancel_cmpl.result = 1;
     }
 
-    if (bta_dm_cb.p_sec_cback) {
-        bta_dm_cb.p_sec_cback(9, &sec_event);
+    if ((*bta_dm_cb_ptr).p_sec_cback) {
+        (*bta_dm_cb_ptr).p_sec_cback(9, &sec_event);
     }
 }
 # 3906 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -16960,7 +18406,7 @@ static void bta_dm_set_eir (char *local_name)
     tBTA_STATUS status = 0;
 
 
-    if (bta_dm_cb.disable_timer.in_use) {
+    if ((*bta_dm_cb_ptr).disable_timer.in_use) {
         if (p_bta_dm_eir_cfg->config_eir_callback) {
             p_bta_dm_eir_cfg->config_eir_callback(5, eir_type_num , eir_type);
         }
@@ -16969,7 +18415,7 @@ static void bta_dm_set_eir (char *local_name)
 
 
 
-    if (bta_dm_cb.app_ready_timer.in_use) {
+    if ((*bta_dm_cb_ptr).app_ready_timer.in_use) {
         if (p_bta_dm_eir_cfg->config_eir_callback) {
             p_bta_dm_eir_cfg->config_eir_callback(5, eir_type_num , eir_type);
         }
@@ -17021,7 +18467,7 @@ static void bta_dm_set_eir (char *local_name)
 
 
         max_num_uuid = (free_eir_length - 2) / 2;
-        data_type = BTM_GetEirSupportedServices( bta_dm_cb.eir_uuid, &p,
+        data_type = BTM_GetEirSupportedServices( (*bta_dm_cb_ptr).eir_uuid, &p,
                     max_num_uuid, &num_uuid );
         p = (UINT8 *)p_buf + ((sizeof (BT_HDR)) + 4);
 
@@ -17059,7 +18505,7 @@ static void bta_dm_set_eir (char *local_name)
             num_uuid = 0;
 
             max_num_uuid = (free_eir_length - 2) / 2;
-            data_type = BTM_GetEirSupportedServices( bta_dm_cb.eir_uuid, &p, max_num_uuid, &num_uuid );
+            data_type = BTM_GetEirSupportedServices( (*bta_dm_cb_ptr).eir_uuid, &p, max_num_uuid, &num_uuid );
 
             if ( data_type == 0x02 ) {
                 {if (appl_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_APPL", "\033[0;" "33" "m" "W" " (%d) %s: " "BTA EIR: UUID 16-bit list is truncated" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL"); };};
@@ -17067,9 +18513,9 @@ static void bta_dm_set_eir (char *local_name)
 
             else {
                 for (custom_uuid_idx = 0; custom_uuid_idx < 8; custom_uuid_idx++) {
-                    if (bta_dm_cb.custom_uuid[custom_uuid_idx].len == 2) {
+                    if ((*bta_dm_cb_ptr).custom_uuid[custom_uuid_idx].len == 2) {
                         if ( num_uuid < max_num_uuid ) {
-                            {*(p)++ = (UINT8)(bta_dm_cb.custom_uuid[custom_uuid_idx].uu.uuid16); *(p)++ = (UINT8)((bta_dm_cb.custom_uuid[custom_uuid_idx].uu.uuid16) >> 8);};
+                            {*(p)++ = (UINT8)((*bta_dm_cb_ptr).custom_uuid[custom_uuid_idx].uu.uuid16); *(p)++ = (UINT8)(((*bta_dm_cb_ptr).custom_uuid[custom_uuid_idx].uu.uuid16) >> 8);};
                             num_uuid++;
                         } else {
                             data_type = 0x02;
@@ -17101,9 +18547,9 @@ static void bta_dm_set_eir (char *local_name)
             max_num_uuid = (free_eir_length - 2) / 4;
 
             for (custom_uuid_idx = 0; custom_uuid_idx < 8; custom_uuid_idx++) {
-                if (bta_dm_cb.custom_uuid[custom_uuid_idx].len == 4) {
+                if ((*bta_dm_cb_ptr).custom_uuid[custom_uuid_idx].len == 4) {
                     if ( num_uuid < max_num_uuid ) {
-                        {*(p)++ = (UINT8)(bta_dm_cb.custom_uuid[custom_uuid_idx].uu.uuid32); *(p)++ = (UINT8)((bta_dm_cb.custom_uuid[custom_uuid_idx].uu.uuid32) >> 8); *(p)++ = (UINT8)((bta_dm_cb.custom_uuid[custom_uuid_idx].uu.uuid32) >> 16); *(p)++ = (UINT8)((bta_dm_cb.custom_uuid[custom_uuid_idx].uu.uuid32) >> 24);};
+                        {*(p)++ = (UINT8)((*bta_dm_cb_ptr).custom_uuid[custom_uuid_idx].uu.uuid32); *(p)++ = (UINT8)(((*bta_dm_cb_ptr).custom_uuid[custom_uuid_idx].uu.uuid32) >> 8); *(p)++ = (UINT8)(((*bta_dm_cb_ptr).custom_uuid[custom_uuid_idx].uu.uuid32) >> 16); *(p)++ = (UINT8)(((*bta_dm_cb_ptr).custom_uuid[custom_uuid_idx].uu.uuid32) >> 24);};
                         num_uuid++;
                     } else {
                         data_type = 0x04;
@@ -17131,9 +18577,9 @@ static void bta_dm_set_eir (char *local_name)
             max_num_uuid = (free_eir_length - 2) / 16;
 
             for (custom_uuid_idx = 0; custom_uuid_idx < 8; custom_uuid_idx++) {
-                if (bta_dm_cb.custom_uuid[custom_uuid_idx].len == 16) {
+                if ((*bta_dm_cb_ptr).custom_uuid[custom_uuid_idx].len == 16) {
                     if ( num_uuid < max_num_uuid ) {
-                        {register int ijk; for (ijk = 0; ijk < 16; ijk++) *(p)++ = (UINT8) bta_dm_cb.custom_uuid[custom_uuid_idx].uu.uuid128[15 - ijk];};
+                        {register int ijk; for (ijk = 0; ijk < 16; ijk++) *(p)++ = (UINT8) (*bta_dm_cb_ptr).custom_uuid[custom_uuid_idx].uu.uuid128[15 - ijk];};
                         num_uuid++;
                     } else {
                         data_type = 0x06;
@@ -17241,6 +18687,65 @@ static void bta_dm_set_eir (char *local_name)
         p_bta_dm_eir_cfg->config_eir_callback(status, eir_type_num, eir_type);
     }
 }
+# 4238 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+static void bta_dm_eir_search_services( tBTM_INQ_RESULTS *p_result,
+                                        tBTA_SERVICE_MASK *p_services_to_search,
+                                        tBTA_SERVICE_MASK *p_services_found)
+{
+    tBTA_SERVICE_MASK service_index = 0;
+    tBTM_EIR_SEARCH_RESULT result;
+
+    {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "BTA searching services in EIR of BDA:0x%02X%02X%02X%02X%02X%02X" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", p_result->remote_bd_addr[0], p_result->remote_bd_addr[1], p_result->remote_bd_addr[2], p_result->remote_bd_addr[3], p_result->remote_bd_addr[4], p_result->remote_bd_addr[5]); };}
+
+
+                                                                              ;
+
+    {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "    with services_to_search=0x%08X" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", *p_services_to_search); };};
+
+
+
+
+    while (service_index < (32 - 1))
+
+
+
+    {
+        if ( *p_services_to_search
+                & (tBTA_SERVICE_MASK)((1 << (service_index)))) {
+            result = BTM_HasInquiryEirService( p_result,
+                                               bta_service_id_to_uuid_lkup_tbl[service_index] );
+
+
+            if ((result != 0) &&
+                    (bta_service_id_to_uuid_lkup_tbl[service_index] == 0X1108)) {
+                result = BTM_HasInquiryEirService (p_result, 0x1131);
+            }
+
+            if ( result == 0 ) {
+
+
+                if ( bta_service_id_to_uuid_lkup_tbl[service_index]
+                        != 0X1200 ) {
+
+                    *p_services_found |=
+                        (tBTA_SERVICE_MASK)((1 << (service_index)));
+
+                    *p_services_to_search &=
+                        (tBTA_SERVICE_MASK)(~((1 << (service_index))));
+                }
+            } else if ( result == 1 ) {
+
+                *p_services_to_search &=
+                    (tBTA_SERVICE_MASK)(~((1 << (service_index))));
+            }
+        }
+
+        service_index++;
+    }
+
+    {if (appl_trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_APPL", "\033[0;" "31" "m" "E" " (%d) %s: " "BTA EIR search result, services_to_search=0x%08X, services_found=0x%08X" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", *p_services_to_search, *p_services_found); };}
+                                                              ;
+}
 # 4308 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
 void bta_dm_eir_update_uuid(UINT16 uuid16, BOOLEAN adding)
 {
@@ -17252,11 +18757,11 @@ void bta_dm_eir_update_uuid(UINT16 uuid16, BOOLEAN adding)
     if ( adding ) {
         {if (appl_trace_level >= 4 && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "Adding UUID=0x%04X into EIR" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", uuid16); };};
 
-        BTM_AddEirService( bta_dm_cb.eir_uuid, uuid16 );
+        BTM_AddEirService( (*bta_dm_cb_ptr).eir_uuid, uuid16 );
     } else {
         {if (appl_trace_level >= 4 && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "Removing UUID=0x%04X from EIR" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", uuid16); };};
 
-        BTM_RemoveEirService( bta_dm_cb.eir_uuid, uuid16 );
+        BTM_RemoveEirService( (*bta_dm_cb_ptr).eir_uuid, uuid16 );
     }
 
     bta_dm_set_eir (
@@ -17265,7 +18770,7 @@ void bta_dm_eir_update_uuid(UINT16 uuid16, BOOLEAN adding)
 # 4325 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
                        );
 
-    {if (appl_trace_level >= 4 && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "bta_dm_eir_update_uuid UUID bit mask=0x%08X %08X" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", bta_dm_cb.eir_uuid[1], bta_dm_cb.eir_uuid[0]); };}
+    {if (appl_trace_level >= 4 && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "bta_dm_eir_update_uuid UUID bit mask=0x%08X %08X" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", (*bta_dm_cb_ptr).eir_uuid[1], (*bta_dm_cb_ptr).eir_uuid[0]); };}
                                                                    ;
 }
 # 4342 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -17310,16 +18815,16 @@ void bta_dm_encrypt_cback(BD_ADDR bd_addr, tBT_TRANSPORT transport, void *p_ref_
     UINT8 i ;
     (void)(p_ref_data);
 
-    for (i = 0; i < bta_dm_cb.device_list.count; i++) {
-        if (bdcmp( bta_dm_cb.device_list.peer_device[i].peer_bdaddr, bd_addr) == 0 &&
-                bta_dm_cb.device_list.peer_device[i].conn_state == 1) {
+    for (i = 0; i < (*bta_dm_cb_ptr).device_list.count; i++) {
+        if (bdcmp( (*bta_dm_cb_ptr).device_list.peer_device[i].peer_bdaddr, bd_addr) == 0 &&
+                (*bta_dm_cb_ptr).device_list.peer_device[i].conn_state == 1) {
             break;
         }
     }
 
-    if (i < bta_dm_cb.device_list.count) {
-        p_callback = bta_dm_cb.device_list.peer_device[i].p_encrypt_cback;
-        bta_dm_cb.device_list.peer_device[i].p_encrypt_cback = 
+    if (i < (*bta_dm_cb_ptr).device_list.count) {
+        p_callback = (*bta_dm_cb_ptr).device_list.peer_device[i].p_encrypt_cback;
+        (*bta_dm_cb_ptr).device_list.peer_device[i].p_encrypt_cback = 
 # 4409 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                                               ((void *)0)
 # 4409 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -17359,14 +18864,14 @@ void bta_dm_set_encryption (tBTA_DM_MSG *p_data)
         {if (appl_trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_APPL", "\033[0;" "31" "m" "E" " (%d) %s: " "bta_dm_set_encryption callback is not provided\n" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL"); };};
         return;
     }
-    for (i = 0; i < bta_dm_cb.device_list.count; i++) {
-        if (bdcmp( bta_dm_cb.device_list.peer_device[i].peer_bdaddr, p_data->set_encryption.bd_addr) == 0 &&
-                bta_dm_cb.device_list.peer_device[i].conn_state == 1) {
+    for (i = 0; i < (*bta_dm_cb_ptr).device_list.count; i++) {
+        if (bdcmp( (*bta_dm_cb_ptr).device_list.peer_device[i].peer_bdaddr, p_data->set_encryption.bd_addr) == 0 &&
+                (*bta_dm_cb_ptr).device_list.peer_device[i].conn_state == 1) {
             break;
         }
     }
-    if (i < bta_dm_cb.device_list.count) {
-        if (bta_dm_cb.device_list.peer_device[i].p_encrypt_cback) {
+    if (i < (*bta_dm_cb_ptr).device_list.count) {
+        if ((*bta_dm_cb_ptr).device_list.peer_device[i].p_encrypt_cback) {
             {if (appl_trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_APPL", "\033[0;" "31" "m" "E" " (%d) %s: " "earlier enc was not done for same device\n" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL"); };};
             (*p_data->set_encryption.p_callback)(p_data->set_encryption.bd_addr,
                                                  p_data->set_encryption.transport,
@@ -17377,7 +18882,7 @@ void bta_dm_set_encryption (tBTA_DM_MSG *p_data)
         if (BTM_SetEncryption(p_data->set_encryption.bd_addr, p_data->set_encryption.transport,
                               bta_dm_encrypt_cback, &p_data->set_encryption.sec_act)
                 == BTM_CMD_STARTED) {
-            bta_dm_cb.device_list.peer_device[i].p_encrypt_cback = p_data->set_encryption.p_callback;
+            (*bta_dm_cb_ptr).device_list.peer_device[i].p_encrypt_cback = p_data->set_encryption.p_callback;
         }
     }else{
         {if (appl_trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_APPL", "\033[0;" "31" "m" "E" " (%d) %s: " "%s, not find peer_bdaddr or peer_bdaddr connection state error" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __func__); };};
@@ -17417,8 +18922,8 @@ static void bta_dm_observe_results_cb (tBTM_INQ_RESULTS *p_inq, UINT8 *p_eir)
                                                     ;
     }
 
-    if (bta_dm_search_cb.p_scan_cback) {
-        bta_dm_search_cb.p_scan_cback(0, &result);
+    if ((*bta_dm_search_cb_ptr).p_scan_cback) {
+        (*bta_dm_search_cb_ptr).p_scan_cback(0, &result);
     }
 
     if (p_inq_info) {
@@ -17441,8 +18946,8 @@ static void bta_dm_observe_cmpl_cb (void *p_result)
     {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "bta_dm_observe_cmpl_cb" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL"); };};
 
     data.inq_cmpl.num_resps = ((tBTM_INQUIRY_CMPL *)p_result)->num_resp;
-    if (bta_dm_search_cb.p_scan_cback) {
-        bta_dm_search_cb.p_scan_cback(1, &data);
+    if ((*bta_dm_search_cb_ptr).p_scan_cback) {
+        (*bta_dm_search_cb_ptr).p_scan_cback(1, &data);
     }
 }
 # 4562 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -17453,8 +18958,8 @@ static void bta_dm_observe_discard_cb (uint32_t num_dis)
     {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "bta_dm_observe_discard_cb" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL"); };};
 
     data.inq_dis.num_dis = num_dis;
-    if (bta_dm_search_cb.p_scan_cback) {
-        bta_dm_search_cb.p_scan_cback(7, &data);
+    if ((*bta_dm_search_cb_ptr).p_scan_cback) {
+        (*bta_dm_search_cb_ptr).p_scan_cback(7, &data);
     }
 }
 # 4585 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -17468,7 +18973,7 @@ static UINT8 bta_dm_ble_smp_cback (tBTM_LE_EVT event, BD_ADDR bda, tBTM_LE_EVT_D
 # 4589 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
                       ;
 
-    if (!bta_dm_cb.p_sec_cback) {
+    if (!(*bta_dm_cb_ptr).p_sec_cback) {
         return BTM_NOT_AUTHORIZED;
     }
 
@@ -17506,7 +19011,7 @@ static UINT8 bta_dm_ble_smp_cback (tBTM_LE_EVT event, BD_ADDR bda, tBTM_LE_EVT_D
             sec_event.ble_req.bd_name[0] = 0;
         }
         sec_event.ble_req.bd_name[248] = 0;
-        bta_dm_cb.p_sec_cback(16, &sec_event);
+        (*bta_dm_cb_ptr).p_sec_cback(16, &sec_event);
         break;
 
     case 3:
@@ -17524,17 +19029,17 @@ static UINT8 bta_dm_ble_smp_cback (tBTM_LE_EVT event, BD_ADDR bda, tBTM_LE_EVT_D
         }
         sec_event.ble_req.bd_name[248] = 0;
         sec_event.key_notif.passkey = p_data->key_notif;
-        bta_dm_cb.p_sec_cback(17, &sec_event);
+        (*bta_dm_cb_ptr).p_sec_cback(17, &sec_event);
         break;
 
     case 4:
         bdcpy(sec_event.ble_req.bd_addr, bda);
-        bta_dm_cb.p_sec_cback(18, &sec_event);
+        (*bta_dm_cb_ptr).p_sec_cback(18, &sec_event);
         break;
 
     case 5:
         bdcpy(sec_event.ble_req.bd_addr, bda);
-        bta_dm_cb.p_sec_cback(19, &sec_event);
+        (*bta_dm_cb_ptr).p_sec_cback(19, &sec_event);
         break;
 
     case 6:
@@ -17542,14 +19047,14 @@ static UINT8 bta_dm_ble_smp_cback (tBTM_LE_EVT event, BD_ADDR bda, tBTM_LE_EVT_D
         strncpy(((char *)sec_event.key_notif.bd_name),(bta_dm_get_remname()),((248)));
         sec_event.ble_req.bd_name[248] = 0;
         sec_event.key_notif.passkey = p_data->key_notif;
-        bta_dm_cb.p_sec_cback(22, &sec_event);
+        (*bta_dm_cb_ptr).p_sec_cback(22, &sec_event);
         break;
 
     case 12 + 1:
         bdcpy(sec_event.ble_key.bd_addr, bda);
         sec_event.ble_key.key_type = p_data->key.key_type;
         sec_event.ble_key.p_key_value = p_data->key.p_key_value;
-        bta_dm_cb.p_sec_cback(15, &sec_event);
+        (*bta_dm_cb_ptr).p_sec_cback(15, &sec_event);
         break;
 
     case 7:
@@ -17583,9 +19088,9 @@ static UINT8 bta_dm_ble_smp_cback (tBTM_LE_EVT event, BD_ADDR bda, tBTM_LE_EVT_D
             }
         }
         sec_event.auth_cmpl.auth_mode = p_data->complt.auth_mode;
-        if (bta_dm_cb.p_sec_cback) {
+        if ((*bta_dm_cb_ptr).p_sec_cback) {
 
-            bta_dm_cb.p_sec_cback(24, &sec_event);
+            (*bta_dm_cb_ptr).p_sec_cback(24, &sec_event);
         }
 
         break;
@@ -17605,12 +19110,12 @@ static void bta_dm_ble_id_key_cback (UINT8 key_type, tBTM_BLE_LOCAL_KEYS *p_key)
     switch (key_type) {
     case 1:
     case 2:
-        if (bta_dm_cb.p_sec_cback) {
+        if ((*bta_dm_cb_ptr).p_sec_cback) {
             memcpy(&dm_key.ble_id_keys, p_key, sizeof(tBTM_BLE_LOCAL_KEYS));
 
             evt = (key_type == 1) ? 20 :
                   21;
-            bta_dm_cb.p_sec_cback(evt, &dm_key);
+            (*bta_dm_cb_ptr).p_sec_cback(evt, &dm_key);
         }
         break;
 
@@ -17801,7 +19306,7 @@ void bta_dm_ble_observe (tBTA_DM_MSG *p_data)
     tBTM_STATUS status;
     if (p_data->ble_observe.start) {
 
-        bta_dm_search_cb.p_scan_cback = p_data->ble_observe.p_cback;
+        (*bta_dm_search_cb_ptr).p_scan_cback = p_data->ble_observe.p_cback;
 
         if ((status = BTM_BleObserve(
 # 5075 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
@@ -17817,7 +19322,7 @@ void bta_dm_ble_observe (tBTA_DM_MSG *p_data)
             p_data->ble_observe.p_start_scan_cback(status);
         }
     } else {
-        bta_dm_search_cb.p_scan_cback = 
+        (*bta_dm_search_cb_ptr).p_scan_cback = 
 # 5085 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                        ((void *)0)
 # 5085 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -17852,7 +19357,7 @@ void bta_dm_ble_scan (tBTA_DM_MSG *p_data)
     tBTM_STATUS status;
     if (p_data->ble_scan.start) {
 
-        bta_dm_search_cb.p_scan_cback = p_data->ble_scan.p_cback;
+        (*bta_dm_search_cb_ptr).p_scan_cback = p_data->ble_scan.p_cback;
 
         if ((status = BTM_BleScan(
 # 5115 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
@@ -17868,7 +19373,7 @@ void bta_dm_ble_scan (tBTA_DM_MSG *p_data)
             p_data->ble_scan.p_start_scan_cback(status);
         }
     } else {
-        bta_dm_search_cb.p_scan_cback = 
+        (*bta_dm_search_cb_ptr).p_scan_cback = 
 # 5125 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                        ((void *)0)
 # 5125 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -18065,7 +19570,7 @@ void bta_dm_ble_multi_adv_enb(tBTA_DM_MSG *p_data)
 {
     tBTM_STATUS btm_status = 0;
 
-    bta_dm_cb.p_multi_adv_cback = p_data->ble_multi_adv_enb.p_cback;
+    (*bta_dm_cb_ptr).p_multi_adv_cback = p_data->ble_multi_adv_enb.p_cback;
     if (BTM_BleMaxMultiAdvInstanceCount() > 0 && 
 # 5400 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
                                                 ((void *)0) 
@@ -18078,7 +19583,7 @@ void bta_dm_ble_multi_adv_enb(tBTA_DM_MSG *p_data)
     }
 
     if (BTM_CMD_STARTED != btm_status) {
-        bta_dm_cb.p_multi_adv_cback(1, 0xFF,
+        (*bta_dm_cb_ptr).p_multi_adv_cback(1, 0xFF,
                                     p_data->ble_multi_adv_enb.p_ref, 1);
     }
 }
@@ -18100,7 +19605,7 @@ void bta_dm_ble_multi_adv_upd_param(tBTA_DM_MSG *p_data)
 
     if (BTM_CMD_STARTED != btm_status) {
         p_ref = btm_ble_multi_adv_get_ref(p_data->ble_multi_adv_param.inst_id);
-        bta_dm_cb.p_multi_adv_cback(3,
+        (*bta_dm_cb_ptr).p_multi_adv_cback(3,
                                     p_data->ble_multi_adv_param.inst_id, p_ref, 1);
     }
 }
@@ -18124,7 +19629,7 @@ void bta_dm_ble_multi_adv_data(tBTA_DM_MSG *p_data)
 
     if (BTM_CMD_STARTED != btm_status) {
         p_ref = btm_ble_multi_adv_get_ref(p_data->ble_multi_adv_data.inst_id);
-        bta_dm_cb.p_multi_adv_cback(4,
+        (*bta_dm_cb_ptr).p_multi_adv_cback(4,
                                     p_data->ble_multi_adv_data.inst_id, p_ref, 1);
     }
 
@@ -18146,7 +19651,7 @@ void btm_dm_ble_multi_adv_disable(tBTA_DM_MSG *p_data)
 
     if (BTM_CMD_STARTED != btm_status) {
         p_ref = btm_ble_multi_adv_get_ref(p_data->ble_multi_adv_disable.inst_id);
-        bta_dm_cb.p_multi_adv_cback(2,
+        (*bta_dm_cb_ptr).p_multi_adv_cback(2,
                                     p_data->ble_multi_adv_disable.inst_id, p_ref, 1);
     }
 }
@@ -18285,8 +19790,8 @@ void bta_ble_scan_setup_cb(tBTM_BLE_BATCH_SCAN_EVT evt, tBTM_BLE_REF_VALUE ref_v
 # 5678 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
        ((void *)0) 
 # 5678 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
-            != bta_dm_cb.p_setup_cback) {
-        bta_dm_cb.p_setup_cback(bta_evt, ref_value, status);
+            != (*bta_dm_cb_ptr).p_setup_cback) {
+        (*bta_dm_cb_ptr).p_setup_cback(bta_evt, ref_value, status);
     }
 }
 # 5695 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -18298,8 +19803,8 @@ static void bta_ble_scan_cfg_cmpl(tBTM_BLE_PF_ACTION action, tBTM_BLE_SCAN_COND_
 
     {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "bta_ble_scan_cfg_cmpl: %d, %d, %d, %d" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", action, cfg_op, avbl_space, status); };};
 
-    if (bta_dm_cb.p_scan_filt_cfg_cback) {
-        bta_dm_cb.p_scan_filt_cfg_cback(action, cfg_op, avbl_space, st, ref_value);
+    if ((*bta_dm_cb_ptr).p_scan_filt_cfg_cback) {
+        (*bta_dm_cb_ptr).p_scan_filt_cfg_cback(action, cfg_op, avbl_space, st, ref_value);
     }
 }
 # 5717 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -18319,7 +19824,7 @@ void bta_dm_cfg_filter_cond (tBTA_DM_MSG *p_data)
                                             (tBTM_BLE_PF_COND_PARAM *)p_data->ble_cfg_filter_cond.p_cond_param,
                                             bta_ble_scan_cfg_cmpl, p_data->ble_cfg_filter_cond.ref_value))
                 == BTM_CMD_STARTED) {
-            bta_dm_cb.p_scan_filt_cfg_cback = p_data->ble_cfg_filter_cond.p_filt_cfg_cback;
+            (*bta_dm_cb_ptr).p_scan_filt_cfg_cback = p_data->ble_cfg_filter_cond.p_filt_cfg_cback;
             return;
         }
     }
@@ -18345,7 +19850,7 @@ void bta_dm_enable_scan_filter(tBTA_DM_MSG *p_data)
         if ((st = BTM_BleEnableDisableFilterFeature(p_data->ble_enable_scan_filt.action,
                   p_data->ble_enable_scan_filt.p_filt_status_cback,
                   (tBTM_BLE_REF_VALUE)p_data->ble_enable_scan_filt.ref_value)) == BTM_CMD_STARTED) {
-            bta_dm_cb.p_scan_filt_status_cback = p_data->ble_enable_scan_filt.p_filt_status_cback;
+            (*bta_dm_cb_ptr).p_scan_filt_status_cback = p_data->ble_enable_scan_filt.p_filt_status_cback;
         }
         return;
     }
@@ -18373,7 +19878,7 @@ void bta_dm_scan_filter_param_setup (tBTA_DM_MSG *p_data)
                                              p_data->ble_scan_filt_param_setup.p_target,
                                              p_data->ble_scan_filt_param_setup.p_filt_param_cback,
                                              p_data->ble_scan_filt_param_setup.ref_value)) == BTM_CMD_STARTED) {
-            bta_dm_cb.p_scan_filt_param_cback = p_data->ble_scan_filt_param_setup.p_filt_param_cback;
+            (*bta_dm_cb_ptr).p_scan_filt_param_cback = p_data->ble_scan_filt_param_setup.p_filt_param_cback;
             return;
         }
     }
@@ -18395,12 +19900,12 @@ static void bta_ble_energy_info_cmpl(tBTM_BLE_TX_TIME_MS tx_time,
     tBTA_STATUS st = (status == BTM_SUCCESS) ? 0 : 1;
     tBTA_DM_CONTRL_STATE ctrl_state = 0;
 
+    if (0 == st) {
+        ctrl_state = bta_dm_pm_obtain_controller_state();
+    }
 
-
-
-
-    if (bta_dm_cb.p_energy_info_cback) {
-        bta_dm_cb.p_energy_info_cback(tx_time, rx_time, idle_time, energy_used, ctrl_state, st);
+    if ((*bta_dm_cb_ptr).p_energy_info_cback) {
+        (*bta_dm_cb_ptr).p_energy_info_cback(tx_time, rx_time, idle_time, energy_used, ctrl_state, st);
     }
 }
 # 5856 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
@@ -18408,9 +19913,268 @@ void bta_dm_ble_get_energy_info(tBTA_DM_MSG *p_data)
 {
     tBTM_STATUS btm_status = 0;
 
-    bta_dm_cb.p_energy_info_cback = p_data->ble_energy_info.p_energy_info_cback;
+    (*bta_dm_cb_ptr).p_energy_info_cback = p_data->ble_energy_info.p_energy_info_cback;
     btm_status = BTM_BleGetEnergyInfo(bta_ble_energy_info_cmpl);
     if (BTM_CMD_STARTED != btm_status) {
         bta_ble_energy_info_cmpl(0, 0, 0, 0, btm_status);
+    }
+}
+# 5883 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+static void bta_dm_gattc_register(void)
+{
+    tBT_UUID app_uuid = {16, {0}};
+
+    if ((*bta_dm_search_cb_ptr).client_if == 0) {
+        memset (&app_uuid.uu.uuid128, 0x87, 16);
+        BTA_GATTC_AppRegister(&app_uuid, bta_dm_gattc_callback);
+    }
+}
+# 5904 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+static void btm_dm_start_disc_gatt_services (UINT16 conn_id)
+{
+    tBT_UUID *p_uuid = (*bta_dm_search_cb_ptr).p_srvc_uuid +
+                          (*bta_dm_search_cb_ptr).num_uuid - (*bta_dm_search_cb_ptr).uuid_to_search;
+
+    p_uuid = (*bta_dm_search_cb_ptr).p_srvc_uuid +
+             (*bta_dm_search_cb_ptr).num_uuid - (*bta_dm_search_cb_ptr).uuid_to_search;
+
+
+    BTA_GATTC_ServiceSearchRequest(conn_id, p_uuid);
+}
+# 5927 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+static void bta_dm_gatt_disc_result(tBTA_GATT_ID service_id)
+{
+    tBTA_DM_SEARCH result;
+
+
+
+
+
+
+
+    if ( (*bta_dm_search_cb_ptr).ble_raw_used + sizeof(tBTA_GATT_ID) < (*bta_dm_search_cb_ptr).ble_raw_size ) {
+        {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "ADDING BLE SERVICE uuid=0x%x, ble_ptr = %p, ble_raw_used = 0x%x" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", service_id.uuid.uu.uuid16, (*bta_dm_search_cb_ptr).p_ble_rawdata, (*bta_dm_search_cb_ptr).ble_raw_used); };}
+                                                                                                                  ;
+
+        if ((*bta_dm_search_cb_ptr).p_ble_rawdata) {
+            memcpy(((*bta_dm_search_cb_ptr).p_ble_rawdata + (*bta_dm_search_cb_ptr).ble_raw_used), &service_id,
+                   sizeof(service_id) );
+
+            (*bta_dm_search_cb_ptr).ble_raw_used += sizeof(service_id);
+        } else {
+            {if (appl_trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_APPL", "\033[0;" "31" "m" "E" " (%d) %s: " "p_ble_rawdata is NULL" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL"); };};
+        }
+
+    } else {
+        {if (appl_trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_APPL", "\033[0;" "31" "m" "E" " (%d) %s: " "%s out of room to accomodate more service ids ble_raw_size = %d ble_raw_used = %d" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __FUNCTION__, (*bta_dm_search_cb_ptr).ble_raw_size, (*bta_dm_search_cb_ptr).ble_raw_used); };};
+    }
+
+    {if (appl_trace_level >= 3 && (((2) > (3) ? (2) : (3)) >= 3)) {esp_log_write(ESP_LOG_INFO, "BT_APPL", "\033[0;" "32" "m" "I" " (%d) %s: " "%s service_id_uuid_len=%d " "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __func__, service_id.uuid.len); };};
+    if ( (*bta_dm_search_cb_ptr).state != BTA_DM_SEARCH_IDLE) {
+
+
+        bdcpy (result.disc_ble_res.bd_addr, (*bta_dm_search_cb_ptr).peer_bdaddr);
+        strncpy(((char *)result.disc_ble_res.bd_name),(bta_dm_get_remname()),((248 - 1)));
+        result.disc_ble_res.bd_name[248] = 0;
+        memcpy(&result.disc_ble_res.service, &service_id.uuid, sizeof(tBT_UUID));
+
+        (*bta_dm_search_cb_ptr).p_search_cback(3, &result);
+    }
+}
+# 5977 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+static void bta_dm_gatt_disc_complete(UINT16 conn_id, tBTA_GATT_STATUS status)
+{
+    tBTA_DM_MSG *p_msg;
+
+    {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "bta_dm_gatt_disc_complete conn_id = %d" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", conn_id); };};
+
+    if ((*bta_dm_search_cb_ptr).uuid_to_search > 0) {
+        (*bta_dm_search_cb_ptr).uuid_to_search --;
+    }
+
+    if (status == 0x00 && (*bta_dm_search_cb_ptr).uuid_to_search > 0) {
+        btm_dm_start_disc_gatt_services(conn_id);
+    } else {
+        (*bta_dm_search_cb_ptr).uuid_to_search = 0;
+
+
+        if ((p_msg = (tBTA_DM_MSG *) malloc((sizeof(tBTA_DM_MSG)))) != 
+# 5993 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                                                        ((void *)0)
+# 5993 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                                            ) {
+            p_msg->hdr.event = BTA_DM_DISCOVERY_RESULT_EVT;
+            p_msg->disc_result.result.disc_res.result = (status == 0x00) ? 0 : 1;
+            {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "%s service found: 0x%08x" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", __FUNCTION__, (*bta_dm_search_cb_ptr).services_found); };}
+                                                             ;
+            p_msg->disc_result.result.disc_res.services = (*bta_dm_search_cb_ptr).services_found;
+            p_msg->disc_result.result.disc_res.num_uuids = 0;
+            p_msg->disc_result.result.disc_res.p_uuid_list = 
+# 6000 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                                            ((void *)0)
+# 6000 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                                ;
+            bdcpy (p_msg->disc_result.result.disc_res.bd_addr, (*bta_dm_search_cb_ptr).peer_bdaddr);
+            strncpy(((char *)p_msg->disc_result.result.disc_res.bd_name),(bta_dm_get_remname()),((248 - 1)))
+                                                                  ;
+
+
+            p_msg->disc_result.result.disc_res.bd_name[248 - 1] = 0;
+
+            p_msg->disc_result.result.disc_res.device_type |= 0x02;
+            if ( (*bta_dm_search_cb_ptr).ble_raw_used > 0 ) {
+                p_msg->disc_result.result.disc_res.p_raw_data = malloc(((*bta_dm_search_cb_ptr).ble_raw_used));
+
+                memcpy( p_msg->disc_result.result.disc_res.p_raw_data,
+                        (*bta_dm_search_cb_ptr).p_ble_rawdata,
+                        (*bta_dm_search_cb_ptr).ble_raw_used );
+
+                p_msg->disc_result.result.disc_res.raw_data_size = (*bta_dm_search_cb_ptr).ble_raw_used;
+            } else {
+                p_msg->disc_result.result.disc_res.p_raw_data = 
+# 6018 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                                               ((void *)0)
+# 6018 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                                   ;
+                (*bta_dm_search_cb_ptr).p_ble_rawdata = 0;
+            }
+
+            bta_sys_sendmsg(p_msg);
+        }
+
+        if (conn_id != 0xFFFF) {
+
+            bta_sys_start_timer(&(*bta_dm_search_cb_ptr).gatt_close_timer, BTA_DM_DISC_CLOSE_TOUT_EVT,
+                                1000);
+            bdcpy((*bta_dm_search_cb_ptr).pending_close_bda, (*bta_dm_search_cb_ptr).peer_bdaddr);
+        }
+        (*bta_dm_search_cb_ptr).gatt_disc_active = 
+# 6031 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                           0
+# 6031 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                ;
+    }
+}
+# 6046 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+void bta_dm_close_gatt_conn(tBTA_DM_MSG *p_data)
+{
+    (void)(p_data);
+
+    if ((*bta_dm_search_cb_ptr).conn_id != 0xFFFF) {
+        BTA_GATTC_Close((*bta_dm_search_cb_ptr).conn_id);
+    }
+
+    memset((*bta_dm_search_cb_ptr).pending_close_bda, 0, 6);
+    (*bta_dm_search_cb_ptr).conn_id = 0xFFFF;
+}
+# 6069 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+void btm_dm_start_gatt_discovery (BD_ADDR bd_addr)
+{
+    (*bta_dm_search_cb_ptr).gatt_disc_active = 
+# 6071 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                       1
+# 6071 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                           ;
+
+
+    if (bdcmp((*bta_dm_search_cb_ptr).pending_close_bda, bd_addr) == 0 &&
+            (*bta_dm_search_cb_ptr).conn_id != 0xFFFF) {
+        memset((*bta_dm_search_cb_ptr).pending_close_bda, 0, 6);
+        bta_sys_stop_timer(&(*bta_dm_search_cb_ptr).gatt_close_timer);
+        btm_dm_start_disc_gatt_services((*bta_dm_search_cb_ptr).conn_id);
+    } else {
+
+        BTA_GATTC_Open((*bta_dm_search_cb_ptr).client_if, bd_addr, 0XFF, 
+# 6081 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                                                                  1
+# 6081 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                                                      , 2);
+    }
+}
+# 6095 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+static void bta_dm_cancel_gatt_discovery(BD_ADDR bd_addr)
+{
+    if ((*bta_dm_search_cb_ptr).conn_id == 0xFFFF) {
+        BTA_GATTC_CancelOpen((*bta_dm_search_cb_ptr).client_if, bd_addr, 
+# 6098 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c" 3 4
+                                                                 1
+# 6098 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+                                                                     );
+    }
+
+    bta_dm_gatt_disc_complete((*bta_dm_search_cb_ptr).conn_id, (tBTA_GATT_STATUS) 0x85);
+}
+# 6115 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+void bta_dm_proc_open_evt(tBTA_GATTC_OPEN *p_data)
+{
+    UINT8 *p1;
+    UINT8 *p2;
+
+    p1 = (*bta_dm_search_cb_ptr).peer_bdaddr;
+    p2 = p_data->remote_bda;
+
+    {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "DM Search state= %d search_cb.peer_dbaddr: [%08x%04x] connected_bda= [%08x%04x] " "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", (*bta_dm_search_cb_ptr).state, ((p1[0]) << 24) + ((p1[1]) << 16) + ((p1[2]) << 8) + (p1[3]), ((p1[4]) << 8) + p1[5], ((p2[0]) << 24) + ((p2[1]) << 16) + ((p2[2]) << 8) + (p2[3]), ((p2[4]) << 8) + p2[5]); };}
+
+
+
+
+                                            ;
+
+    (void)(p1);
+    (void)(p2);
+    {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "BTA_GATTC_OPEN_EVT conn_id = %d client_if=%d status = %d" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", p_data->conn_id, p_data->client_if, p_data->status); };}
+
+
+                                    ;
+
+    (*bta_dm_search_cb_ptr).conn_id = p_data->conn_id;
+
+    if (p_data->status == 0x00) {
+        btm_dm_start_disc_gatt_services(p_data->conn_id);
+    } else {
+        bta_dm_gatt_disc_complete(0xFFFF, p_data->status);
+    }
+}
+# 6157 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/dm/bta_dm_act.c"
+static void bta_dm_gattc_callback(tBTA_GATTC_EVT event, tBTA_GATTC *p_data)
+{
+    {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "bta_dm_gattc_callback event = %d" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", event); };};
+
+    switch (event) {
+    case 0:
+        {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "BTA_GATTC_REG_EVT client_if = %d" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", p_data->reg_oper.client_if); };};
+        if (p_data->reg_oper.status == 0x00) {
+            (*bta_dm_search_cb_ptr).client_if = p_data->reg_oper.client_if;
+        } else {
+            (*bta_dm_search_cb_ptr).client_if = 0;
+        }
+        break;
+
+    case 2:
+        bta_dm_proc_open_evt(&p_data->open);
+        break;
+
+    case 7:
+        bta_dm_gatt_disc_result(p_data->srvc_res.service_uuid);
+        break;
+
+    case 6:
+        if ( (*bta_dm_search_cb_ptr).state != BTA_DM_SEARCH_IDLE) {
+            bta_dm_gatt_disc_complete(p_data->search_cmpl.conn_id, p_data->search_cmpl.status);
+        }
+        break;
+
+    case 5:
+        {if (appl_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_APPL", "D" " (%d) %s: " "BTA_GATTC_CLOSE_EVT reason = %d" "\033[0m" "\n", esp_log_timestamp(), "BT_APPL", p_data->close.reason); };};
+
+        if ( ((*bta_dm_search_cb_ptr).state != BTA_DM_SEARCH_IDLE) &&
+                ((*bta_dm_search_cb_ptr).state != BTA_DM_SEARCH_ACTIVE) &&
+                !memcmp(p_data->close.remote_bda, (*bta_dm_search_cb_ptr).peer_bdaddr, 6)) {
+            bta_dm_gatt_disc_complete((UINT16)0xFFFF, (tBTA_GATT_STATUS) 0x85);
+        }
+        break;
+
+    default:
+        break;
     }
 }

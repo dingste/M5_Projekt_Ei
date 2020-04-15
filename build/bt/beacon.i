@@ -1193,36 +1193,6 @@ __attribute__((__noreturn__)) void
 
 
 # 21 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h"
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 1
-# 17 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h"
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
-       
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 1 3 4
-# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
-void __assert (const char *, int, const char *)
-     __attribute__ ((__noreturn__));
-void __assert_func (const char *, int, const char *, const char *)
-     __attribute__ ((__noreturn__));
-# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-# 18 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 2
-# 21 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-
-
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h"
-       
-# 24 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-# 26 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
 # 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
 
 # 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
@@ -1396,6 +1366,36 @@ void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint1
 # 131 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h" 2
 # 13 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_trace.h" 2
 # 20 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 1
+# 20 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h"
+# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 1
+# 17 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h"
+# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
+# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
+       
+
+
+
+# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 1 3 4
+# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
+
+# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
+void __assert (const char *, int, const char *)
+     __attribute__ ((__noreturn__));
+void __assert_func (const char *, int, const char *, const char *)
+     __attribute__ ((__noreturn__));
+# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
+# 18 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 2
+# 21 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
+
+
+# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h" 1
+# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h"
+       
+# 24 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
+# 21 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h" 2
+# 195 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h"
+
 # 195 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h"
 static inline unsigned int find_msb_set(u32_t op)
 {
@@ -3642,203 +3642,6 @@ void heap_caps_dump_all(void);
 # 338 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
 size_t heap_caps_get_allocated_size( void *ptr );
 # 88 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 2
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-       
-
-
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/include/esp_attr.h" 1
-# 23 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 2
-# 61 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-typedef struct {
-    const char *name;
-    uint32_t caps[3];
-    
-# 64 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-   _Bool 
-# 64 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-        aliased_iram;
-    
-# 65 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-   _Bool 
-# 65 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-        startup_stack;
-} soc_memory_type_desc_t;
-
-
-extern const soc_memory_type_desc_t soc_memory_types[];
-extern const size_t soc_memory_type_count;
-
-
-
-typedef struct
-{
-    intptr_t start;
-    size_t size;
-    size_t type;
-    intptr_t iram_address;
-} soc_memory_region_t;
-
-extern const soc_memory_region_t soc_memory_regions[];
-extern const size_t soc_memory_region_count;
-
-
-
-
-typedef struct
-{
-    intptr_t start;
-    intptr_t end;
-} soc_reserved_region_t;
-# 136 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-size_t soc_get_available_memory_regions(soc_memory_region_t *regions);
-
-
-
-
-
-size_t soc_get_available_memory_region_max_count(void);
-
-inline static 
-# 144 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 144 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "0"))) esp_ptr_dma_capable(const void *p)
-{
-    return (intptr_t)p >= 0x3FFAE000 && (intptr_t)p < 0x40000000;
-}
-
-inline static 
-# 149 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 149 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "1"))) esp_ptr_word_aligned(const void *p)
-{
-    return ((intptr_t)p) % 4 == 0;
-}
-
-inline static 
-# 154 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 154 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "2"))) esp_ptr_executable(const void *p)
-{
-    intptr_t ip = (intptr_t) p;
-    return (ip >= 0x400D0000 && ip < 0x40400000)
-        || (ip >= 0x40080000 && ip < 0x400A0000)
-        || (ip >= 0x400C0000 && ip < 0x400C2000);
-}
-
-inline static 
-# 162 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 162 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "3"))) esp_ptr_byte_accessible(const void *p)
-{
-    intptr_t ip = (intptr_t) p;
-    
-# 165 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-   _Bool 
-# 165 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-        r;
-    r = (ip >= 0x3FF90000 && ip < 0x40000000);
-
-
-
-
-
-
-
-    return r;
-}
-
-inline static 
-# 177 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 177 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "4"))) esp_ptr_internal(const void *p) {
-    
-# 178 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-   _Bool 
-# 178 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-        r;
-    r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x400C2000);
-    r |= ((intptr_t)p >= 0x50000000 && (intptr_t)p < 0x50002000);
-    return r;
-}
-
-
-inline static 
-# 185 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 185 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "5"))) esp_ptr_external_ram(const void *p) {
-    return ((intptr_t)p >= 0x3F800000 && (intptr_t)p < 0x3FC00000);
-}
-
-inline static 
-# 189 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 189 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "6"))) esp_ptr_in_iram(const void *p) {
-
-    return ((intptr_t)p >= 0x40080000 && (intptr_t)p < 0x400A0000);
-
-
-
-}
-
-inline static 
-# 197 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 197 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "7"))) esp_ptr_in_drom(const void *p) {
-    return ((intptr_t)p >= 0x3F400000 && (intptr_t)p < 0x3F800000);
-}
-
-inline static 
-# 201 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 201 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "8"))) esp_ptr_in_dram(const void *p) {
-    return ((intptr_t)p >= 0x3FFAE000 && (intptr_t)p < 0x40000000);
-}
-
-inline static 
-# 205 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 205 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "9"))) esp_ptr_in_diram_dram(const void *p) {
-    return ((intptr_t)p >= 0x3FFE0000 && (intptr_t)p < 0x40000000);
-}
-
-inline static 
-# 209 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 209 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "10"))) esp_ptr_in_diram_iram(const void *p) {
-    return ((intptr_t)p >= 0x400A0000 && (intptr_t)p < 0x400C0000);
-}
-
-
-inline static 
-# 214 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 214 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "11"))) esp_stack_ptr_is_sane(uint32_t sp)
-{
-
-    return !(sp < 0x3FFAE000 + 0x10 || sp > 0x40000000 - 0x10 || ((sp & 0xF) != 0));
-}
-# 93 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 2
 # 117 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h"
 typedef uint8_t StackType_t;
 typedef int BaseType_t;
@@ -3858,7 +3661,8 @@ typedef unsigned int UBaseType_t;
 # 132 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 2
 
 
-
+# 1 "/home/dieter/Development/esp-idf/components/xtensa/include/esp_attr.h" 1
+# 135 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 2
 
 
 
@@ -4079,7 +3883,7 @@ BaseType_t xPortInterruptedFromISRContext(void);
 
 
 
-static inline uint32_t __attribute__((section(".iram1" "." "12"))) xPortGetCoreID(void) {
+static inline uint32_t __attribute__((section(".iram1" "." "0"))) xPortGetCoreID(void) {
     uint32_t id;
     __asm__ __volatile__ (
         "rsr.prid %0\n"
@@ -4096,7 +3900,7 @@ static inline
 # 221 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h" 3 4
              _Bool 
 # 221 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h"
-                  __attribute__((section(".iram1" "." "13"))) xPortCanYield(void)
+                  __attribute__((section(".iram1" "." "1"))) xPortCanYield(void)
 {
     uint32_t ps_reg = 0;
 
@@ -4425,7 +4229,7 @@ typedef enum
           TaskHandle_t * const pvCreatedTask,
           const BaseType_t xCoreID);
 # 432 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
- static inline __attribute__((section(".iram1" "." "14"))) BaseType_t xTaskCreate(
+ static inline __attribute__((section(".iram1" "." "2"))) BaseType_t xTaskCreate(
    TaskFunction_t pvTaskCode,
    const char * const pcName,
    const uint32_t usStackDepth,

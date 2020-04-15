@@ -1,9 +1,9 @@
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
+# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
 # 1 "/home/dieter/Development/M5_Projekt_Ei/build/bt//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-# 9 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
+# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
+# 9 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
 # 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/errno.h" 1
 # 18 "/home/dieter/Development/esp-idf/components/newlib/platform_include/errno.h"
 # 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/errno.h" 1 3 4
@@ -536,7 +536,7 @@ extern const char * const _sys_errlist[];
 extern int _sys_nerr;
 # 10 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/errno.h" 2 3 4
 # 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/errno.h" 2
-# 10 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 2
+# 10 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c" 2
 
 # 1 "/home/dieter/Development/M5_Projekt_Ei/build/include/sdkconfig.h" 1
 
@@ -544,18 +544,10 @@ extern int _sys_nerr;
 
 
        
-# 12 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 2
+# 12 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c" 2
 
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h" 1
-# 28 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_target.h" 1
-# 23 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_target.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/common/include/bt_common.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/bt/common/include/bt_common.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/common/include/bt_user_config.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/bt/common/include/bt_common.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h" 1
-# 18 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
+# 1 "/home/dieter/Development/esp-idf/components/bt/common/btc/include/btc/btc_task.h" 1
+# 18 "/home/dieter/Development/esp-idf/components/bt/common/btc/include/btc/btc_task.h"
 # 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 1 3 4
 # 9 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 3 4
 # 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 1 3 4
@@ -683,7 +675,13 @@ typedef __uint_least64_t uint_least64_t;
   typedef long long int int_fast64_t;
   typedef long long unsigned int uint_fast64_t;
 # 10 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 2 3 4
-# 19 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h" 2
+# 19 "/home/dieter/Development/esp-idf/components/bt/common/btc/include/btc/btc_task.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/bt/common/include/bt_common.h" 1
+# 19 "/home/dieter/Development/esp-idf/components/bt/common/include/bt_common.h"
+# 1 "/home/dieter/Development/esp-idf/components/bt/common/include/bt_user_config.h" 1
+# 20 "/home/dieter/Development/esp-idf/components/bt/common/include/bt_common.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h" 1
+# 19 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
 # 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdarg.h" 1 3 4
 # 40 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdarg.h" 3 4
 typedef __builtin_va_list __gnuc_va_list;
@@ -1019,36 +1017,6 @@ __attribute__((__noreturn__)) void
 
 
 # 21 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h"
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 1
-# 17 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h"
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
-       
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 1 3 4
-# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
-void __assert (const char *, int, const char *)
-     __attribute__ ((__noreturn__));
-void __assert_func (const char *, int, const char *, const char *)
-     __attribute__ ((__noreturn__));
-# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-# 18 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 2
-# 21 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-
-
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h"
-       
-# 24 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-# 26 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
 # 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
 
 # 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
@@ -1243,210 +1211,1003 @@ typedef enum {
     BT_STATUS_MEMORY_FULL,
     BT_STATUS_EIR_TOO_LARGE,
 } bt_status_t;
-# 24 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_target.h" 2
-# 39 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_target.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bluedroid_user_config.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bluedroid_user_config.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/common/include/bt_user_config.h" 1
-# 21 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bluedroid_user_config.h" 2
-# 40 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_target.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/bt_types.h" 1
-# 26 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/bt_types.h"
-typedef uint8_t UINT8;
-typedef uint16_t UINT16;
-typedef uint32_t UINT32;
-typedef uint64_t UINT64;
+# 20 "/home/dieter/Development/esp-idf/components/bt/common/btc/include/btc/btc_task.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/thread.h" 1
+# 18 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/thread.h"
+# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_api.h" 1
+# 31 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_api.h"
+# 1 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h" 1
+# 148 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
+extern const unsigned int Xthal_rev_no;
 
-typedef int8_t INT8;
-typedef int16_t INT16;
-typedef int32_t INT32;
-typedef 
-# 34 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/bt_types.h" 3 4
-       _Bool 
-# 34 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/bt_types.h"
-            BOOLEAN;
-# 191 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/bt_types.h"
+
+
+
+
+
+
+extern void xthal_save_extra(void *base);
+extern void xthal_restore_extra(void *base);
+
+extern void xthal_save_cpregs(void *base, int);
+extern void xthal_restore_cpregs(void *base, int);
+
+extern void xthal_save_cp0(void *base);
+extern void xthal_save_cp1(void *base);
+extern void xthal_save_cp2(void *base);
+extern void xthal_save_cp3(void *base);
+extern void xthal_save_cp4(void *base);
+extern void xthal_save_cp5(void *base);
+extern void xthal_save_cp6(void *base);
+extern void xthal_save_cp7(void *base);
+extern void xthal_restore_cp0(void *base);
+extern void xthal_restore_cp1(void *base);
+extern void xthal_restore_cp2(void *base);
+extern void xthal_restore_cp3(void *base);
+extern void xthal_restore_cp4(void *base);
+extern void xthal_restore_cp5(void *base);
+extern void xthal_restore_cp6(void *base);
+extern void xthal_restore_cp7(void *base);
+
+extern void* Xthal_cpregs_save_fn[8];
+extern void* Xthal_cpregs_restore_fn[8];
+
+extern void* Xthal_cpregs_save_nw_fn[8];
+extern void* Xthal_cpregs_restore_nw_fn[8];
+
+
+
+
+
+extern const unsigned int Xthal_extra_size;
+extern const unsigned int Xthal_extra_align;
+extern const unsigned int Xthal_cpregs_size[8];
+extern const unsigned int Xthal_cpregs_align[8];
+extern const unsigned int Xthal_all_extra_size;
+extern const unsigned int Xthal_all_extra_align;
+
+extern const char * const Xthal_cp_names[8];
+
+
+
+
+
+
+
+extern void xthal_init_mem_extra(void *);
+
+extern void xthal_init_mem_cp(void *, int);
+
+
+extern const unsigned int Xthal_num_coprocessors;
+
+
+extern const unsigned char Xthal_cp_num;
+
+extern const unsigned char Xthal_cp_max;
+
+
+
+extern const unsigned int Xthal_cp_mask;
+# 237 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
+extern const unsigned int Xthal_num_aregs;
+extern const unsigned char Xthal_num_aregs_log2;
+
+
+
+
+
+
+
+extern const unsigned char Xthal_icache_linewidth;
+extern const unsigned char Xthal_dcache_linewidth;
+
+extern const unsigned short Xthal_icache_linesize;
+extern const unsigned short Xthal_dcache_linesize;
+
+
+extern const unsigned int Xthal_icache_size;
+extern const unsigned int Xthal_dcache_size;
+
+extern const unsigned char Xthal_dcache_is_writeback;
+
+
+
+extern void xthal_icache_region_invalidate( void *addr, unsigned size );
+extern void xthal_dcache_region_invalidate( void *addr, unsigned size );
+
+extern void xthal_icache_line_invalidate(void *addr);
+extern void xthal_dcache_line_invalidate(void *addr);
+
+
+extern void xthal_dcache_region_writeback( void *addr, unsigned size );
+
+extern void xthal_dcache_line_writeback(void *addr);
+
+
+extern void xthal_dcache_region_writeback_inv( void *addr, unsigned size );
+
+extern void xthal_dcache_line_writeback_inv(void *addr);
+
+extern void xthal_icache_sync( void );
+
+extern void xthal_dcache_sync( void );
+
+
+
+extern unsigned int xthal_icache_get_ways(void);
+
+extern void xthal_icache_set_ways(unsigned int ways);
+
+extern unsigned int xthal_dcache_get_ways(void);
+
+extern void xthal_dcache_set_ways(unsigned int ways);
+
+
+extern void xthal_cache_coherence_on( void );
+extern void xthal_cache_coherence_off( void );
+
+extern void xthal_cache_coherence_optin( void );
+extern void xthal_cache_coherence_optout( void );
+# 339 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
+extern int xthal_get_cache_prefetch( void );
+extern int xthal_set_cache_prefetch( int );
+extern int xthal_set_cache_prefetch_long( unsigned long long );
+# 352 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
+extern const int Xthal_debug_configured;
+
+
+extern unsigned int xthal_set_soft_break(void *addr);
+extern void xthal_remove_soft_break(void *addr, unsigned int);
+# 374 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
+extern int xthal_disassemble( unsigned char *instr_buf, void *tgt_addr,
+         char *buffer, unsigned buflen, unsigned options );
+
+
+
+extern int xthal_disassemble_size( unsigned char *instr_buf );
+
+
+
+
+
+
+extern void* xthal_memcpy(void *dst, const void *src, unsigned len);
+extern void* xthal_bcopy(const void *src, void *dst, unsigned len);
+
+
+
+
+
+
+extern int xthal_compare_and_set( int *addr, int test_val, int compare_val );
+# 403 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
+extern const unsigned int Xthal_release_major;
+extern const unsigned int Xthal_release_minor;
+extern const char * const Xthal_release_name;
+extern const char * const Xthal_release_internal;
+
+extern const unsigned char Xthal_memory_order;
+extern const unsigned char Xthal_have_windowed;
+extern const unsigned char Xthal_have_density;
+extern const unsigned char Xthal_have_booleans;
+extern const unsigned char Xthal_have_loops;
+extern const unsigned char Xthal_have_nsa;
+extern const unsigned char Xthal_have_minmax;
+extern const unsigned char Xthal_have_sext;
+extern const unsigned char Xthal_have_clamps;
+extern const unsigned char Xthal_have_mac16;
+extern const unsigned char Xthal_have_mul16;
+extern const unsigned char Xthal_have_fp;
+extern const unsigned char Xthal_have_speculation;
+extern const unsigned char Xthal_have_threadptr;
+
+extern const unsigned char Xthal_have_pif;
+extern const unsigned short Xthal_num_writebuffer_entries;
+
+extern const unsigned int Xthal_build_unique_id;
+
+extern const unsigned int Xthal_hw_configid0;
+extern const unsigned int Xthal_hw_configid1;
+extern const unsigned int Xthal_hw_release_major;
+extern const unsigned int Xthal_hw_release_minor;
+extern const char * const Xthal_hw_release_name;
+extern const char * const Xthal_hw_release_internal;
+
+
+extern void xthal_clear_regcached_code( void );
+# 653 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
+extern void xthal_window_spill( void );
+
+
+
+
+
+
+
+extern void xthal_validate_cp(int);
+extern void xthal_invalidate_cp(int);
+
+
+extern void xthal_set_cpenable(unsigned);
+extern unsigned xthal_get_cpenable(void);
+
+
+
+
+
+
+
+extern const unsigned char Xthal_num_intlevels;
+
+extern const unsigned char Xthal_num_interrupts;
+
+extern const unsigned char Xthal_excm_level;
+
+
+extern const unsigned int Xthal_intlevel_mask[16];
+
+extern const unsigned int Xthal_intlevel_andbelow_mask[16];
+
+
+extern const unsigned char Xthal_intlevel[32];
+
+
+extern const unsigned char Xthal_inttype[32];
+
+
+extern const unsigned int Xthal_inttype_mask[8];
+
+
+extern const int Xthal_timer_interrupt[4];
+
+
+extern unsigned xthal_get_intenable( void );
+extern void xthal_set_intenable( unsigned );
+extern unsigned xthal_get_interrupt( void );
+
+extern void xthal_set_intset( unsigned );
+extern void xthal_set_intclear( unsigned );
+
+
+
+
+
+
+
+extern const int Xthal_num_ibreak;
+extern const int Xthal_num_dbreak;
+
+
+
+
+
+
+
+extern const unsigned char Xthal_have_ccount;
+extern const unsigned char Xthal_num_ccompare;
+
+
+extern unsigned xthal_get_ccount(void);
+
+
+extern void xthal_set_ccompare(int, unsigned);
+extern unsigned xthal_get_ccompare(int);
+
+
+
+
+
+
+extern const unsigned char Xthal_have_prid;
+extern const unsigned char Xthal_have_exceptions;
+extern const unsigned char Xthal_xea_version;
+extern const unsigned char Xthal_have_interrupts;
+extern const unsigned char Xthal_have_highlevel_interrupts;
+extern const unsigned char Xthal_have_nmi;
+
+extern unsigned xthal_get_prid( void );
+
+
+
+
+
+
+
+extern unsigned xthal_vpri_to_intlevel(unsigned vpri);
+extern unsigned xthal_intlevel_to_vpri(unsigned intlevel);
+
+
+extern unsigned xthal_int_enable(unsigned);
+extern unsigned xthal_int_disable(unsigned);
+
+
+extern int xthal_set_int_vpri(int intnum, int vpri);
+extern int xthal_get_int_vpri(int intnum);
+
+
+extern void xthal_set_vpri_locklevel(unsigned intlevel);
+extern unsigned xthal_get_vpri_locklevel(void);
+
+
+extern unsigned xthal_set_vpri(unsigned vpri);
+extern unsigned xthal_get_vpri(void);
+extern unsigned xthal_set_vpri_intlevel(unsigned intlevel);
+extern unsigned xthal_set_vpri_lock(void);
+
+
+
+
+
+
+typedef void (XtHalVoidFunc)(void);
+
+
+extern unsigned Xthal_tram_pending;
+# 789 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
+extern unsigned Xthal_tram_enabled;
+
+
+extern unsigned Xthal_tram_sync;
+
+
+extern unsigned xthal_tram_pending_to_service( void );
+extern void xthal_tram_done( unsigned serviced_mask );
+extern int xthal_tram_set_sync( int intnum, int sync );
+extern XtHalVoidFunc* xthal_set_tram_trigger_func( XtHalVoidFunc *trigger_fn );
+
+
+
+
+
+
+extern const unsigned char Xthal_num_instrom;
+extern const unsigned char Xthal_num_instram;
+extern const unsigned char Xthal_num_datarom;
+extern const unsigned char Xthal_num_dataram;
+extern const unsigned char Xthal_num_xlmi;
+
+
+
+extern const unsigned int Xthal_instrom_vaddr[];
+extern const unsigned int Xthal_instrom_paddr[];
+extern const unsigned int Xthal_instrom_size [];
+extern const unsigned int Xthal_instram_vaddr[];
+extern const unsigned int Xthal_instram_paddr[];
+extern const unsigned int Xthal_instram_size [];
+extern const unsigned int Xthal_datarom_vaddr[];
+extern const unsigned int Xthal_datarom_paddr[];
+extern const unsigned int Xthal_datarom_size [];
+extern const unsigned int Xthal_dataram_vaddr[];
+extern const unsigned int Xthal_dataram_paddr[];
+extern const unsigned int Xthal_dataram_size [];
+extern const unsigned int Xthal_xlmi_vaddr[];
+extern const unsigned int Xthal_xlmi_paddr[];
+extern const unsigned int Xthal_xlmi_size [];
+
+
+
+
+
+
+
+extern const unsigned char Xthal_icache_setwidth;
+extern const unsigned char Xthal_dcache_setwidth;
+
+extern const unsigned int Xthal_icache_ways;
+extern const unsigned int Xthal_dcache_ways;
+
+extern const unsigned char Xthal_icache_line_lockable;
+extern const unsigned char Xthal_dcache_line_lockable;
+
+
+extern unsigned xthal_get_cacheattr( void );
+extern unsigned xthal_get_icacheattr( void );
+extern unsigned xthal_get_dcacheattr( void );
+extern void xthal_set_cacheattr( unsigned );
+extern void xthal_set_icacheattr( unsigned );
+extern void xthal_set_dcacheattr( unsigned );
+
+extern int xthal_set_region_attribute( void *addr, unsigned size,
+         unsigned cattr, unsigned flags );
+# 862 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
+extern void xthal_icache_enable( void );
+extern void xthal_dcache_enable( void );
+
+extern void xthal_icache_disable( void );
+extern void xthal_dcache_disable( void );
+
+
+extern void xthal_icache_all_invalidate( void );
+extern void xthal_dcache_all_invalidate( void );
+
+extern void xthal_dcache_all_writeback( void );
+
+extern void xthal_dcache_all_writeback_inv( void );
+
+extern void xthal_icache_region_lock( void *addr, unsigned size );
+extern void xthal_dcache_region_lock( void *addr, unsigned size );
+
+extern void xthal_icache_line_lock(void *addr);
+extern void xthal_dcache_line_lock(void *addr);
+
+
+extern void xthal_icache_all_unlock( void );
+extern void xthal_dcache_all_unlock( void );
+extern void xthal_icache_region_unlock( void *addr, unsigned size );
+extern void xthal_dcache_region_unlock( void *addr, unsigned size );
+
+extern void xthal_icache_line_unlock(void *addr);
+extern void xthal_dcache_line_unlock(void *addr);
+# 899 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
+extern void xthal_memep_inject_error(void *addr, int size, int flags);
+
+
+
+
+
+
+
+extern const unsigned char Xthal_have_spanning_way;
+extern const unsigned char Xthal_have_identity_map;
+extern const unsigned char Xthal_have_mimic_cacheattr;
+extern const unsigned char Xthal_have_xlt_cacheattr;
+extern const unsigned char Xthal_have_cacheattr;
+extern const unsigned char Xthal_have_tlbs;
+
+extern const unsigned char Xthal_mmu_asid_bits;
+extern const unsigned char Xthal_mmu_asid_kernel;
+extern const unsigned char Xthal_mmu_rings;
+extern const unsigned char Xthal_mmu_ring_bits;
+extern const unsigned char Xthal_mmu_sr_bits;
+extern const unsigned char Xthal_mmu_ca_bits;
+extern const unsigned int Xthal_mmu_max_pte_page_size;
+extern const unsigned int Xthal_mmu_min_pte_page_size;
+
+extern const unsigned char Xthal_itlb_way_bits;
+extern const unsigned char Xthal_itlb_ways;
+extern const unsigned char Xthal_itlb_arf_ways;
+extern const unsigned char Xthal_dtlb_way_bits;
+extern const unsigned char Xthal_dtlb_ways;
+extern const unsigned char Xthal_dtlb_arf_ways;
+
+
+
+extern int xthal_static_v2p( unsigned vaddr, unsigned *paddrp );
+extern int xthal_static_p2v( unsigned paddr, unsigned *vaddrp, unsigned cached );
+# 948 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
+extern int xthal_set_region_translation(void* vaddr, void* paddr, unsigned size, unsigned cache_atr, unsigned flags);
+extern int xthal_v2p(void*, void**, unsigned*, unsigned*);
+extern int xthal_invalidate_region(void* addr);
+extern int xthal_set_region_translation_raw(void *vaddr, void *paddr, unsigned cattr);
+# 32 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_api.h" 2
+
+# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_context.h" 1
+# 44 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_context.h"
+# 1 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h" 1
+# 45 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_context.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/corebits.h" 1
+# 46 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_context.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h" 1
+# 47 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_context.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h" 1
+# 30 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h"
+# 1 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h" 1
+# 42 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h"
+# 1 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtensa-versions.h" 1
+# 43 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h" 2
+# 51 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h"
+# 1 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h" 1
+# 52 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h" 2
+# 1279 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h"
+extern const unsigned char Xthal_cp_id_FPU;
+extern const unsigned int Xthal_cp_mask_FPU;
+
+
+extern const unsigned char Xthal_cp_id_XCHAL_CP1_IDENT;
+extern const unsigned int Xthal_cp_mask_XCHAL_CP1_IDENT;
+
+
+extern const unsigned char Xthal_cp_id_XCHAL_CP2_IDENT;
+extern const unsigned int Xthal_cp_mask_XCHAL_CP2_IDENT;
+
+
+extern const unsigned char Xthal_cp_id_XCHAL_CP3_IDENT;
+extern const unsigned int Xthal_cp_mask_XCHAL_CP3_IDENT;
+
+
+extern const unsigned char Xthal_cp_id_XCHAL_CP4_IDENT;
+extern const unsigned int Xthal_cp_mask_XCHAL_CP4_IDENT;
+
+
+extern const unsigned char Xthal_cp_id_XCHAL_CP5_IDENT;
+extern const unsigned int Xthal_cp_mask_XCHAL_CP5_IDENT;
+
+
+extern const unsigned char Xthal_cp_id_XCHAL_CP6_IDENT;
+extern const unsigned int Xthal_cp_mask_XCHAL_CP6_IDENT;
+
+
+extern const unsigned char Xthal_cp_id_XCHAL_CP7_IDENT;
+extern const unsigned int Xthal_cp_mask_XCHAL_CP7_IDENT;
+# 31 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h" 2
+# 56 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h"
 typedef struct {
-    uint16_t event;
-    uint16_t len;
-    uint16_t offset;
-    uint16_t layer_specific;
-    uint8_t data[];
-} BT_HDR;
-# 299 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/bt_types.h"
-typedef UINT8 BD_ADDR[6];
-typedef UINT8 *BD_ADDR_PTR;
+long pc;
+long ps;
+long areg[4];
+long sar;
+
+long lcount;
+long lbeg;
+long lend;
 
 
+long acclo;
+long acchi;
+long mr[4];
 
-
-typedef UINT8 tAMP_KEY_TYPE;
-
-
-typedef UINT8 BT_OCTET8[8];
-
-
-typedef UINT8 LINK_KEY[16];
-
-
-typedef UINT8 AMP_LINK_KEY[32];
-
-
-typedef UINT8 BT_OCTET16[16];
-
-
-typedef UINT8 PIN_CODE[16];
-typedef UINT8 *PIN_CODE_PTR;
-
-
-typedef UINT8 BT_OCTET32[32];
-
-
-typedef UINT8 DEV_CLASS[3];
-typedef UINT8 *DEV_CLASS_PTR;
-
-
-typedef UINT8 EXT_INQ_RESP[3];
-typedef UINT8 *EXT_INQ_RESP_PTR;
-
-
-typedef UINT8 BD_NAME[248 + 1];
-typedef UINT8 *BD_NAME_PTR;
-
-
-typedef UINT8 BD_FEATURES[8];
-
-
-typedef UINT8 BT_EVENT_MASK[8];
-
-
-typedef UINT8 LAP[3];
-typedef UINT8 INQ_LAP[3];
-
-
-typedef UINT8 RAND_NUM[16];
-
-
-typedef UINT8 ACO[12];
-
-
-typedef UINT8 COF[12];
-
-
-typedef UINT8 AFH_CHANNELS[10];
-
-typedef UINT8 BLE_CHANNELS[5];
-
+} KernelFrame;
+# 80 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h"
 typedef struct {
-    UINT8 qos_flags;
-    UINT8 service_type;
-    UINT32 token_rate;
-    UINT32 token_bucket_size;
-    UINT32 peak_bandwidth;
-    UINT32 latency;
-    UINT32 delay_variation;
-} FLOW_SPEC;
-# 394 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/bt_types.h"
-typedef UINT8 ACCESS_CODE[9];
-# 418 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/bt_types.h"
+long pc;
+long ps;
+long sar;
+long vpri;
+
+
+
+long a2;
+long a3;
+long a4;
+long a5;
+# 104 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h"
+long exccause;
+
+long lcount;
+long lbeg;
+long lend;
+
+
+long acclo;
+long acchi;
+long mr[4];
+# 123 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h"
+long pad[((3 + 
+# 123 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h" 3 4
+1
+# 123 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h"
+*1 + 
+# 123 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h" 3 4
+1
+# 123 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h"
+*2 + 0*1) & 3)];
+
+
+} UserFrame;
+# 48 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_context.h" 2
+# 103 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_context.h"
 typedef struct {
+long exit;
+long pc;
+long ps;
+long a0;
+long a1;
+long a2;
+long a3;
+long a4;
+long a5;
+long a6;
+long a7;
+long a8;
+long a9;
+long a10;
+long a11;
+long a12;
+long a13;
+long a14;
+long a15;
+long sar;
+long exccause;
+long excvaddr;
+
+long lbeg;
+long lend;
+long lcount;
 
 
 
-
-    UINT16 len;
-
-    union {
-        UINT16 uuid16;
-        UINT32 uuid32;
-        UINT8 uuid128[16];
-    } uu;
-
-} tBT_UUID;
-# 481 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/bt_types.h"
+long tmp0;
+long tmp1;
+long tmp2;
+# 145 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_context.h"
+} XtExcFrame;
+# 202 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_context.h"
 typedef struct {
-    UINT32 is_connected;
-    INT32 rssi;
-    UINT32 bytes_sent;
-    UINT32 bytes_rcvd;
-    UINT32 duration;
-} tBT_CONN_STATS;
-# 503 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/bt_types.h"
-typedef UINT8 tBLE_ADDR_TYPE;
+# 213 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_context.h"
+long exit;
+long pc;
+long ps;
+long next;
+long a0;
+long a1;
+long a2;
+long a3;
+
+} XtSolFrame;
+# 34 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_api.h" 2
+
+
+
+typedef void (*xt_handler)(void *);
+
+
+typedef void (*xt_exc_handler)(XtExcFrame *);
+# 60 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_api.h"
+extern xt_exc_handler xt_set_exception_handler(int n, xt_exc_handler f);
+# 73 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_api.h"
+extern xt_handler xt_set_interrupt_handler(int n, xt_handler f, void * arg);
+# 84 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_api.h"
+extern void xt_ints_on(unsigned int mask);
+# 95 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_api.h"
+extern void xt_ints_off(unsigned int mask);
 
 
 
 
 
-typedef UINT8 tBT_TRANSPORT;
 
 
-
-typedef struct {
-    tBLE_ADDR_TYPE type;
-    BD_ADDR bda;
-} tBLE_BD_ADDR;
-
-
-
-
-
-
-typedef UINT8 tBT_DEVICE_TYPE;
-# 687 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/bt_types.h"
-typedef void (BT_LOG_FUNC) (int trace_type, const char *fmt_str, ...);
-# 702 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/bt_types.h"
-static const BD_ADDR bd_addr_any = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
-static const BD_ADDR bd_addr_null = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
-# 719 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/bt_types.h"
-static inline void bdcpy(BD_ADDR a, const BD_ADDR b)
+static inline void xt_set_intset(unsigned int arg)
 {
-    int i;
+    xthal_set_intset(arg);
+}
+# 115 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_api.h"
+static inline void xt_set_intclear(unsigned int arg)
+{
+    xthal_set_intclear(arg);
+}
+# 127 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_api.h"
+extern void * xt_get_interrupt_handler_arg(int n);
+# 19 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/thread.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h" 1
+# 106 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h"
+int xt_clock_freq(void) __attribute__((deprecated));
 
-    for (i = 6; i != 0; i--) {
-        *a++ = *b++;
+
+
+
+
+
+
+# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_config.h" 1
+# 115 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h" 2
+# 20 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/thread.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOS.h" 1
+# 76 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOS.h"
+# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
+# 77 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOS.h" 2
+# 99 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOS.h"
+# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h" 1
+# 100 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOS.h" 2
+
+
+# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/projdefs.h" 1
+# 77 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/projdefs.h"
+typedef void (*TaskFunction_t)( void * );
+# 103 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOS.h" 2
+
+
+# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h" 1
+# 87 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h"
+# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/deprecated_definitions.h" 1
+# 88 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h" 2
+
+# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/cpu.h" 1
+# 20 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/cpu.h"
+# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
+# 21 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/cpu.h" 2
+# 33 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void *get_sp(void)
+{
+    void *sp;
+    asm volatile ("mov %0, sp;" : "=r" (sp));
+    return sp;
+}
+
+
+
+
+
+static inline void cpu_write_dtlb(uint32_t vpn, unsigned attr)
+{
+    asm volatile ("wdtlb  %1, %0; dsync\n" :: "r" (vpn), "r" (attr));
+}
+
+
+static inline void cpu_write_itlb(unsigned vpn, unsigned attr)
+{
+    asm volatile ("witlb  %1, %0; isync\n" :: "r" (vpn), "r" (attr));
+}
+
+static inline void cpu_init_memctl(void)
+{
+
+    uint32_t memctl = 0x00000000;
+    asm volatile ("wsr %0, " "MEMCTL" : : "r" (memctl));;
+
+}
+# 74 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void cpu_configure_region_protection(void)
+{
+    const uint32_t pages_to_protect[] = {0x00000000, 0x80000000, 0xa0000000, 0xc0000000, 0xe0000000};
+    for (int i = 0; i < sizeof(pages_to_protect)/sizeof(pages_to_protect[0]); ++i) {
+        cpu_write_dtlb(pages_to_protect[i], 0xf);
+        cpu_write_itlb(pages_to_protect[i], 0xf);
     }
+    cpu_write_dtlb(0x20000000, 0);
+    cpu_write_itlb(0x20000000, 0);
 }
-# 738 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/bt_types.h"
-static inline int bdcmp(const BD_ADDR a, const BD_ADDR b)
-{
-    int i;
 
-    for (i = 6; i != 0; i--) {
-        if (*a++ != *b++) {
-            return -1;
-        }
-    }
-    return 0;
-}
-# 760 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/bt_types.h"
-static inline int bdcmpany(const BD_ADDR a)
-{
-    return bdcmp(a, bd_addr_any);
-}
-# 775 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/bt_types.h"
-static inline void bdsetany(BD_ADDR a)
-{
-    bdcpy(a, bd_addr_any);
-}
-# 790 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/bt_types.h"
-static inline void bt_rcopy(UINT8 *dst, UINT8 const *src, UINT16 len)
-{
-    src += len;
-    while (len --) {
-        *dst++ = *--src;
-    }
-}
-# 41 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_target.h" 2
 
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/dyn_mem.h" 1
-# 21 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/dyn_mem.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bluedroid_user_config.h" 1
-# 22 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/dyn_mem.h" 2
-# 43 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_target.h" 2
-# 2070 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_target.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_trace.h" 1
-# 23 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_trace.h"
+
+
+
+void esp_cpu_stall(int cpu_id);
+
+
+
+
+
+void esp_cpu_unstall(int cpu_id);
+
+
+
+
+
+void esp_cpu_reset(int cpu_id);
+# 111 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/cpu.h"
+
+# 111 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/cpu.h" 3 4
+_Bool 
+# 111 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/cpu.h"
+    esp_cpu_in_ocd_debug_mode(void);
+# 124 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline uint32_t esp_cpu_process_stack_pc(uint32_t pc)
+{
+    if (pc & 0x80000000) {
+
+        pc = (pc & 0x3fffffff) | 0x40000000;
+    }
+
+    return pc - 3;
+}
+# 90 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h" 2
+
+
+
+
+
+
+# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 1
+# 82 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 1 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime.h" 1
+# 30 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime.h"
+# 1 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/specreg.h" 1
+# 31 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 1
+# 44 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
+typedef struct {
+long signature;
+long restore_label;
+long aftersave_label;
+long areg[
+# 48 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
+64
+# 48 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
+];
+
+long caller_regs[16];
+long caller_regs_saved;
+
+
+
+
+
+long windowbase;
+long windowstart;
+
+long sar;
+
+long epc1;
+long ps;
+long excsave1;
+
+long depc;
+
+
+
+long epc[
+# 70 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
+6 
+# 70 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
++ 
+# 70 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
+1 
+# 70 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
+- 1];
+long eps[
+# 71 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
+6 
+# 71 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
++ 
+# 71 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
+1 
+# 71 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
+- 1];
+long excsave[
+# 72 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
+6 
+# 72 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
++ 
+# 72 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
+1 
+# 72 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
+- 1];
+
+
+long lcount;
+long lbeg;
+long lend;
+
+
+
+
+
+long vecbase;
+
+
+long atomctl;
+
+
+
+
+
+long memctl;
+
+
+long ccount;
+long ccompare[
+# 96 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
+3
+# 96 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
+];
+
+
+long intenable;
+long interrupt;
+
+
+long icount;
+long icountlevel;
+long debugcause;
+
+
+long dbreakc[
+# 108 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
+2
+# 108 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
+];
+long dbreaka[
+# 109 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
+2
+# 109 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
+];
+
+
+long ibreaka[
+# 112 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
+2
+# 112 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
+];
+long ibreakenable;
+
+
+
+long misc[
+# 117 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
+4
+# 117 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
+];
+# 131 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
+long cpenable;
+
+
+
+
+long tlbs[8*2];
+# 163 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
+char ncp[48] __attribute__((aligned(4)));
+
+char cp0[72] __attribute__((aligned(4)));
+char cp1[0] __attribute__((aligned(1)));
+char cp2[0] __attribute__((aligned(1)));
+char cp3[0] __attribute__((aligned(1)));
+char cp4[0] __attribute__((aligned(1)));
+char cp5[0] __attribute__((aligned(1)));
+char cp6[0] __attribute__((aligned(1)));
+char cp7[0] __attribute__((aligned(1)));
+# 183 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
+} XtosCoreState;
+# 32 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime.h" 2
+# 61 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime.h"
+typedef void (_xtos_handler_func)(void);
+
+typedef _xtos_handler_func *_xtos_handler;
+# 151 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime.h"
+extern unsigned int _xtos_ints_off( unsigned int mask );
+extern unsigned int _xtos_ints_on( unsigned int mask );
+extern unsigned _xtos_set_intlevel( int intlevel );
+extern unsigned _xtos_set_min_intlevel( int intlevel );
+extern unsigned _xtos_restore_intlevel( unsigned restoreval );
+extern unsigned _xtos_restore_just_intlevel( unsigned restoreval );
+extern _xtos_handler _xtos_set_interrupt_handler( int n, _xtos_handler f );
+extern _xtos_handler _xtos_set_interrupt_handler_arg( int n, _xtos_handler f, void *arg );
+extern _xtos_handler _xtos_set_exception_handler( int n, _xtos_handler f );
+
+extern void _xtos_memep_initrams( void );
+extern void _xtos_memep_enable( int flags );
+
+
+
+extern void _xtos_dispatch_level1_interrupts( void );
+
+
+extern void _xtos_dispatch_level2_interrupts( void );
+
+
+extern void _xtos_dispatch_level3_interrupts( void );
+
+
+extern void _xtos_dispatch_level4_interrupts( void );
+
+
+extern void _xtos_dispatch_level5_interrupts( void );
+
+
+extern void _xtos_dispatch_level6_interrupts( void );
+
+
+
+extern unsigned int _xtos_read_ints( void );
+extern void _xtos_clear_ints( unsigned int mask );
+
+
+
+extern int _xtos_core_shutoff(unsigned flags);
+extern int _xtos_core_save(unsigned flags, XtosCoreState *savearea, void *code);
+extern void _xtos_core_restore(unsigned retvalue, XtosCoreState *savearea);
+# 202 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime.h"
+extern void _xtos_timer_0_delta( int cycles );
+
+
+extern void _xtos_timer_1_delta( int cycles );
+
+
+extern void _xtos_timer_2_delta( int cycles );
+# 83 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_private/crosscore_int.h" 1
+# 27 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_private/crosscore_int.h"
+void esp_crosscore_int_init(void);
+# 40 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_private/crosscore_int.h"
+void esp_crosscore_int_send_yield(int core_id);
+# 52 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_private/crosscore_int.h"
+void esp_crosscore_int_send_freq_switch(int core_id);
+# 84 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_timer.h" 1
+# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_timer.h"
+       
+# 43 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_timer.h"
 # 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 1 3 4
 # 36 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
 # 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
@@ -2182,1616 +2943,33 @@ _putchar_unlocked(int _c)
 }
 # 797 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
 
-# 24 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_trace.h" 2
-
-
-
-
-
-# 28 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_trace.h"
-static inline void trc_dump_buffer(const char *prefix, uint8_t *data, uint16_t len)
-{
-    uint16_t i;
-
-    if (!data || !len) {
-        return;
-    }
-
-    if (prefix) {
-        printf("%s: len %d\r\n", prefix, len);
-    }
-
-    for (i = 0; i < len; i+=16) {
-        printf("%02x, %02x, %02x, %02x, %02x, %02x, %02x, %02x, %02x, %02x, %02x, %02x, %02x, %02x, %02x, %02x\r\n",
-                *(data + i), *(data + i + 1), *(data + i + 2), *(data + i + 3), *(data + i + 4), *(data + i + 5), *(data + i + 6), *(data + i + 7),
-                *(data + i + 8), *(data + i + 9), *(data + i + 10), *(data + i + 11), *(data + i + 12), *(data + i + 13), *(data + i + 14), *(data + i + 15));
-    }
-    printf("\r\n");
-}
-# 335 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_trace.h"
-extern UINT8 btif_trace_level;
-# 557 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_trace.h"
-typedef UINT8 tBTTRC_PARAM_TYPE;
-typedef UINT8 tBTTRC_LAYER_ID;
-typedef UINT8 tBTTRC_TYPE;
-
-typedef struct {
-    tBTTRC_LAYER_ID layer_id;
-    tBTTRC_TYPE type;
-} tBTTRC_LEVEL;
-
-typedef UINT8 (tBTTRC_SET_TRACE_LEVEL)( UINT8 );
-
-typedef struct {
-    const tBTTRC_LAYER_ID layer_id_start;
-    const tBTTRC_LAYER_ID layer_id_end;
-    tBTTRC_SET_TRACE_LEVEL *p_f;
-    const char *trc_name;
-    UINT8 trace_level;
-} tBTTRC_FUNC_MAP;
-
-
-extern UINT8 appl_trace_level;
-# 2071 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_target.h" 2
-# 29 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h" 2
-
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h" 1
-# 28 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_defs.h" 1
-# 24 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_defs.h"
-# 1 "/home/dieter/Development/esp-idf/components/lwip/port/esp32/include/arpa/inet.h" 1
-# 18 "/home/dieter/Development/esp-idf/components/lwip/port/esp32/include/arpa/inet.h"
-# 1 "/home/dieter/Development/esp-idf/components/lwip/include/apps/sntp/../../../lwip/src/include/lwip/inet.h" 1
-# 43 "/home/dieter/Development/esp-idf/components/lwip/include/apps/sntp/../../../lwip/src/include/lwip/inet.h"
-# 1 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/opt.h" 1
-# 51 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/opt.h"
-# 1 "/home/dieter/Development/esp-idf/components/lwip/port/esp32/include/lwipopts.h" 1
-# 36 "/home/dieter/Development/esp-idf/components/lwip/port/esp32/include/lwipopts.h"
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/time.h" 1
-# 22 "/home/dieter/Development/esp-idf/components/newlib/platform_include/time.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/time.h" 1 3 4
-# 16 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/time.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 17 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/time.h" 2 3 4
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/time.h" 1 3 4
-# 20 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/time.h" 2 3 4
-# 35 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/time.h" 3 4
-
-
-
-# 37 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/time.h" 3 4
-struct tm
-{
-  int tm_sec;
-  int tm_min;
-  int tm_hour;
-  int tm_mday;
-  int tm_mon;
-  int tm_year;
-  int tm_wday;
-  int tm_yday;
-  int tm_isdst;
-
-
-
-
-
-
-};
-
-clock_t clock (void);
-double difftime (time_t _time2, time_t _time1);
-time_t mktime (struct tm *_timeptr);
-time_t time (time_t *_timer);
-
-char *asctime (const struct tm *_tblock);
-char *ctime (const time_t *_time);
-struct tm *gmtime (const time_t *_timer);
-struct tm *localtime (const time_t *_timer);
-
-size_t strftime (char *restrict _s,
-        size_t _maxsize, const char *restrict _fmt,
-        const struct tm *restrict _t);
-
-
-extern size_t strftime_l (char *restrict _s, size_t _maxsize,
-     const char *restrict _fmt,
-     const struct tm *restrict _t, locale_t _l);
-
-
-char *asctime_r (const struct tm *restrict,
-     char *restrict);
-char *ctime_r (const time_t *, char *);
-struct tm *gmtime_r (const time_t *restrict,
-     struct tm *restrict);
-struct tm *localtime_r (const time_t *restrict,
-     struct tm *restrict);
-
-
-
-
-
-
-
-
-char *strptime (const char *restrict,
-     const char *restrict,
-     struct tm *restrict);
-
-
-char *strptime_l (const char *restrict, const char *restrict,
-    struct tm *restrict, locale_t);
-
-
-
-void tzset (void);
-
-void _tzset_r (struct _reent *);
-
-typedef struct __tzrule_struct
-{
-  char ch;
-  int m;
-  int n;
-  int d;
-  int s;
-  time_t change;
-  long offset;
-} __tzrule_type;
-
-typedef struct __tzinfo_struct
-{
-  int __tznorth;
-  int __tzyear;
-  __tzrule_type __tzrule[2];
-} __tzinfo_type;
-
-__tzinfo_type *__gettzinfo (void);
-# 154 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/time.h" 3 4
-extern long _timezone;
-extern int _daylight;
-
-
-extern char *_tzname[2];
-# 178 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/time.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/signal.h" 1 3 4
-
-
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/signal.h" 1 3 4
-# 42 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/signal.h" 3 4
-union sigval {
-  int sival_int;
-  void *sival_ptr;
-};
-
-struct sigevent {
-  int sigev_notify;
-  int sigev_signo;
-  union sigval sigev_value;
-
-
-  void (*sigev_notify_function)( union sigval );
-
-  pthread_attr_t *sigev_notify_attributes;
-
-};
-# 68 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/signal.h" 3 4
-typedef struct {
-  int si_signo;
-  int si_code;
-  union sigval si_value;
-} siginfo_t;
-# 119 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/signal.h" 3 4
-typedef void (*_sig_func_ptr)(int);
-
-struct sigaction
-{
- _sig_func_ptr sa_handler;
- sigset_t sa_mask;
- int sa_flags;
-};
-# 153 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/signal.h" 3 4
-typedef struct sigaltstack {
-  void *ss_sp;
-  int ss_flags;
-  size_t ss_size;
-} stack_t;
-
-
-
-
-
-
-int sigprocmask (int how, const sigset_t *set, sigset_t *oset);
-
-
-
-int pthread_sigmask (int how, const sigset_t *set, sigset_t *oset);
-
-
-
-
-
-
-
-int kill (pid_t, int);
-
-
-
-int killpg (pid_t, int);
-
-
-int sigaction (int, const struct sigaction *, struct sigaction *);
-int sigaddset (sigset_t *, const int);
-int sigdelset (sigset_t *, const int);
-int sigismember (const sigset_t *, int);
-int sigfillset (sigset_t *);
-int sigemptyset (sigset_t *);
-int sigpending (sigset_t *);
-int sigsuspend (const sigset_t *);
-int sigwait (const sigset_t *set, int *sig);
-# 212 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/signal.h" 3 4
-int sigpause (int) __asm__ ("" "__xpg_sigpause");
-# 222 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/signal.h" 3 4
-int sigaltstack (const stack_t *restrict, stack_t *restrict);
-
-
-
-int pthread_kill (pthread_t thread, int sig);
-
-
-
-
-
-
-
-int sigwaitinfo (const sigset_t *set, siginfo_t *info);
-int sigtimedwait (const sigset_t *set, siginfo_t *info,
-    const struct timespec *timeout);
-
-int sigqueue (pid_t pid, int signo, const union sigval value);
-# 7 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/signal.h" 2 3 4
-
-
-
-typedef int sig_atomic_t;
-
-typedef _sig_func_ptr sig_t;
-
-
-typedef _sig_func_ptr sighandler_t;
-
-
-
-
-
-
-struct _reent;
-
-_sig_func_ptr _signal_r (struct _reent *, int, _sig_func_ptr);
-int _raise_r (struct _reent *, int);
-
-
-_sig_func_ptr signal (int, _sig_func_ptr);
-int raise (int);
-void psignal (int, const char *);
-
-
-
-# 179 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/time.h" 2 3 4
-
-
-
-
-
-
-
-int clock_settime (clockid_t clock_id, const struct timespec *tp);
-int clock_gettime (clockid_t clock_id, struct timespec *tp);
-int clock_getres (clockid_t clock_id, struct timespec *res);
-
-
-
-int timer_create (clockid_t clock_id,
-  struct sigevent *restrict evp,
- timer_t *restrict timerid);
-
-
-
-int timer_delete (timer_t timerid);
-
-
-
-int timer_settime (timer_t timerid, int flags,
- const struct itimerspec *restrict value,
- struct itimerspec *restrict ovalue);
-int timer_gettime (timer_t timerid, struct itimerspec *value);
-int timer_getoverrun (timer_t timerid);
-
-
-
-int nanosleep (const struct timespec *rqtp, struct timespec *rmtp);
-# 223 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/time.h" 3 4
-int clock_nanosleep (clockid_t clock_id, int flags,
- const struct timespec *rqtp, struct timespec *rmtp);
-# 23 "/home/dieter/Development/esp-idf/components/newlib/platform_include/time.h" 2
-
-
-
-
-
-
-# 28 "/home/dieter/Development/esp-idf/components/newlib/platform_include/time.h"
-int clock_settime(clockid_t clock_id, const struct timespec *tp);
-int clock_gettime(clockid_t clock_id, struct timespec *tp);
-int clock_getres(clockid_t clock_id, struct timespec *res);
-# 37 "/home/dieter/Development/esp-idf/components/lwip/port/esp32/include/lwipopts.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/unistd.h" 1 3 4
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/unistd.h" 1 3 4
-# 23 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/unistd.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/unistd.h" 1 3 4
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/unistd.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/unistd.h" 2 3 4
-
-
-# 16 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/unistd.h" 3 4
-extern char **environ;
-
-void _exit (int __status) __attribute__ ((__noreturn__));
-
-int access (const char *__path, int __amode);
-unsigned alarm (unsigned __secs);
-int chdir (const char *__path);
-int chmod (const char *__path, mode_t __mode);
-
-int chown (const char *__path, uid_t __owner, gid_t __group);
-
-
-int chroot (const char *__path);
-
-int close (int __fildes);
-
-size_t confstr (int __name, char *__buf, size_t __len);
-
-
-char * crypt (const char *__key, const char *__salt);
-# 44 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/unistd.h" 3 4
-int daemon (int nochdir, int noclose);
-
-int dup (int __fildes);
-int dup2 (int __fildes, int __fildes2);
-
-int dup3 (int __fildes, int __fildes2, int flags);
-int eaccess (const char *__path, int __mode);
-
-
-void encrypt (char *__block, int __edflag);
-
-
-void endusershell (void);
-
-
-int euidaccess (const char *__path, int __mode);
-
-int execl (const char *__path, const char *, ...);
-int execle (const char *__path, const char *, ...);
-int execlp (const char *__file, const char *, ...);
-
-int execlpe (const char *__file, const char *, ...);
-
-int execv (const char *__path, char * const __argv[]);
-int execve (const char *__path, char * const __argv[], char * const __envp[]);
-int execvp (const char *__file, char * const __argv[]);
-
-int execvpe (const char *__file, char * const __argv[], char * const __envp[]);
-
-
-int faccessat (int __dirfd, const char *__path, int __mode, int __flags);
-
-
-int fchdir (int __fildes);
-
-
-int fchmod (int __fildes, mode_t __mode);
-
-
-
-int fchown (int __fildes, uid_t __owner, gid_t __group);
-
-
-
-int fchownat (int __dirfd, const char *__path, uid_t __owner, gid_t __group, int __flags);
-
-
-int fexecve (int __fd, char * const __argv[], char * const __envp[]);
-
-pid_t fork (void);
-long fpathconf (int __fd, int __name);
-int fsync (int __fd);
-
-int fdatasync (int __fd);
-
-
-char * get_current_dir_name (void);
-
-char * getcwd (char *__buf, size_t __size);
-
-int getdomainname (char *__name, size_t __len);
-
-
-int getentropy (void *, size_t);
-
-
-gid_t getegid (void);
-uid_t geteuid (void);
-gid_t getgid (void);
-
-int getgroups (int __gidsetsize, gid_t __grouplist[]);
-
-long gethostid (void);
-
-char * getlogin (void);
-
-
-
-
-char * getpass (const char *__prompt);
-int getpagesize (void);
-
-
-int getpeereid (int, uid_t *, gid_t *);
-
-
-pid_t getpgid (pid_t);
-
-pid_t getpgrp (void);
-pid_t getpid (void);
-pid_t getppid (void);
-
-pid_t getsid (pid_t);
-
-
-uid_t getuid (void);
-
-
-char * getusershell (void);
-
-
-char * getwd (char *__buf);
-
-
-int iruserok (unsigned long raddr, int superuser, const char *ruser, const char *luser);
-
-int isatty (int __fildes);
-
-int issetugid (void);
-
-
-
-int lchown (const char *__path, uid_t __owner, gid_t __group);
-
-
-int link (const char *__path1, const char *__path2);
-
-int linkat (int __dirfd1, const char *__path1, int __dirfd2, const char *__path2, int __flags);
-
-
-int nice (int __nice_value);
-
-
-off_t lseek (int __fildes, off_t __offset, int __whence);
-
-
-
-
-
-
-int lockf (int __fd, int __cmd, off_t __len);
-
-long pathconf (const char *__path, int __name);
-int pause (void);
-
-int pthread_atfork (void (*)(void), void (*)(void), void (*)(void));
-
-int pipe (int __fildes[2]);
-
-int pipe2 (int __fildes[2], int flags);
-
-
-ssize_t pread (int __fd, void *__buf, size_t __nbytes, off_t __offset);
-ssize_t pwrite (int __fd, const void *__buf, size_t __nbytes, off_t __offset);
-
-int read (int __fd, void *__buf, size_t __nbyte);
-
-int rresvport (int *__alport);
-int revoke (char *__path);
-
-int rmdir (const char *__path);
-
-int ruserok (const char *rhost, int superuser, const char *ruser, const char *luser);
-
-
-void * sbrk (ptrdiff_t __incr);
-
-
-
-int setegid (gid_t __gid);
-int seteuid (uid_t __uid);
-
-int setgid (gid_t __gid);
-
-
-int setgroups (int ngroups, const gid_t *grouplist);
-
-
-int sethostname (const char *, size_t);
-
-int setpgid (pid_t __pid, pid_t __pgid);
-
-int setpgrp (void);
-
-
-int setregid (gid_t __rgid, gid_t __egid);
-int setreuid (uid_t __ruid, uid_t __euid);
-
-pid_t setsid (void);
-
-int setuid (uid_t __uid);
-
-
-void setusershell (void);
-
-unsigned sleep (unsigned int __seconds);
-
-void swab (const void *restrict, void *restrict, ssize_t);
-
-long sysconf (int __name);
-pid_t tcgetpgrp (int __fildes);
-int tcsetpgrp (int __fildes, pid_t __pgrp_id);
-char * ttyname (int __fildes);
-int ttyname_r (int, char *, size_t);
-int unlink (const char *__path);
-
-int usleep (useconds_t __useconds);
-
-
-int vhangup (void);
-
-int write (int __fd, const void *__buf, size_t __nbyte);
-
-
-
-
-
-
-extern char *optarg;
-extern int optind, opterr, optopt;
-int getopt(int, char * const [], const char *);
-extern int optreset;
-
-
-
-pid_t vfork (void);
-# 283 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/unistd.h" 3 4
-int ftruncate (int __fd, off_t __length);
-
-
-int truncate (const char *, off_t __length);
-
-
-
-
-int getdtablesize (void);
-
-
-useconds_t ualarm (useconds_t __useconds, useconds_t __interval);
-
-
-
-
-
- int gethostname (char *__name, size_t __len);
-
-
-
-
-int setdtablesize (int);
-
-
-
-void sync (void);
-
-
-
-ssize_t readlink (const char *restrict __path,
-                          char *restrict __buf, size_t __buflen);
-int symlink (const char *__name1, const char *__name2);
-
-
-ssize_t readlinkat (int __dirfd1, const char *restrict __path,
-                            char *restrict __buf, size_t __buflen);
-int symlinkat (const char *, int, const char *);
-int unlinkat (int, const char *, int);
-# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/unistd.h" 2 3 4
-
-int truncate(const char *, off_t __length);
-int gethostname(char *__name, size_t __len);
-# 5 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/unistd.h" 2 3 4
-# 38 "/home/dieter/Development/esp-idf/components/lwip/port/esp32/include/lwipopts.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/time.h" 1
-       
-# 16 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/time.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/time.h" 1 3 4
-# 50 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/time.h" 3 4
-struct timezone {
- int tz_minuteswest;
- int tz_dsttime;
-};
-# 63 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/time.h" 3 4
-struct bintime {
- time_t sec;
- uint64_t frac;
-};
-
-static __inline void
-bintime_addx(struct bintime *_bt, uint64_t _x)
-{
- uint64_t _u;
-
- _u = _bt->frac;
- _bt->frac += _x;
- if (_u > _bt->frac)
-  _bt->sec++;
-}
-
-static __inline void
-bintime_add(struct bintime *_bt, const struct bintime *_bt2)
-{
- uint64_t _u;
-
- _u = _bt->frac;
- _bt->frac += _bt2->frac;
- if (_u > _bt->frac)
-  _bt->sec++;
- _bt->sec += _bt2->sec;
-}
-
-static __inline void
-bintime_sub(struct bintime *_bt, const struct bintime *_bt2)
-{
- uint64_t _u;
-
- _u = _bt->frac;
- _bt->frac -= _bt2->frac;
- if (_u < _bt->frac)
-  _bt->sec--;
- _bt->sec -= _bt2->sec;
-}
-
-static __inline void
-bintime_mul(struct bintime *_bt, u_int _x)
-{
- uint64_t _p1, _p2;
-
- _p1 = (_bt->frac & 0xffffffffull) * _x;
- _p2 = (_bt->frac >> 32) * _x + (_p1 >> 32);
- _bt->sec *= _x;
- _bt->sec += (_p2 >> 32);
- _bt->frac = (_p2 << 32) | (_p1 & 0xffffffffull);
-}
-
-static __inline void
-bintime_shift(struct bintime *_bt, int _exp)
-{
-
- if (_exp > 0) {
-  _bt->sec <<= _exp;
-  _bt->sec |= _bt->frac >> (64 - _exp);
-  _bt->frac <<= _exp;
- } else if (_exp < 0) {
-  _bt->frac >>= -_exp;
-  _bt->frac |= (uint64_t)_bt->sec << (64 + _exp);
-  _bt->sec >>= -_exp;
- }
-}
-# 144 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/time.h" 3 4
-static __inline int
-sbintime_getsec(sbintime_t _sbt)
-{
-
- return (_sbt >> 32);
-}
-
-static __inline sbintime_t
-bttosbt(const struct bintime _bt)
-{
-
- return (((sbintime_t)_bt.sec << 32) + (_bt.frac >> 32));
-}
-
-static __inline struct bintime
-sbttobt(sbintime_t _sbt)
-{
- struct bintime _bt;
-
- _bt.sec = _sbt >> 32;
- _bt.frac = _sbt << 32;
- return (_bt);
-}
-# 182 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/time.h" 3 4
-static __inline void
-bintime2timespec(const struct bintime *_bt, struct timespec *_ts)
-{
-
- _ts->tv_sec = _bt->sec;
- _ts->tv_nsec = ((uint64_t)1000000000 *
-     (uint32_t)(_bt->frac >> 32)) >> 32;
-}
-
-static __inline void
-timespec2bintime(const struct timespec *_ts, struct bintime *_bt)
-{
-
- _bt->sec = _ts->tv_sec;
-
- _bt->frac = _ts->tv_nsec * (uint64_t)18446744073LL;
-}
-
-static __inline void
-bintime2timeval(const struct bintime *_bt, struct timeval *_tv)
-{
-
- _tv->tv_sec = _bt->sec;
- _tv->tv_usec = ((uint64_t)1000000 * (uint32_t)(_bt->frac >> 32)) >> 32;
-}
-
-static __inline void
-timeval2bintime(const struct timeval *_tv, struct bintime *_bt)
-{
-
- _bt->sec = _tv->tv_sec;
-
- _bt->frac = _tv->tv_usec * (uint64_t)18446744073709LL;
-}
-
-static __inline struct timespec
-sbttots(sbintime_t _sbt)
-{
- struct timespec _ts;
-
- _ts.tv_sec = _sbt >> 32;
- _ts.tv_nsec = ((uint64_t)1000000000 * (uint32_t)_sbt) >> 32;
- return (_ts);
-}
-
-static __inline sbintime_t
-tstosbt(struct timespec _ts)
-{
-
- return (((sbintime_t)_ts.tv_sec << 32) +
-     (_ts.tv_nsec * (((uint64_t)1 << 63) / 500000000) >> 32));
-}
-
-static __inline struct timeval
-sbttotv(sbintime_t _sbt)
-{
- struct timeval _tv;
-
- _tv.tv_sec = _sbt >> 32;
- _tv.tv_usec = ((uint64_t)1000000 * (uint32_t)_sbt) >> 32;
- return (_tv);
-}
-
-static __inline sbintime_t
-tvtosbt(struct timeval _tv)
-{
-
- return (((sbintime_t)_tv.tv_sec << 32) +
-     (_tv.tv_usec * (((uint64_t)1 << 63) / 500000) >> 32));
-}
-# 262 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/time.h" 3 4
-struct itimerval {
- struct timeval it_interval;
- struct timeval it_value;
-};
-
-
-
-
-
-int utimes (const char *__path, const struct timeval *__tvp);
-
-
-int adjtime (const struct timeval *, struct timeval *);
-int futimes (int, const struct timeval *);
-int lutimes (const char *, const struct timeval *);
-int settimeofday (const struct timeval *, const struct timezone *);
-
-
-
-int getitimer (int __which, struct itimerval *__value);
-int setitimer (int __which, const struct itimerval *restrict __value,
-     struct itimerval *restrict __ovalue);
-
-
-int gettimeofday (struct timeval *restrict __p,
-     void *restrict __tz);
-
-
-int futimesat (int, const char *, const struct timeval [2]);
-
-
-
-
-
-
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_time.h" 1 3 4
-# 301 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/time.h" 2 3 4
-# 17 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/time.h" 2
-# 39 "/home/dieter/Development/esp-idf/components/lwip/port/esp32/include/lwipopts.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/fcntl.h" 1 3 4
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_default_fcntl.h" 1 3 4
-# 175 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_default_fcntl.h" 3 4
-struct flock {
- short l_type;
- short l_whence;
- long l_start;
- long l_len;
- short l_pid;
- short l_xxx;
-};
-
-
-
-
-struct eflock {
- short l_type;
- short l_whence;
- long l_start;
- long l_len;
- short l_pid;
- short l_xxx;
- long l_rpid;
- long l_rsys;
-};
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/stat.h" 1 3 4
-# 27 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/stat.h" 3 4
-struct stat
-{
-  dev_t st_dev;
-  ino_t st_ino;
-  mode_t st_mode;
-  nlink_t st_nlink;
-  uid_t st_uid;
-  gid_t st_gid;
-  dev_t st_rdev;
-  off_t st_size;
-# 50 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/stat.h" 3 4
-  time_t st_atime;
-  long st_spare1;
-  time_t st_mtime;
-  long st_spare2;
-  time_t st_ctime;
-  long st_spare3;
-  blksize_t st_blksize;
-  blkcnt_t st_blocks;
-  long st_spare4[2];
-
-
-};
-# 147 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/stat.h" 3 4
-int chmod (const char *__path, mode_t __mode );
-int fchmod (int __fd, mode_t __mode);
-int fstat (int __fd, struct stat *__sbuf );
-int mkdir (const char *_path, mode_t __mode );
-int mkfifo (const char *__path, mode_t __mode );
-int stat (const char *restrict __path, struct stat *restrict __sbuf );
-mode_t umask (mode_t __mask );
-
-
-
-
-
-
-
-int fchmodat (int, const char *, mode_t, int);
-int fstatat (int, const char *restrict , struct stat *restrict, int);
-int mkdirat (int, const char *, mode_t);
-int mkfifoat (int, const char *, mode_t);
-int mknodat (int, const char *, mode_t, dev_t);
-int utimensat (int, const char *, const struct timespec *, int);
-
-
-int futimens (int, const struct timespec *);
-# 201 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_default_fcntl.h" 2 3 4
-
-extern int open (const char *, int, ...);
-
-extern int openat (int, const char *, int, ...);
-
-extern int creat (const char *, mode_t);
-extern int fcntl (int, int, ...);
-
-extern int flock (int, int);
-
-
-
-extern int futimesat (int, const char *, const struct timeval *);
-# 4 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/fcntl.h" 2 3 4
-# 40 "/home/dieter/Development/esp-idf/components/lwip/port/esp32/include/lwipopts.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/vfs/include/sys/ioctl.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/vfs/include/sys/ioctl.h"
-       
-
-
-
-
-
-
-# 21 "/home/dieter/Development/esp-idf/components/vfs/include/sys/ioctl.h"
-int ioctl(int fd, int request, ...);
-# 41 "/home/dieter/Development/esp-idf/components/lwip/port/esp32/include/lwipopts.h" 2
-
-
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_task.h" 1
-# 30 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_task.h"
-# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h" 1
-# 106 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h"
-int xt_clock_freq(void) __attribute__((deprecated));
-
-
-
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_config.h" 1
-# 40 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_config.h"
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h" 1
-# 148 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
-extern const unsigned int Xthal_rev_no;
-
-
-
-
-
-
-
-extern void xthal_save_extra(void *base);
-extern void xthal_restore_extra(void *base);
-
-extern void xthal_save_cpregs(void *base, int);
-extern void xthal_restore_cpregs(void *base, int);
-
-extern void xthal_save_cp0(void *base);
-extern void xthal_save_cp1(void *base);
-extern void xthal_save_cp2(void *base);
-extern void xthal_save_cp3(void *base);
-extern void xthal_save_cp4(void *base);
-extern void xthal_save_cp5(void *base);
-extern void xthal_save_cp6(void *base);
-extern void xthal_save_cp7(void *base);
-extern void xthal_restore_cp0(void *base);
-extern void xthal_restore_cp1(void *base);
-extern void xthal_restore_cp2(void *base);
-extern void xthal_restore_cp3(void *base);
-extern void xthal_restore_cp4(void *base);
-extern void xthal_restore_cp5(void *base);
-extern void xthal_restore_cp6(void *base);
-extern void xthal_restore_cp7(void *base);
-
-extern void* Xthal_cpregs_save_fn[8];
-extern void* Xthal_cpregs_restore_fn[8];
-
-extern void* Xthal_cpregs_save_nw_fn[8];
-extern void* Xthal_cpregs_restore_nw_fn[8];
-
-
-
-
-
-extern const unsigned int Xthal_extra_size;
-extern const unsigned int Xthal_extra_align;
-extern const unsigned int Xthal_cpregs_size[8];
-extern const unsigned int Xthal_cpregs_align[8];
-extern const unsigned int Xthal_all_extra_size;
-extern const unsigned int Xthal_all_extra_align;
-
-extern const char * const Xthal_cp_names[8];
-
-
-
-
-
-
-
-extern void xthal_init_mem_extra(void *);
-
-extern void xthal_init_mem_cp(void *, int);
-
-
-extern const unsigned int Xthal_num_coprocessors;
-
-
-extern const unsigned char Xthal_cp_num;
-
-extern const unsigned char Xthal_cp_max;
-
-
-
-extern const unsigned int Xthal_cp_mask;
-# 237 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
-extern const unsigned int Xthal_num_aregs;
-extern const unsigned char Xthal_num_aregs_log2;
-
-
-
-
-
-
-
-extern const unsigned char Xthal_icache_linewidth;
-extern const unsigned char Xthal_dcache_linewidth;
-
-extern const unsigned short Xthal_icache_linesize;
-extern const unsigned short Xthal_dcache_linesize;
-
-
-extern const unsigned int Xthal_icache_size;
-extern const unsigned int Xthal_dcache_size;
-
-extern const unsigned char Xthal_dcache_is_writeback;
-
-
-
-extern void xthal_icache_region_invalidate( void *addr, unsigned size );
-extern void xthal_dcache_region_invalidate( void *addr, unsigned size );
-
-extern void xthal_icache_line_invalidate(void *addr);
-extern void xthal_dcache_line_invalidate(void *addr);
-
-
-extern void xthal_dcache_region_writeback( void *addr, unsigned size );
-
-extern void xthal_dcache_line_writeback(void *addr);
-
-
-extern void xthal_dcache_region_writeback_inv( void *addr, unsigned size );
-
-extern void xthal_dcache_line_writeback_inv(void *addr);
-
-extern void xthal_icache_sync( void );
-
-extern void xthal_dcache_sync( void );
-
-
-
-extern unsigned int xthal_icache_get_ways(void);
-
-extern void xthal_icache_set_ways(unsigned int ways);
-
-extern unsigned int xthal_dcache_get_ways(void);
-
-extern void xthal_dcache_set_ways(unsigned int ways);
-
-
-extern void xthal_cache_coherence_on( void );
-extern void xthal_cache_coherence_off( void );
-
-extern void xthal_cache_coherence_optin( void );
-extern void xthal_cache_coherence_optout( void );
-# 339 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
-extern int xthal_get_cache_prefetch( void );
-extern int xthal_set_cache_prefetch( int );
-extern int xthal_set_cache_prefetch_long( unsigned long long );
-# 352 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
-extern const int Xthal_debug_configured;
-
-
-extern unsigned int xthal_set_soft_break(void *addr);
-extern void xthal_remove_soft_break(void *addr, unsigned int);
-# 374 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
-extern int xthal_disassemble( unsigned char *instr_buf, void *tgt_addr,
-         char *buffer, unsigned buflen, unsigned options );
-
-
-
-extern int xthal_disassemble_size( unsigned char *instr_buf );
-
-
-
-
-
-
-extern void* xthal_memcpy(void *dst, const void *src, unsigned len);
-extern void* xthal_bcopy(const void *src, void *dst, unsigned len);
-
-
-
-
-
-
-extern int xthal_compare_and_set( int *addr, int test_val, int compare_val );
-# 403 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
-extern const unsigned int Xthal_release_major;
-extern const unsigned int Xthal_release_minor;
-extern const char * const Xthal_release_name;
-extern const char * const Xthal_release_internal;
-
-extern const unsigned char Xthal_memory_order;
-extern const unsigned char Xthal_have_windowed;
-extern const unsigned char Xthal_have_density;
-extern const unsigned char Xthal_have_booleans;
-extern const unsigned char Xthal_have_loops;
-extern const unsigned char Xthal_have_nsa;
-extern const unsigned char Xthal_have_minmax;
-extern const unsigned char Xthal_have_sext;
-extern const unsigned char Xthal_have_clamps;
-extern const unsigned char Xthal_have_mac16;
-extern const unsigned char Xthal_have_mul16;
-extern const unsigned char Xthal_have_fp;
-extern const unsigned char Xthal_have_speculation;
-extern const unsigned char Xthal_have_threadptr;
-
-extern const unsigned char Xthal_have_pif;
-extern const unsigned short Xthal_num_writebuffer_entries;
-
-extern const unsigned int Xthal_build_unique_id;
-
-extern const unsigned int Xthal_hw_configid0;
-extern const unsigned int Xthal_hw_configid1;
-extern const unsigned int Xthal_hw_release_major;
-extern const unsigned int Xthal_hw_release_minor;
-extern const char * const Xthal_hw_release_name;
-extern const char * const Xthal_hw_release_internal;
-
-
-extern void xthal_clear_regcached_code( void );
-# 653 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
-extern void xthal_window_spill( void );
-
-
-
-
-
-
-
-extern void xthal_validate_cp(int);
-extern void xthal_invalidate_cp(int);
-
-
-extern void xthal_set_cpenable(unsigned);
-extern unsigned xthal_get_cpenable(void);
-
-
-
-
-
-
-
-extern const unsigned char Xthal_num_intlevels;
-
-extern const unsigned char Xthal_num_interrupts;
-
-extern const unsigned char Xthal_excm_level;
-
-
-extern const unsigned int Xthal_intlevel_mask[16];
-
-extern const unsigned int Xthal_intlevel_andbelow_mask[16];
-
-
-extern const unsigned char Xthal_intlevel[32];
-
-
-extern const unsigned char Xthal_inttype[32];
-
-
-extern const unsigned int Xthal_inttype_mask[8];
-
-
-extern const int Xthal_timer_interrupt[4];
-
-
-extern unsigned xthal_get_intenable( void );
-extern void xthal_set_intenable( unsigned );
-extern unsigned xthal_get_interrupt( void );
-
-extern void xthal_set_intset( unsigned );
-extern void xthal_set_intclear( unsigned );
-
-
-
-
-
-
-
-extern const int Xthal_num_ibreak;
-extern const int Xthal_num_dbreak;
-
-
-
-
-
-
-
-extern const unsigned char Xthal_have_ccount;
-extern const unsigned char Xthal_num_ccompare;
-
-
-extern unsigned xthal_get_ccount(void);
-
-
-extern void xthal_set_ccompare(int, unsigned);
-extern unsigned xthal_get_ccompare(int);
-
-
-
-
-
-
-extern const unsigned char Xthal_have_prid;
-extern const unsigned char Xthal_have_exceptions;
-extern const unsigned char Xthal_xea_version;
-extern const unsigned char Xthal_have_interrupts;
-extern const unsigned char Xthal_have_highlevel_interrupts;
-extern const unsigned char Xthal_have_nmi;
-
-extern unsigned xthal_get_prid( void );
-
-
-
-
-
-
-
-extern unsigned xthal_vpri_to_intlevel(unsigned vpri);
-extern unsigned xthal_intlevel_to_vpri(unsigned intlevel);
-
-
-extern unsigned xthal_int_enable(unsigned);
-extern unsigned xthal_int_disable(unsigned);
-
-
-extern int xthal_set_int_vpri(int intnum, int vpri);
-extern int xthal_get_int_vpri(int intnum);
-
-
-extern void xthal_set_vpri_locklevel(unsigned intlevel);
-extern unsigned xthal_get_vpri_locklevel(void);
-
-
-extern unsigned xthal_set_vpri(unsigned vpri);
-extern unsigned xthal_get_vpri(void);
-extern unsigned xthal_set_vpri_intlevel(unsigned intlevel);
-extern unsigned xthal_set_vpri_lock(void);
-
-
-
-
-
-
-typedef void (XtHalVoidFunc)(void);
-
-
-extern unsigned Xthal_tram_pending;
-# 789 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
-extern unsigned Xthal_tram_enabled;
-
-
-extern unsigned Xthal_tram_sync;
-
-
-extern unsigned xthal_tram_pending_to_service( void );
-extern void xthal_tram_done( unsigned serviced_mask );
-extern int xthal_tram_set_sync( int intnum, int sync );
-extern XtHalVoidFunc* xthal_set_tram_trigger_func( XtHalVoidFunc *trigger_fn );
-
-
-
-
-
-
-extern const unsigned char Xthal_num_instrom;
-extern const unsigned char Xthal_num_instram;
-extern const unsigned char Xthal_num_datarom;
-extern const unsigned char Xthal_num_dataram;
-extern const unsigned char Xthal_num_xlmi;
-
-
-
-extern const unsigned int Xthal_instrom_vaddr[];
-extern const unsigned int Xthal_instrom_paddr[];
-extern const unsigned int Xthal_instrom_size [];
-extern const unsigned int Xthal_instram_vaddr[];
-extern const unsigned int Xthal_instram_paddr[];
-extern const unsigned int Xthal_instram_size [];
-extern const unsigned int Xthal_datarom_vaddr[];
-extern const unsigned int Xthal_datarom_paddr[];
-extern const unsigned int Xthal_datarom_size [];
-extern const unsigned int Xthal_dataram_vaddr[];
-extern const unsigned int Xthal_dataram_paddr[];
-extern const unsigned int Xthal_dataram_size [];
-extern const unsigned int Xthal_xlmi_vaddr[];
-extern const unsigned int Xthal_xlmi_paddr[];
-extern const unsigned int Xthal_xlmi_size [];
-
-
-
-
-
-
-
-extern const unsigned char Xthal_icache_setwidth;
-extern const unsigned char Xthal_dcache_setwidth;
-
-extern const unsigned int Xthal_icache_ways;
-extern const unsigned int Xthal_dcache_ways;
-
-extern const unsigned char Xthal_icache_line_lockable;
-extern const unsigned char Xthal_dcache_line_lockable;
-
-
-extern unsigned xthal_get_cacheattr( void );
-extern unsigned xthal_get_icacheattr( void );
-extern unsigned xthal_get_dcacheattr( void );
-extern void xthal_set_cacheattr( unsigned );
-extern void xthal_set_icacheattr( unsigned );
-extern void xthal_set_dcacheattr( unsigned );
-
-extern int xthal_set_region_attribute( void *addr, unsigned size,
-         unsigned cattr, unsigned flags );
-# 862 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
-extern void xthal_icache_enable( void );
-extern void xthal_dcache_enable( void );
-
-extern void xthal_icache_disable( void );
-extern void xthal_dcache_disable( void );
-
-
-extern void xthal_icache_all_invalidate( void );
-extern void xthal_dcache_all_invalidate( void );
-
-extern void xthal_dcache_all_writeback( void );
-
-extern void xthal_dcache_all_writeback_inv( void );
-
-extern void xthal_icache_region_lock( void *addr, unsigned size );
-extern void xthal_dcache_region_lock( void *addr, unsigned size );
-
-extern void xthal_icache_line_lock(void *addr);
-extern void xthal_dcache_line_lock(void *addr);
-
-
-extern void xthal_icache_all_unlock( void );
-extern void xthal_dcache_all_unlock( void );
-extern void xthal_icache_region_unlock( void *addr, unsigned size );
-extern void xthal_dcache_region_unlock( void *addr, unsigned size );
-
-extern void xthal_icache_line_unlock(void *addr);
-extern void xthal_dcache_line_unlock(void *addr);
-# 899 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
-extern void xthal_memep_inject_error(void *addr, int size, int flags);
-
-
-
-
-
-
-
-extern const unsigned char Xthal_have_spanning_way;
-extern const unsigned char Xthal_have_identity_map;
-extern const unsigned char Xthal_have_mimic_cacheattr;
-extern const unsigned char Xthal_have_xlt_cacheattr;
-extern const unsigned char Xthal_have_cacheattr;
-extern const unsigned char Xthal_have_tlbs;
-
-extern const unsigned char Xthal_mmu_asid_bits;
-extern const unsigned char Xthal_mmu_asid_kernel;
-extern const unsigned char Xthal_mmu_rings;
-extern const unsigned char Xthal_mmu_ring_bits;
-extern const unsigned char Xthal_mmu_sr_bits;
-extern const unsigned char Xthal_mmu_ca_bits;
-extern const unsigned int Xthal_mmu_max_pte_page_size;
-extern const unsigned int Xthal_mmu_min_pte_page_size;
-
-extern const unsigned char Xthal_itlb_way_bits;
-extern const unsigned char Xthal_itlb_ways;
-extern const unsigned char Xthal_itlb_arf_ways;
-extern const unsigned char Xthal_dtlb_way_bits;
-extern const unsigned char Xthal_dtlb_ways;
-extern const unsigned char Xthal_dtlb_arf_ways;
-
-
-
-extern int xthal_static_v2p( unsigned vaddr, unsigned *paddrp );
-extern int xthal_static_p2v( unsigned paddr, unsigned *vaddrp, unsigned cached );
-# 948 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
-extern int xthal_set_region_translation(void* vaddr, void* paddr, unsigned size, unsigned cache_atr, unsigned flags);
-extern int xthal_v2p(void*, void**, unsigned*, unsigned*);
-extern int xthal_invalidate_region(void* addr);
-extern int xthal_set_region_translation_raw(void *vaddr, void *paddr, unsigned cattr);
-# 41 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_config.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h" 1
-# 42 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h"
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtensa-versions.h" 1
-# 43 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h" 2
-# 51 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h"
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h" 1
-# 52 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h" 1
-# 53 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h" 2
-# 1279 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h"
-extern const unsigned char Xthal_cp_id_FPU;
-extern const unsigned int Xthal_cp_mask_FPU;
-
-
-extern const unsigned char Xthal_cp_id_XCHAL_CP1_IDENT;
-extern const unsigned int Xthal_cp_mask_XCHAL_CP1_IDENT;
-
-
-extern const unsigned char Xthal_cp_id_XCHAL_CP2_IDENT;
-extern const unsigned int Xthal_cp_mask_XCHAL_CP2_IDENT;
-
-
-extern const unsigned char Xthal_cp_id_XCHAL_CP3_IDENT;
-extern const unsigned int Xthal_cp_mask_XCHAL_CP3_IDENT;
-
-
-extern const unsigned char Xthal_cp_id_XCHAL_CP4_IDENT;
-extern const unsigned int Xthal_cp_mask_XCHAL_CP4_IDENT;
-
-
-extern const unsigned char Xthal_cp_id_XCHAL_CP5_IDENT;
-extern const unsigned int Xthal_cp_mask_XCHAL_CP5_IDENT;
-
-
-extern const unsigned char Xthal_cp_id_XCHAL_CP6_IDENT;
-extern const unsigned int Xthal_cp_mask_XCHAL_CP6_IDENT;
-
-
-extern const unsigned char Xthal_cp_id_XCHAL_CP7_IDENT;
-extern const unsigned int Xthal_cp_mask_XCHAL_CP7_IDENT;
-# 42 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_config.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h" 1
-# 43 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_config.h" 2
-
-# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_context.h" 1
-# 45 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_context.h"
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/corebits.h" 1
-# 46 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_context.h" 2
-
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h" 1
-# 56 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h"
-typedef struct {
-long pc;
-long ps;
-long areg[4];
-long sar;
-
-long lcount;
-long lbeg;
-long lend;
-
-
-long acclo;
-long acchi;
-long mr[4];
-
-} KernelFrame;
-# 80 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h"
-typedef struct {
-long pc;
-long ps;
-long sar;
-long vpri;
-
-
-
-long a2;
-long a3;
-long a4;
-long a5;
-# 104 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h"
-long exccause;
-
-long lcount;
-long lbeg;
-long lend;
-
-
-long acclo;
-long acchi;
-long mr[4];
-# 123 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h"
-long pad[((3 + 
-# 123 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h" 3 4
-1
-# 123 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h"
-*1 + 
-# 123 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h" 3 4
-1
-# 123 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h"
-*2 + 0*1) & 3)];
-
-
-} UserFrame;
-# 48 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_context.h" 2
-# 103 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_context.h"
-typedef struct {
-long exit;
-long pc;
-long ps;
-long a0;
-long a1;
-long a2;
-long a3;
-long a4;
-long a5;
-long a6;
-long a7;
-long a8;
-long a9;
-long a10;
-long a11;
-long a12;
-long a13;
-long a14;
-long a15;
-long sar;
-long exccause;
-long excvaddr;
-
-long lbeg;
-long lend;
-long lcount;
-
-
-
-long tmp0;
-long tmp1;
-long tmp2;
-# 145 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_context.h"
-} XtExcFrame;
-# 202 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_context.h"
-typedef struct {
-# 213 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_context.h"
-long exit;
-long pc;
-long ps;
-long next;
-long a0;
-long a1;
-long a2;
-long a3;
-
-} XtSolFrame;
-# 45 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_config.h" 2
-# 115 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h" 2
-# 31 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_task.h" 2
-# 44 "/home/dieter/Development/esp-idf/components/lwip/port/esp32/include/lwipopts.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
+# 44 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_timer.h" 2
 # 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h" 1
 # 14 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h"
        
+
+
+
+# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
+# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
+       
+
+
+
+# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 1 3 4
+# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
+void __assert (const char *, int, const char *)
+     __attribute__ ((__noreturn__));
+void __assert_func (const char *, int, const char *, const char *)
+     __attribute__ ((__noreturn__));
+# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
+# 19 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h" 2
+
+
+
+
+
+
 # 24 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h"
 typedef int32_t esp_err_t;
 # 59 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h"
@@ -3804,509 +2982,7 @@ void _esp_error_check_failed(esp_err_t rc, const char *file, int line, const cha
 
 
 void _esp_error_check_failed_without_abort(esp_err_t rc, const char *file, int line, const char *function, const char *expression);
-# 21 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/include/esp_attr.h" 1
-# 22 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h" 2
-
-
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_idf_version.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_idf_version.h"
-       
-# 54 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_idf_version.h"
-const char* esp_get_idf_version(void);
-# 25 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h" 2
-
-
-
-
-
-
-
-typedef enum {
-    ESP_MAC_WIFI_STA,
-    ESP_MAC_WIFI_SOFTAP,
-    ESP_MAC_BT,
-    ESP_MAC_ETH,
-} esp_mac_type_t;
-# 52 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
-typedef enum {
-    ESP_RST_UNKNOWN,
-    ESP_RST_POWERON,
-    ESP_RST_EXT,
-    ESP_RST_SW,
-    ESP_RST_PANIC,
-    ESP_RST_INT_WDT,
-    ESP_RST_TASK_WDT,
-    ESP_RST_WDT,
-    ESP_RST_DEEPSLEEP,
-    ESP_RST_BROWNOUT,
-    ESP_RST_SDIO,
-} esp_reset_reason_t;
-
-
-
-
-typedef void (*shutdown_handler_t)(void);
-# 82 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
-esp_err_t esp_register_shutdown_handler(shutdown_handler_t handle);
-# 92 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
-esp_err_t esp_unregister_shutdown_handler(shutdown_handler_t handle);
-# 103 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
-void esp_restart(void) __attribute__ ((noreturn));
-
-
-
-
-
-esp_reset_reason_t esp_reset_reason(void);
-# 119 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
-uint32_t esp_get_free_heap_size(void);
-
-
-
-
-
-
-uint32_t esp_get_minimum_free_heap_size( void );
-# 144 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
-uint32_t esp_random(void);
-# 154 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
-void esp_fill_random(void *buf, size_t len);
-# 175 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
-esp_err_t esp_base_mac_addr_set(const uint8_t *mac);
-# 185 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
-esp_err_t esp_base_mac_addr_get(uint8_t *mac);
-# 201 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
-esp_err_t esp_efuse_mac_get_custom(uint8_t *mac);
-# 210 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
-esp_err_t esp_efuse_mac_get_default(uint8_t *mac);
-# 224 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
-esp_err_t esp_read_mac(uint8_t* mac, esp_mac_type_t type);
-# 240 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
-esp_err_t esp_derive_local_mac(uint8_t* local_mac, const uint8_t* universal_mac);
-
-
-
-
-typedef enum {
-    CHIP_ESP32 = 1,
-    CHIP_ESP32S2BETA = 2,
-} esp_chip_model_t;
-# 259 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
-typedef struct {
-    esp_chip_model_t model;
-    uint32_t features;
-    uint8_t cores;
-    uint8_t revision;
-} esp_chip_info_t;
-
-
-
-
-
-void esp_chip_info(esp_chip_info_t* out_info);
-# 45 "/home/dieter/Development/esp-idf/components/lwip/port/esp32/include/lwipopts.h" 2
-
-# 1 "/home/dieter/Development/esp-idf/components/lwip/include/apps/sntp/sntp.h" 1
-# 46 "/home/dieter/Development/esp-idf/components/lwip/include/apps/sntp/sntp.h"
-typedef enum {
-    SNTP_SYNC_MODE_IMMED,
-    SNTP_SYNC_MODE_SMOOTH,
-} sntp_sync_mode_t;
-
-
-typedef enum {
-    SNTP_SYNC_STATUS_RESET,
-    SNTP_SYNC_STATUS_COMPLETED,
-    SNTP_SYNC_STATUS_IN_PROGRESS,
-} sntp_sync_status_t;
-
-
-
-
-
-
-typedef void (*sntp_sync_time_cb_t) (struct timeval *tv);
-# 77 "/home/dieter/Development/esp-idf/components/lwip/include/apps/sntp/sntp.h"
-void sntp_sync_time(struct timeval *tv);
-
-
-
-
-
-
-
-void sntp_set_sync_mode(sntp_sync_mode_t sync_mode);
-
-
-
-
-
-
-
-sntp_sync_mode_t sntp_get_sync_mode(void);
-# 107 "/home/dieter/Development/esp-idf/components/lwip/include/apps/sntp/sntp.h"
-sntp_sync_status_t sntp_get_sync_status(void);
-
-
-
-
-
-
-void sntp_set_sync_status(sntp_sync_status_t sync_status);
-
-
-
-
-
-
-void sntp_set_time_sync_notification_cb(sntp_sync_time_cb_t callback);
-# 47 "/home/dieter/Development/esp-idf/components/lwip/port/esp32/include/lwipopts.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h" 1
-# 23 "/home/dieter/Development/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h"
-
-# 23 "/home/dieter/Development/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h" 3 4
-_Bool 
-# 23 "/home/dieter/Development/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h"
-    dhcp_ip_addr_restore(void *netif);
-
-void dhcp_ip_addr_store(void *netif);
-
-void dhcp_ip_addr_erase(void *esp_netif);
-# 48 "/home/dieter/Development/esp-idf/components/lwip/port/esp32/include/lwipopts.h" 2
-# 52 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/opt.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/debug.h" 1
-# 40 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/debug.h"
-# 1 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/arch.h" 1
-# 48 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/arch.h"
-# 1 "/home/dieter/Development/esp-idf/components/lwip/port/esp32/include/arch/cc.h" 1
-# 42 "/home/dieter/Development/esp-idf/components/lwip/port/esp32/include/arch/cc.h"
-# 1 "/home/dieter/Development/esp-idf/components/lwip/port/esp32/include/arch/sys_arch.h" 1
-# 36 "/home/dieter/Development/esp-idf/components/lwip/port/esp32/include/arch/sys_arch.h"
-# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOS.h" 1
-# 76 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOS.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 77 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOS.h" 2
-# 99 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOS.h"
-# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h" 1
-# 100 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOS.h" 2
-
-
-# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/projdefs.h" 1
-# 77 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/projdefs.h"
-typedef void (*TaskFunction_t)( void * );
-# 103 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOS.h" 2
-
-
-# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h" 1
-# 87 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h"
-# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/deprecated_definitions.h" 1
-# 88 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h" 2
-
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/cpu.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/cpu.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 21 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/cpu.h" 2
-# 33 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/cpu.h"
-static inline void *get_sp(void)
-{
-    void *sp;
-    asm volatile ("mov %0, sp;" : "=r" (sp));
-    return sp;
-}
-
-
-
-
-
-static inline void cpu_write_dtlb(uint32_t vpn, unsigned attr)
-{
-    asm volatile ("wdtlb  %1, %0; dsync\n" :: "r" (vpn), "r" (attr));
-}
-
-
-static inline void cpu_write_itlb(unsigned vpn, unsigned attr)
-{
-    asm volatile ("witlb  %1, %0; isync\n" :: "r" (vpn), "r" (attr));
-}
-
-static inline void cpu_init_memctl(void)
-{
-
-    uint32_t memctl = 0x00000000;
-    asm volatile ("wsr %0, " "MEMCTL" : : "r" (memctl));;
-
-}
-# 74 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/cpu.h"
-static inline void cpu_configure_region_protection(void)
-{
-    const uint32_t pages_to_protect[] = {0x00000000, 0x80000000, 0xa0000000, 0xc0000000, 0xe0000000};
-    for (int i = 0; i < sizeof(pages_to_protect)/sizeof(pages_to_protect[0]); ++i) {
-        cpu_write_dtlb(pages_to_protect[i], 0xf);
-        cpu_write_itlb(pages_to_protect[i], 0xf);
-    }
-    cpu_write_dtlb(0x20000000, 0);
-    cpu_write_itlb(0x20000000, 0);
-}
-
-
-
-
-
-void esp_cpu_stall(int cpu_id);
-
-
-
-
-
-void esp_cpu_unstall(int cpu_id);
-
-
-
-
-
-void esp_cpu_reset(int cpu_id);
-# 111 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/cpu.h"
-
-# 111 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/cpu.h" 3 4
-_Bool 
-# 111 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/cpu.h"
-    esp_cpu_in_ocd_debug_mode(void);
-# 124 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/cpu.h"
-static inline uint32_t esp_cpu_process_stack_pc(uint32_t pc)
-{
-    if (pc & 0x80000000) {
-
-        pc = (pc & 0x3fffffff) | 0x40000000;
-    }
-
-    return pc - 3;
-}
-# 90 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h" 2
-
-
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 1
-# 82 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h"
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime.h" 1
-# 30 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime.h"
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/specreg.h" 1
-# 31 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 1
-# 44 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
-typedef struct {
-long signature;
-long restore_label;
-long aftersave_label;
-long areg[
-# 48 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
-64
-# 48 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
-];
-
-long caller_regs[16];
-long caller_regs_saved;
-
-
-
-
-
-long windowbase;
-long windowstart;
-
-long sar;
-
-long epc1;
-long ps;
-long excsave1;
-
-long depc;
-
-
-
-long epc[
-# 70 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
-6 
-# 70 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
-+ 
-# 70 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
-1 
-# 70 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
-- 1];
-long eps[
-# 71 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
-6 
-# 71 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
-+ 
-# 71 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
-1 
-# 71 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
-- 1];
-long excsave[
-# 72 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
-6 
-# 72 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
-+ 
-# 72 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
-1 
-# 72 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
-- 1];
-
-
-long lcount;
-long lbeg;
-long lend;
-
-
-
-
-
-long vecbase;
-
-
-long atomctl;
-
-
-
-
-
-long memctl;
-
-
-long ccount;
-long ccompare[
-# 96 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
-3
-# 96 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
-];
-
-
-long intenable;
-long interrupt;
-
-
-long icount;
-long icountlevel;
-long debugcause;
-
-
-long dbreakc[
-# 108 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
-2
-# 108 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
-];
-long dbreaka[
-# 109 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
-2
-# 109 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
-];
-
-
-long ibreaka[
-# 112 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
-2
-# 112 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
-];
-long ibreakenable;
-
-
-
-long misc[
-# 117 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
-4
-# 117 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
-];
-# 131 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
-long cpenable;
-
-
-
-
-long tlbs[8*2];
-# 163 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
-char ncp[48] __attribute__((aligned(4)));
-
-char cp0[72] __attribute__((aligned(4)));
-char cp1[0] __attribute__((aligned(1)));
-char cp2[0] __attribute__((aligned(1)));
-char cp3[0] __attribute__((aligned(1)));
-char cp4[0] __attribute__((aligned(1)));
-char cp5[0] __attribute__((aligned(1)));
-char cp6[0] __attribute__((aligned(1)));
-char cp7[0] __attribute__((aligned(1)));
-# 183 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
-} XtosCoreState;
-# 32 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime.h" 2
-# 61 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime.h"
-typedef void (_xtos_handler_func)(void);
-
-typedef _xtos_handler_func *_xtos_handler;
-# 151 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime.h"
-extern unsigned int _xtos_ints_off( unsigned int mask );
-extern unsigned int _xtos_ints_on( unsigned int mask );
-extern unsigned _xtos_set_intlevel( int intlevel );
-extern unsigned _xtos_set_min_intlevel( int intlevel );
-extern unsigned _xtos_restore_intlevel( unsigned restoreval );
-extern unsigned _xtos_restore_just_intlevel( unsigned restoreval );
-extern _xtos_handler _xtos_set_interrupt_handler( int n, _xtos_handler f );
-extern _xtos_handler _xtos_set_interrupt_handler_arg( int n, _xtos_handler f, void *arg );
-extern _xtos_handler _xtos_set_exception_handler( int n, _xtos_handler f );
-
-extern void _xtos_memep_initrams( void );
-extern void _xtos_memep_enable( int flags );
-
-
-
-extern void _xtos_dispatch_level1_interrupts( void );
-
-
-extern void _xtos_dispatch_level2_interrupts( void );
-
-
-extern void _xtos_dispatch_level3_interrupts( void );
-
-
-extern void _xtos_dispatch_level4_interrupts( void );
-
-
-extern void _xtos_dispatch_level5_interrupts( void );
-
-
-extern void _xtos_dispatch_level6_interrupts( void );
-
-
-
-extern unsigned int _xtos_read_ints( void );
-extern void _xtos_clear_ints( unsigned int mask );
-
-
-
-extern int _xtos_core_shutoff(unsigned flags);
-extern int _xtos_core_save(unsigned flags, XtosCoreState *savearea, void *code);
-extern void _xtos_core_restore(unsigned retvalue, XtosCoreState *savearea);
-# 202 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime.h"
-extern void _xtos_timer_0_delta( int cycles );
-
-
-extern void _xtos_timer_1_delta( int cycles );
-
-
-extern void _xtos_timer_2_delta( int cycles );
-# 83 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_private/crosscore_int.h" 1
-# 27 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_private/crosscore_int.h"
-void esp_crosscore_int_init(void);
-# 40 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_private/crosscore_int.h"
-void esp_crosscore_int_send_yield(int core_id);
-# 52 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_private/crosscore_int.h"
-void esp_crosscore_int_send_freq_switch(int core_id);
-# 84 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_timer.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_timer.h"
-       
+# 45 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_timer.h" 2
 # 53 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_timer.h"
 typedef struct esp_timer* esp_timer_handle_t;
 
@@ -4498,195 +3174,6 @@ void heap_caps_dump_all(void);
 # 338 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
 size_t heap_caps_get_allocated_size( void *ptr );
 # 88 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 2
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-       
-# 61 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-typedef struct {
-    const char *name;
-    uint32_t caps[3];
-    
-# 64 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-   _Bool 
-# 64 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-        aliased_iram;
-    
-# 65 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-   _Bool 
-# 65 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-        startup_stack;
-} soc_memory_type_desc_t;
-
-
-extern const soc_memory_type_desc_t soc_memory_types[];
-extern const size_t soc_memory_type_count;
-
-
-
-typedef struct
-{
-    intptr_t start;
-    size_t size;
-    size_t type;
-    intptr_t iram_address;
-} soc_memory_region_t;
-
-extern const soc_memory_region_t soc_memory_regions[];
-extern const size_t soc_memory_region_count;
-
-
-
-
-typedef struct
-{
-    intptr_t start;
-    intptr_t end;
-} soc_reserved_region_t;
-# 136 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-size_t soc_get_available_memory_regions(soc_memory_region_t *regions);
-
-
-
-
-
-size_t soc_get_available_memory_region_max_count(void);
-
-inline static 
-# 144 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 144 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "0"))) esp_ptr_dma_capable(const void *p)
-{
-    return (intptr_t)p >= 0x3FFAE000 && (intptr_t)p < 0x40000000;
-}
-
-inline static 
-# 149 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 149 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "1"))) esp_ptr_word_aligned(const void *p)
-{
-    return ((intptr_t)p) % 4 == 0;
-}
-
-inline static 
-# 154 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 154 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "2"))) esp_ptr_executable(const void *p)
-{
-    intptr_t ip = (intptr_t) p;
-    return (ip >= 0x400D0000 && ip < 0x40400000)
-        || (ip >= 0x40080000 && ip < 0x400A0000)
-        || (ip >= 0x400C0000 && ip < 0x400C2000);
-}
-
-inline static 
-# 162 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 162 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "3"))) esp_ptr_byte_accessible(const void *p)
-{
-    intptr_t ip = (intptr_t) p;
-    
-# 165 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-   _Bool 
-# 165 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-        r;
-    r = (ip >= 0x3FF90000 && ip < 0x40000000);
-
-
-
-
-
-
-
-    return r;
-}
-
-inline static 
-# 177 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 177 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "4"))) esp_ptr_internal(const void *p) {
-    
-# 178 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-   _Bool 
-# 178 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-        r;
-    r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x400C2000);
-    r |= ((intptr_t)p >= 0x50000000 && (intptr_t)p < 0x50002000);
-    return r;
-}
-
-
-inline static 
-# 185 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 185 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "5"))) esp_ptr_external_ram(const void *p) {
-    return ((intptr_t)p >= 0x3F800000 && (intptr_t)p < 0x3FC00000);
-}
-
-inline static 
-# 189 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 189 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "6"))) esp_ptr_in_iram(const void *p) {
-
-    return ((intptr_t)p >= 0x40080000 && (intptr_t)p < 0x400A0000);
-
-
-
-}
-
-inline static 
-# 197 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 197 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "7"))) esp_ptr_in_drom(const void *p) {
-    return ((intptr_t)p >= 0x3F400000 && (intptr_t)p < 0x3F800000);
-}
-
-inline static 
-# 201 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 201 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "8"))) esp_ptr_in_dram(const void *p) {
-    return ((intptr_t)p >= 0x3FFAE000 && (intptr_t)p < 0x40000000);
-}
-
-inline static 
-# 205 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 205 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "9"))) esp_ptr_in_diram_dram(const void *p) {
-    return ((intptr_t)p >= 0x3FFE0000 && (intptr_t)p < 0x40000000);
-}
-
-inline static 
-# 209 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 209 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "10"))) esp_ptr_in_diram_iram(const void *p) {
-    return ((intptr_t)p >= 0x400A0000 && (intptr_t)p < 0x400C0000);
-}
-
-
-inline static 
-# 214 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 214 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "11"))) esp_stack_ptr_is_sane(uint32_t sp)
-{
-
-    return !(sp < 0x3FFAE000 + 0x10 || sp > 0x40000000 - 0x10 || ((sp & 0xF) != 0));
-}
-# 93 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 2
 # 117 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h"
 typedef uint8_t StackType_t;
 typedef int BaseType_t;
@@ -4706,7 +3193,8 @@ typedef unsigned int UBaseType_t;
 # 132 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 2
 
 
-
+# 1 "/home/dieter/Development/esp-idf/components/xtensa/include/esp_attr.h" 1
+# 135 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 2
 
 
 
@@ -4783,6 +3271,109 @@ void vApplicationSleep( TickType_t xExpectedIdleTime );
 # 127 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h"
 # 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/mpu_wrappers.h" 1
 # 128 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h" 1
+# 23 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
+# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h" 1
+# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h"
+       
+# 24 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_idf_version.h" 1
+# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_idf_version.h"
+       
+# 54 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_idf_version.h"
+const char* esp_get_idf_version(void);
+# 25 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h" 2
+
+
+
+
+
+
+
+typedef enum {
+    ESP_MAC_WIFI_STA,
+    ESP_MAC_WIFI_SOFTAP,
+    ESP_MAC_BT,
+    ESP_MAC_ETH,
+} esp_mac_type_t;
+# 52 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
+typedef enum {
+    ESP_RST_UNKNOWN,
+    ESP_RST_POWERON,
+    ESP_RST_EXT,
+    ESP_RST_SW,
+    ESP_RST_PANIC,
+    ESP_RST_INT_WDT,
+    ESP_RST_TASK_WDT,
+    ESP_RST_WDT,
+    ESP_RST_DEEPSLEEP,
+    ESP_RST_BROWNOUT,
+    ESP_RST_SDIO,
+} esp_reset_reason_t;
+
+
+
+
+typedef void (*shutdown_handler_t)(void);
+# 82 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
+esp_err_t esp_register_shutdown_handler(shutdown_handler_t handle);
+# 92 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
+esp_err_t esp_unregister_shutdown_handler(shutdown_handler_t handle);
+# 103 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
+void esp_restart(void) __attribute__ ((noreturn));
+
+
+
+
+
+esp_reset_reason_t esp_reset_reason(void);
+# 119 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
+uint32_t esp_get_free_heap_size(void);
+
+
+
+
+
+
+uint32_t esp_get_minimum_free_heap_size( void );
+# 144 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
+uint32_t esp_random(void);
+# 154 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
+void esp_fill_random(void *buf, size_t len);
+# 175 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
+esp_err_t esp_base_mac_addr_set(const uint8_t *mac);
+# 185 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
+esp_err_t esp_base_mac_addr_get(uint8_t *mac);
+# 201 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
+esp_err_t esp_efuse_mac_get_custom(uint8_t *mac);
+# 210 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
+esp_err_t esp_efuse_mac_get_default(uint8_t *mac);
+# 224 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
+esp_err_t esp_read_mac(uint8_t* mac, esp_mac_type_t type);
+# 240 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
+esp_err_t esp_derive_local_mac(uint8_t* local_mac, const uint8_t* universal_mac);
+
+
+
+
+typedef enum {
+    CHIP_ESP32 = 1,
+    CHIP_ESP32S2BETA = 2,
+} esp_chip_model_t;
+# 259 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
+typedef struct {
+    esp_chip_model_t model;
+    uint32_t features;
+    uint8_t cores;
+    uint8_t revision;
+} esp_chip_info_t;
+
+
+
+
+
+void esp_chip_info(esp_chip_info_t* out_info);
+# 129 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h" 2
 # 137 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h"
  StackType_t *pxPortInitialiseStack( StackType_t *pxTopOfStack, TaskFunction_t pxCode, void *pvParameters, BaseType_t xRunPrivileged ) ;
 # 158 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h"
@@ -4828,7 +3419,7 @@ BaseType_t xPortInterruptedFromISRContext(void);
 
 
 
-static inline uint32_t __attribute__((section(".iram1" "." "12"))) xPortGetCoreID(void) {
+static inline uint32_t __attribute__((section(".iram1" "." "0"))) xPortGetCoreID(void) {
     uint32_t id;
     __asm__ __volatile__ (
         "rsr.prid %0\n"
@@ -4845,7 +3436,7 @@ static inline
 # 221 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h" 3 4
              _Bool 
 # 221 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h"
-                  __attribute__((section(".iram1" "." "13"))) xPortCanYield(void)
+                  __attribute__((section(".iram1" "." "1"))) xPortCanYield(void)
 {
     uint32_t ps_reg = 0;
 
@@ -4984,7 +3575,100 @@ typedef struct xSTATIC_TIMER
  void *pvDummy5[ 2 ];
 # 1054 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOS.h"
 } StaticTimer_t;
-# 37 "/home/dieter/Development/esp-idf/components/lwip/port/esp32/include/arch/sys_arch.h" 2
+# 21 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/thread.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h" 1
+# 88 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+typedef void * QueueHandle_t;
+
+
+
+
+
+
+typedef void * QueueSetHandle_t;
+
+
+
+
+
+
+typedef void * QueueSetMemberHandle_t;
+# 613 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+BaseType_t xQueueGenericSend( QueueHandle_t xQueue, const void * const pvItemToQueue, TickType_t xTicksToWait, const BaseType_t xCopyPosition ) ;
+# 725 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+BaseType_t xQueuePeekFromISR( QueueHandle_t xQueue, void * const pvBuffer ) ;
+# 906 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+BaseType_t xQueueGenericReceive( QueueHandle_t xQueue, void * const pvBuffer, TickType_t xTicksToWait, const BaseType_t xJustPeek ) ;
+# 917 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+UBaseType_t uxQueueMessagesWaiting( const QueueHandle_t xQueue ) ;
+# 930 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+UBaseType_t uxQueueSpacesAvailable( const QueueHandle_t xQueue ) ;
+# 940 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+void vQueueDelete( QueueHandle_t xQueue ) ;
+# 1267 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+BaseType_t xQueueGenericSendFromISR( QueueHandle_t xQueue, const void * const pvItemToQueue, BaseType_t * const pxHigherPriorityTaskWoken, const BaseType_t xCopyPosition ) ;
+BaseType_t xQueueGiveFromISR( QueueHandle_t xQueue, BaseType_t * const pxHigherPriorityTaskWoken ) ;
+# 1347 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+BaseType_t xQueueReceiveFromISR( QueueHandle_t xQueue, void * const pvBuffer, BaseType_t * const pxHigherPriorityTaskWoken ) ;
+
+
+
+
+
+
+BaseType_t xQueueIsQueueEmptyFromISR( const QueueHandle_t xQueue ) ;
+BaseType_t xQueueIsQueueFullFromISR( const QueueHandle_t xQueue ) ;
+UBaseType_t uxQueueMessagesWaitingFromISR( const QueueHandle_t xQueue ) ;
+# 1374 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+BaseType_t xQueueAltGenericSend( QueueHandle_t xQueue, const void * const pvItemToQueue, TickType_t xTicksToWait, BaseType_t xCopyPosition );
+BaseType_t xQueueAltGenericReceive( QueueHandle_t xQueue, void * const pvBuffer, TickType_t xTicksToWait, BaseType_t xJustPeeking );
+# 1390 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+BaseType_t xQueueCRSendFromISR( QueueHandle_t xQueue, const void *pvItemToQueue, BaseType_t xCoRoutinePreviouslyWoken );
+BaseType_t xQueueCRReceiveFromISR( QueueHandle_t xQueue, void *pvBuffer, BaseType_t *pxTaskWoken );
+BaseType_t xQueueCRSend( QueueHandle_t xQueue, const void *pvItemToQueue, TickType_t xTicksToWait );
+BaseType_t xQueueCRReceive( QueueHandle_t xQueue, void *pvBuffer, TickType_t xTicksToWait );
+
+
+
+
+
+
+QueueHandle_t xQueueCreateMutex( const uint8_t ucQueueType ) ;
+QueueHandle_t xQueueCreateMutexStatic( const uint8_t ucQueueType, StaticQueue_t *pxStaticQueue ) ;
+QueueHandle_t xQueueCreateCountingSemaphore( const UBaseType_t uxMaxCount, const UBaseType_t uxInitialCount ) ;
+QueueHandle_t xQueueCreateCountingSemaphoreStatic( const UBaseType_t uxMaxCount, const UBaseType_t uxInitialCount, StaticQueue_t *pxStaticQueue ) ;
+void* xQueueGetMutexHolder( QueueHandle_t xSemaphore ) ;
+
+
+
+
+
+BaseType_t xQueueTakeMutexRecursive( QueueHandle_t xMutex, TickType_t xTicksToWait ) ;
+BaseType_t xQueueGiveMutexRecursive( QueueHandle_t pxMutex ) ;
+# 1488 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+ QueueHandle_t xQueueGenericCreate( const UBaseType_t uxQueueLength, const UBaseType_t uxItemSize, const uint8_t ucQueueType ) ;
+# 1548 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+QueueSetHandle_t xQueueCreateSet( const UBaseType_t uxEventQueueLength ) ;
+# 1572 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+BaseType_t xQueueAddToSet( QueueSetMemberHandle_t xQueueOrSemaphore, QueueSetHandle_t xQueueSet ) ;
+# 1591 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+BaseType_t xQueueRemoveFromSet( QueueSetMemberHandle_t xQueueOrSemaphore, QueueSetHandle_t xQueueSet ) ;
+# 1627 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+QueueSetMemberHandle_t xQueueSelectFromSet( QueueSetHandle_t xQueueSet, const TickType_t xTicksToWait ) ;
+
+
+
+
+QueueSetMemberHandle_t xQueueSelectFromSetFromISR( QueueSetHandle_t xQueueSet ) ;
+
+
+
+void vQueueWaitForMessageRestricted( QueueHandle_t xQueue, TickType_t xTicksToWait ) ;
+BaseType_t xQueueGenericReset( QueueHandle_t xQueue, BaseType_t xNewQueue ) ;
+void vQueueSetQueueNumber( QueueHandle_t xQueue, UBaseType_t uxQueueNumber ) ;
+UBaseType_t uxQueueGetQueueNumber( QueueHandle_t xQueue ) ;
+uint8_t ucQueueGetQueueType( QueueHandle_t xQueue ) ;
+# 22 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/thread.h" 2
 # 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h" 1
 # 78 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
 # 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 1 3 4
@@ -5174,7 +3858,7 @@ typedef enum
           TaskHandle_t * const pvCreatedTask,
           const BaseType_t xCoreID);
 # 432 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
- static inline __attribute__((section(".iram1" "." "14"))) BaseType_t xTaskCreate(
+ static inline __attribute__((section(".iram1" "." "2"))) BaseType_t xTaskCreate(
    TaskFunction_t pvTaskCode,
    const char * const pcName,
    const uint32_t usStackDepth,
@@ -5353,1940 +4037,19 @@ eSleepModeStatus eTaskConfirmSleepModeStatus( void ) ;
 void *pvTaskIncrementMutexHeldCount( void );
 # 2307 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
 UBaseType_t uxTaskGetSnapshotAll( TaskSnapshot_t * const pxTaskSnapshotArray, const UBaseType_t uxArraySize, UBaseType_t * const pxTcbSz );
-# 38 "/home/dieter/Development/esp-idf/components/lwip/port/esp32/include/arch/sys_arch.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h" 1
-# 88 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
-typedef void * QueueHandle_t;
-
-
-
-
-
-
-typedef void * QueueSetHandle_t;
-
-
-
-
-
-
-typedef void * QueueSetMemberHandle_t;
-# 613 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
-BaseType_t xQueueGenericSend( QueueHandle_t xQueue, const void * const pvItemToQueue, TickType_t xTicksToWait, const BaseType_t xCopyPosition ) ;
-# 725 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
-BaseType_t xQueuePeekFromISR( QueueHandle_t xQueue, void * const pvBuffer ) ;
-# 906 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
-BaseType_t xQueueGenericReceive( QueueHandle_t xQueue, void * const pvBuffer, TickType_t xTicksToWait, const BaseType_t xJustPeek ) ;
-# 917 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
-UBaseType_t uxQueueMessagesWaiting( const QueueHandle_t xQueue ) ;
-# 930 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
-UBaseType_t uxQueueSpacesAvailable( const QueueHandle_t xQueue ) ;
-# 940 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
-void vQueueDelete( QueueHandle_t xQueue ) ;
-# 1267 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
-BaseType_t xQueueGenericSendFromISR( QueueHandle_t xQueue, const void * const pvItemToQueue, BaseType_t * const pxHigherPriorityTaskWoken, const BaseType_t xCopyPosition ) ;
-BaseType_t xQueueGiveFromISR( QueueHandle_t xQueue, BaseType_t * const pxHigherPriorityTaskWoken ) ;
-# 1347 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
-BaseType_t xQueueReceiveFromISR( QueueHandle_t xQueue, void * const pvBuffer, BaseType_t * const pxHigherPriorityTaskWoken ) ;
-
-
-
-
-
-
-BaseType_t xQueueIsQueueEmptyFromISR( const QueueHandle_t xQueue ) ;
-BaseType_t xQueueIsQueueFullFromISR( const QueueHandle_t xQueue ) ;
-UBaseType_t uxQueueMessagesWaitingFromISR( const QueueHandle_t xQueue ) ;
-# 1374 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
-BaseType_t xQueueAltGenericSend( QueueHandle_t xQueue, const void * const pvItemToQueue, TickType_t xTicksToWait, BaseType_t xCopyPosition );
-BaseType_t xQueueAltGenericReceive( QueueHandle_t xQueue, void * const pvBuffer, TickType_t xTicksToWait, BaseType_t xJustPeeking );
-# 1390 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
-BaseType_t xQueueCRSendFromISR( QueueHandle_t xQueue, const void *pvItemToQueue, BaseType_t xCoRoutinePreviouslyWoken );
-BaseType_t xQueueCRReceiveFromISR( QueueHandle_t xQueue, void *pvBuffer, BaseType_t *pxTaskWoken );
-BaseType_t xQueueCRSend( QueueHandle_t xQueue, const void *pvItemToQueue, TickType_t xTicksToWait );
-BaseType_t xQueueCRReceive( QueueHandle_t xQueue, void *pvBuffer, TickType_t xTicksToWait );
-
-
-
-
-
-
-QueueHandle_t xQueueCreateMutex( const uint8_t ucQueueType ) ;
-QueueHandle_t xQueueCreateMutexStatic( const uint8_t ucQueueType, StaticQueue_t *pxStaticQueue ) ;
-QueueHandle_t xQueueCreateCountingSemaphore( const UBaseType_t uxMaxCount, const UBaseType_t uxInitialCount ) ;
-QueueHandle_t xQueueCreateCountingSemaphoreStatic( const UBaseType_t uxMaxCount, const UBaseType_t uxInitialCount, StaticQueue_t *pxStaticQueue ) ;
-void* xQueueGetMutexHolder( QueueHandle_t xSemaphore ) ;
-
-
-
-
-
-BaseType_t xQueueTakeMutexRecursive( QueueHandle_t xMutex, TickType_t xTicksToWait ) ;
-BaseType_t xQueueGiveMutexRecursive( QueueHandle_t pxMutex ) ;
-# 1488 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
- QueueHandle_t xQueueGenericCreate( const UBaseType_t uxQueueLength, const UBaseType_t uxItemSize, const uint8_t ucQueueType ) ;
-# 1548 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
-QueueSetHandle_t xQueueCreateSet( const UBaseType_t uxEventQueueLength ) ;
-# 1572 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
-BaseType_t xQueueAddToSet( QueueSetMemberHandle_t xQueueOrSemaphore, QueueSetHandle_t xQueueSet ) ;
-# 1591 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
-BaseType_t xQueueRemoveFromSet( QueueSetMemberHandle_t xQueueOrSemaphore, QueueSetHandle_t xQueueSet ) ;
-# 1627 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
-QueueSetMemberHandle_t xQueueSelectFromSet( QueueSetHandle_t xQueueSet, const TickType_t xTicksToWait ) ;
-
-
-
-
-QueueSetMemberHandle_t xQueueSelectFromSetFromISR( QueueSetHandle_t xQueueSet ) ;
-
-
-
-void vQueueWaitForMessageRestricted( QueueHandle_t xQueue, TickType_t xTicksToWait ) ;
-BaseType_t xQueueGenericReset( QueueHandle_t xQueue, BaseType_t xNewQueue ) ;
-void vQueueSetQueueNumber( QueueHandle_t xQueue, UBaseType_t uxQueueNumber ) ;
-UBaseType_t uxQueueGetQueueNumber( QueueHandle_t xQueue ) ;
-uint8_t ucQueueGetQueueType( QueueHandle_t xQueue ) ;
-# 39 "/home/dieter/Development/esp-idf/components/lwip/port/esp32/include/arch/sys_arch.h" 2
+# 23 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/thread.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/semaphore.h" 1
+# 25 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/semaphore.h"
 # 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/semphr.h" 1
 # 77 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/semphr.h"
 # 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h" 1
 # 78 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/semphr.h" 2
 
 typedef QueueHandle_t SemaphoreHandle_t;
-# 40 "/home/dieter/Development/esp-idf/components/lwip/port/esp32/include/arch/sys_arch.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/lwip/port/esp32/include/arch/vfs_lwip.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/lwip/port/esp32/include/arch/vfs_lwip.h"
-void esp_vfs_lwip_sockets_register(void);
-# 41 "/home/dieter/Development/esp-idf/components/lwip/port/esp32/include/arch/sys_arch.h" 2
+# 26 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/semaphore.h" 2
 
 
 
-
-
-
-typedef SemaphoreHandle_t sys_sem_t;
-typedef SemaphoreHandle_t sys_mutex_t;
-typedef TaskHandle_t sys_thread_t;
-
-typedef struct sys_mbox_s {
-  QueueHandle_t os_mbox;
-  void *owner;
-}* sys_mbox_t;
-
-
-
-
-
-
-void sys_delay_ms(uint32_t ms);
-# 95 "/home/dieter/Development/esp-idf/components/lwip/port/esp32/include/arch/sys_arch.h"
-void sys_delay_ms(uint32_t ms);
-sys_sem_t* sys_thread_sem_init(void);
-void sys_thread_sem_deinit(void);
-sys_sem_t* sys_thread_sem_get(void);
-# 43 "/home/dieter/Development/esp-idf/components/lwip/port/esp32/include/arch/cc.h" 2
-
-
-
-
-
-typedef uint8_t u8_t;
-typedef int8_t s8_t;
-typedef uint16_t u16_t;
-typedef int16_t s16_t;
-typedef uint32_t u32_t;
-typedef int32_t s32_t;
-
-
-typedef int sys_prot_t;
-# 49 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/arch.h" 2
-# 107 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/arch.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 108 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/arch.h" 2
-# 125 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/arch.h"
-typedef uint8_t u8_t;
-typedef int8_t s8_t;
-typedef uint16_t u16_t;
-typedef int16_t s16_t;
-typedef uint32_t u32_t;
-typedef int32_t s32_t;
-
-typedef uint64_t u64_t;
-typedef int64_t s64_t;
-
-typedef uintptr_t mem_ptr_t;
-# 148 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/arch.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/inttypes.h" 1 3 4
-# 22 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/inttypes.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 23 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/inttypes.h" 2 3 4
-# 312 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/inttypes.h" 3 4
-
-# 312 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/inttypes.h" 3 4
-typedef struct {
-  intmax_t quot;
-  intmax_t rem;
-} imaxdiv_t;
-
-struct _reent;
-
-
-
-
-
-extern intmax_t imaxabs(intmax_t j);
-extern imaxdiv_t imaxdiv(intmax_t numer, intmax_t denomer);
-extern intmax_t strtoimax(const char *restrict, char **restrict, int);
-extern intmax_t _strtoimax_r(struct _reent *, const char *restrict, char **restrict, int);
-extern uintmax_t strtoumax(const char *restrict, char **restrict, int);
-extern uintmax_t _strtoumax_r(struct _reent *, const char *restrict, char **restrict, int);
-extern intmax_t wcstoimax(const wchar_t *restrict, wchar_t **restrict, int);
-extern intmax_t _wcstoimax_r(struct _reent *, const wchar_t *restrict, wchar_t **restrict, int);
-extern uintmax_t wcstoumax(const wchar_t *restrict, wchar_t **restrict, int);
-extern uintmax_t _wcstoumax_r(struct _reent *, const wchar_t *restrict, wchar_t **restrict, int);
-
-
-extern intmax_t strtoimax_l(const char *restrict, char **_restrict, int, locale_t);
-extern uintmax_t strtoumax_l(const char *restrict, char **_restrict, int, locale_t);
-extern intmax_t wcstoimax_l(const wchar_t *restrict, wchar_t **_restrict, int, locale_t);
-extern uintmax_t wcstoumax_l(const wchar_t *restrict, wchar_t **_restrict, int, locale_t);
-# 149 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/arch.h" 2
-# 185 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/arch.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 1 3 4
-# 186 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/arch.h" 2
-# 202 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/arch.h"
-
-# 202 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/arch.h"
-typedef int ssize_t;
-# 228 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/arch.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/ctype.h" 1 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/ctype.h" 3 4
-
-
-
-# 13 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/ctype.h" 3 4
-int isalnum (int __c);
-int isalpha (int __c);
-int iscntrl (int __c);
-int isdigit (int __c);
-int isgraph (int __c);
-int islower (int __c);
-int isprint (int __c);
-int ispunct (int __c);
-int isspace (int __c);
-int isupper (int __c);
-int isxdigit (int __c);
-int tolower (int __c);
-int toupper (int __c);
-
-
-int isblank (int __c);
-
-
-
-int isascii (int __c);
-int toascii (int __c);
-
-
-
-
-
-extern int isalnum_l (int __c, locale_t __l);
-extern int isalpha_l (int __c, locale_t __l);
-extern int isblank_l (int __c, locale_t __l);
-extern int iscntrl_l (int __c, locale_t __l);
-extern int isdigit_l (int __c, locale_t __l);
-extern int isgraph_l (int __c, locale_t __l);
-extern int islower_l (int __c, locale_t __l);
-extern int isprint_l (int __c, locale_t __l);
-extern int ispunct_l (int __c, locale_t __l);
-extern int isspace_l (int __c, locale_t __l);
-extern int isupper_l (int __c, locale_t __l);
-extern int isxdigit_l(int __c, locale_t __l);
-extern int tolower_l (int __c, locale_t __l);
-extern int toupper_l (int __c, locale_t __l);
-
-
-
-extern int isascii_l (int __c, locale_t __l);
-extern int toascii_l (int __c, locale_t __l);
-# 69 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/ctype.h" 3 4
-const char *__locale_ctype_ptr (void);
-# 103 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/ctype.h" 3 4
-const char *__locale_ctype_ptr_l (locale_t);
-# 165 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/ctype.h" 3 4
-extern const char _ctype_[];
-
-
-# 229 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/arch.h" 2
-# 41 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/debug.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/opt.h" 1
-# 42 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/debug.h" 2
-# 53 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/opt.h" 2
-# 44 "/home/dieter/Development/esp-idf/components/lwip/include/apps/sntp/../../../lwip/src/include/lwip/inet.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/def.h" 1
-# 96 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/def.h"
-
-# 96 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/def.h"
-u16_t lwip_htons(u16_t x);
-
-
-
-
-u32_t lwip_htonl(u32_t x);
-# 133 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/def.h"
-void lwip_itoa(char* result, size_t bufsize, int number);
-
-
-
-int lwip_strnicmp(const char* str1, const char* str2, size_t len);
-
-
-
-int lwip_stricmp(const char* str1, const char* str2);
-
-
-
-char* lwip_strnstr(const char* buffer, const char* token, size_t n);
-# 45 "/home/dieter/Development/esp-idf/components/lwip/include/apps/sntp/../../../lwip/src/include/lwip/inet.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h" 1
-# 43 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h"
-# 1 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/ip4_addr.h" 1
-# 51 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/ip4_addr.h"
-struct ip4_addr {
-  u32_t addr;
-};
-
-
-
-typedef struct ip4_addr ip4_addr_t;
-
-
-struct netif;
-# 151 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/ip4_addr.h"
-u8_t ip4_addr_isbroadcast_u32(u32_t addr, const struct netif *netif);
-
-
-u8_t ip4_addr_netmask_valid(u32_t netmask);
-# 204 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/ip4_addr.h"
-u32_t ipaddr_addr(const char *cp);
-int ip4addr_aton(const char *cp, ip4_addr_t *addr);
-
-char *ip4addr_ntoa(const ip4_addr_t *addr);
-char *ip4addr_ntoa_r(const ip4_addr_t *addr, char *buf, int buflen);
-# 44 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/ip6_addr.h" 1
-# 46 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/ip6_addr.h"
-# 1 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/def.h" 1
-# 47 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/ip6_addr.h" 2
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/ip6_zone.h" 1
-# 136 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/ip6_zone.h"
-enum lwip_ipv6_scope_type
-{
-
-  IP6_UNKNOWN = 0,
-
-  IP6_UNICAST = 1,
-
-  IP6_MULTICAST = 2
-};
-# 51 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/ip6_addr.h" 2
-# 59 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/ip6_addr.h"
-struct ip6_addr {
-  u32_t addr[4];
-
-  u8_t zone;
-
-};
-
-
-typedef struct ip6_addr ip6_addr_t;
-# 339 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/ip6_addr.h"
-int ip6addr_aton(const char *cp, ip6_addr_t *addr);
-
-char *ip6addr_ntoa(const ip6_addr_t *addr);
-char *ip6addr_ntoa_r(const ip6_addr_t *addr, char *buf, int buflen);
-# 45 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h" 2
-# 54 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h"
-enum lwip_ip_addr_type {
-
-  IPADDR_TYPE_V4 = 0U,
-
-  IPADDR_TYPE_V6 = 6U,
-
-  IPADDR_TYPE_ANY = 46U
-};
-
-
-
-
-
-
-
-typedef struct ip_addr {
-  union {
-    ip6_addr_t ip6;
-    ip4_addr_t ip4;
-  } u_addr;
-
-  u8_t type;
-} ip_addr_t;
-
-extern const ip_addr_t ip_addr_any_type;
-# 244 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h"
-char *ipaddr_ntoa(const ip_addr_t *addr);
-char *ipaddr_ntoa_r(const ip_addr_t *addr, char *buf, int buflen);
-int ipaddr_aton(const char *cp, ip_addr_t *addr);
-# 374 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h"
-extern const ip_addr_t ip_addr_any;
-extern const ip_addr_t ip_addr_broadcast;
-# 410 "/home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h"
-extern const ip_addr_t ip6_addr_any;
-# 46 "/home/dieter/Development/esp-idf/components/lwip/include/apps/sntp/../../../lwip/src/include/lwip/inet.h" 2
-# 55 "/home/dieter/Development/esp-idf/components/lwip/include/apps/sntp/../../../lwip/src/include/lwip/inet.h"
-typedef u32_t in_addr_t;
-
-
-struct in_addr {
-  in_addr_t s_addr;
-};
-
-struct in6_addr {
-  union {
-    u32_t u32_addr[4];
-    u8_t u8_addr[16];
-  } un;
-
-};
-# 86 "/home/dieter/Development/esp-idf/components/lwip/include/apps/sntp/../../../lwip/src/include/lwip/inet.h"
-extern const struct in6_addr in6addr_any;
-# 19 "/home/dieter/Development/esp-idf/components/lwip/port/esp32/include/arpa/inet.h" 2
-# 25 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_defs.h" 2
-# 33 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_defs.h"
-typedef void (TIMER_CBACK)(void *p_tle);
-typedef struct _tle {
-    struct _tle *p_next;
-    struct _tle *p_prev;
-    TIMER_CBACK *p_cback;
-    INT32 ticks;
-    INT32 ticks_initial;
-    UINT32 param;
-    UINT32 data;
-    UINT16 event;
-    UINT8 in_use;
-} TIMER_LIST_ENT;
-# 60 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_defs.h"
-typedef struct {
-    uint8_t address[6];
-} __attribute__ ((__packed__)) bt_bdaddr_t;
-
-
-typedef struct {
-    uint8_t uu[16];
-} bt_uuid_t;
-# 29 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h" 2
-
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcidefs.h" 1
-# 1389 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcidefs.h"
-typedef struct {
-    UINT8 id;
-    UINT8 stype;
-    UINT16 max_sdu_size;
-    UINT32 sdu_inter_time;
-    UINT32 access_latency;
-    UINT32 flush_timeout;
-} tHCI_EXT_FLOW_SPEC;
-# 31 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h" 2
-
-
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h" 1
-# 67 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h"
-typedef UINT8 tSMP_EVT;
-# 107 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h"
-typedef UINT8 tSMP_STATUS;
-# 117 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h"
-typedef UINT8 tSMP_IO_CAP;
-
-
-
-
-
-
-enum {
-    SMP_OOB_NONE,
-    SMP_OOB_PRESENT,
-    SMP_OOB_UNKNOWN
-};
-typedef UINT8 tSMP_OOB_FLAG;
-
-
-enum {
-    SMP_OOB_INVALID_TYPE,
-    SMP_OOB_PEER,
-    SMP_OOB_LOCAL,
-    SMP_OOB_BOTH
-};
-typedef UINT8 tSMP_OOB_DATA_TYPE;
-# 179 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h"
-typedef UINT8 tSMP_AUTH_REQ;
-
-
-
-
-typedef UINT8 tSMP_SEC_LEVEL;
-# 195 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h"
-typedef UINT8 tSMP_KEYS;
-# 210 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h"
-typedef UINT8 tSMP_SC_KEY_TYPE;
-
-
-typedef struct {
-    tSMP_IO_CAP io_cap;
-    tSMP_OOB_FLAG oob_data;
-    tSMP_AUTH_REQ auth_req;
-    UINT8 max_key_size;
-    tSMP_KEYS init_keys;
-    tSMP_KEYS resp_keys;
-} tSMP_IO_REQ;
-
-typedef struct {
-    tSMP_STATUS reason;
-    tSMP_SEC_LEVEL sec_level;
-    BOOLEAN is_pair_cancel;
-    BOOLEAN smp_over_br;
-    tSMP_AUTH_REQ auth_mode;
-} tSMP_CMPL;
-
-typedef struct {
-    BT_OCTET32 x;
-    BT_OCTET32 y;
-} tSMP_PUBLIC_KEY;
-
-
-typedef struct {
-    BOOLEAN present;
-    BT_OCTET16 randomizer;
-    BT_OCTET16 commitment;
-
-    tBLE_BD_ADDR addr_sent_to;
-    BT_OCTET32 private_key_used;
-
-
-
-    tSMP_PUBLIC_KEY publ_key_used;
-} tSMP_LOC_OOB_DATA;
-
-
-typedef struct {
-    BOOLEAN present;
-    BT_OCTET16 randomizer;
-    BT_OCTET16 commitment;
-    tBLE_BD_ADDR addr_rcvd_from;
-} tSMP_PEER_OOB_DATA;
-
-typedef struct {
-    tSMP_LOC_OOB_DATA loc_oob_data;
-    tSMP_PEER_OOB_DATA peer_oob_data;
-} tSMP_SC_OOB_DATA;
-
-
-typedef union {
-    UINT32 passkey;
-    tSMP_IO_REQ io_req;
-    tSMP_CMPL cmplt;
-    tSMP_OOB_DATA_TYPE req_oob_type;
-    tSMP_LOC_OOB_DATA loc_oob_data;
-} tSMP_EVT_DATA;
-
-
-
-typedef struct {
-    UINT8 status;
-    UINT8 param_len;
-    UINT16 opcode;
-    UINT8 param_buf[16];
-} tSMP_ENC;
-
-
-typedef UINT8 (tSMP_CALLBACK) (tSMP_EVT event, BD_ADDR bd_addr, tSMP_EVT_DATA *p_data);
-
-
-
-typedef void (tCMAC_CMPL_CBACK)(UINT8 *p_mac, UINT16 tlen, UINT32 sign_counter);
-# 305 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h"
-extern void SMP_Init(void);
-# 316 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h"
-extern void SMP_Free(void);
-# 329 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h"
-extern UINT8 SMP_SetTraceLevel (UINT8 new_level);
-# 340 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h"
-extern BOOLEAN SMP_Register (tSMP_CALLBACK *p_cback);
-# 351 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h"
-extern tSMP_STATUS SMP_Pair (BD_ADDR bd_addr);
-# 362 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h"
-extern tSMP_STATUS SMP_BR_PairWith (BD_ADDR bd_addr);
-# 373 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h"
-extern BOOLEAN SMP_PairCancel (BD_ADDR bd_addr);
-# 388 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h"
-extern void SMP_SecurityGrant(BD_ADDR bd_addr, UINT8 res);
-# 403 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h"
-extern void SMP_PasskeyReply (BD_ADDR bd_addr, UINT8 res, UINT32 passkey);
-# 418 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h"
-extern void SMP_SetStaticPasskey (BOOLEAN add, UINT32 passkey);
-# 432 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h"
-extern void SMP_ConfirmReply (BD_ADDR bd_addr, UINT8 res);
-# 446 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h"
-extern void SMP_OobDataReply(BD_ADDR bd_addr, tSMP_STATUS res, UINT8 len,
-                             UINT8 *p_data);
-# 459 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h"
-extern void SMP_SecureConnectionOobDataReply(UINT8 *p_data);
-# 477 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h"
-extern BOOLEAN SMP_Encrypt (UINT8 *key, UINT8 key_len,
-                            UINT8 *plain_text, UINT8 pt_len,
-                            tSMP_ENC *p_out);
-# 492 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h"
-extern void SMP_KeypressNotification (BD_ADDR bd_addr, UINT8 value);
-# 506 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h"
-extern BOOLEAN SMP_CreateLocalSecureConnectionsOobData (
-    tBLE_BD_ADDR *addr_to_send_to);
-# 38 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h" 2
-# 49 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-enum {
-    BTM_SUCCESS = 0,
-    BTM_CMD_STARTED,
-    BTM_BUSY,
-    BTM_NO_RESOURCES,
-    BTM_MODE_UNSUPPORTED,
-    BTM_ILLEGAL_VALUE,
-    BTM_WRONG_MODE,
-    BTM_UNKNOWN_ADDR,
-    BTM_DEVICE_TIMEOUT,
-    BTM_BAD_VALUE_RET,
-    BTM_ERR_PROCESSING,
-    BTM_NOT_AUTHORIZED,
-    BTM_DEV_RESET,
-    BTM_CMD_STORED,
-    BTM_ILLEGAL_ACTION,
-    BTM_DELAY_CHECK,
-    BTM_SCO_BAD_LENGTH,
-    BTM_SUCCESS_NO_SECURITY,
-    BTM_FAILED_ON_SECURITY,
-    BTM_REPEATED_ATTEMPTS,
-    BTM_MODE4_LEVEL4_NOT_SUPPORTED,
-    BTM_PEER_LE_DATA_LEN_UNSUPPORTED,
-    BTM_CONTROL_LE_DATA_LEN_UNSUPPORTED,
-    BTM_SET_PRIVACY_SUCCESS,
-    BTM_SET_PRIVACY_FAIL,
-    BTM_SET_STATIC_RAND_ADDR_FAIL,
-    BTM_INVALID_STATIC_RAND_ADDR,
-};
-
-typedef uint8_t tBTM_STATUS;
-# 100 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-typedef UINT8 tBTM_DEVICE_ROLE;
-
-
-typedef UINT8 tBTM_BD_NAME[64 + 1];
-
-
-typedef struct {
-    UINT8 hci_version;
-    UINT16 hci_revision;
-    UINT8 lmp_version;
-    UINT16 manufacturer;
-    UINT16 lmp_subversion;
-} tBTM_VERSION_INFO;
-
-
-typedef struct {
-    UINT16 opcode;
-    UINT16 param_len;
-    UINT8 *p_param_buf;
-} tBTM_VSC_CMPL;
-# 130 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-enum {
-    BTM_DEV_STATUS_UP,
-    BTM_DEV_STATUS_DOWN,
-    BTM_DEV_STATUS_CMD_TOUT
-};
-
-typedef UINT8 tBTM_DEV_STATUS;
-
-typedef struct {
-    UINT16 rx_len;
-    UINT16 tx_len;
-}tBTM_LE_SET_PKT_DATA_LENGTH_PARAMS;
-
-typedef struct {
-    UINT16 min_conn_int;
-    UINT16 max_conn_int;
-    UINT16 conn_int;
-    UINT16 slave_latency;
-    UINT16 supervision_tout;
-}tBTM_LE_UPDATE_CONN_PRAMS;
-
-typedef enum{
-    BTM_WHITELIST_REMOVE = 0X00,
-    BTM_WHITELIST_ADD = 0X01,
-}tBTM_WL_OPERATION;
-
-
-typedef void (tBTM_DEV_STATUS_CB) (tBTM_DEV_STATUS status);
-
-
-
-
-
-
-typedef void (tBTM_VS_EVT_CB) (UINT8 len, UINT8 *p);
-
-
-
-
-
-typedef void (tBTM_CMPL_CB) (void *p1);
-
-typedef void (tBTM_INQ_DIS_CB) (uint32_t num_dis);
-
-
-
-
-typedef void (tBTM_VSC_CMPL_CB) (tBTM_VSC_CMPL *p1);
-
-
-
-
-
-typedef UINT8 (tBTM_FILTER_CB) (BD_ADDR bd_addr, DEV_CLASS dc);
-
-typedef void (tBTM_UPDATE_CONN_PARAM_CBACK) (UINT8 status, BD_ADDR bd_addr, tBTM_LE_UPDATE_CONN_PRAMS *update_conn_params);
-
-typedef void (tBTM_SET_PKT_DATA_LENGTH_CBACK) (UINT8 status, tBTM_LE_SET_PKT_DATA_LENGTH_PARAMS *data_length_params);
-
-typedef void (tBTM_SET_RAND_ADDR_CBACK) (UINT8 status);
-
-typedef void (tBTM_ADD_WHITELIST_CBACK) (UINT8 status, tBTM_WL_OPERATION wl_opration);
-
-typedef void (tBTM_SET_LOCAL_PRIVACY_CBACK) (UINT8 status);
-# 450 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-enum {
-    BTM_EIR_UUID_SERVCLASS_SERVICE_DISCOVERY_SERVER,
-
-
-    BTM_EIR_UUID_SERVCLASS_SERIAL_PORT,
-    BTM_EIR_UUID_SERVCLASS_LAN_ACCESS_USING_PPP,
-    BTM_EIR_UUID_SERVCLASS_DIALUP_NETWORKING,
-    BTM_EIR_UUID_SERVCLASS_IRMC_SYNC,
-    BTM_EIR_UUID_SERVCLASS_OBEX_OBJECT_PUSH,
-    BTM_EIR_UUID_SERVCLASS_OBEX_FILE_TRANSFER,
-    BTM_EIR_UUID_SERVCLASS_IRMC_SYNC_COMMAND,
-    BTM_EIR_UUID_SERVCLASS_HEADSET,
-    BTM_EIR_UUID_SERVCLASS_CORDLESS_TELEPHONY,
-    BTM_EIR_UUID_SERVCLASS_AUDIO_SOURCE,
-    BTM_EIR_UUID_SERVCLASS_AUDIO_SINK,
-    BTM_EIR_UUID_SERVCLASS_AV_REM_CTRL_TARGET,
-
-    BTM_EIR_UUID_SERVCLASS_AV_REMOTE_CONTROL,
-
-    BTM_EIR_UUID_SERVCLASS_INTERCOM,
-    BTM_EIR_UUID_SERVCLASS_FAX,
-    BTM_EIR_UUID_SERVCLASS_HEADSET_AUDIO_GATEWAY,
-
-
-    BTM_EIR_UUID_SERVCLASS_PANU,
-    BTM_EIR_UUID_SERVCLASS_NAP,
-    BTM_EIR_UUID_SERVCLASS_GN,
-    BTM_EIR_UUID_SERVCLASS_DIRECT_PRINTING,
-
-    BTM_EIR_UUID_SERVCLASS_IMAGING,
-    BTM_EIR_UUID_SERVCLASS_IMAGING_RESPONDER,
-    BTM_EIR_UUID_SERVCLASS_IMAGING_AUTO_ARCHIVE,
-    BTM_EIR_UUID_SERVCLASS_IMAGING_REF_OBJECTS,
-    BTM_EIR_UUID_SERVCLASS_HF_HANDSFREE,
-    BTM_EIR_UUID_SERVCLASS_AG_HANDSFREE,
-    BTM_EIR_UUID_SERVCLASS_DIR_PRT_REF_OBJ_SERVICE,
-
-    BTM_EIR_UUID_SERVCLASS_BASIC_PRINTING,
-    BTM_EIR_UUID_SERVCLASS_PRINTING_STATUS,
-    BTM_EIR_UUID_SERVCLASS_HUMAN_INTERFACE,
-    BTM_EIR_UUID_SERVCLASS_CABLE_REPLACEMENT,
-    BTM_EIR_UUID_SERVCLASS_HCRP_PRINT,
-    BTM_EIR_UUID_SERVCLASS_HCRP_SCAN,
-
-
-
-
-
-    BTM_EIR_UUID_SERVCLASS_SAP,
-    BTM_EIR_UUID_SERVCLASS_PBAP_PCE,
-    BTM_EIR_UUID_SERVCLASS_PBAP_PSE,
-
-
-    BTM_EIR_UUID_SERVCLASS_PHONE_ACCESS,
-    BTM_EIR_UUID_SERVCLASS_HEADSET_HS,
-    BTM_EIR_UUID_SERVCLASS_PNP_INFORMATION,
-# 515 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-    BTM_EIR_UUID_SERVCLASS_VIDEO_SOURCE,
-    BTM_EIR_UUID_SERVCLASS_VIDEO_SINK,
-
-
-    BTM_EIR_UUID_SERVCLASS_MESSAGE_ACCESS,
-    BTM_EIR_UUID_SERVCLASS_MESSAGE_NOTIFICATION,
-    BTM_EIR_UUID_SERVCLASS_HDP_SOURCE,
-    BTM_EIR_UUID_SERVCLASS_HDP_SINK,
-    BTM_EIR_MAX_SERVICES
-};
-
-
-
-
-
-
-typedef UINT8 tBTM_EIR_SEARCH_RESULT;
-# 567 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-typedef UINT8 tBTM_BLE_SEC_ACT;
-# 599 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-typedef struct {
-    DEV_CLASS dev_class;
-    DEV_CLASS dev_class_mask;
-} tBTM_COD_COND;
-
-
-typedef union {
-    BD_ADDR bdaddr_cond;
-    tBTM_COD_COND cod_cond;
-} tBTM_INQ_FILT_COND;
-
-
-typedef struct {
-    UINT8 mode;
-    UINT8 duration;
-    UINT8 max_resps;
-    BOOLEAN report_dup;
-    UINT8 filter_cond_type;
-    tBTM_INQ_FILT_COND filter_cond;
-
-
-
-} tBTM_INQ_PARMS;
-# 632 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-typedef UINT8 tBTM_BLE_EVT_TYPE;
-
-
-
-
-
-typedef struct {
-    UINT16 clock_offset;
-    BD_ADDR remote_bd_addr;
-    DEV_CLASS dev_class;
-    UINT8 page_scan_rep_mode;
-    UINT8 page_scan_per_mode;
-    UINT8 page_scan_mode;
-    INT8 rssi;
-    UINT32 eir_uuid[(((UINT32)BTM_EIR_MAX_SERVICES / 32) + (((UINT32)BTM_EIR_MAX_SERVICES % 32) ? 1 : 0))];
-    BOOLEAN eir_complete_list;
-    tBT_DEVICE_TYPE device_type;
-
-    UINT8 inq_result_type;
-    UINT8 ble_addr_type;
-    tBTM_BLE_EVT_TYPE ble_evt_type;
-    UINT8 flag;
-    UINT8 adv_data_len;
-    UINT8 scan_rsp_len;
-
-} tBTM_INQ_RESULTS;
-
-
-
-
-
-typedef struct {
-    tBTM_INQ_RESULTS results;
-
-    BOOLEAN appl_knows_rem_name;
-
-
-
-    UINT16 remote_name_len;
-    tBTM_BD_NAME remote_name;
-    UINT8 remote_name_state;
-    UINT8 remote_name_type;
-
-
-} tBTM_INQ_INFO;
-
-
-
-typedef struct {
-    tBTM_STATUS status;
-    UINT8 num_resp;
-} tBTM_INQUIRY_CMPL;
-
-
-typedef struct {
-    UINT16 status;
-    BD_ADDR bd_addr;
-    UINT16 length;
-    BD_NAME remote_bd_name;
-} tBTM_REMOTE_DEV_NAME;
-
-typedef struct {
-    UINT8 pcm_intf_rate;
-
-    UINT8 frame_type;
-    UINT8 sync_mode;
-    UINT8 clock_mode;
-
-} tBTM_SCO_PCM_PARAM;
-# 709 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-typedef void (tBTM_INQ_DB_CHANGE_CB) (void *p1, BOOLEAN is_new);
-
-
-
-
-typedef void (tBTM_INQ_RESULTS_CB) (tBTM_INQ_RESULTS *p_inq_results, UINT8 *p_eir);
-# 755 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-typedef struct {
-    UINT8 hci_status;
-    UINT8 role;
-    BD_ADDR remote_bd_addr;
-} tBTM_ROLE_SWITCH_CMPL;
-
-
-
-
-typedef struct {
-    FLOW_SPEC flow;
-    UINT16 handle;
-    UINT8 status;
-} tBTM_QOS_SETUP_CMPL;
-
-
-
-
-
-typedef struct {
-    tBTM_STATUS status;
-    UINT8 hci_status;
-    INT8 rssi;
-    BD_ADDR rem_bda;
-} tBTM_RSSI_RESULTS;
-
-
-
-
-typedef struct {
-    tBTM_STATUS status;
-    UINT8 hci_status;
-    INT8 tx_power;
-    BD_ADDR rem_bda;
-} tBTM_TX_POWER_RESULTS;
-
-
-
-
-typedef struct {
-    tBTM_STATUS status;
-    UINT8 hci_status;
-    UINT8 link_quality;
-    BD_ADDR rem_bda;
-} tBTM_LINK_QUALITY_RESULTS;
-
-
-
-
-typedef struct {
-    tBTM_STATUS status;
-    UINT8 hci_status;
-} tBTM_SET_AFH_CHANNELS_RESULTS;
-
-
-
-
-typedef struct {
-    tBTM_STATUS status;
-    UINT8 hci_status;
-} tBTM_BLE_SET_CHANNELS_RESULTS;
-
-
-
-
-typedef struct {
-    tBTM_STATUS status;
-    UINT8 hci_status;
-    INT8 tx_power;
-} tBTM_INQ_TXPWR_RESULTS;
-
-enum {
-    BTM_BL_CONN_EVT,
-    BTM_BL_DISCN_EVT,
-    BTM_BL_UPDATE_EVT,
-    BTM_BL_ROLE_CHG_EVT,
-    BTM_BL_COLLISION_EVT
-};
-typedef UINT8 tBTM_BL_EVENT;
-typedef UINT16 tBTM_BL_EVENT_MASK;
-# 846 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-typedef struct {
-    tBTM_BL_EVENT event;
-    BD_ADDR_PTR p_bda;
-    DEV_CLASS_PTR p_dc;
-    BD_NAME_PTR p_bdn;
-    UINT8 *p_features;
-
-    UINT16 handle;
-    tBT_TRANSPORT transport;
-
-} tBTM_BL_CONN_DATA;
-
-
-typedef struct {
-    tBTM_BL_EVENT event;
-    BD_ADDR_PTR p_bda;
-
-    UINT16 handle;
-    tBT_TRANSPORT transport;
-
-} tBTM_BL_DISCN_DATA;
-# 877 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-typedef struct {
-    tBTM_BL_EVENT event;
-    UINT8 busy_level;
-
-    UINT8 busy_level_flags;
-} tBTM_BL_UPDATE_DATA;
-
-
-typedef struct {
-    tBTM_BL_EVENT event;
-    BD_ADDR_PTR p_bda;
-    UINT8 new_role;
-    UINT8 hci_status;
-} tBTM_BL_ROLE_CHG_DATA;
-
-typedef union {
-    tBTM_BL_EVENT event;
-    tBTM_BL_CONN_DATA conn;
-    tBTM_BL_DISCN_DATA discn;
-    tBTM_BL_UPDATE_DATA update;
-    tBTM_BL_ROLE_CHG_DATA role_chg;
-} tBTM_BL_EVENT_DATA;
-
-
-
-
-typedef void (tBTM_BL_CHANGE_CB) (tBTM_BL_EVENT_DATA *p_data);
-# 913 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-typedef void (tBTM_ACL_DB_CHANGE_CB) (BD_ADDR p_bda, DEV_CLASS p_dc,
-                                      BD_NAME p_bdn, UINT8 *features,
-                                      BOOLEAN is_new, UINT16 handle,
-                                      tBT_TRANSPORT transport);
-# 972 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-typedef UINT8 tBTM_SCO_TYPE;
-
-
-
-
-
-
-
-typedef UINT8 tBTM_SCO_ROUTE_TYPE;
-# 991 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-typedef UINT16 tBTM_SCO_CODEC_TYPE;
-# 1003 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-typedef UINT8 tBTM_SCO_AIR_MODE_TYPE;
-# 1021 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-enum {
-    BTM_SCO_DATA_CORRECT,
-    BTM_SCO_DATA_PAR_ERR,
-    BTM_SCO_DATA_NONE,
-    BTM_SCO_DATA_PAR_LOST
-};
-typedef UINT8 tBTM_SCO_DATA_FLAG;
-
-
-
-
-typedef void (tBTM_SCO_CB) (UINT16 sco_inx);
-typedef void (tBTM_SCO_DATA_CB) (UINT16 sco_inx, BT_HDR *p_data, tBTM_SCO_DATA_FLAG status);
-# 1055 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-typedef UINT8 tBTM_ESCO_EVT;
-
-
-typedef struct {
-    UINT32 tx_bw;
-    UINT32 rx_bw;
-    UINT16 max_latency;
-    UINT16 voice_contfmt;
-    UINT16 packet_types;
-    UINT8 retrans_effort;
-} tBTM_ESCO_PARAMS;
-
-typedef struct {
-    UINT16 max_latency;
-    UINT16 packet_types;
-    UINT8 retrans_effort;
-} tBTM_CHG_ESCO_PARAMS;
-
-
-typedef struct {
-    UINT16 rx_pkt_len;
-    UINT16 tx_pkt_len;
-    BD_ADDR bd_addr;
-    UINT8 link_type;
-    UINT8 tx_interval;
-    UINT8 retrans_window;
-    UINT8 air_mode;
-} tBTM_ESCO_DATA;
-
-typedef struct {
-    UINT16 sco_inx;
-    UINT16 rx_pkt_len;
-    UINT16 tx_pkt_len;
-    BD_ADDR bd_addr;
-    UINT8 hci_status;
-    UINT8 tx_interval;
-    UINT8 retrans_window;
-} tBTM_CHG_ESCO_EVT_DATA;
-
-typedef struct {
-    UINT16 sco_inx;
-    BD_ADDR bd_addr;
-    DEV_CLASS dev_class;
-    tBTM_SCO_TYPE link_type;
-} tBTM_ESCO_CONN_REQ_EVT_DATA;
-
-typedef union {
-    tBTM_CHG_ESCO_EVT_DATA chg_evt;
-    tBTM_ESCO_CONN_REQ_EVT_DATA conn_evt;
-} tBTM_ESCO_EVT_DATA;
-
-
-
-
-typedef void (tBTM_ESCO_CBACK) (tBTM_ESCO_EVT event, tBTM_ESCO_EVT_DATA *p_data);
-# 1180 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-typedef UINT8 tBTM_LINK_KEY_TYPE;
-# 1355 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-typedef UINT8 (tBTM_AUTHORIZE_CALLBACK) (BD_ADDR bd_addr, DEV_CLASS dev_class,
-        tBTM_BD_NAME bd_name, UINT8 *service_name,
-        UINT8 service_id, BOOLEAN is_originator);
-
-
-
-
-
-
-
-typedef UINT8 (tBTM_PIN_CALLBACK) (BD_ADDR bd_addr, DEV_CLASS dev_class,
-                                   tBTM_BD_NAME bd_name, BOOLEAN min_16_digit);
-
-
-
-
-
-
-typedef UINT8 (tBTM_LINK_KEY_CALLBACK) (BD_ADDR bd_addr, DEV_CLASS dev_class,
-                                        tBTM_BD_NAME bd_name, UINT8 *key,
-                                        UINT8 key_type);
-
-
-
-
-
-
-typedef void (tBTM_RMT_NAME_CALLBACK) (BD_ADDR bd_addr, DEV_CLASS dc,
-                                       tBTM_BD_NAME bd_name);
-# 1392 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-typedef UINT8 (tBTM_AUTH_COMPLETE_CALLBACK) (BD_ADDR bd_addr, DEV_CLASS dev_class,
-        tBTM_BD_NAME bd_name, int result);
-
-enum {
-    BTM_SP_IO_REQ_EVT,
-    BTM_SP_IO_RSP_EVT,
-    BTM_SP_CFM_REQ_EVT,
-    BTM_SP_KEY_NOTIF_EVT,
-    BTM_SP_KEY_REQ_EVT,
-    BTM_SP_KEYPRESS_EVT,
-    BTM_SP_LOC_OOB_EVT,
-    BTM_SP_RMT_OOB_EVT,
-    BTM_SP_COMPLT_EVT,
-    BTM_SP_UPGRADE_EVT
-};
-typedef UINT8 tBTM_SP_EVT;
-# 1421 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-typedef UINT8 tBTM_IO_CAP;
-# 1453 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-typedef UINT8 tBTM_AUTH_REQ;
-
-enum {
-    BTM_OOB_NONE,
-    BTM_OOB_PRESENT
-
-    , BTM_OOB_UNKNOWN
-
-};
-typedef UINT8 tBTM_OOB_DATA;
-
-
-typedef struct {
-    BD_ADDR bd_addr;
-    tBTM_IO_CAP io_cap;
-    tBTM_OOB_DATA oob_data;
-    tBTM_AUTH_REQ auth_req;
-    BOOLEAN is_orig;
-} tBTM_SP_IO_REQ;
-
-
-typedef struct {
-    BD_ADDR bd_addr;
-    tBTM_IO_CAP io_cap;
-    tBTM_OOB_DATA oob_data;
-    tBTM_AUTH_REQ auth_req;
-} tBTM_SP_IO_RSP;
-
-
-typedef struct {
-    BD_ADDR bd_addr;
-    DEV_CLASS dev_class;
-    tBTM_BD_NAME bd_name;
-    UINT32 num_val;
-    BOOLEAN just_works;
-    tBTM_AUTH_REQ loc_auth_req;
-    tBTM_AUTH_REQ rmt_auth_req;
-    tBTM_IO_CAP loc_io_caps;
-    tBTM_IO_CAP rmt_io_caps;
-} tBTM_SP_CFM_REQ;
-
-
-typedef struct {
-    BD_ADDR bd_addr;
-    DEV_CLASS dev_class;
-    tBTM_BD_NAME bd_name;
-} tBTM_SP_KEY_REQ;
-
-
-typedef struct {
-    BD_ADDR bd_addr;
-    DEV_CLASS dev_class;
-    tBTM_BD_NAME bd_name;
-    UINT32 passkey;
-} tBTM_SP_KEY_NOTIF;
-
-enum {
-    BTM_SP_KEY_STARTED,
-    BTM_SP_KEY_ENTERED,
-    BTM_SP_KEY_ERASED,
-    BTM_SP_KEY_CLEARED,
-    BTM_SP_KEY_COMPLT,
-    BTM_SP_KEY_OUT_OF_RANGE
-};
-typedef UINT8 tBTM_SP_KEY_TYPE;
-
-
-typedef struct {
-    BD_ADDR bd_addr;
-    tBTM_SP_KEY_TYPE notif_type;
-} tBTM_SP_KEYPRESS;
-
-
-typedef struct {
-    tBTM_STATUS status;
-    BT_OCTET16 c;
-    BT_OCTET16 r;
-} tBTM_SP_LOC_OOB;
-
-
-typedef struct {
-    BD_ADDR bd_addr;
-    DEV_CLASS dev_class;
-    tBTM_BD_NAME bd_name;
-} tBTM_SP_RMT_OOB;
-
-
-
-typedef struct {
-    BD_ADDR bd_addr;
-    DEV_CLASS dev_class;
-    tBTM_BD_NAME bd_name;
-    tBTM_STATUS status;
-} tBTM_SP_COMPLT;
-
-
-typedef struct {
-    BD_ADDR bd_addr;
-    BOOLEAN upgrade;
-} tBTM_SP_UPGRADE;
-
-typedef union {
-    tBTM_SP_IO_REQ io_req;
-    tBTM_SP_IO_RSP io_rsp;
-    tBTM_SP_CFM_REQ cfm_req;
-    tBTM_SP_KEY_NOTIF key_notif;
-    tBTM_SP_KEY_REQ key_req;
-    tBTM_SP_KEYPRESS key_press;
-    tBTM_SP_LOC_OOB loc_oob;
-    tBTM_SP_RMT_OOB rmt_oob;
-    tBTM_SP_COMPLT complt;
-    tBTM_SP_UPGRADE upgrade;
-} tBTM_SP_EVT_DATA;
-
-
-
-
-typedef UINT8 (tBTM_SP_CALLBACK) (tBTM_SP_EVT event, tBTM_SP_EVT_DATA *p_data);
-
-
-typedef void (tBTM_MKEY_CALLBACK) (BD_ADDR bd_addr, UINT8 status, UINT8 key_flag) ;
-
-
-
-
-
-
-
-typedef void (tBTM_SEC_CBACK) (BD_ADDR bd_addr, tBT_TRANSPORT trasnport,
-                               void *p_ref_data, tBTM_STATUS result);
-
-
-
-
-
-typedef void (tBTM_BOND_CANCEL_CMPL_CALLBACK) (tBTM_STATUS result);
-# 1610 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-typedef UINT8 tBTM_LE_EVT;
-# 1623 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-typedef UINT8 tBTM_LE_KEY_TYPE;
-
-
-
-
-
-
-
-typedef UINT8 tBTM_LE_AUTH_REQ;
-# 1647 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-typedef UINT8 tBTM_LE_SEC;
-
-
-typedef struct {
-    tBTM_IO_CAP io_cap;
-    UINT8 oob_data;
-    tBTM_LE_AUTH_REQ auth_req;
-    UINT8 max_key_size;
-    tBTM_LE_KEY_TYPE init_keys;
-    tBTM_LE_KEY_TYPE resp_keys;
-} tBTM_LE_IO_REQ;
-
-
-
-typedef struct {
-    UINT8 reason;
-    UINT8 sec_level;
-    BOOLEAN is_pair_cancel;
-    BOOLEAN smp_over_br;
-    tSMP_AUTH_REQ auth_mode;
-} tBTM_LE_COMPLT;
-
-
-
-typedef struct {
-    BT_OCTET16 ltk;
-    BT_OCTET8 rand;
-    UINT16 ediv;
-    UINT8 sec_level;
-    UINT8 key_size;
-} tBTM_LE_PENC_KEYS;
-
-
-typedef struct {
-    UINT32 counter;
-    BT_OCTET16 csrk;
-    UINT8 sec_level;
-} tBTM_LE_PCSRK_KEYS;
-
-
-typedef struct {
-    BT_OCTET16 ltk;
-    UINT16 div;
-    UINT8 key_size;
-    UINT8 sec_level;
-} tBTM_LE_LENC_KEYS;
-
-
-typedef struct {
-    UINT32 counter;
-    UINT16 div;
-    UINT8 sec_level;
-    BT_OCTET16 csrk;
-} tBTM_LE_LCSRK_KEYS;
-
-typedef struct {
-    BT_OCTET16 irk;
-    tBLE_ADDR_TYPE addr_type;
-    BD_ADDR static_addr;
-} tBTM_LE_PID_KEYS;
-
-typedef union {
-    tBTM_LE_PENC_KEYS penc_key;
-    tBTM_LE_PCSRK_KEYS pcsrk_key;
-    tBTM_LE_PID_KEYS pid_key;
-    tBTM_LE_LENC_KEYS lenc_key;
-    tBTM_LE_LCSRK_KEYS lcsrk_key;
-} tBTM_LE_KEY_VALUE;
-
-typedef struct {
-    tBTM_LE_KEY_TYPE key_type;
-    tBTM_LE_KEY_VALUE *p_key_value;
-} tBTM_LE_KEY;
-
-typedef union {
-    tBTM_LE_IO_REQ io_req;
-    UINT32 key_notif;
-
-
-
-
-    tBTM_LE_COMPLT complt;
-    tSMP_OOB_DATA_TYPE req_oob_type;
-
-    tBTM_LE_KEY key;
-} tBTM_LE_EVT_DATA;
-
-
-
-
-typedef UINT8 (tBTM_LE_CALLBACK) (tBTM_LE_EVT event, BD_ADDR bda, tBTM_LE_EVT_DATA *p_data);
-
-
-
-
-
-typedef struct {
-    BT_OCTET16 ir;
-    BT_OCTET16 irk;
-    BT_OCTET16 dhk;
-
-} tBTM_BLE_LOCAL_ID_KEYS;
-
-typedef union {
-    tBTM_BLE_LOCAL_ID_KEYS id_keys;
-    BT_OCTET16 er;
-} tBTM_BLE_LOCAL_KEYS;
-
-
-
-
-typedef void (tBTM_LE_KEY_CALLBACK) (UINT8 key_type, tBTM_BLE_LOCAL_KEYS *p_key);
-
-
-
-
-
-
-typedef struct {
-    tBTM_AUTHORIZE_CALLBACK *p_authorize_callback;
-    tBTM_PIN_CALLBACK *p_pin_callback;
-    tBTM_LINK_KEY_CALLBACK *p_link_key_callback;
-    tBTM_AUTH_COMPLETE_CALLBACK *p_auth_complete_callback;
-    tBTM_BOND_CANCEL_CMPL_CALLBACK *p_bond_cancel_cmpl_callback;
-    tBTM_SP_CALLBACK *p_sp_callback;
-
-
-    tBTM_LE_CALLBACK *p_le_callback;
-
-    tBTM_LE_KEY_CALLBACK *p_le_key_callback;
-
-} tBTM_APPL_INFO;
-
-
-
-
-typedef void (tBTM_LSTO_CBACK) (BD_ADDR remote_bda, UINT16 timeout);
-# 1792 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-enum {
-    BTM_PM_STS_ACTIVE = 0x00,
-    BTM_PM_STS_HOLD = 0x01,
-    BTM_PM_STS_SNIFF = 0x02,
-    BTM_PM_STS_PARK = 0x03,
-    BTM_PM_STS_SSR,
-    BTM_PM_STS_PENDING,
-    BTM_PM_STS_ERROR
-};
-typedef UINT8 tBTM_PM_STATUS;
-
-
-enum {
-    BTM_PM_MD_ACTIVE = BTM_PM_STS_ACTIVE,
-    BTM_PM_MD_HOLD = BTM_PM_STS_HOLD,
-    BTM_PM_MD_SNIFF = BTM_PM_STS_SNIFF,
-    BTM_PM_MD_PARK = BTM_PM_STS_PARK,
-    BTM_PM_MD_FORCE = 0x10
-};
-typedef UINT8 tBTM_PM_MODE;
-# 1823 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-typedef struct {
-    UINT16 max;
-    UINT16 min;
-    UINT16 attempt;
-    UINT16 timeout;
-    tBTM_PM_MODE mode;
-} tBTM_PM_PWR_MD;
-
-
-
-
-typedef void (tBTM_PM_STATUS_CBACK) (BD_ADDR p_bda, tBTM_PM_STATUS status,
-                                     UINT16 value, UINT8 hci_status);
-
-
-
-
-
-
-
-typedef struct {
-    UINT8 event;
-    UINT8 status;
-    UINT16 num_keys;
-
-} tBTM_DELETE_STORED_LINK_KEY_COMPLETE;
-
-
-enum {
-    BTM_MIP_MODE_CHG_EVT,
-    BTM_MIP_DISCONNECT_EVT,
-    BTM_MIP_PKTS_COMPL_EVT,
-    BTM_MIP_RXDATA_EVT
-};
-typedef UINT8 tBTM_MIP_EVT;
-
-typedef struct {
-    tBTM_MIP_EVT event;
-    BD_ADDR bd_addr;
-    UINT16 mip_id;
-} tBTM_MIP_MODE_CHANGE;
-
-typedef struct {
-    tBTM_MIP_EVT event;
-    UINT16 mip_id;
-    UINT8 disc_reason;
-} tBTM_MIP_CONN_TIMEOUT;
-
-
-
-typedef struct {
-    tBTM_MIP_EVT event;
-    UINT16 mip_id;
-    UINT8 rx_len;
-    UINT8 rx_data[17];
-} tBTM_MIP_RXDATA;
-
-typedef struct {
-    tBTM_MIP_EVT event;
-    BD_ADDR bd_addr;
-    UINT8 data[11];
-} tBTM_MIP_EIR_HANDSHAKE;
-
-typedef struct {
-    tBTM_MIP_EVT event;
-    UINT16 num_sent;
-} tBTM_MIP_PKTS_COMPL;
-
-typedef union {
-    tBTM_MIP_EVT event;
-    tBTM_MIP_MODE_CHANGE mod_chg;
-    tBTM_MIP_CONN_TIMEOUT conn_tmo;
-    tBTM_MIP_EIR_HANDSHAKE eir;
-    tBTM_MIP_PKTS_COMPL completed;
-    tBTM_MIP_RXDATA rxdata;
-} tBTM_MIP_EVENT_DATA;
-
-
-typedef void (tBTM_MIP_EVENTS_CB) (tBTM_MIP_EVT event, tBTM_MIP_EVENT_DATA data);
-
-
-typedef BOOLEAN (tBTM_MIP_QUERY_CB) (BD_ADDR dev_addr, UINT8 *p_mode, LINK_KEY link_key);
-
-
-
-
-
-typedef UINT8 tBTM_CONTRL_STATE;
-# 1936 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-void BTM_DeviceReset (tBTM_CMPL_CB *p_cb);
-# 1949 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-BOOLEAN BTM_IsDeviceUp (void);
-# 1962 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_SetLocalDeviceName (char *p_name);
-# 1974 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_SetDeviceClass (DEV_CLASS dev_class);
-# 1991 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_ReadLocalDeviceName (char **p_name);
-# 2004 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_ReadLocalDeviceNameFromController (tBTM_CMPL_CB *p_rln_cmpl_cback);
-# 2016 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-UINT8 *BTM_ReadDeviceClass (void);
-# 2029 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-UINT8 *BTM_ReadLocalFeatures (void);
-# 2043 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_DEV_STATUS_CB *BTM_RegisterForDeviceStatusNotif (tBTM_DEV_STATUS_CB *p_cb);
-# 2062 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_RegisterForVSEvents (tBTM_VS_EVT_CB *p_cb, BOOLEAN is_register);
-# 2080 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_VendorSpecificCommand(UINT16 opcode,
-                                      UINT8 param_len,
-                                      UINT8 *p_param_buf,
-                                      tBTM_VSC_CMPL_CB *p_cb);
-# 2140 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-UINT8 BTM_SetTraceLevel (UINT8 new_level);
-# 2155 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_WritePageTimeout(UINT16 timeout);
-# 2171 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_WriteVoiceSettings(UINT16 settings);
-# 2189 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_EnableTestMode(void);
-# 2213 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_SetDiscoverability (UINT16 inq_mode, UINT16 window,
-                                     UINT16 interval);
-# 2232 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-UINT16 BTM_ReadDiscoverability (UINT16 *p_window,
-                                      UINT16 *p_interval);
-# 2264 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_SetPeriodicInquiryMode (tBTM_INQ_PARMS *p_inqparms,
-        UINT16 max_delay, UINT16 min_delay,
-        tBTM_INQ_RESULTS_CB *p_results_cb);
-# 2299 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_StartInquiry (tBTM_INQ_PARMS *p_inqparms,
-                               tBTM_INQ_RESULTS_CB *p_results_cb,
-                               tBTM_CMPL_CB *p_cmpl_cb);
-# 2317 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-UINT16 BTM_IsInquiryActive (void);
-# 2332 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_CancelInquiry(void);
-# 2348 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_CancelPeriodicInquiry(void);
-# 2365 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_SetConnectability (UINT16 page_mode, UINT16 window,
-                                   UINT16 interval);
-# 2382 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-UINT16 BTM_ReadConnectability (UINT16 *p_window, UINT16 *p_interval);
-# 2402 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_SetInquiryMode (UINT8 mode);
-# 2419 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_SetInquiryScanType (UINT16 scan_type);
-# 2437 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_SetPageScanType (UINT16 scan_type);
-# 2462 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_ReadRemoteDeviceName (BD_ADDR remote_bda,
-                                       tBTM_CMPL_CB *p_cb,
-                                       tBT_TRANSPORT transport);
-# 2484 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_CancelRemoteDeviceName (void);
-# 2496 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_ReadRemoteVersion (BD_ADDR addr,
-                                   UINT8 *lmp_version,
-                                   UINT16 *manufacturer,
-                                   UINT16 *lmp_sub_version);
-# 2515 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-UINT8 *BTM_ReadRemoteFeatures (BD_ADDR addr);
-# 2535 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-UINT8 *BTM_ReadRemoteExtendedFeatures (BD_ADDR addr, UINT8 page_number);
-# 2548 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-UINT8 BTM_ReadNumberRemoteFeaturesPages (BD_ADDR addr);
-# 2564 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-UINT8 *BTM_ReadAllRemoteFeatures (BD_ADDR addr);
-# 2578 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_INQ_INFO *BTM_InqDbRead (BD_ADDR p_bda);
-# 2594 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_INQ_INFO *BTM_InqDbFirst (void);
-# 2609 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_INQ_INFO *BTM_InqDbNext (tBTM_INQ_INFO *p_cur);
-# 2627 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_ClearInqDb (BD_ADDR p_bda);
-# 2641 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_ReadInquiryRspTxPower (tBTM_CMPL_CB *p_cb);
-# 2725 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_SetLinkPolicy (BD_ADDR remote_bda,
-                               UINT16 *settings);
-# 2739 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-void BTM_SetDefaultLinkPolicy (UINT16 settings);
-# 2753 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-void BTM_SetDefaultLinkSuperTout (UINT16 timeout);
-# 2766 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_SetLinkSuperTout (BD_ADDR remote_bda,
-                                  UINT16 timeout);
-# 2778 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_GetLinkSuperTout (BD_ADDR remote_bda,
-                                  UINT16 *p_timeout);
-# 2792 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-BOOLEAN BTM_IsAclConnectionUp (BD_ADDR remote_bda, tBT_TRANSPORT transport);
-# 2807 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_GetRole (BD_ADDR remote_bd_addr, UINT8 *p_role);
-# 2828 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_SwitchRole (BD_ADDR remote_bd_addr,
-                            UINT8 new_role,
-                            tBTM_CMPL_CB *p_cb);
-# 2847 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_ReadRSSI (BD_ADDR remote_bda, tBT_TRANSPORT transport, tBTM_CMPL_CB *p_cb);
-# 2866 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_ReadTxPower (BD_ADDR remote_bda,
-                             tBT_TRANSPORT transport, tBTM_CMPL_CB *p_cb);
-
-tBTM_STATUS BTM_BleReadAdvTxPower(tBTM_CMPL_CB *p_cb);
-
-void BTM_BleGetWhiteListSize(uint16_t *length);
-# 2889 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_ReadLinkQuality (BD_ADDR remote_bda, tBTM_CMPL_CB *p_cb);
-# 2902 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_RegBusyLevelNotif (tBTM_BL_CHANGE_CB *p_cb, UINT8 *p_level,
-                                   tBTM_BL_EVENT_MASK evt_mask);
-# 2916 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_AclRegisterForChanges (tBTM_ACL_DB_CHANGE_CB *p_cb);
-# 2929 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-UINT16 BTM_GetNumAclLinks (void);
-# 2941 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_SetQoS(BD_ADDR bd, FLOW_SPEC *p_flow,
-                       tBTM_CMPL_CB *p_cb);
-# 2966 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_CreateSco (BD_ADDR remote_bda, BOOLEAN is_orig,
-                           UINT16 pkt_types, UINT16 *p_sco_inx,
-                           tBTM_SCO_CB *p_conn_cb,
-                           tBTM_SCO_CB *p_disc_cb);
-# 2982 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_RemoveSco (UINT16 sco_inx);
-# 3006 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_SetScoPacketTypes (UINT16 sco_inx, UINT16 pkt_types);
-# 3028 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-UINT16 BTM_ReadScoPacketTypes (UINT16 sco_inx);
-# 3042 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-UINT16 BTM_ReadDeviceScoPacketTypes (void);
-# 3056 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-UINT16 BTM_ReadScoHandle (UINT16 sco_inx);
-# 3070 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-UINT8 *BTM_ReadScoBdAddr (UINT16 sco_inx);
-# 3085 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-UINT16 BTM_ReadScoDiscReason (void);
-# 3102 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_SetEScoMode (tBTM_SCO_TYPE sco_mode,
-                             tBTM_ESCO_PARAMS *p_parms);
-# 3117 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_SetWBSCodec (tBTM_SCO_CODEC_TYPE codec_type);
-# 3133 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_RegForEScoEvts (UINT16 sco_inx,
-                                tBTM_ESCO_CBACK *p_esco_cback);
-# 3158 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_ReadEScoLinkParms (UINT16 sco_inx,
-                                   tBTM_ESCO_DATA *p_parms);
-# 3181 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_ChangeEScoLinkParms (UINT16 sco_inx,
-                                     tBTM_CHG_ESCO_PARAMS *p_parms);
-# 3203 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-void BTM_EScoConnRsp (UINT16 sco_inx, UINT8 hci_status,
-                      tBTM_ESCO_PARAMS *p_parms);
-# 3216 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-UINT8 BTM_GetNumScoLinks (void);
-# 3233 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-BOOLEAN BTM_SecRegister (tBTM_APPL_INFO *p_cb_info);
-# 3246 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-BOOLEAN BTM_SecRegisterLinkKeyNotificationCallback(
-    tBTM_LINK_KEY_CALLBACK *p_callback);
-# 3260 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-BOOLEAN BTM_SecAddRmtNameNotifyCallback (tBTM_RMT_NAME_CALLBACK *p_callback);
-# 3274 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-BOOLEAN BTM_SecDeleteRmtNameNotifyCallback (tBTM_RMT_NAME_CALLBACK *p_callback);
-# 3286 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-BOOLEAN BTM_GetSecurityFlags (BD_ADDR bd_addr, UINT8 *p_sec_flags);
-# 3302 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-BOOLEAN BTM_GetSecurityFlagsByTransport (BD_ADDR bd_addr,
-        UINT8 *p_sec_flags, tBT_TRANSPORT transport);
-# 3316 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-UINT32 *BTM_ReadTrustedMask (BD_ADDR bd_addr);
-# 3328 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-void BTM_SetPinType (UINT8 pin_type, PIN_CODE pin_code, UINT8 pin_code_len);
-# 3346 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-void BTM_SetPairableMode (BOOLEAN allow_pairing, BOOLEAN connect_only_paired);
-# 3364 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-void BTM_SetSecureConnectionsOnly (BOOLEAN secure_connections_only_mode);
-# 3379 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-BOOLEAN BTM_SetSecurityLevel (BOOLEAN is_originator, const char *p_name,
-                              UINT8 service_id, UINT16 sec_level,
-                              UINT16 psm, UINT32 mx_proto_id,
-                              UINT32 mx_chan_id);
-# 3395 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-void BTM_SetOutService(BD_ADDR bd_addr, UINT8 service_id, UINT32 mx_chan_id);
-# 3411 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-UINT8 BTM_SecClrService (UINT8 service_id);
-# 3426 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-BOOLEAN BTM_SecAddDevice (BD_ADDR bd_addr, DEV_CLASS dev_class,
-                          BD_NAME bd_name, UINT8 *features,
-                          UINT32 trusted_mask[], LINK_KEY link_key,
-                          UINT8 key_type, tBTM_IO_CAP io_cap, UINT8 pin_length);
-# 3442 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-BOOLEAN BTM_SecDeleteDevice (BD_ADDR bd_addr, tBT_TRANSPORT transport);
-# 3457 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_SecGetDeviceLinkKey (BD_ADDR bd_addr,
-                                     LINK_KEY link_key);
-# 3476 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_LINK_KEY_TYPE BTM_SecGetDeviceLinkKeyType (BD_ADDR bd_addr);
-# 3496 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-void BTM_PINCodeReply (BD_ADDR bd_addr, UINT8 res, UINT8 pin_len,
-                       UINT8 *p_pin, UINT32 trusted_mask[]);
-# 3515 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_SecBond (BD_ADDR bd_addr,
-                         UINT8 pin_len, UINT8 *p_pin,
-                         UINT32 trusted_mask[]);
-# 3535 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_SecBondByTransport (BD_ADDR bd_addr,
-                                    tBT_TRANSPORT transport,
-                                    UINT8 pin_len, UINT8 *p_pin,
-                                    UINT32 trusted_mask[]);
-# 3551 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_SecBondCancel (BD_ADDR bd_addr);
-# 3579 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_SetEncryption (BD_ADDR bd_addr, tBT_TRANSPORT transport,
-                               tBTM_SEC_CBACK *p_callback, void *p_ref_data);
-# 3594 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-void BTM_ConfirmReqReply(tBTM_STATUS res, BD_ADDR bd_addr);
-# 3609 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-void BTM_PasskeyReqReply(tBTM_STATUS res, BD_ADDR bd_addr, UINT32 passkey);
-# 3626 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-void BTM_SendKeypressNotif(BD_ADDR bd_addr, tBTM_SP_KEY_TYPE type);
-# 3644 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-void BTM_IoCapRsp(BD_ADDR bd_addr, tBTM_IO_CAP io_cap,
-                  tBTM_OOB_DATA oob, tBTM_AUTH_REQ auth_req);
-# 3656 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_ReadLocalOobData(void);
-# 3671 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-void BTM_RemoteOobDataReply(tBTM_STATUS res, BD_ADDR bd_addr,
-                            BT_OCTET16 c, BT_OCTET16 r);
-# 3693 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-UINT16 BTM_BuildOobData(UINT8 *p_data, UINT16 max_len, BT_OCTET16 c,
-                        BT_OCTET16 r, UINT8 name_len);
-# 3711 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-BOOLEAN BTM_BothEndsSupportSecureConnections(BD_ADDR bd_addr);
-# 3727 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-BOOLEAN BTM_PeerSupportsSecureConnections(BD_ADDR bd_addr);
-# 3745 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-UINT8 *BTM_ReadOobData(UINT8 *p_data, UINT8 eir_tag, UINT8 *p_len);
-# 3758 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-char *BTM_SecReadDevName (BD_ADDR bd_addr);
-# 3768 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-extern void BTM_SecClearSecurityFlags (BD_ADDR bd_addr);
-# 3787 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_PmRegister (UINT8 mask, UINT8 *p_pm_id,
-                            tBTM_PM_STATUS_CBACK *p_cb);
-# 3803 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_SetPowerMode (UINT8 pm_id, BD_ADDR remote_bda,
-                              tBTM_PM_PWR_MD *p_mode);
-# 3828 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_ReadPowerMode (BD_ADDR remote_bda,
-                               tBTM_PM_MODE *p_mode);
-# 3850 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_SetSsrParams (BD_ADDR remote_bda, UINT16 max_lat,
-                              UINT16 min_rmt_to, UINT16 min_loc_to);
-# 3864 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-UINT16 BTM_GetHCIConnHandle (BD_ADDR remote_bda, tBT_TRANSPORT transport);
-# 3880 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_DeleteStoredLinkKey(BD_ADDR bd_addr, tBTM_CMPL_CB *p_cb);
-# 3897 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_WriteEIR( BT_HDR *p_buff, BOOLEAN fec_required);
-# 3913 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-UINT8 *BTM_CheckEirData( UINT8 *p_eir, UINT8 type, UINT8 *p_length );
-# 3929 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-BOOLEAN BTM_HasEirService( UINT32 *p_eir_uuid, UINT16 uuid16 );
-# 3946 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_EIR_SEARCH_RESULT BTM_HasInquiryEirService( tBTM_INQ_RESULTS *p_results,
-        UINT16 uuid16 );
-# 3962 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-void BTM_AddEirService( UINT32 *p_eir_uuid, UINT16 uuid16 );
-# 3977 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-void BTM_RemoveEirService( UINT32 *p_eir_uuid, UINT16 uuid16 );
-# 3995 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-UINT8 BTM_GetEirSupportedServices( UINT32 *p_eir_uuid, UINT8 **p,
-                                   UINT8 max_num_uuid16, UINT8 *p_num_uuid16);
-# 4020 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-UINT8 BTM_GetEirUuidList( UINT8 *p_eir, UINT8 uuid_size, UINT8 *p_num_uuid,
-                          UINT8 *p_uuid_list, UINT8 max_num_uuid);
-# 4051 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_ConfigScoPath (tBTM_SCO_ROUTE_TYPE path,
-                               tBTM_SCO_DATA_CB *p_sco_data_cb,
-                               tBTM_SCO_PCM_PARAM *p_pcm_param,
-                               BOOLEAN err_data_rpt);
-# 4078 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_WriteScoData (UINT16 sco_inx, BT_HDR *p_buf);
-# 4090 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-void BTM_SetARCMode (UINT8 iface, UINT8 arc_mode, tBTM_VSC_CMPL_CB *p_arc_cb);
-# 4103 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-void BTM_PCM2Setup_Write (BOOLEAN clk_master, tBTM_VSC_CMPL_CB *p_arc_cb);
-# 4116 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_CONTRL_STATE BTM_PM_ReadControllerState(void);
-# 4127 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_SetAfhChannels (AFH_CHANNELS channels, tBTM_CMPL_CB *p_afh_channels_cmpl_cback);
-# 4138 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
-tBTM_STATUS BTM_BleSetChannels (BLE_CHANNELS channels, tBTM_CMPL_CB *p_ble_channels_cmpl_cback);
-# 31 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h" 2
-
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h" 1
-# 22 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdpdefs.h" 1
-# 23 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h" 2
-# 33 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h" 2
-
-
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h" 1
-# 30 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_common_types.h" 1
-# 23 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_common_types.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/thread.h" 1
-# 18 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/thread.h"
-# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_api.h" 1
-# 37 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_api.h"
-typedef void (*xt_handler)(void *);
-
-
-typedef void (*xt_exc_handler)(XtExcFrame *);
-# 60 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_api.h"
-extern xt_exc_handler xt_set_exception_handler(int n, xt_exc_handler f);
-# 73 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_api.h"
-extern xt_handler xt_set_interrupt_handler(int n, xt_handler f, void * arg);
-# 84 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_api.h"
-extern void xt_ints_on(unsigned int mask);
-# 95 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_api.h"
-extern void xt_ints_off(unsigned int mask);
-
-
-
-
-
-
-
-static inline void xt_set_intset(unsigned int arg)
-{
-    xthal_set_intset(arg);
-}
-# 115 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_api.h"
-static inline void xt_set_intclear(unsigned int arg)
-{
-    xthal_set_intclear(arg);
-}
-# 127 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_api.h"
-extern void * xt_get_interrupt_handler_arg(int n);
-# 19 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/thread.h" 2
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/semaphore.h" 1
-# 29 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/semaphore.h"
 typedef SemaphoreHandle_t osi_sem_t;
 
 
@@ -7300,7 +4063,8 @@ int osi_sem_take(osi_sem_t *sem, uint32_t timeout);
 
 void osi_sem_give(osi_sem_t *sem);
 # 24 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/thread.h" 2
-
+# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_task.h" 1
+# 25 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/thread.h" 2
 
 
 
@@ -7357,4856 +4121,138 @@ const char *osi_thread_name(osi_thread_t *thread);
 
 
 int osi_thread_queue_wait_size(osi_thread_t *thread, int wq_idx);
-# 24 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_common_types.h" 2
+# 21 "/home/dieter/Development/esp-idf/components/bt/common/btc/include/btc/btc_task.h" 2
 
-typedef void (* bluedroid_init_done_cb_t)(void);
 
-typedef struct {
-    uint8_t client_if;
-    uint8_t filt_index;
-    uint8_t advertiser_state;
-    uint8_t advertiser_info_present;
+
+
+
+typedef struct btc_msg {
+    uint8_t sig;
+    uint8_t aid;
+    uint8_t pid;
+    uint8_t act;
+    void *arg;
+} btc_msg_t;
+
+typedef struct btc_adv_packet {
+    uint8_t addr[6];
     uint8_t addr_type;
-    uint8_t tx_power;
-    int8_t rssi_value;
-    uint16_t time_stamp;
-    bt_bdaddr_t bd_addr;
-    uint8_t adv_pkt_len;
-    uint8_t *p_adv_pkt_data;
-    uint8_t scan_rsp_len;
-    uint8_t *p_scan_rsp_data;
-} btgatt_track_adv_info_t;
-# 31 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h" 2
-
-
-typedef UINT8 tBTM_BLE_CHNL_MAP[5];
-# 50 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-typedef UINT8 tBTM_BLE_EVT;
-typedef UINT8 tBTM_BLE_CONN_MODE;
-
-typedef UINT32 tBTM_BLE_REF_VALUE;
-
-
-
-
-typedef UINT8 tBLE_SCAN_MODE;
-
-
-
-
-
-
-typedef UINT8 tBTM_BLE_BATCH_SCAN_MODE;
-
-
-
-
-
-typedef UINT8 tBTM_BLE_ADV_CHNL_MAP;
-# 84 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-typedef UINT8 tBTM_BLE_AFP;
-# 101 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-typedef UINT8 tBTM_BLE_SFP;
-# 198 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-typedef UINT8 BLE_SIGNATURE[12];
-# 270 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-typedef struct {
-    UINT8 status;
-    UINT8 param_len;
-    UINT16 opcode;
-    UINT8 param_buf[16];
-} tBTM_RAND_ENC;
-
-
-
-
-typedef void (tBTM_RAND_ENC_CB) (tBTM_RAND_ENC *p1);
-# 319 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-typedef UINT32 tBTM_BLE_AD_MASK;
-# 359 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-typedef UINT8 tBTM_BLE_AD_TYPE;
-# 381 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-typedef UINT8 tBTM_BLE_ADV_TX_POWER;
-
-
-typedef struct {
-    UINT8 adv_inst_max;
-    UINT8 rpa_offloading;
-    UINT16 tot_scan_results_strg;
-    UINT8 max_irk_list_sz;
-    UINT8 filter_support;
-    UINT8 max_filter;
-    UINT8 energy_support;
-    BOOLEAN values_read;
-    UINT16 version_supported;
-    UINT16 total_trackable_advertisers;
-    UINT8 extended_scan_support;
-    UINT8 debug_logging_supported;
-} tBTM_BLE_VSC_CB;
-
-
-typedef struct {
-    UINT16 low;
-    UINT16 hi;
-
-} tBTM_BLE_INT_RANGE;
-
-
-typedef struct {
-    UINT8 num_service;
-    BOOLEAN list_cmpl;
-    UINT16 *p_uuid;
-} tBTM_BLE_SERVICE;
-
-
-typedef struct {
-    UINT8 num_service;
-    BOOLEAN list_cmpl;
-    UINT32 *p_uuid;
-} tBTM_BLE_32SERVICE;
-
-
-typedef struct {
-    BOOLEAN list_cmpl;
-    UINT8 uuid128[16];
-} tBTM_BLE_128SERVICE;
-
-typedef struct {
-    UINT8 len;
-    UINT8 *p_val;
-} tBTM_BLE_MANU;
-
-
-typedef struct {
-    tBT_UUID service_uuid;
-    UINT8 len;
-    UINT8 *p_val;
-} tBTM_BLE_SERVICE_DATA;
-
-typedef struct {
-    UINT8 adv_type;
-    UINT8 len;
-    UINT8 *p_val;
-} tBTM_BLE_PROP_ELEM;
-
-typedef struct {
-    UINT8 num_elem;
-    tBTM_BLE_PROP_ELEM *p_elem;
-} tBTM_BLE_PROPRIETARY;
-
-typedef struct {
-    tBTM_BLE_INT_RANGE int_range;
-    tBTM_BLE_MANU *p_manu;
-    tBTM_BLE_SERVICE *p_services;
-    tBTM_BLE_128SERVICE *p_services_128b;
-    tBTM_BLE_32SERVICE *p_service_32b;
-    tBTM_BLE_SERVICE *p_sol_services;
-    tBTM_BLE_32SERVICE *p_sol_service_32b;
-    tBTM_BLE_128SERVICE *p_sol_service_128b;
-    tBTM_BLE_PROPRIETARY *p_proprietary;
-    tBTM_BLE_SERVICE_DATA *p_service_data;
-    UINT16 appearance;
-    UINT8 flag;
-    UINT8 tx_power;
-} tBTM_BLE_ADV_DATA;
-# 476 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-typedef UINT8 tBTM_BLE_MULTI_ADV_EVT;
-
-
-
-typedef struct {
-    UINT16 adv_int_min;
-    UINT16 adv_int_max;
-    UINT8 adv_type;
-    tBTM_BLE_ADV_CHNL_MAP channel_map;
-    tBTM_BLE_AFP adv_filter_policy;
-    tBTM_BLE_ADV_TX_POWER tx_power;
-} tBTM_BLE_ADV_PARAMS;
-
-typedef struct {
-    UINT8 *p_sub_code;
-    UINT8 *p_inst_id;
-    UINT8 pending_idx;
-    UINT8 next_idx;
-} tBTM_BLE_MULTI_ADV_OPQ;
-
-typedef void (tBTM_BLE_MULTI_ADV_CBACK)(tBTM_BLE_MULTI_ADV_EVT evt, UINT8 inst_id,
-                                        void *p_ref, tBTM_STATUS status);
-
-typedef struct {
-    UINT8 inst_id;
-    BOOLEAN in_use;
-    UINT8 adv_evt;
-    BD_ADDR rpa;
-    TIMER_LIST_ENT raddr_timer_ent;
-    tBTM_BLE_MULTI_ADV_CBACK *p_cback;
-    void *p_ref;
-    UINT8 index;
-} tBTM_BLE_MULTI_ADV_INST;
-
-typedef struct {
-    UINT8 inst_index_queue[16];
-    int front;
-    int rear;
-} tBTM_BLE_MULTI_ADV_INST_IDX_Q;
-
-typedef struct {
-    tBTM_BLE_MULTI_ADV_INST *p_adv_inst;
-    tBTM_BLE_MULTI_ADV_OPQ op_q;
-} tBTM_BLE_MULTI_ADV_CB;
-
-typedef UINT8 tGATT_IF;
-
-typedef void (tBTM_BLE_SCAN_THRESHOLD_CBACK)(tBTM_BLE_REF_VALUE ref_value);
-typedef void (tBTM_BLE_SCAN_REP_CBACK)(tBTM_BLE_REF_VALUE ref_value, UINT8 report_format,
-                                       UINT8 num_records, UINT16 total_len,
-                                       UINT8 *p_rep_data, UINT8 status);
-typedef void (tBTM_BLE_SCAN_SETUP_CBACK)(UINT8 evt, tBTM_BLE_REF_VALUE ref_value, UINT8 status);
-# 537 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-typedef enum {
-    BTM_BLE_SCAN_INVALID_STATE = 0,
-    BTM_BLE_SCAN_ENABLE_CALLED = 1,
-    BTM_BLE_SCAN_ENABLED_STATE = 2,
-    BTM_BLE_SCAN_DISABLE_CALLED = 3,
-    BTM_BLE_SCAN_DISABLED_STATE = 4
-} tBTM_BLE_BATCH_SCAN_STATE;
-
-enum {
-    BTM_BLE_DISCARD_OLD_ITEMS,
-    BTM_BLE_DISCARD_LOWER_RSSI_ITEMS
-};
-typedef UINT8 tBTM_BLE_DISCARD_RULE;
-
-typedef struct {
-    UINT8 sub_code[5];
-    tBTM_BLE_BATCH_SCAN_STATE cur_state[5];
-    tBTM_BLE_REF_VALUE ref_value[5];
-    UINT8 pending_idx;
-    UINT8 next_idx;
-} tBTM_BLE_BATCH_SCAN_OPQ;
-
-typedef struct {
-    UINT8 rep_mode[2];
-    tBTM_BLE_REF_VALUE ref_value[2];
-    UINT8 num_records[2];
-    UINT16 data_len[2];
-    UINT8 *p_data[2];
-    UINT8 pending_idx;
-    UINT8 next_idx;
-} tBTM_BLE_BATCH_SCAN_REP_Q;
-
-typedef struct {
-    tBTM_BLE_BATCH_SCAN_STATE cur_state;
-    tBTM_BLE_BATCH_SCAN_MODE scan_mode;
-    UINT32 scan_interval;
-    UINT32 scan_window;
-    tBLE_ADDR_TYPE addr_type;
-    tBTM_BLE_DISCARD_RULE discard_rule;
-    tBTM_BLE_BATCH_SCAN_OPQ op_q;
-    tBTM_BLE_BATCH_SCAN_REP_Q main_rep_q;
-    tBTM_BLE_SCAN_SETUP_CBACK *p_setup_cback;
-    tBTM_BLE_SCAN_THRESHOLD_CBACK *p_thres_cback;
-    tBTM_BLE_SCAN_REP_CBACK *p_scan_rep_cback;
-    tBTM_BLE_REF_VALUE ref_value;
-} tBTM_BLE_BATCH_SCAN_CB;
-
-
-enum {
-    BTM_BLE_SCAN_DUPLICATE_DISABLE = 0x0,
-    BTM_BLE_SCAN_DUPLICATE_ENABLE = 0x1,
-    BTM_BLE_SCAN_DUPLICATE_MAX = 0x2,
-};
-# 615 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-typedef UINT8 tBTM_BLE_PF_COND_TYPE;
-
-
-
-typedef UINT8 tBTM_BLE_PF_LOGIC_TYPE;
-
-
-
-typedef UINT8 tBTM_BLE_PF_ACTION;
-
-typedef UINT8 tBTM_BLE_PF_FILT_INDEX;
-
-typedef UINT8 tBTM_BLE_PF_AVBL_SPACE;
-# 636 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-typedef UINT16 tBTM_BLE_PF_FEAT_SEL;
-
-
-
-typedef UINT16 tBTM_BLE_PF_LIST_LOGIC_TYPE;
-
-
-
-typedef UINT16 tBTM_BLE_PF_FILT_LOGIC_TYPE;
-
-typedef UINT8 tBTM_BLE_PF_RSSI_THRESHOLD;
-typedef UINT8 tBTM_BLE_PF_DELIVERY_MODE;
-typedef UINT16 tBTM_BLE_PF_TIMEOUT;
-typedef UINT8 tBTM_BLE_PF_TIMEOUT_CNT;
-typedef UINT16 tBTM_BLE_PF_ADV_TRACK_ENTRIES;
-
-typedef struct {
-    tBTM_BLE_PF_FEAT_SEL feat_seln;
-    tBTM_BLE_PF_LIST_LOGIC_TYPE logic_type;
-    tBTM_BLE_PF_FILT_LOGIC_TYPE filt_logic_type;
-    tBTM_BLE_PF_RSSI_THRESHOLD rssi_high_thres;
-    tBTM_BLE_PF_RSSI_THRESHOLD rssi_low_thres;
-    tBTM_BLE_PF_DELIVERY_MODE dely_mode;
-    tBTM_BLE_PF_TIMEOUT found_timeout;
-    tBTM_BLE_PF_TIMEOUT lost_timeout;
-    tBTM_BLE_PF_TIMEOUT_CNT found_timeout_cnt;
-    tBTM_BLE_PF_ADV_TRACK_ENTRIES num_of_tracking_entries;
-} tBTM_BLE_PF_FILT_PARAMS;
-
-enum {
-    BTM_BLE_SCAN_COND_ADD,
-    BTM_BLE_SCAN_COND_DELETE,
-    BTM_BLE_SCAN_COND_CLEAR = 2
-};
-typedef UINT8 tBTM_BLE_SCAN_COND_OP;
-
-enum {
-    BTM_BLE_FILT_ENABLE_DISABLE = 1,
-    BTM_BLE_FILT_CFG = 2,
-    BTM_BLE_FILT_ADV_PARAM = 3
-};
-
-typedef UINT8 tBTM_BLE_FILT_CB_EVT;
-
-
-typedef void (tBTM_BLE_PF_CFG_CBACK)(tBTM_BLE_PF_ACTION action, tBTM_BLE_SCAN_COND_OP cfg_op,
-                                     tBTM_BLE_PF_AVBL_SPACE avbl_space, tBTM_STATUS status,
-                                     tBTM_BLE_REF_VALUE ref_value);
-
-typedef void (tBTM_BLE_PF_CMPL_CBACK) (tBTM_BLE_PF_CFG_CBACK);
-
-
-typedef void (tBTM_BLE_PF_STATUS_CBACK) (UINT8 action, tBTM_STATUS status,
-        tBTM_BLE_REF_VALUE ref_value);
-
-
-typedef void (tBTM_BLE_PF_PARAM_CBACK) (tBTM_BLE_PF_ACTION action_type,
-                                        tBTM_BLE_PF_AVBL_SPACE avbl_space,
-                                        tBTM_BLE_REF_VALUE ref_value, tBTM_STATUS status);
-
-typedef union {
-    UINT16 uuid16_mask;
-    UINT32 uuid32_mask;
-    UINT8 uuid128_mask[16];
-} tBTM_BLE_PF_COND_MASK;
-
-typedef struct {
-    tBLE_BD_ADDR *p_target_addr;
-    tBT_UUID uuid;
-    tBTM_BLE_PF_LOGIC_TYPE cond_logic;
-    tBTM_BLE_PF_COND_MASK *p_uuid_mask;
-} tBTM_BLE_PF_UUID_COND;
-
-typedef struct {
-    UINT8 data_len;
-    UINT8 *p_data;
-} tBTM_BLE_PF_LOCAL_NAME_COND;
-
-typedef struct {
-    UINT16 company_id;
-    UINT8 data_len;
-    UINT8 *p_pattern;
-    UINT16 company_id_mask;
-    UINT8 *p_pattern_mask;
-
-
-} tBTM_BLE_PF_MANU_COND;
-
-typedef struct {
-    UINT16 uuid;
-    UINT8 data_len;
-    UINT8 *p_pattern;
-    UINT8 *p_pattern_mask;
-
-} tBTM_BLE_PF_SRVC_PATTERN_COND;
-
-
-typedef union {
-    tBLE_BD_ADDR target_addr;
-    tBTM_BLE_PF_LOCAL_NAME_COND local_name;
-    tBTM_BLE_PF_MANU_COND manu_data;
-    tBTM_BLE_PF_UUID_COND srvc_uuid;
-    tBTM_BLE_PF_UUID_COND solicitate_uuid;
-    tBTM_BLE_PF_SRVC_PATTERN_COND srvc_data;
-} tBTM_BLE_PF_COND_PARAM;
-
-typedef struct {
-    UINT8 action_ocf[8];
-    tBTM_BLE_REF_VALUE ref_value[8];
-    tBTM_BLE_PF_PARAM_CBACK *p_filt_param_cback[8];
-    tBTM_BLE_PF_CFG_CBACK *p_scan_cfg_cback[8];
-    UINT8 cb_evt[8];
-    UINT8 pending_idx;
-    UINT8 next_idx;
-} tBTM_BLE_ADV_FILTER_ADV_OPQ;
-
-
-
-
-
-
-
-typedef struct {
-    BOOLEAN in_use;
-    BD_ADDR bd_addr;
-    UINT8 pf_counter[8];
-} tBTM_BLE_PF_COUNT;
-
-typedef struct {
-    BOOLEAN enable;
-    UINT8 op_type;
-    tBTM_BLE_PF_COUNT *p_addr_filter_count;
-    tBLE_BD_ADDR cur_filter_target;
-    tBTM_BLE_PF_STATUS_CBACK *p_filt_stat_cback;
-    tBTM_BLE_ADV_FILTER_ADV_OPQ op_q;
-} tBTM_BLE_ADV_FILTER_CB;
-# 784 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-typedef UINT8 BTM_BLE_ADV_STATE;
-typedef UINT8 BTM_BLE_ADV_INFO_PRESENT;
-typedef UINT8 BTM_BLE_RSSI_VALUE;
-typedef UINT16 BTM_BLE_ADV_INFO_TIMESTAMP;
-
-
-
-
-typedef struct {
-    UINT8 conn_mode;
-    tBTM_BLE_AD_MASK ad_mask;
-    UINT8 flag;
-    UINT8 tx_power_level;
-    UINT8 remote_name_len;
-    UINT8 *p_remote_name;
-    tBTM_BLE_SERVICE service;
-} tBTM_BLE_INQ_DATA;
-
-enum {
-    BTM_BLE_CONN_NONE,
-    BTM_BLE_CONN_AUTO,
-    BTM_BLE_CONN_SELECTIVE
-};
-typedef UINT8 tBTM_BLE_CONN_TYPE;
-
-
-
-
-typedef btgatt_track_adv_info_t tBTM_BLE_TRACK_ADV_DATA;
-
-typedef void (tBTM_BLE_TRACK_ADV_CBACK)(tBTM_BLE_TRACK_ADV_DATA *p_track_adv_data);
-
-typedef UINT8 tBTM_BLE_TRACK_ADV_EVT;
-
-typedef struct {
-    tBTM_BLE_REF_VALUE ref_value;
-    tBTM_BLE_TRACK_ADV_CBACK *p_track_cback;
-} tBTM_BLE_ADV_TRACK_CB;
-
-enum {
-    BTM_BLE_TRACK_ADV_ADD,
-    BTM_BLE_TRACK_ADV_REMOVE
-};
-
-typedef UINT8 tBTM_BLE_TRACK_ADV_ACTION;
-# 839 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-typedef UINT8 tBTM_BLE_BATCH_SCAN_EVT;
-
-typedef UINT32 tBTM_BLE_TX_TIME_MS;
-typedef UINT32 tBTM_BLE_RX_TIME_MS;
-typedef UINT32 tBTM_BLE_IDLE_TIME_MS;
-typedef UINT32 tBTM_BLE_ENERGY_USED;
-
-typedef void (tBTM_BLE_ENERGY_INFO_CBACK)(tBTM_BLE_TX_TIME_MS tx_time, tBTM_BLE_RX_TIME_MS rx_time,
-        tBTM_BLE_IDLE_TIME_MS idle_time,
-        tBTM_BLE_ENERGY_USED energy_used,
-        tBTM_STATUS status);
-
-typedef struct {
-    tBTM_BLE_ENERGY_INFO_CBACK *p_ener_cback;
-} tBTM_BLE_ENERGY_INFO_CB;
-
-typedef BOOLEAN (tBTM_BLE_SEL_CBACK)(BD_ADDR random_bda, UINT8 *p_remote_name);
-typedef void (tBTM_BLE_CTRL_FEATURES_CBACK)(tBTM_STATUS status);
-
-
-typedef void (tBTM_BLE_SIGN_CBACK)(void *p_ref_data, UINT8 *p_signing_data);
-typedef void (tBTM_BLE_VERIFY_CBACK)(void *p_ref_data, BOOLEAN match);
-
-typedef void (tBTM_BLE_RANDOM_SET_CBACK) (BD_ADDR random_bda);
-
-typedef void (tBTM_BLE_SCAN_REQ_CBACK)(BD_ADDR remote_bda, tBLE_ADDR_TYPE addr_type, UINT8 adv_evt);
-typedef void (*tBLE_SCAN_PARAM_SETUP_CBACK)(tGATT_IF client_if, tBTM_STATUS status);
-
-tBTM_BLE_SCAN_SETUP_CBACK bta_ble_scan_setup_cb;
-
-typedef void (tBTM_START_ADV_CMPL_CBACK) (UINT8 status);
-typedef void (tBTM_START_STOP_ADV_CMPL_CBACK) (UINT8 status);
-
-typedef void (tBTM_UPDATE_DUPLICATE_EXCEPTIONAL_LIST_CMPL_CBACK) (tBTM_STATUS status, uint8_t subcode, uint32_t length, uint8_t *device_info);
-# 895 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-void BTM_BleRegiseterConnParamCallback(tBTM_UPDATE_CONN_PARAM_CBACK *update_conn_param_cb);
-# 915 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-BOOLEAN BTM_SecAddBleDevice (BD_ADDR bd_addr, BD_NAME bd_name,
-                             tBT_DEVICE_TYPE dev_type, tBLE_ADDR_TYPE addr_type, UINT32 auth_mode);
-# 934 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-BOOLEAN BTM_SecAddBleKey (BD_ADDR bd_addr, tBTM_LE_KEY_VALUE *p_le_key,
-                          tBTM_LE_KEY_TYPE key_type);
-# 949 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_BleSetAdvParams(UINT16 adv_int_min, UINT16 adv_int_max,
-                                tBLE_BD_ADDR *p_dir_bda, tBTM_BLE_ADV_CHNL_MAP chnl_map);
-# 965 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_BleSetAdvParamsAll(UINT16 adv_int_min, UINT16 adv_int_max, UINT8 adv_type,
-                                        tBLE_ADDR_TYPE own_bda_type, tBLE_BD_ADDR *p_dir_bda,
-                                        tBTM_BLE_ADV_CHNL_MAP chnl_map, tBTM_BLE_AFP afp, tBTM_START_ADV_CMPL_CBACK *adv_cb);
-# 980 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_BleStartAdv(void);
-# 995 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_BleWriteAdvData(tBTM_BLE_AD_MASK data_mask,
-                                tBTM_BLE_ADV_DATA *p_data);
-# 1010 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_BleWriteLongAdvData(uint8_t *adv_data, uint8_t adv_data_len);
-# 1025 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_BleWriteAdvDataRaw(UINT8 *p_raw_adv, UINT32 raw_adv_len);
-
-
-tBTM_STATUS BTM_BleSetRandAddress(BD_ADDR rand_addr);
-
-void BTM_BleClearRandAddress(void);
-# 1048 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-void BTM_BleReadAdvParams (UINT16 *adv_int_min, UINT16 *adv_int_max,
-                           tBLE_BD_ADDR *p_dir_bda, tBTM_BLE_ADV_CHNL_MAP *p_chnl_map);
-# 1063 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-void BTM_BleObtainVendorCapabilities(tBTM_BLE_VSC_CB *p_cmn_vsc_cb);
-# 1081 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-void BTM_BleSetScanParams(tGATT_IF client_if, UINT32 scan_interval,
-                          UINT32 scan_window, tBLE_SCAN_MODE scan_type,
-                          tBLE_SCAN_PARAM_SETUP_CBACK scan_setup_status_cback);
-# 1105 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_BleSetScanFilterParams(tGATT_IF client_if, UINT32 scan_interval, UINT32 scan_window,
-                                    tBLE_SCAN_MODE scan_mode, UINT8 addr_type_own, UINT8 scan_duplicate_filter, tBTM_BLE_SFP scan_filter_policy,
-                                    tBLE_SCAN_PARAM_SETUP_CBACK scan_setup_status_cback);
-# 1122 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-void BTM_BleGetVendorCapabilities(tBTM_BLE_VSC_CB *p_cmn_vsc_cb);
-# 1140 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_BleSetStorageConfig(UINT8 batch_scan_full_max,
-                                    UINT8 batch_scan_trunc_max,
-                                    UINT8 batch_scan_notify_threshold,
-                                    tBTM_BLE_SCAN_SETUP_CBACK *p_setup_cback,
-                                    tBTM_BLE_SCAN_THRESHOLD_CBACK *p_thres_cback,
-                                    tBTM_BLE_SCAN_REP_CBACK *p_cback,
-                                    tBTM_BLE_REF_VALUE ref_value);
-# 1164 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_BleEnableBatchScan(tBTM_BLE_BATCH_SCAN_MODE scan_mode,
-                                   UINT32 scan_interval, UINT32 scan_window,
-                                   tBTM_BLE_DISCARD_RULE discard_rule,
-                                   tBLE_ADDR_TYPE addr_type,
-                                   tBTM_BLE_REF_VALUE ref_value);
-# 1182 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_BleDisableBatchScan(tBTM_BLE_REF_VALUE ref_value);
-# 1197 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_BleReadScanReports(tBLE_SCAN_MODE scan_mode,
-                                   tBTM_BLE_REF_VALUE ref_value);
-# 1213 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_BleTrackAdvertiser(tBTM_BLE_TRACK_ADV_CBACK *p_track_cback,
-                                   tBTM_BLE_REF_VALUE ref_value);
-# 1228 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_BleWriteScanRsp(tBTM_BLE_AD_MASK data_mask,
-                                tBTM_BLE_ADV_DATA *p_data);
-# 1243 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_BleWriteScanRspRaw(UINT8 *p_raw_scan_rsp, UINT32 raw_scan_rsp_len);
-# 1258 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_BleObserve(BOOLEAN start, UINT32 duration,
-                           tBTM_INQ_RESULTS_CB *p_results_cb, tBTM_CMPL_CB *p_cmpl_cb);
-# 1274 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_BleScan(BOOLEAN start, UINT32 duration,
-                           tBTM_INQ_RESULTS_CB *p_results_cb, tBTM_CMPL_CB *p_cmpl_cb, tBTM_INQ_DIS_CB *p_discard_cb);
-# 1290 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-void BTM_GetDeviceIDRoot (BT_OCTET16 ir);
-# 1304 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-void BTM_GetDeviceEncRoot (BT_OCTET16 er);
-# 1317 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-void BTM_GetDeviceDHK (BT_OCTET16 dhk);
-# 1333 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-void BTM_SecurityGrant(BD_ADDR bd_addr, UINT8 res);
-# 1349 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-void BTM_BlePasskeyReply (BD_ADDR bd_addr, UINT8 res, UINT32 passkey);
-# 1364 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-void BTM_BleSetStaticPasskey(BOOLEAN add, UINT32 passkey);
-# 1379 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-void BTM_BleConfirmReply (BD_ADDR bd_addr, UINT8 res);
-# 1394 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-void BTM_BleOobDataReply(BD_ADDR bd_addr, UINT8 res, UINT8 len, UINT8 *p_data);
-# 1414 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-BOOLEAN BTM_BleDataSignature (BD_ADDR bd_addr, UINT8 *p_text, UINT16 len,
-                              BLE_SIGNATURE signature);
-# 1433 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-BOOLEAN BTM_BleVerifySignature (BD_ADDR bd_addr, UINT8 *p_orig,
-                                UINT16 len, UINT32 counter,
-                                UINT8 *p_comp);
-# 1448 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-void BTM_ReadConnectionAddr (BD_ADDR remote_bda, BD_ADDR local_conn_addr,
-                             tBLE_ADDR_TYPE *p_addr_type);
-# 1464 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-BOOLEAN BTM_ReadRemoteConnectionAddr(BD_ADDR pseudo_addr,
-                                     BD_ADDR conn_addr,
-                                     tBLE_ADDR_TYPE *p_addr_type);
-# 1482 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-void BTM_BleLoadLocalKeys(UINT8 key_type, tBTM_BLE_LOCAL_KEYS *p_key);
-# 1500 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-BOOLEAN BTM_BleSetBgConnType(tBTM_BLE_CONN_TYPE conn_type,
-                             tBTM_BLE_SEL_CBACK *p_select_cback);
-# 1519 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-BOOLEAN BTM_BleUpdateBgConnDev(BOOLEAN add_remove, BD_ADDR remote_bda);
-# 1535 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-void BTM_BleClearBgConnDev(void);
-# 1556 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-void BTM_BleSetPrefConnParams (BD_ADDR bd_addr,
-                               UINT16 min_conn_int, UINT16 max_conn_int,
-                               UINT16 slave_latency, UINT16 supervision_tout);
-# 1573 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-void BTM_BleSetConnScanParams (UINT32 scan_interval, UINT32 scan_window);
-# 1587 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-void BTM_BleReadControllerFeatures(tBTM_BLE_CTRL_FEATURES_CBACK *p_vsc_cback);
-# 1603 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-UINT8 *BTM_CheckAdvData( UINT8 *p_adv, UINT8 type, UINT8 *p_length);
-# 1616 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-BOOLEAN BTM_BleGetCurrentAddress(BD_ADDR addr, uint8_t *addr_type);
-# 1629 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-UINT16 BTM_BleReadDiscoverability(void);
-# 1642 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-UINT16 BTM_BleReadConnectability (void);
-
-void BTM_Recovery_Pre_State(void);
-# 1659 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-void BTM_ReadDevInfo (BD_ADDR remote_bda, tBT_DEVICE_TYPE *p_dev_type,
-                      tBLE_ADDR_TYPE *p_addr_type);
-# 1677 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-BOOLEAN BTM_ReadConnectedTransportAddress(BD_ADDR remote_bda,
-        tBT_TRANSPORT transport);
-# 1692 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_BleBroadcast(BOOLEAN start, tBTM_START_STOP_ADV_CMPL_CBACK *p_stop_adv_cback);
-# 1707 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-BOOLEAN BTM_BleConfigPrivacy(BOOLEAN enable, tBTM_SET_LOCAL_PRIVACY_CBACK *set_local_privacy_cabck);
-# 1719 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-void BTM_BleConfigLocalIcon(uint16_t icon);
-# 1731 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-BOOLEAN BTM_BleLocalPrivacyEnabled(void);
-# 1746 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-void BTM_BleEnableMixedPrivacyMode(BOOLEAN mixed_on);
-# 1758 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-UINT8 BTM_BleMaxMultiAdvInstanceCount(void);
-# 1776 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_BleSetConnectableMode(tBTM_BLE_CONN_MODE connectable_mode);
-# 1792 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-void BTM_BleTurnOnPrivacyOnRemote(BD_ADDR bd_addr,
-                                  BOOLEAN privacy_on);
-# 1805 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-BOOLEAN BTM_BleUpdateAdvWhitelist(BOOLEAN add_remove, BD_ADDR emote_bda, tBLE_ADDR_TYPE addr_type, tBTM_ADD_WHITELIST_CBACK *add_wl_cb);
-# 1818 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-void BTM_BleUpdateAdvFilterPolicy(tBTM_BLE_AFP adv_policy);
-# 1830 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-void BTM_BleReceiverTest(UINT8 rx_freq, tBTM_CMPL_CB *p_cmd_cmpl_cback);
-# 1845 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-void BTM_BleTransmitterTest(UINT8 tx_freq, UINT8 test_data_len,
-                            UINT8 packet_payload, tBTM_CMPL_CB *p_cmd_cmpl_cback);
-# 1857 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-void BTM_BleTestEnd(tBTM_CMPL_CB *p_cmd_cmpl_cback);
-# 1869 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-BOOLEAN BTM_UseLeLink (BD_ADDR bd_addr);
-# 1884 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_BleStackEnable (BOOLEAN enable);
-# 1897 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-BOOLEAN BTM_GetLeSecurityState (BD_ADDR bd_addr,
-                                UINT8 *p_le_dev_sec_flags,
-                                UINT8 *p_le_key_size);
-# 1912 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-BOOLEAN BTM_BleSecurityProcedureIsRunning (BD_ADDR bd_addr);
-# 1926 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-UINT8 BTM_BleGetSupportedKeySize (BD_ADDR bd_addr);
-# 1946 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_BleEnableAdvInstance (tBTM_BLE_ADV_PARAMS *p_params,
-                                      tBTM_BLE_MULTI_ADV_CBACK *p_cback,
-                                      void *p_ref);
-# 1964 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_BleUpdateAdvInstParam (UINT8 inst_id, tBTM_BLE_ADV_PARAMS *p_params);
-# 1982 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_BleCfgAdvInstData (UINT8 inst_id, BOOLEAN is_scan_rsp,
-                                   tBTM_BLE_AD_MASK data_mask,
-                                   tBTM_BLE_ADV_DATA *p_data);
-# 1998 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_BleDisableAdvInstance (UINT8 inst_id);
-# 2015 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_BleAdvFilterParamSetup(int action,
-                                       tBTM_BLE_PF_FILT_INDEX filt_index,
-                                       tBTM_BLE_PF_FILT_PARAMS *p_filt_params,
-                                       tBLE_BD_ADDR *p_target, tBTM_BLE_PF_PARAM_CBACK *p_cmpl_cback,
-                                       tBTM_BLE_REF_VALUE ref_value);
-# 2036 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_BleCfgFilterCondition(tBTM_BLE_SCAN_COND_OP action,
-                                      tBTM_BLE_PF_COND_TYPE cond_type,
-                                      tBTM_BLE_PF_FILT_INDEX filt_index,
-                                      tBTM_BLE_PF_COND_PARAM *p_cond,
-                                      tBTM_BLE_PF_CFG_CBACK *p_cmpl_cback,
-                                      tBTM_BLE_REF_VALUE ref_value);
-# 2056 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_BleEnableDisableFilterFeature(UINT8 enable,
-        tBTM_BLE_PF_STATUS_CBACK *p_stat_cback,
-        tBTM_BLE_REF_VALUE ref_value);
-# 2072 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_BleGetEnergyInfo(tBTM_BLE_ENERGY_INFO_CBACK *p_ener_cback);
-# 2084 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_SetBleDataLength(BD_ADDR bd_addr, UINT16 tx_pdu_length);
-# 2101 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_UpdateBleDuplicateExceptionalList(uint8_t subcode, uint32_t type, BD_ADDR device_info, tBTM_UPDATE_DUPLICATE_EXCEPTIONAL_LIST_CMPL_CBACK update_exceptional_list_cmp_cb);
-# 2114 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h"
-BOOLEAN BTM_GetCurrentConnParams(BD_ADDR bda, uint16_t *interval, uint16_t *latency, uint16_t *timeout);
-# 36 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h" 2
-# 51 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-typedef UINT8 tBTA_STATUS;
-# 109 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-typedef UINT8 tBTA_SERVICE_ID;
-# 159 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-typedef UINT32 tBTA_SERVICE_MASK;
-
-
-typedef struct {
-    tBTA_SERVICE_MASK srvc_mask;
-    UINT8 num_uuid;
-    tBT_UUID *p_uuid;
-} tBTA_SERVICE_MASK_EXT;
-# 177 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-typedef UINT16 tBTA_SEC;
-# 198 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-typedef UINT16 tBTA_DM_DISC;
-# 209 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-typedef UINT16 tBTA_DM_CONN;
-
-
-
-
-typedef tBT_TRANSPORT tBTA_TRANSPORT;
-# 234 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-typedef UINT8 tBTA_DM_INQ_MODE;
-
-
-
-
-
-
-typedef UINT8 tBTA_DM_INQ_FILT;
-
-
-
-
-
-
-typedef UINT8 tBTA_AUTH_RESP;
-
-
-
-
-
-
-
-typedef UINT8 tBTA_PREF_ROLES;
-
-enum {
-
-    BTA_DM_NO_SCATTERNET,
-
-
-
-    BTA_DM_PARTIAL_SCATTERNET,
-
-
-    BTA_DM_FULL_SCATTERNET
-
-
-};
-
-
-
-typedef struct {
-    DEV_CLASS dev_class;
-    DEV_CLASS dev_class_mask;
-} tBTA_DM_COD_COND;
-
-
-
-typedef union {
-    BD_ADDR bd_addr;
-    tBTA_DM_COD_COND dev_class_cond;
-} tBTA_DM_INQ_COND;
-
-
-typedef struct {
-    tBTA_DM_INQ_MODE mode;
-    UINT8 duration;
-    UINT8 max_resps;
-    BOOLEAN report_dup;
-    tBTA_DM_INQ_FILT filter_type;
-    tBTA_DM_INQ_COND filter_cond;
-
-
-
-} tBTA_DM_INQ;
-
-
-typedef void (tBTA_DM_CONFIG_EIR_CBACK) (tBTA_STATUS status, UINT8 eir_type_num, UINT8 *eir_type);
-
-typedef struct {
-    BOOLEAN bta_dm_eir_fec_required;
-    UINT8 bta_dm_eir_min_name_len;
-
-    BOOLEAN bta_dm_eir_included_uuid;
-
-
-
-
-    UINT32 uuid_mask[(((UINT32)BTM_EIR_MAX_SERVICES / 32) + (((UINT32)BTM_EIR_MAX_SERVICES % 32) ? 1 : 0))];
-
-
-    BOOLEAN bta_dm_eir_included_tx_power;
-    INT8 bta_dm_eir_inq_tx_power;
-
-    UINT8 bta_dm_eir_flags;
-    UINT8 bta_dm_eir_manufac_spec_len;
-    UINT8 *bta_dm_eir_manufac_spec;
-    UINT8 bta_dm_eir_url_len;
-    UINT8 *bta_dm_eir_url;
-
-    tBTA_DM_CONFIG_EIR_CBACK *config_eir_callback;
-} tBTA_DM_EIR_CONF;
-# 354 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-typedef tBTM_BLE_AD_MASK tBTA_BLE_AD_MASK;
-
-
-typedef struct {
-    UINT16 low;
-    UINT16 hi;
-
-} tBTA_BLE_INT_RANGE;
-
-
-typedef struct {
-    UINT8 num_service;
-    BOOLEAN list_cmpl;
-    UINT16 *p_uuid;
-} tBTA_BLE_SERVICE;
-
-
-typedef struct {
-    UINT8 len;
-    UINT8 *p_val;
-} tBTA_BLE_MANU;
-
-typedef struct {
-    UINT8 adv_type;
-    UINT8 len;
-    UINT8 *p_val;
-} tBTA_BLE_PROP_ELEM;
-
-
-typedef struct {
-    UINT8 num_elem;
-    tBTA_BLE_PROP_ELEM *p_elem;
-} tBTA_BLE_PROPRIETARY;
-
-typedef struct {
-    tBT_UUID service_uuid;
-    UINT8 len;
-    UINT8 *p_val;
-} tBTA_BLE_SERVICE_DATA;
-
-typedef tBTM_BLE_128SERVICE tBTA_BLE_128SERVICE;
-typedef tBTM_BLE_32SERVICE tBTA_BLE_32SERVICE;
-
-typedef struct {
-    tBTA_BLE_INT_RANGE int_range;
-    tBTA_BLE_MANU *p_manu;
-    tBTA_BLE_SERVICE *p_services;
-    tBTA_BLE_128SERVICE *p_services_128b;
-    tBTA_BLE_32SERVICE *p_service_32b;
-    tBTA_BLE_SERVICE *p_sol_services;
-    tBTA_BLE_32SERVICE *p_sol_service_32b;
-    tBTA_BLE_128SERVICE *p_sol_service_128b;
-    tBTA_BLE_PROPRIETARY *p_proprietary;
-    tBTA_BLE_SERVICE_DATA *p_service_data;
-    UINT16 appearance;
-    UINT8 flag;
-    UINT8 tx_power;
-} tBTA_BLE_ADV_DATA;
-
-typedef void (tBTA_UPDATE_DUPLICATE_EXCEPTIONAL_LIST_CMPL_CBACK) (tBTA_STATUS status, uint8_t subcode, uint32_t length, uint8_t *device_info);
-
-typedef void (tBTA_SET_ADV_DATA_CMPL_CBACK) (tBTA_STATUS status);
-
-typedef tBTM_START_ADV_CMPL_CBACK tBTA_START_ADV_CMPL_CBACK;
-
-typedef tBTM_START_STOP_ADV_CMPL_CBACK tBTA_START_STOP_ADV_CMPL_CBACK;
-
-typedef tBTM_ADD_WHITELIST_CBACK tBTA_ADD_WHITELIST_CBACK;
-
-typedef tBTM_SET_PKT_DATA_LENGTH_CBACK tBTA_SET_PKT_DATA_LENGTH_CBACK;
-
-typedef tBTM_SET_RAND_ADDR_CBACK tBTA_SET_RAND_ADDR_CBACK;
-
-typedef tBTM_SET_LOCAL_PRIVACY_CBACK tBTA_SET_LOCAL_PRIVACY_CBACK;
-
-typedef tBTM_CMPL_CB tBTA_CMPL_CB;
-
-typedef tBTM_TX_POWER_RESULTS tBTA_TX_POWER_RESULTS;
-
-typedef tBTM_RSSI_RESULTS tBTA_RSSI_RESULTS;
-
-typedef tBTM_SET_AFH_CHANNELS_RESULTS tBTA_SET_AFH_CHANNELS_RESULTS;
-typedef tBTM_BLE_SET_CHANNELS_RESULTS tBTA_BLE_SET_CHANNELS_RESULTS;
-
-typedef tBTM_REMOTE_DEV_NAME tBTA_REMOTE_DEV_NAME;
-
-
-
-
-
-typedef tBTM_BLE_ADV_CHNL_MAP tBTA_BLE_ADV_CHNL_MAP;
-
-
-typedef tBTM_BLE_AFP tBTA_BLE_AFP;
-
-
-
-
-
-
-typedef UINT8 tBTA_BLE_ADV_EVT;
-
-
-
-
-
-
-
-typedef UINT8 tBTA_BLE_ADV_TX_POWER;
-
-
-typedef struct {
-    UINT16 adv_int_min;
-    UINT16 adv_int_max;
-    tBTA_BLE_ADV_EVT adv_type;
-    tBTA_BLE_ADV_CHNL_MAP channel_map;
-    tBTA_BLE_AFP adv_filter_policy;
-    tBTA_BLE_ADV_TX_POWER tx_power;
-} tBTA_BLE_ADV_PARAMS;
-
-
-
-
-typedef struct {
-    UINT8 conn_mode;
-    tBTA_BLE_AD_MASK ad_mask;
-    UINT8 flag;
-    UINT8 tx_power_level;
-    UINT8 remote_name_len;
-    UINT8 *p_remote_name;
-    tBTA_BLE_SERVICE service;
-} tBTA_BLE_INQ_DATA;
-
-enum {
-    BTA_BLE_BATCH_SCAN_MODE_PASS = 1,
-    BTA_BLE_BATCH_SCAN_MODE_ACTI = 2,
-    BTA_BLE_BATCH_SCAN_MODE_PASS_ACTI = 3
-};
-typedef UINT8 tBTA_BLE_BATCH_SCAN_MODE;
-
-enum {
-    BTA_BLE_DISCARD_OLD_ITEMS = 0,
-    BTA_BLE_DISCARD_LOWER_RSSI_ITEMS = 1
-};
-typedef UINT8 tBTA_BLE_DISCARD_RULE;
-
-enum {
-    BTA_BLE_ADV_SEEN_FIRST_TIME = 0,
-    BTA_BLE_ADV_TRACKING_TIMEOUT = 1
-};
-typedef UINT8 tBTA_BLE_ADV_CHANGE_REASON;
-
-enum {
-    BTA_BLE_BATCH_SCAN_ENB_EVT = 1,
-    BTA_BLE_BATCH_SCAN_CFG_STRG_EVT = 2,
-    BTA_BLE_BATCH_SCAN_DATA_EVT = 3,
-    BTA_BLE_BATCH_SCAN_THRES_EVT = 4,
-    BTA_BLE_BATCH_SCAN_PARAM_EVT = 5,
-    BTA_BLE_BATCH_SCAN_DIS_EVT = 6
-};
-typedef tBTM_BLE_BATCH_SCAN_EVT tBTA_BLE_BATCH_SCAN_EVT;
-
-typedef tBTM_BLE_TRACK_ADV_ACTION tBTA_BLE_TRACK_ADV_ACTION;
-
-
-
-
-
-
-
-typedef UINT8 tBTA_DM_BLE_RSSI_ALERT_TYPE;
-
-
-
-
-
-typedef UINT8 tBTA_DM_BLE_RSSI_ALERT_MASK;
-
-
-typedef void (tBTA_DM_BLE_RSSI_CBACK) (BD_ADDR bd_addr, tBTA_DM_BLE_RSSI_ALERT_TYPE alert_type, INT8 rssi);
-# 543 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-typedef UINT8 tBTA_DM_BLE_PF_LOGIC_TYPE;
-
-enum {
-    BTA_DM_BLE_SCAN_COND_ADD,
-    BTA_DM_BLE_SCAN_COND_DELETE,
-    BTA_DM_BLE_SCAN_COND_CLEAR = 2
-};
-typedef UINT8 tBTA_DM_BLE_SCAN_COND_OP;
-
-
-enum {
-    BTA_BLE_SCAN_PF_ENABLE_EVT = 7,
-    BTA_BLE_SCAN_PF_COND_EVT
-};
-# 568 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-typedef UINT8 tBTA_DM_BLE_PF_COND_TYPE;
-
-typedef union {
-    UINT16 uuid16_mask;
-    UINT32 uuid32_mask;
-    UINT8 uuid128_mask[16];
-} tBTA_DM_BLE_PF_COND_MASK;
-
-typedef struct {
-    tBLE_BD_ADDR *p_target_addr;
-    tBT_UUID uuid;
-    tBTA_DM_BLE_PF_LOGIC_TYPE cond_logic;
-    tBTA_DM_BLE_PF_COND_MASK *p_uuid_mask;
-} tBTA_DM_BLE_PF_UUID_COND;
-
-typedef struct {
-    UINT8 data_len;
-    UINT8 *p_data;
-} tBTA_DM_BLE_PF_LOCAL_NAME_COND;
-
-typedef struct {
-    UINT16 company_id;
-    UINT8 data_len;
-    UINT8 *p_pattern;
-    UINT16 company_id_mask;
-    UINT8 *p_pattern_mask;
-
-} tBTA_DM_BLE_PF_MANU_COND;
-
-typedef struct {
-    UINT16 uuid;
-    UINT8 data_len;
-    UINT8 *p_pattern;
-    UINT8 *p_pattern_mask;
-
-} tBTA_DM_BLE_PF_SRVC_PATTERN_COND;
-
-typedef union {
-    tBLE_BD_ADDR target_addr;
-    tBTA_DM_BLE_PF_LOCAL_NAME_COND local_name;
-    tBTA_DM_BLE_PF_MANU_COND manu_data;
-    tBTA_DM_BLE_PF_UUID_COND srvc_uuid;
-    tBTA_DM_BLE_PF_UUID_COND solicitate_uuid;
-    tBTA_DM_BLE_PF_SRVC_PATTERN_COND srvc_data;
-} tBTA_DM_BLE_PF_COND_PARAM;
-
-typedef UINT8 tBTA_DM_BLE_PF_FILT_INDEX;
-typedef UINT8 tBTA_DM_BLE_PF_AVBL_SPACE;
-
-typedef INT8 tBTA_DM_RSSI_VALUE;
-typedef UINT8 tBTA_DM_LINK_QUALITY_VALUE;
-
-
-typedef UINT8 tBTA_SIG_STRENGTH_MASK;
-# 659 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-typedef UINT8 tBTA_DM_SEC_EVT;
-
-
-typedef struct {
-    tBTA_STATUS status;
-} tBTA_DM_ENABLE;
-
-
-typedef struct {
-
-    BD_ADDR bd_addr;
-    DEV_CLASS dev_class;
-    BD_NAME bd_name;
-    BOOLEAN min_16_digit;
-} tBTA_DM_PIN_REQ;
-# 717 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-typedef UINT8 tBTA_LE_KEY_TYPE;
-
-
-typedef tBTM_LE_PENC_KEYS tBTA_LE_PENC_KEYS ;
-typedef tBTM_LE_PCSRK_KEYS tBTA_LE_PCSRK_KEYS;
-typedef tBTM_LE_LENC_KEYS tBTA_LE_LENC_KEYS ;
-typedef tBTM_LE_LCSRK_KEYS tBTA_LE_LCSRK_KEYS ;
-typedef tBTM_LE_PID_KEYS tBTA_LE_PID_KEYS ;
-
-typedef union {
-    tBTA_LE_PENC_KEYS penc_key;
-    tBTA_LE_PCSRK_KEYS psrk_key;
-    tBTA_LE_PID_KEYS pid_key;
-    tBTA_LE_LENC_KEYS lenc_key;
-    tBTA_LE_LCSRK_KEYS lcsrk_key;
-    tBTA_LE_PID_KEYS lid_key;
-} tBTA_LE_KEY_VALUE;
-
-
-
-typedef UINT8 tBTA_DM_BLE_LOCAL_KEY_MASK;
-
-typedef struct {
-    BT_OCTET16 ir;
-    BT_OCTET16 irk;
-    BT_OCTET16 dhk;
-} tBTA_BLE_LOCAL_ID_KEYS;
-
-
-
-
-
-typedef UINT8 tBTA_DM_BLE_SEC_GRANT;
-
-
-
-
-
-typedef UINT8 tBTA_DM_BLE_CONN_TYPE;
-
-typedef BOOLEAN (tBTA_DM_BLE_SEL_CBACK)(BD_ADDR random_bda, UINT8 *p_remote_name);
-
-typedef tBTM_LE_UPDATE_CONN_PRAMS tBTA_LE_UPDATE_CONN_PRAMS;
-typedef tBTM_UPDATE_CONN_PARAM_CBACK tBTA_UPDATE_CONN_PARAM_CBACK;
-
-
-
-typedef struct {
-    BD_ADDR bd_addr;
-    BD_NAME bd_name;
-} tBTA_DM_BLE_SEC_REQ;
-
-typedef struct {
-    BD_ADDR bd_addr;
-    tBTM_LE_KEY_TYPE key_type;
-    tBTM_LE_KEY_VALUE *p_key_value;
-} tBTA_DM_BLE_KEY;
-
-
-typedef struct {
-    BD_ADDR bd_addr;
-    BD_NAME bd_name;
-    BOOLEAN key_present;
-    LINK_KEY key;
-    UINT8 key_type;
-    BOOLEAN success;
-    UINT8 fail_reason;
-    tBLE_ADDR_TYPE addr_type;
-    tBT_DEVICE_TYPE dev_type;
-    UINT8 auth_mode;
-} tBTA_DM_AUTH_CMPL;
-
-
-
-typedef struct {
-    BD_ADDR bd_addr;
-    BD_NAME bd_name;
-    tBTA_SERVICE_ID service;
-
-    DEV_CLASS dev_class;
-
-} tBTA_DM_AUTHORIZE;
-
-
-typedef struct {
-    BD_ADDR bd_addr;
-
-    tBTA_TRANSPORT link_type;
-
-} tBTA_DM_LINK_UP;
-
-
-typedef struct {
-    BD_ADDR bd_addr;
-    UINT8 status;
-    UINT8 reason;
-    BOOLEAN is_removed;
-
-    tBTA_TRANSPORT link_type;
-
-} tBTA_DM_LINK_DOWN;
-
-
-typedef struct {
-    BD_ADDR bd_addr;
-    UINT8 new_role;
-} tBTA_DM_ROLE_CHG;
-
-
-typedef struct {
-    UINT8 level;
-
-    UINT8 level_flags;
-} tBTA_DM_BUSY_LEVEL;
-# 839 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-typedef tBTM_IO_CAP tBTA_IO_CAP;
-# 853 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-typedef tBTM_AUTH_REQ tBTA_AUTH_REQ;
-# 869 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-typedef tBTM_LE_AUTH_REQ tBTA_LE_AUTH_REQ;
-
-
-
-
-
-
-typedef tBTM_OOB_DATA tBTA_OOB_DATA;
-
-
-typedef struct {
-
-    BD_ADDR bd_addr;
-    DEV_CLASS dev_class;
-    BD_NAME bd_name;
-    UINT32 num_val;
-    BOOLEAN just_works;
-    tBTA_AUTH_REQ loc_auth_req;
-    tBTA_AUTH_REQ rmt_auth_req;
-    tBTA_IO_CAP loc_io_caps;
-    tBTA_AUTH_REQ rmt_io_caps;
-} tBTA_DM_SP_CFM_REQ;
-
-
-typedef struct {
-    BD_ADDR bd_addr;
-    DEV_CLASS dev_class;
-    BD_NAME bd_name;
-} tBTA_DM_SP_KEY_REQ;
-
-enum {
-    BTA_SP_KEY_STARTED,
-    BTA_SP_KEY_ENTERED,
-    BTA_SP_KEY_ERASED,
-    BTA_SP_KEY_CLEARED,
-    BTA_SP_KEY_COMPLT
-};
-typedef UINT8 tBTA_SP_KEY_TYPE;
-
-
-typedef struct {
-    BD_ADDR bd_addr;
-    tBTA_SP_KEY_TYPE notif_type;
-} tBTA_DM_SP_KEY_PRESS;
-
-
-typedef struct {
-
-    BD_ADDR bd_addr;
-    DEV_CLASS dev_class;
-    BD_NAME bd_name;
-    UINT32 passkey;
-} tBTA_DM_SP_KEY_NOTIF;
-
-
-typedef struct {
-
-    BD_ADDR bd_addr;
-    DEV_CLASS dev_class;
-    BD_NAME bd_name;
-} tBTA_DM_SP_RMT_OOB;
-
-
-typedef struct {
-    tBTA_STATUS result;
-} tBTA_DM_BOND_CANCEL_CMPL;
-
-
-typedef union {
-    tBTA_DM_ENABLE enable;
-    tBTA_DM_PIN_REQ pin_req;
-    tBTA_DM_AUTH_CMPL auth_cmpl;
-    tBTA_DM_AUTHORIZE authorize;
-    tBTA_DM_LINK_UP link_up;
-    tBTA_DM_LINK_DOWN link_down;
-    tBTA_DM_BUSY_LEVEL busy_level;
-    tBTA_DM_SP_CFM_REQ cfm_req;
-    tBTA_DM_SP_KEY_REQ key_req;
-    tBTA_DM_SP_KEY_NOTIF key_notif;
-    tBTA_DM_SP_RMT_OOB rmt_oob;
-    tBTA_DM_BOND_CANCEL_CMPL bond_cancel_cmpl;
-    tBTA_DM_SP_KEY_PRESS key_press;
-    tBTA_DM_ROLE_CHG role_chg;
-    tBTA_DM_BLE_SEC_REQ ble_req;
-    tBTA_DM_BLE_KEY ble_key;
-    tBTA_BLE_LOCAL_ID_KEYS ble_id_keys;
-    BT_OCTET16 ble_er;
-} tBTA_DM_SEC;
-
-
-typedef void (tBTA_DM_SEC_CBACK)(tBTA_DM_SEC_EVT event, tBTA_DM_SEC *p_data);
-# 969 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-typedef UINT8 tBTA_BLE_MULTI_ADV_EVT;
-
-
-typedef void (tBTA_BLE_MULTI_ADV_CBACK)(tBTA_BLE_MULTI_ADV_EVT event,
-                                        UINT8 inst_id, void *p_ref, tBTA_STATUS status);
-typedef UINT32 tBTA_DM_BLE_REF_VALUE;
-
-
-
-typedef UINT8 tBTA_DM_BLE_PF_EVT;
-
-
-
-typedef UINT8 tBTA_DM_BLE_PF_ACTION;
-
-
-typedef void (tBTA_DM_BLE_PF_CFG_CBACK) (tBTA_DM_BLE_PF_ACTION action,
-        tBTA_DM_BLE_PF_COND_TYPE cfg_cond,
-        tBTA_DM_BLE_PF_AVBL_SPACE avbl_space, tBTA_STATUS status,
-        tBTA_DM_BLE_REF_VALUE ref_value);
-
-typedef void (tBTA_DM_BLE_PF_PARAM_CBACK) (UINT8 action_type, tBTA_DM_BLE_PF_AVBL_SPACE avbl_space,
-        tBTA_DM_BLE_REF_VALUE ref_value, tBTA_STATUS status);
-
-
-typedef void (tBTA_DM_BLE_PF_STATUS_CBACK) (UINT8 action, tBTA_STATUS status,
-        tBTA_DM_BLE_REF_VALUE ref_value);
-# 1005 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-typedef UINT16 tBTA_DM_BLE_PF_FEAT_SEL;
-
-
-
-typedef UINT16 tBTA_DM_BLE_PF_LIST_LOGIC_TYPE;
-
-
-
-typedef UINT16 tBTA_DM_BLE_PF_FILT_LOGIC_TYPE;
-
-typedef UINT8 tBTA_DM_BLE_PF_RSSI_THRESHOLD;
-typedef UINT8 tBTA_DM_BLE_PF_DELIVERY_MODE;
-typedef UINT16 tBTA_DM_BLE_PF_TIMEOUT;
-typedef UINT8 tBTA_DM_BLE_PF_TIMEOUT_CNT;
-typedef UINT16 tBTA_DM_BLE_PF_ADV_TRACK_ENTRIES;
-
-typedef struct {
-    tBTA_DM_BLE_PF_FEAT_SEL feat_seln;
-    tBTA_DM_BLE_PF_LIST_LOGIC_TYPE list_logic_type;
-    tBTA_DM_BLE_PF_FILT_LOGIC_TYPE filt_logic_type;
-    tBTA_DM_BLE_PF_RSSI_THRESHOLD rssi_high_thres;
-    tBTA_DM_BLE_PF_RSSI_THRESHOLD rssi_low_thres;
-    tBTA_DM_BLE_PF_DELIVERY_MODE dely_mode;
-    tBTA_DM_BLE_PF_TIMEOUT found_timeout;
-    tBTA_DM_BLE_PF_TIMEOUT lost_timeout;
-    tBTA_DM_BLE_PF_TIMEOUT_CNT found_timeout_cnt;
-    tBTA_DM_BLE_PF_ADV_TRACK_ENTRIES num_of_tracking_entries;
-} tBTA_DM_BLE_PF_FILT_PARAMS;
-# 1044 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-typedef UINT8 tBTA_DM_SEARCH_EVT;
-
-
-
-
-typedef struct {
-    BD_ADDR bd_addr;
-    DEV_CLASS dev_class;
-    BOOLEAN remt_name_not_required;
-
-    BOOLEAN is_limited;
-    INT8 rssi;
-    UINT8 *p_eir;
-
-    UINT8 inq_result_type;
-    UINT8 ble_addr_type;
-    tBTM_BLE_EVT_TYPE ble_evt_type;
-    tBT_DEVICE_TYPE device_type;
-    UINT8 flag;
-    UINT8 adv_data_len;
-    UINT8 scan_rsp_len;
-
-
-} tBTA_DM_INQ_RES;
-
-
-typedef struct {
-    UINT8 num_resps;
-} tBTA_DM_INQ_CMPL;
-
-
-typedef struct {
-    UINT32 num_dis;
-} tBTA_DM_INQ_DISCARD;
-
-
-typedef struct {
-    BD_ADDR bd_addr;
-    UINT8 num_record;
-    tBTA_STATUS result;
-} tBTA_DM_DI_DISC_CMPL;
-
-
-typedef struct {
-    BD_ADDR bd_addr;
-    BD_NAME bd_name;
-    tBTA_SERVICE_MASK services;
-
-    UINT8 *p_raw_data;
-    UINT32 raw_data_size;
-    tBT_DEVICE_TYPE device_type;
-    UINT32 num_uuids;
-    UINT8 *p_uuid_list;
-
-    tBTA_STATUS result;
-} tBTA_DM_DISC_RES;
-
-
-typedef struct {
-    BD_ADDR bd_addr;
-    BD_NAME bd_name;
-    tBT_UUID service;
-} tBTA_DM_DISC_BLE_RES;
-
-
-typedef struct {
-    BD_ADDR bd_addr;
-    BD_NAME bd_name;
-    tBTA_CMPL_CB *read_rmtname_cb;
-} tBTA_DM_RMTNAME_CMPL;
-
-
-typedef union {
-    tBTA_DM_INQ_RES inq_res;
-    tBTA_DM_INQ_CMPL inq_cmpl;
-    tBTA_DM_DISC_RES disc_res;
-    tBTA_DM_DISC_BLE_RES disc_ble_res;
-    tBTA_DM_DI_DISC_CMPL di_disc;
-    tBTA_DM_INQ_DISCARD inq_dis;
-    tBTA_DM_RMTNAME_CMPL rmt_name;
-} tBTA_DM_SEARCH;
-
-
-typedef struct {
-    tBTA_DM_SEARCH_EVT event;
-    UINT16 len;
-    tBTA_DM_SEARCH *p_data;
-} tBTA_DM_SEARCH_PARAM;
-
-
-typedef void (tBTA_DM_SEARCH_CBACK)(tBTA_DM_SEARCH_EVT event, tBTA_DM_SEARCH *p_data);
-
-
-typedef void (tBTA_DM_EXEC_CBACK) (void *p_param);
-
-
-typedef void (tBTA_DM_ENCRYPT_CBACK) (BD_ADDR bd_addr, tBTA_TRANSPORT transport, tBTA_STATUS result);
-
-
-
-
-
-
-
-typedef tBTM_BLE_SEC_ACT tBTA_DM_BLE_SEC_ACT;
-
-typedef tBTM_BLE_TX_TIME_MS tBTA_DM_BLE_TX_TIME_MS;
-typedef tBTM_BLE_RX_TIME_MS tBTA_DM_BLE_RX_TIME_MS;
-typedef tBTM_BLE_IDLE_TIME_MS tBTA_DM_BLE_IDLE_TIME_MS;
-typedef tBTM_BLE_ENERGY_USED tBTA_DM_BLE_ENERGY_USED;
-
-
-
-
-
-
-typedef UINT8 tBTA_DM_CONTRL_STATE;
-
-typedef UINT8 tBTA_DM_BLE_ADV_STATE;
-typedef UINT8 tBTA_DM_BLE_ADV_INFO_PRESENT;
-typedef UINT8 tBTA_DM_BLE_RSSI_VALUE;
-typedef UINT16 tBTA_DM_BLE_ADV_INFO_TIMESTAMP;
-
-typedef tBTM_BLE_TRACK_ADV_DATA tBTA_DM_BLE_TRACK_ADV_DATA;
-
-typedef void (tBTA_BLE_SCAN_THRESHOLD_CBACK)(tBTA_DM_BLE_REF_VALUE ref_value);
-
-typedef void (tBTA_BLE_SCAN_REP_CBACK) (tBTA_DM_BLE_REF_VALUE ref_value, UINT8 report_format,
-                                        UINT8 num_records, UINT16 data_len,
-                                        UINT8 *p_rep_data, tBTA_STATUS status);
-
-typedef void (tBTA_BLE_SCAN_SETUP_CBACK) (tBTA_BLE_BATCH_SCAN_EVT evt,
-        tBTA_DM_BLE_REF_VALUE ref_value,
-        tBTA_STATUS status);
-
-typedef void (tBTA_START_STOP_SCAN_CMPL_CBACK) (tBTA_STATUS status);
-
-typedef void (tBTA_START_STOP_ADV_CMPL_CBACK) (tBTA_STATUS status);
-
-typedef void (tBTA_BLE_TRACK_ADV_CMPL_CBACK)(int action, tBTA_STATUS status,
-        tBTA_DM_BLE_PF_AVBL_SPACE avbl_space,
-        tBTA_DM_BLE_REF_VALUE ref_value);
-
-typedef void (tBTA_BLE_TRACK_ADV_CBACK)(tBTA_DM_BLE_TRACK_ADV_DATA *p_adv_data);
-
-typedef void (tBTA_BLE_ENERGY_INFO_CBACK)(tBTA_DM_BLE_TX_TIME_MS tx_time,
-        tBTA_DM_BLE_RX_TIME_MS rx_time,
-        tBTA_DM_BLE_IDLE_TIME_MS idle_time,
-        tBTA_DM_BLE_ENERGY_USED energy_used,
-        tBTA_DM_CONTRL_STATE ctrl_state,
-        tBTA_STATUS status);
-# 1211 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-typedef UINT16 tBTA_DM_LP_MASK;
-# 1231 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-typedef UINT8 tBTA_DM_PM_ACTION;
-# 1353 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-typedef UINT8 tBTA_DM_SWITCH_EVT;
-typedef void (tBTA_DM_SWITCH_CBACK)(tBTA_DM_SWITCH_EVT event, tBTA_STATUS status);
-# 1367 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-typedef UINT8 tBTA_DM_ROUTE_PATH;
-# 1392 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-typedef UINT8 tBTA_DM_LINK_TYPE;
-# 1423 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern tBTA_STATUS BTA_EnableBluetooth(tBTA_DM_SEC_CBACK *p_cback);
-# 1437 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern tBTA_STATUS BTA_DisableBluetooth(void);
-# 1449 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern tBTA_STATUS BTA_EnableTestMode(void);
-# 1461 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DisableTestMode(void);
-# 1473 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmSetDeviceName(const char *p_name);
-# 1485 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmGetRemoteName(BD_ADDR remote_addr, tBTA_CMPL_CB *read_remote_name_cb);
-# 1497 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmConfigEir(tBTA_DM_EIR_CONF *eir_config);
-# 1509 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-void BTA_DmSetAfhChannels(const uint8_t *channels, tBTA_CMPL_CB *set_afh_cb);
-# 1522 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-void BTA_DmBleSetChannels(const uint8_t *channels, tBTA_CMPL_CB *set_channels_cb);
-
-extern void BTA_DmUpdateWhiteList(BOOLEAN add_remove, BD_ADDR remote_addr, tBLE_ADDR_TYPE addr_type, tBTA_ADD_WHITELIST_CBACK *add_wl_cb);
-
-extern void BTA_DmBleReadAdvTxPower(tBTA_CMPL_CB *cmpl_cb);
-
-
-extern void BTA_DmBleReadRSSI(BD_ADDR remote_addr, tBTA_TRANSPORT transport, tBTA_CMPL_CB *cmpl_cb);
-# 1544 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmSetVisibility(tBTA_DM_DISC disc_mode, tBTA_DM_CONN conn_mode, UINT8 pairable_mode, UINT8 conn_filter);
-# 1560 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmSearch(tBTA_DM_INQ *p_dm_inq, tBTA_SERVICE_MASK services,
-                         tBTA_DM_SEARCH_CBACK *p_cback);
-# 1574 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmSearchCancel(void);
-# 1615 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-tBTA_STATUS BTA_DmGetCachedRemoteName(BD_ADDR remote_device, UINT8 **pp_cached_name);
-# 1630 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmBond(BD_ADDR bd_addr);
-# 1644 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmBondByTransport(BD_ADDR bd_addr, tBTA_TRANSPORT transport);
-# 1658 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmBondCancel(BD_ADDR bd_addr);
-# 1670 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DMSetPinType (UINT8 pin_type, UINT8 *pin_code, UINT8 pin_code_len);
-# 1685 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmPinReply(BD_ADDR bd_addr, BOOLEAN accept, UINT8 pin_len,
-                           UINT8 *p_pin);
-# 1699 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmLocalOob(void);
-# 1715 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmOobReply(BD_ADDR bd_addr, UINT8 len, UINT8 *p_value);
-# 1728 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmConfirm(BD_ADDR bd_addr, BOOLEAN accept);
-# 1740 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmPasskeyReqReply(BOOLEAN accept, BD_ADDR bd_addr, UINT32 passkey);
-# 1755 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmAddDevice(BD_ADDR bd_addr, DEV_CLASS dev_class,
-                            LINK_KEY link_key, tBTA_SERVICE_MASK trusted_mask,
-                            BOOLEAN is_trusted, UINT8 key_type,
-                            tBTA_IO_CAP io_cap, UINT8 pin_length);
-# 1773 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern tBTA_STATUS BTA_DmRemoveDevice(BD_ADDR bd_addr, tBT_TRANSPORT transport);
-# 1787 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_GetEirService( UINT8 *p_eir, tBTA_SERVICE_MASK *p_services );
-# 1798 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern UINT16 BTA_DmGetConnectionState( BD_ADDR bd_addr );
-# 1829 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmCloseACL(BD_ADDR bd_addr, BOOLEAN remove_dev, tBTA_TRANSPORT transport);
-# 1842 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void bta_dmexecutecallback (tBTA_DM_EXEC_CBACK *p_callback, void *p_param);
-# 1905 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmBleSecurityGrant(BD_ADDR bd_addr, tBTA_DM_BLE_SEC_GRANT res);
-# 1923 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmBleSetBgConnType(tBTA_DM_BLE_CONN_TYPE bg_conn_type, tBTA_DM_BLE_SEL_CBACK *p_select_cback);
-# 1939 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmBlePasskeyReply(BD_ADDR bd_addr, BOOLEAN accept, UINT32 passkey);
-# 1955 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmBleSetStaticPasskey(
-# 1955 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h" 3 4
-                                     _Bool 
-# 1955 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-                                          add, uint32_t passkey);
-# 1969 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmBleConfirmReply(BD_ADDR bd_addr, BOOLEAN accept);
-# 1987 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmAddBleDevice(BD_ADDR bd_addr, tBLE_ADDR_TYPE addr_type, int auth_mode,
-                               tBT_DEVICE_TYPE dev_type);
-# 2006 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmAddBleKey (BD_ADDR bd_addr,
-                             tBTA_LE_KEY_VALUE *p_le_key,
-                             tBTA_LE_KEY_TYPE key_type);
-# 2027 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmSetBlePrefConnParams(BD_ADDR bd_addr,
-                                       UINT16 min_conn_int, UINT16 max_conn_int,
-                                       UINT16 slave_latency, UINT16 supervision_tout );
-# 2044 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmSetBleConnScanParams(UINT32 scan_interval,
-                                       UINT32 scan_window);
-# 2062 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmSetBleScanParams(tGATT_IF client_if, UINT32 scan_interval,
-                                   UINT32 scan_window, tBLE_SCAN_MODE scan_mode,
-                                   tBLE_SCAN_PARAM_SETUP_CBACK scan_param_setup_status_cback);
-# 2083 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmSetBleScanFilterParams(tGATT_IF client_if, UINT32 scan_interval,
-        UINT32 scan_window, tBLE_SCAN_MODE scan_mode, UINT8 scan_fil_poilcy,
-        UINT8 addr_type_own, UINT8 scan_duplicate_filter, tBLE_SCAN_PARAM_SETUP_CBACK scan_param_setup_cback);
-# 2103 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmSetBleAdvParams (UINT16 adv_int_min, UINT16 adv_int_max,
-                                   tBLE_BD_ADDR *p_dir_bda);
-
-extern void BTA_DmSetBleAdvParamsAll (UINT16 adv_int_min, UINT16 adv_int_max,
-                                      UINT8 adv_type, tBLE_ADDR_TYPE addr_type_own,
-                                      tBTM_BLE_ADV_CHNL_MAP chnl_map, tBTM_BLE_AFP adv_fil_pol,
-                                      tBLE_BD_ADDR *p_dir_bda, tBTA_START_ADV_CMPL_CBACK p_start_adv_cb);
-# 2131 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmSearchExt(tBTA_DM_INQ *p_dm_inq, tBTA_SERVICE_MASK_EXT *p_services,
-                            tBTA_DM_SEARCH_CBACK *p_cback);
-# 2149 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmDiscoverExt(BD_ADDR bd_addr, tBTA_SERVICE_MASK_EXT *p_services,
-                              tBTA_DM_SEARCH_CBACK *p_cback, BOOLEAN sdp_search);
-# 2168 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmDiscoverByTransport(BD_ADDR bd_addr, tBTA_SERVICE_MASK_EXT *p_services,
-                                      tBTA_DM_SEARCH_CBACK *p_cback, BOOLEAN sdp_search,
-                                      tBTA_TRANSPORT transport);
-# 2195 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmSetEncryption(BD_ADDR bd_addr, tBTA_TRANSPORT transport,
-                                tBTA_DM_ENCRYPT_CBACK *p_callback,
-                                tBTA_DM_BLE_SEC_ACT sec_act);
-# 2214 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmBleObserve(BOOLEAN start, UINT32 duration,
-                             tBTA_DM_SEARCH_CBACK *p_results_cb,
-                             tBTA_START_STOP_SCAN_CMPL_CBACK *p_start_stop_scan_cb);
-# 2232 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmBleScan(BOOLEAN start, UINT32 duration,
-                             tBTA_DM_SEARCH_CBACK *p_results_cb,
-                             tBTA_START_STOP_SCAN_CMPL_CBACK *p_start_stop_scan_cb);
-
-extern void BTA_DmBleStopAdvertising(void);
-
-extern void BTA_DmSetRandAddress(BD_ADDR rand_addr, tBTA_SET_RAND_ADDR_CBACK *p_set_rand_addr_cback);
-extern void BTA_DmClearRandAddress(void);
-# 2256 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmBleConfigLocalPrivacy(BOOLEAN privacy_enable, tBTA_SET_LOCAL_PRIVACY_CBACK *set_local_privacy_cback);
-# 2269 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmBleConfigLocalIcon(uint16_t icon);
-# 2283 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmBleEnableRemotePrivacy(BD_ADDR bd_addr, BOOLEAN privacy_enable);
-# 2297 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmBleSetAdvConfig (tBTA_BLE_AD_MASK data_mask,
-                                   tBTA_BLE_ADV_DATA *p_adv_cfg,
-                                   tBTA_SET_ADV_DATA_CMPL_CBACK *p_adv_data_cback);
-# 2314 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmBleSetAdvConfigRaw (UINT8 *p_raw_adv, UINT32 raw_adv_len,
-                            tBTA_SET_ADV_DATA_CMPL_CBACK *p_adv_data_cback);
-# 2330 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-void BTA_DmBleSetLongAdv (UINT8 *adv_data, UINT32 adv_data_len,
-                            tBTA_SET_ADV_DATA_CMPL_CBACK *p_adv_data_cback);
-# 2344 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmBleSetScanRsp (tBTA_BLE_AD_MASK data_mask,
-                                 tBTA_BLE_ADV_DATA *p_adv_cfg,
-                                 tBTA_SET_ADV_DATA_CMPL_CBACK *p_adv_data_cback);
-# 2361 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmBleSetScanRspRaw (UINT8 *p_raw_scan_rsp, UINT32 raw_scan_rsp_len,
-                                    tBTA_SET_ADV_DATA_CMPL_CBACK *p_scan_rsp_data_cback);
-# 2378 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmUpdateDuplicateExceptionalList(UINT8 subcode, UINT32 type,
-                                                BD_ADDR device_info,
-                                                tBTA_UPDATE_DUPLICATE_EXCEPTIONAL_LIST_CMPL_CBACK p_update_duplicate_exceptional_list_cback);
-# 2394 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmBleBroadcast (BOOLEAN start, tBTA_START_STOP_ADV_CMPL_CBACK *p_start_stop_adv_cb);
-# 2410 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_BleEnableAdvInstance (tBTA_BLE_ADV_PARAMS *p_params,
-                                      tBTA_BLE_MULTI_ADV_CBACK *p_cback, void *p_ref);
-# 2425 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_BleUpdateAdvInstParam (UINT8 inst_id,
-                                       tBTA_BLE_ADV_PARAMS *p_params);
-# 2440 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_BleCfgAdvInstData (UINT8 inst_id, BOOLEAN is_scan_rsp,
-                                   tBTA_BLE_AD_MASK data_mask, tBTA_BLE_ADV_DATA *p_data);
-# 2454 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_BleDisableAdvInstance(UINT8 inst_id);
-# 2471 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmBleUpdateConnectionParams(BD_ADDR bd_addr, UINT16 min_int,
-        UINT16 max_int, UINT16 latency, UINT16 timeout);
-# 2483 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmBleDisconnect(BD_ADDR bd_addr);
-# 2494 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmBleSetDataLength(BD_ADDR remote_device, UINT16 tx_data_length, tBTA_SET_PKT_DATA_LENGTH_CBACK *p_set_pkt_data_cback);
-# 2514 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmBleSetStorageParams(UINT8 batch_scan_full_max,
-                                      UINT8 batch_scan_trunc_max,
-                                      UINT8 batch_scan_notify_threshold,
-                                      tBTA_BLE_SCAN_SETUP_CBACK *p_setup_cback,
-                                      tBTA_BLE_SCAN_THRESHOLD_CBACK *p_thres_cback,
-                                      tBTA_BLE_SCAN_REP_CBACK *p_rep_cback,
-                                      tBTA_DM_BLE_REF_VALUE ref_value);
-# 2538 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmBleEnableBatchScan(tBTA_BLE_BATCH_SCAN_MODE scan_mode,
-                                     UINT32 scan_interval, UINT32 scan_window,
-                                     tBTA_BLE_DISCARD_RULE discard_rule,
-                                     tBLE_ADDR_TYPE addr_type,
-                                     tBTA_DM_BLE_REF_VALUE ref_value);
-# 2556 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmBleReadScanReports(tBTA_BLE_BATCH_SCAN_MODE scan_type,
-                                     tBTA_DM_BLE_REF_VALUE ref_value);
-# 2570 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmBleDisableBatchScan(tBTA_DM_BLE_REF_VALUE ref_value);
-# 2585 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmEnableScanFilter(UINT8 action,
-                                   tBTA_DM_BLE_PF_STATUS_CBACK *p_cmpl_cback,
-                                   tBTA_DM_BLE_REF_VALUE ref_value);
-# 2605 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmBleScanFilterSetup(UINT8 action,
-                                     tBTA_DM_BLE_PF_FILT_INDEX filt_index,
-                                     tBTA_DM_BLE_PF_FILT_PARAMS *p_filt_params,
-                                     tBLE_BD_ADDR *p_target,
-                                     tBTA_DM_BLE_PF_PARAM_CBACK *p_cmpl_cback,
-                                     tBTA_DM_BLE_REF_VALUE ref_value);
-# 2629 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmBleCfgFilterCondition(tBTA_DM_BLE_SCAN_COND_OP action,
-                                        tBTA_DM_BLE_PF_COND_TYPE cond_type,
-                                        tBTA_DM_BLE_PF_FILT_INDEX filt_index,
-                                        tBTA_DM_BLE_PF_COND_PARAM *p_cond,
-                                        tBTA_DM_BLE_PF_CFG_CBACK *p_cmpl_cback,
-                                        tBTA_DM_BLE_REF_VALUE ref_value);
-# 2649 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmBleTrackAdvertiser(tBTA_DM_BLE_REF_VALUE ref_value,
-                                     tBTA_BLE_TRACK_ADV_CBACK *p_track_adv_cback);
-# 2663 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_DmBleGetEnergyInfo(tBTA_BLE_ENERGY_INFO_CBACK *p_cmpl_cback);
-# 2674 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_VendorInit (void);
-# 2685 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
-extern void BTA_VendorCleanup (void);
-# 14 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h" 1
-# 29 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h" 1
-# 22 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gattdefs.h" 1
-# 23 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h" 2
-# 81 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-typedef UINT8 tGATT_STATUS;
-# 126 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-typedef UINT16 tGATT_DISCONN_REASON;
-# 177 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-typedef UINT16 tGATT_PERM;
-# 209 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-typedef UINT8 tGATT_CHAR_PROP;
-
-
-
-
-enum {
-    GATT_FORMAT_RES,
-    GATT_FORMAT_BOOL,
-    GATT_FORMAT_2BITS,
-    GATT_FORMAT_NIBBLE,
-    GATT_FORMAT_UINT8,
-    GATT_FORMAT_UINT12,
-    GATT_FORMAT_UINT16,
-    GATT_FORMAT_UINT24,
-    GATT_FORMAT_UINT32,
-    GATT_FORMAT_UINT48,
-    GATT_FORMAT_UINT64,
-    GATT_FORMAT_UINT128,
-    GATT_FORMAT_SINT8,
-    GATT_FORMAT_SINT12,
-    GATT_FORMAT_SINT16,
-    GATT_FORMAT_SINT24,
-    GATT_FORMAT_SINT32,
-    GATT_FORMAT_SINT48,
-    GATT_FORMAT_SINT64,
-    GATT_FORMAT_SINT128,
-    GATT_FORMAT_FLOAT32,
-    GATT_FORMAT_FLOAT64,
-    GATT_FORMAT_SFLOAT,
-    GATT_FORMAT_FLOAT,
-    GATT_FORMAT_DUINT16,
-    GATT_FORMAT_UTF8S,
-    GATT_FORMAT_UTF16S,
-    GATT_FORMAT_STRUCT,
-    GATT_FORMAT_MAX
-};
-typedef UINT8 tGATT_FORMAT;
-
-
-
-typedef struct {
-    UINT16 unit;
-    UINT16 descr;
-    tGATT_FORMAT format;
-    INT8 exp;
-    UINT8 name_spc;
-} tGATT_CHAR_PRES;
-
-
-
-typedef struct {
-    UINT8 rpt_id;
-    UINT8 rpt_type;
-} tGATT_CHAR_RPT_REF;
-
-
-
-typedef struct {
-    UINT8 format;
-    UINT16 len;
-    UINT8 lower_range[16];
-    UINT8 upper_range[16];
-} tGATT_VALID_RANGE;
-
-
-
-
-typedef struct {
-    UINT8 num_handle;
-    UINT16 handle_list[10];
-} tGATT_CHAR_AGGRE;
-# 292 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-typedef UINT16 tGATT_CLT_CHAR_CONFIG;
-
-
-
-
-
-
-typedef UINT16 tGATT_SVR_CHAR_CONFIG;
-# 313 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-typedef UINT8 tGATT_AUTH_REQ;
-
-
-
-typedef struct {
-    UINT16 conn_id;
-    UINT16 handle;
-    UINT16 offset;
-    UINT16 len;
-    tGATT_AUTH_REQ auth_req;
-    UINT8 value[600];
-} tGATT_VALUE;
-
-typedef struct{
-    UINT16 attr_max_len;
-    UINT16 attr_len;
-    UINT8 *attr_val;
-}tGATT_ATTR_VAL;
-
-typedef struct{
-    uint8_t auto_rsp;
-}tGATTS_ATTR_CONTROL;
-
-
-
-typedef UINT8 tGATT_ATTR_MASK;
-
-
-
-typedef union {
-
-    tGATT_VALUE attr_value;
-
-    UINT16 handle;
-
-} tGATTS_RSP;
-
-
-
-
-
-typedef UINT8 tGATT_TRANSPORT;
-
-
-
-typedef UINT8 tGATT_EXEC_FLAG;
-
-
-typedef struct {
-    UINT16 handle;
-    UINT16 offset;
-    BOOLEAN is_long;
-    BOOLEAN need_rsp;
-} tGATT_READ_REQ;
-
-
-typedef struct {
-    UINT16 handle;
-    UINT16 offset;
-    UINT16 len;
-    UINT8 value[600];
-    BOOLEAN need_rsp;
-    BOOLEAN is_prep;
-} tGATT_WRITE_REQ;
-
-
-typedef union {
-    tGATT_READ_REQ read_req;
-
-    tGATT_WRITE_REQ write_req;
-
-
-    UINT16 handle;
-    UINT16 mtu;
-    tGATT_EXEC_FLAG exec_write;
-} tGATTS_DATA;
-
-typedef UINT8 tGATT_SERV_IF;
-
-enum {
-    GATTS_REQ_TYPE_READ = 1,
-    GATTS_REQ_TYPE_WRITE,
-    GATTS_REQ_TYPE_WRITE_EXEC,
-    GATTS_REQ_TYPE_MTU,
-    GATTS_REQ_TYPE_CONF
-};
-typedef UINT8 tGATTS_REQ_TYPE;
-
-
-
-
-
-
-enum {
-    GATT_DISC_SRVC_ALL = 1,
-    GATT_DISC_SRVC_BY_UUID,
-    GATT_DISC_INC_SRVC,
-    GATT_DISC_CHAR,
-    GATT_DISC_CHAR_DSCPT,
-    GATT_DISC_MAX
-};
-typedef UINT8 tGATT_DISC_TYPE;
-
-
-
-typedef struct {
-    tBT_UUID service;
-    UINT16 s_handle;
-    UINT16 e_handle;
-} tGATT_DISC_PARAM;
-
-
-
-enum {
-    GATT_READ_BY_TYPE = 1,
-    GATT_READ_BY_HANDLE,
-    GATT_READ_MULTIPLE,
-    GATT_READ_CHAR_VALUE,
-    GATT_READ_PARTIAL,
-    GATT_READ_MAX
-};
-typedef UINT8 tGATT_READ_TYPE;
-
-
-
-typedef struct {
-    tGATT_AUTH_REQ auth_req;
-    UINT16 s_handle;
-    UINT16 e_handle;
-    tBT_UUID uuid;
-} tGATT_READ_BY_TYPE;
-
-
-
-
-typedef struct {
-    tGATT_AUTH_REQ auth_req;
-    UINT16 num_handles;
-    UINT16 handles[10];
-} tGATT_READ_MULTI;
-
-
-typedef struct {
-    tGATT_AUTH_REQ auth_req;
-    UINT16 handle;
-} tGATT_READ_BY_HANDLE;
-
-
-typedef struct {
-    tGATT_AUTH_REQ auth_req;
-    UINT16 handle;
-    UINT16 offset;
-} tGATT_READ_PARTIAL;
-
-
-
-typedef union {
-    tGATT_READ_BY_TYPE service;
-    tGATT_READ_BY_TYPE char_type;
-    tGATT_READ_MULTI read_multiple;
-    tGATT_READ_BY_HANDLE by_handle;
-    tGATT_READ_PARTIAL partial;
-} tGATT_READ_PARAM;
-
-
-enum {
-    GATT_WRITE_NO_RSP = 1,
-    GATT_WRITE ,
-    GATT_WRITE_PREPARE
-};
-typedef UINT8 tGATT_WRITE_TYPE;
-
-
-
-typedef union {
-    tGATT_VALUE att_value;
-    UINT16 mtu;
-    UINT16 handle;
-} tGATT_CL_COMPLETE;
-# 503 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-typedef UINT8 tGATTC_OPTYPE;
-
-
-
-typedef struct {
-    tGATT_CHAR_PROP char_prop;
-    UINT16 val_handle;
-    tBT_UUID char_uuid;
-} tGATT_CHAR_DCLR_VAL;
-
-
-
-typedef struct {
-    UINT16 e_handle;
-    tBT_UUID service_type;
-} tGATT_GROUP_VALUE;
-
-
-
-
-typedef struct {
-    tBT_UUID service_type;
-    UINT16 s_handle;
-    UINT16 e_handle;
-} tGATT_INCL_SRVC;
-
-typedef union {
-    tGATT_INCL_SRVC incl_service;
-    tGATT_GROUP_VALUE group_value;
-
-
-
-
-    UINT16 handle;
-
-
-    tGATT_CHAR_DCLR_VAL dclr_value;
-
-} tGATT_DISC_VALUE;
-
-
-
-typedef struct {
-    tBT_UUID type;
-    UINT16 handle;
-    tGATT_DISC_VALUE value;
-} tGATT_DISC_RES;
-# 559 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-typedef void (tGATT_DISC_RES_CB) (UINT16 conn_id, tGATT_DISC_TYPE disc_type,
-                                  tGATT_DISC_RES *p_data);
-
-
-typedef void (tGATT_DISC_CMPL_CB) (UINT16 conn_id, tGATT_DISC_TYPE disc_type, tGATT_STATUS status);
-
-
-typedef void (tGATT_CMPL_CBACK) (UINT16 conn_id, tGATTC_OPTYPE op, tGATT_STATUS status,
-                                 tGATT_CL_COMPLETE *p_data);
-
-
-typedef void (tGATT_CONN_CBACK) (tGATT_IF gatt_if, BD_ADDR bda, UINT16 conn_id, BOOLEAN connected,
-                                 tGATT_DISCONN_REASON reason, tBT_TRANSPORT transport);
-
-
-typedef void (tGATT_REQ_CBACK )(UINT16 conn_id, UINT32 trans_id, tGATTS_REQ_TYPE type,
-                                 tGATTS_DATA *p_data);
-
-
-typedef void (tGATT_CONGESTION_CBACK )(UINT16 conn_id, BOOLEAN congested);
-
-
-typedef void (tGATT_ENC_CMPL_CB)(tGATT_IF gatt_if, BD_ADDR bda);
-
-
-
-
-
-
-typedef struct {
-    tGATT_CONN_CBACK *p_conn_cb;
-    tGATT_CMPL_CBACK *p_cmpl_cb;
-    tGATT_DISC_RES_CB *p_disc_res_cb;
-    tGATT_DISC_CMPL_CB *p_disc_cmpl_cb;
-    tGATT_REQ_CBACK *p_req_cb;
-    tGATT_ENC_CMPL_CB *p_enc_cmpl_cb;
-    tGATT_CONGESTION_CBACK *p_congestion_cb;
-} tGATT_CBACK;
-
-
-
-
-
-typedef struct {
-    tBT_UUID app_uuid128;
-    tBT_UUID svc_uuid;
-    UINT16 svc_inst;
-    UINT16 s_handle;
-    UINT16 e_handle;
-    BOOLEAN is_primary;
-} tGATTS_HNDL_RANGE;
-# 618 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-typedef UINT8 tGATTS_SRV_CHG_CMD;
-
-typedef struct {
-    BD_ADDR bda;
-    BOOLEAN srv_changed;
-} tGATTS_SRV_CHG;
-
-
-typedef union {
-    tGATTS_SRV_CHG srv_chg;
-    UINT8 client_read_index;
-} tGATTS_SRV_CHG_REQ;
-
-typedef union {
-    tGATTS_SRV_CHG srv_chg;
-    UINT8 num_clients;
-} tGATTS_SRV_CHG_RSP;
-
-
-
-typedef struct {
-    tGATTS_HNDL_RANGE *p_new_srv_start;
-} tGATTS_PENDING_NEW_SRV_START;
-
-
-
-typedef void (tGATTS_NV_SAVE_CBACK)(BOOLEAN is_saved, tGATTS_HNDL_RANGE *p_hndl_range);
-typedef BOOLEAN (tGATTS_NV_SRV_CHG_CBACK)(tGATTS_SRV_CHG_CMD cmd, tGATTS_SRV_CHG_REQ *p_req,
-        tGATTS_SRV_CHG_RSP *p_rsp);
-
-typedef struct {
-    tGATTS_NV_SAVE_CBACK *p_nv_save_callback;
-    tGATTS_NV_SRV_CHG_CBACK *p_srv_chg_callback;
-} tGATT_APPL_INFO;
-# 674 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-extern UINT8 GATT_SetTraceLevel (UINT8 new_level);
-# 695 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-extern BOOLEAN GATTS_AddHandleRange(tGATTS_HNDL_RANGE *p_hndl_range);
-# 710 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-extern BOOLEAN GATTS_NVRegister (const tGATT_APPL_INFO *p_cb_info);
-# 730 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-extern UINT16 GATTS_CreateService (tGATT_IF gatt_if, tBT_UUID *p_svc_uuid,
-                                   UINT16 svc_inst, UINT16 num_handles, BOOLEAN is_pri);
-# 747 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-extern UINT16 GATTS_AddIncludeService (UINT16 service_handle,
-                                       UINT16 include_svc_handle);
-# 769 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-extern UINT16 GATTS_AddCharacteristic (UINT16 service_handle, tBT_UUID *p_char_uuid,
-                                tGATT_PERM perm, tGATT_CHAR_PROP property,
-                                tGATT_ATTR_VAL *attr_val, tGATTS_ATTR_CONTROL *control);
-# 792 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-extern UINT16 GATTS_AddCharDescriptor (UINT16 service_handle, tGATT_PERM perm,
-                                                                tBT_UUID *p_descr_uuid, tGATT_ATTR_VAL *attr_val,
-                                                                tGATTS_ATTR_CONTROL *control);
-# 809 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-extern BOOLEAN GATTS_DeleteService (tGATT_IF gatt_if, tBT_UUID *p_svc_uuid,
-                                    UINT16 svc_inst);
-# 825 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-extern tGATT_STATUS GATTS_StartService (tGATT_IF gatt_if, UINT16 service_handle,
-                                        tGATT_TRANSPORT sup_transport);
-# 840 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-extern void GATTS_StopService (UINT16 service_handle);
-# 857 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-extern tGATT_STATUS GATTS_HandleValueIndication (UINT16 conn_id,
-        UINT16 attr_handle,
-        UINT16 val_len, UINT8 *p_val);
-# 875 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-extern tGATT_STATUS GATTS_HandleValueNotification (UINT16 conn_id, UINT16 attr_handle,
-        UINT16 val_len, UINT8 *p_val);
-# 893 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-extern tGATT_STATUS GATTS_SendRsp (UINT16 conn_id, UINT32 trans_id,
-                                    tGATT_STATUS status, tGATTS_RSP *p_msg);
-# 910 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-tGATT_STATUS GATTS_SetAttributeValue(UINT16 attr_handle, UINT16 length, UINT8 *value);
-# 926 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-tGATT_STATUS GATTS_GetAttributeValue(UINT16 attr_handle, UINT16 *length, UINT8 **value);
-# 947 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-extern tGATT_STATUS GATTC_ConfigureMTU (UINT16 conn_id);
-# 962 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-extern tGATT_STATUS GATTC_Discover (UINT16 conn_id,
-                                    tGATT_DISC_TYPE disc_type,
-                                    tGATT_DISC_PARAM *p_param );
-# 979 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-extern tGATT_STATUS GATTC_Read (UINT16 conn_id, tGATT_READ_TYPE type,
-                                tGATT_READ_PARAM *p_read);
-# 996 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-extern tGATT_STATUS GATTC_Write (UINT16 conn_id, tGATT_WRITE_TYPE type,
-                                 tGATT_VALUE *p_write);
-# 1013 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-extern tGATT_STATUS GATTC_ExecuteWrite (UINT16 conn_id, BOOLEAN is_execute);
-# 1028 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-extern tGATT_STATUS GATTC_SendHandleValueConfirm (UINT16 conn_id, UINT16 handle);
-# 1045 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-extern void GATT_SetIdleTimeout (BD_ADDR bd_addr, UINT16 idle_tout,
-                                 tGATT_TRANSPORT transport);
-# 1062 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-extern tGATT_IF GATT_Register (tBT_UUID *p_app_uuid128, const tGATT_CBACK *p_cb_info);
-# 1075 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-extern void GATT_Deregister (tGATT_IF gatt_if);
-# 1090 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-extern void GATT_StartIf (tGATT_IF gatt_if);
-# 1108 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-extern BOOLEAN GATT_Connect (tGATT_IF gatt_if, BD_ADDR bd_addr, tBLE_ADDR_TYPE bd_addr_type,
-                             BOOLEAN is_direct, tBT_TRANSPORT transport);
-# 1127 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-extern BOOLEAN GATT_CancelConnect (tGATT_IF gatt_if, BD_ADDR bd_addr,
-                                   BOOLEAN is_direct);
-# 1142 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-extern tGATT_STATUS GATT_Disconnect (UINT16 conn_id);
-# 1155 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-extern tGATT_STATUS GATT_SendServiceChangeIndication (BD_ADDR bd_addr);
-# 1172 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-extern BOOLEAN GATT_GetConnectionInfor(UINT16 conn_id, tGATT_IF *p_gatt_if,
-                                       BD_ADDR bd_addr, tBT_TRANSPORT *p_transport);
-# 1191 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-extern BOOLEAN GATT_GetConnIdIfConnected(tGATT_IF gatt_if, BD_ADDR bd_addr,
-        UINT16 *p_conn_id, tBT_TRANSPORT transport);
-# 1210 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-extern BOOLEAN GATT_Listen (tGATT_IF gatt_if, BOOLEAN start, BD_ADDR_PTR bd_addr);
-# 1221 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h"
-extern void GATT_ConfigServiceChangeCCC (BD_ADDR remote_bda, BOOLEAN enable,
-        tBT_TRANSPORT transport);
-# 30 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/list.h" 1
-
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 6 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/list.h" 2
-struct list_node_t;
-typedef struct list_node_t list_node_t;
-
-struct list_t;
-typedef struct list_t list_t;
-
-typedef void (*list_free_cb)(void *data);
-typedef 
-# 13 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/list.h" 3 4
-       _Bool 
-# 13 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/list.h"
-            (*list_iter_cb)(void *data, void *context);
-
-
-
-
-
-
-
-list_t *list_new(list_free_cb callback);
-
-
-list_node_t *list_free_node(list_t *list, list_node_t *node);
-
-
-void list_free(list_t *list);
-
-
-
-
-# 31 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/list.h" 3 4
-_Bool 
-# 31 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/list.h"
-    list_is_empty(const list_t *list);
-
-
-
-
-# 35 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/list.h" 3 4
-_Bool 
-# 35 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/list.h"
-    list_contains(const list_t *list, const void *data);
-
-
-size_t list_length(const list_t *list);
-
-
-
-void *list_front(const list_t *list);
-
-
-
-void *list_back(const list_t *list);
-list_node_t *list_back_node(const list_t *list);
-
-
-
-
-
-
-
-# 54 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/list.h" 3 4
-_Bool 
-# 54 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/list.h"
-    list_insert_after(list_t *list, list_node_t *prev_node, void *data);
-
-
-
-
-
-
-# 60 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/list.h" 3 4
-_Bool 
-# 60 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/list.h"
-    list_prepend(list_t *list, void *data);
-
-
-
-
-
-
-# 66 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/list.h" 3 4
-_Bool 
-# 66 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/list.h"
-    list_append(list_t *list, void *data);
-# 76 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/list.h"
-
-# 76 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/list.h" 3 4
-_Bool 
-# 76 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/list.h"
-    list_remove(list_t *list, void *data);
-
-
-
-void list_clear(list_t *list);
-
-
-
-
-
-
-list_node_t *list_foreach(const list_t *list, list_iter_cb callback, void *context);
-
-
-
-
-list_node_t *list_begin(const list_t *list);
-
-
-
-
-
-list_node_t *list_end(const list_t *list);
-
-
-
-
-
-list_node_t *list_next(const list_node_t *node);
-
-
-
-void *list_node(const list_node_t *node);
-# 31 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h" 2
-# 46 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-typedef enum {
-    BTGATT_DB_PRIMARY_SERVICE,
-    BTGATT_DB_SECONDARY_SERVICE,
-    BTGATT_DB_CHARACTERISTIC,
-    BTGATT_DB_DESCRIPTOR,
-    BTGATT_DB_INCLUDED_SERVICE,
-}bt_gatt_db_attribute_type_t;
+} btc_adv_packet_t;
 
 typedef enum {
-    GATT_OP_GET_SVC_BY_UUID,
-    GATT_OP_GET_ALL_CHAR,
-    GATT_OP_GET_ALL_DESCRI,
-    GATT_OP_GET_CHAR_BY_UUID,
-    GATT_OP_GET_DESCRI_BY_UUID,
-    GATT_OP_GET_DESCRI_BY_HANDLE,
-    GATT_OP_GET_INCLUDE_SVC,
-}bt_gatt_get_db_op_t;
-
-typedef struct {
-    bt_gatt_db_attribute_type_t type;
-    UINT16 attribute_handle;
-    UINT16 start_handle;
-    UINT16 end_handle;
-    UINT16 id;
-    UINT8 properties;
-    bt_uuid_t uuid;
-}btgatt_db_element_t;
-# 81 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-typedef struct {
-    tBT_UUID uuid;
-    UINT8 inst_id;
-} __attribute__((packed)) tBTA_GATT_ID;
-# 140 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-typedef UINT8 tBTA_GATT_STATUS;
-# 189 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-typedef UINT8 tBTA_GATTC_EVT;
-
-typedef tGATT_IF tBTA_GATTC_IF;
-
-typedef UINT8 tBTA_ADDR_TYPE;
-
-typedef struct {
-    UINT16 unit;
-    UINT16 descr;
-    tGATT_FORMAT format;
-    INT8 exp;
-    UINT8 name_spc;
-} tBTA_GATT_CHAR_PRES;
-
-typedef struct {
-    UINT16 interval;
-    UINT16 latency;
-    UINT16 timeout;
-} tBTA_GATT_CONN_PARAMS;
-
-
-
-
-typedef UINT16 tBTA_GATT_CLT_CHAR_CONFIG;
-
-
-
-
-
-typedef UINT16 tBTA_GATT_SVR_CHAR_CONFIG;
-
-
-
-
-typedef struct {
-    UINT8 num_handle;
-    UINT16 handle_list[10];
-} tBTA_GATT_CHAR_AGGRE;
-typedef tGATT_VALID_RANGE tBTA_GATT_VALID_RANGE;
-
-typedef struct {
-    UINT16 len;
-    UINT8 *p_value;
-} tBTA_GATT_UNFMT;
-
-
-
-
-
-typedef UINT8 tBTA_GATTC_WRITE_TYPE;
-# 250 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-typedef UINT16 tBTA_GATT_REASON;
-
-typedef struct {
-    tBTA_GATT_ID id;
-    BOOLEAN is_primary;
-} tBTA_GATT_SRVC_ID;
-
-
-
-
-typedef struct {
-    UINT8 num_attr;
-    UINT16 handles[10];
-}tBTA_GATTC_MULTI;
-# 272 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-typedef tGATT_AUTH_REQ tBTA_GATT_AUTH_REQ;
-
-enum {
-    BTA_GATTC_ATTR_TYPE_INCL_SRVC,
-    BTA_GATTC_ATTR_TYPE_CHAR,
-    BTA_GATTC_ATTR_TYPE_CHAR_DESCR,
-    BTA_GATTC_ATTR_TYPE_SRVC
-};
-typedef UINT8 tBTA_GATTC_ATTR_TYPE;
-
-
-typedef struct {
-    tBT_UUID uuid;
-    UINT16 s_handle;
-    UINT16 e_handle;
-    UINT8 attr_type;
-    UINT8 id;
-    UINT8 prop;
-    BOOLEAN is_primary;
-    UINT16 incl_srvc_s_handle;
-    UINT16 incl_srvc_e_handle;
-}tBTA_GATTC_NV_ATTR;
-
-
-typedef struct {
-    tBTA_GATT_STATUS status;
-    tBTA_GATTC_IF client_if;
-    tBT_UUID app_uuid;
-}tBTA_GATTC_REG;
-
-typedef struct {
-    UINT16 conn_id;
-    tBTA_GATT_STATUS status;
-    UINT16 handle;
-    tBTA_GATT_UNFMT *p_value;
-}tBTA_GATTC_READ;
-
-typedef struct {
-    UINT16 conn_id;
-    tBTA_GATT_STATUS status;
-    UINT16 handle;
-    UINT16 offset;
-}tBTA_GATTC_WRITE;
-
-typedef struct {
-    UINT16 conn_id;
-    tBTA_GATT_STATUS status;
-} tBTA_GATTC_EXEC_CMPL;
-
-typedef struct {
-    UINT16 conn_id;
-    tBTA_GATT_STATUS status;
-    UINT8 searched_service_source;
-} tBTA_GATTC_SEARCH_CMPL;
-
-typedef struct {
-    UINT16 conn_id;
-    tBTA_GATT_STATUS status;
-}tBTA_GATTC_DIS_CMPL;
-
-typedef struct {
-    UINT16 conn_id;
-    UINT16 start_handle;
-    UINT16 end_handle;
-    tBTA_GATT_ID service_uuid;
-    
-# 337 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h" 3 4
-   _Bool 
-# 337 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-                       is_primary;
-}tBTA_GATTC_SRVC_RES;
-
-typedef struct {
-    UINT16 conn_id;
-    tBTA_GATT_STATUS status;
-    UINT16 mtu;
-} tBTA_GATTC_CFG_MTU;
-
-typedef struct {
-    tBTA_GATT_STATUS status;
-    UINT16 conn_id;
-    tBTA_GATTC_IF client_if;
-    BD_ADDR remote_bda;
-    tBTA_TRANSPORT transport;
-    UINT16 mtu;
-} tBTA_GATTC_OPEN;
-
-typedef struct {
-    tBTA_GATT_STATUS status;
-    UINT16 conn_id;
-    tBTA_GATTC_IF client_if;
-    BD_ADDR remote_bda;
-    tBTA_GATT_REASON reason;
-} tBTA_GATTC_CLOSE;
-
-typedef struct {
-    UINT16 conn_id;
-    BD_ADDR bda;
-    UINT16 handle;
-    UINT16 len;
-    UINT8 value[600];
-    BOOLEAN is_notify;
-} tBTA_GATTC_NOTIFY;
-
-typedef struct {
-    UINT16 conn_id;
-    BOOLEAN congested;
-} tBTA_GATTC_CONGEST;
-
-typedef struct {
-    tBTA_GATT_STATUS status;
-    UINT16 conn_id;
-    BOOLEAN is_full;
-} tBTA_GATTC_QUEUE_FULL;
-
-typedef struct {
-    tBTA_GATT_STATUS status;
-    tBTA_GATTC_IF client_if;
-} tBTA_GATTC_SET_ASSOC;
-
-typedef struct {
-    tBTA_GATT_STATUS status;
-    tBTA_GATTC_IF client_if;
-    UINT8 num_addr;
-    BD_ADDR *bda_list;
-} tBTA_GATTC_GET_ADDR_LIST;
-
-typedef struct {
-    tBTA_GATT_STATUS status;
-    tBTA_GATTC_IF client_if;
-    UINT16 conn_id;
-    BD_ADDR remote_bda;
-} tBTA_GATTC_OPEN_CLOSE;
-
-typedef struct {
-    tBTA_GATTC_IF client_if;
-    BD_ADDR remote_bda;
-} tBTA_GATTC_ENC_CMPL_CB;
-
-typedef struct {
-    UINT16 conn_id;
-    tBTA_GATTC_IF client_if;
-    BD_ADDR remote_bda;
-    tBTA_GATT_CONN_PARAMS conn_params;
-} tBTA_GATTC_CONNECT;
-
-typedef struct {
-    tGATT_DISCONN_REASON reason;
-    UINT16 conn_id;
-    tBTA_GATTC_IF client_if;
-    BD_ADDR remote_bda;
-} tBTA_GATTC_DISCONNECT;
-
-typedef struct {
-    UINT16 conn_id;
-    BD_ADDR remote_bda;
-} tBTA_GATTC_SERVICE_CHANGE;
-
-typedef union {
-    tBTA_GATT_STATUS status;
-    tBTA_GATTC_DIS_CMPL dis_cmpl;
-    tBTA_GATTC_SEARCH_CMPL search_cmpl;
-    tBTA_GATTC_SRVC_RES srvc_res;
-    tBTA_GATTC_REG reg_oper;
-    tBTA_GATTC_OPEN open;
-    tBTA_GATTC_CONNECT connect;
-    tBTA_GATTC_CLOSE close;
-    tBTA_GATTC_DISCONNECT disconnect;
-    tBTA_GATTC_READ read;
-    tBTA_GATTC_WRITE write;
-    tBTA_GATTC_EXEC_CMPL exec_cmpl;
-    tBTA_GATTC_NOTIFY notify;
-    tBTA_GATTC_ENC_CMPL_CB enc_cmpl;
-    tBTA_GATTC_CFG_MTU cfg_mtu;
-    tBTA_GATTC_CONGEST congest;
-    tBTA_GATTC_QUEUE_FULL queue_full;
-    tBTA_GATTC_SERVICE_CHANGE srvc_chg;
-    tBTA_GATTC_SET_ASSOC set_assoc;
-    tBTA_GATTC_GET_ADDR_LIST get_addr_list;
-} tBTA_GATTC;
-
-
-typedef void (tBTA_GATTC_ENB_CBACK)(tBTA_GATT_STATUS status);
-
-
-typedef void (tBTA_GATTC_CBACK)(tBTA_GATTC_EVT event, tBTA_GATTC *p_data);
-# 481 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-typedef UINT8 tBTA_GATTS_EVT;
-typedef tGATT_IF tBTA_GATTS_IF;
-# 494 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-typedef UINT16 tBTA_GATT_PERM;
-typedef tGATT_ATTR_VAL tBTA_GATT_ATTR_VAL;
-typedef tGATTS_ATTR_CONTROL tBTA_GATTS_ATTR_CONTROL;
-# 511 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-typedef UINT8 tBTA_GATT_CHAR_PROP;
-
-
-
-
-
-
-
-typedef struct {
-    tBT_UUID app_uuid128;
-    tBT_UUID svc_uuid;
-    UINT16 svc_inst;
-    UINT16 s_handle;
-    UINT16 e_handle;
-    BOOLEAN is_primary;
-} tBTA_GATTS_HNDL_RANGE;
-
-
-
-
-
-
-typedef tGATTS_SRV_CHG_CMD tBTA_GATTS_SRV_CHG_CMD;
-
-typedef tGATTS_SRV_CHG tBTA_GATTS_SRV_CHG;
-typedef tGATTS_SRV_CHG_REQ tBTA_GATTS_SRV_CHG_REQ;
-typedef tGATTS_SRV_CHG_RSP tBTA_GATTS_SRV_CHG_RSP;
-
-
-
-
-typedef UINT8 tBTA_GATT_TRANSPORT;
-
-
-typedef tGATT_VALUE tBTA_GATT_VALUE;
-
-
-typedef tGATTS_RSP tBTA_GATTS_RSP;
-
-
-
-
-
-typedef tGATT_EXEC_FLAG tBTA_GATT_EXEC_FLAG;
-
-
-typedef tGATT_READ_REQ tBTA_GATT_READ_REQ;
-
-
-typedef tGATT_WRITE_REQ tBTA_GATT_WRITE_REQ;
-
-
-typedef tGATTS_DATA tBTA_GATTS_REQ_DATA;
-
-typedef struct {
-    tBTA_GATT_STATUS status;
-    BD_ADDR remote_bda;
-    UINT32 trans_id;
-    UINT16 conn_id;
-    UINT16 handle;
-    tBTA_GATTS_REQ_DATA *p_data;
-    UINT16 data_len;
-    UINT8 *value;
-} tBTA_GATTS_REQ;
-
-typedef struct {
-    tBTA_GATTS_IF server_if;
-    tBTA_GATT_STATUS status;
-    tBT_UUID uuid;
-}tBTA_GATTS_REG_OPER;
-
-
-typedef struct {
-    tBTA_GATTS_IF server_if;
-    UINT16 service_id;
-    UINT16 svc_instance;
-    BOOLEAN is_primary;
-    tBTA_GATT_STATUS status;
-    tBT_UUID uuid;
-}tBTA_GATTS_CREATE;
-
-typedef struct {
-    tBTA_GATTS_IF server_if;
-    UINT16 service_id;
-    UINT16 attr_id;
-    tBTA_GATT_STATUS status;
-    tBT_UUID char_uuid;
-}tBTA_GATTS_ADD_RESULT;
-typedef struct{
-    tBTA_GATTS_IF server_if;
-    UINT16 service_id;
-    UINT16 attr_id;
-    tBTA_GATT_STATUS status;
-}tBAT_GATTS_ATTR_VAL_RESULT;
-
-typedef struct {
-    tBTA_GATTS_IF server_if;
-    UINT16 service_id;
-    tBTA_GATT_STATUS status;
-} tBTA_GATTS_SRVC_OPER;
-
-
-typedef struct {
-    tBTA_GATTS_IF server_if;
-    BD_ADDR remote_bda;
-    UINT16 conn_id;
-    tBTA_GATT_REASON reason;
-    tBTA_GATT_TRANSPORT transport;
-    tBTA_GATT_CONN_PARAMS conn_params;
-} tBTA_GATTS_CONN;
-
-typedef struct {
-    UINT16 conn_id;
-    BOOLEAN congested;
-} tBTA_GATTS_CONGEST;
-
-typedef struct {
-    UINT16 conn_id;
-    tBTA_GATT_STATUS status;
-} tBTA_GATTS_CONF;
-
-typedef struct {
-    tBTA_GATT_STATUS status;
-    UINT16 conn_id;
-} tBTA_GATTS_CLOSE;
-
-typedef struct {
-    tBTA_GATT_STATUS status;
-    tBTA_GATTS_IF server_if;
-} tBTA_GATTS_SERVICE_CHANGE;
-
-typedef struct {
-    tBTA_GATT_STATUS status;
-    tBTA_GATTS_IF server_if;
-} tBTA_GATTS_OPEN;
-
-typedef struct {
-    tBTA_GATT_STATUS status;
-    tBTA_GATTS_IF server_if;
-} tBTA_GATTS_CANCEL_OPEN;
-
-typedef union {
-    tBTA_GATTS_REG_OPER reg_oper;
-    tBTA_GATTS_CREATE create;
-    tBTA_GATTS_SRVC_OPER srvc_oper;
-    tBTA_GATT_STATUS status;
-    tBTA_GATTS_ADD_RESULT add_result;
-
-
-    tBAT_GATTS_ATTR_VAL_RESULT attr_val;
-    tBTA_GATTS_REQ req_data;
-    tBTA_GATTS_CONN conn;
-    tBTA_GATTS_CONGEST congest;
-    tBTA_GATTS_CONF confirm;
-    tBTA_GATTS_CLOSE close;
-    tBTA_GATTS_OPEN open;
-    tBTA_GATTS_CANCEL_OPEN cancel_open;
-    tBTA_GATTS_SERVICE_CHANGE service_change;
-
-} tBTA_GATTS;
-
-
-typedef struct {
-    UINT16 conn_id;
-    BD_ADDR remote_bda;
-    UINT8 count;
-    UINT8 last_status;
-}tBTA_GATTC_WAIT_CCC_TIMER;
-
-
-typedef void (tBTA_GATTS_ENB_CBACK)(tBTA_GATT_STATUS status);
-
-
-typedef void (tBTA_GATTS_CBACK)(tBTA_GATTS_EVT event, tBTA_GATTS *p_data);
-typedef struct
-{
-    tBT_UUID uuid;
-    BOOLEAN is_primary;
-    UINT16 handle;
-    UINT16 s_handle;
-    UINT16 e_handle;
-    list_t *characteristics;
-    list_t *included_svc;
-} __attribute__((packed)) tBTA_GATTC_SERVICE;
-
-typedef struct
-{
-    tBT_UUID uuid;
-    UINT16 handle;
-    tBTA_GATT_CHAR_PROP properties;
-    tBTA_GATTC_SERVICE *service;
-    list_t *descriptors;
-} __attribute__((packed)) tBTA_GATTC_CHARACTERISTIC;
-
-typedef struct
-{
-    tBT_UUID uuid;
-    UINT16 handle;
-    tBTA_GATTC_CHARACTERISTIC *characteristic;
-} __attribute__((packed)) tBTA_GATTC_DESCRIPTOR;
-
-typedef struct
-{
-    tBT_UUID uuid;
-    UINT16 handle;
-    UINT16 incl_srvc_s_handle;
-    UINT16 incl_srvc_e_handle;
-    tBTA_GATTC_SERVICE *owning_service;
-    tBTA_GATTC_SERVICE *included_service;
-} __attribute__((packed)) tBTA_GATTC_INCLUDED_SVC;
-# 746 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTC_Disable(void);
-# 761 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTC_AppRegister(tBT_UUID *p_app_uuid, tBTA_GATTC_CBACK *p_client_cb);
-# 775 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTC_AppDeregister (tBTA_GATTC_IF client_if);
-# 792 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTC_Open(tBTA_GATTC_IF client_if, BD_ADDR remote_bda, tBTA_ADDR_TYPE remote_addr_type,
-                    BOOLEAN is_direct, tBTA_GATT_TRANSPORT transport);
-# 809 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTC_CancelOpen(tBTA_GATTC_IF client_if, BD_ADDR remote_bda, BOOLEAN is_direct);
-# 822 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTC_Close(UINT16 conn_id);
-# 840 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTC_ServiceSearchRequest(UINT16 conn_id, tBT_UUID *p_srvc_uuid);
-# 853 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern const list_t* BTA_GATTC_GetServices(UINT16 conn_id);
-# 867 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern const tBTA_GATTC_CHARACTERISTIC* BTA_GATTC_GetCharacteristic(UINT16 conn_id, UINT16 handle);
-# 881 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern const tBTA_GATTC_DESCRIPTOR* BTA_GATTC_GetDescriptor(UINT16 conn_id, UINT16 handle);
-
-extern void BTA_GATTC_GetServiceWithUUID(UINT16 conn_id, tBT_UUID *svc_uuid,
-                                         btgatt_db_element_t **db, int *count);
-
-extern void BTA_GATTC_GetAllChar(UINT16 conn_id, UINT16 start_handle, UINT16 end_handle,
-                                 btgatt_db_element_t **db, int *count);
-
-extern void BTA_GATTC_GetAllDescriptor(UINT16 conn_id, UINT16 char_handle,
-                                       btgatt_db_element_t **db, int *count);
-
-extern void BTA_GATTC_GetCharByUUID(UINT16 conn_id, UINT16 start_handle, UINT16 end_handle, tBT_UUID char_uuid,
-                                    btgatt_db_element_t **db, int *count);
-
-extern void BTA_GATTC_GetDescrByUUID(UINT16 conn_id, uint16_t start_handle, uint16_t end_handle,
-                                     tBT_UUID char_uuid, tBT_UUID descr_uuid,
-                                     btgatt_db_element_t **db, int *count);
-
-extern void BTA_GATTC_GetDescrByCharHandle(UINT16 conn_id, UINT16 char_handle, tBT_UUID descr_uuid,
-                                           btgatt_db_element_t **db, int *count);
-
-extern void BTA_GATTC_GetIncludeService(UINT16 conn_id, UINT16 start_handle, UINT16 end_handle,
-                                        tBT_UUID *incl_uuid, btgatt_db_element_t **db, int *count);
-
-extern void BTA_GATTC_GetDBSize(UINT16 conn_id, UINT16 start_handle, UINT16 end_handle, int *count);
-
-extern void BTA_GATTC_GetDBSizeByType(UINT16 conn_id, bt_gatt_db_attribute_type_t type,
-                                      UINT16 start_handle, UINT16 end_handle, UINT16 char_handle, int *count);
-# 922 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTC_GetGattDb(UINT16 conn_id, UINT16 start_handle, UINT16 end_handle,
-                                btgatt_db_element_t **db, int *count);
-# 937 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-void BTA_GATTC_ReadCharacteristic(UINT16 conn_id, UINT16 handle, tBTA_GATT_AUTH_REQ auth_req);
-# 951 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-void BTA_GATTC_ReadCharDescr (UINT16 conn_id, UINT16 handle, tBTA_GATT_AUTH_REQ auth_req);
-# 968 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-void BTA_GATTC_WriteCharValue ( UINT16 conn_id,
-                                UINT16 handle,
-                                tBTA_GATTC_WRITE_TYPE write_type,
-                                UINT16 len,
-                                UINT8 *p_value,
-                                tBTA_GATT_AUTH_REQ auth_req);
-# 989 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-void BTA_GATTC_WriteCharDescr (UINT16 conn_id,
-                               UINT16 handle,
-                               tBTA_GATTC_WRITE_TYPE write_type,
-                               tBTA_GATT_UNFMT *p_data,
-                               tBTA_GATT_AUTH_REQ auth_req);
-# 1007 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTC_SendIndConfirm (UINT16 conn_id, UINT16 handle);
-# 1022 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern tBTA_GATT_STATUS BTA_GATTC_RegisterForNotifications (tBTA_GATTC_IF client_if,
-                                                            BD_ADDR remote_bda,
-                                                            UINT16 handle);
-# 1039 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern tBTA_GATT_STATUS BTA_GATTC_DeregisterForNotifications (tBTA_GATTC_IF client_if,
-                                                              BD_ADDR remote_bda,
-                                                              UINT16 handle);
-# 1058 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTC_PrepareWrite (UINT16 conn_id,
-                                     UINT16 handle,
-                                     UINT16 offset,
-                                     UINT16 len,
-                                     UINT8 *p_value,
-                                     tBTA_GATT_AUTH_REQ auth_req);
-# 1080 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTC_PrepareWriteCharDescr (UINT16 conn_id,
-                                              UINT16 handle,
-                                              UINT16 offset,
-                                              tBTA_GATT_UNFMT *p_data,
-                                              tBTA_GATT_AUTH_REQ auth_req);
-# 1097 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTC_ExecuteWrite (UINT16 conn_id, BOOLEAN is_execute);
-# 1112 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTC_ReadMultiple(UINT16 conn_id, tBTA_GATTC_MULTI *p_read_multi,
-                                   tBTA_GATT_AUTH_REQ auth_req);
-# 1128 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTC_Refresh(BD_ADDR remote_bda, 
-# 1128 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h" 3 4
-                                                 _Bool 
-# 1128 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-                                                      erase_flash);
-
-extern void BTA_GATTC_CacheAssoc(tBTA_GATTC_IF client_if, BD_ADDR src_addr, BD_ADDR assoc_addr, BOOLEAN is_assoc);
-
-extern void BTA_GATTC_CacheGetAddrList(tBTA_GATTC_IF client_if);
-# 1145 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTC_Clean(BD_ADDR remote_bda);
-# 1161 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTC_Listen(tBTA_GATTC_IF client_if, BOOLEAN start, BD_ADDR_PTR target_bda);
-# 1175 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTC_Broadcast(tBTA_GATTC_IF client_if, BOOLEAN start);
-# 1191 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTC_ConfigureMTU (UINT16 conn_id);
-# 1208 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTS_Init(void);
-# 1221 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTS_Disable(void);
-# 1236 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTS_AppRegister(const tBT_UUID * p_app_uuid, tBTA_GATTS_CBACK *p_cback);
-# 1250 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTS_AppDeregister(tBTA_GATTS_IF server_if);
-# 1271 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTS_CreateService(tBTA_GATTS_IF server_if, const tBT_UUID * p_service_uuid,
-                                    UINT8 inst, UINT16 num_handle, BOOLEAN is_primary);
-# 1289 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTS_AddIncludeService(UINT16 service_id, UINT16 included_service_id);
-# 1306 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTS_AddCharacteristic (UINT16 service_id, const tBT_UUID * p_char_uuid,
-                                  tBTA_GATT_PERM perm, tBTA_GATT_CHAR_PROP property, tGATT_ATTR_VAL *attr_val,
-                                  tBTA_GATTS_ATTR_CONTROL *control);
-# 1327 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTS_AddCharDescriptor (UINT16 service_id,
-                                  tBTA_GATT_PERM perm,
-                                  const tBT_UUID * p_descr_uuid, tBTA_GATT_ATTR_VAL *attr_val,
-                                  tBTA_GATTS_ATTR_CONTROL *control);
-# 1344 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTS_DeleteService(UINT16 service_id);
-# 1358 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTS_StartService(UINT16 service_id, tBTA_GATT_TRANSPORT sup_transport);
-# 1371 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTS_StopService(UINT16 service_id);
-# 1388 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTS_HandleValueIndication (UINT16 conn_id, UINT16 attr_id,
-                                             UINT16 data_len,
-                                             UINT8 *p_data,
-                                             BOOLEAN need_confirm);
-# 1407 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTS_SendRsp (UINT16 conn_id, UINT32 trans_id,
-                               tBTA_GATT_STATUS status, tBTA_GATTS_RSP *p_msg);
-# 1425 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_SetAttributeValue(UINT16 attr_handle, UINT16 length, UINT8 *value);
-# 1441 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern tBTA_GATT_STATUS BTA_GetAttributeValue(UINT16 attr_handle, UINT16 *length, UINT8 **value);
-# 1457 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTS_Open(tBTA_GATTS_IF server_if, BD_ADDR remote_bda,
-                           BOOLEAN is_direct, tBTA_GATT_TRANSPORT transport);
-# 1475 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTS_CancelOpen(tBTA_GATTS_IF server_if, BD_ADDR remote_bda, BOOLEAN is_direct);
-# 1489 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTS_Close(UINT16 conn_id);
-# 1501 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-void BTA_GATTS_SendServiceChangeIndication(tBTA_GATTS_IF server_if, BD_ADDR remote_bda);
-# 1518 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_api.h"
-extern void BTA_GATTS_Listen(tBTA_GATTS_IF server_if, BOOLEAN start,
-                             BD_ADDR_PTR target_bda);
-# 15 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_common.h" 1
-# 32 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gatt_common.h"
-extern void BTA_GATT_SetLocalMTU(uint16_t mtu);
-
-extern uint16_t BTA_GATT_GetLocalMTU(void);
-# 16 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/gatt/include/bta_gattc_int.h" 1
-# 28 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/gatt/include/bta_gattc_int.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_sys.h" 1
-# 35 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_sys.h"
-typedef BOOLEAN (tBTA_SYS_VS_EVT_HDLR)(UINT16 evt, void *p);
-
-
-typedef BOOLEAN (tBTA_SYS_EVT_HDLR)(BT_HDR *p_msg);
-
-
-typedef void (tBTA_SYS_DISABLE)(void);
-
-
-
-enum {
-    BTA_SYS_HW_BLUETOOTH,
-    BTA_SYS_HW_RT,
-
-    BTA_SYS_MAX_HW_MODULES
-};
-
-typedef UINT16 tBTA_SYS_HW_MODULE;
-# 110 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_sys.h"
-typedef UINT8 tBTA_SYS_ID;
-# 129 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_sys.h"
-typedef UINT8 tBTA_SYS_CONN_STATUS;
-
-
-
-
-
-
-typedef UINT8 tBTA_SYS_PREF_ROLES;
-
-
-typedef void (tBTA_SYS_CONN_CBACK)(tBTA_SYS_CONN_STATUS status, UINT8 id, UINT8 app_id, BD_ADDR peer_addr);
-
-
-typedef void (tBTA_SYS_SSR_CFG_CBACK)(UINT8 id, UINT8 app_id, UINT16 latency, UINT16 tout);
-
-
-
-typedef void (tBTA_SYS_EIR_CBACK)(UINT16 uuid16, BOOLEAN adding);
-
-
-
-typedef struct {
-    tBTA_SYS_EVT_HDLR *evt_hdlr;
-    tBTA_SYS_DISABLE *disable;
-} tBTA_SYS_REG;
-
-
-typedef struct {
-    BT_HDR hdr;
-    tBTA_SYS_HW_MODULE hw_module;
-} tBTA_SYS_HW_MSG;
-
-
-
-
-
-
-extern UINT8 appl_trace_level;
-# 180 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_sys.h"
-enum {
-
-    BTA_SYS_API_ENABLE_EVT = ((0) << 8),
-    BTA_SYS_EVT_ENABLED_EVT,
-    BTA_SYS_EVT_STACK_ENABLED_EVT,
-    BTA_SYS_API_DISABLE_EVT,
-    BTA_SYS_EVT_DISABLED_EVT,
-    BTA_SYS_ERROR_EVT,
-
-    BTA_SYS_MAX_EVT
-};
-
-
-
-
-enum {
-    BTA_SYS_HW_OFF_EVT,
-    BTA_SYS_HW_ON_EVT,
-    BTA_SYS_HW_STARTING_EVT,
-    BTA_SYS_HW_STOPPING_EVT,
-    BTA_SYS_HW_ERROR_EVT
-
-};
-typedef UINT8 tBTA_SYS_HW_EVT;
-
-
-typedef void (tBTA_SYS_HW_CBACK)(tBTA_SYS_HW_EVT status);
-# 216 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_sys.h"
-extern void bta_sys_init(void);
-extern void bta_sys_free(void);
-extern void bta_sys_event(void * param);
-extern void bta_sys_set_trace_level(UINT8 level);
-extern void bta_sys_register(UINT8 id, const tBTA_SYS_REG *p_reg);
-extern void bta_sys_deregister(UINT8 id);
-extern BOOLEAN bta_sys_is_register(UINT8 id);
-extern UINT16 bta_sys_get_sys_features(void);
-extern void bta_sys_sendmsg(void *p_msg);
-extern void bta_sys_start_timer(TIMER_LIST_ENT *p_tle, UINT16 type, INT32 timeout_ms);
-extern void bta_sys_stop_timer(TIMER_LIST_ENT *p_tle);
-extern void bta_sys_free_timer(TIMER_LIST_ENT *p_tle);
-extern void bta_sys_disable(tBTA_SYS_HW_MODULE module);
-extern UINT32 bta_sys_get_remaining_ticks(TIMER_LIST_ENT *p_target_tle);
-
-extern void bta_sys_hw_register( tBTA_SYS_HW_MODULE module, tBTA_SYS_HW_CBACK *cback);
-extern void bta_sys_hw_unregister( tBTA_SYS_HW_MODULE module );
-
-
-extern void bta_sys_rm_register(tBTA_SYS_CONN_CBACK *p_cback);
-extern void bta_sys_pm_register(tBTA_SYS_CONN_CBACK *p_cback);
-
-extern void bta_sys_policy_register(tBTA_SYS_CONN_CBACK *p_cback);
-extern void bta_sys_sco_register(tBTA_SYS_CONN_CBACK *p_cback);
-
-
-extern void bta_sys_conn_open(UINT8 id, UINT8 app_id, BD_ADDR peer_addr);
-extern void bta_sys_conn_close(UINT8 id, UINT8 app_id, BD_ADDR peer_addr);
-extern void bta_sys_app_open(UINT8 id, UINT8 app_id, BD_ADDR peer_addr);
-extern void bta_sys_app_close(UINT8 id, UINT8 app_id, BD_ADDR peer_addr);
-extern void bta_sys_sco_open(UINT8 id, UINT8 app_id, BD_ADDR peer_addr);
-extern void bta_sys_sco_close(UINT8 id, UINT8 app_id, BD_ADDR peer_addr);
-extern void bta_sys_sco_use(UINT8 id, UINT8 app_id, BD_ADDR peer_addr);
-extern void bta_sys_sco_unuse(UINT8 id, UINT8 app_id, BD_ADDR peer_addr);
-extern void bta_sys_idle(UINT8 id, UINT8 app_id, BD_ADDR peer_addr);
-extern void bta_sys_busy(UINT8 id, UINT8 app_id, BD_ADDR peer_addr);
-
-
-
-
-
-
-extern void bta_sys_role_chg_register(tBTA_SYS_CONN_CBACK *p_cback);
-extern void bta_sys_notify_role_chg(BD_ADDR_PTR p_bda, UINT8 new_role, UINT8 hci_status);
-extern void bta_sys_collision_register(UINT8 bta_id, tBTA_SYS_CONN_CBACK *p_cback);
-extern void bta_sys_notify_collision (BD_ADDR_PTR p_bda);
-
-
-extern void bta_sys_eir_register(tBTA_SYS_EIR_CBACK *p_cback);
-extern void bta_sys_add_uuid(UINT16 uuid16);
-extern void bta_sys_remove_uuid(UINT16 uuid16);
-
-
-
-
-
-
-extern void bta_sys_set_policy (UINT8 id, UINT8 policy, BD_ADDR peer_addr);
-extern void bta_sys_clear_policy (UINT8 id, UINT8 policy, BD_ADDR peer_addr);
-extern void bta_sys_set_default_policy (UINT8 id, UINT8 policy);
-extern void bta_sys_clear_default_policy (UINT8 id, UINT8 policy);
-extern BOOLEAN bta_sys_vs_hdl(UINT16 evt, void *p);
-# 29 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/gatt/include/bta_gattc_int.h" 2
-
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gattc_ci.h" 1
-# 34 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gattc_ci.h"
-typedef struct {
-    BT_HDR hdr;
-    tBTA_GATT_STATUS status;
-} tBTA_GATTC_CI_EVT;
-
-
-
-
-typedef struct {
-    BT_HDR hdr;
-    tBTA_GATT_STATUS status;
-    UINT16 num_attr;
-    tBTA_GATTC_NV_ATTR attr[100];
-} tBTA_GATTC_CI_LOAD;
-# 72 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gattc_ci.h"
-extern void bta_gattc_ci_cache_open(BD_ADDR server_bda, UINT16 evt,
-                                    tBTA_GATT_STATUS status, UINT16 conn_id);
-# 91 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gattc_ci.h"
-extern void bta_gattc_ci_cache_load(BD_ADDR server_bda, UINT16 evt,
-                                    UINT16 num_attr, tBTA_GATTC_NV_ATTR *p_atrr,
-                                    tBTA_GATT_STATUS status, UINT16 conn_id);
-# 109 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gattc_ci.h"
-extern void bta_gattc_ci_cache_save(BD_ADDR server_bda, UINT16 evt,
-                                    tBTA_GATT_STATUS status, UINT16 conn_id);
-# 31 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/gatt/include/bta_gattc_int.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gattc_co.h" 1
-# 28 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gattc_co.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/hash_functions.h" 1
-# 22 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/hash_functions.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/hash_map.h" 1
-# 25 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/hash_map.h"
-struct hash_map_t;
-typedef struct hash_map_t hash_map_t;
-
-typedef struct hash_map_entry_t {
-    const void *key;
-    void *data;
-    const hash_map_t *hash_map;
-} hash_map_entry_t;
-
-typedef size_t hash_index_t;
-
-
-typedef hash_index_t (*hash_index_fn)(const void *key);
-typedef 
-# 38 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/hash_map.h" 3 4
-       _Bool 
-# 38 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/hash_map.h"
-            (*hash_map_iter_cb)(hash_map_entry_t *hash_entry, void *context);
-
-typedef 
-# 40 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/hash_map.h" 3 4
-       _Bool 
-# 40 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/hash_map.h"
-            (*key_equality_fn)(const void *x, const void *y);
-
-typedef void (*key_free_fn)(void *data);
-typedef void (*data_free_fn)(void *data);
-# 54 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/hash_map.h"
-hash_map_t *hash_map_new(
-    size_t size,
-    hash_index_fn hash_fn,
-    key_free_fn key_fn,
-    data_free_fn data_fn,
-    key_equality_fn equality_fn);
-
-
-
-void hash_map_free(hash_map_t *hash_map);
-# 80 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/hash_map.h"
-
-# 80 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/hash_map.h" 3 4
-_Bool 
-# 80 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/hash_map.h"
-    hash_map_has_key(const hash_map_t *hash_map, const void *key);
-
-
-
-void *hash_map_get(const hash_map_t *hash_map, const void *key);
-
-
-
-
-
-
-
-# 91 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/hash_map.h" 3 4
-_Bool 
-# 91 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/hash_map.h"
-    hash_map_set(hash_map_t *hash_map, const void *key, void *data);
-
-
-
-
-
-
-# 97 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/hash_map.h" 3 4
-_Bool 
-# 97 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/hash_map.h"
-    hash_map_erase(hash_map_t *hash_map, const void *key);
-
-
-
-void hash_map_clear(hash_map_t *hash_map);
-
-
-
-
-
-
-void hash_map_foreach(hash_map_t *hash_map, hash_map_iter_cb callback, void *context);
-# 23 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/hash_functions.h" 2
-
-typedef unsigned char hash_key_t[4];
-
-hash_index_t hash_function_naive(const void *key);
-
-hash_index_t hash_function_integer(const void *key);
-
-
-hash_index_t hash_function_pointer(const void *key);
-
-hash_index_t hash_function_string(const void *key);
-
-void hash_function_blob(const unsigned char *s, unsigned int len, hash_key_t h);
-# 29 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gattc_co.h" 2
-# 45 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gattc_co.h"
-extern tBTA_GATT_STATUS bta_gattc_co_cache_open(BD_ADDR server_bda, BOOLEAN to_save, UINT8 *index);
-# 60 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gattc_co.h"
-extern void bta_gattc_co_cache_close(BD_ADDR server_bda, UINT16 conn_id);
-# 78 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gattc_co.h"
-extern void bta_gattc_co_cache_save (BD_ADDR server_bda, UINT16 num_attr,
-                              tBTA_GATTC_NV_ATTR *p_attr_list);
-# 96 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gattc_co.h"
-extern tBTA_GATT_STATUS bta_gattc_co_cache_load(tBTA_GATTC_NV_ATTR *attr, UINT8 index);
-# 110 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_gattc_co.h"
-extern void bta_gattc_co_cache_reset(BD_ADDR server_bda);
-
-extern size_t bta_gattc_get_cache_attr_length(UINT8 index);
-
-extern void bta_gattc_co_cache_addr_init(void);
-
-extern void bta_gattc_co_cache_addr_deinit(void);
-
-extern BOOLEAN bta_gattc_co_addr_in_cache(BD_ADDR bda);
-
-extern uint8_t bta_gattc_co_find_addr_in_cache(BD_ADDR bda);
-
-extern uint8_t bta_gattc_co_find_hash_in_cache(hash_key_t hash_key);
-
-extern UINT8 bta_gattc_co_get_addr_num(void);
-
-extern void bta_gattc_co_get_addr_list(BD_ADDR *addr_list);
-
-extern void bta_gattc_co_cache_addr_save(BD_ADDR bd_addr, hash_key_t hash_key);
-
-extern BOOLEAN bta_gattc_co_cache_new_assoc_list(BD_ADDR src_addr, uint8_t index);
-
-extern BOOLEAN bta_gattc_co_cache_append_assoc_addr(BD_ADDR src_addr, BD_ADDR assoc_addr);
-
-extern BOOLEAN bta_gattc_co_cache_remove_assoc_addr(BD_ADDR src_addr, BD_ADDR assoc_addr);
-
-uint8_t* bta_gattc_co_cache_find_src_addr(BD_ADDR assoc_addr, uint8_t *index);
-
-extern BOOLEAN bta_gattc_co_cache_clear_assoc_addr(BD_ADDR src_addr);
-# 32 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/gatt/include/bta_gattc_int.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h" 1
-# 32 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h"
-struct fixed_queue_t;
-
-typedef struct fixed_queue_t fixed_queue_t;
-
-
-typedef void (*fixed_queue_free_cb)(void *data);
-typedef void (*fixed_queue_cb)(fixed_queue_t *queue);
-
-
-
-
-
-fixed_queue_t *fixed_queue_new(size_t capacity);
-
-
-
-void fixed_queue_free(fixed_queue_t *queue, fixed_queue_free_cb free_cb);
-
-
-
-
-# 52 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h" 3 4
-_Bool 
-# 52 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h"
-    fixed_queue_is_empty(fixed_queue_t *queue);
-
-
-
-size_t fixed_queue_length(fixed_queue_t *queue);
-
-
-
-size_t fixed_queue_capacity(fixed_queue_t *queue);
-
-
-
-
-# 64 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h" 3 4
-_Bool 
-# 64 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h"
-    fixed_queue_enqueue(fixed_queue_t *queue, void *data, uint32_t timeout);
-
-
-
-
-void *fixed_queue_dequeue(fixed_queue_t *queue, uint32_t timeout);
-
-
-
-
-void *fixed_queue_try_peek_first(fixed_queue_t *queue);
-
-
-
-
-void *fixed_queue_try_peek_last(fixed_queue_t *queue);
-
-
-
-
-
-
-void *fixed_queue_try_remove_from_queue(fixed_queue_t *queue, void *data);
-# 95 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h"
-list_t *fixed_queue_get_list(fixed_queue_t *queue);
-# 115 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h"
-void fixed_queue_register_dequeue(fixed_queue_t *queue, fixed_queue_cb ready_cb);
-
-
-
-void fixed_queue_unregister_dequeue(fixed_queue_t *queue);
-
-void fixed_queue_process(fixed_queue_t *queue);
-
-list_t *fixed_queue_get_list(fixed_queue_t *queue);
-# 33 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/gatt/include/bta_gattc_int.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/mutex.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/mutex.h"
-typedef SemaphoreHandle_t osi_mutex_t;
-
-int osi_mutex_new(osi_mutex_t *mutex);
-
-int osi_mutex_lock(osi_mutex_t *mutex, uint32_t timeout);
-
-void osi_mutex_unlock(osi_mutex_t *mutex);
-
-void osi_mutex_free(osi_mutex_t *mutex);
-
-
-int osi_mutex_global_init(void);
-
-void osi_mutex_global_deinit(void);
-
-void osi_mutex_global_lock(void);
-
-void osi_mutex_global_unlock(void);
-# 34 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/gatt/include/bta_gattc_int.h" 2
-
-
-
-
-enum {
-    BTA_GATTC_API_OPEN_EVT = ((31) << 8),
-    BTA_GATTC_INT_OPEN_FAIL_EVT,
-    BTA_GATTC_API_CANCEL_OPEN_EVT,
-    BTA_GATTC_INT_CANCEL_OPEN_OK_EVT,
-
-    BTA_GATTC_API_READ_EVT,
-    BTA_GATTC_API_WRITE_EVT,
-    BTA_GATTC_API_EXEC_EVT,
-    BTA_GATTC_API_CFG_MTU_EVT,
-
-    BTA_GATTC_API_CLOSE_EVT,
-
-    BTA_GATTC_API_SEARCH_EVT,
-    BTA_GATTC_API_CONFIRM_EVT,
-    BTA_GATTC_API_READ_MULTI_EVT,
-    BTA_GATTC_API_REFRESH_EVT,
-    BTA_GATTC_API_CACHE_CLEAN_EVT,
-
-    BTA_GATTC_INT_CONN_EVT,
-    BTA_GATTC_INT_DISCOVER_EVT,
-    BTA_GATTC_DISCOVER_CMPL_EVT,
-    BTA_GATTC_OP_CMPL_EVT,
-    BTA_GATTC_INT_DISCONN_EVT,
-
-    BTA_GATTC_INT_START_IF_EVT,
-    BTA_GATTC_API_REG_EVT,
-    BTA_GATTC_API_DEREG_EVT,
-    BTA_GATTC_API_LISTEN_EVT,
-    BTA_GATTC_API_BROADCAST_EVT,
-    BTA_GATTC_API_DISABLE_EVT,
-    BTA_GATTC_ENC_CMPL_EVT,
-    BTA_GATTC_API_CACHE_ASSOC_EVT,
-    BTA_GATTC_API_CACHE_GET_ADDR_LIST_EVT,
-};
-typedef UINT16 tBTA_GATTC_INT_EVT;
-
-
+    BTC_SIG_API_CALL = 0,
+    BTC_SIG_API_CB,
+    BTC_SIG_NUM,
+} btc_sig_t;
 
 typedef enum {
-    BTA_GATTC_SERVICE_INFO_FROM_REMOTE_DEVICE = 0,
-    BTA_GATTC_SERVICE_INFO_FROM_NVS_FLASH = 1,
-    BTA_GATTC_SERVICE_INFO_FROM_UNKNOWN = 2,
-} tBTA_SERVICE_SOURCE_t;
-# 111 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/gatt/include/bta_gattc_int.h"
-typedef struct {
-    BT_HDR hdr;
-    tBT_UUID app_uuid;
-    tBTA_GATTC_CBACK *p_cback;
-} tBTA_GATTC_API_REG;
+    BTC_PID_MAIN_INIT = 0,
+    BTC_PID_DEV,
+    BTC_PID_GATTS,
+
+
+
+    BTC_PID_GATT_COMMON,
+    BTC_PID_GAP_BLE,
+    BTC_PID_BLE_HID,
+    BTC_PID_SPPLIKE,
+    BTC_PID_BLUFI,
+    BTC_PID_DM_SEC,
+    BTC_PID_ALARM,
+# 74 "/home/dieter/Development/esp-idf/components/bt/common/btc/include/btc/btc_task.h"
+    BTC_PID_PROV,
+    BTC_PID_MODEL,
+    BTC_PID_HEALTH_CLIENT,
+    BTC_PID_HEALTH_SERVER,
+    BTC_PID_CONFIG_CLIENT,
+    BTC_PID_CONFIG_SERVER,
+    BTC_PID_GENERIC_CLIENT,
+    BTC_PID_LIGHTING_CLIENT,
+    BTC_PID_SENSOR_CLIENT,
+    BTC_PID_TIME_SCENE_CLIENT,
+    BTC_PID_GENERIC_SERVER,
+    BTC_PID_LIGHTING_SERVER,
+    BTC_PID_SENSOR_SERVER,
+    BTC_PID_TIME_SCENE_SERVER,
+
+    BTC_PID_NUM,
+} btc_pid_t;
 
 typedef struct {
-    BT_HDR hdr;
-    tBTA_GATTC_IF client_if;
-} tBTA_GATTC_INT_START_IF;
-
-typedef tBTA_GATTC_INT_START_IF tBTA_GATTC_API_DEREG;
-typedef tBTA_GATTC_INT_START_IF tBTA_GATTC_INT_DEREG;
-
-typedef struct {
-    BT_HDR hdr;
-    BD_ADDR remote_bda;
-    tBTA_ADDR_TYPE remote_addr_type;
-    tBTA_GATTC_IF client_if;
-    BOOLEAN is_direct;
-    tBTA_TRANSPORT transport;
-} tBTA_GATTC_API_OPEN;
-
-typedef tBTA_GATTC_API_OPEN tBTA_GATTC_API_CANCEL_OPEN;
-
-typedef struct {
-    BT_HDR hdr;
-    tBTA_GATT_AUTH_REQ auth_req;
-    UINT16 handle;
-    tBTA_GATTC_EVT cmpl_evt;
-} tBTA_GATTC_API_READ;
-
-typedef struct {
-    BT_HDR hdr;
-    tBTA_GATT_AUTH_REQ auth_req;
-    UINT16 handle;
-    tBTA_GATTC_EVT cmpl_evt;
-    tBTA_GATTC_WRITE_TYPE write_type;
-    UINT16 offset;
-    UINT16 len;
-    UINT8 *p_value;
-} tBTA_GATTC_API_WRITE;
-
-typedef struct {
-    BT_HDR hdr;
-    BOOLEAN is_execute;
-} tBTA_GATTC_API_EXEC;
-
-typedef struct {
-    BT_HDR hdr;
-    UINT16 handle;
-} tBTA_GATTC_API_CONFIRM;
-
-typedef tGATT_CL_COMPLETE tBTA_GATTC_CMPL;
-
-typedef struct {
-    BT_HDR hdr;
-    UINT8 op_code;
-    tGATT_STATUS status;
-    tBTA_GATTC_CMPL *p_cmpl;
-} tBTA_GATTC_OP_CMPL;
-
-typedef struct {
-    BT_HDR hdr;
-    tBT_UUID *p_srvc_uuid;
-} tBTA_GATTC_API_SEARCH;
-
-typedef struct {
-    BT_HDR hdr;
-    tBTA_GATT_AUTH_REQ auth_req;
-    UINT8 num_attr;
-    UINT16 handles[10];
-    tBTA_GATTC_EVT cmpl_evt;
-}tBTA_GATTC_API_READ_MULTI;
-
-typedef struct {
-    BT_HDR hdr;
-    BD_ADDR_PTR remote_bda;
-    tBTA_GATTC_IF client_if;
-    BOOLEAN start;
-} tBTA_GATTC_API_LISTEN;
-
-
-typedef struct {
-    BT_HDR hdr;
-} tBTA_GATTC_API_CFG_MTU;
-
-typedef struct {
-    BT_HDR hdr;
-    tBTA_GATTC_IF client_if;
-    BD_ADDR src_addr;
-    BD_ADDR assoc_addr;
-    BOOLEAN is_assoc;
-} tBTA_GATTC_API_CACHE_ASSOC;
-
-typedef struct {
-    BT_HDR hdr;
-    tBTA_GATTC_IF client_if;
-} tBTA_GATTC_API_GET_ADDR;
-
-typedef struct {
-    BT_HDR hdr;
-    BD_ADDR remote_bda;
-    tBTA_GATTC_IF client_if;
-    UINT8 role;
-    tBT_TRANSPORT transport;
-    tGATT_DISCONN_REASON reason;
-    BOOLEAN already_connect;
-    tBTA_GATT_CONN_PARAMS conn_params;
-} tBTA_GATTC_INT_CONN;
-
-typedef struct {
-    BT_HDR hdr;
-    BD_ADDR remote_bda;
-    tBTA_GATTC_IF client_if;
-} tBTA_GATTC_ENC_CMPL;
-
-typedef union {
-    BT_HDR hdr;
-    tBTA_GATTC_API_REG api_reg;
-    tBTA_GATTC_API_DEREG api_dereg;
-    tBTA_GATTC_API_OPEN api_conn;
-    tBTA_GATTC_API_CANCEL_OPEN api_cancel_conn;
-    tBTA_GATTC_API_READ api_read;
-    tBTA_GATTC_API_SEARCH api_search;
-    tBTA_GATTC_API_WRITE api_write;
-    tBTA_GATTC_API_CONFIRM api_confirm;
-    tBTA_GATTC_API_EXEC api_exec;
-    tBTA_GATTC_API_READ_MULTI api_read_multi;
-    tBTA_GATTC_API_CFG_MTU api_mtu;
-    tBTA_GATTC_API_CACHE_ASSOC api_assoc;
-    tBTA_GATTC_API_GET_ADDR api_get_addr;
-    tBTA_GATTC_OP_CMPL op_cmpl;
-    tBTA_GATTC_INT_CONN int_conn;
-    tBTA_GATTC_ENC_CMPL enc_cmpl;
-
-    tBTA_GATTC_INT_START_IF int_start_if;
-    tBTA_GATTC_INT_DEREG int_dereg;
-
-    tBTA_GATTC_API_LISTEN api_listen;
-
-} tBTA_GATTC_DATA;
-
-
-
-typedef struct {
-    tBT_UUID uuid;
-    UINT16 s_handle;
-    UINT16 e_handle;
-
-    UINT16 char_decl_handle;
-    BOOLEAN is_primary;
-    tBTA_GATT_CHAR_PROP property;
-} tBTA_GATTC_ATTR_REC;
-# 274 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/gatt/include/bta_gattc_int.h"
-enum {
-    BTA_GATTC_IDLE_ST = 0,
-    BTA_GATTC_W4_CONN_ST,
-    BTA_GATTC_CONN_ST,
-    BTA_GATTC_DISCOVER_ST
-};
-typedef UINT8 tBTA_GATTC_STATE;
-
-typedef struct {
-    BOOLEAN in_use;
-    BD_ADDR server_bda;
-    BOOLEAN connected;
-
-
-
-
-
-
-
-    UINT8 state;
-
-    list_t *p_srvc_cache;
-    UINT8 update_count;
-    UINT8 num_clcb;
-
-
-    tBTA_GATTC_ATTR_REC *p_srvc_list;
-    UINT8 cur_srvc_idx;
-    UINT8 cur_char_idx;
-    UINT8 next_avail_idx;
-    UINT8 total_srvc;
-    UINT8 total_char;
-    UINT16 total_attr;
-    UINT8 srvc_hdl_chg;
-    UINT16 attr_index;
-
-    UINT16 mtu;
-    
-# 311 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/gatt/include/bta_gattc_int.h" 3 4
-   _Bool 
-# 311 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/gatt/include/bta_gattc_int.h"
-                       update_incl_srvc;
-} tBTA_GATTC_SERV;
-
-
-
-
-
-typedef struct {
-    BOOLEAN in_use;
-    BD_ADDR remote_bda;
-    UINT16 handle;
-}tBTA_GATTC_NOTIF_REG;
-
-typedef struct {
-    tBTA_GATTC_CBACK *p_cback;
-    BOOLEAN in_use;
-    tBTA_GATTC_IF client_if;
-    UINT8 num_clcb;
-    BOOLEAN dereg_pending;
-    tBT_UUID app_uuid;
-    tBTA_GATTC_NOTIF_REG notif_reg[7];
-} tBTA_GATTC_RCB;
-
-
-typedef struct {
-    UINT16 bta_conn_id;
-    BD_ADDR bda;
-    tBTA_TRANSPORT transport;
-    tBTA_GATTC_RCB *p_rcb;
-    tBTA_GATTC_SERV *p_srcb;
-    tBTA_GATTC_DATA *p_q_cmd;
-    list_t *p_cmd_list;
-    BOOLEAN is_full;
-
-
-
-
-    UINT8 auto_update;
-    BOOLEAN disc_active;
-    BOOLEAN in_use;
-    tBTA_GATTC_STATE state;
-    tBTA_GATT_STATUS status;
-    UINT16 reason;
-    UINT8 searched_service_source;
-} tBTA_GATTC_CLCB;
-
-
-
-typedef UINT8 tBTA_GATTC_CIF_MASK ;
-
-
-
-
-
-
-typedef struct {
-    BOOLEAN in_use;
-    BD_ADDR remote_bda;
-    tBTA_GATTC_CIF_MASK cif_mask;
-    tBTA_GATTC_CIF_MASK cif_adv_mask;
-
-} tBTA_GATTC_BG_TCK;
-
-typedef struct {
-    BOOLEAN in_use;
-    BD_ADDR remote_bda;
-    UINT16 svc_change_descr_handle;
-    BOOLEAN write_remote_svc_change_ccc_done;
-} tBTA_GATTC_CONN;
-
-enum {
-    BTA_GATTC_STATE_DISABLED,
-    BTA_GATTC_STATE_ENABLING,
-    BTA_GATTC_STATE_ENABLED,
-    BTA_GATTC_STATE_DISABLING
-};
-
-typedef struct {
-    UINT8 state;
-    tBTA_GATTC_CONN conn_track[4];
-    tBTA_GATTC_BG_TCK bg_track[4];
-    tBTA_GATTC_RCB cl_rcb[4];
-
-    tBTA_GATTC_CLCB clcb[12];
-    tBTA_GATTC_SERV known_server[4];
-}tBTA_GATTC_CB;
+    void (* btc_call)(btc_msg_t *msg);
+    void (* btc_cb)(btc_msg_t *msg);
+} btc_func_t;
+
+typedef void (* btc_arg_deep_copy_t)(btc_msg_t *msg, void *dst, void *src);
+
+bt_status_t btc_transfer_context(btc_msg_t *msg, void *arg, int arg_len, btc_arg_deep_copy_t copy_func);
+
+int btc_init(void);
+void btc_deinit(void);
+
+# 103 "/home/dieter/Development/esp-idf/components/bt/common/btc/include/btc/btc_task.h" 3 4
+_Bool 
+# 103 "/home/dieter/Development/esp-idf/components/bt/common/btc/include/btc/btc_task.h"
+    btc_check_queue_is_congest(void);
+# 14 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c" 2
+# 1 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/alarm.h" 1
+# 25 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/alarm.h"
+typedef struct alarm_t osi_alarm_t;
+typedef uint64_t period_ms_t;
+typedef esp_timer_cb_t osi_alarm_callback_t;
 
 typedef enum {
-    SERVICE_CHANGE_CCC_WRITTEN_SUCCESS = 0,
-    SERVICE_CHANGE_CACHE_NOT_FOUND,
-    SERVICE_CHANGE_SERVICE_NOT_FOUND,
-    SERVICE_CHANGE_CHAR_NOT_FOUND,
-    SERVICE_CHANGE_CCC_NOT_FOUND,
-    SERVICE_CHANGE_WRITE_CCC_FAILED
-}tBTA_GATTC_FIND_SERVICE_CB;
-# 414 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/gatt/include/bta_gattc_int.h"
-extern tBTA_GATTC_CB bta_gattc_cb;
-# 423 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/gatt/include/bta_gattc_int.h"
-extern BOOLEAN bta_gattc_hdl_event(BT_HDR *p_msg);
-extern BOOLEAN bta_gattc_sm_execute(tBTA_GATTC_CLCB *p_clcb, UINT16 event, tBTA_GATTC_DATA *p_data);
-
-
-extern void bta_gattc_disable(tBTA_GATTC_CB *p_cb);
-extern void bta_gattc_register(tBTA_GATTC_CB *p_cb, tBTA_GATTC_DATA *p_data);
-extern void bta_gattc_start_if(tBTA_GATTC_CB *p_cb, tBTA_GATTC_DATA *p_data);
-extern void bta_gattc_process_api_open (tBTA_GATTC_CB *p_cb, tBTA_GATTC_DATA *p_msg);
-extern void bta_gattc_process_api_open_cancel (tBTA_GATTC_CB *p_cb, tBTA_GATTC_DATA *p_msg);
-extern void bta_gattc_deregister(tBTA_GATTC_CB *p_cb, tBTA_GATTC_RCB *p_clreg);
-extern void bta_gattc_process_enc_cmpl(tBTA_GATTC_CB *p_cb, tBTA_GATTC_DATA *p_msg);
-
-
-extern void bta_gattc_open(tBTA_GATTC_CLCB *p_clcb, tBTA_GATTC_DATA *p_data);
-extern void bta_gattc_open_fail(tBTA_GATTC_CLCB *p_clcb, tBTA_GATTC_DATA *p_data);
-extern void bta_gattc_open_error(tBTA_GATTC_CLCB *p_clcb, tBTA_GATTC_DATA *p_data);
-
-extern void bta_gattc_cancel_open(tBTA_GATTC_CLCB *p_clcb, tBTA_GATTC_DATA *p_data);
-extern void bta_gattc_cancel_open_ok(tBTA_GATTC_CLCB *p_clcb, tBTA_GATTC_DATA *p_data);
-extern void bta_gattc_cancel_open_error(tBTA_GATTC_CLCB *p_clcb, tBTA_GATTC_DATA *p_data);
-
-extern void bta_gattc_conn(tBTA_GATTC_CLCB *p_clcb, tBTA_GATTC_DATA *p_data);
-extern void bta_gattc_conncback(tBTA_GATTC_RCB *p_rcb, tBTA_GATTC_DATA *p_data);
-extern void bta_gattc_disconncback(tBTA_GATTC_RCB *p_rcb, tBTA_GATTC_DATA *p_data);
-extern void bta_gattc_close(tBTA_GATTC_CLCB *p_clcb, tBTA_GATTC_DATA *p_data);
-extern void bta_gattc_close_fail(tBTA_GATTC_CLCB *p_clcb, tBTA_GATTC_DATA *p_data);
-extern void bta_gattc_disc_close(tBTA_GATTC_CLCB *p_clcb, tBTA_GATTC_DATA *p_data);
-
-extern void bta_gattc_start_discover(tBTA_GATTC_CLCB *p_clcb, tBTA_GATTC_DATA *p_data);
-extern void bta_gattc_disc_cmpl(tBTA_GATTC_CLCB *p_clcb, tBTA_GATTC_DATA *p_data);
-extern void bta_gattc_read(tBTA_GATTC_CLCB *p_clcb, tBTA_GATTC_DATA *p_data);
-extern void bta_gattc_write(tBTA_GATTC_CLCB *p_clcb, tBTA_GATTC_DATA *p_data);
-extern void bta_gattc_op_cmpl(tBTA_GATTC_CLCB *p_clcb, tBTA_GATTC_DATA *p_data);
-extern void bta_gattc_q_cmd(tBTA_GATTC_CLCB *p_clcb, tBTA_GATTC_DATA *p_data);
-extern void bta_gattc_free_command_data(tBTA_GATTC_CLCB *p_clcb);
-extern void bta_gattc_search(tBTA_GATTC_CLCB *p_clcb, tBTA_GATTC_DATA *p_data);
-extern void bta_gattc_fail(tBTA_GATTC_CLCB *p_clcb, tBTA_GATTC_DATA *p_data);
-extern void bta_gattc_confirm(tBTA_GATTC_CLCB *p_clcb, tBTA_GATTC_DATA *p_data);
-extern void bta_gattc_execute(tBTA_GATTC_CLCB *p_clcb, tBTA_GATTC_DATA *p_data);
-extern void bta_gattc_read_multi(tBTA_GATTC_CLCB *p_clcb, tBTA_GATTC_DATA *p_data);
-extern void bta_gattc_ci_open(tBTA_GATTC_CLCB *p_clcb, tBTA_GATTC_DATA *p_data);
-extern void bta_gattc_ci_close(tBTA_GATTC_CLCB *p_clcb, tBTA_GATTC_DATA *p_data);
-extern void bta_gattc_ignore_op_cmpl(tBTA_GATTC_CLCB *p_clcb, tBTA_GATTC_DATA *p_data);
-extern void bta_gattc_restart_discover(tBTA_GATTC_CLCB *p_clcb, tBTA_GATTC_DATA *p_msg);
-extern void bta_gattc_init_bk_conn(tBTA_GATTC_API_OPEN *p_data, tBTA_GATTC_RCB *p_clreg);
-extern void bta_gattc_cancel_bk_conn(tBTA_GATTC_API_CANCEL_OPEN *p_data);
-extern void bta_gattc_send_open_cback( tBTA_GATTC_RCB *p_clreg, tBTA_GATT_STATUS status,
-                                       BD_ADDR remote_bda, UINT16 conn_id, tBTA_TRANSPORT transport, UINT16 mtu);
-extern void bta_gattc_send_connect_cback( tBTA_GATTC_RCB *p_clreg, BD_ADDR remote_bda, UINT16 conn_id, tBTA_GATT_CONN_PARAMS conn_params);
-extern void bta_gattc_send_disconnect_cback( tBTA_GATTC_RCB *p_clreg, tGATT_DISCONN_REASON reason,
-                                BD_ADDR remote_bda, UINT16 conn_id);
-extern void bta_gattc_process_api_refresh(tBTA_GATTC_CB *p_cb, tBTA_GATTC_DATA *p_msg);
-extern void bta_gattc_process_api_cache_clean(tBTA_GATTC_CB *p_cb, tBTA_GATTC_DATA *p_msg);
-extern void bta_gattc_process_api_cache_assoc(tBTA_GATTC_CB *p_cb, tBTA_GATTC_DATA *p_msg);
-extern void bta_gattc_process_api_cache_get_addr_list(tBTA_GATTC_CB *p_cb, tBTA_GATTC_DATA *p_msg);
-extern void bta_gattc_cfg_mtu(tBTA_GATTC_CLCB *p_clcb, tBTA_GATTC_DATA *p_data);
-
-extern void bta_gattc_listen(tBTA_GATTC_CB *p_cb, tBTA_GATTC_DATA *p_msg);
-extern void bta_gattc_broadcast(tBTA_GATTC_CB *p_cb, tBTA_GATTC_DATA *p_msg);
-
-
-extern tBTA_GATTC_CLCB *bta_gattc_find_clcb_by_cif (UINT8 client_if, BD_ADDR remote_bda, tBTA_TRANSPORT transport);
-extern tBTA_GATTC_CLCB *bta_gattc_find_clcb_by_conn_id (UINT16 conn_id);
-extern tBTA_GATTC_CLCB *bta_gattc_clcb_alloc(tBTA_GATTC_IF client_if, BD_ADDR remote_bda, tBTA_TRANSPORT transport);
-extern void bta_gattc_clcb_dealloc(tBTA_GATTC_CLCB *p_clcb);
-extern tBTA_GATTC_CLCB *bta_gattc_find_alloc_clcb(tBTA_GATTC_IF client_if, BD_ADDR remote_bda, tBTA_TRANSPORT transport);
-extern tBTA_GATTC_RCB *bta_gattc_cl_get_regcb(UINT8 client_if);
-extern tBTA_GATTC_SERV *bta_gattc_find_srcb(BD_ADDR bda);
-extern tBTA_GATTC_SERV *bta_gattc_srcb_alloc(BD_ADDR bda);
-extern tBTA_GATTC_SERV *bta_gattc_find_scb_by_cid (UINT16 conn_id);
-extern tBTA_GATTC_CLCB *bta_gattc_find_int_conn_clcb(tBTA_GATTC_DATA *p_msg);
-extern tBTA_GATTC_CLCB *bta_gattc_find_int_disconn_clcb(tBTA_GATTC_DATA *p_msg);
-
-extern BOOLEAN bta_gattc_enqueue(tBTA_GATTC_CLCB *p_clcb, tBTA_GATTC_DATA *p_data);
-
-extern BOOLEAN bta_gattc_uuid_compare (const tBT_UUID *p_src, const tBT_UUID *p_tar, BOOLEAN is_precise);
-extern BOOLEAN bta_gattc_check_notif_registry(tBTA_GATTC_RCB *p_clreg, tBTA_GATTC_SERV *p_srcb, tBTA_GATTC_NOTIFY *p_notify);
-extern BOOLEAN bta_gattc_mark_bg_conn (tBTA_GATTC_IF client_if, BD_ADDR_PTR remote_bda, BOOLEAN add, BOOLEAN is_listen);
-extern BOOLEAN bta_gattc_check_bg_conn (tBTA_GATTC_IF client_if, BD_ADDR remote_bda, UINT8 role);
-extern UINT8 bta_gattc_num_reg_app(void);
-extern void bta_gattc_clear_notif_registration(tBTA_GATTC_SERV *p_srcb, UINT16 conn_id, UINT16 start_handle, UINT16 end_handle);
-extern tBTA_GATTC_SERV * bta_gattc_find_srvr_cache(BD_ADDR bda);
-
-
-extern void bta_gattc_disc_res_cback (UINT16 conn_id, tGATT_DISC_TYPE disc_type, tGATT_DISC_RES *p_data);
-extern void bta_gattc_disc_cmpl_cback (UINT16 conn_id, tGATT_DISC_TYPE disc_type, tGATT_STATUS status);
-extern tBTA_GATT_STATUS bta_gattc_discover_procedure(UINT16 conn_id, tBTA_GATTC_SERV *p_server_cb, UINT8 disc_type);
-extern tBTA_GATT_STATUS bta_gattc_discover_pri_service(UINT16 conn_id, tBTA_GATTC_SERV *p_server_cb, UINT8 disc_type);
-extern void bta_gattc_search_service(tBTA_GATTC_CLCB *p_clcb, tBT_UUID *p_uuid);
-extern const list_t* bta_gattc_get_services(UINT16 conn_id);
-extern const tBTA_GATTC_SERVICE* bta_gattc_get_service_for_handle(UINT16 conn_id, UINT16 handle);
-tBTA_GATTC_CHARACTERISTIC* bta_gattc_get_characteristic_srcb(tBTA_GATTC_SERV *p_srcb, UINT16 handle);
-extern tBTA_GATTC_CHARACTERISTIC* bta_gattc_get_characteristic(UINT16 conn_id, UINT16 handle);
-extern tBTA_GATTC_DESCRIPTOR* bta_gattc_get_descriptor(UINT16 conn_id, UINT16 handle);
-extern void bta_gattc_get_db_size_handle(UINT16 conn_id, UINT16 start_handle, UINT16 end_handle, int *count);
-extern void bta_gattc_get_db_size_with_type_handle(UINT16 conn_id, bt_gatt_db_attribute_type_t type,
-                                                   UINT16 start_handle, UINT16 end_handle, UINT16 char_handle, int *count);
-extern void bta_gattc_get_service_with_uuid(UINT16 conn_id, tBT_UUID *svc_uuid,
-                                            btgatt_db_element_t **svc_db,
-                                            int *count);
-
-extern void bta_gattc_get_db_with_opration(UINT16 conn_id,
-                                                      bt_gatt_get_db_op_t op,
-                                                      UINT16 char_handle,
-                                                      tBT_UUID *incl_uuid,
-                                                      tBT_UUID *char_uuid,
-                                                      tBT_UUID *descr_uuid,
-                                                      UINT16 start_handle, UINT16 end_handle,
-                                                      btgatt_db_element_t **char_db,
-                                                      int *count);
+    OSI_ALARM_ERR_PASS = 0,
+    OSI_ALARM_ERR_FAIL = -1,
+    OSI_ALARM_ERR_INVALID_ARG = -2,
+    OSI_ALARM_ERR_INVALID_STATE = -3,
+} osi_alarm_err_t;
 
-extern void bta_gattc_get_gatt_db(UINT16 conn_id, UINT16 start_handle, UINT16 end_handle, btgatt_db_element_t **db, int *count);
 
-extern tBTA_GATT_STATUS bta_gattc_init_cache(tBTA_GATTC_SERV *p_srvc_cb);
-extern void bta_gattc_rebuild_cache(tBTA_GATTC_SERV *p_srcv, UINT16 num_attr, tBTA_GATTC_NV_ATTR *attr);
-extern void bta_gattc_cache_save(tBTA_GATTC_SERV *p_srvc_cb, UINT16 conn_id);
-extern void bta_gattc_reset_discover_st(tBTA_GATTC_SERV *p_srcb, tBTA_GATT_STATUS status);
 
-extern tBTA_GATTC_CONN *bta_gattc_conn_alloc(BD_ADDR remote_bda);
-extern tBTA_GATTC_CONN *bta_gattc_conn_find(BD_ADDR remote_bda);
-extern tBTA_GATTC_CONN *bta_gattc_conn_find_alloc(BD_ADDR remote_bda);
-extern BOOLEAN bta_gattc_conn_dealloc(BD_ADDR remote_bda);
 
-extern 
-# 546 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/gatt/include/bta_gattc_int.h" 3 4
-      _Bool 
-# 546 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/gatt/include/bta_gattc_int.h"
-           bta_gattc_cache_load(tBTA_GATTC_CLCB *p_clcb);
-extern void bta_gattc_cache_reset(BD_ADDR server_bda);
-extern void bta_gattc_deinit(void);
-# 17 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 2
+int osi_alarm_create_mux(void);
+int osi_alarm_delete_mux(void);
+void osi_alarm_init(void);
+void osi_alarm_deinit(void);
 
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/smp/include/p_256_ecc_pp.h" 1
-# 25 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/smp/include/p_256_ecc_pp.h"
-       
 
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/smp/include/p_256_multprecision.h" 1
-# 24 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/smp/include/p_256_multprecision.h"
-       
 
+osi_alarm_t *osi_alarm_new(const char *alarm_name, osi_alarm_callback_t callback, void *data, period_ms_t timer_expire);
 
 
 
-typedef unsigned long DWORD;
-# 39 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/smp/include/p_256_multprecision.h"
-int multiprecision_compare(DWORD *a, DWORD *b, uint32_t keyLength);
-int multiprecision_iszero(DWORD *a, uint32_t keyLength);
-void multiprecision_init(DWORD *c, uint32_t keyLength);
-void multiprecision_copy(DWORD *c, DWORD *a, uint32_t keyLength);
-UINT32 multiprecision_dword_bits (DWORD a);
-UINT32 multiprecision_most_signdwords(DWORD *a, uint32_t keyLength);
-UINT32 multiprecision_most_signbits(DWORD *a, uint32_t keyLength);
-void multiprecision_inv_mod(DWORD *aminus, DWORD *a, uint32_t keyLength);
-DWORD multiprecision_add(DWORD *c, DWORD *a, DWORD *b, uint32_t keyLength);
-void multiprecision_add_mod(DWORD *c, DWORD *a, DWORD *b, uint32_t keyLength);
-DWORD multiprecision_sub(DWORD *c, DWORD *a, DWORD *b, uint32_t keyLength);
-void multiprecision_sub_mod(DWORD *c, DWORD *a, DWORD *b, uint32_t keyLength);
-void multiprecision_rshift(DWORD *c, DWORD *a, uint32_t keyLength);
-void multiprecision_lshift_mod(DWORD *c, DWORD *a, uint32_t keyLength);
-DWORD multiprecision_lshift(DWORD *c, DWORD *a, uint32_t keyLength);
-void multiprecision_mult(DWORD *c, DWORD *a, DWORD *b, uint32_t keyLength);
-void multiprecision_mersenns_mult_mod(DWORD *c, DWORD *a, DWORD *b, uint32_t keyLength);
-void multiprecision_mersenns_squa_mod(DWORD *c, DWORD *a, uint32_t keyLength);
-DWORD multiprecision_lshift(DWORD *c, DWORD *a, uint32_t keyLength);
-void multiprecision_mult(DWORD *c, DWORD *a, DWORD *b, uint32_t keyLength);
-void multiprecision_fast_mod(DWORD *c, DWORD *a);
-void multiprecision_fast_mod_P256(DWORD *c, DWORD *a);
-# 28 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/smp/include/p_256_ecc_pp.h" 2
 
+void osi_alarm_free(osi_alarm_t *alarm);
 
-typedef unsigned long DWORD;
 
-typedef struct {
-    DWORD x[8];
-    DWORD y[8];
-    DWORD z[8];
-} Point;
 
-typedef struct {
 
-    DWORD a[8];
-    DWORD b[8];
 
 
-    int a_minus3;
+osi_alarm_err_t osi_alarm_set(osi_alarm_t *alarm, period_ms_t timeout);
 
 
-    DWORD p[8];
+osi_alarm_err_t osi_alarm_set_periodic(osi_alarm_t *alarm, period_ms_t period);
 
 
-    DWORD omega[8];
 
 
-    Point G;
 
-} elliptic_curve_t;
+osi_alarm_err_t osi_alarm_cancel(osi_alarm_t *alarm);
 
 
-extern elliptic_curve_t curve;
-extern elliptic_curve_t curve_p256;
-# 68 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/smp/include/p_256_ecc_pp.h"
-void ECC_PointMult_Bin_NAF(Point *q, Point *p, DWORD *n, uint32_t keyLength);
 
 
-# 70 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/smp/include/p_256_ecc_pp.h" 3 4
-_Bool 
-# 70 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/smp/include/p_256_ecc_pp.h"
-    ECC_CheckPointIsInElliCur_P256(Point *p);
 
+period_ms_t osi_alarm_get_remaining_ms(const osi_alarm_t *alarm);
 
 
-void p_256_init_curve(UINT32 keyLength);
-# 19 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h" 1
-# 26 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-void bte_main_hci_send(BT_HDR *p_msg, UINT16 event);
-void bte_main_lpm_allow_bt_device_sleep(void);
 
 
-
-BOOLEAN btsnd_hcic_inquiry(const LAP inq_lap, UINT8 duration,
-                           UINT8 response_cnt);
-# 43 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-BOOLEAN btsnd_hcic_inq_cancel(void);
-
-
-
-
-BOOLEAN btsnd_hcic_per_inq_mode(UINT16 max_period, UINT16 min_period,
-                                const LAP inq_lap, UINT8 duration,
-                                UINT8 response_cnt);
-# 62 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-BOOLEAN btsnd_hcic_exit_per_inq(void);
-
-
-
-BOOLEAN btsnd_hcic_create_conn(BD_ADDR dest, UINT16 packet_types,
-                               UINT8 page_scan_rep_mode,
-                               UINT8 page_scan_mode,
-                               UINT16 clock_offset,
-                               UINT8 allow_switch);
-# 83 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-BOOLEAN btsnd_hcic_disconnect(UINT16 handle, UINT8 reason);
-# 103 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-BOOLEAN btsnd_hcic_create_conn_cancel(BD_ADDR dest);
-
-
-
-
-
-
-
-BOOLEAN btsnd_hcic_accept_conn (BD_ADDR bd_addr, UINT8 role);
-# 120 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-BOOLEAN btsnd_hcic_reject_conn (BD_ADDR bd_addr, UINT8 reason);
-# 129 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-BOOLEAN btsnd_hcic_link_key_req_reply (BD_ADDR bd_addr,
-                                       LINK_KEY link_key);
-# 139 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-BOOLEAN btsnd_hcic_link_key_neg_reply (BD_ADDR bd_addr);
-
-
-
-
-
-
-
-BOOLEAN btsnd_hcic_pin_code_req_reply (BD_ADDR bd_addr,
-                                       UINT8 pin_code_len,
-                                       PIN_CODE pin_code);
-# 159 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-BOOLEAN btsnd_hcic_pin_code_neg_reply (BD_ADDR bd_addr);
-
-
-
-
-
-
-
-BOOLEAN btsnd_hcic_change_conn_type (UINT16 handle, UINT16 packet_types);
-# 179 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-BOOLEAN btsnd_hcic_auth_request (UINT16 handle);
-
-
-BOOLEAN btsnd_hcic_set_conn_encrypt (UINT16 handle, BOOLEAN enable);
-# 191 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-BOOLEAN btsnd_hcic_rmt_name_req (BD_ADDR bd_addr,
-                                 UINT8 page_scan_rep_mode,
-                                 UINT8 page_scan_mode,
-                                 UINT16 clock_offset);
-# 205 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-BOOLEAN btsnd_hcic_rmt_name_req_cancel(BD_ADDR bd_addr);
-
-
-
-
-
-
-BOOLEAN btsnd_hcic_rmt_features_req(UINT16 handle);
-
-
-BOOLEAN btsnd_hcic_rmt_ext_features(UINT16 handle, UINT8 page_num);
-# 224 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-BOOLEAN btsnd_hcic_rmt_ver_req(UINT16 handle);
-BOOLEAN btsnd_hcic_read_rmt_clk_offset(UINT16 handle);
-BOOLEAN btsnd_hcic_read_lmp_handle(UINT16 handle);
-
-BOOLEAN btsnd_hcic_setup_esco_conn (UINT16 handle,
-                                    UINT32 tx_bw, UINT32 rx_bw,
-                                    UINT16 max_latency, UINT16 voice,
-                                    UINT8 retrans_effort,
-                                    UINT16 packet_types);
-# 244 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-BOOLEAN btsnd_hcic_accept_esco_conn (BD_ADDR bd_addr,
-                                     UINT32 tx_bw, UINT32 rx_bw,
-                                     UINT16 max_latency,
-                                     UINT16 content_fmt,
-                                     UINT8 retrans_effort,
-                                     UINT16 packet_types);
-# 261 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-BOOLEAN btsnd_hcic_reject_esco_conn (BD_ADDR bd_addr, UINT8 reason);
-
-
-
-
-
-
-BOOLEAN btsnd_hcic_hold_mode(UINT16 handle, UINT16 max_hold_period,
-                             UINT16 min_hold_period);
-# 282 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-BOOLEAN btsnd_hcic_sniff_mode(UINT16 handle,
-                              UINT16 max_sniff_period,
-                              UINT16 min_sniff_period,
-                              UINT16 sniff_attempt,
-                              UINT16 sniff_timeout);
-# 298 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-BOOLEAN btsnd_hcic_exit_sniff_mode(UINT16 handle);
-
-
-BOOLEAN btsnd_hcic_park_mode (UINT16 handle,
-                              UINT16 beacon_max_interval,
-                              UINT16 beacon_min_interval);
-# 312 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-BOOLEAN btsnd_hcic_exit_park_mode(UINT16 handle);
-
-
-BOOLEAN btsnd_hcic_qos_setup (UINT16 handle, UINT8 flags,
-                              UINT8 service_type,
-                              UINT32 token_rate, UINT32 peak,
-                              UINT32 latency, UINT32 delay_var);
-# 332 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-BOOLEAN btsnd_hcic_switch_role (BD_ADDR bd_addr, UINT8 role);
-# 341 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-BOOLEAN btsnd_hcic_write_policy_set(UINT16 handle, UINT16 settings);
-# 350 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-BOOLEAN btsnd_hcic_write_def_policy_set(UINT16 settings);
-# 381 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-void btsnd_hcic_write_ext_inquiry_response(void *buffer, UINT8 fec_req);
-
-
-
-
-
-
-BOOLEAN btsnd_hcic_io_cap_req_reply (BD_ADDR bd_addr, UINT8 capability,
-                                     UINT8 oob_present, UINT8 auth_req);
-# 399 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-BOOLEAN btsnd_hcic_io_cap_req_neg_reply (BD_ADDR bd_addr, UINT8 err_code);
-
-
-
-
-
-
-
-BOOLEAN btsnd_hcic_read_local_oob_data (void);
-
-
-
-
-BOOLEAN btsnd_hcic_user_conf_reply (BD_ADDR bd_addr, BOOLEAN is_yes);
-
-
-
-
-
-
-BOOLEAN btsnd_hcic_user_passkey_reply (BD_ADDR bd_addr, UINT32 value);
-
-
-
-
-
-
-
-BOOLEAN btsnd_hcic_user_passkey_neg_reply (BD_ADDR bd_addr);
-
-
-
-
-
-
-BOOLEAN btsnd_hcic_rem_oob_reply (BD_ADDR bd_addr, UINT8 *p_c,
-                                  UINT8 *p_r);
-# 444 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-BOOLEAN btsnd_hcic_rem_oob_neg_reply (BD_ADDR bd_addr);
-
-
-
-
-
-
-BOOLEAN btsnd_hcic_read_inq_tx_power (void);
-
-
-
-
-BOOLEAN btsnd_hcic_read_default_erroneous_data_rpt (void);
-
-
-
-
-BOOLEAN btsnd_hcic_enhanced_flush (UINT16 handle, UINT8 packet_type);
-
-
-
-
-
-BOOLEAN btsnd_hcic_send_keypress_notif (BD_ADDR bd_addr, UINT8 notif);
-# 479 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-BOOLEAN btsnd_hcic_set_event_filter(UINT8 filt_type,
-                                    UINT8 filt_cond_type,
-                                    UINT8 *filt_cond,
-                                    UINT8 filt_cond_len);
-# 492 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-BOOLEAN btsnd_hcic_delete_stored_key (BD_ADDR bd_addr, BOOLEAN delete_all_flag);
-# 501 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-BOOLEAN btsnd_hcic_change_name(BD_NAME name);
-# 524 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-BOOLEAN btsnd_hcic_set_afh_channels (AFH_CHANNELS channels);
-
-BOOLEAN btsnd_hcic_ble_set_channels (BLE_CHANNELS channels);
-
-
-BOOLEAN btsnd_hcic_write_pin_type(UINT8 type);
-BOOLEAN btsnd_hcic_write_auto_accept(UINT8 flag);
-BOOLEAN btsnd_hcic_read_name (void);
-BOOLEAN btsnd_hcic_write_page_tout(UINT16 timeout);
-BOOLEAN btsnd_hcic_write_scan_enable(UINT8 flag);
-BOOLEAN btsnd_hcic_write_pagescan_cfg(UINT16 interval,
-                                      UINT16 window);
-# 544 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-BOOLEAN btsnd_hcic_write_inqscan_cfg(UINT16 interval, UINT16 window);
-
-
-
-
-
-
-
-BOOLEAN btsnd_hcic_write_auth_enable(UINT8 flag);
-BOOLEAN btsnd_hcic_write_dev_class(DEV_CLASS dev);
-BOOLEAN btsnd_hcic_write_voice_settings(UINT16 flags);
-# 566 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-BOOLEAN btsnd_hcic_write_auto_flush_tout(UINT16 handle,
-        UINT16 timeout);
-
-
-
-
-
-
-BOOLEAN btsnd_hcic_read_tx_power(UINT16 handle, UINT8 type);
-# 585 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-BOOLEAN btsnd_hcic_host_num_xmitted_pkts (UINT8 num_handles,
-        UINT16 *handle,
-        UINT16 *num_pkts);
-# 598 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-BOOLEAN btsnd_hcic_write_link_super_tout(UINT8 local_controller_id, UINT16 handle, UINT16 timeout);
-
-
-
-
-
-
-
-BOOLEAN btsnd_hcic_write_cur_iac_lap (UINT8 num_cur_iac,
-                                      LAP *const iac_lap);
-
-
-
-
-
-
-
-BOOLEAN btsnd_hcic_get_link_quality (UINT16 handle);
-BOOLEAN btsnd_hcic_read_rssi (UINT16 handle);
-BOOLEAN btsnd_hcic_enable_test_mode (void);
-BOOLEAN btsnd_hcic_write_pagescan_type(UINT8 type);
-BOOLEAN btsnd_hcic_write_inqscan_type(UINT8 type);
-BOOLEAN btsnd_hcic_write_inquiry_mode(UINT8 type);
-# 644 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-void btsnd_hcic_vendor_spec_cmd (void *buffer, UINT16 opcode,
-                                 UINT8 len, UINT8 *p_data,
-                                 void *p_cmd_cplt_cback);
-# 698 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h"
-BOOLEAN btsnd_hcic_ble_set_evt_mask (BT_EVENT_MASK event_mask);
-
-BOOLEAN btsnd_hcic_ble_read_buffer_size (void);
-
-BOOLEAN btsnd_hcic_ble_read_local_spt_feat (void);
-
-BOOLEAN btsnd_hcic_ble_set_local_used_feat (UINT8 feat_set[8]);
-
-BOOLEAN btsnd_hcic_ble_set_random_addr (BD_ADDR random_addr);
-
-BOOLEAN btsnd_hcic_ble_write_adv_params (UINT16 adv_int_min, UINT16 adv_int_max,
-        UINT8 adv_type, UINT8 addr_type_own,
-        UINT8 addr_type_dir, BD_ADDR direct_bda,
-        UINT8 channel_map, UINT8 adv_filter_policy);
-
-BOOLEAN btsnd_hcic_ble_read_adv_chnl_tx_power (void);
-
-BOOLEAN btsnd_hcic_ble_set_adv_data (UINT8 data_len, UINT8 *p_data);
-
-BOOLEAN btsnd_hcic_ble_set_scan_rsp_data (UINT8 data_len, UINT8 *p_scan_rsp);
-
-BOOLEAN btsnd_hcic_ble_set_adv_enable (UINT8 adv_enable);
-
-BOOLEAN btsnd_hcic_ble_set_scan_params (UINT8 scan_type,
-                                        UINT16 scan_int, UINT16 scan_win,
-                                        UINT8 addr_type, UINT8 scan_filter_policy);
-
-BOOLEAN btsnd_hcic_ble_set_scan_enable (UINT8 scan_enable, UINT8 duplicate);
-
-BOOLEAN btsnd_hcic_ble_create_ll_conn (UINT16 scan_int, UINT16 scan_win,
-                                       UINT8 init_filter_policy, UINT8 addr_type_peer, BD_ADDR bda_peer, UINT8 addr_type_own,
-                                       UINT16 conn_int_min, UINT16 conn_int_max, UINT16 conn_latency, UINT16 conn_timeout,
-                                       UINT16 min_ce_len, UINT16 max_ce_len);
-
-BOOLEAN btsnd_hcic_ble_create_conn_cancel (void);
-
-BOOLEAN btsnd_hcic_ble_read_white_list_size (void);
-
-BOOLEAN btsnd_hcic_ble_clear_white_list (void);
-
-BOOLEAN btsnd_hcic_ble_add_white_list (UINT8 addr_type, BD_ADDR bda);
-
-BOOLEAN btsnd_hcic_ble_remove_from_white_list (UINT8 addr_type, BD_ADDR bda);
-
-BOOLEAN btsnd_hcic_ble_upd_ll_conn_params (UINT16 handle, UINT16 conn_int_min, UINT16 conn_int_max,
-        UINT16 conn_latency, UINT16 conn_timeout, UINT16 min_len, UINT16 max_len);
-
-BOOLEAN btsnd_hcic_ble_set_host_chnl_class (UINT8 chnl_map[5]);
-
-BOOLEAN btsnd_hcic_ble_read_chnl_map (UINT16 handle);
-
-BOOLEAN btsnd_hcic_ble_read_remote_feat ( UINT16 handle);
-
-BOOLEAN btsnd_hcic_ble_encrypt (UINT8 *key, UINT8 key_len, UINT8 *plain_text, UINT8 pt_len, void *p_cmd_cplt_cback);
-
-BOOLEAN btsnd_hcic_ble_rand (void *p_cmd_cplt_cback);
-
-BOOLEAN btsnd_hcic_ble_start_enc ( UINT16 handle,
-                                   UINT8 rand[8],
-                                   UINT16 ediv, UINT8 ltk[16]);
-
-BOOLEAN btsnd_hcic_ble_ltk_req_reply (UINT16 handle, UINT8 ltk[16]);
-
-BOOLEAN btsnd_hcic_ble_ltk_req_neg_reply (UINT16 handle);
-
-BOOLEAN btsnd_hcic_ble_read_supported_states (void);
-
-BOOLEAN btsnd_hcic_ble_write_host_supported (UINT8 le_host_spt, UINT8 simul_le_host_spt);
-
-BOOLEAN btsnd_hcic_ble_read_host_supported (void);
-
-BOOLEAN btsnd_hcic_ble_receiver_test(UINT8 rx_freq);
-
-BOOLEAN btsnd_hcic_ble_transmitter_test(UINT8 tx_freq, UINT8 test_data_len,
-                                        UINT8 payload);
-BOOLEAN btsnd_hcic_ble_test_end(void);
-
-
-
-
-BOOLEAN btsnd_hcic_ble_rc_param_req_reply(UINT16 handle,
-        UINT16 conn_int_min, UINT16 conn_int_max,
-        UINT16 conn_latency, UINT16 conn_timeout,
-        UINT16 min_ce_len, UINT16 max_ce_len);
-
-
-BOOLEAN btsnd_hcic_ble_rc_param_req_neg_reply(UINT16 handle, UINT8 reason);
-
-
-
-BOOLEAN btsnd_hcic_ble_set_data_length(UINT16 conn_handle, UINT16 tx_octets,
-                                       UINT16 tx_time);
-
-BOOLEAN btsnd_hcic_ble_add_device_resolving_list (UINT8 addr_type_peer,
-        BD_ADDR bda_peer,
-        UINT8 irk_peer[16],
-        UINT8 irk_local[16]);
-
-BOOLEAN btsnd_hcic_ble_rm_device_resolving_list (UINT8 addr_type_peer,
-        BD_ADDR bda_peer);
-
-BOOLEAN btsnd_hcic_ble_clear_resolving_list (void);
-
-BOOLEAN btsnd_hcic_ble_read_resolvable_addr_peer (UINT8 addr_type_peer,
-        BD_ADDR bda_peer);
-
-BOOLEAN btsnd_hcic_ble_read_resolvable_addr_local (UINT8 addr_type_peer,
-        BD_ADDR bda_peer);
-
-BOOLEAN btsnd_hcic_ble_set_addr_resolution_enable (UINT8 addr_resolution_enable);
-
-BOOLEAN btsnd_hcic_ble_set_rand_priv_addr_timeout (UINT16 rpa_timout);
-
-
-
-BOOLEAN btsnd_hcic_read_authenticated_payload_tout(UINT16 handle);
-
-BOOLEAN btsnd_hcic_write_authenticated_payload_tout(UINT16 handle,
-        UINT16 timeout);
-
-BOOLEAN btsnd_hcic_ble_update_adv_report_flow_control (UINT16 num);
-# 20 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/future.h" 1
-# 24 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/future.h"
-struct future {
-    
-# 25 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/future.h" 3 4
-   _Bool 
-# 25 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/future.h"
-        ready_can_be_called;
-    osi_sem_t semaphore;
-    void *result;
-};
-typedef struct future future_t;
-
-
-
-
-
-future_t *future_new(void);
-
-
-
-
-future_t *future_new_immediate(void *value);
-
-
-
-
-void future_ready(future_t *future, void *value);
-
-
-
-void *future_await(future_t *async_result);
-
-
-void future_free(future_t *future);
-# 21 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/allocator.h" 1
-# 22 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/allocator.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 23 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/allocator.h" 2
-
-
-
-char *osi_strdup(const char *str);
-
-void *osi_malloc_func(size_t size);
-void *osi_calloc_func(size_t size);
-void osi_free_func(void *ptr);
-# 22 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 2
-
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h" 1
-# 26 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/bdaddr.h" 1
-# 23 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/bdaddr.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 24 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/bdaddr.h" 2
-# 36 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/bdaddr.h"
-
-# 36 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/bdaddr.h" 3 4
-_Bool 
-# 36 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/bdaddr.h"
-    bdaddr_is_empty(const bt_bdaddr_t *addr);
-
-
-
-
-# 40 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/bdaddr.h" 3 4
-_Bool 
-# 40 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/bdaddr.h"
-    bdaddr_equals(const bt_bdaddr_t *first, const bt_bdaddr_t *second);
-
-
-
-bt_bdaddr_t *bdaddr_copy(bt_bdaddr_t *dest, const bt_bdaddr_t *src);
-
-
-
-
-
-const char *bdaddr_to_string(const bt_bdaddr_t *addr, char *string, size_t size);
-
-
-
-# 53 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/bdaddr.h" 3 4
-_Bool 
-# 53 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/bdaddr.h"
-    string_is_bdaddr(const char *string);
-
-
-
-
-
-# 58 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/bdaddr.h" 3 4
-_Bool 
-# 58 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/bdaddr.h"
-    string_to_bdaddr(const char *string, bt_bdaddr_t *addr);
-
-
-hash_index_t hash_function_bdaddr(const void *key);
-# 27 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/device_features.h" 1
-# 25 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/device_features.h"
-typedef struct {
-    uint8_t as_array[8];
-} bt_device_features_t;
-# 28 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/hci/include/hci/hci_layer.h" 1
-# 24 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/hci/include/hci/hci_layer.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/osi.h" 1
-# 13 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/osi.h"
-int osi_init(void);
-void osi_deinit(void);
-# 25 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/hci/include/hci/hci_layer.h" 2
-# 51 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/hci/include/hci/hci_layer.h"
-typedef struct hci_hal_t hci_hal_t;
-
-typedef struct controller_t controller_t;
-
-typedef struct packet_fragmenter_t packet_fragmenter_t;
-
-
-
-
-typedef uint16_t command_opcode_t;
-# 71 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/hci/include/hci/hci_layer.h"
-typedef void (*command_complete_cb)(BT_HDR *response, void *context);
-typedef void (*command_status_cb)(uint8_t status, BT_HDR *command, void *context);
-
-typedef struct hci_t {
-
-
-
-
-    void (*do_postload)(void);
-
-
-    void (*transmit_command)(
-        BT_HDR *command,
-        command_complete_cb complete_callback,
-        command_status_cb status_cb,
-        void *context
-    );
-
-    future_t *(*transmit_command_futured)(BT_HDR *command);
-
-
-    void (*transmit_downward)(uint16_t type, void *data);
-} hci_t;
-
-const hci_t *hci_layer_get_interface(void);
-
-int hci_start_up(void);
-void hci_shut_down(void);
-
-
-# 100 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/hci/include/hci/hci_layer.h" 3 4
-_Bool 
-# 100 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/hci/include/hci/hci_layer.h"
-    hci_host_task_post(uint32_t timeout);
-# 29 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/hci/include/hci/hci_packet_factory.h" 1
-# 23 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/hci/include/hci/hci_packet_factory.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/event_mask.h" 1
-# 26 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/event_mask.h"
-typedef struct {
-    uint8_t as_array[8];
-} bt_event_mask_t;
-# 24 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/hci/include/hci/hci_packet_factory.h" 2
-
-typedef struct {
-    BT_HDR *(*make_reset)(void);
-    BT_HDR *(*make_read_buffer_size)(void);
-    BT_HDR *(*make_set_c2h_flow_control)(uint8_t enable);
-    BT_HDR *(*make_set_adv_report_flow_control)(uint8_t enable, uint16_t num, uint16_t lost_threshold);
-    BT_HDR *(*make_host_buffer_size)(uint16_t acl_size, uint8_t sco_size, uint16_t acl_count, uint16_t sco_count);
-    BT_HDR *(*make_read_local_version_info)(void);
-    BT_HDR *(*make_read_bd_addr)(void);
-    BT_HDR *(*make_read_local_supported_commands)(void);
-    BT_HDR *(*make_read_local_extended_features)(uint8_t page_number);
-    BT_HDR *(*make_write_simple_pairing_mode)(uint8_t mode);
-    BT_HDR *(*make_write_secure_connections_host_support)(uint8_t mode);
-    BT_HDR *(*make_set_event_mask)(const bt_event_mask_t *event_mask);
-    BT_HDR *(*make_ble_write_host_support)(uint8_t supported_host, uint8_t simultaneous_host);
-    BT_HDR *(*make_ble_read_white_list_size)(void);
-    BT_HDR *(*make_ble_read_buffer_size)(void);
-    BT_HDR *(*make_ble_read_supported_states)(void);
-    BT_HDR *(*make_ble_read_local_supported_features)(void);
-    BT_HDR *(*make_ble_read_resolving_list_size)(void);
-    BT_HDR *(*make_ble_read_suggested_default_data_length)(void);
-    BT_HDR *(*make_ble_write_suggested_default_data_length)(uint16_t SuggestedMaxTxOctets, uint16_t SuggestedMaxTxTime);
-    BT_HDR *(*make_ble_set_event_mask)(const bt_event_mask_t *event_mask);
-    BT_HDR *(*make_write_sync_flow_control_enable)(uint8_t enable);
-    BT_HDR *(*make_write_default_erroneous_data_report)(uint8_t enable);
-} hci_packet_factory_t;
-
-const hci_packet_factory_t *hci_packet_factory_get_interface(void);
-# 30 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/hci/include/hci/hci_packet_parser.h" 1
-# 29 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/hci/include/hci/hci_packet_parser.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/version.h" 1
-# 23 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/version.h"
-typedef struct {
-    uint8_t hci_version;
-    uint16_t hci_revision;
-    uint8_t lmp_version;
-    uint16_t manufacturer;
-    uint16_t lmp_subversion;
-} bt_version_t;
-# 30 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/hci/include/hci/hci_packet_parser.h" 2
-
-typedef struct {
-    void (*parse_generic_command_complete)(BT_HDR *response);
-
-    void (*parse_read_buffer_size_response)(
-        BT_HDR *response,
-        uint16_t *acl_data_size_ptr,
-        uint16_t *acl_buffer_count_ptr,
-        uint8_t *sco_data_size_ptr,
-        uint16_t *sco_buffer_count_ptr
-    );
-
-    void (*parse_read_local_version_info_response)(
-        BT_HDR *response,
-        bt_version_t *bt_version_ptr
-    );
-
-    void (*parse_read_bd_addr_response)(
-        BT_HDR *response,
-        bt_bdaddr_t *address_ptr
-    );
-
-    void (*parse_read_local_supported_commands_response)(
-        BT_HDR *response,
-        uint8_t *supported_commands_ptr,
-        size_t supported_commands_length
-    );
-
-    void (*parse_read_local_extended_features_response)(
-        BT_HDR *response,
-        uint8_t *page_number_ptr,
-        uint8_t *max_page_number_ptr,
-        bt_device_features_t *feature_pages,
-        size_t feature_pages_count
-    );
-
-    void (*parse_ble_read_white_list_size_response)(
-        BT_HDR *response,
-        uint8_t *white_list_size_ptr
-    );
-
-    void (*parse_ble_read_buffer_size_response)(
-        BT_HDR *response,
-        uint16_t *data_size_ptr,
-        uint8_t *acl_buffer_count_ptr
-    );
-
-    void (*parse_ble_read_supported_states_response)(
-        BT_HDR *response,
-        uint8_t *supported_states,
-        size_t supported_states_size
-    );
-
-    void (*parse_ble_read_local_supported_features_response)(
-        BT_HDR *response,
-        bt_device_features_t *supported_features
-    );
-
-    void (*parse_ble_read_resolving_list_size_response) (
-        BT_HDR *response,
-        uint8_t *resolving_list_size_ptr
-    );
-
-    void (*parse_ble_read_suggested_default_data_length_response)(
-        BT_HDR *response,
-        uint16_t *ble_default_packet_length_ptr,
-        uint16_t *ble_default_packet_txtime_ptr
-    );
-} hci_packet_parser_t;
-
-const hci_packet_parser_t *hci_packet_parser_get_interface(void);
-# 31 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h" 2
-
-typedef struct controller_t {
-    void (*start_up)(void);
-    void (*shut_down)(void);
-    
-# 35 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h" 3 4
-   _Bool 
-# 35 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h"
-        (*get_is_ready)(void);
-
-    const bt_bdaddr_t *(*get_address)(void);
-    const bt_version_t *(*get_bt_version)(void);
-
-    const bt_device_features_t *(*get_features_classic)(int index);
-
-    uint8_t (*get_last_features_classic_index)(void);
-
-    const bt_device_features_t *(*get_features_ble)(void);
-    const uint8_t *(*get_ble_supported_states)(void);
-
-    
-# 47 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h" 3 4
-   _Bool 
-# 47 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h"
-        (*supports_simple_pairing)(void);
-    
-# 48 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h" 3 4
-   _Bool 
-# 48 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h"
-        (*supports_secure_connections)(void);
-    
-# 49 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h" 3 4
-   _Bool 
-# 49 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h"
-        (*supports_simultaneous_le_bredr)(void);
-    
-# 50 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h" 3 4
-   _Bool 
-# 50 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h"
-        (*supports_reading_remote_extended_features)(void);
-    
-# 51 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h" 3 4
-   _Bool 
-# 51 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h"
-        (*supports_interlaced_inquiry_scan)(void);
-    
-# 52 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h" 3 4
-   _Bool 
-# 52 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h"
-        (*supports_rssi_with_inquiry_results)(void);
-    
-# 53 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h" 3 4
-   _Bool 
-# 53 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h"
-        (*supports_extended_inquiry_response)(void);
-    
-# 54 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h" 3 4
-   _Bool 
-# 54 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h"
-        (*supports_master_slave_role_switch)(void);
-
-    
-# 56 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h" 3 4
-   _Bool 
-# 56 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h"
-        (*supports_ble)(void);
-    
-# 57 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h" 3 4
-   _Bool 
-# 57 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h"
-        (*supports_ble_packet_extension)(void);
-    
-# 58 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h" 3 4
-   _Bool 
-# 58 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h"
-        (*supports_ble_connection_parameters_request)(void);
-    
-# 59 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h" 3 4
-   _Bool 
-# 59 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/device/include/device/controller.h"
-        (*supports_ble_privacy)(void);
-
-
-    uint16_t (*get_acl_data_size_classic)(void);
-    uint16_t (*get_acl_data_size_ble)(void);
-
-
-
-
-    uint16_t (*get_acl_packet_size_classic)(void);
-    uint16_t (*get_acl_packet_size_ble)(void);
-
-    uint16_t (*get_ble_default_data_packet_length)(void);
-    uint16_t (*get_ble_default_data_packet_txtime)(void);
-
-
-    uint16_t (*get_acl_buffer_count_classic)(void);
-    uint8_t (*get_acl_buffer_count_ble)(void);
-
-    uint8_t (*get_ble_white_list_size)(void);
-
-    uint8_t (*get_ble_resolving_list_max_size)(void);
-    void (*set_ble_resolving_list_max_size)(int resolving_list_max_size);
-
-
-
-
-
-} controller_t;
-
-const controller_t *controller_get_interface(void);
-# 24 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 2
+uint32_t osi_time_get_os_boottime_ms(void);
+# 15 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c" 2
 
 # 1 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h" 1
 # 47 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
@@ -12499,12 +4545,3821 @@ int esp_internal_aes_decrypt( mbedtls_aes_context *ctx,
                                              unsigned char output[16] );
 # 666 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
 int mbedtls_aes_self_test( int verbose );
-# 26 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 2
+# 17 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c" 2
+# 1 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h" 1
+# 45 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 1 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h" 1
+# 33 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
+# 34 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h" 2
+# 172 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+    typedef int32_t mbedtls_mpi_sint;
+    typedef uint32_t mbedtls_mpi_uint;
+
+        typedef uint64_t mbedtls_t_udbl;
+# 187 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+typedef struct mbedtls_mpi
+{
+    int s;
+    size_t n;
+    mbedtls_mpi_uint *p;
+}
+mbedtls_mpi;
+# 203 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+void mbedtls_mpi_init( mbedtls_mpi *X );
+# 212 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+void mbedtls_mpi_free( mbedtls_mpi *X );
+# 227 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_grow( mbedtls_mpi *X, size_t nblimbs );
+# 244 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_shrink( mbedtls_mpi *X, size_t nblimbs );
+# 259 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_copy( mbedtls_mpi *X, const mbedtls_mpi *Y );
+
+
+
+
+
+
+
+void mbedtls_mpi_swap( mbedtls_mpi *X, mbedtls_mpi *Y );
+# 293 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_safe_cond_assign( mbedtls_mpi *X, const mbedtls_mpi *Y, unsigned char assign );
+# 318 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_safe_cond_swap( mbedtls_mpi *X, mbedtls_mpi *Y, unsigned char assign );
+# 330 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_lset( mbedtls_mpi *X, mbedtls_mpi_sint z );
+# 342 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_get_bit( const mbedtls_mpi *X, size_t pos );
+# 359 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_set_bit( mbedtls_mpi *X, size_t pos, unsigned char val );
+# 373 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+size_t mbedtls_mpi_lsb( const mbedtls_mpi *X );
+# 387 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+size_t mbedtls_mpi_bitlen( const mbedtls_mpi *X );
+# 402 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+size_t mbedtls_mpi_size( const mbedtls_mpi *X );
+# 414 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_read_string( mbedtls_mpi *X, int radix, const char *s );
+# 438 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_write_string( const mbedtls_mpi *X, int radix,
+                              char *buf, size_t buflen, size_t *olen );
+# 463 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_read_file( mbedtls_mpi *X, int radix, FILE *fin );
+# 480 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_write_file( const char *p, const mbedtls_mpi *X,
+                            int radix, FILE *fout );
+# 496 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_read_binary( mbedtls_mpi *X, const unsigned char *buf,
+                             size_t buflen );
+# 513 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_write_binary( const mbedtls_mpi *X, unsigned char *buf,
+                              size_t buflen );
+# 526 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_shift_l( mbedtls_mpi *X, size_t count );
+# 538 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_shift_r( mbedtls_mpi *X, size_t count );
+# 550 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_cmp_abs( const mbedtls_mpi *X, const mbedtls_mpi *Y );
+# 562 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_cmp_mpi( const mbedtls_mpi *X, const mbedtls_mpi *Y );
+# 574 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_cmp_int( const mbedtls_mpi *X, mbedtls_mpi_sint z );
+# 587 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_add_abs( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 602 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_sub_abs( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 616 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_add_mpi( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 630 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_sub_mpi( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 644 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_add_int( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         mbedtls_mpi_sint b );
+# 659 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_sub_int( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         mbedtls_mpi_sint b );
+# 674 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_mul_mpi( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 690 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_mul_int( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         mbedtls_mpi_uint b );
+# 711 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_div_mpi( mbedtls_mpi *Q, mbedtls_mpi *R, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 732 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_div_int( mbedtls_mpi *Q, mbedtls_mpi *R, const mbedtls_mpi *A,
+                         mbedtls_mpi_sint b );
+# 752 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_mod_mpi( mbedtls_mpi *R, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 771 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_mod_int( mbedtls_mpi_uint *r, const mbedtls_mpi *A,
+                         mbedtls_mpi_sint b );
+# 800 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_exp_mod( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *E, const mbedtls_mpi *N,
+                         mbedtls_mpi *_RR );
+# 821 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_fill_random( mbedtls_mpi *X, size_t size,
+                     int (*f_rng)(void *, unsigned char *, size_t),
+                     void *p_rng );
+# 836 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_gcd( mbedtls_mpi *G, const mbedtls_mpi *A,
+                     const mbedtls_mpi *B );
+# 855 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_inv_mod( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *N );
+# 883 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+ int mbedtls_mpi_is_prime( const mbedtls_mpi *X,
+                          int (*f_rng)(void *, unsigned char *, size_t),
+                          void *p_rng );
+# 916 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_is_prime_ext( const mbedtls_mpi *X, int rounds,
+                              int (*f_rng)(void *, unsigned char *, size_t),
+                              void *p_rng );
+
+
+
+
+
+
+typedef enum {
+    MBEDTLS_MPI_GEN_PRIME_FLAG_DH = 0x0001,
+    MBEDTLS_MPI_GEN_PRIME_FLAG_LOW_ERR = 0x0002,
+} mbedtls_mpi_gen_prime_flag_t;
+# 949 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_gen_prime( mbedtls_mpi *X, size_t nbits, int flags,
+                   int (*f_rng)(void *, unsigned char *, size_t),
+                   void *p_rng );
+# 963 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_self_test( int verbose );
+# 46 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h" 2
+# 77 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+typedef enum
+{
+    MBEDTLS_ECP_DP_NONE = 0,
+    MBEDTLS_ECP_DP_SECP192R1,
+    MBEDTLS_ECP_DP_SECP224R1,
+    MBEDTLS_ECP_DP_SECP256R1,
+    MBEDTLS_ECP_DP_SECP384R1,
+    MBEDTLS_ECP_DP_SECP521R1,
+    MBEDTLS_ECP_DP_BP256R1,
+    MBEDTLS_ECP_DP_BP384R1,
+    MBEDTLS_ECP_DP_BP512R1,
+    MBEDTLS_ECP_DP_CURVE25519,
+    MBEDTLS_ECP_DP_SECP192K1,
+    MBEDTLS_ECP_DP_SECP224K1,
+    MBEDTLS_ECP_DP_SECP256K1,
+    MBEDTLS_ECP_DP_CURVE448,
+} mbedtls_ecp_group_id;
+# 105 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+typedef struct mbedtls_ecp_curve_info
+{
+    mbedtls_ecp_group_id grp_id;
+    uint16_t tls_id;
+    uint16_t bit_size;
+    const char *name;
+} mbedtls_ecp_curve_info;
+# 124 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+typedef struct mbedtls_ecp_point
+{
+    mbedtls_mpi X;
+    mbedtls_mpi Y;
+    mbedtls_mpi Z;
+}
+mbedtls_ecp_point;
+# 173 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+typedef struct mbedtls_ecp_group
+{
+    mbedtls_ecp_group_id id;
+    mbedtls_mpi P;
+    mbedtls_mpi A;
+
+    mbedtls_mpi B;
+
+    mbedtls_ecp_point G;
+    mbedtls_mpi N;
+    size_t pbits;
+    size_t nbits;
+
+
+    unsigned int h;
+    int (*modp)(mbedtls_mpi *);
+
+    int (*t_pre)(mbedtls_ecp_point *, void *);
+    int (*t_post)(mbedtls_ecp_point *, void *);
+    void *t_data;
+    mbedtls_ecp_point *T;
+    size_t T_size;
+}
+mbedtls_ecp_group;
+# 267 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+typedef struct mbedtls_ecp_restart_mul mbedtls_ecp_restart_mul_ctx;
+
+
+
+
+
+
+typedef struct mbedtls_ecp_restart_muladd mbedtls_ecp_restart_muladd_ctx;
+
+
+
+
+typedef struct
+{
+    unsigned ops_done;
+    unsigned depth;
+    mbedtls_ecp_restart_mul_ctx *rsm;
+    mbedtls_ecp_restart_muladd_ctx *ma;
+} mbedtls_ecp_restart_ctx;
+# 306 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_check_budget( const mbedtls_ecp_group *grp,
+                              mbedtls_ecp_restart_ctx *rs_ctx,
+                              unsigned ops );
+# 332 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+typedef struct mbedtls_ecp_keypair
+{
+    mbedtls_ecp_group grp;
+    mbedtls_mpi d;
+    mbedtls_ecp_point Q;
+}
+mbedtls_ecp_keypair;
+# 409 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+void mbedtls_ecp_set_max_ops( unsigned max_ops );
+
+
+
+
+
+
+
+int mbedtls_ecp_restart_is_enabled( void );
+# 427 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+const mbedtls_ecp_curve_info *mbedtls_ecp_curve_list( void );
+# 437 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+const mbedtls_ecp_group_id *mbedtls_ecp_grp_id_list( void );
+# 448 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+const mbedtls_ecp_curve_info *mbedtls_ecp_curve_info_from_grp_id( mbedtls_ecp_group_id grp_id );
+# 459 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+const mbedtls_ecp_curve_info *mbedtls_ecp_curve_info_from_tls_id( uint16_t tls_id );
+# 470 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+const mbedtls_ecp_curve_info *mbedtls_ecp_curve_info_from_name( const char *name );
+
+
+
+
+
+
+void mbedtls_ecp_point_init( mbedtls_ecp_point *pt );
+# 488 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+void mbedtls_ecp_group_init( mbedtls_ecp_group *grp );
+
+
+
+
+
+
+void mbedtls_ecp_keypair_init( mbedtls_ecp_keypair *key );
+
+
+
+
+
+
+void mbedtls_ecp_point_free( mbedtls_ecp_point *pt );
+# 511 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+void mbedtls_ecp_group_free( mbedtls_ecp_group *grp );
+# 520 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+void mbedtls_ecp_keypair_free( mbedtls_ecp_keypair *key );
+# 529 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+void mbedtls_ecp_restart_init( mbedtls_ecp_restart_ctx *ctx );
+# 538 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+void mbedtls_ecp_restart_free( mbedtls_ecp_restart_ctx *ctx );
+# 552 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_copy( mbedtls_ecp_point *P, const mbedtls_ecp_point *Q );
+# 565 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_group_copy( mbedtls_ecp_group *dst,
+                            const mbedtls_ecp_group *src );
+# 577 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_set_zero( mbedtls_ecp_point *pt );
+# 588 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_is_zero( mbedtls_ecp_point *pt );
+# 602 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_point_cmp( const mbedtls_ecp_point *P,
+                           const mbedtls_ecp_point *Q );
+# 617 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_point_read_string( mbedtls_ecp_point *P, int radix,
+                           const char *x, const char *y );
+# 640 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_point_write_binary( const mbedtls_ecp_group *grp, const mbedtls_ecp_point *P,
+                            int format, size_t *olen,
+                            unsigned char *buf, size_t buflen );
+# 666 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_point_read_binary( const mbedtls_ecp_group *grp,
+                                   mbedtls_ecp_point *P,
+                                   const unsigned char *buf, size_t ilen );
+# 688 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_tls_read_point( const mbedtls_ecp_group *grp,
+                                mbedtls_ecp_point *pt,
+                                const unsigned char **buf, size_t len );
+# 714 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_tls_write_point( const mbedtls_ecp_group *grp,
+                                 const mbedtls_ecp_point *pt,
+                                 int format, size_t *olen,
+                                 unsigned char *buf, size_t blen );
+# 736 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_group_load( mbedtls_ecp_group *grp, mbedtls_ecp_group_id id );
+# 755 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_tls_read_group( mbedtls_ecp_group *grp,
+                                const unsigned char **buf, size_t len );
+# 776 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_tls_read_group_id( mbedtls_ecp_group_id *grp,
+                                   const unsigned char **buf,
+                                   size_t len );
+# 797 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_tls_write_group( const mbedtls_ecp_group *grp,
+                                 size_t *olen,
+                                 unsigned char *buf, size_t blen );
+# 834 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_mul( mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
+             const mbedtls_mpi *m, const mbedtls_ecp_point *P,
+             int (*f_rng)(void *, unsigned char *, size_t), void *p_rng );
+# 868 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_mul_restartable( mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
+             const mbedtls_mpi *m, const mbedtls_ecp_point *P,
+             int (*f_rng)(void *, unsigned char *, size_t), void *p_rng,
+             mbedtls_ecp_restart_ctx *rs_ctx );
+# 902 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_muladd( mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
+             const mbedtls_mpi *m, const mbedtls_ecp_point *P,
+             const mbedtls_mpi *n, const mbedtls_ecp_point *Q );
+# 940 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_muladd_restartable(
+             mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
+             const mbedtls_mpi *m, const mbedtls_ecp_point *P,
+             const mbedtls_mpi *n, const mbedtls_ecp_point *Q,
+             mbedtls_ecp_restart_ctx *rs_ctx );
+# 973 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_check_pubkey( const mbedtls_ecp_group *grp,
+                              const mbedtls_ecp_point *pt );
+# 995 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_check_privkey( const mbedtls_ecp_group *grp,
+                               const mbedtls_mpi *d );
+# 1013 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_gen_privkey( const mbedtls_ecp_group *grp,
+                     mbedtls_mpi *d,
+                     int (*f_rng)(void *, unsigned char *, size_t),
+                     void *p_rng );
+# 1045 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_gen_keypair_base( mbedtls_ecp_group *grp,
+                                  const mbedtls_ecp_point *G,
+                                  mbedtls_mpi *d, mbedtls_ecp_point *Q,
+                                  int (*f_rng)(void *, unsigned char *, size_t),
+                                  void *p_rng );
+# 1074 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_gen_keypair( mbedtls_ecp_group *grp, mbedtls_mpi *d,
+                             mbedtls_ecp_point *Q,
+                             int (*f_rng)(void *, unsigned char *, size_t),
+                             void *p_rng );
+# 1092 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_gen_key( mbedtls_ecp_group_id grp_id, mbedtls_ecp_keypair *key,
+                         int (*f_rng)(void *, unsigned char *, size_t),
+                         void *p_rng );
+# 1113 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_check_pub_priv( const mbedtls_ecp_keypair *pub,
+                                const mbedtls_ecp_keypair *prv );
+# 1124 "/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_self_test( int verbose );
+# 18 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c" 2
+
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h" 1
+# 29 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h"
+# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/inttypes.h" 1 3 4
+# 22 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/inttypes.h" 3 4
+# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
+# 23 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/inttypes.h" 2 3 4
+# 312 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/inttypes.h" 3 4
+
+# 312 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/inttypes.h" 3 4
+typedef struct {
+  intmax_t quot;
+  intmax_t rem;
+} imaxdiv_t;
+
+struct _reent;
+
+
+
+
+
+extern intmax_t imaxabs(intmax_t j);
+extern imaxdiv_t imaxdiv(intmax_t numer, intmax_t denomer);
+extern intmax_t strtoimax(const char *restrict, char **restrict, int);
+extern intmax_t _strtoimax_r(struct _reent *, const char *restrict, char **restrict, int);
+extern uintmax_t strtoumax(const char *restrict, char **restrict, int);
+extern uintmax_t _strtoumax_r(struct _reent *, const char *restrict, char **restrict, int);
+extern intmax_t wcstoimax(const wchar_t *restrict, wchar_t **restrict, int);
+extern intmax_t _wcstoimax_r(struct _reent *, const wchar_t *restrict, wchar_t **restrict, int);
+extern uintmax_t wcstoumax(const wchar_t *restrict, wchar_t **restrict, int);
+extern uintmax_t _wcstoumax_r(struct _reent *, const wchar_t *restrict, wchar_t **restrict, int);
+
+
+extern intmax_t strtoimax_l(const char *restrict, char **_restrict, int, locale_t);
+extern uintmax_t strtoumax_l(const char *restrict, char **_restrict, int, locale_t);
+extern intmax_t wcstoimax_l(const wchar_t *restrict, wchar_t **_restrict, int, locale_t);
+extern uintmax_t wcstoumax_l(const wchar_t *restrict, wchar_t **_restrict, int, locale_t);
+# 30 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h" 1
+# 23 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h"
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/ble.h" 1
+# 24 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/ble.h"
+# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 1 3 4
+# 17 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 3 4
+# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
+# 18 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
+
+
+
+
+
+
+# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/strings.h" 1 3 4
+# 44 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/strings.h" 3 4
+
+
+int bcmp(const void *, const void *, size_t) __attribute__((__pure__));
+void bcopy(const void *, void *, size_t);
+void bzero(void *, size_t);
+
+
+void explicit_bzero(void *, size_t);
+
+
+int ffs(int) __attribute__((__const__));
+
+
+int ffsl(long) __attribute__((__const__));
+int ffsll(long long) __attribute__((__const__));
+int fls(int) __attribute__((__const__));
+int flsl(long) __attribute__((__const__));
+int flsll(long long) __attribute__((__const__));
+
+
+char *index(const char *, int) __attribute__((__pure__));
+char *rindex(const char *, int) __attribute__((__pure__));
+
+int strcasecmp(const char *, const char *) __attribute__((__pure__));
+int strncasecmp(const char *, const char *, size_t) __attribute__((__pure__));
+
+
+int strcasecmp_l (const char *, const char *, locale_t);
+int strncasecmp_l (const char *, const char *, size_t, locale_t);
+
+
+# 25 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
+
+
+
+
+void * memchr (const void *, int, size_t);
+int memcmp (const void *, const void *, size_t);
+void * memcpy (void *restrict, const void *restrict, size_t);
+void * memmove (void *, const void *, size_t);
+void * memset (void *, int, size_t);
+char *strcat (char *restrict, const char *restrict);
+char *strchr (const char *, int);
+int strcmp (const char *, const char *);
+int strcoll (const char *, const char *);
+char *strcpy (char *restrict, const char *restrict);
+size_t strcspn (const char *, const char *);
+char *strerror (int);
+size_t strlen (const char *);
+char *strncat (char *restrict, const char *restrict, size_t);
+int strncmp (const char *, const char *, size_t);
+char *strncpy (char *restrict, const char *restrict, size_t);
+char *strpbrk (const char *, const char *);
+char *strrchr (const char *, int);
+size_t strspn (const char *, const char *);
+char *strstr (const char *, const char *);
+
+char *strtok (char *restrict, const char *restrict);
+
+size_t strxfrm (char *restrict, const char *restrict, size_t);
+
+
+int strcoll_l (const char *, const char *, locale_t);
+char *strerror_l (int, locale_t);
+size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
+
+
+char *strtok_r (char *restrict, const char *restrict, char **restrict);
+
+
+int timingsafe_bcmp (const void *, const void *, size_t);
+int timingsafe_memcmp (const void *, const void *, size_t);
+
+
+void * memccpy (void *restrict, const void *restrict, int, size_t);
+
+
+void * mempcpy (void *, const void *, size_t);
+void * memmem (const void *, size_t, const void *, size_t);
+void * memrchr (const void *, int, size_t);
+void * rawmemchr (const void *, int);
+
+
+char *stpcpy (char *restrict, const char *restrict);
+char *stpncpy (char *restrict, const char *restrict, size_t);
+
+
+char *strcasestr (const char *, const char *);
+char *strchrnul (const char *, int);
+
+
+char *strdup (const char *);
+
+char *_strdup_r (struct _reent *, const char *);
+
+char *strndup (const char *, size_t);
+
+char *_strndup_r (struct _reent *, const char *, size_t);
+
+
+
+
+
+
+char *strerror_r (int, char *, size_t);
+# 112 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 3 4
+char * _strerror_r (struct _reent *, int, int, int *);
+
+
+size_t strlcat (char *, const char *, size_t);
+size_t strlcpy (char *, const char *, size_t);
+
+
+size_t strnlen (const char *, size_t);
+
+
+char *strsep (char **, const char *);
+
+
+char *strnstr(const char *, const char *, size_t) __attribute__((__pure__));
+
+
+
+char *strlwr (char *);
+char *strupr (char *);
+
+
+
+char *strsignal (int __signo);
+
+
+
+
+
+
+
+int strverscmp (const char *, const char *);
+# 172 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 3 4
+char *__attribute__((__nonnull__ (1))) basename (const char *) __asm__("" "__gnu_basename");
+
+
+# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/string.h" 1 3 4
+# 176 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
+
+
+# 25 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/ble.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/syscfg/syscfg.h" 1
+# 9 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/syscfg/syscfg.h"
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/port/include/esp_nimble_cfg.h" 1
+# 10 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/syscfg/syscfg.h" 2
+# 26 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/ble.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os.h" 1
+# 38 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os.h"
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h" 1
+# 24 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h"
+# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
+# 25 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h" 2
+
+
+
+
+
+
+
+# 31 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h"
+struct ble_npl_event;
+typedef void ble_npl_event_fn(struct ble_npl_event *ev);
+
+enum ble_npl_error {
+    BLE_NPL_OK = 0,
+    BLE_NPL_ENOMEM = 1,
+    BLE_NPL_EINVAL = 2,
+    BLE_NPL_INVALID_PARAM = 3,
+    BLE_NPL_MEM_NOT_ALIGNED = 4,
+    BLE_NPL_BAD_MUTEX = 5,
+    BLE_NPL_TIMEOUT = 6,
+    BLE_NPL_ERR_IN_ISR = 7,
+    BLE_NPL_ERR_PRIV = 8,
+    BLE_NPL_OS_NOT_STARTED = 9,
+    BLE_NPL_ENOENT = 10,
+    BLE_NPL_EBUSY = 11,
+    BLE_NPL_ERROR = 12,
+};
+
+typedef enum ble_npl_error ble_npl_error_t;
+
+
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h" 1
+# 30 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h"
+# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/timers.h" 1
+# 80 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/timers.h"
+# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h" 1
+# 81 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/timers.h" 2
+# 118 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/timers.h"
+typedef void * TimerHandle_t;
+
+
+
+
+typedef void (*TimerCallbackFunction_t)( TimerHandle_t xTimer );
+
+
+
+
+
+typedef void (*PendedFunction_t)( void *, uint32_t );
+# 263 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/timers.h"
+ TimerHandle_t xTimerCreate( const char * const pcTimerName,
+        const TickType_t xTimerPeriodInTicks,
+        const UBaseType_t uxAutoReload,
+        void * const pvTimerID,
+        TimerCallbackFunction_t pxCallbackFunction ) ;
+# 412 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/timers.h"
+void *pvTimerGetTimerID( TimerHandle_t xTimer ) ;
+# 431 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/timers.h"
+void vTimerSetTimerID( TimerHandle_t xTimer, void *pvNewID ) ;
+# 468 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/timers.h"
+BaseType_t xTimerIsTimerActive( TimerHandle_t xTimer ) ;
+# 477 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/timers.h"
+TaskHandle_t xTimerGetTimerDaemonTaskHandle( void );
+# 486 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/timers.h"
+TickType_t xTimerGetPeriod( TimerHandle_t xTimer ) ;
+# 499 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/timers.h"
+TickType_t xTimerGetExpiryTime( TimerHandle_t xTimer ) ;
+# 1203 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/timers.h"
+BaseType_t xTimerPendFunctionCallFromISR( PendedFunction_t xFunctionToPend, void *pvParameter1, uint32_t ulParameter2, BaseType_t *pxHigherPriorityTaskWoken );
+# 1231 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/timers.h"
+BaseType_t xTimerPendFunctionCall( PendedFunction_t xFunctionToPend, void *pvParameter1, uint32_t ulParameter2, TickType_t xTicksToWait );
+# 1240 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/timers.h"
+const char * pcTimerGetTimerName( TimerHandle_t xTimer );
+
+
+
+
+
+
+BaseType_t xTimerCreateTimerTask( void ) ;
+BaseType_t xTimerGenericCommand( TimerHandle_t xTimer, const BaseType_t xCommandID, const TickType_t xOptionalValue, BaseType_t * const pxHigherPriorityTaskWoken, const TickType_t xTicksToWait ) ;
+# 31 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h" 2
+# 41 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h"
+typedef uint32_t ble_npl_time_t;
+typedef int32_t ble_npl_stime_t;
+
+struct ble_npl_event {
+    
+# 45 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h" 3 4
+   _Bool 
+# 45 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h"
+        queued;
+    ble_npl_event_fn *fn;
+    void *arg;
+};
+
+struct ble_npl_eventq {
+    QueueHandle_t q;
+};
+
+struct ble_npl_callout {
+    TimerHandle_t handle;
+    struct ble_npl_eventq *evq;
+    struct ble_npl_event ev;
+};
+
+struct ble_npl_mutex {
+    SemaphoreHandle_t handle;
+};
+
+struct ble_npl_sem {
+    SemaphoreHandle_t handle;
+};
+
+
+
+
+
+
+
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/npl_freertos.h" 1
+# 27 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/npl_freertos.h"
+struct ble_npl_eventq *npl_freertos_eventq_dflt_get(void);
+
+struct ble_npl_event *npl_freertos_eventq_get(struct ble_npl_eventq *evq,
+                                              ble_npl_time_t tmo);
+
+void npl_freertos_eventq_put(struct ble_npl_eventq *evq,
+                             struct ble_npl_event *ev);
+
+void npl_freertos_eventq_remove(struct ble_npl_eventq *evq,
+                                struct ble_npl_event *ev);
+
+ble_npl_error_t npl_freertos_mutex_init(struct ble_npl_mutex *mu);
+ble_npl_error_t npl_freertos_mutex_deinit(struct ble_npl_mutex *mu);
+
+ble_npl_error_t npl_freertos_mutex_pend(struct ble_npl_mutex *mu,
+                                        ble_npl_time_t timeout);
+
+ble_npl_error_t npl_freertos_mutex_release(struct ble_npl_mutex *mu);
+
+ble_npl_error_t npl_freertos_sem_init(struct ble_npl_sem *sem, uint16_t tokens);
+ble_npl_error_t npl_freertos_sem_deinit(struct ble_npl_sem *sem);
+
+ble_npl_error_t npl_freertos_sem_pend(struct ble_npl_sem *sem,
+                                      ble_npl_time_t timeout);
+
+ble_npl_error_t npl_freertos_sem_release(struct ble_npl_sem *sem);
+
+void npl_freertos_callout_init(struct ble_npl_callout *co,
+                               struct ble_npl_eventq *evq,
+                               ble_npl_event_fn *ev_cb, void *ev_arg);
+
+void npl_freertos_callout_deinit(struct ble_npl_callout *co);
+
+ble_npl_error_t npl_freertos_callout_reset(struct ble_npl_callout *co,
+                                           ble_npl_time_t ticks);
+
+ble_npl_time_t npl_freertos_callout_remaining_ticks(struct ble_npl_callout *co,
+          ble_npl_time_t now);
+
+ble_npl_error_t npl_freertos_time_ms_to_ticks(uint32_t ms,
+                                              ble_npl_time_t *out_ticks);
+
+ble_npl_error_t npl_freertos_time_ticks_to_ms(ble_npl_time_t ticks,
+                                              uint32_t *out_ms);
+
+void npl_freertos_hw_set_isr(int irqn, uint32_t addr);
+
+uint32_t npl_freertos_hw_enter_critical(void);
+
+void npl_freertos_hw_exit_critical(uint32_t ctx);
+# 75 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h" 2
+
+static inline 
+# 76 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h" 3 4
+             _Bool
+
+# 77 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h"
+ble_npl_os_started(void)
+{
+    return xTaskGetSchedulerState() != ( ( BaseType_t ) 1 );
+}
+
+static inline void *
+ble_npl_get_current_task_id(void)
+{
+    return xTaskGetCurrentTaskHandle();
+}
+
+static inline void
+ble_npl_eventq_init(struct ble_npl_eventq *evq)
+{
+    evq->q = xQueueGenericCreate( ( 32 ), ( sizeof(struct ble_npl_eventq *) ), ( ( ( uint8_t ) 0U ) ) );
+}
+
+static inline void
+ble_npl_eventq_deinit(struct ble_npl_eventq *evq)
+{
+    vQueueDelete(evq->q);
+}
+
+static inline struct ble_npl_event *
+ble_npl_eventq_get(struct ble_npl_eventq *evq, ble_npl_time_t tmo)
+{
+    return npl_freertos_eventq_get(evq, tmo);
+}
+
+static inline void
+ble_npl_eventq_put(struct ble_npl_eventq *evq, struct ble_npl_event *ev)
+{
+    npl_freertos_eventq_put(evq, ev);
+}
+
+static inline void
+ble_npl_eventq_remove(struct ble_npl_eventq *evq, struct ble_npl_event *ev)
+{
+    npl_freertos_eventq_remove(evq, ev);
+}
+
+static inline void
+ble_npl_event_run(struct ble_npl_event *ev)
+{
+    ev->fn(ev);
+}
+
+static inline 
+# 124 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h" 3 4
+             _Bool
+
+# 125 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h"
+ble_npl_eventq_is_empty(struct ble_npl_eventq *evq)
+{
+    return xQueueIsQueueEmptyFromISR(evq->q);
+}
+
+static inline void
+ble_npl_event_init(struct ble_npl_event *ev, ble_npl_event_fn *fn,
+                   void *arg)
+{
+    memset(ev, 0, sizeof(*ev));
+    ev->fn = fn;
+    ev->arg = arg;
+}
+
+static inline 
+# 139 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h" 3 4
+             _Bool
+
+# 140 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h"
+ble_npl_event_is_queued(struct ble_npl_event *ev)
+{
+    return ev->queued;
+}
+
+static inline void *
+ble_npl_event_get_arg(struct ble_npl_event *ev)
+{
+    return ev->arg;
+}
+
+static inline void
+ble_npl_event_set_arg(struct ble_npl_event *ev, void *arg)
+{
+    ev->arg = arg;
+}
+
+static inline ble_npl_error_t
+ble_npl_mutex_init(struct ble_npl_mutex *mu)
+{
+    return npl_freertos_mutex_init(mu);
+}
+
+static inline ble_npl_error_t
+ble_npl_mutex_deinit(struct ble_npl_mutex *mu)
+{
+    return npl_freertos_mutex_deinit(mu);
+}
+
+static inline ble_npl_error_t
+ble_npl_mutex_pend(struct ble_npl_mutex *mu, ble_npl_time_t timeout)
+{
+    return npl_freertos_mutex_pend(mu, timeout);
+}
+
+static inline ble_npl_error_t
+ble_npl_mutex_release(struct ble_npl_mutex *mu)
+{
+    return npl_freertos_mutex_release(mu);
+}
+
+static inline ble_npl_error_t
+ble_npl_sem_init(struct ble_npl_sem *sem, uint16_t tokens)
+{
+    return npl_freertos_sem_init(sem, tokens);
+}
+
+static inline ble_npl_error_t
+ble_npl_sem_deinit(struct ble_npl_sem *sem)
+{
+    return npl_freertos_sem_deinit(sem);
+}
+
+static inline ble_npl_error_t
+ble_npl_sem_pend(struct ble_npl_sem *sem, ble_npl_time_t timeout)
+{
+    return npl_freertos_sem_pend(sem, timeout);
+}
+
+static inline ble_npl_error_t
+ble_npl_sem_release(struct ble_npl_sem *sem)
+{
+    return npl_freertos_sem_release(sem);
+}
+
+static inline uint16_t
+ble_npl_sem_get_count(struct ble_npl_sem *sem)
+{
+    return uxQueueMessagesWaiting( ( QueueHandle_t ) ( sem->handle ) );
+}
+
+static inline void
+ble_npl_callout_init(struct ble_npl_callout *co, struct ble_npl_eventq *evq,
+                     ble_npl_event_fn *ev_cb, void *ev_arg)
+{
+    npl_freertos_callout_init(co, evq, ev_cb, ev_arg);
+}
+static inline void
+ble_npl_callout_deinit(struct ble_npl_callout *co)
+{
+    npl_freertos_callout_deinit(co);
+}
+
+static inline ble_npl_error_t
+ble_npl_callout_reset(struct ble_npl_callout *co, ble_npl_time_t ticks)
+{
+    return npl_freertos_callout_reset(co, ticks);
+}
+
+static inline void
+ble_npl_callout_stop(struct ble_npl_callout *co)
+{
+    xTimerGenericCommand( ( co->handle ), ( ( BaseType_t ) 3 ), 0U, 
+# 232 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h" 3 4
+   ((void *)0)
+# 232 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h"
+   , ( ( TickType_t ) 0xffffffffUL ) );
+}
+
+static inline 
+# 235 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h" 3 4
+             _Bool
+
+# 236 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h"
+ble_npl_callout_is_active(struct ble_npl_callout *co)
+{
+    return xTimerIsTimerActive(co->handle) == ( ( BaseType_t ) 1 );
+}
+
+static inline ble_npl_time_t
+ble_npl_callout_get_ticks(struct ble_npl_callout *co)
+{
+    return xTimerGetExpiryTime(co->handle);
+}
+
+static inline uint32_t
+ble_npl_callout_remaining_ticks(struct ble_npl_callout *co,
+                                ble_npl_time_t time)
+{
+    return npl_freertos_callout_remaining_ticks(co, time);
+}
+
+static inline void
+ble_npl_callout_set_arg(struct ble_npl_callout *co, void *arg)
+{
+    co->ev.arg = arg;
+}
+
+static inline uint32_t
+ble_npl_time_get(void)
+{
+    return xTaskGetTickCountFromISR();
+}
+
+static inline ble_npl_error_t
+ble_npl_time_ms_to_ticks(uint32_t ms, ble_npl_time_t *out_ticks)
+{
+    return npl_freertos_time_ms_to_ticks(ms, out_ticks);
+}
+
+static inline ble_npl_error_t
+ble_npl_time_ticks_to_ms(ble_npl_time_t ticks, uint32_t *out_ms)
+{
+    return ble_npl_time_ticks_to_ms(ticks, out_ms);
+}
+
+static inline ble_npl_time_t
+ble_npl_time_ms_to_ticks32(uint32_t ms)
+{
+    return ms * ( 100 ) / 1000;
+}
+
+static inline uint32_t
+ble_npl_time_ticks_to_ms32(ble_npl_time_t ticks)
+{
+    return ticks * 1000 / ( 100 );
+}
+
+static inline void
+ble_npl_time_delay(ble_npl_time_t ticks)
+{
+    vTaskDelay(ticks);
+}
+# 304 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/npl/freertos/include/nimble/nimble_npl_os.h"
+extern portMUX_TYPE ble_port_mutex;
+
+static inline uint32_t
+ble_npl_hw_enter_critical(void)
+{
+    vTaskEnterCritical(&ble_port_mutex);
+    return 0;
+}
+
+static inline void
+ble_npl_hw_exit_critical(uint32_t ctx)
+{
+    vTaskExitCritical(&ble_port_mutex);
+
+}
+# 54 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h" 2
+
+
+
+
+
+
+# 59 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h" 3 4
+_Bool 
+# 59 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h"
+    ble_npl_os_started(void);
+
+void *ble_npl_get_current_task_id(void);
+
+
+
+
+
+void ble_npl_eventq_init(struct ble_npl_eventq *evq);
+
+void ble_npl_eventq_deinit(struct ble_npl_eventq *evq);
+
+struct ble_npl_event *ble_npl_eventq_get(struct ble_npl_eventq *evq,
+                                         ble_npl_time_t tmo);
+
+void ble_npl_eventq_put(struct ble_npl_eventq *evq, struct ble_npl_event *ev);
+
+void ble_npl_eventq_remove(struct ble_npl_eventq *evq,
+                           struct ble_npl_event *ev);
+
+void ble_npl_event_init(struct ble_npl_event *ev, ble_npl_event_fn *fn,
+                        void *arg);
+
+
+# 82 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h" 3 4
+_Bool 
+# 82 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h"
+    ble_npl_event_is_queued(struct ble_npl_event *ev);
+
+void *ble_npl_event_get_arg(struct ble_npl_event *ev);
+
+void ble_npl_event_set_arg(struct ble_npl_event *ev, void *arg);
+
+
+# 88 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h" 3 4
+_Bool 
+# 88 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h"
+    ble_npl_eventq_is_empty(struct ble_npl_eventq *evq);
+
+void ble_npl_event_run(struct ble_npl_event *ev);
+
+
+
+
+
+ble_npl_error_t ble_npl_mutex_init(struct ble_npl_mutex *mu);
+
+ble_npl_error_t ble_npl_mutex_pend(struct ble_npl_mutex *mu,
+                                   ble_npl_time_t timeout);
+
+ble_npl_error_t ble_npl_mutex_release(struct ble_npl_mutex *mu);
+
+ble_npl_error_t ble_npl_mutex_deinit(struct ble_npl_mutex *mu);
+
+
+
+
+
+ble_npl_error_t ble_npl_sem_init(struct ble_npl_sem *sem, uint16_t tokens);
+
+ble_npl_error_t ble_npl_sem_pend(struct ble_npl_sem *sem,
+                                 ble_npl_time_t timeout);
+
+ble_npl_error_t ble_npl_sem_release(struct ble_npl_sem *sem);
+
+ble_npl_error_t ble_npl_sem_deinit(struct ble_npl_sem *sem);
+
+uint16_t ble_npl_sem_get_count(struct ble_npl_sem *sem);
+
+
+
+
+
+void ble_npl_callout_init(struct ble_npl_callout *co, struct ble_npl_eventq *evq,
+                          ble_npl_event_fn *ev_cb, void *ev_arg);
+
+ble_npl_error_t ble_npl_callout_reset(struct ble_npl_callout *co,
+                                      ble_npl_time_t ticks);
+
+void ble_npl_callout_stop(struct ble_npl_callout *co);
+
+
+# 132 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h" 3 4
+_Bool 
+# 132 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h"
+    ble_npl_callout_is_active(struct ble_npl_callout *co);
+
+ble_npl_time_t ble_npl_callout_get_ticks(struct ble_npl_callout *co);
+
+ble_npl_time_t ble_npl_callout_remaining_ticks(struct ble_npl_callout *co,
+                                               ble_npl_time_t time);
+
+void ble_npl_callout_set_arg(struct ble_npl_callout *co,
+                             void *arg);
+
+
+
+
+ble_npl_time_t ble_npl_time_get(void);
+
+ble_npl_error_t ble_npl_time_ms_to_ticks(uint32_t ms, ble_npl_time_t *out_ticks);
+
+ble_npl_error_t ble_npl_time_ticks_to_ms(ble_npl_time_t ticks, uint32_t *out_ms);
+
+ble_npl_time_t ble_npl_time_ms_to_ticks32(uint32_t ms);
+
+uint32_t ble_npl_time_ticks_to_ms32(ble_npl_time_t ticks);
+
+void ble_npl_time_delay(ble_npl_time_t ticks);
+# 170 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h"
+uint32_t ble_npl_hw_enter_critical(void);
+
+void ble_npl_hw_exit_critical(uint32_t ctx);
+
+
+# 174 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h" 3 4
+_Bool 
+# 174 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h"
+    ble_npl_hw_is_in_critical(void);
+# 39 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os.h" 2
+# 47 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os.h"
+typedef uint32_t os_sr_t;
+
+
+
+
+
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/endian.h" 1
+# 209 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/endian.h"
+void put_le16(void *buf, uint16_t x);
+void put_le32(void *buf, uint32_t x);
+void put_le64(void *buf, uint64_t x);
+uint16_t get_le16(const void *buf);
+uint32_t get_le32(const void *buf);
+uint64_t get_le64(const void *buf);
+void put_be16(void *buf, uint16_t x);
+void put_be32(void *buf, uint32_t x);
+void put_be64(void *buf, uint64_t x);
+uint16_t get_be16(const void *buf);
+uint32_t get_be32(const void *buf);
+uint64_t get_be64(const void *buf);
+void swap_in_place(void *buf, int len);
+void swap_buf(uint8_t *dst, const uint8_t *src, int len);
+# 54 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/queue.h" 1
+# 37 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/queue.h"
+# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/queue.h" 1 3 4
+# 38 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/queue.h" 2
+# 55 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_error.h" 1
+# 23 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_error.h"
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os.h" 1
+# 24 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_error.h" 2
+
+enum os_error {
+    OS_OK = 0,
+    OS_ENOMEM = 1,
+    OS_EINVAL = 2,
+    OS_INVALID_PARM = 3,
+    OS_MEM_NOT_ALIGNED = 4,
+    OS_BAD_MUTEX = 5,
+    OS_TIMEOUT = 6,
+    OS_ERR_IN_ISR = 7,
+    OS_ERR_PRIV = 8,
+    OS_NOT_STARTED = 9,
+    OS_ENOENT = 10,
+    OS_EBUSY = 11,
+    OS_ERROR = 12,
+};
+
+typedef enum os_error os_error_t;
+# 56 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h" 1
+# 45 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+struct os_mbuf_pool {
+
+
+
+
+    uint16_t omp_databuf_len;
+
+
+
+    struct os_mempool *omp_pool;
+
+    
+# 56 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h" 3 4
+   struct { struct 
+# 56 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+   os_mbuf_pool 
+# 56 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h" 3 4
+   *stqe_next; } 
+# 56 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+                              omp_next;
+};
+
+
+
+
+
+struct os_mbuf_pkthdr {
+
+
+
+    uint16_t omp_len;
+
+
+
+    uint16_t omp_flags;
+
+    
+# 73 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h" 3 4
+   struct { struct 
+# 73 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+   os_mbuf_pkthdr 
+# 73 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h" 3 4
+   *stqe_next; } 
+# 73 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+                                omp_next;
+};
+
+
+
+
+struct os_mbuf {
+
+
+
+    uint8_t *om_data;
+
+
+
+    uint8_t om_flags;
+
+
+
+    uint8_t om_pkthdr_len;
+
+
+
+    uint16_t om_len;
+
+
+
+
+    struct os_mbuf_pool *om_omp;
+
+    
+# 102 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h" 3 4
+   struct { struct 
+# 102 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+   os_mbuf 
+# 102 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h" 3 4
+   *sle_next; } 
+# 102 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+                        om_next;
+
+
+
+
+    uint8_t om_databuf[0];
+};
+
+
+
+
+struct os_mqueue {
+    
+# 114 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h" 3 4
+   struct { struct 
+# 114 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+   os_mbuf_pkthdr 
+# 114 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h" 3 4
+   *stqh_first; struct 
+# 114 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+   os_mbuf_pkthdr 
+# 114 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h" 3 4
+   **stqh_last; } 
+# 114 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+                                 mq_head;
+
+    struct ble_npl_event mq_ev;
+};
+# 180 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+static inline uint16_t
+_os_mbuf_leadingspace(struct os_mbuf *om)
+{
+    uint16_t startoff;
+    uint16_t leadingspace;
+
+    startoff = 0;
+    if (((om)->om_pkthdr_len >= sizeof (struct os_mbuf_pkthdr))) {
+        startoff = om->om_pkthdr_len;
+    }
+
+    leadingspace = (uint16_t) ((uint8_t *) ((om)->om_data) -
+        ((uint8_t *) &om->om_databuf[0] + startoff));
+
+    return (leadingspace);
+}
+# 215 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+static inline uint16_t
+_os_mbuf_trailingspace(struct os_mbuf *om)
+{
+    struct os_mbuf_pool *omp;
+
+    omp = om->om_omp;
+
+    return (&om->om_databuf[0] + omp->omp_databuf_len) -
+      (om->om_data + om->om_len);
+}
+# 257 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+int os_mqueue_init(struct os_mqueue *mq, ble_npl_event_fn *ev_cb, void *arg);
+# 266 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+struct os_mbuf *os_mqueue_get(struct os_mqueue *);
+# 278 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+int os_mqueue_put(struct os_mqueue *, struct ble_npl_eventq *, struct os_mbuf *);
+# 296 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+int os_msys_register(struct os_mbuf_pool *);
+# 307 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+struct os_mbuf *os_msys_get(uint16_t dsize, uint16_t leadingspace);
+
+
+
+
+void os_msys_reset(void);
+# 323 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+struct os_mbuf *os_msys_get_pkthdr(uint16_t dsize, uint16_t user_hdr_len);
+
+
+
+
+
+
+int os_msys_count(void);
+
+
+
+
+
+
+int os_msys_num_free(void);
+# 349 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+int os_mbuf_pool_init(struct os_mbuf_pool *, struct os_mempool *mp,
+        uint16_t, uint16_t);
+# 362 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+struct os_mbuf *os_mbuf_get(struct os_mbuf_pool *omp, uint16_t);
+# 372 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+struct os_mbuf *os_mbuf_get_pkthdr(struct os_mbuf_pool *omp,
+        uint8_t pkthdr_len);
+# 383 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+struct os_mbuf *os_mbuf_dup(struct os_mbuf *m);
+# 398 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+struct os_mbuf *os_mbuf_off(const struct os_mbuf *om, int off,
+                            uint16_t *out_off);
+# 414 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+int os_mbuf_copydata(const struct os_mbuf *m, int off, int len, void *dst);
+# 425 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+int os_mbuf_append(struct os_mbuf *m, const void *, uint16_t);
+# 442 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+int os_mbuf_appendfrom(struct os_mbuf *dst, const struct os_mbuf *src,
+                       uint16_t src_off, uint16_t len);
+# 453 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+int os_mbuf_free(struct os_mbuf *mb);
+# 463 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+int os_mbuf_free_chain(struct os_mbuf *om);
+# 474 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+void os_mbuf_adj(struct os_mbuf *mp, int req_len);
+# 491 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+int os_mbuf_cmpf(const struct os_mbuf *om, int off, const void *data, int len);
+# 512 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+int os_mbuf_cmpm(const struct os_mbuf *om1, uint16_t offset1,
+                 const struct os_mbuf *om2, uint16_t offset2,
+                 uint16_t len);
+# 531 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+struct os_mbuf *os_mbuf_prepend(struct os_mbuf *om, int len);
+# 544 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+struct os_mbuf *os_mbuf_prepend_pullup(struct os_mbuf *om, uint16_t len);
+# 560 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+int os_mbuf_copyinto(struct os_mbuf *om, int off, const void *src, int len);
+# 570 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+void os_mbuf_concat(struct os_mbuf *first, struct os_mbuf *second);
+# 586 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+void *os_mbuf_extend(struct os_mbuf *om, uint16_t len);
+# 604 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+struct os_mbuf *os_mbuf_pullup(struct os_mbuf *om, uint16_t len);
+# 615 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mbuf.h"
+struct os_mbuf *os_mbuf_trim_front(struct os_mbuf *om);
+# 57 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h" 1
+# 45 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h"
+struct os_memblock {
+    
+# 46 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h" 3 4
+   struct { struct 
+# 46 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h"
+   os_memblock 
+# 46 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h" 3 4
+   *sle_next; } 
+# 46 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h"
+                            mb_next;
+};
+# 57 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h"
+struct os_mempool {
+
+    uint32_t mp_block_size;
+
+    uint16_t mp_num_blocks;
+
+    uint16_t mp_num_free;
+
+    uint16_t mp_min_free;
+
+    uint8_t mp_flags;
+
+    uintptr_t mp_membuf_addr;
+    
+# 70 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h" 3 4
+   struct { struct 
+# 70 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h"
+   os_mempool 
+# 70 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h" 3 4
+   *stqe_next; } 
+# 70 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h"
+                            mp_list;
+    
+# 71 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h" 3 4
+   struct { struct 
+# 71 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h"
+   os_memblock 
+# 71 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h" 3 4
+   *slh_first; }
+# 71 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h"
+                           ;
+
+    const char *name;
+};
+
+
+
+
+
+
+
+struct os_mempool_ext;
+# 102 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h"
+typedef os_error_t os_mempool_put_fn(struct os_mempool_ext *ome, void *data,
+                                     void *arg);
+
+struct os_mempool_ext {
+    struct os_mempool mpe_mp;
+
+
+    os_mempool_put_fn *mpe_put_cb;
+    void *mpe_put_arg;
+};
+
+
+
+
+
+
+
+struct os_mempool_info {
+
+    int omi_block_size;
+
+    int omi_num_blocks;
+
+    int omi_num_free;
+
+    int omi_min_free;
+
+    char omi_name[(32)];
+};
+# 142 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h"
+struct os_mempool *os_mempool_info_get_next(struct os_mempool *,
+        struct os_mempool_info *);
+# 152 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h"
+typedef uint32_t os_membuf_t;
+# 173 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h"
+os_error_t os_mempool_init(struct os_mempool *mp, uint16_t blocks,
+                           uint32_t block_size, void *membuf, const char *name);
+# 189 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h"
+os_error_t os_mempool_ext_init(struct os_mempool_ext *mpe, uint16_t blocks,
+                               uint32_t block_size, void *membuf, const char *name);
+# 199 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h"
+os_error_t os_mempool_clear(struct os_mempool *mp);
+# 208 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h"
+os_error_t os_mempool_ext_clear(struct os_mempool_ext *mpe);
+# 220 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h"
+
+# 220 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h" 3 4
+_Bool 
+# 220 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h"
+    os_mempool_is_sane(const struct os_mempool *mp);
+# 231 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h"
+int os_memblock_from(const struct os_mempool *mp, const void *block_addr);
+# 240 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h"
+void *os_memblock_get(struct os_mempool *mp);
+# 252 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h"
+os_error_t os_memblock_put_from_cb(struct os_mempool *mp, void *block_addr);
+# 262 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os_mempool.h"
+os_error_t os_memblock_put(struct os_mempool *mp, void *block_addr);
+# 58 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os.h" 2
+# 27 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/ble.h" 2
+# 41 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/ble.h"
+struct ble_encryption_block
+{
+    uint8_t key[(16)];
+    uint8_t plain_text[(16)];
+    uint8_t cipher_text[(16)];
+};
+# 67 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/ble.h"
+struct ble_mbuf_hdr_rxinfo
+{
+    uint16_t flags;
+    uint8_t channel;
+    uint8_t handle;
+    int8_t rssi;
+
+    int8_t phy;
+    uint8_t phy_mode;
+
+
+
+};
+# 96 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/ble.h"
+struct ble_mbuf_hdr_txinfo
+{
+    uint8_t flags;
+    uint8_t offset;
+    uint8_t pyld_len;
+    uint8_t hdr_byte;
+};
+
+struct ble_mbuf_hdr
+{
+    union {
+        struct ble_mbuf_hdr_rxinfo rxinfo;
+        struct ble_mbuf_hdr_txinfo txinfo;
+    };
+    uint32_t beg_cputime;
+    uint32_t rem_usecs;
+};
+# 162 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/ble.h"
+extern uint8_t g_dev_addr[(6)];
+extern uint8_t g_random_addr[(6)];
+
+
+enum ble_error_codes
+{
+
+    BLE_ERR_SUCCESS = 0x00,
+    BLE_ERR_UNKNOWN_HCI_CMD = 0x01,
+    BLE_ERR_UNK_CONN_ID = 0x02,
+    BLE_ERR_HW_FAIL = 0x03,
+    BLE_ERR_PAGE_TMO = 0x04,
+    BLE_ERR_AUTH_FAIL = 0x05,
+    BLE_ERR_PINKEY_MISSING = 0x06,
+    BLE_ERR_MEM_CAPACITY = 0x07,
+    BLE_ERR_CONN_SPVN_TMO = 0x08,
+    BLE_ERR_CONN_LIMIT = 0x09,
+    BLE_ERR_SYNCH_CONN_LIMIT = 0x0a,
+    BLE_ERR_ACL_CONN_EXISTS = 0x0b,
+    BLE_ERR_CMD_DISALLOWED = 0x0c,
+    BLE_ERR_CONN_REJ_RESOURCES = 0x0d,
+    BLE_ERR_CONN_REJ_SECURITY = 0x0e,
+    BLE_ERR_CONN_REJ_BD_ADDR = 0x0f,
+    BLE_ERR_CONN_ACCEPT_TMO = 0x10,
+    BLE_ERR_UNSUPPORTED = 0x11,
+    BLE_ERR_INV_HCI_CMD_PARMS = 0x12,
+    BLE_ERR_REM_USER_CONN_TERM = 0x13,
+    BLE_ERR_RD_CONN_TERM_RESRCS = 0x14,
+    BLE_ERR_RD_CONN_TERM_PWROFF = 0x15,
+    BLE_ERR_CONN_TERM_LOCAL = 0x16,
+    BLE_ERR_REPEATED_ATTEMPTS = 0x17,
+    BLE_ERR_NO_PAIRING = 0x18,
+    BLE_ERR_UNK_LMP = 0x19,
+    BLE_ERR_UNSUPP_REM_FEATURE = 0x1a,
+    BLE_ERR_SCO_OFFSET = 0x1b,
+    BLE_ERR_SCO_ITVL = 0x1c,
+    BLE_ERR_SCO_AIR_MODE = 0x1d,
+    BLE_ERR_INV_LMP_LL_PARM = 0x1e,
+    BLE_ERR_UNSPECIFIED = 0x1f,
+    BLE_ERR_UNSUPP_LMP_LL_PARM = 0x20,
+    BLE_ERR_NO_ROLE_CHANGE = 0x21,
+    BLE_ERR_LMP_LL_RSP_TMO = 0x22,
+    BLE_ERR_LMP_COLLISION = 0x23,
+    BLE_ERR_LMP_PDU = 0x24,
+    BLE_ERR_ENCRYPTION_MODE = 0x25,
+    BLE_ERR_LINK_KEY_CHANGE = 0x26,
+    BLE_ERR_UNSUPP_QOS = 0x27,
+    BLE_ERR_INSTANT_PASSED = 0x28,
+    BLE_ERR_UNIT_KEY_PAIRING = 0x29,
+    BLE_ERR_DIFF_TRANS_COLL = 0x2a,
+
+    BLE_ERR_QOS_PARM = 0x2c,
+    BLE_ERR_QOS_REJECTED = 0x2d,
+    BLE_ERR_CHAN_CLASS = 0x2e,
+    BLE_ERR_INSUFFICIENT_SEC = 0x2f,
+    BLE_ERR_PARM_OUT_OF_RANGE = 0x30,
+
+    BLE_ERR_PENDING_ROLE_SW = 0x32,
+
+    BLE_ERR_RESERVED_SLOT = 0x34,
+    BLE_ERR_ROLE_SW_FAIL = 0x35,
+    BLE_ERR_INQ_RSP_TOO_BIG = 0x36,
+    BLE_ERR_SEC_SIMPLE_PAIR = 0x37,
+    BLE_ERR_HOST_BUSY_PAIR = 0x38,
+    BLE_ERR_CONN_REJ_CHANNEL = 0x39,
+    BLE_ERR_CTLR_BUSY = 0x3a,
+    BLE_ERR_CONN_PARMS = 0x3b,
+    BLE_ERR_DIR_ADV_TMO = 0x3c,
+    BLE_ERR_CONN_TERM_MIC = 0x3d,
+    BLE_ERR_CONN_ESTABLISHMENT = 0x3e,
+    BLE_ERR_MAC_CONN_FAIL = 0x3f,
+    BLE_ERR_COARSE_CLK_ADJ = 0x40,
+    BLE_ERR_TYPE0_SUBMAP_NDEF = 0x41,
+    BLE_ERR_UNK_ADV_INDENT = 0x42,
+    BLE_ERR_LIMIT_REACHED = 0x43,
+    BLE_ERR_OPERATION_CANCELLED = 0x44,
+    BLE_ERR_MAX = 0xff
+};
+
+int ble_err_from_os(int os_err);
+# 268 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/ble.h"
+typedef struct {
+    uint8_t type;
+    uint8_t val[6];
+} ble_addr_t;
+
+
+static inline int ble_addr_cmp(const ble_addr_t *a, const ble_addr_t *b)
+{
+    int type_diff;
+
+    type_diff = a->type - b->type;
+    if (type_diff != 0) {
+        return type_diff;
+    }
+
+    return memcmp(a->val, b->val, sizeof(a->val));
+}
+# 24 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h" 2
+# 838 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h"
+struct hci_host_buf_size
+{
+    uint16_t acl_pkt_len;
+    uint8_t sync_pkt_len;
+    uint16_t num_acl_pkts;
+    uint16_t num_sync_pkts;
+};
+
+
+struct hci_host_num_comp_pkts_entry
+{
+    uint16_t conn_handle;
+    uint16_t num_pkts;
+};
+
+
+struct hci_loc_ver_info
+{
+   uint8_t status;
+   uint8_t hci_version;
+   uint16_t hci_revision;
+   uint8_t lmp_pal_version;
+   uint16_t mfrg_name;
+   uint8_t lmp_pal_subversion;
+};
+
+
+struct hci_rand_addr
+{
+    uint8_t addr[6];
+};
+
+
+struct hci_adv_params
+{
+    uint8_t adv_type;
+    uint8_t adv_channel_map;
+    uint8_t own_addr_type;
+    uint8_t peer_addr_type;
+    uint8_t adv_filter_policy;
+    uint16_t adv_itvl_min;
+    uint16_t adv_itvl_max;
+    uint8_t peer_addr[(6)];
+};
+
+
+struct hci_create_conn
+{
+    uint16_t scan_itvl;
+    uint16_t scan_window;
+    uint8_t filter_policy;
+    uint8_t peer_addr_type;
+    uint8_t peer_addr[(6)];
+    uint8_t own_addr_type;
+    uint16_t conn_itvl_min;
+    uint16_t conn_itvl_max;
+    uint16_t conn_latency;
+    uint16_t supervision_timeout;
+    uint16_t min_ce_len;
+    uint16_t max_ce_len;
+};
+
+
+struct hci_le_subev_rd_loc_p256_pubkey {
+    uint8_t status;
+    uint8_t pubkey[64];
+} __attribute__((packed));
+
+
+struct hci_le_subev_gen_dhkey_complete {
+    uint8_t status;
+    uint8_t dhkey[32];
+} __attribute__((packed));
+
+
+struct hci_le_subev_direct_adv_rpt_param {
+    uint8_t evt_type;
+    uint8_t addr_type;
+    uint8_t addr[6];
+    uint8_t dir_addr_type;
+    uint8_t dir_addr[6];
+    int8_t rssi;
+} __attribute__((packed));
+
+struct hci_le_subev_direct_adv_rpt {
+    uint8_t num_reports;
+    struct hci_le_subev_direct_adv_rpt_param params[0];
+} __attribute__((packed));
+# 1055 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h"
+struct hci_le_subev_chan_sel_alg {
+    uint16_t conn_handle;
+    uint8_t chan_sel_alg;
+} __attribute__((packed));
+
+
+struct hci_conn_update
+{
+    uint16_t handle;
+    uint16_t conn_itvl_min;
+    uint16_t conn_itvl_max;
+    uint16_t conn_latency;
+    uint16_t supervision_timeout;
+    uint16_t min_ce_len;
+    uint16_t max_ce_len;
+};
+
+
+struct hci_start_encrypt
+{
+    uint16_t connection_handle;
+    uint16_t encrypted_diversifier;
+    uint64_t random_number;
+    uint8_t long_term_key[16];
+};
+
+
+struct hci_lt_key_req_reply
+{
+    uint16_t conn_handle;
+    uint8_t long_term_key[16];
+};
+
+
+struct hci_conn_param_reply
+{
+    uint16_t handle;
+    uint16_t conn_itvl_min;
+    uint16_t conn_itvl_max;
+    uint16_t conn_latency;
+    uint16_t supervision_timeout;
+    uint16_t min_ce_len;
+    uint16_t max_ce_len;
+};
+
+
+struct hci_conn_param_neg_reply
+{
+    uint16_t handle;
+    uint8_t reason;
+};
+
+
+struct hci_encrypt_change
+{
+    uint8_t status;
+    uint8_t encryption_enabled;
+    uint16_t connection_handle;
+};
+
+
+struct hci_encrypt_key_refresh
+{
+    uint8_t status;
+    uint16_t connection_handle;
+};
+
+
+struct hci_le_conn_complete
+{
+    uint8_t subevent_code;
+    uint8_t status;
+    uint16_t connection_handle;
+    uint8_t role;
+    uint8_t peer_addr_type;
+    uint8_t peer_addr[(6)];
+    uint16_t conn_itvl;
+    uint16_t conn_latency;
+    uint16_t supervision_timeout;
+    uint8_t master_clk_acc;
+    uint8_t local_rpa[(6)];
+    uint8_t peer_rpa[(6)];
+};
+
+
+struct hci_le_conn_upd_complete
+{
+    uint8_t subevent_code;
+    uint8_t status;
+    uint16_t connection_handle;
+    uint16_t conn_itvl;
+    uint16_t conn_latency;
+    uint16_t supervision_timeout;
+};
+
+
+struct hci_le_conn_param_req
+{
+    uint8_t subevent_code;
+    uint16_t connection_handle;
+    uint16_t itvl_min;
+    uint16_t itvl_max;
+    uint16_t latency;
+    uint16_t timeout;
+};
+
+
+struct hci_le_rd_rem_supp_feat_complete
+{
+    uint8_t subevent_code;
+    uint8_t status;
+    uint16_t connection_handle;
+    uint8_t features[8];
+};
+
+
+struct hci_le_lt_key_req
+{
+    uint64_t random_number;
+    uint16_t connection_handle;
+    uint16_t encrypted_diversifier;
+    uint8_t subevent_code;
+};
+
+
+struct hci_disconn_complete
+{
+    uint16_t connection_handle;
+    uint8_t status;
+    uint8_t reason;
+};
+
+
+struct hci_read_rssi_ack_params
+{
+    uint16_t connection_handle;
+    uint8_t status;
+    int8_t rssi;
+};
+
+
+struct hci_le_phy_upd_complete
+{
+    uint8_t subevent_code;
+    uint8_t status;
+    uint16_t connection_handle;
+    uint8_t tx_phy;
+    uint8_t rx_phy;
+};
+
+
+struct hci_le_adv_set_terminated
+{
+    uint8_t subevent_code;
+    uint8_t status;
+    uint8_t adv_handle;
+    uint16_t conn_handle;
+    uint8_t completed_events;
+};
+
+
+struct hci_le_scan_req_rcvd
+{
+    uint8_t subevent_code;
+    uint8_t adv_handle;
+    uint8_t scan_addr_type;
+    uint8_t scan_addr[(6)];
+};
+
+
+
+
+
+
+struct hci_data_hdr
+{
+    uint16_t hdh_handle_pb_bc;
+    uint16_t hdh_len;
+};
+
+
+
+
+
+
+struct hci_add_dev_to_resolving_list {
+    uint8_t addr_type;
+    uint8_t addr[6];
+    uint8_t local_irk[16];
+    uint8_t peer_irk[16];
+};
+
+
+extern const uint8_t g_ble_hci_le_cmd_len[(79)];
+# 31 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_att.h" 1
+# 35 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_att.h"
+struct os_mbuf;
+# 129 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_att.h"
+int ble_att_svr_read_local(uint16_t attr_handle, struct os_mbuf **out_om);
+# 146 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_att.h"
+int ble_att_svr_write_local(uint16_t attr_handle, struct os_mbuf *om);
+# 158 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_att.h"
+uint16_t ble_att_mtu(uint16_t conn_handle);
+
+
+
+
+
+
+
+uint16_t ble_att_preferred_mtu(void);
+# 184 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_att.h"
+int ble_att_set_preferred_mtu(uint16_t mtu);
+# 32 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_eddystone.h" 1
+# 35 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_eddystone.h"
+struct ble_hs_adv_fields;
+# 77 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_eddystone.h"
+int ble_eddystone_set_adv_data_uid(struct ble_hs_adv_fields *adv_fields,
+                                   void *uid, int8_t measured_power);
+# 104 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_eddystone.h"
+int ble_eddystone_set_adv_data_url(struct ble_hs_adv_fields *adv_fields,
+                                   uint8_t url_scheme, char *url_body,
+                                   uint8_t url_body_len, uint8_t suffix,
+                                   int8_t measured_power);
+# 33 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h" 1
+# 31 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h" 1
+# 32 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_adv.h" 1
+# 24 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_adv.h"
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_uuid.h" 1
+# 31 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_uuid.h"
+# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
+# 32 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_uuid.h" 2
+
+
+
+
+
+struct os_mbuf;
+
+
+enum {
+
+    BLE_UUID_TYPE_16 = 16,
+
+
+    BLE_UUID_TYPE_32 = 32,
+
+
+    BLE_UUID_TYPE_128 = 128,
+};
+
+
+typedef struct {
+
+    uint8_t type;
+} ble_uuid_t;
+
+
+typedef struct {
+    ble_uuid_t u;
+    uint16_t value;
+} ble_uuid16_t;
+
+
+typedef struct {
+    ble_uuid_t u;
+    uint32_t value;
+} ble_uuid32_t;
+
+
+typedef struct {
+    ble_uuid_t u;
+    uint8_t value[16];
+} ble_uuid128_t;
+
+
+typedef union {
+    ble_uuid_t u;
+    ble_uuid16_t u16;
+    ble_uuid32_t u32;
+    ble_uuid128_t u128;
+} ble_uuid_any_t;
+# 133 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_uuid.h"
+int ble_uuid_init_from_buf(ble_uuid_any_t *uuid, const void *buf, size_t len);
+# 142 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_uuid.h"
+int ble_uuid_cmp(const ble_uuid_t *uuid1, const ble_uuid_t *uuid2);
+
+
+
+
+
+
+void ble_uuid_copy(ble_uuid_any_t *dst, const ble_uuid_t *src);
+# 163 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_uuid.h"
+char *ble_uuid_to_str(const ble_uuid_t *uuid, char *dst);
+# 172 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_uuid.h"
+uint16_t ble_uuid_u16(const ble_uuid_t *uuid);
+# 25 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_adv.h" 2
+# 35 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_adv.h"
+struct ble_hs_adv_field {
+    uint8_t length;
+    uint8_t type;
+    uint8_t value[];
+};
+
+typedef int (* ble_hs_adv_parse_func_t) (const struct ble_hs_adv_field *,
+                                         void *);
+
+struct ble_hs_adv_fields {
+
+    uint8_t flags;
+
+
+    ble_uuid16_t *uuids16;
+    uint8_t num_uuids16;
+    unsigned uuids16_is_complete:1;
+
+
+    ble_uuid32_t *uuids32;
+    uint8_t num_uuids32;
+    unsigned uuids32_is_complete:1;
+
+
+    ble_uuid128_t *uuids128;
+    uint8_t num_uuids128;
+    unsigned uuids128_is_complete:1;
+
+
+    uint8_t *name;
+    uint8_t name_len;
+    unsigned name_is_complete:1;
+
+
+    int8_t tx_pwr_lvl;
+    unsigned tx_pwr_lvl_is_present:1;
+
+
+    uint8_t *slave_itvl_range;
+
+
+    uint8_t *svc_data_uuid16;
+    uint8_t svc_data_uuid16_len;
+
+
+    uint8_t *public_tgt_addr;
+    uint8_t num_public_tgt_addrs;
+
+
+    uint16_t appearance;
+    unsigned appearance_is_present:1;
+
+
+    uint16_t adv_itvl;
+    unsigned adv_itvl_is_present:1;
+
+
+    uint8_t *svc_data_uuid32;
+    uint8_t svc_data_uuid32_len;
+
+
+    uint8_t *svc_data_uuid128;
+    uint8_t svc_data_uuid128_len;
+
+
+    uint8_t *uri;
+    uint8_t uri_len;
+
+
+    uint8_t *mfg_data;
+    uint8_t mfg_data_len;
+};
+# 161 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_adv.h"
+int ble_hs_adv_set_fields_mbuf(const struct ble_hs_adv_fields *adv_fields,
+                               struct os_mbuf *om);
+
+int ble_hs_adv_set_fields(const struct ble_hs_adv_fields *adv_fields,
+                          uint8_t *dst, uint8_t *dst_len, uint8_t max_len);
+
+int ble_hs_adv_parse_fields(struct ble_hs_adv_fields *adv_fields, uint8_t *src,
+                            uint8_t src_len);
+
+int ble_hs_adv_parse(const uint8_t *data, uint8_t length,
+                     ble_hs_adv_parse_func_t func, void *user_data);
+# 33 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h" 2
+
+
+
+
+
+
+struct hci_le_conn_complete;
+struct hci_conn_update;
+# 150 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+struct ble_gap_sec_state {
+
+    unsigned encrypted:1;
+
+
+    unsigned authenticated:1;
+
+
+    unsigned bonded:1;
+
+
+    unsigned key_size:5;
+};
+
+
+struct ble_gap_adv_params {
+
+
+
+
+
+    uint8_t conn_mode;
+
+
+
+
+
+    uint8_t disc_mode;
+
+
+    uint16_t itvl_min;
+
+    uint16_t itvl_max;
+
+    uint8_t channel_map;
+
+
+    uint8_t filter_policy;
+
+
+    uint8_t high_duty_cycle:1;
+};
+
+
+struct ble_gap_conn_desc {
+
+    struct ble_gap_sec_state sec_state;
+
+
+    ble_addr_t our_id_addr;
+
+
+    ble_addr_t peer_id_addr;
+
+
+    ble_addr_t our_ota_addr;
+
+
+    ble_addr_t peer_ota_addr;
+
+
+    uint16_t conn_handle;
+
+
+    uint16_t conn_itvl;
+
+
+    uint16_t conn_latency;
+
+
+    uint16_t supervision_timeout;
+
+
+
+
+    uint8_t role;
+
+
+    uint8_t master_clock_accuracy;
+};
+
+
+struct ble_gap_conn_params {
+
+    uint16_t scan_itvl;
+
+
+    uint16_t scan_window;
+
+
+    uint16_t itvl_min;
+
+
+    uint16_t itvl_max;
+
+
+    uint16_t latency;
+
+
+    uint16_t supervision_timeout;
+
+
+    uint16_t min_ce_len;
+
+
+    uint16_t max_ce_len;
+};
+
+
+struct ble_gap_ext_disc_params {
+
+    uint16_t itvl;
+
+
+    uint16_t window;
+
+
+    uint8_t passive:1;
+};
+
+
+struct ble_gap_disc_params {
+
+    uint16_t itvl;
+
+
+    uint16_t window;
+
+
+    uint8_t filter_policy;
+
+
+    uint8_t limited:1;
+
+
+    uint8_t passive:1;
+
+
+    uint8_t filter_duplicates:1;
+};
+
+
+struct ble_gap_upd_params {
+
+    uint16_t itvl_min;
+
+
+    uint16_t itvl_max;
+
+
+    uint16_t latency;
+
+
+    uint16_t supervision_timeout;
+
+
+    uint16_t min_ce_len;
+
+
+    uint16_t max_ce_len;
+};
+
+
+struct ble_gap_passkey_params {
+
+
+
+
+
+
+
+    uint8_t action;
+
+
+    uint32_t numcmp;
+};
+# 403 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+struct ble_gap_disc_desc {
+
+
+
+
+
+
+
+    uint8_t event_type;
+
+
+    uint8_t length_data;
+
+
+    ble_addr_t addr;
+
+
+    int8_t rssi;
+
+
+    uint8_t *data;
+
+
+
+
+    ble_addr_t direct_addr;
+};
+
+struct ble_gap_repeat_pairing {
+
+    uint16_t conn_handle;
+
+
+    uint8_t cur_key_size;
+    uint8_t cur_authenticated:1;
+    uint8_t cur_sc:1;
+
+
+
+
+
+    uint8_t new_key_size;
+    uint8_t new_authenticated:1;
+    uint8_t new_sc:1;
+    uint8_t new_bonding:1;
+};
+
+
+
+
+
+
+struct ble_gap_event {
+
+
+
+
+    uint8_t type;
+
+
+
+
+
+    union {
+
+
+
+
+
+        struct {
+
+
+
+
+
+
+            int status;
+
+
+            uint16_t conn_handle;
+        } connect;
+
+
+
+
+
+
+        struct {
+
+
+
+
+            int reason;
+
+
+            struct ble_gap_conn_desc conn;
+        } disconnect;
+
+
+
+
+
+
+        struct ble_gap_disc_desc disc;
+# 522 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+        struct {
+
+
+
+
+
+
+
+            int reason;
+        } disc_complete;
+
+
+
+
+
+
+        struct {
+# 547 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+            int reason;
+# 563 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+        } adv_complete;
+# 573 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+        struct {
+
+
+
+
+
+
+            int status;
+
+
+            uint16_t conn_handle;
+        } conn_update;
+# 600 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+        struct {
+
+
+
+
+            const struct ble_gap_upd_params *peer_params;
+
+
+
+
+
+
+
+            struct ble_gap_upd_params *self_params;
+
+
+            uint16_t conn_handle;
+        } conn_update_req;
+
+
+
+
+
+
+        struct {
+
+
+
+            int status;
+
+
+            uint16_t conn_handle;
+        } term_failure;
+# 642 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+        struct {
+
+
+
+
+
+
+            int status;
+
+
+            uint16_t conn_handle;
+        } enc_change;
+
+
+
+
+
+
+
+        struct {
+
+            struct ble_gap_passkey_params params;
+
+
+            uint16_t conn_handle;
+        } passkey;
+
+
+
+
+
+
+
+        struct {
+
+
+
+
+
+            struct os_mbuf *om;
+
+
+            uint16_t attr_handle;
+
+
+            uint16_t conn_handle;
+
+
+
+
+
+
+
+            uint8_t indication:1;
+        } notify_rx;
+# 705 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+        struct {
+# 714 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+            int status;
+
+
+            uint16_t conn_handle;
+
+
+            uint16_t attr_handle;
+
+
+
+
+
+
+
+            uint8_t indication:1;
+        } notify_tx;
+# 745 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+        struct {
+
+            uint16_t conn_handle;
+
+
+            uint16_t attr_handle;
+
+
+            uint8_t reason;
+
+
+            uint8_t prev_notify:1;
+
+
+            uint8_t cur_notify:1;
+
+
+            uint8_t prev_indicate:1;
+
+
+            uint8_t cur_indicate:1;
+        } subscribe;
+
+
+
+
+
+
+
+        struct {
+
+            uint16_t conn_handle;
+
+
+
+
+
+            uint16_t channel_id;
+
+
+            uint16_t value;
+        } mtu;
+# 795 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+        struct {
+
+            uint16_t conn_handle;
+        } identity_resolved;
+# 814 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+        struct ble_gap_repeat_pairing repeat_pairing;
+
+
+
+
+
+        struct {
+            int status;
+            uint16_t conn_handle;
+
+
+
+
+
+
+
+            uint8_t tx_phy;
+            uint8_t rx_phy;
+        } phy_updated;
+# 928 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+    };
+};
+
+typedef int ble_gap_event_fn(struct ble_gap_event *event, void *arg);
+# 954 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+int ble_gap_conn_find(uint16_t handle, struct ble_gap_conn_desc *out_desc);
+# 969 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+int ble_gap_conn_find_by_addr(const ble_addr_t *addr,
+                              struct ble_gap_conn_desc *out_desc);
+# 985 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+int ble_gap_set_event_cb(uint16_t conn_handle,
+                         ble_gap_event_fn *cb, void *cb_arg);
+# 1016 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+int ble_gap_adv_start(uint8_t own_addr_type, const ble_addr_t *direct_addr,
+                      int32_t duration_ms,
+                      const struct ble_gap_adv_params *adv_params,
+                      ble_gap_event_fn *cb, void *cb_arg);
+# 1041 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+int ble_gap_adv_stop(void);
+
+
+
+
+
+
+int ble_gap_adv_active(void);
+# 1059 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+int ble_gap_adv_set_data(const uint8_t *data, int data_len);
+# 1070 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+int ble_gap_adv_rsp_set_data(const uint8_t *data, int data_len);
+# 1084 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+int ble_gap_adv_set_fields(const struct ble_hs_adv_fields *rsp_fields);
+# 1098 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+int ble_gap_adv_rsp_set_fields(const struct ble_hs_adv_fields *rsp_fields);
+# 1450 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+int ble_gap_disc(uint8_t own_addr_type, int32_t duration_ms,
+                 const struct ble_gap_disc_params *disc_params,
+                 ble_gap_event_fn *cb, void *cb_arg);
+# 1494 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+int ble_gap_ext_disc(uint8_t own_addr_type, uint16_t duration, uint16_t period,
+                     uint8_t filter_duplicates, uint8_t filter_policy,
+                     uint8_t limited,
+                     const struct ble_gap_ext_disc_params *uncoded_params,
+                     const struct ble_gap_ext_disc_params *coded_params,
+                     ble_gap_event_fn *cb, void *cb_arg);
+# 1511 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+int ble_gap_disc_cancel(void);
+
+
+
+
+
+
+
+int ble_gap_disc_active(void);
+# 1558 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+int ble_gap_connect(uint8_t own_addr_type, const ble_addr_t *peer_addr,
+                    int32_t duration_ms,
+                    const struct ble_gap_conn_params *params,
+                    ble_gap_event_fn *cb, void *cb_arg);
+# 1614 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+int ble_gap_ext_connect(uint8_t own_addr_type, const ble_addr_t *peer_addr,
+                        int32_t duration_ms, uint8_t phy_mask,
+                        const struct ble_gap_conn_params *phy_1m_conn_params,
+                        const struct ble_gap_conn_params *phy_2m_conn_params,
+                        const struct ble_gap_conn_params *phy_coded_conn_params,
+                        ble_gap_event_fn *cb, void *cb_arg);
+# 1629 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+int ble_gap_conn_cancel(void);
+
+
+
+
+
+
+
+int ble_gap_conn_active(void);
+# 1652 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+int ble_gap_terminate(uint16_t conn_handle, uint8_t hci_reason);
+# 1662 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+int ble_gap_wl_set(const ble_addr_t *addrs, uint8_t white_list_count);
+# 1682 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+int ble_gap_update_params(uint16_t conn_handle,
+                          const struct ble_gap_upd_params *params);
+# 1701 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+int ble_gap_security_initiate(uint16_t conn_handle);
+# 1717 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+int ble_gap_pair_initiate(uint16_t conn_handle);
+# 1739 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+int ble_gap_encryption_initiate(uint16_t conn_handle, uint8_t key_size,
+                                const uint8_t *ltk, uint16_t ediv,
+                                uint64_t rand_val, int auth);
+# 1756 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+int ble_gap_conn_rssi(uint16_t conn_handle, int8_t *out_rssi);
+# 1771 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+int ble_gap_unpair(const ble_addr_t *peer_addr);
+# 1784 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+int ble_gap_unpair_oldest_peer(void);
+# 1800 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+int ble_gap_set_priv_mode(const ble_addr_t *peer_addr, uint8_t priv_mode);
+# 1822 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+int ble_gap_read_le_phy(uint16_t conn_handle, uint8_t *tx_phy, uint8_t *rx_phy);
+# 1846 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+int ble_gap_set_prefered_default_le_phy(uint8_t tx_phys_mask,
+                                        uint8_t rx_phys_mask);
+# 1875 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+int ble_gap_set_prefered_le_phy(uint16_t conn_handle, uint8_t tx_phys_mask,
+                                uint8_t rx_phys_mask, uint16_t phy_opts);
+
+
+
+
+
+
+struct ble_gap_event_listener {
+    ble_gap_event_fn *fn;
+    void *arg;
+    
+# 1886 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h" 3 4
+   struct { struct 
+# 1886 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+   ble_gap_event_listener 
+# 1886 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h" 3 4
+   *sle_next; } 
+# 1886 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+                                       link;
+};
+# 1904 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+int ble_gap_event_listener_register(struct ble_gap_event_listener *listener,
+                                    ble_gap_event_fn *fn, void *arg);
+# 1915 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gap.h"
+int ble_gap_event_listener_unregister(struct ble_gap_event_listener *listener);
+# 34 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h" 1
+# 37 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+struct ble_hs_conn;
+struct ble_att_error_rsp;
+struct ble_hs_cfg;
+# 83 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+struct ble_gatt_error {
+    uint16_t status;
+    uint16_t att_handle;
+};
+
+struct ble_gatt_svc {
+    uint16_t start_handle;
+    uint16_t end_handle;
+    ble_uuid_any_t uuid;
+};
+
+struct ble_gatt_attr {
+    uint16_t handle;
+    uint16_t offset;
+    struct os_mbuf *om;
+};
+
+struct ble_gatt_chr {
+    uint16_t def_handle;
+    uint16_t val_handle;
+    uint8_t properties;
+    ble_uuid_any_t uuid;
+};
+
+struct ble_gatt_dsc {
+    uint16_t handle;
+    ble_uuid_any_t uuid;
+};
+
+typedef int ble_gatt_mtu_fn(uint16_t conn_handle,
+                            const struct ble_gatt_error *error,
+                            uint16_t mtu, void *arg);
+typedef int ble_gatt_disc_svc_fn(uint16_t conn_handle,
+                                 const struct ble_gatt_error *error,
+                                 const struct ble_gatt_svc *service,
+                                 void *arg);
+
+
+
+
+
+
+typedef int ble_gatt_attr_fn(uint16_t conn_handle,
+                             const struct ble_gatt_error *error,
+                             struct ble_gatt_attr *attr,
+                             void *arg);
+
+
+
+
+
+
+typedef int ble_gatt_reliable_attr_fn(uint16_t conn_handle,
+                                      const struct ble_gatt_error *error,
+                                      struct ble_gatt_attr *attrs,
+                                      uint8_t num_attrs, void *arg);
+
+typedef int ble_gatt_chr_fn(uint16_t conn_handle,
+                            const struct ble_gatt_error *error,
+                            const struct ble_gatt_chr *chr, void *arg);
+
+typedef int ble_gatt_dsc_fn(uint16_t conn_handle,
+                            const struct ble_gatt_error *error,
+                            uint16_t chr_val_handle,
+                            const struct ble_gatt_dsc *dsc,
+                            void *arg);
+# 162 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+int ble_gattc_exchange_mtu(uint16_t conn_handle,
+                           ble_gatt_mtu_fn *cb, void *cb_arg);
+# 175 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+int ble_gattc_disc_all_svcs(uint16_t conn_handle,
+                            ble_gatt_disc_svc_fn *cb, void *cb_arg);
+# 191 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+int ble_gattc_disc_svc_by_uuid(uint16_t conn_handle, const ble_uuid_t *uuid,
+                               ble_gatt_disc_svc_fn *cb, void *cb_arg);
+# 210 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+int ble_gattc_find_inc_svcs(uint16_t conn_handle, uint16_t start_handle,
+                            uint16_t end_handle,
+                            ble_gatt_disc_svc_fn *cb, void *cb_arg);
+# 230 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+int ble_gattc_disc_all_chrs(uint16_t conn_handle, uint16_t start_handle,
+                            uint16_t end_handle, ble_gatt_chr_fn *cb,
+                            void *cb_arg);
+# 252 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+int ble_gattc_disc_chrs_by_uuid(uint16_t conn_handle, uint16_t start_handle,
+                               uint16_t end_handle, const ble_uuid_t *uuid,
+                               ble_gatt_chr_fn *cb, void *cb_arg);
+# 272 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+int ble_gattc_disc_all_dscs(uint16_t conn_handle, uint16_t start_handle,
+                            uint16_t end_handle,
+                            ble_gatt_dsc_fn *cb, void *cb_arg);
+# 289 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+int ble_gattc_read(uint16_t conn_handle, uint16_t attr_handle,
+                   ble_gatt_attr_fn *cb, void *cb_arg);
+# 308 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+int ble_gattc_read_by_uuid(uint16_t conn_handle, uint16_t start_handle,
+                           uint16_t end_handle, const ble_uuid_t *uuid,
+                           ble_gatt_attr_fn *cb, void *cb_arg);
+# 325 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+int ble_gattc_read_long(uint16_t conn_handle, uint16_t handle, uint16_t offset,
+                        ble_gatt_attr_fn *cb, void *cb_arg);
+# 342 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+int ble_gattc_read_mult(uint16_t conn_handle, const uint16_t *handles,
+                        uint8_t num_handles, ble_gatt_attr_fn *cb,
+                        void *cb_arg);
+# 358 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+int ble_gattc_write_no_rsp(uint16_t conn_handle, uint16_t attr_handle,
+                           struct os_mbuf *om);
+# 374 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+int ble_gattc_write_no_rsp_flat(uint16_t conn_handle, uint16_t attr_handle,
+                                const void *data, uint16_t data_len);
+# 393 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+int ble_gattc_write(uint16_t conn_handle, uint16_t attr_handle,
+                    struct os_mbuf *om,
+                    ble_gatt_attr_fn *cb, void *cb_arg);
+# 413 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+int ble_gattc_write_flat(uint16_t conn_handle, uint16_t attr_handle,
+                         const void *data, uint16_t data_len,
+                         ble_gatt_attr_fn *cb, void *cb_arg);
+# 433 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+int ble_gattc_write_long(uint16_t conn_handle, uint16_t attr_handle,
+                         uint16_t offset, struct os_mbuf *om,
+                         ble_gatt_attr_fn *cb, void *cb_arg);
+# 456 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+int ble_gattc_write_reliable(uint16_t conn_handle,
+                             struct ble_gatt_attr *attrs,
+                             int num_attrs, ble_gatt_reliable_attr_fn *cb,
+                             void *cb_arg);
+# 473 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+int ble_gattc_notify_custom(uint16_t conn_handle, uint16_t att_handle,
+                            struct os_mbuf *om);
+# 488 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+int ble_gattc_notify(uint16_t conn_handle, uint16_t chr_val_handle);
+# 504 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+int ble_gattc_indicate_custom(uint16_t conn_handle, uint16_t chr_val_handle,
+                              struct os_mbuf *txom);
+# 519 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+int ble_gattc_indicate(uint16_t conn_handle, uint16_t chr_val_handle);
+
+int ble_gattc_init(void);
+
+
+
+struct ble_gatt_access_ctxt;
+typedef int ble_gatt_access_fn(uint16_t conn_handle, uint16_t attr_handle,
+                               struct ble_gatt_access_ctxt *ctxt, void *arg);
+
+typedef uint16_t ble_gatt_chr_flags;
+
+struct ble_gatt_chr_def {
+
+
+
+
+    const ble_uuid_t *uuid;
+
+
+
+
+
+    ble_gatt_access_fn *access_cb;
+
+
+    void *arg;
+
+
+
+
+
+
+    struct ble_gatt_dsc_def *descriptors;
+
+
+    ble_gatt_chr_flags flags;
+
+
+    uint8_t min_key_size;
+
+
+
+
+
+    uint16_t *val_handle;
+};
+
+struct ble_gatt_svc_def {
+
+
+
+
+
+
+    uint8_t type;
+
+
+
+
+
+    const ble_uuid_t *uuid;
+
+
+
+
+
+
+    const struct ble_gatt_svc_def **includes;
+
+
+
+
+
+    const struct ble_gatt_chr_def *characteristics;
+};
+
+struct ble_gatt_dsc_def {
+
+
+
+
+    const ble_uuid_t *uuid;
+
+
+    uint8_t att_flags;
+
+
+    uint8_t min_key_size;
+
+
+    ble_gatt_access_fn *access_cb;
+
+
+    void *arg;
+};
+
+
+
+
+
+
+struct ble_gatt_access_ctxt {
+# 630 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+    uint8_t op;
+# 641 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+    struct os_mbuf *om;
+
+
+
+
+
+
+
+    union {
+
+
+
+
+        const struct ble_gatt_chr_def *chr;
+
+
+
+
+
+        const struct ble_gatt_dsc_def *dsc;
+    };
+};
+
+
+
+
+
+struct ble_gatt_register_ctxt {
+
+
+
+
+
+
+
+    uint8_t op;
+
+
+
+
+    union {
+
+        struct {
+
+            uint16_t handle;
+
+
+
+
+
+            const struct ble_gatt_svc_def *svc_def;
+        } svc;
+
+
+        struct {
+
+            uint16_t def_handle;
+
+
+            uint16_t val_handle;
+
+
+
+
+
+            const struct ble_gatt_chr_def *chr_def;
+
+
+
+
+
+            const struct ble_gatt_svc_def *svc_def;
+        } chr;
+
+
+        struct {
+
+            uint16_t handle;
+
+
+
+
+
+            const struct ble_gatt_dsc_def *dsc_def;
+
+
+
+
+
+            const struct ble_gatt_chr_def *chr_def;
+
+
+
+
+
+            const struct ble_gatt_svc_def *svc_def;
+        } dsc;
+    };
+};
+
+typedef void ble_gatt_register_fn(struct ble_gatt_register_ctxt *ctxt,
+                                  void *arg);
+# 756 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+int ble_gatts_add_svcs(const struct ble_gatt_svc_def *svcs);
+# 770 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+int ble_gatts_svc_set_visibility(uint16_t handle, int visible);
+# 787 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+int ble_gatts_count_cfg(const struct ble_gatt_svc_def *defs);
+
+
+
+
+
+
+
+void ble_gatts_chr_updated(uint16_t chr_val_handle);
+# 809 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+int ble_gatts_find_svc(const ble_uuid_t *uuid, uint16_t *out_handle);
+# 828 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+int ble_gatts_find_chr(const ble_uuid_t *svc_uuid, const ble_uuid_t *chr_uuid,
+                       uint16_t *out_def_handle, uint16_t *out_val_handle);
+# 846 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+int ble_gatts_find_dsc(const ble_uuid_t *svc_uuid, const ble_uuid_t *chr_uuid,
+                       const ble_uuid_t *dsc_uuid, uint16_t *out_dsc_handle);
+
+typedef void (*ble_gatt_svc_foreach_fn)(const struct ble_gatt_svc_def *svc,
+                                        uint16_t handle,
+                                        uint16_t end_group_handle,
+                                        void *arg);
+
+
+
+
+
+void ble_gatts_show_local(void);
+# 872 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+int ble_gatts_reset(void);
+# 886 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_gatt.h"
+int ble_gatts_start(void);
+
+
+
+
+
+void ble_gatts_stop(void);
+# 35 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h" 2
+
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_id.h" 1
+# 31 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_id.h"
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/ble.h" 1
+# 32 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_id.h" 2
+# 50 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_id.h"
+int ble_hs_id_gen_rnd(int nrpa, ble_addr_t *out_addr);
+# 65 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_id.h"
+int ble_hs_id_set_rnd(const uint8_t *rnd_addr);
+# 92 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_id.h"
+int ble_hs_id_copy_addr(uint8_t id_addr_type, uint8_t *out_id_addr,
+                        int *out_is_nrpa);
+# 122 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_id.h"
+int ble_hs_id_infer_auto(int privacy, uint8_t *out_addr_type);
+# 37 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_hci.h" 1
+# 63 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_hci.h"
+int ble_hs_hci_read_chan_map(uint16_t conn_handle, uint8_t *out_chan_map);
+# 88 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_hci.h"
+int ble_hs_hci_set_chan_class(const uint8_t *chan_map);
+# 38 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_log.h" 1
+# 23 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_log.h"
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/modlog/modlog.h" 1
+# 25 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/modlog/modlog.h"
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/log/log.h" 1
+# 27 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/log/log.h"
+struct log {
+};
+# 26 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/modlog/modlog.h" 2
+# 24 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_log.h" 2
+
+
+
+
+
+struct os_mbuf;
+# 40 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_log.h"
+void ble_hs_log_mbuf(const struct os_mbuf *om);
+void ble_hs_log_flat_buf(const void *data, int len);
+# 39 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_mbuf.h" 1
+# 35 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_mbuf.h"
+struct os_mbuf;
+# 46 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_mbuf.h"
+struct os_mbuf *ble_hs_mbuf_att_pkt(void);
+# 57 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_mbuf.h"
+struct os_mbuf *ble_hs_mbuf_from_flat(const void *buf, uint16_t len);
+# 71 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_mbuf.h"
+int ble_hs_mbuf_to_flat(const struct os_mbuf *om, void *flat, uint16_t max_len,
+                        uint16_t *out_copy_len);
+# 40 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_stop.h" 1
+# 33 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_stop.h"
+typedef void ble_hs_stop_fn(int status, void *arg);
+
+
+
+
+
+
+struct ble_hs_stop_listener {
+    ble_hs_stop_fn *fn;
+    void *arg;
+    
+# 43 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_stop.h" 3 4
+   struct { struct 
+# 43 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_stop.h"
+   ble_hs_stop_listener 
+# 43 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_stop.h" 3 4
+   *sle_next; } 
+# 43 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_stop.h"
+                                     link;
+};
+# 67 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs_stop.h"
+int ble_hs_stop(struct ble_hs_stop_listener *listener,
+                ble_hs_stop_fn *fn, void *arg);
+# 41 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_ibeacon.h" 1
+# 27 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_ibeacon.h"
+int ble_ibeacon_set_adv_data(void *uuid128, uint16_t major,
+                             uint16_t minor, int8_t measured_power);
+# 42 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_l2cap.h" 1
+# 23 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_l2cap.h"
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_opt.h" 1
+# 28 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_opt.h"
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_opt_auto.h" 1
+# 29 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_opt.h" 2
+# 24 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_l2cap.h" 2
+
+
+
+
+struct ble_l2cap_sig_update_req;
+struct ble_hs_conn;
+# 80 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_l2cap.h"
+typedef void ble_l2cap_sig_update_fn(uint16_t conn_handle, int status,
+                                     void *arg);
+
+struct ble_l2cap_sig_update_params {
+    uint16_t itvl_min;
+    uint16_t itvl_max;
+    uint16_t slave_latency;
+    uint16_t timeout_multiplier;
+};
+
+int ble_l2cap_sig_update(uint16_t conn_handle,
+                         struct ble_l2cap_sig_update_params *params,
+                         ble_l2cap_sig_update_fn *cb, void *cb_arg);
+
+struct ble_l2cap_chan;
+
+
+
+
+
+
+struct ble_l2cap_event {
+
+
+
+
+    uint8_t type;
+
+
+
+
+
+    union {
+
+
+
+
+        struct {
+
+
+
+
+
+
+            int status;
+
+
+            uint16_t conn_handle;
+
+
+            struct ble_l2cap_chan *chan;
+        } connect;
+
+
+
+
+
+
+        struct {
+
+            uint16_t conn_handle;
+
+
+            struct ble_l2cap_chan *chan;
+        } disconnect;
+
+
+
+
+
+
+        struct {
+
+            uint16_t conn_handle;
+
+
+            uint16_t peer_sdu_size;
+
+
+            struct ble_l2cap_chan *chan;
+        } accept;
+
+
+
+
+
+
+        struct {
+
+            uint16_t conn_handle;
+
+
+            struct ble_l2cap_chan *chan;
+
+
+            struct os_mbuf *sdu_rx;
+        } receive;
+
+
+
+
+
+
+        struct {
+
+            uint16_t conn_handle;
+
+
+            struct ble_l2cap_chan *chan;
+# 197 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_l2cap.h"
+            int status;
+        } tx_unstalled;
+    };
+};
+
+typedef int ble_l2cap_event_fn(struct ble_l2cap_event *event, void *arg);
+
+uint16_t ble_l2cap_get_conn_handle(struct ble_l2cap_chan *chan);
+int ble_l2cap_create_server(uint16_t psm, uint16_t mtu,
+                            ble_l2cap_event_fn *cb, void *cb_arg);
+
+int ble_l2cap_connect(uint16_t conn_handle, uint16_t psm, uint16_t mtu,
+                      struct os_mbuf *sdu_rx,
+                      ble_l2cap_event_fn *cb, void *cb_arg);
+int ble_l2cap_disconnect(struct ble_l2cap_chan *chan);
+int ble_l2cap_send(struct ble_l2cap_chan *chan, struct os_mbuf *sdu_tx);
+int ble_l2cap_recv_ready(struct ble_l2cap_chan *chan, struct os_mbuf *sdu_rx);
+int ble_l2cap_get_scid(struct ble_l2cap_chan *chan);
+int ble_l2cap_get_dcid(struct ble_l2cap_chan *chan);
+int ble_l2cap_get_our_mtu(struct ble_l2cap_chan *chan);
+int ble_l2cap_get_peer_mtu(struct ble_l2cap_chan *chan);
+# 43 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_sm.h" 1
+# 89 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_sm.h"
+struct ble_sm_io {
+    uint8_t action;
+    union {
+        uint32_t passkey;
+        uint8_t oob[16];
+        uint8_t numcmp_accept;
+    };
+};
+
+
+int ble_sm_inject_io(uint16_t conn_handle, struct ble_sm_io *pkey);
+# 44 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h" 1
+# 46 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h"
+struct ble_store_key_sec {
+
+
+
+
+    ble_addr_t peer_addr;
+
+
+    uint16_t ediv;
+
+
+    uint64_t rand_num;
+
+    unsigned ediv_rand_present:1;
+
+
+    uint8_t idx;
+};
+
+
+
+
+
+
+
+struct ble_store_value_sec {
+    ble_addr_t peer_addr;
+
+    uint8_t key_size;
+    uint16_t ediv;
+    uint64_t rand_num;
+    uint8_t ltk[16];
+    uint8_t ltk_present:1;
+
+    uint8_t irk[16];
+    uint8_t irk_present:1;
+
+    uint8_t csrk[16];
+    uint8_t csrk_present:1;
+
+    unsigned authenticated:1;
+    uint8_t sc:1;
+};
+
+
+
+
+
+
+struct ble_store_key_cccd {
+
+
+
+
+    ble_addr_t peer_addr;
+
+
+
+
+
+    uint16_t chr_val_handle;
+
+
+    uint8_t idx;
+};
+
+
+
+
+
+struct ble_store_value_cccd {
+    ble_addr_t peer_addr;
+    uint16_t chr_val_handle;
+    uint16_t flags;
+    unsigned value_changed:1;
+};
+
+
+
+
+
+union ble_store_key {
+    struct ble_store_key_sec sec;
+    struct ble_store_key_cccd cccd;
+};
+
+
+
+
+
+union ble_store_value {
+    struct ble_store_value_sec sec;
+    struct ble_store_value_cccd cccd;
+};
+
+struct ble_store_status_event {
+
+
+
+
+    int event_code;
+
+
+
+
+
+    union {
+
+
+
+
+
+        struct {
+
+            int obj_type;
+
+
+            const union ble_store_value *value;
+        } overflow;
+
+
+
+
+
+
+        struct {
+
+            int obj_type;
+
+
+            uint16_t conn_handle;
+        } full;
+    };
+};
+# 198 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h"
+typedef int ble_store_read_fn(int obj_type, const union ble_store_key *key,
+                              union ble_store_value *dst);
+# 214 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h"
+typedef int ble_store_write_fn(int obj_type, const union ble_store_value *val);
+# 229 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h"
+typedef int ble_store_delete_fn(int obj_type, const union ble_store_key *key);
+# 245 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_store.h"
+typedef int ble_store_status_fn(struct ble_store_status_event *event,
+                                void *arg);
+
+int ble_store_read(int obj_type, const union ble_store_key *key,
+                   union ble_store_value *val);
+int ble_store_write(int obj_type, const union ble_store_value *val);
+int ble_store_delete(int obj_type, const union ble_store_key *key);
+int ble_store_overflow_event(int obj_type, const union ble_store_value *value);
+int ble_store_full_event(int obj_type, uint16_t conn_handle);
+
+int ble_store_read_our_sec(const struct ble_store_key_sec *key_sec,
+                           struct ble_store_value_sec *value_sec);
+int ble_store_write_our_sec(const struct ble_store_value_sec *value_sec);
+int ble_store_delete_our_sec(const struct ble_store_key_sec *key_sec);
+int ble_store_read_peer_sec(const struct ble_store_key_sec *key_sec,
+                            struct ble_store_value_sec *value_sec);
+int ble_store_write_peer_sec(const struct ble_store_value_sec *value_sec);
+int ble_store_delete_peer_sec(const struct ble_store_key_sec *key_sec);
+
+int ble_store_read_cccd(const struct ble_store_key_cccd *key,
+                        struct ble_store_value_cccd *out_value);
+int ble_store_write_cccd(const struct ble_store_value_cccd *value);
+int ble_store_delete_cccd(const struct ble_store_key_cccd *key);
+
+void ble_store_key_from_value_sec(struct ble_store_key_sec *out_key,
+                                  const struct ble_store_value_sec *value);
+void ble_store_key_from_value_cccd(struct ble_store_key_cccd *out_key,
+                                   const struct ble_store_value_cccd *value);
+
+void ble_store_key_from_value(int obj_type,
+                              union ble_store_key *out_key,
+                              const union ble_store_value *value);
+
+typedef int ble_store_iterator_fn(int obj_type,
+                                  union ble_store_value *val,
+                                  void *cookie);
+
+int ble_store_iterate(int obj_type,
+                      ble_store_iterator_fn *callback,
+                      void *cookie);
+
+int ble_store_clear(void);
+
+
+
+int ble_store_util_bonded_peers(ble_addr_t *out_peer_id_addrs,
+                                int *out_num_peers,
+                                int max_peers);
+int ble_store_util_delete_all(int type, const union ble_store_key *key);
+int ble_store_util_delete_peer(const ble_addr_t *peer_id_addr);
+int ble_store_util_delete_oldest_peer(void);
+int ble_store_util_count(int type, int *out_count);
+int ble_store_util_status_rr(struct ble_store_status_event *event, void *arg);
+# 45 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h" 2
+# 176 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h"
+typedef void ble_hs_reset_fn(int reason);
+
+
+
+typedef void ble_hs_sync_fn(void);
+# 190 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h"
+struct ble_hs_cfg {
+
+
+
+
+    ble_gatt_register_fn *gatts_register_cb;
+
+
+
+
+
+    void *gatts_register_arg;
+
+
+    uint8_t sm_io_cap;
+
+
+
+
+
+    unsigned sm_oob_data_flag:1;
+
+
+
+
+
+
+    unsigned sm_bonding:1;
+
+
+
+
+
+
+    unsigned sm_mitm:1;
+
+
+
+
+
+
+
+    unsigned sm_sc:1;
+
+
+
+
+
+    unsigned sm_keypress:1;
+
+
+    uint8_t sm_our_key_dist;
+
+
+    uint8_t sm_their_key_dist;
+
+
+
+
+
+
+    ble_hs_reset_fn *reset_cb;
+
+
+
+
+
+
+    ble_hs_sync_fn *sync_cb;
+
+
+
+
+
+    ble_store_read_fn *store_read_cb;
+
+
+    ble_store_write_fn *store_write_cb;
+
+
+    ble_store_delete_fn *store_delete_cb;
+# 280 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h"
+    ble_store_status_fn *store_status_cb;
+
+
+    void *store_status_arg;
+};
+
+extern struct ble_hs_cfg ble_hs_cfg;
+# 299 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h"
+int ble_hs_is_enabled(void);
+# 308 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h"
+int ble_hs_synced(void);
+# 325 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h"
+int ble_hs_start(void);
+# 339 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h"
+void ble_hs_sched_start(void);
+
+
+
+
+
+
+
+void ble_hs_sched_reset(int reason);
+# 356 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h"
+void ble_hs_evq_set(struct ble_npl_eventq *evq);
+# 365 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h"
+void ble_hs_init(void);
+
+
+
+
+
+void ble_hs_deinit(void);
+# 382 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h"
+int ble_hs_shutdown(int reason);
+# 20 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c" 2
+
+
+
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/services/gap/include/services/gap/ble_svc_gap.h" 1
+# 39 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/services/gap/include/services/gap/ble_svc_gap.h"
+typedef void (ble_svc_gap_chr_changed_fn) (uint16_t uuid);
+
+void ble_svc_gap_set_chr_changed_cb(ble_svc_gap_chr_changed_fn *cb);
+
+const char *ble_svc_gap_device_name(void);
+int ble_svc_gap_device_name_set(const char *name);
+uint16_t ble_svc_gap_device_appearance(void);
+int ble_svc_gap_device_appearance_set(uint16_t appearance);
+
+void ble_svc_gap_init(void);
+# 24 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c" 2
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/services/gatt/include/services/gatt/ble_svc_gatt.h" 1
+# 29 "/home/dieter/Development/esp-idf/components/bt/host/nimble/nimble/nimble/host/services/gatt/include/services/gatt/ble_svc_gatt.h"
+struct ble_hs_cfg;
+
+
+
+void ble_svc_gatt_changed(uint16_t start_handle, uint16_t end_handle);
+void ble_svc_gatt_init(void);
+# 25 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c" 2
 
 # 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_hci.h" 1
 # 10 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_hci.h"
 # 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_kernel.h" 1
-# 12 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_kernel.h"
+# 11 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_kernel.h"
+# 1 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/mutex.h" 1
+# 33 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/mutex.h"
+typedef SemaphoreHandle_t osi_mutex_t;
+
+int osi_mutex_new(osi_mutex_t *mutex);
+
+int osi_mutex_lock(osi_mutex_t *mutex, uint32_t timeout);
+
+void osi_mutex_unlock(osi_mutex_t *mutex);
+
+void osi_mutex_free(osi_mutex_t *mutex);
+
+
+int osi_mutex_global_init(void);
+
+void osi_mutex_global_deinit(void);
+
+void osi_mutex_global_lock(void);
+
+void osi_mutex_global_unlock(void);
+# 12 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_kernel.h" 2
 # 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_types.h" 1
 # 18 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_types.h"
 typedef signed char s8_t;
@@ -12531,6 +8386,11 @@ typedef int bt_mesh_atomic_t;
 
 # 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_trace.h" 1
 # 20 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 1
+# 20 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h"
+# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 1
+# 21 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
+# 21 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h" 2
 # 195 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h"
 static inline unsigned int find_msb_set(u32_t op)
 {
@@ -13159,167 +9019,7 @@ void bt_mesh_irq_unlock(unsigned int key);
 void bt_mesh_k_init(void);
 # 11 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_hci.h" 2
 # 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_bearer_adapt.h" 1
-# 12 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_bearer_adapt.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 1 3 4
-# 17 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 18 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-
-
-
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/strings.h" 1 3 4
-# 44 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/strings.h" 3 4
-
-
-
-# 46 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/strings.h" 3 4
-int bcmp(const void *, const void *, size_t) __attribute__((__pure__));
-void bcopy(const void *, void *, size_t);
-void bzero(void *, size_t);
-
-
-void explicit_bzero(void *, size_t);
-
-
-int ffs(int) __attribute__((__const__));
-
-
-int ffsl(long) __attribute__((__const__));
-int ffsll(long long) __attribute__((__const__));
-int fls(int) __attribute__((__const__));
-int flsl(long) __attribute__((__const__));
-int flsll(long long) __attribute__((__const__));
-
-
-char *index(const char *, int) __attribute__((__pure__));
-char *rindex(const char *, int) __attribute__((__pure__));
-
-int strcasecmp(const char *, const char *) __attribute__((__pure__));
-int strncasecmp(const char *, const char *, size_t) __attribute__((__pure__));
-
-
-int strcasecmp_l (const char *, const char *, locale_t);
-int strncasecmp_l (const char *, const char *, size_t, locale_t);
-
-
-# 25 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-
-
-
-
-void * memchr (const void *, int, size_t);
-int memcmp (const void *, const void *, size_t);
-void * memcpy (void *restrict, const void *restrict, size_t);
-void * memmove (void *, const void *, size_t);
-void * memset (void *, int, size_t);
-char *strcat (char *restrict, const char *restrict);
-char *strchr (const char *, int);
-int strcmp (const char *, const char *);
-int strcoll (const char *, const char *);
-char *strcpy (char *restrict, const char *restrict);
-size_t strcspn (const char *, const char *);
-char *strerror (int);
-size_t strlen (const char *);
-char *strncat (char *restrict, const char *restrict, size_t);
-int strncmp (const char *, const char *, size_t);
-char *strncpy (char *restrict, const char *restrict, size_t);
-char *strpbrk (const char *, const char *);
-char *strrchr (const char *, int);
-size_t strspn (const char *, const char *);
-char *strstr (const char *, const char *);
-
-char *strtok (char *restrict, const char *restrict);
-
-size_t strxfrm (char *restrict, const char *restrict, size_t);
-
-
-int strcoll_l (const char *, const char *, locale_t);
-char *strerror_l (int, locale_t);
-size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
-
-
-char *strtok_r (char *restrict, const char *restrict, char **restrict);
-
-
-int timingsafe_bcmp (const void *, const void *, size_t);
-int timingsafe_memcmp (const void *, const void *, size_t);
-
-
-void * memccpy (void *restrict, const void *restrict, int, size_t);
-
-
-void * mempcpy (void *, const void *, size_t);
-void * memmem (const void *, size_t, const void *, size_t);
-void * memrchr (const void *, int, size_t);
-void * rawmemchr (const void *, int);
-
-
-char *stpcpy (char *restrict, const char *restrict);
-char *stpncpy (char *restrict, const char *restrict, size_t);
-
-
-char *strcasestr (const char *, const char *);
-char *strchrnul (const char *, int);
-
-
-char *strdup (const char *);
-
-char *_strdup_r (struct _reent *, const char *);
-
-char *strndup (const char *, size_t);
-
-char *_strndup_r (struct _reent *, const char *, size_t);
-
-
-
-
-
-
-char *strerror_r (int, char *, size_t);
-# 112 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 3 4
-char * _strerror_r (struct _reent *, int, int, int *);
-
-
-size_t strlcat (char *, const char *, size_t);
-size_t strlcpy (char *, const char *, size_t);
-
-
-size_t strnlen (const char *, size_t);
-
-
-char *strsep (char **, const char *);
-
-
-char *strnstr(const char *, const char *, size_t) __attribute__((__pure__));
-
-
-
-char *strlwr (char *);
-char *strupr (char *);
-
-
-
-char *strsignal (int __signo);
-
-
-
-
-
-
-
-int strverscmp (const char *, const char *);
-# 172 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 3 4
-char *__attribute__((__nonnull__ (1))) basename (const char *) __asm__("" "__gnu_basename");
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/string.h" 1 3 4
-# 176 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-
-
-# 13 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_bearer_adapt.h" 2
+# 13 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_bearer_adapt.h"
 # 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_types.h" 1
 # 14 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_bearer_adapt.h" 2
 # 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h" 1
@@ -13333,8 +9033,6 @@ char *__attribute__((__nonnull__ (1))) basename (const char *) __asm__("" "__gnu
 
 # 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_kernel.h" 1
 # 19 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h" 2
-# 97 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
-
 # 97 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h"
 struct net_buf_simple {
 
@@ -13984,7 +9682,7 @@ struct bt_mesh_hci_cp_set_scan_rsp_data {
 extern struct bt_mesh_dev bt_mesh_dev;
 
 void bt_mesh_hci_init(void);
-# 28 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 2
+# 27 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c" 2
 # 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_aes_encrypt.h" 1
 # 53 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_aes_encrypt.h"
 # 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
@@ -14035,18 +9733,23 @@ int tc_cmac_update(TCCmacState_t s, const uint8_t *data, size_t data_length);
 int tc_cmac_final(uint8_t *tag, TCCmacState_t s);
 
 int tc_cmac_erase(TCCmacState_t s);
-# 29 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 2
+# 28 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c" 2
 # 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_bearer_adapt.h" 1
-# 30 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 2
+# 29 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c" 2
 # 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_trace.h" 1
-# 31 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 2
+# 30 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c" 2
 
 
 
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
+# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h" 1
+# 20 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
+# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_proxy.h" 1
+# 14 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_proxy.h"
+# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
+# 15 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_proxy.h" 2
+# 31 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_proxy.h"
+int bt_mesh_proxy_identity_enable(void);
+# 21 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h" 2
 # 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_access.h" 1
 # 14 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_access.h"
 # 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
@@ -14203,6 +9906,10 @@ struct bt_mesh_comp {
     size_t elem_count;
     struct bt_mesh_elem *elem;
 };
+# 22 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h" 1
+# 15 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
+# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_access.h" 1
 # 16 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h" 2
 # 24 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
 typedef enum {
@@ -14330,7 +10037,1674 @@ void bt_mesh_friend_set_cb(void (*cb)(
                                      _Bool 
 # 590 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h"
                                           establish, u16_t lpn_addr, u8_t reason));
-# 20 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h" 2
+# 23 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h" 2
+
+# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/mesh.h" 1
+# 20 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/mesh.h"
+struct bt_mesh_net;
+# 25 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/proxy_server.h" 1
+# 13 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/proxy_server.h"
+# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h" 1
+# 34 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
+struct bt_mesh_app_key {
+    u16_t net_idx;
+    u16_t app_idx;
+    
+# 37 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h" 3 4
+   _Bool 
+# 37 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
+         updated;
+    struct bt_mesh_app_keys {
+        u8_t id;
+        u8_t val[16];
+    } keys[2];
+};
+
+struct bt_mesh_subnet {
+    u32_t beacon_sent;
+    u8_t beacons_last;
+
+
+    u8_t beacons_cur;
+
+
+
+    u8_t beacon_cache[21];
+
+    u16_t net_idx;
+
+    
+# 57 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h" 3 4
+   _Bool 
+# 57 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
+         kr_flag;
+    u8_t kr_phase;
+
+    u8_t node_id;
+    u32_t node_id_start;
+
+    u8_t auth[8];
+
+    struct bt_mesh_subnet_keys {
+        u8_t net[16];
+        u8_t nid;
+        u8_t enc[16];
+        u8_t net_id[8];
+
+
+
+        u8_t privacy[16];
+        u8_t beacon[16];
+    } keys[2];
+};
+
+struct bt_mesh_rpl {
+    u16_t src;
+    
+# 80 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h" 3 4
+   _Bool 
+# 80 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
+         old_iv;
+
+
+
+    u32_t seq;
+};
+# 95 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
+struct bt_mesh_friend {
+    u16_t lpn;
+    u8_t recv_delay;
+    u8_t fsn: 1,
+          send_last: 1,
+          pending_req: 1,
+          sec_update: 1,
+          pending_buf: 1,
+          valid: 1,
+          established: 1;
+    s32_t poll_to;
+    u8_t num_elem;
+    u16_t lpn_counter;
+    u16_t counter;
+
+    u16_t net_idx;
+
+    u16_t sub_list[0];
+
+    struct k_delayed_work timer;
+
+    struct bt_mesh_friend_seg {
+        sys_slist_t queue;
+
+
+
+
+
+        u8_t seg_count;
+    } seg[0];
+
+    struct net_buf *last;
+
+    sys_slist_t queue;
+    u32_t queue_size;
+
+
+    struct {
+        u32_t start;
+        u16_t frnd;
+        u16_t repeat_sec;
+        struct k_delayed_work timer;
+    } clear;
+};
+# 147 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
+struct bt_mesh_lpn {
+    enum 
+# 148 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h" 3 4
+        __attribute__((__packed__)) 
+# 148 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
+                 {
+        BLE_MESH_LPN_DISABLED,
+        BLE_MESH_LPN_CLEAR,
+        BLE_MESH_LPN_TIMER,
+        BLE_MESH_LPN_ENABLED,
+        BLE_MESH_LPN_REQ_WAIT,
+        BLE_MESH_LPN_WAIT_OFFER,
+        BLE_MESH_LPN_ESTABLISHED,
+        BLE_MESH_LPN_RECV_DELAY,
+        BLE_MESH_LPN_WAIT_UPDATE,
+        BLE_MESH_LPN_OFFER_RECV,
+    } state;
+
+
+    u8_t xact_next;
+    u8_t xact_pending;
+    u8_t sent_req;
+
+
+
+
+    u16_t frnd;
+
+
+    u8_t recv_win;
+
+    u8_t req_attempts;
+
+    s32_t poll_timeout;
+
+    u8_t groups_changed: 1,
+          pending_poll: 1,
+          disable: 1,
+          fsn: 1,
+          established: 1,
+          clear_success: 1;
+
+
+    u8_t queue_size;
+
+
+    u16_t counter;
+
+
+    u16_t old_friend;
+
+
+    u16_t adv_duration;
+
+
+    struct k_delayed_work timer;
+
+
+    u16_t groups[0];
+
+
+    bt_mesh_atomic_t added[1 + ((0) - 1) / (sizeof(bt_mesh_atomic_val_t) * 8)];
+    bt_mesh_atomic_t pending[1 + ((0) - 1) / (sizeof(bt_mesh_atomic_val_t) * 8)];
+    bt_mesh_atomic_t to_remove[1 + ((0) - 1) / (sizeof(bt_mesh_atomic_val_t) * 8)];
+};
+
+
+enum {
+    BLE_MESH_VALID,
+    BLE_MESH_SUSPENDED,
+    BLE_MESH_IVU_IN_PROGRESS,
+    BLE_MESH_IVU_INITIATOR,
+    BLE_MESH_IVU_TEST,
+    BLE_MESH_IVU_PENDING,
+
+
+    BLE_MESH_RPL_PENDING,
+    BLE_MESH_KEYS_PENDING,
+    BLE_MESH_NET_PENDING,
+    BLE_MESH_IV_PENDING,
+    BLE_MESH_SEQ_PENDING,
+    BLE_MESH_HB_PUB_PENDING,
+    BLE_MESH_CFG_PENDING,
+    BLE_MESH_MOD_PENDING,
+
+
+    BLE_MESH_FLAG_COUNT,
+};
+
+struct bt_mesh_net {
+    u32_t iv_index;
+    u32_t seq;
+
+    bt_mesh_atomic_t flags[1 + ((BLE_MESH_FLAG_COUNT) - 1) / (sizeof(bt_mesh_atomic_val_t) * 8)];
+
+
+    struct k_work local_work;
+    sys_slist_t local_queue;
+# 252 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
+    u8_t ivu_duration;
+
+
+    struct k_delayed_work ivu_timer;
+
+    u8_t dev_key[16];
+
+    struct bt_mesh_app_key app_keys[3];
+
+    struct bt_mesh_subnet sub[3];
+
+    struct bt_mesh_rpl rpl[10];
+# 276 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
+};
+
+
+enum bt_mesh_net_if {
+    BLE_MESH_NET_IF_ADV,
+    BLE_MESH_NET_IF_LOCAL,
+    BLE_MESH_NET_IF_PROXY,
+    BLE_MESH_NET_IF_PROXY_CFG,
+};
+
+
+struct bt_mesh_net_rx {
+    struct bt_mesh_subnet *sub;
+    struct bt_mesh_msg_ctx ctx;
+    u32_t seq;
+    u8_t old_iv: 1,
+           new_key: 1,
+           friend_cred: 1,
+           ctl: 1,
+           net_if: 2,
+           local_match: 1,
+           friend_match: 1;
+    u16_t msg_cache_idx;
+    s8_t rssi;
+};
+
+
+struct bt_mesh_net_tx {
+    struct bt_mesh_subnet *sub;
+    struct bt_mesh_msg_ctx *ctx;
+    u16_t src;
+    u8_t xmit;
+    u8_t friend_cred: 1,
+          aszmic: 1,
+          aid: 6;
+};
+
+extern struct bt_mesh_net bt_mesh;
+# 322 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
+int bt_mesh_net_keys_create(struct bt_mesh_subnet_keys *keys,
+                            const u8_t key[16]);
+
+int bt_mesh_net_create(u16_t idx, u8_t flags, const u8_t key[16],
+                       u32_t iv_index);
+
+u8_t bt_mesh_net_flags(struct bt_mesh_subnet *sub);
+
+
+# 330 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h" 3 4
+_Bool 
+# 330 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
+    bt_mesh_kr_update(struct bt_mesh_subnet *sub, u8_t new_kr, 
+# 330 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h" 3 4
+                                                               _Bool 
+# 330 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
+                                                                    new_key);
+
+void bt_mesh_net_revoke_keys(struct bt_mesh_subnet *sub);
+
+int bt_mesh_net_beacon_update(struct bt_mesh_subnet *sub);
+
+void bt_mesh_rpl_reset(void);
+
+
+# 338 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h" 3 4
+_Bool 
+# 338 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
+    bt_mesh_net_iv_update(u32_t iv_index, 
+# 338 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h" 3 4
+                                          _Bool 
+# 338 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
+                                               iv_update);
+
+void bt_mesh_net_sec_update(struct bt_mesh_subnet *sub);
+
+struct bt_mesh_subnet *bt_mesh_subnet_get(u16_t net_idx);
+
+struct bt_mesh_subnet *bt_mesh_subnet_find(const u8_t net_id[8], u8_t flags,
+        u32_t iv_index, const u8_t auth[8],
+        
+# 346 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h" 3 4
+       _Bool 
+# 346 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
+            *new_key);
+
+int bt_mesh_net_encode(struct bt_mesh_net_tx *tx, struct net_buf_simple *buf,
+                       
+# 349 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h" 3 4
+                      _Bool 
+# 349 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
+                           proxy);
+
+int bt_mesh_net_send(struct bt_mesh_net_tx *tx, struct net_buf *buf,
+                     const struct bt_mesh_send_cb *cb, void *cb_data);
+
+int bt_mesh_net_resend(struct bt_mesh_subnet *sub, struct net_buf *buf,
+                       
+# 355 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h" 3 4
+                      _Bool 
+# 355 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h"
+                           new_key, const struct bt_mesh_send_cb *cb,
+                       void *cb_data);
+
+int bt_mesh_net_decode(struct net_buf_simple *data, enum bt_mesh_net_if net_if,
+                       struct bt_mesh_net_rx *rx, struct net_buf_simple *buf);
+
+void bt_mesh_net_recv(struct net_buf_simple *data, s8_t rssi,
+                      enum bt_mesh_net_if net_if);
+
+u32_t bt_mesh_next_seq(void);
+
+void bt_mesh_net_start(void);
+
+void bt_mesh_net_init(void);
+
+
+struct friend_cred {
+    u16_t net_idx;
+    u16_t addr;
+
+    u16_t lpn_counter;
+    u16_t frnd_counter;
+
+    struct {
+        u8_t nid;
+        u8_t enc[16];
+        u8_t privacy[16];
+    } cred[2];
+};
+
+int friend_cred_get(struct bt_mesh_subnet *sub, u16_t addr, u8_t *nid,
+                    const u8_t **enc, const u8_t **priv);
+int friend_cred_set(struct friend_cred *cred, u8_t idx, const u8_t net_key[16]);
+void friend_cred_refresh(u16_t net_idx);
+int friend_cred_update(struct bt_mesh_subnet *sub);
+struct friend_cred *friend_cred_create(struct bt_mesh_subnet *sub, u16_t addr,
+                                       u16_t lpn_counter, u16_t frnd_counter);
+void friend_cred_clear(struct friend_cred *cred);
+int friend_cred_del(u16_t net_idx, u16_t addr);
+
+static inline void send_cb_finalize(const struct bt_mesh_send_cb *cb,
+                                    void *cb_data)
+{
+    if (!cb) {
+        return;
+    }
+
+    if (cb->start) {
+        cb->start(0, 0, cb_data);
+    }
+
+    if (cb->end) {
+        cb->end(0, cb_data);
+    }
+}
+# 14 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/proxy_server.h" 2
+# 24 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/proxy_server.h"
+int bt_mesh_set_device_name(const char *name);
+
+int bt_mesh_proxy_send(struct bt_mesh_conn *conn, u8_t type,
+                       struct net_buf_simple *msg);
+
+int bt_mesh_proxy_prov_enable(void);
+int bt_mesh_proxy_prov_disable(
+# 30 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/proxy_server.h" 3 4
+                              _Bool 
+# 30 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/proxy_server.h"
+                                   disconnect);
+
+int bt_mesh_proxy_gatt_enable(void);
+int bt_mesh_proxy_gatt_disable(void);
+void bt_mesh_proxy_gatt_disconnect(void);
+
+void bt_mesh_proxy_beacon_send(struct bt_mesh_subnet *sub);
+
+struct net_buf_simple *bt_mesh_proxy_get_buf(void);
+
+s32_t bt_mesh_proxy_adv_start(void);
+void bt_mesh_proxy_adv_stop(void);
+
+void bt_mesh_proxy_identity_start(struct bt_mesh_subnet *sub);
+void bt_mesh_proxy_identity_stop(struct bt_mesh_subnet *sub);
+
+
+# 46 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/proxy_server.h" 3 4
+_Bool 
+# 46 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/proxy_server.h"
+    bt_mesh_proxy_relay(struct net_buf_simple *buf, u16_t dst);
+void bt_mesh_proxy_addr_add(struct net_buf_simple *buf, u16_t addr);
+
+int bt_mesh_proxy_init(void);
+# 26 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/foundation.h" 1
+# 120 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/foundation.h"
+int bt_mesh_cfg_srv_init(struct bt_mesh_model *model, 
+# 120 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/foundation.h" 3 4
+                                                     _Bool 
+# 120 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/foundation.h"
+                                                          primary);
+int bt_mesh_health_srv_init(struct bt_mesh_model *model, 
+# 121 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/foundation.h" 3 4
+                                                        _Bool 
+# 121 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/foundation.h"
+                                                             primary);
+
+int bt_mesh_cfg_cli_init(struct bt_mesh_model *model, 
+# 123 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/foundation.h" 3 4
+                                                     _Bool 
+# 123 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/foundation.h"
+                                                          primary);
+int bt_mesh_health_cli_init(struct bt_mesh_model *model, 
+# 124 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/foundation.h" 3 4
+                                                        _Bool 
+# 124 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/foundation.h"
+                                                             primary);
+
+void bt_mesh_cfg_reset(void);
+
+void bt_mesh_heartbeat(u16_t src, u16_t dst, u8_t hops, u16_t feat);
+
+void bt_mesh_attention(struct bt_mesh_model *model, u8_t time);
+
+u8_t *bt_mesh_label_uuid_get(u16_t addr);
+
+struct bt_mesh_hb_pub *bt_mesh_hb_pub_get(void);
+void bt_mesh_hb_pub_disable(void);
+struct bt_mesh_cfg_srv *bt_mesh_cfg_get(void);
+
+u8_t bt_mesh_net_transmit_get(void);
+u8_t bt_mesh_relay_get(void);
+u8_t bt_mesh_friend_get(void);
+u8_t bt_mesh_relay_retransmit_get(void);
+u8_t bt_mesh_beacon_get(void);
+u8_t bt_mesh_gatt_proxy_get(void);
+u8_t bt_mesh_default_ttl_get(void);
+
+void bt_mesh_subnet_del(struct bt_mesh_subnet *sub, 
+# 146 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/foundation.h" 3 4
+                                                   _Bool 
+# 146 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/foundation.h"
+                                                        store);
+
+struct bt_mesh_app_key *bt_mesh_app_key_alloc(u16_t app_idx);
+void bt_mesh_app_key_del(struct bt_mesh_app_key *key, 
+# 149 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/foundation.h" 3 4
+                                                     _Bool 
+# 149 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/foundation.h"
+                                                          store);
+
+static inline void key_idx_pack(struct net_buf_simple *buf,
+                                u16_t idx1, u16_t idx2)
+{
+    net_buf_simple_add_le16(buf, idx1 | ((idx2 & 0x00f) << 12));
+    net_buf_simple_add_u8(buf, idx2 >> 4);
+}
+
+static inline void key_idx_unpack(struct net_buf_simple *buf,
+                                  u16_t *idx1, u16_t *idx2)
+{
+    *idx1 = sys_get_le16(&buf->data[0]) & 0xfff;
+    *idx2 = sys_get_le16(&buf->data[1]) >> 4;
+    net_buf_simple_pull(buf, 3);
+}
+# 27 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_main.h" 1
+# 26 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_main.h"
+struct bt_mesh_node_t {
+    char node_name[31];
+    u8_t dev_uuid[16];
+    u16_t oob_info;
+    u16_t unicast_addr;
+    u8_t element_num;
+    u16_t net_idx;
+    u8_t flags;
+    u32_t iv_index;
+    u8_t dev_key[16];
+} 
+# 36 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_main.h" 3 4
+ __attribute__((__packed__))
+# 36 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_main.h"
+         ;
+
+
+
+int provisioner_node_provision(int node_index, const u8_t uuid[16], u16_t oob_info,
+                               u16_t unicast_addr, u8_t element_num, u16_t net_idx,
+                               u8_t flags, u32_t iv_index, const u8_t dev_key[16]);
+
+int provisioner_node_reset(int node_index);
+
+int provisioner_upper_reset_all_nodes(void);
+
+int provisioner_upper_init(void);
+
+
+
+const u8_t *provisioner_net_key_get(u16_t net_idx);
+
+struct bt_mesh_subnet *provisioner_subnet_get(u16_t net_idx);
+
+
+# 56 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_main.h" 3 4
+_Bool 
+# 56 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_main.h"
+    provisioner_check_msg_dst_addr(u16_t dst_addr);
+
+const u8_t *provisioner_dev_key_get(u16_t dst_addr);
+
+struct bt_mesh_app_key *provisioner_app_key_find(u16_t app_idx);
+
+u32_t provisioner_get_prov_node_count(void);
+
+
+
+int bt_mesh_provisioner_store_node_info(struct bt_mesh_node_t *node_info);
+
+int bt_mesh_provisioner_get_all_node_unicast_addr(struct net_buf_simple *buf);
+
+int bt_mesh_provisioner_set_node_name(int node_index, const char *name);
+
+const char *bt_mesh_provisioner_get_node_name(int node_index);
+
+int bt_mesh_provisioner_get_node_index(const char *name);
+
+struct bt_mesh_node_t *bt_mesh_provisioner_get_node_info(u16_t unicast_addr);
+
+u32_t bt_mesh_provisioner_get_net_key_count(void);
+
+u32_t bt_mesh_provisioner_get_app_key_count(void);
+
+int bt_mesh_provisioner_local_app_key_add(const u8_t app_key[16], u16_t net_idx, u16_t *app_idx);
+
+const u8_t *bt_mesh_provisioner_local_app_key_get(u16_t net_idx, u16_t app_idx);
+
+int bt_mesh_provisioner_local_app_key_delete(u16_t net_idx, u16_t app_idx);
+
+int bt_mesh_provisioner_local_net_key_add(const u8_t net_key[16], u16_t *net_idx);
+
+const u8_t *bt_mesh_provisioner_local_net_key_get(u16_t net_idx);
+
+int bt_mesh_provisioner_local_net_key_delete(u16_t net_idx);
+
+int bt_mesh_provisioner_get_own_unicast_addr(u16_t *addr, u8_t *elem_num);
+
+
+int bt_mesh_provisioner_bind_local_model_app_idx(u16_t elem_addr, u16_t mod_id,
+        u16_t cid, u16_t app_idx);
+
+
+int bt_mesh_provisioner_bind_local_app_net_idx(u16_t net_idx, u16_t app_idx);
+
+
+int bt_mesh_provisioner_print_local_element_info(void);
+
+
+
+const u8_t *fast_prov_dev_key_get(u16_t dst_addr);
+
+struct bt_mesh_subnet *fast_prov_subnet_get(u16_t net_idx);
+
+struct bt_mesh_app_key *fast_prov_app_key_find(u16_t net_idx, u16_t app_idx);
+
+u8_t bt_mesh_set_fast_prov_net_idx(u16_t net_idx);
+
+u8_t bt_mesh_add_fast_prov_net_key(const u8_t net_key[16]);
+
+const u8_t *bt_mesh_get_fast_prov_net_key(u16_t net_idx);
+
+const u8_t *bt_mesh_get_fast_prov_app_key(u16_t net_idx, u16_t app_idx);
+# 28 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h" 2
+
+# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_models/common/include/model_opcode.h" 1
+# 30 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_common.h" 1
+# 22 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_common.h"
+# 1 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/allocator.h" 1
+# 22 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/allocator.h"
+# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
+# 23 "/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/allocator.h" 2
+
+
+
+char *osi_strdup(const char *str);
+
+void *osi_malloc_func(size_t size);
+void *osi_calloc_func(size_t size);
+void osi_free_func(void *ptr);
+# 23 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_common.h" 2
+
+
+# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h" 1
+# 26 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_common.h" 2
+# 36 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_common.h"
+struct net_buf_simple *bt_mesh_alloc_buf(u16_t size);
+# 45 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_common.h"
+void bt_mesh_free_buf(struct net_buf_simple *buf);
+# 59 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_common.h"
+u8_t bt_mesh_get_device_role(struct bt_mesh_model *model, 
+# 59 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_common.h" 3 4
+                                                         _Bool 
+# 59 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_common.h"
+                                                              srv_send);
+# 31 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h" 2
+# 53 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
+typedef uint8_t esp_ble_mesh_octet16_t[16];
+
+
+
+typedef uint8_t esp_ble_mesh_octet8_t[8];
+# 183 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
+typedef uint32_t esp_ble_mesh_cb_t;
+
+typedef enum {
+    ESP_BLE_MESH_TYPE_PROV_CB,
+    ESP_BLE_MESH_TYPE_OUTPUT_NUM_CB,
+    ESP_BLE_MESH_TYPE_OUTPUT_STR_CB,
+    ESP_BLE_MESH_TYPE_INTPUT_CB,
+    ESP_BLE_MESH_TYPE_LINK_OPEN_CB,
+    ESP_BLE_MESH_TYPE_LINK_CLOSE_CB,
+    ESP_BLE_MESH_TYPE_COMPLETE_CB,
+    ESP_BLE_MESH_TYPE_RESET_CB,
+} esp_ble_mesh_cb_type_t;
+
+
+typedef enum {
+    ESP_BLE_MESH_NO_OOB,
+    ESP_BLE_MESH_STATIC_OOB,
+    ESP_BLE_MESH_OUTPUT_OOB,
+    ESP_BLE_MESH_INPUT_OOB,
+} esp_ble_mesh_oob_method_t;
+
+
+typedef enum {
+    ESP_BLE_MESH_NO_OUTPUT = 0,
+    ESP_BLE_MESH_BLINK = (1UL << (0)),
+    ESP_BLE_MESH_BEEP = (1UL << (1)),
+    ESP_BLE_MESH_VIBRATE = (1UL << (2)),
+    ESP_BLE_MESH_DISPLAY_NUMBER = (1UL << (3)),
+    ESP_BLE_MESH_DISPLAY_STRING = (1UL << (4)),
+} esp_ble_mesh_output_action_t;
+
+
+typedef enum {
+    ESP_BLE_MESH_NO_INPUT = 0,
+    ESP_BLE_MESH_PUSH = (1UL << (0)),
+    ESP_BLE_MESH_TWIST = (1UL << (1)),
+    ESP_BLE_MESH_ENTER_NUMBER = (1UL << (2)),
+    ESP_BLE_MESH_ENTER_STRING = (1UL << (3)),
+} esp_ble_mesh_input_action_t;
+
+
+typedef enum {
+    ESP_BLE_MESH_PROV_ADV = (1UL << (0)),
+    ESP_BLE_MESH_PROV_GATT = (1UL << (1)),
+} esp_ble_mesh_prov_bearer_t;
+
+
+typedef enum {
+    ESP_BLE_MESH_PROV_OOB_OTHER = (1UL << (0)),
+    ESP_BLE_MESH_PROV_OOB_URI = (1UL << (1)),
+    ESP_BLE_MESH_PROV_OOB_2D_CODE = (1UL << (2)),
+    ESP_BLE_MESH_PROV_OOB_BAR_CODE = (1UL << (3)),
+    ESP_BLE_MESH_PROV_OOB_NFC = (1UL << (4)),
+    ESP_BLE_MESH_PROV_OOB_NUMBER = (1UL << (5)),
+    ESP_BLE_MESH_PROV_OOB_STRING = (1UL << (6)),
+
+    ESP_BLE_MESH_PROV_OOB_ON_BOX = (1UL << (11)),
+    ESP_BLE_MESH_PROV_OOB_IN_BOX = (1UL << (12)),
+    ESP_BLE_MESH_PROV_OOB_ON_PAPER = (1UL << (13)),
+    ESP_BLE_MESH_PROV_OOB_IN_MANUAL = (1UL << (14)),
+    ESP_BLE_MESH_PROV_OOB_ON_DEV = (1UL << (15)),
+} esp_ble_mesh_prov_oob_info_t;
+# 308 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
+typedef uint8_t UINT8;
+typedef uint16_t UINT16;
+typedef uint32_t UINT32;
+typedef uint64_t UINT64;
+
+
+typedef UINT8 BT_OCTET32[32];
+
+
+
+
+typedef uint8_t BD_ADDR[6];
+
+
+typedef uint8_t esp_ble_mesh_bd_addr_t[6];
+
+
+typedef enum {
+    ESP_BLE_MESH_ADDR_TYPE_PUBLIC = 0x00,
+    ESP_BLE_MESH_ADDR_TYPE_RANDOM = 0x01,
+    ESP_BLE_MESH_ADDR_TYPE_RPA_PUBLIC = 0x02,
+    ESP_BLE_MESH_ADDR_TYPE_RPA_RANDOM = 0x03,
+} esp_ble_mesh_addr_type_t;
+
+typedef struct esp_ble_mesh_model esp_ble_mesh_model_t;
+
+
+
+
+typedef struct {
+
+    uint16_t element_addr;
+
+
+    const uint16_t location;
+
+    const uint8_t sig_model_count;
+    const uint8_t vnd_model_count;
+
+    esp_ble_mesh_model_t *sig_models;
+    esp_ble_mesh_model_t *vnd_models;
+} esp_ble_mesh_elem_t;
+
+
+
+
+typedef struct {
+
+    esp_ble_mesh_model_t *model;
+
+    uint16_t publish_addr;
+    uint16_t app_idx;
+
+    uint8_t ttl;
+    uint8_t retransmit;
+
+    uint8_t period;
+    uint16_t period_div: 4,
+             cred: 1,
+             fast_period: 1,
+             count: 3;
+
+    uint32_t period_start;
+# 379 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
+    struct net_buf_simple *msg;
+
+
+    esp_ble_mesh_cb_t update;
+
+
+    uint8_t dev_role;
+
+
+    struct k_delayed_work timer;
+} esp_ble_mesh_model_pub_t;
+# 424 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
+typedef struct {
+    const uint32_t opcode;
+    const size_t min_len;
+    esp_ble_mesh_cb_t param_cb;
+} esp_ble_mesh_model_op_t;
+# 439 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
+struct esp_ble_mesh_model {
+
+    union {
+        const uint16_t model_id;
+        struct {
+            uint16_t company_id;
+            uint16_t model_id;
+        } vnd;
+    };
+
+
+    uint8_t element_idx;
+    uint8_t model_idx;
+    uint16_t flags;
+
+
+    esp_ble_mesh_elem_t *element;
+
+
+    esp_ble_mesh_model_pub_t *const pub;
+
+
+    uint16_t keys[3];
+
+
+    uint16_t groups[3];
+
+
+    esp_ble_mesh_model_op_t *op;
+
+
+    void *user_data;
+};
+# 481 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
+typedef struct {
+
+    uint16_t net_idx;
+
+
+    uint16_t app_idx;
+
+
+    uint16_t addr;
+
+
+    uint16_t recv_dst;
+
+
+    uint8_t recv_ttl: 7;
+
+
+    uint8_t send_rel: 1;
+
+
+    uint8_t send_ttl;
+
+
+    uint32_t recv_op;
+
+
+    esp_ble_mesh_model_t *model;
+
+
+    
+# 510 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h" 3 4
+   _Bool 
+# 510 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
+        srv_send;
+} esp_ble_mesh_msg_ctx_t;
+
+
+
+
+typedef struct {
+# 613 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
+} esp_ble_mesh_prov_t;
+
+
+
+
+typedef struct {
+    uint16_t cid;
+    uint16_t pid;
+    uint16_t vid;
+
+    size_t element_count;
+    esp_ble_mesh_elem_t *elements;
+} esp_ble_mesh_comp_t;
+
+
+typedef enum {
+    ROLE_NODE = 0,
+    ROLE_PROVISIONER,
+    ROLE_FAST_PROV,
+} esp_ble_mesh_dev_role_t;
+
+
+typedef uint8_t esp_ble_mesh_dev_add_flag_t;
+
+
+
+
+
+typedef struct {
+    esp_ble_mesh_bd_addr_t addr;
+    esp_ble_mesh_addr_type_t addr_type;
+    uint8_t uuid[16];
+    uint16_t oob_info;
+
+    esp_ble_mesh_prov_bearer_t bearer;
+} esp_ble_mesh_unprov_dev_add_t;
+
+
+
+
+typedef struct {
+    union {
+        struct {
+            esp_ble_mesh_bd_addr_t addr;
+            esp_ble_mesh_addr_type_t addr_type;
+        };
+        uint8_t uuid[16];
+    };
+    uint8_t flag;
+} esp_ble_mesh_device_delete_t;
+
+
+
+
+
+typedef struct {
+    union {
+        uint16_t net_idx;
+        uint8_t flags;
+        uint32_t iv_index;
+    };
+    uint8_t flag;
+} esp_ble_mesh_prov_data_info_t;
+
+
+typedef struct {
+    uint16_t unicast_min;
+    uint16_t unicast_max;
+    uint16_t net_idx;
+    uint8_t flags;
+    uint32_t iv_index;
+    uint8_t offset;
+    uint8_t match_len;
+    uint8_t match_val[16];
+} esp_ble_mesh_fast_prov_info_t;
+
+
+typedef enum {
+    FAST_PROV_ACT_NONE,
+    FAST_PROV_ACT_ENTER,
+    FAST_PROV_ACT_SUSPEND,
+    FAST_PROV_ACT_EXIT,
+    FAST_PROV_ACT_MAX,
+} esp_ble_mesh_fast_prov_action_t;
+
+
+typedef enum {
+    PROXY_FILTER_WHITELIST,
+    PROXY_FILTER_BLACKLIST,
+} esp_ble_mesh_proxy_filter_type_t;
+
+
+typedef enum {
+    ESP_BLE_MESH_PROV_REGISTER_COMP_EVT,
+    ESP_BLE_MESH_NODE_SET_UNPROV_DEV_NAME_COMP_EVT,
+    ESP_BLE_MESH_NODE_PROV_ENABLE_COMP_EVT,
+    ESP_BLE_MESH_NODE_PROV_DISABLE_COMP_EVT,
+    ESP_BLE_MESH_NODE_PROV_LINK_OPEN_EVT,
+    ESP_BLE_MESH_NODE_PROV_LINK_CLOSE_EVT,
+    ESP_BLE_MESH_NODE_PROV_OOB_PUB_KEY_EVT,
+    ESP_BLE_MESH_NODE_PROV_OUTPUT_NUMBER_EVT,
+    ESP_BLE_MESH_NODE_PROV_OUTPUT_STRING_EVT,
+    ESP_BLE_MESH_NODE_PROV_INPUT_EVT,
+    ESP_BLE_MESH_NODE_PROV_COMPLETE_EVT,
+    ESP_BLE_MESH_NODE_PROV_RESET_EVT,
+    ESP_BLE_MESH_NODE_PROV_SET_OOB_PUB_KEY_COMP_EVT,
+    ESP_BLE_MESH_NODE_PROV_INPUT_NUMBER_COMP_EVT,
+    ESP_BLE_MESH_NODE_PROV_INPUT_STRING_COMP_EVT,
+    ESP_BLE_MESH_NODE_PROXY_IDENTITY_ENABLE_COMP_EVT,
+    ESP_BLE_MESH_NODE_PROXY_GATT_ENABLE_COMP_EVT,
+    ESP_BLE_MESH_NODE_PROXY_GATT_DISABLE_COMP_EVT,
+    ESP_BLE_MESH_PROVISIONER_PROV_ENABLE_COMP_EVT,
+    ESP_BLE_MESH_PROVISIONER_PROV_DISABLE_COMP_EVT,
+    ESP_BLE_MESH_PROVISIONER_RECV_UNPROV_ADV_PKT_EVT,
+    ESP_BLE_MESH_PROVISIONER_PROV_READ_OOB_PUB_KEY_EVT,
+    ESP_BLE_MESH_PROVISIONER_PROV_INPUT_EVT,
+    ESP_BLE_MESH_PROVISIONER_PROV_OUTPUT_EVT,
+    ESP_BLE_MESH_PROVISIONER_PROV_LINK_OPEN_EVT,
+    ESP_BLE_MESH_PROVISIONER_PROV_LINK_CLOSE_EVT,
+    ESP_BLE_MESH_PROVISIONER_PROV_COMPLETE_EVT,
+    ESP_BLE_MESH_PROVISIONER_ADD_UNPROV_DEV_COMP_EVT,
+    ESP_BLE_MESH_PROVISIONER_DELETE_DEV_COMP_EVT,
+    ESP_BLE_MESH_PROVISIONER_SET_DEV_UUID_MATCH_COMP_EVT,
+    ESP_BLE_MESH_PROVISIONER_SET_PROV_DATA_INFO_COMP_EVT,
+    ESP_BLE_MESH_PROVISIONER_PROV_READ_OOB_PUB_KEY_COMP_EVT,
+    ESP_BLE_MESH_PROVISIONER_PROV_INPUT_NUMBER_COMP_EVT,
+    ESP_BLE_MESH_PROVISIONER_PROV_INPUT_STRING_COMP_EVT,
+    ESP_BLE_MESH_PROVISIONER_SET_NODE_NAME_COMP_EVT,
+    ESP_BLE_MESH_PROVISIONER_ADD_LOCAL_APP_KEY_COMP_EVT,
+    ESP_BLE_MESH_PROVISIONER_BIND_APP_KEY_TO_MODEL_COMP_EVT,
+    ESP_BLE_MESH_PROVISIONER_ADD_LOCAL_NET_KEY_COMP_EVT,
+    ESP_BLE_MESH_SET_FAST_PROV_INFO_COMP_EVT,
+    ESP_BLE_MESH_SET_FAST_PROV_ACTION_COMP_EVT,
+    ESP_BLE_MESH_HEARTBEAT_MESSAGE_RECV_EVT,
+    ESP_BLE_MESH_LPN_ENABLE_COMP_EVT,
+    ESP_BLE_MESH_LPN_DISABLE_COMP_EVT,
+    ESP_BLE_MESH_LPN_POLL_COMP_EVT,
+    ESP_BLE_MESH_LPN_FRIENDSHIP_ESTABLISH_EVT,
+    ESP_BLE_MESH_LPN_FRIENDSHIP_TERMINATE_EVT,
+    ESP_BLE_MESH_FRIEND_FRIENDSHIP_ESTABLISH_EVT,
+    ESP_BLE_MESH_FRIEND_FRIENDSHIP_TERMINATE_EVT,
+    ESP_BLE_MESH_PROXY_CLIENT_RECV_ADV_PKT_EVT,
+    ESP_BLE_MESH_PROXY_CLIENT_CONNECTED_EVT,
+    ESP_BLE_MESH_PROXY_CLIENT_DISCONNECTED_EVT,
+    ESP_BLE_MESH_PROXY_CLIENT_RECV_FILTER_STATUS_EVT,
+    ESP_BLE_MESH_PROXY_CLIENT_CONNECT_COMP_EVT,
+    ESP_BLE_MESH_PROXY_CLIENT_DISCONNECT_COMP_EVT,
+    ESP_BLE_MESH_PROXY_CLIENT_SET_FILTER_TYPE_COMP_EVT,
+    ESP_BLE_MESH_PROXY_CLIENT_ADD_FILTER_ADDR_COMP_EVT,
+    ESP_BLE_MESH_PROXY_CLIENT_REMOVE_FILTER_ADDR_COMP_EVT,
+    ESP_BLE_MESH_PROV_EVT_MAX,
+} esp_ble_mesh_prov_cb_event_t;
+
+
+
+
+typedef union {
+
+
+
+    struct ble_mesh_prov_register_comp_param {
+        int err_code;
+    } prov_register_comp;
+
+
+
+    struct ble_mesh_set_unprov_dev_name_comp_param {
+        int err_code;
+    } node_set_unprov_dev_name_comp;
+
+
+
+    struct ble_mesh_prov_enable_comp_param {
+        int err_code;
+    } node_prov_enable_comp;
+
+
+
+    struct ble_mesh_prov_disable_comp_param {
+        int err_code;
+    } node_prov_disable_comp;
+
+
+
+    struct ble_mesh_link_open_evt_param {
+        esp_ble_mesh_prov_bearer_t bearer;
+    } node_prov_link_open;
+
+
+
+    struct ble_mesh_link_close_evt_param {
+        esp_ble_mesh_prov_bearer_t bearer;
+    } node_prov_link_close;
+
+
+
+    struct ble_mesh_output_num_evt_param {
+        esp_ble_mesh_output_action_t action;
+        uint32_t number;
+    } node_prov_output_num;
+
+
+
+    struct ble_mesh_output_str_evt_param {
+        char string[8];
+    } node_prov_output_str;
+
+
+
+    struct ble_mesh_input_evt_param {
+        esp_ble_mesh_input_action_t action;
+        uint8_t size;
+    } node_prov_input;
+
+
+
+    struct ble_mesh_provision_complete_evt_param {
+        uint16_t net_idx;
+        uint8_t net_key[16];
+        uint16_t addr;
+        uint8_t flags;
+        uint32_t iv_index;
+    } node_prov_complete;
+
+
+
+    struct ble_mesh_provision_reset_param {
+
+    } node_prov_reset;
+
+
+
+    struct ble_mesh_set_oob_pub_key_comp_param {
+        int err_code;
+    } node_prov_set_oob_pub_key_comp;
+
+
+
+    struct ble_mesh_input_number_comp_param {
+        int err_code;
+    } node_prov_input_num_comp;
+
+
+
+    struct ble_mesh_input_string_comp_param {
+        int err_code;
+    } node_prov_input_str_comp;
+
+
+
+    struct ble_mesh_proxy_identity_enable_comp_param {
+        int err_code;
+    } node_proxy_identity_enable_comp;
+
+
+
+    struct ble_mesh_proxy_gatt_enable_comp_param {
+        int err_code;
+    } node_proxy_gatt_enable_comp;
+
+
+
+    struct ble_mesh_proxy_gatt_disable_comp_param {
+        int err_code;
+    } node_proxy_gatt_disable_comp;
+
+
+
+    struct ble_mesh_provisioner_recv_unprov_adv_pkt_param {
+        uint8_t dev_uuid[16];
+        esp_ble_mesh_bd_addr_t addr;
+        esp_ble_mesh_addr_type_t addr_type;
+        uint16_t oob_info;
+        uint8_t adv_type;
+        esp_ble_mesh_prov_bearer_t bearer;
+    } provisioner_recv_unprov_adv_pkt;
+
+
+
+    struct ble_mesh_provisioner_prov_enable_comp_param {
+        int err_code;
+    } provisioner_prov_enable_comp;
+
+
+
+    struct ble_mesh_provisioner_prov_disable_comp_param {
+        int err_code;
+    } provisioner_prov_disable_comp;
+
+
+
+    struct ble_mesh_provisioner_link_open_evt_param {
+        esp_ble_mesh_prov_bearer_t bearer;
+    } provisioner_prov_link_open;
+
+
+
+    struct ble_mesh_provisioner_prov_read_oob_pub_key_evt_param {
+        uint8_t link_idx;
+    } provisioner_prov_read_oob_pub_key;
+
+
+
+    struct ble_mesh_provisioner_prov_input_evt_param {
+        esp_ble_mesh_oob_method_t method;
+        esp_ble_mesh_output_action_t action;
+        uint8_t size;
+        uint8_t link_idx;
+    } provisioner_prov_input;
+
+
+
+    struct ble_mesh_provisioner_prov_output_evt_param {
+        esp_ble_mesh_oob_method_t method;
+        esp_ble_mesh_input_action_t action;
+        uint8_t size;
+        uint8_t link_idx;
+        union {
+            char string[8];
+            uint32_t number;
+        };
+    } provisioner_prov_output;
+
+
+
+    struct ble_mesh_provisioner_link_close_evt_param {
+        esp_ble_mesh_prov_bearer_t bearer;
+        uint8_t reason;
+    } provisioner_prov_link_close;
+
+
+
+    struct ble_mesh_provisioner_prov_comp_param {
+        int node_idx;
+        esp_ble_mesh_octet16_t device_uuid;
+        uint16_t unicast_addr;
+        uint8_t element_num;
+        uint16_t netkey_idx;
+    } provisioner_prov_complete;
+
+
+
+    struct ble_mesh_provisioner_add_unprov_dev_comp_param {
+        int err_code;
+    } provisioner_add_unprov_dev_comp;
+
+
+
+    struct ble_mesh_provisioner_delete_dev_comp_param {
+        int err_code;
+    } provisioner_delete_dev_comp;
+
+
+
+    struct ble_mesh_provisioner_set_dev_uuid_match_comp_param {
+        int err_code;
+    } provisioner_set_dev_uuid_match_comp;
+
+
+
+    struct ble_mesh_provisioner_set_prov_data_info_comp_param {
+        int err_code;
+    } provisioner_set_prov_data_info_comp;
+
+
+
+    struct ble_mesh_provisioner_prov_read_oob_pub_key_comp_param {
+        int err_code;
+    } provisioner_prov_read_oob_pub_key_comp;
+
+
+
+    struct ble_mesh_provisioner_prov_input_num_comp_param {
+        int err_code;
+    } provisioner_prov_input_num_comp;
+
+
+
+    struct ble_mesh_provisioner_prov_input_str_comp_param {
+        int err_code;
+    } provisioner_prov_input_str_comp;
+
+
+
+    struct ble_mesh_provisioner_set_node_name_comp_param {
+        int err_code;
+        int node_index;
+    } provisioner_set_node_name_comp;
+
+
+
+    struct ble_mesh_provisioner_add_local_app_key_comp_param {
+        int err_code;
+        uint16_t app_idx;
+    } provisioner_add_app_key_comp;
+
+
+
+    struct ble_mesh_provisioner_bind_local_mod_app_comp_param {
+        int err_code;
+    } provisioner_bind_app_key_to_model_comp;
+
+
+
+    struct ble_mesh_provisioner_add_local_net_key_comp_param {
+        int err_code;
+        uint16_t net_idx;
+    } provisioner_add_net_key_comp;
+
+
+
+    struct ble_mesh_set_fast_prov_info_comp_param {
+        uint8_t status_unicast;
+        uint8_t status_net_idx;
+        uint8_t status_match;
+    } set_fast_prov_info_comp;
+
+
+
+    struct ble_mesh_set_fast_prov_action_comp_param {
+        uint8_t status_action;
+    } set_fast_prov_action_comp;
+
+
+
+    struct ble_mesh_heartbeat_msg_recv_param {
+        uint8_t hops;
+        uint16_t feature;
+    } heartbeat_msg_recv;
+
+
+
+    struct ble_mesh_lpn_enable_comp_param {
+        int err_code;
+    } lpn_enable_comp;
+
+
+
+    struct ble_mesh_lpn_disable_comp_param {
+        int err_code;
+    } lpn_disable_comp;
+
+
+
+    struct ble_mesh_lpn_poll_comp_param {
+        int err_code;
+    } lpn_poll_comp;
+
+
+
+    struct ble_mesh_lpn_friendship_establish_param {
+        uint16_t friend_addr;
+    } lpn_friendship_establish;
+
+
+
+    struct ble_mesh_lpn_friendship_terminate_param {
+        uint16_t friend_addr;
+    } lpn_friendship_terminate;
+
+
+
+    struct ble_mesh_friend_friendship_establish_param {
+        uint16_t lpn_addr;
+    } frnd_friendship_establish;
+
+
+
+    struct ble_mesh_friend_friendship_terminate_param {
+        uint16_t lpn_addr;
+
+        enum {
+            ESP_BLE_MESH_FRND_FRIENDSHIP_TERMINATE_ESTABLISH_FAIL,
+            ESP_BLE_MESH_FRND_FRIENDSHIP_TERMINATE_POLL_TIMEOUT,
+            ESP_BLE_MESH_FRND_FRIENDSHIP_TERMINATE_RECV_FRND_REQ,
+            ESP_BLE_MESH_FRND_FRIENDSHIP_TERMINATE_RECV_FRND_CLEAR,
+            ESP_BLE_MESH_FRND_FRIENDSHIP_TERMINATE_DISABLE,
+        } reason;
+    } frnd_friendship_terminate;
+
+
+
+    struct ble_mesh_proxy_client_recv_adv_pkt_param {
+        esp_ble_mesh_bd_addr_t addr;
+        esp_ble_mesh_addr_type_t addr_type;
+        uint16_t net_idx;
+        uint8_t net_id[8];
+    } proxy_client_recv_adv_pkt;
+
+
+
+    struct ble_mesh_proxy_client_connected_param {
+        esp_ble_mesh_bd_addr_t addr;
+        esp_ble_mesh_addr_type_t addr_type;
+        uint8_t conn_handle;
+        uint16_t net_idx;
+    } proxy_client_connected;
+
+
+
+    struct ble_mesh_proxy_client_disconnected_param {
+        esp_ble_mesh_bd_addr_t addr;
+        esp_ble_mesh_addr_type_t addr_type;
+        uint8_t conn_handle;
+        uint16_t net_idx;
+        uint8_t reason;
+    } proxy_client_disconnected;
+
+
+
+    struct ble_mesh_proxy_client_recv_filter_status_param {
+        uint8_t conn_handle;
+        uint16_t server_addr;
+        uint16_t net_idx;
+        uint8_t filter_type;
+        uint16_t list_size;
+    } proxy_client_recv_filter_status;
+
+
+
+    struct ble_mesh_proxy_client_connect_comp_param {
+        int err_code;
+        esp_ble_mesh_bd_addr_t addr;
+        esp_ble_mesh_addr_type_t addr_type;
+        uint16_t net_idx;
+    } proxy_client_connect_comp;
+
+
+
+    struct ble_mesh_proxy_client_disconnect_comp_param {
+        int err_code;
+        uint8_t conn_handle;
+    } proxy_client_disconnect_comp;
+
+
+
+    struct ble_mesh_proxy_client_set_filter_type_comp_param {
+        int err_code;
+        uint8_t conn_handle;
+        uint16_t net_idx;
+    } proxy_client_set_filter_type_comp;
+
+
+
+    struct ble_mesh_proxy_client_add_filter_addr_comp_param {
+        int err_code;
+        uint8_t conn_handle;
+        uint16_t net_idx;
+    } proxy_client_add_filter_addr_comp;
+
+
+
+    struct ble_mesh_proxy_client_remove_filter_addr_comp_param {
+        int err_code;
+        uint8_t conn_handle;
+        uint16_t net_idx;
+    } proxy_client_remove_filter_addr_comp;
+} esp_ble_mesh_prov_cb_param_t;
+# 1241 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
+typedef uint32_t esp_ble_mesh_opcode_config_client_get_t;
+# 1268 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
+typedef uint32_t esp_ble_mesh_opcode_config_client_set_t;
+# 1305 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
+typedef uint32_t esp_ble_mesh_opcode_config_status_t;
+# 1336 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
+typedef uint8_t esp_ble_mesh_cfg_status_t;
+# 1362 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
+typedef uint32_t esp_ble_mesh_opcode_health_client_get_t;
+# 1373 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
+typedef uint32_t esp_ble_mesh_opcode_health_client_set_t;
+# 1390 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
+typedef uint32_t esp_ble_mesh_health_model_status_t;
+# 1402 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
+typedef uint32_t esp_ble_mesh_generic_message_opcode_t;
+# 1501 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
+typedef uint32_t esp_ble_mesh_sensor_message_opcode_t;
+# 1530 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
+typedef uint32_t esp_ble_mesh_time_scene_message_opcode_t;
+# 1575 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
+typedef uint32_t esp_ble_mesh_light_message_opcode_t;
+# 1681 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
+typedef uint32_t esp_ble_mesh_opcode_t;
+
+
+
+
+
+
+typedef uint8_t esp_ble_mesh_model_status_t;
+# 1699 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
+typedef struct {
+    uint32_t cli_op;
+    uint32_t status_op;
+} esp_ble_mesh_client_op_pair_t;
+
+
+typedef struct {
+    esp_ble_mesh_model_t *model;
+    int op_pair_size;
+    const esp_ble_mesh_client_op_pair_t *op_pair;
+    uint32_t publish_status;
+    void *internal_data;
+    uint8_t msg_role;
+} esp_ble_mesh_client_t;
+
+
+typedef struct {
+    esp_ble_mesh_opcode_t opcode;
+    esp_ble_mesh_model_t *model;
+    esp_ble_mesh_msg_ctx_t ctx;
+    int32_t msg_timeout;
+
+    uint8_t msg_role;
+} esp_ble_mesh_client_common_param_t;
+
+
+
+
+
+
+enum {
+    ESP_BLE_MESH_SERVER_TRANS_TIMER_START,
+    ESP_BLE_MESH_SERVER_FLAG_MAX,
+};
+
+
+typedef struct {
+    
+# 1736 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h" 3 4
+   _Bool 
+# 1736 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
+        just_started;
+
+    uint8_t trans_time;
+    uint8_t remain_time;
+    uint8_t delay;
+    uint32_t quo_tt;
+    uint32_t counter;
+    uint32_t total_duration;
+    int64_t start_timestamp;
+# 1755 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
+    bt_mesh_atomic_t flag[1 + ((ESP_BLE_MESH_SERVER_FLAG_MAX) - 1) / (sizeof(bt_mesh_atomic_val_t) * 8)];
+    struct k_delayed_work timer;
+} esp_ble_mesh_state_transition_t;
+
+
+typedef struct {
+    uint8_t tid;
+    uint16_t src;
+    uint16_t dst;
+    int64_t timestamp;
+} esp_ble_mesh_last_msg_info_t;
+
+
+
+
+
+typedef struct {
+# 1787 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h"
+    uint8_t get_auto_rsp : 1,
+            set_auto_rsp : 1,
+            status_auto_rsp : 1;
+} esp_ble_mesh_server_rsp_ctrl_t;
+
+
+
+
+typedef union {
+    struct {
+        uint8_t onoff;
+    } gen_onoff;
+    struct {
+        int16_t level;
+    } gen_level;
+    struct {
+        uint8_t onpowerup;
+    } gen_onpowerup;
+    struct {
+        uint16_t power;
+    } gen_power_actual;
+    struct {
+        uint16_t lightness;
+    } light_lightness_actual;
+    struct {
+        uint16_t lightness;
+    } light_lightness_linear;
+    struct {
+        uint16_t lightness;
+    } light_ctl_lightness;
+    struct {
+        uint16_t temperature;
+        int16_t delta_uv;
+    } light_ctl_temp_delta_uv;
+    struct {
+        uint16_t lightness;
+    } light_hsl_lightness;
+    struct {
+        uint16_t hue;
+    } light_hsl_hue;
+    struct {
+        uint16_t saturation;
+    } light_hsl_saturation;
+    struct {
+        uint16_t lightness;
+    } light_xyl_lightness;
+    struct {
+        uint8_t onoff;
+    } light_lc_light_onoff;
+} esp_ble_mesh_server_state_value_t;
+
+
+typedef enum {
+    ESP_BLE_MESH_GENERIC_ONOFF_STATE,
+    ESP_BLE_MESH_GENERIC_LEVEL_STATE,
+    ESP_BLE_MESH_GENERIC_ONPOWERUP_STATE,
+    ESP_BLE_MESH_GENERIC_POWER_ACTUAL_STATE,
+    ESP_BLE_MESH_LIGHT_LIGHTNESS_ACTUAL_STATE,
+    ESP_BLE_MESH_LIGHT_LIGHTNESS_LINEAR_STATE,
+    ESP_BLE_MESH_LIGHT_CTL_LIGHTNESS_STATE,
+    ESP_BLE_MESH_LIGHT_CTL_TEMP_DELTA_UV_STATE,
+    ESP_BLE_MESH_LIGHT_HSL_LIGHTNESS_STATE,
+    ESP_BLE_MESH_LIGHT_HSL_HUE_STATE,
+    ESP_BLE_MESH_LIGHT_HSL_SATURATION_STATE,
+    ESP_BLE_MESH_LIGHT_XYL_LIGHTNESS_STATE,
+    ESP_BLE_MESH_LIGHT_LC_LIGHT_ONOFF_STATE,
+    ESP_BLE_MESH_SERVER_MODEL_STATE_MAX,
+} esp_ble_mesh_server_state_type_t;
+
+
+typedef enum {
+    ESP_BLE_MESH_MODEL_OPERATION_EVT,
+    ESP_BLE_MESH_MODEL_SEND_COMP_EVT,
+    ESP_BLE_MESH_MODEL_PUBLISH_COMP_EVT,
+    ESP_BLE_MESH_CLIENT_MODEL_RECV_PUBLISH_MSG_EVT,
+    ESP_BLE_MESH_CLIENT_MODEL_SEND_TIMEOUT_EVT,
+    ESP_BLE_MESH_MODEL_PUBLISH_UPDATE_EVT,
+    ESP_BLE_MESH_SERVER_MODEL_UPDATE_STATE_COMP_EVT,
+    ESP_BLE_MESH_MODEL_EVT_MAX,
+} esp_ble_mesh_model_cb_event_t;
+
+
+
+
+typedef union {
+
+
+
+    struct ble_mesh_model_operation_evt_param {
+        uint32_t opcode;
+        esp_ble_mesh_model_t *model;
+        esp_ble_mesh_msg_ctx_t *ctx;
+        uint16_t length;
+        uint8_t *msg;
+    } model_operation;
+
+
+
+    struct ble_mesh_model_send_comp_param {
+        int err_code;
+        uint32_t opcode;
+        esp_ble_mesh_model_t *model;
+        esp_ble_mesh_msg_ctx_t *ctx;
+    } model_send_comp;
+
+
+
+    struct ble_mesh_model_publish_comp_param {
+        int err_code;
+        esp_ble_mesh_model_t *model;
+    } model_publish_comp;
+
+
+
+    struct ble_mesh_mod_recv_publish_msg_param {
+        uint32_t opcode;
+        esp_ble_mesh_model_t *model;
+        esp_ble_mesh_msg_ctx_t *ctx;
+        uint16_t length;
+        uint8_t *msg;
+    } client_recv_publish_msg;
+
+
+
+    struct ble_mesh_client_model_send_timeout_param {
+        uint32_t opcode;
+        esp_ble_mesh_model_t *model;
+        esp_ble_mesh_msg_ctx_t *ctx;
+    } client_send_timeout;
+
+
+
+    struct ble_mesh_model_publish_update_evt_param {
+        esp_ble_mesh_model_t *model;
+    } model_publish_update;
+
+
+
+    struct ble_mesh_server_model_update_state_comp_param {
+        int err_code;
+        esp_ble_mesh_model_t *model;
+        esp_ble_mesh_server_state_type_t type;
+    } server_model_update_state;
+} esp_ble_mesh_model_cb_param_t;
+# 34 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c" 2
+
+# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h" 1
 # 42 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h"
 struct bt_mesh_unprov_dev_add {
     u8_t addr[6];
@@ -14450,28 +11824,12 @@ u16_t provisioner_get_fast_prov_net_idx(void);
 u8_t bt_mesh_set_fast_prov_unicast_addr_range(u16_t min, u16_t max);
 # 338 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h"
 void bt_mesh_set_fast_prov_flags_iv_index(u8_t flags, u32_t iv_index);
-# 35 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_common.h" 1
-# 25 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_common.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h" 1
-# 26 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_common.h" 2
-
-# 1 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_access.h" 1
-# 28 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_common.h" 2
-# 36 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_common.h"
-struct net_buf_simple *bt_mesh_alloc_buf(u16_t size);
-# 45 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_common.h"
-void bt_mesh_free_buf(struct net_buf_simple *buf);
-# 59 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_common.h"
-u8_t bt_mesh_get_device_role(struct bt_mesh_model *model, 
-# 59 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_common.h" 3 4
-                                                         _Bool 
-# 59 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_common.h"
-                                                              srv_send);
-# 36 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 2
-
+# 36 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c" 2
+# 70 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
+static uint16_t proxy_svc_start_handle, prov_svc_start_handle;
 struct bt_mesh_dev bt_mesh_dev;
-# 56 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
+
+
 static u8_t bt_mesh_public_key[64];
 static BT_OCTET32 bt_mesh_private_key = {
     0x3f, 0x49, 0xf6, 0xd4, 0xa3, 0xc5, 0x5f, 0x38,
@@ -14482,25 +11840,28 @@ static BT_OCTET32 bt_mesh_private_key = {
 
 
 static bt_mesh_scan_cb_t *bt_mesh_scan_dev_found_cb;
-static void bt_mesh_scan_result_callback(tBTA_DM_SEARCH_EVT event, tBTA_DM_SEARCH *p_data);
-# 104 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
+# 97 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
 esp_err_t bt_mesh_host_init(void)
 {
+    int rc;
+    rc = btc_init();
+    if (rc != 0) {
+        return -1;
+    }
+
+    rc = osi_alarm_create_mux();
+    if (rc != 0) {
+        return -1;
+    }
+
+    osi_alarm_init();
     return 0;
 }
 
+uint8_t ble_hs_hci_get_hci_version(void);
+
 void bt_mesh_hci_init(void)
 {
-    const uint8_t *features = controller_get_interface()->get_features_ble()->as_array;
-    if (features != 
-# 112 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-                   ((void *)0)
-# 112 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-                       ) {
-        memcpy(bt_mesh_dev.features[0], features, 8);
-        memcpy(bt_mesh_dev.le.features, features, 8);
-    }
-
 
 
 
@@ -14510,343 +11871,167 @@ void bt_mesh_hci_init(void)
 
 
 
-    bt_mesh_dev.lmp_version = controller_get_interface()->get_bt_version()->lmp_version;
-    bt_mesh_dev.hci_revision = controller_get_interface()->get_bt_version()->hci_revision;
-    bt_mesh_dev.lmp_subversion = controller_get_interface()->get_bt_version()->lmp_subversion;
-    bt_mesh_dev.manufacturer = controller_get_interface()->get_bt_version()->manufacturer;
-
-    const uint8_t *p = controller_get_interface()->get_ble_supported_states();
-    uint64_t states_fh = 0, states_sh = 0;
-    {states_fh = (((UINT32)(*(p))) + ((((UINT32)(*((p) + 1)))) << 8) + ((((UINT32)(*((p) + 2)))) << 16) + ((((UINT32)(*((p) + 3)))) << 24)); (p) += 4;};
-    {states_sh = (((UINT32)(*(p))) + ((((UINT32)(*((p) + 1)))) << 8) + ((((UINT32)(*((p) + 2)))) << 16) + ((((UINT32)(*((p) + 3)))) << 24)); (p) += 4;};
-    bt_mesh_dev.le.states = (states_sh << 32) | states_fh;
+    return;
 }
 
-static void bt_mesh_scan_results_change_2_bta(tBTM_INQ_RESULTS *p_inq, u8_t *p_eir,
-        tBTA_DM_SEARCH_CBACK *p_scan_cback)
+static struct ble_gap_disc_params scan_param;
+# 376 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
+static int disc_cb(struct ble_gap_event *event, void *arg)
 {
-    tBTM_INQ_INFO *p_inq_info;
-    tBTA_DM_SEARCH result;
+    struct ble_gap_disc_desc *desc;
+# 390 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
+    switch (event->type) {
+    case 7:
+        desc = &event->disc;
 
-    bdcpy(result.inq_res.bd_addr, p_inq->remote_bd_addr);
-    result.inq_res.rssi = p_inq->rssi;
-    result.inq_res.ble_addr_type = p_inq->ble_addr_type;
-    result.inq_res.inq_result_type = p_inq->inq_result_type;
-    result.inq_res.device_type = p_inq->device_type;
-    result.inq_res.flag = p_inq->flag;
-    result.inq_res.adv_data_len = p_inq->adv_data_len;
-    result.inq_res.scan_rsp_len = p_inq->scan_rsp_len;
-    memcpy(result.inq_res.dev_class, p_inq->dev_class, sizeof(DEV_CLASS));
-    result.inq_res.ble_evt_type = p_inq->ble_evt_type;
-
-
-    result.inq_res.p_eir = p_eir;
-
-    if ((p_inq_info = BTM_InqDbRead(p_inq->remote_bd_addr)) != 
-# 158 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-                                                              ((void *)0)
-# 158 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-                                                                  ) {
-
-        result.inq_res.remt_name_not_required = 
-# 160 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-                                               0
-# 160 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-                                                    ;
-    }
-
-    if (p_scan_cback) {
-        p_scan_cback(0, &result);
-    }
-
-    if (p_inq_info) {
-
-
-        if (result.inq_res.remt_name_not_required) {
-            p_inq_info->appl_knows_rem_name = 
-# 171 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-                                             1
-# 171 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-                                                 ;
+        struct net_buf_simple *buf = bt_mesh_alloc_buf(desc->length_data);
+        if (!buf) {
+            do {if ((2 >= 1) && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BLE_MESH", "\033[0;" "31" "m" "E" " (%d) %s: " "%s, Failed to allocate memory" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", __func__); };} while(0);
+            return 0;
         }
-    }
-}
+        net_buf_simple_add_mem(buf, desc->data, desc->length_data);
 
-static void bt_mesh_scan_results_cb(tBTM_INQ_RESULTS *p_inq, u8_t *p_eir)
-{
-    bt_mesh_scan_results_change_2_bta(p_inq, p_eir, bt_mesh_scan_result_callback);
-}
-
-static 
-# 181 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-      _Bool 
-# 181 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-           valid_adv_param(const struct bt_mesh_adv_param *param)
-{
-    if (!(param->options & BLE_MESH_ADV_OPT_CONNECTABLE)) {
-
-
-
-
-
-
-    }
-
-    if (param->interval_min > param->interval_max ||
-            param->interval_min < 0x0020 || param->interval_max > 0x4000) {
-        return 
-# 194 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-              0
-# 194 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-                   ;
-    }
-
-    return 
-# 197 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-          1
-# 197 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-              ;
-}
-
-static int set_adv_data(u16_t hci_op, const struct bt_mesh_adv_data *ad, size_t ad_len)
-{
-    struct bt_mesh_hci_cp_set_adv_data param = {0};
-    int i;
-
-    if (ad == 
-# 205 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-             ((void *)0) 
-# 205 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-                  || ad_len == 0) {
-        return 0;
-    }
-
-    for (i = 0; i < ad_len; i++) {
-
-        if (param.len + ad[i].data_len + 2 > 31) {
-            return -
-# 212 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-                   22
-# 212 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-                         ;
+        if (bt_mesh_scan_dev_found_cb) {
+            bt_mesh_scan_dev_found_cb((bt_mesh_addr_t *)&desc->addr, desc->rssi, desc->event_type, buf);
         }
-
-        param.data[param.len++] = ad[i].data_len + 1;
-        param.data[param.len++] = ad[i].type;
-
-        memcpy(&param.data[param.len], ad[i].data, ad[i].data_len);
-        param.len += ad[i].data_len;
-    }
-
-
-    if (hci_op == ((0x0008) | ((0x08) << 10))) {
-        do { tBTM_STATUS __status = (BTM_BleWriteAdvDataRaw(param.data, param.len)); if ((__status != BTM_SUCCESS) && (__status != BTM_CMD_STARTED)) { do {if ((2 >= 1) && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BLE_MESH", "\033[0;" "31" "m" "E" " (%d) %s: " "%s, Invalid status %d" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", __func__, __status); };} while(0); return -1; } } while(0);;
-    } else if (hci_op == ((0x0009) | ((0x08) << 10))) {
-        do { tBTM_STATUS __status = (BTM_BleWriteScanRspRaw(param.data, param.len)); if ((__status != BTM_SUCCESS) && (__status != BTM_CMD_STARTED)) { do {if ((2 >= 1) && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BLE_MESH", "\033[0;" "31" "m" "E" " (%d) %s: " "%s, Invalid status %d" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", __func__, __status); };} while(0); return -1; } } while(0);;
+        free((buf));
+        break;
+# 567 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
+    default:
+        break;
     }
 
     return 0;
-}
-
-static void start_adv_completed_cb(u8_t status)
-{
-
-
-
-
-
-}
-
-static 
-# 241 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-      _Bool 
-# 241 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-           valid_scan_param(const struct bt_mesh_scan_param *param)
-{
-    if (param->type != 0x00 &&
-            param->type != 0x01) {
-        return 
-# 245 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-              0
-# 245 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-                   ;
-    }
-
-    if (param->filter_dup != 0x00 &&
-            param->filter_dup != 0x01) {
-        return 
-# 250 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-              0
-# 250 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-                   ;
-    }
-
-    if (param->interval < 0x0004 || param->interval > 0x4000) {
-        return 
-# 254 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-              0
-# 254 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-                   ;
-    }
-
-    if (param->window < 0x0004 || param->window > 0x4000) {
-        return 
-# 258 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-              0
-# 258 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-                   ;
-    }
-
-    if (param->window > param->interval) {
-        return 
-# 262 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-              0
-# 262 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-                   ;
-    }
-
-    return 
-# 265 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-          1
-# 265 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-              ;
 }
 
 static int start_le_scan(u8_t scan_type, u16_t interval, u16_t window, u8_t filter_dup)
 {
-    UINT8 scan_fil_policy = 0x00;
-    UINT8 addr_type_own = 0x00;
-    tGATT_IF client_if = 0xFF;
 
-    do { tBTM_STATUS __status = (BTM_BleSetScanFilterParams(client_if, interval, window, scan_type, addr_type_own, filter_dup, scan_fil_policy, 
-# 274 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-   ((void *)0)
-# 274 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-   )); if ((__status != BTM_SUCCESS) && (__status != BTM_CMD_STARTED)) { do {if ((2 >= 1) && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BLE_MESH", "\033[0;" "31" "m" "E" " (%d) %s: " "%s, Invalid status %d" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", __func__, __status); };} while(0); return -1; } } while(0);
+    scan_param.filter_duplicates = filter_dup;
+    scan_param.itvl = interval;
+    scan_param.window = window;
 
-                                                                      ;
-
-
-    do { tBTM_STATUS __status = (BTM_BleScan(
-# 279 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-   1
-# 279 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-   , 0, bt_mesh_scan_results_cb, 
-# 279 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-   ((void *)0)
-# 279 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-   , 
-# 279 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-   ((void *)0)
-# 279 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-   )); if ((__status != BTM_SUCCESS) && (__status != BTM_CMD_STARTED)) { do {if ((2 >= 1) && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BLE_MESH", "\033[0;" "31" "m" "E" " (%d) %s: " "%s, Invalid status %d" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", __func__, __status); };} while(0); return -1; } } while(0);;
-# 289 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
+    if (scan_type == 0x00) {
+        scan_param.passive = 1;
+    } else {
+        scan_param.passive = 0;
+    }
+    ble_gap_disc((0x00), 
+# 586 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c" 3 4
+                                     (0x7fffffff)
+# 586 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
+                                                   , &scan_param, disc_cb, 
+# 586 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c" 3 4
+                                                                           ((void *)0)
+# 586 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
+                                                                               );
+# 596 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
     return 0;
 }
 
-static void bt_mesh_scan_result_callback(tBTA_DM_SEARCH_EVT event, tBTA_DM_SEARCH *p_data)
+static int set_ad(const struct bt_mesh_adv_data *ad, size_t ad_len, u8_t *buf, u8_t *buf_len)
 {
-    bt_mesh_addr_t addr = {0};
-    UINT8 adv_type;
-    UINT8 rssi;
+    int i;
 
-    do {if ((2 >= 4) && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BLE_MESH", "D" " (%d) %s: " "%s, event = %d" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", __func__, event); };} while(0);
+    for (i = 0; i < ad_len; i++) {
+        buf[(*buf_len)++] = ad[i].data_len + 1;
+        buf[(*buf_len)++] = ad[i].type;
 
-    if (event == 0) {
-
-        addr.type = p_data->inq_res.ble_addr_type;
-        memcpy(addr.val, p_data->inq_res.bd_addr, 0x06);
-        rssi = p_data->inq_res.rssi;
-        adv_type = p_data->inq_res.ble_evt_type;
-
-
-        struct net_buf_simple *buf = bt_mesh_alloc_buf(p_data->inq_res.adv_data_len);
-        if (!buf) {
-            do {if ((2 >= 1) && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BLE_MESH", "\033[0;" "31" "m" "E" " (%d) %s: " "%s, Failed to allocate memory" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", __func__); };} while(0);
-            return;
-        }
-        net_buf_simple_add_mem(buf, p_data->inq_res.p_eir, p_data->inq_res.adv_data_len);
-
-        if (bt_mesh_scan_dev_found_cb != 
-# 315 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-                                        ((void *)0)
-# 315 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-                                            ) {
-            bt_mesh_scan_dev_found_cb(&addr, rssi, adv_type, buf);
-        }
-        free((buf));
-    } else if (event == 1) {
-        do {if ((2 >= 3) && (((2) > (3) ? (2) : (3)) >= 3)) {esp_log_write(ESP_LOG_INFO, "BLE_MESH", "\033[0;" "32" "m" "I" " (%d) %s: " "%s, Scan completed, number of scan response %d" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", __func__, p_data->inq_cmpl.num_resps); };} while(0);
-    } else {
-        do {if ((2 >= 2) && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BLE_MESH", "\033[0;" "33" "m" "W" " (%d) %s: " "%s, Unexpected event 0x%x" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", __func__, event); };} while(0);
+        memcpy(&buf[*buf_len], ad[i].data,
+               ad[i].data_len);
+        *buf_len += ad[i].data_len;
     }
+
+    return 0;
 }
+# 763 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
+static int gap_event_cb(struct ble_gap_event *event, void *arg)
+{
+    return 0;
+}
+
 
 
 int bt_le_adv_start(const struct bt_mesh_adv_param *param,
                     const struct bt_mesh_adv_data *ad, size_t ad_len,
                     const struct bt_mesh_adv_data *sd, size_t sd_len)
 {
-    tBTA_START_ADV_CMPL_CBACK *p_start_adv_cb;
-    tBTM_BLE_ADV_CHNL_MAP channel_map;
-    tBLE_ADDR_TYPE addr_type_own;
-    tBLE_BD_ADDR p_dir_bda = {0};
-    tBTM_BLE_AFP adv_fil_pol;
-    UINT8 adv_type;
+
+
+
+
+
+    uint8_t buf[(31)];
+    uint8_t buf_len = 0;
     int err;
+    struct ble_gap_adv_params adv_params;
 
-
-
-
-
-
-
-    if (!valid_adv_param(param)) {
-        do {if ((2 >= 1) && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BLE_MESH", "\033[0;" "31" "m" "E" " (%d) %s: " "%s, Invalid adv parameters" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", __func__); };} while(0);
-        return -
-# 347 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-               22
-# 347 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-                     ;
-    }
-
-    err = set_adv_data(((0x0008) | ((0x08) << 10)), ad, ad_len);
+    err = set_ad(ad, ad_len, buf, &buf_len);
     if (err) {
-        do {if ((2 >= 1) && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BLE_MESH", "\033[0;" "31" "m" "E" " (%d) %s: " "%s, Failed to set adv data" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", __func__); };} while(0);
+        do {if ((2 >= 1) && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BLE_MESH", "\033[0;" "31" "m" "E" " (%d) %s: " "set_ad failed: err %d" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", err); };} while(0);
         return err;
     }
-# 365 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
+
+    err = ble_gap_adv_set_data(buf, buf_len);
+    if (err != 0) {
+        do {if ((2 >= 1) && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BLE_MESH", "\033[0;" "31" "m" "E" " (%d) %s: " "Advertising set failed: err %d" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", err); };} while(0);
+        return err;
+    }
+
     if (sd && (param->options & BLE_MESH_ADV_OPT_CONNECTABLE)) {
-        err = set_adv_data(((0x0009) | ((0x08) << 10)), sd, sd_len);
+        buf_len = 0;
+
+        err = set_ad(sd, sd_len, buf, &buf_len);
         if (err) {
-            do {if ((2 >= 1) && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BLE_MESH", "\033[0;" "31" "m" "E" " (%d) %s: " "%s, Failed to set scan rsp data" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", __func__); };} while(0);
+            do {if ((2 >= 1) && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BLE_MESH", "\033[0;" "31" "m" "E" " (%d) %s: " "set_ad failed: err %d" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", err); };} while(0);
+            return err;
+        }
+
+        err = ble_gap_adv_rsp_set_data(buf, buf_len);
+        if (err != 0) {
+            do {if ((2 >= 1) && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BLE_MESH", "\033[0;" "31" "m" "E" " (%d) %s: " "Scan rsp failed: err %d" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", err); };} while(0);
             return err;
         }
     }
 
+    memset(&adv_params, 0, sizeof adv_params);
+    adv_params.itvl_min = param->interval_min;
+    adv_params.itvl_max = param->interval_max;
+
     if (param->options & BLE_MESH_ADV_OPT_CONNECTABLE) {
-        adv_type = 0x00;
+        adv_params.conn_mode = 2;
+        adv_params.disc_mode = 2;
     } else if (sd != 
-# 375 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
+# 819 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c" 3 4
                     ((void *)0)
-# 375 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
+# 819 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
                         ) {
-        adv_type = 0x02;
+        adv_params.conn_mode = 0;
+        adv_params.disc_mode = 2;
     } else {
-        adv_type = 0x03;
+        adv_params.conn_mode = 0;
+        adv_params.disc_mode = 0;
     }
-    addr_type_own = 0x00;
-    channel_map = (1UL << (0)) | (1UL << (1)) | (1UL << (2));
-    adv_fil_pol = 0x00;
-    p_start_adv_cb = start_adv_completed_cb;
 
-
-    do { tBTM_STATUS __status = (BTM_BleSetAdvParamsAll(param->interval_min, param->interval_max, adv_type, addr_type_own, &p_dir_bda, channel_map, adv_fil_pol, p_start_adv_cb)); if ((__status != BTM_SUCCESS) && (__status != BTM_CMD_STARTED)) { do {if ((2 >= 1) && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BLE_MESH", "\033[0;" "31" "m" "E" " (%d) %s: " "%s, Invalid status %d" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", __func__, __status); };} while(0); return -1; } } while(0);
-
-
-                                                                         ;
-    do { tBTM_STATUS __status = (BTM_BleStartAdv()); if ((__status != BTM_SUCCESS) && (__status != BTM_CMD_STARTED)) { do {if ((2 >= 1) && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BLE_MESH", "\033[0;" "31" "m" "E" " (%d) %s: " "%s, Invalid status %d" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", __func__, __status); };} while(0); return -1; } } while(0);;
-# 400 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
+    err = ble_gap_adv_start((0x00), 
+# 827 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c" 3 4
+                                                ((void *)0)
+# 827 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
+                                                    , 
+# 827 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c" 3 4
+                                                      (0x7fffffff)
+# 827 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
+                                                                    , &adv_params,
+                            gap_event_cb, 
+# 828 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c" 3 4
+                                         ((void *)0)
+# 828 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
+                                             );
+    if (err) {
+        do {if ((2 >= 1) && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BLE_MESH", "\033[0;" "31" "m" "E" " (%d) %s: " "Advertising start failed: err %d" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", err); };} while(0);
+        return err;
+    }
+# 842 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
     return 0;
 }
 
@@ -14858,16 +12043,7 @@ int bt_le_adv_stop(void)
 
 
 
-
-    do { tBTM_STATUS __status = (BTM_BleBroadcast(
-# 412 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-   0
-# 412 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-   , 
-# 412 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-   ((void *)0)
-# 412 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-   )); if ((__status != BTM_SUCCESS) && (__status != BTM_CMD_STARTED)) { do {if ((2 >= 1) && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BLE_MESH", "\033[0;" "31" "m" "E" " (%d) %s: " "%s, Invalid status %d" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", __func__, __status); };} while(0); return -1; } } while(0);;
+    ble_gap_adv_stop();
 
 
 
@@ -14879,21 +12055,7 @@ int bt_le_adv_stop(void)
 int bt_le_scan_start(const struct bt_mesh_scan_param *param, bt_mesh_scan_cb_t cb)
 {
     int err;
-
-
-
-
-
-
-
-    if (!valid_scan_param(param)) {
-        return -
-# 432 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-               22
-# 432 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-                     ;
-    }
-# 443 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
+# 880 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
     err = start_le_scan(param->type, param->interval, param->window, param->filter_dup);
     if (err) {
         return err;
@@ -14915,33 +12077,17 @@ int bt_le_scan_stop(void)
 
 
 
-    do { tBTM_STATUS __status = (BTM_BleScan(
-# 464 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-   0
-# 464 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-   , 0, 
-# 464 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-   ((void *)0)
-# 464 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-   , 
-# 464 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-   ((void *)0)
-# 464 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-   , 
-# 464 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-   ((void *)0)
-# 464 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-   )); if ((__status != BTM_SUCCESS) && (__status != BTM_CMD_STARTED)) { do {if ((2 >= 1) && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BLE_MESH", "\033[0;" "31" "m" "E" " (%d) %s: " "%s, Invalid status %d" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", __func__, __status); };} while(0); return -1; } } while(0);;
+    ble_gap_disc_cancel();
 
 
     bt_mesh_scan_dev_found_cb = 
-# 467 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
+# 904 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c" 3 4
                                ((void *)0)
-# 467 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
+# 904 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
                                    ;
     return 0;
 }
-# 1624 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
+# 1451 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
 struct bt_mesh_conn *bt_mesh_conn_ref(struct bt_mesh_conn *conn)
 {
     bt_mesh_atomic_inc(&conn->ref);
@@ -14957,20 +12103,34 @@ void bt_mesh_conn_unref(struct bt_mesh_conn *conn)
 
     do {if ((2 >= 4) && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BLE_MESH", "D" " (%d) %s: " "handle %u ref %u" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", conn->handle, bt_mesh_atomic_get(&conn->ref)); };} while(0);
 }
+# 1552 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
+void gatt_register_cb(struct ble_gatt_register_ctxt *ctxt,
+                      void *arg )
+{
+    if (ctxt->op == 1) {
+        if (ble_uuid_cmp(ctxt->svc.svc_def->uuid, ((ble_uuid_t *) (&(ble_uuid16_t) { .u.type = BLE_UUID_TYPE_16, .value = (0x1828), }))) == 0) {
+            proxy_svc_start_handle = ctxt->svc.handle;
+        } else if (ble_uuid_cmp(ctxt->svc.svc_def->uuid, ((ble_uuid_t *) (&(ble_uuid16_t) { .u.type = BLE_UUID_TYPE_16, .value = (0x1827), }))) == 0) {
+            prov_svc_start_handle = ctxt->svc.handle;
+        }
+    }
+}
 
 void bt_mesh_gatt_init(void)
 {
-    tBT_UUID app_uuid = {16, {0}};
+    ble_att_set_preferred_mtu(23);
 
-    BTA_GATT_SetLocalMTU(23);
-# 1662 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
+    ble_hs_cfg.gatts_register_cb = gatt_register_cb;
+# 1595 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
 }
+
+void ble_sm_alg_ecc_init(void);
 
 void bt_mesh_adapt_init(void)
 {
     do {if ((2 >= 4) && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BLE_MESH", "D" " (%d) %s: " "%s" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", __func__); };} while(0);
 
-    p_256_init_curve(8);
+    ble_sm_alg_ecc_init();
 }
 
 int bt_mesh_rand(void *buf, size_t len)
@@ -14978,15 +12138,15 @@ int bt_mesh_rand(void *buf, size_t len)
     int i;
 
     if (buf == 
-# 1675 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
+# 1610 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c" 3 4
               ((void *)0) 
-# 1675 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
+# 1610 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
                    || len == 0) {
         do {if ((2 >= 1) && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BLE_MESH", "\033[0;" "31" "m" "E" " (%d) %s: " "%s, Invalid parameter" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", __func__); };} while(0);
         return -
-# 1677 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
+# 1612 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c" 3 4
                11
-# 1677 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
+# 1612 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
                      ;
     }
 
@@ -15004,20 +12164,27 @@ void bt_mesh_set_private_key(const u8_t pri_key[32])
     memcpy(bt_mesh_private_key, pri_key, 32);
 }
 
+int ble_sm_alg_gen_key_pair(uint8_t *pub, uint8_t *priv);
+
 const u8_t *bt_mesh_pub_key_get(void)
 {
-    BT_OCTET32 private_key = {0};
-    Point public_key = {0};
+    uint8_t pri_key[32] = {0};
+
 
     if (bt_mesh_atomic_test_bit(bt_mesh_dev.flags, BLE_MESH_DEV_HAS_PUB_KEY)) {
         return bt_mesh_public_key;
     }
-# 1717 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-    memcpy(private_key, bt_mesh_private_key, 32);
-    ECC_PointMult_Bin_NAF(&public_key, &(curve_p256.G), (DWORD *)private_key, 8);
-
-    memcpy(bt_mesh_public_key, public_key.x, 32);
-    memcpy(bt_mesh_public_key + 32, public_key.y, 32);
+# 1651 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
+    int rc = ble_sm_alg_gen_key_pair(bt_mesh_public_key, pri_key);
+    if (rc != 0) {
+        do {if ((2 >= 1) && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BLE_MESH", "\033[0;" "31" "m" "E" " (%d) %s: " "%s, Failed to generate the key pair" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", __func__); };} while(0);
+        return 
+# 1654 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c" 3 4
+              ((void *)0)
+# 1654 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
+                  ;
+    }
+    memcpy(bt_mesh_private_key, pri_key, 32);
 
     bt_mesh_atomic_set_bit(bt_mesh_dev.flags, BLE_MESH_DEV_HAS_PUB_KEY);
     do {if ((2 >= 4) && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BLE_MESH", "D" " (%d) %s: " "gen the bt_mesh_public_key:%s" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", bt_hex(bt_mesh_public_key, sizeof(bt_mesh_public_key))); };} while(0);
@@ -15026,50 +12193,76 @@ const u8_t *bt_mesh_pub_key_get(void)
 }
 
 
-# 1729 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
+# 1664 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c" 3 4
 _Bool 
-# 1729 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
+# 1664 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
     bt_mesh_check_public_key(const u8_t key[64])
 {
-    struct p256_pub_key {
-        u8_t x[32];
-        u8_t y[32];
-    } check = {0};
+    struct mbedtls_ecp_point pt = {0};
+    mbedtls_ecp_group grp = {0};
+    
+# 1668 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c" 3 4
+   _Bool 
+# 1668 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
+        rc = 
+# 1668 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c" 3 4
+             0
+# 1668 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
+                  ;
 
-    sys_memcpy_swap(check.x, key, 32);
-    sys_memcpy_swap(check.y, key + 32, 32);
+    uint8_t pub[65] = {0};
 
-    return ECC_CheckPointIsInElliCur_P256((Point *)&check);
+    pub[0] = 0x04;
+    memcpy(&pub[1], key, 64);
+
+
+    mbedtls_ecp_point_init(&pt);
+    mbedtls_ecp_group_init(&grp);
+
+
+    if (mbedtls_ecp_group_load(&grp, MBEDTLS_ECP_DP_SECP256R1) != 0) {
+        goto exit;
+    }
+
+    if (mbedtls_ecp_point_read_binary(&grp, &pt, pub, 65) != 0) {
+        goto exit;
+    }
+
+    if (mbedtls_ecp_check_pubkey(&grp, &pt) != 0) {
+        goto exit;
+    }
+
+    rc = 
+# 1692 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c" 3 4
+        1
+# 1692 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
+            ;
+
+exit:
+    mbedtls_ecp_point_free(&pt);
+    mbedtls_ecp_group_free(&grp);
+    return rc;
+
 }
+
+int ble_sm_alg_gen_dhkey(uint8_t *peer_pub_key_x, uint8_t *peer_pub_key_y,
+                         uint8_t *our_priv_key, uint8_t *out_dhkey);
 
 int bt_mesh_dh_key_gen(const u8_t remote_pk[64], bt_mesh_dh_key_cb_t cb, const u8_t idx)
 {
-    BT_OCTET32 private_key = {0};
-    Point peer_pub_key = {0};
-    Point new_pub_key = {0};
+    uint8_t dhkey[32];
 
     do {if ((2 >= 4) && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BLE_MESH", "D" " (%d) %s: " "private key = %s" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", bt_hex(bt_mesh_private_key, 32)); };} while(0);
 
-    memcpy(private_key, bt_mesh_private_key, 32);
-    memcpy(peer_pub_key.x, remote_pk, 32);
-    memcpy(peer_pub_key.y, &remote_pk[32], 32);
-
-    do {if ((2 >= 4) && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BLE_MESH", "D" " (%d) %s: " "remote public key x = %s" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", bt_hex(peer_pub_key.x, 32)); };} while(0);
-    do {if ((2 >= 4) && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BLE_MESH", "D" " (%d) %s: " "remote public key y = %s" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", bt_hex(peer_pub_key.y, 32)); };} while(0);
-
-    ECC_PointMult_Bin_NAF(&new_pub_key, &peer_pub_key, (DWORD *)private_key, 8);
-
-    do {if ((2 >= 4) && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BLE_MESH", "D" " (%d) %s: " "new public key x = %s" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", bt_hex(new_pub_key.x, 32)); };} while(0);
-    do {if ((2 >= 4) && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BLE_MESH", "D" " (%d) %s: " "new public key y = %s" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", bt_hex(new_pub_key.y, 32)); };} while(0);
+    ble_sm_alg_gen_dhkey((uint8_t *)&remote_pk[0], (uint8_t *)&remote_pk[32], bt_mesh_private_key, dhkey);
 
     if (cb != 
-# 1762 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
+# 1712 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c" 3 4
              ((void *)0)
-# 1762 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
+# 1712 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
                  ) {
-        cb((const u8_t *)new_pub_key.x, idx);
+        cb((const u8_t *)dhkey, idx);
     }
-
     return 0;
 }
 
@@ -15118,14 +12311,14 @@ int bt_mesh_encrypt_le(const u8_t key[16], const u8_t plaintext[16],
     do {if ((2 >= 4) && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BLE_MESH", "D" " (%d) %s: " "key %s plaintext %s" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", bt_hex(key, 16), bt_hex(plaintext, 16)); };} while(0);
 
     ecb_encrypt(key, plaintext, enc_data, 
-# 1813 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
+# 1762 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c" 3 4
                                          ((void *)0)
-# 1813 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
+# 1762 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
                                              );
 
     do {if ((2 >= 4) && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BLE_MESH", "D" " (%d) %s: " "enc_data %s" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", bt_hex(enc_data, 16)); };} while(0);
     return 0;
-# 1841 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
+# 1790 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
 }
 
 int bt_mesh_encrypt_be(const u8_t key[16], const u8_t plaintext[16],
@@ -15139,44 +12332,5 @@ int bt_mesh_encrypt_be(const u8_t key[16], const u8_t plaintext[16],
     do {if ((2 >= 4) && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BLE_MESH", "D" " (%d) %s: " "enc_data %s" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", bt_hex(enc_data, 16)); };} while(0);
 
     return 0;
-# 1871 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-}
-
-
-int bt_mesh_update_exceptional_list(u8_t sub_code, u8_t type, void *info)
-{
-    BD_ADDR value = {0};
-
-    if ((sub_code > BLE_MESH_EXCEP_LIST_CLEAN) ||
-            (type > BLE_MESH_EXCEP_INFO_MESH_PROXY_ADV)) {
-        do {if ((2 >= 1) && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BLE_MESH", "\033[0;" "31" "m" "E" " (%d) %s: " "%s, Invalid parameter" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", __func__); };} while(0);
-        return -
-# 1881 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-               22
-# 1881 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-                     ;
-    }
-
-    if (type == BLE_MESH_EXCEP_INFO_MESH_LINK_ID) {
-        if (!info) {
-            do {if ((2 >= 1) && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BLE_MESH", "\033[0;" "31" "m" "E" " (%d) %s: " "%s, NULL Provisioning Link ID" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", __func__); };} while(0);
-            return -
-# 1887 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-                   22
-# 1887 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-                         ;
-        }
-        memcpy(value, info, sizeof(u32_t));
-    }
-
-    do {if ((2 >= 4) && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BLE_MESH", "D" " (%d) %s: " "%s, %s type 0x%x" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", __func__, sub_code ? "Remove" : "Add", type); };} while(0);
-
-
-    do { tBTM_STATUS __status = (BTM_UpdateBleDuplicateExceptionalList(sub_code, type, value, 
-# 1895 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c" 3 4
-   ((void *)0)
-# 1895 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/bluedroid_host/mesh_bearer_adapt.c"
-   )); if ((__status != BTM_SUCCESS) && (__status != BTM_CMD_STARTED)) { do {if ((2 >= 1) && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BLE_MESH", "\033[0;" "31" "m" "E" " (%d) %s: " "%s, Invalid status %d" "\033[0m" "\n", esp_log_timestamp(), "BLE_MESH", __func__, __status); };} while(0); return -1; } } while(0);;
-
-    return 0;
+# 1820 "/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/nimble_host/mesh_bearer_adapt.c"
 }

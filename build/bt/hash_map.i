@@ -988,36 +988,6 @@ __attribute__((__noreturn__)) void
 
 
 # 21 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h"
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 1
-# 17 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h"
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
-       
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 1 3 4
-# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
-void __assert (const char *, int, const char *)
-     __attribute__ ((__noreturn__));
-void __assert_func (const char *, int, const char *, const char *)
-     __attribute__ ((__noreturn__));
-# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-# 18 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 2
-# 21 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-
-
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h"
-       
-# 24 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-# 26 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
 # 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
 
 # 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
@@ -1601,32 +1571,12 @@ hash_map_t *hash_map_new_internal(
     data_free_fn data_fn,
     key_equality_fn equality_fn)
 {
-    
+    do { if (!(hash_fn != 
 # 57 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ((
+   ((void *)0)
 # 57 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-   hash_fn != 
-# 57 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c", 57, __func__, 
-# 57 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-   "hash_fn != NULL"
-# 57 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ))
-# 57 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-                          ;
-    
-# 58 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ((
-# 58 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-   num_bucket > 0
-# 58 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c", 58, __func__, 
-# 58 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-   "num_bucket > 0"
-# 58 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ))
-# 58 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-                         ;
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c", 57); }; } while (0);
+    do { if (!(num_bucket > 0)) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c", 58); }; } while (0);
     hash_map_t *hash_map = calloc(1, (sizeof(hash_map_t)));
     if (hash_map == 
 # 60 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
@@ -1692,19 +1642,11 @@ _Bool
 # 115 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
     hash_map_has_key(const hash_map_t *hash_map, const void *key)
 {
-    
+    do { if (!(hash_map != 
 # 117 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ((
+   ((void *)0)
 # 117 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-   hash_map != 
-# 117 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c", 117, __func__, 
-# 117 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-   "hash_map != NULL"
-# 117 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ))
-# 117 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-                           ;
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c", 117); }; } while (0);
 
     hash_index_t hash_key = hash_map->hash_fn(key) % hash_map->num_bucket;
     list_t *hash_bucket_list = hash_map->bucket[hash_key].list;
@@ -1723,32 +1665,16 @@ _Bool
 # 126 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
     hash_map_set(hash_map_t *hash_map, const void *key, void *data)
 {
-    
+    do { if (!(hash_map != 
 # 128 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ((
+   ((void *)0)
 # 128 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-   hash_map != 
-# 128 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c", 128, __func__, 
-# 128 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-   "hash_map != NULL"
-# 128 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ))
-# 128 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-                           ;
-    
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c", 128); }; } while (0);
+    do { if (!(data != 
 # 129 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ((
+   ((void *)0)
 # 129 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-   data != 
-# 129 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c", 129, __func__, 
-# 129 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-   "data != NULL"
-# 129 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ))
-# 129 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-                       ;
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c", 129); }; } while (0);
 
     hash_index_t hash_key = hash_map->hash_fn(key) % hash_map->num_bucket;
 
@@ -1781,19 +1707,11 @@ _Bool
        _Bool 
 # 145 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
             rc = list_remove(hash_bucket_list, hash_map_entry);
-        
+        do { if (!(rc == 
 # 146 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-       ((
+       1
 # 146 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-       rc == 
-# 146 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-       1) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c", 146, __func__, 
-# 146 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-       "rc == true"
-# 146 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-       ))
-# 146 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-                         ;
+       )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c", 146); }; } while (0);
     } else {
         hash_map->hash_size++;
     }
@@ -1823,19 +1741,11 @@ _Bool
 # 162 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
     hash_map_erase(hash_map_t *hash_map, const void *key)
 {
-    
+    do { if (!(hash_map != 
 # 164 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ((
+   ((void *)0)
 # 164 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-   hash_map != 
-# 164 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c", 164, __func__, 
-# 164 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-   "hash_map != NULL"
-# 164 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ))
-# 164 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-                           ;
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c", 164); }; } while (0);
 
     hash_index_t hash_key = hash_map->hash_fn(key) % hash_map->num_bucket;
     list_t *hash_bucket_list = hash_map->bucket[hash_key].list;
@@ -1873,19 +1783,11 @@ _Bool
 
 void *hash_map_get(const hash_map_t *hash_map, const void *key)
 {
-    
+    do { if (!(hash_map != 
 # 186 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ((
+   ((void *)0)
 # 186 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-   hash_map != 
-# 186 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c", 186, __func__, 
-# 186 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-   "hash_map != NULL"
-# 186 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ))
-# 186 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-                           ;
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c", 186); }; } while (0);
 
     hash_index_t hash_key = hash_map->hash_fn(key) % hash_map->num_bucket;
     list_t *hash_bucket_list = hash_map->bucket[hash_key].list;
@@ -1908,19 +1810,11 @@ void *hash_map_get(const hash_map_t *hash_map, const void *key)
 
 void hash_map_clear(hash_map_t *hash_map)
 {
-    
+    do { if (!(hash_map != 
 # 201 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ((
+   ((void *)0)
 # 201 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-   hash_map != 
-# 201 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c", 201, __func__, 
-# 201 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-   "hash_map != NULL"
-# 201 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ))
-# 201 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-                           ;
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c", 201); }; } while (0);
 
     for (hash_index_t i = 0; i < hash_map->num_bucket; i++) {
         if (hash_map->bucket[i].list == 
@@ -1941,32 +1835,16 @@ void hash_map_clear(hash_map_t *hash_map)
 
 void hash_map_foreach(hash_map_t *hash_map, hash_map_iter_cb callback, void *context)
 {
-    
+    do { if (!(hash_map != 
 # 214 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ((
+   ((void *)0)
 # 214 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-   hash_map != 
-# 214 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c", 214, __func__, 
-# 214 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-   "hash_map != NULL"
-# 214 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ))
-# 214 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-                           ;
-    
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c", 214); }; } while (0);
+    do { if (!(callback != 
 # 215 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ((
+   ((void *)0)
 # 215 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-   callback != 
-# 215 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c", 215, __func__, 
-# 215 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-   "callback != NULL"
-# 215 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ))
-# 215 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-                           ;
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c", 215); }; } while (0);
 
     for (hash_index_t i = 0; i < hash_map->num_bucket; ++i) {
         if (hash_map->bucket[i].list == 
@@ -1989,19 +1867,11 @@ void hash_map_foreach(hash_map_t *hash_map, hash_map_iter_cb callback, void *con
 
 static void bucket_free_(void *data)
 {
-    
+    do { if (!(data != 
 # 234 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ((
+   ((void *)0)
 # 234 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-   data != 
-# 234 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c", 234, __func__, 
-# 234 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-   "data != NULL"
-# 234 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c" 3 4
-   ))
-# 234 "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c"
-                       ;
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/hash_map.c", 234); }; } while (0);
     hash_map_entry_t *hash_map_entry = (hash_map_entry_t *)data;
     const hash_map_t *hash_map = hash_map_entry->hash_map;
 

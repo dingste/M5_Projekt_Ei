@@ -1955,18 +1955,6 @@ void bootloader_sha256_finish(bootloader_sha256_handle_t handle, uint8_t *digest
 
 
 # 1 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 1
-# 25 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h"
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 1
-# 21 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-
-
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h"
-       
-# 24 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-# 26 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
 # 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
 typedef enum {
     ETS_OK = 0,
@@ -2369,6 +2357,15 @@ typedef struct {
 # 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/efuse_reg.h" 1
 # 18 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/efuse_reg.h"
 # 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 1
+# 20 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h"
+# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 1
+# 21 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
+
+
+# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h" 1
+# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h"
+       
+# 24 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
 # 19 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/efuse_reg.h" 2
 # 16 "/home/dieter/Development/esp-idf/components/soc/include/soc/efuse_periph.h" 2
 # 19 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_secure_boot.h" 2

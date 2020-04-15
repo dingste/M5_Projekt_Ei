@@ -1,0 +1,5 @@
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/l2cap/l2cap_client.c"
+# 1 "/home/dieter/Development/M5_Projekt_Ei/build/bt//"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/l2cap/l2cap_client.c"

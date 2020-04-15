@@ -4,15 +4,14 @@ src/bootloader_utility.o: \
  /home/dieter/Development/M5_Projekt_Ei/build/include/sdkconfig.h \
  /home/dieter/Development/esp-idf/components/log/include/esp_log.h \
  /home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
- /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h \
- /home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h \
- /home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h \
- /home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/dieter/Development/esp-idf/components/log/include/esp_log_internal.h \
  /home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/cache.h \
  /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/dport_access.h \
  /home/dieter/Development/esp-idf/components/esp32/include/esp32/dport_access.h \
  /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h \
+ /home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h \
+ /home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
  /home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime.h \
  /home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h \
@@ -26,10 +25,10 @@ src/bootloader_utility.o: \
  /home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h \
  /home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/efuse.h \
  /home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h \
- /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/spi_reg.h \
  /home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/crc.h \
  /home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/rtc.h \
  /home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
+ /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h \
  /home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h \
  /home/dieter/Development/esp-idf/components/esp_common/include/esp_types.h \
@@ -39,8 +38,6 @@ src/bootloader_utility.o: \
  /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/uart_struct.h \
  /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/uart_channel.h \
  /home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h \
- /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_reg.h \
- /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
  /home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/secure_boot.h \
  /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/cpu.h \
  /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/rtc.h \
@@ -49,11 +46,13 @@ src/bootloader_utility.o: \
  /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/rtc_io_struct.h \
  /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/rtc_cntl_struct.h \
  /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/rtc_gpio_channel.h \
+ /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
  /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
  /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/dport_access.h \
  /home/dieter/Development/esp-idf/components/soc/include/soc/gpio_periph.h \
  /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
  /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_struct.h \
+ /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_reg.h \
  /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  /home/dieter/Development/esp-idf/components/soc/include/soc/efuse_periph.h \
  /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/efuse_reg.h \
@@ -85,14 +84,6 @@ src/bootloader_utility.o: \
 
 /home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
 
-/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h:
-
-/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h:
-
-/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h:
-
-/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h:
-
 /home/dieter/Development/esp-idf/components/log/include/esp_log_internal.h:
 
 /home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/cache.h:
@@ -102,6 +93,12 @@ src/bootloader_utility.o: \
 /home/dieter/Development/esp-idf/components/esp32/include/esp32/dport_access.h:
 
 /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h:
+
+/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h:
+
+/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h:
 
 /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/uart_reg.h:
 
@@ -129,13 +126,13 @@ src/bootloader_utility.o: \
 
 /home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h:
 
-/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/spi_reg.h:
-
 /home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/crc.h:
 
 /home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/rtc.h:
 
 /home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
+
+/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h:
 
@@ -155,10 +152,6 @@ src/bootloader_utility.o: \
 
 /home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h:
 
-/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_reg.h:
-
-/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
-
 /home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/secure_boot.h:
 
 /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/cpu.h:
@@ -175,6 +168,8 @@ src/bootloader_utility.o: \
 
 /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/rtc_gpio_channel.h:
 
+/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
+
 /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/dport_reg.h:
 
 /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/dport_access.h:
@@ -184,6 +179,8 @@ src/bootloader_utility.o: \
 /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h:
 
 /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_struct.h:
+
+/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_reg.h:
 
 /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h:
 

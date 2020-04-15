@@ -1919,18 +1919,6 @@ void _esp_error_check_failed_without_abort(esp_err_t rc, const char *file, int l
 
 
 # 1 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 1
-# 25 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h"
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 1
-# 21 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-
-
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h"
-       
-# 24 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-# 26 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
 # 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
 typedef enum {
     ETS_OK = 0,
@@ -2105,17 +2093,6 @@ void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint1
 # 21 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h"
 # 1 "/home/dieter/Development/esp-idf/components/xtensa/include/esp_attr.h" 1
 # 22 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h" 2
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_reg.h" 1
-# 17 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_reg.h"
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 1
-# 18 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_reg.h" 2
-# 27 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_pins.h" 1
-# 28 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h" 2
 # 56 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h"
 typedef enum {
     GPIO_PIN_INTR_DISABLE = 0,
@@ -2185,9 +2162,6 @@ void gpio_pad_unhold(uint8_t gpio_num);
 void gpio_pad_hold(uint8_t gpio_num);
 # 21 "/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config_esp32.c" 2
 # 1 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h" 1
-# 26 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/spi_reg.h" 1
-# 27 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h" 2
 # 132 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
 typedef enum {
     ESP_ROM_SPIFLASH_QIO_MODE = 0,
@@ -2302,8 +2276,21 @@ unsigned char esp_crc8(unsigned char const *p, unsigned int len);
 # 15 "/home/dieter/Development/esp-idf/components/soc/include/soc/gpio_periph.h"
        
 
-
+# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_pins.h" 1
+# 18 "/home/dieter/Development/esp-idf/components/soc/include/soc/gpio_periph.h" 2
 # 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h" 1
+# 17 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h"
+# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 1
+# 20 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h"
+# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 1
+# 21 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
+
+
+# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h" 1
+# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h"
+       
+# 24 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
+# 18 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h" 2
 # 19 "/home/dieter/Development/esp-idf/components/soc/include/soc/gpio_periph.h" 2
 # 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_struct.h" 1
 # 23 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
@@ -2496,7 +2483,8 @@ typedef volatile struct gpio_dev_s {
 } gpio_dev_t;
 extern gpio_dev_t GPIO;
 # 20 "/home/dieter/Development/esp-idf/components/soc/include/soc/gpio_periph.h" 2
-
+# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_reg.h" 1
+# 21 "/home/dieter/Development/esp-idf/components/soc/include/soc/gpio_periph.h" 2
 # 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h" 1
 # 22 "/home/dieter/Development/esp-idf/components/soc/include/soc/gpio_periph.h" 2
 
@@ -2509,7 +2497,8 @@ extern const uint32_t GPIO_PIN_MUX_REG[40];
 # 24 "/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config_esp32.c" 2
 # 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/efuse_reg.h" 1
 # 25 "/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config_esp32.c" 2
-
+# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/spi_reg.h" 1
+# 26 "/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config_esp32.c" 2
 # 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/spi_caps.h" 1
 # 15 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/spi_caps.h"
        

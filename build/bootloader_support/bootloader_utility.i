@@ -1174,36 +1174,6 @@ __attribute__((__noreturn__)) void
 
 
 # 21 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h"
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 1
-# 17 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h"
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
-       
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 1 3 4
-# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
-void __assert (const char *, int, const char *)
-     __attribute__ ((__noreturn__));
-void __assert_func (const char *, int, const char *, const char *)
-     __attribute__ ((__noreturn__));
-# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-# 18 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 2
-# 21 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-
-
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h"
-       
-# 24 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-# 26 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
 # 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
 
 # 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
@@ -1397,6 +1367,32 @@ uint32_t esp_dport_access_sequence_reg_read(uint32_t reg);
 void esp_dport_access_int_abort(void);
 # 21 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/dport_access.h" 2
 # 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 1
+# 20 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h"
+# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 1
+# 17 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h"
+# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
+# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
+       
+
+
+
+# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 1 3 4
+# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
+
+# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
+void __assert (const char *, int, const char *)
+     __attribute__ ((__noreturn__));
+void __assert_func (const char *, int, const char *, const char *)
+     __attribute__ ((__noreturn__));
+# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
+# 18 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 2
+# 21 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
+
+
+# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h" 1
+# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h"
+       
+# 24 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
 # 22 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/dport_access.h" 2
 # 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/uart_reg.h" 1
 # 23 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/dport_access.h" 2
@@ -1405,6 +1401,8 @@ void esp_dport_access_int_abort(void);
 # 1 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h" 1
 # 41 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h"
 # 1 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h" 1
+# 148 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
+
 # 148 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
 extern const unsigned int Xthal_rev_no;
 
@@ -2263,9 +2261,6 @@ unsigned char esp_crc8(unsigned char const *p, unsigned int len);
 # 25 "/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_utility.c" 2
 
 # 1 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h" 1
-# 26 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/spi_reg.h" 1
-# 27 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h" 2
 # 132 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
 typedef enum {
     ESP_ROM_SPIFLASH_QIO_MODE = 0,
@@ -2386,7 +2381,8 @@ uint8_t crc8_be(uint8_t crc, uint8_t const *buf, uint32_t len);
 
 
 
-
+# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 1
+# 24 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/rtc.h" 2
 # 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h" 1
 # 25 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/rtc.h" 2
 # 77 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/rtc.h"
@@ -3018,11 +3014,6 @@ STATUS RcvMsg(uint8_t *pData, uint16_t MaxDataLen, uint8_t is_sync);
 extern UartDevice UartDev;
 # 30 "/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_utility.c" 2
 # 1 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h" 1
-# 26 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h"
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_reg.h" 1
-# 27 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_pins.h" 1
-# 28 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h" 2
 # 56 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h"
 typedef enum {
     GPIO_PIN_INTR_DISABLE = 0,
@@ -4023,6 +4014,8 @@ extern rtc_cntl_dev_t RTCCNTL;
 # 21 "/home/dieter/Development/esp-idf/components/soc/include/soc/rtc_periph.h" 2
 # 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/rtc_gpio_channel.h" 1
 # 22 "/home/dieter/Development/esp-idf/components/soc/include/soc/rtc_periph.h" 2
+# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_pins.h" 1
+# 23 "/home/dieter/Development/esp-idf/components/soc/include/soc/rtc_periph.h" 2
 # 35 "/home/dieter/Development/esp-idf/components/soc/include/soc/rtc_periph.h"
 typedef struct {
     uint32_t reg;
@@ -4558,7 +4551,8 @@ typedef volatile struct gpio_dev_s {
 } gpio_dev_t;
 extern gpio_dev_t GPIO;
 # 20 "/home/dieter/Development/esp-idf/components/soc/include/soc/gpio_periph.h" 2
-
+# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_reg.h" 1
+# 21 "/home/dieter/Development/esp-idf/components/soc/include/soc/gpio_periph.h" 2
 # 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h" 1
 # 22 "/home/dieter/Development/esp-idf/components/soc/include/soc/gpio_periph.h" 2
 

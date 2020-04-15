@@ -44,9 +44,8 @@ app_trace.o: \
  /home/dieter/Development/esp-idf/components/esp_common/include/esp_timer.h \
  /home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h \
  /home/dieter/Development/esp-idf/components/heap/include/multi_heap.h \
- /home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h \
- /home/dieter/Development/esp-idf/components/xtensa/include/esp_attr.h \
  /home/dieter/Development/esp-idf/components/freertos/include/freertos/portbenchmark.h \
+ /home/dieter/Development/esp-idf/components/xtensa/include/esp_attr.h \
  /home/dieter/Development/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h \
  /home/dieter/Development/esp-idf/components/esp_common/include/esp_idf_version.h \
@@ -141,11 +140,9 @@ app_trace.o: \
 
 /home/dieter/Development/esp-idf/components/heap/include/multi_heap.h:
 
-/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h:
+/home/dieter/Development/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
 /home/dieter/Development/esp-idf/components/xtensa/include/esp_attr.h:
-
-/home/dieter/Development/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
 /home/dieter/Development/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
 

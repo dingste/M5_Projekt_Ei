@@ -3,7 +3,7 @@
 .Ltext0:
 	.section	.text.base64_decode_block_signed,"ax",@progbits
 	.literal_position
-	.literal .LC0, decoding$1527
+	.literal .LC0, decoding$1525
 	.align	4
 	.type	base64_decode_block_signed, @function
 base64_decode_block_signed:
@@ -465,7 +465,7 @@ base64_init_decodestate:
 	.size	base64_init_decodestate, .-base64_init_decodestate
 	.section	.text.base64_decode_value,"ax",@progbits
 	.literal_position
-	.literal .LC1, decoding$1527
+	.literal .LC1, decoding$1525
 	.align	4
 	.global	base64_decode_value
 	.type	base64_decode_value, @function
@@ -614,10 +614,10 @@ base64_decode_chars:
 	retw.n
 .LFE6:
 	.size	base64_decode_chars, .-base64_decode_chars
-	.section	.rodata.decoding$1527,"a"
-	.type	decoding$1527, @object
-	.size	decoding$1527, 80
-decoding$1527:
+	.section	.rodata.decoding$1525,"a"
+	.type	decoding$1525, @object
+	.size	decoding$1525, 80
+decoding$1525:
 	.byte	62
 	.byte	-1
 	.byte	-1
@@ -776,8 +776,8 @@ decoding$1527:
 	.text
 .Letext0:
 	.file 2 "/home/dieter/Development/M5_Projekt_Ei/components/arduino/cores/esp32/libb64/cdecode.h"
-	.file 3 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h"
-	.file 4 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_stdint.h"
+	.file 3 "/home/dieter/Development/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
+	.file 4 "/home/dieter/Development/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
 	.4byte	0x4d2
@@ -859,7 +859,7 @@ decoding$1527:
 	.uleb128 0x5
 	.4byte	.LASF10
 	.byte	0x3
-	.byte	0x29
+	.byte	0x11
 	.byte	0x15
 	.4byte	0xa7
 	.uleb128 0x4
@@ -1343,7 +1343,7 @@ decoding$1527:
 	.4byte	0x4b9
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	decoding$1527
+	.4byte	decoding$1525
 	.uleb128 0x19
 	.4byte	.LASF31
 	.byte	0x1
@@ -2392,7 +2392,7 @@ decoding$1527:
 	.byte	0x48
 	.byte	0x26
 	.byte	0x3
-	.4byte	decoding$1527
+	.4byte	decoding$1525
 	.byte	0x22
 	.4byte	.LVL35
 	.4byte	.LVL36
@@ -2420,7 +2420,7 @@ decoding$1527:
 	.byte	0x48
 	.byte	0x26
 	.byte	0x3
-	.4byte	decoding$1527
+	.4byte	decoding$1525
 	.byte	0x22
 	.4byte	.LVL47
 	.4byte	.LVL48
@@ -2472,7 +2472,7 @@ decoding$1527:
 	.byte	0x48
 	.byte	0x26
 	.byte	0x3
-	.4byte	decoding$1527
+	.4byte	decoding$1525
 	.byte	0x22
 	.4byte	.LVL50
 	.4byte	.LVL51
@@ -2492,7 +2492,7 @@ decoding$1527:
 	.byte	0x48
 	.byte	0x26
 	.byte	0x3
-	.4byte	decoding$1527
+	.4byte	decoding$1525
 	.byte	0x22
 	.4byte	0
 	.4byte	0

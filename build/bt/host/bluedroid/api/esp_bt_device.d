@@ -12,9 +12,6 @@ host/bluedroid/api/esp_bt_device.o: \
  /home/dieter/Development/esp-idf/components/bt/common/include/bt_user_config.h \
  /home/dieter/Development/esp-idf/components/log/include/esp_log.h \
  /home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
- /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h \
- /home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h \
- /home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/dieter/Development/esp-idf/components/log/include/esp_log_internal.h \
  /home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bluedroid_user_config.h \
  /home/dieter/Development/esp-idf/components/bt/common/include/bt_user_config.h \
@@ -45,6 +42,7 @@ host/bluedroid/api/esp_bt_device.o: \
  /home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h \
  /home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h \
  /home/dieter/Development/esp-idf/components/xtensa/include/esp_attr.h \
+ /home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/dieter/Development/esp-idf/components/esp_common/include/esp_idf_version.h \
  /home/dieter/Development/esp-idf/components/lwip/include/apps/sntp/sntp.h \
  /home/dieter/Development/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h \
@@ -67,7 +65,6 @@ host/bluedroid/api/esp_bt_device.o: \
  /home/dieter/Development/esp-idf/components/esp_common/include/esp_timer.h \
  /home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h \
  /home/dieter/Development/esp-idf/components/heap/include/multi_heap.h \
- /home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h \
  /home/dieter/Development/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/dieter/Development/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h \
@@ -122,12 +119,6 @@ host/bluedroid/api/esp_bt_device.o: \
 /home/dieter/Development/esp-idf/components/log/include/esp_log.h:
 
 /home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
-
-/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h:
-
-/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h:
-
-/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h:
 
 /home/dieter/Development/esp-idf/components/log/include/esp_log_internal.h:
 
@@ -189,6 +180,8 @@ host/bluedroid/api/esp_bt_device.o: \
 
 /home/dieter/Development/esp-idf/components/xtensa/include/esp_attr.h:
 
+/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h:
+
 /home/dieter/Development/esp-idf/components/esp_common/include/esp_idf_version.h:
 
 /home/dieter/Development/esp-idf/components/lwip/include/apps/sntp/sntp.h:
@@ -232,8 +225,6 @@ host/bluedroid/api/esp_bt_device.o: \
 /home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h:
 
 /home/dieter/Development/esp-idf/components/heap/include/multi_heap.h:
-
-/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h:
 
 /home/dieter/Development/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 

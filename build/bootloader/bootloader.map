@@ -42,6 +42,8 @@ Archive member included to satisfy reference by file (symbol)
                               /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o) (GPIO_PIN_MUX_REG)
 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
                               /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk_init.o) (rtc_clk_cal_ratio)
+/home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                              /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk_init.o) (rtc_clk_32k_enable)
 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
                               /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o) (__bswapsi2)
 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
@@ -296,8 +298,8 @@ Discarded input sections
  .iram1.0       0x0000000000000000       0x93 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(cpu_util.o)
  .iram1.1       0x0000000000000000       0x57 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(cpu_util.o)
  .iram1.2       0x0000000000000000       0x21 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(cpu_util.o)
- .xt.lit        0x0000000000000000       0x20 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(cpu_util.o)
- .xt.prop       0x0000000000000000      0x108 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(cpu_util.o)
+ .xt.lit        0x0000000000000000       0x18 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(cpu_util.o)
+ .xt.prop       0x0000000000000000       0xfc /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(cpu_util.o)
  .literal.rtc_wdt_enable
                 0x0000000000000000       0x10 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_wdt.o)
  .literal.rtc_wdt_flashboot_mode_enable
@@ -364,8 +366,6 @@ Discarded input sections
                 0x0000000000000000        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
  .literal.rtc_time_get
                 0x0000000000000000       0x18 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
- .literal.rtc_clk_wait_for_slow_cycle
-                0x0000000000000000       0x20 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
  .text          0x0000000000000000        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
  .data          0x0000000000000000        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
  .bss           0x0000000000000000        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
@@ -377,10 +377,45 @@ Discarded input sections
                 0x0000000000000000       0x1e /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
  .text.rtc_time_get
                 0x0000000000000000       0x50 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
- .text.rtc_clk_wait_for_slow_cycle
-                0x0000000000000000       0x79 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
  .xt.lit        0x0000000000000000       0x30 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
  .xt.prop       0x0000000000000000      0x288 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .literal.rtc_clk_32k_enable_external
+                0x0000000000000000        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .literal.rtc_clk_32k_bootstrap
+                0x0000000000000000       0x34 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .literal.rtc_clk_32k_enabled
+                0x0000000000000000        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .literal.rtc_clk_apll_enable
+                0x0000000000000000       0x54 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .literal.rtc_clk_slow_freq_get_hz
+                0x0000000000000000       0x10 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .literal.rtc_clk_cpu_freq_to_config
+                0x0000000000000000       0x18 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .literal.rtc_clk_cpu_freq_set_xtal
+                0x0000000000000000       0x10 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .literal.rtc_clk_cpu_freq_set_config_fast
+                0x0000000000000000       0x10 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .text          0x0000000000000000        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .data          0x0000000000000000        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .bss           0x0000000000000000        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .text.rtc_clk_32k_enable_external
+                0x0000000000000000       0x12 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .text.rtc_clk_32k_bootstrap
+                0x0000000000000000       0xa2 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .text.rtc_clk_32k_enabled
+                0x0000000000000000       0x1c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .text.rtc_clk_apll_enable
+                0x0000000000000000      0x162 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .text.rtc_clk_slow_freq_get_hz
+                0x0000000000000000       0x2d /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .text.rtc_clk_cpu_freq_to_config
+                0x0000000000000000       0x7a /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .text.rtc_clk_cpu_freq_set_xtal
+                0x0000000000000000       0x1f /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .text.rtc_clk_cpu_freq_set_config_fast
+                0x0000000000000000       0x36 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .xt.lit        0x0000000000000000       0xf0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .xt.prop       0x0000000000000000      0xa5c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .data          0x0000000000000000        0x0 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
  .bss           0x0000000000000000        0x0 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
  .xt.lit        0x0000000000000000        0x8 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
@@ -415,7 +450,7 @@ LOAD /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8
 END GROUP
 
 .iram_loader.text
-                0x0000000040078000     0x3002
+                0x0000000040078000     0x3876
                 0x0000000040078000                . = ALIGN (0x10)
                 0x0000000040078000                _loader_text_start = ABSOLUTE (.)
  *(.stub .gnu.warning .gnu.linkonce.literal.* .gnu.linkonce.t.*.literal .gnu.linkonce.t.*)
@@ -430,545 +465,697 @@ END GROUP
                                          0x60 (size before relaxing)
  .iram1.3.literal
                 0x0000000040078054       0x18 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
- .iram1.3.literal
-                0x000000004007806c        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(cpu_util.o)
  .literal.esp_log_early_timestamp
-                0x0000000040078070        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/log/liblog.a(log.o)
- .literal       0x0000000040078078        0x8 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
+                0x000000004007806c        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/log/liblog.a(log.o)
+ .literal       0x0000000040078074        0x8 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
  .literal.bootloader_clock_configure
-                0x0000000040078080       0x24 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+                0x000000004007807c       0x1c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
                                          0x2c (size before relaxing)
  .literal.bootloader_common_ota_select_crc
-                0x00000000400780a4        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x0000000040078098        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
  .literal.bootloader_common_ota_select_valid
-                0x00000000400780a8        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x000000004007809c        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
                                           0x8 (size before relaxing)
  .literal.bootloader_common_get_active_otadata
-                0x00000000400780a8        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x000000004007809c        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
                                           0xc (size before relaxing)
  .literal.bootloader_common_vddsdio_configure
-                0x00000000400780a8        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x000000004007809c        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
                                           0xc (size before relaxing)
  .literal.bootloader_common_check_chip_validity
-                0x00000000400780ac       0x1c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x00000000400780a0       0x1c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
                                          0x34 (size before relaxing)
  .literal.spi_to_esp_err
-                0x00000000400780c8        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x00000000400780bc        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  .literal.bootloader_flash_read_allow_decrypt
-                0x00000000400780d0       0x24 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x00000000400780c4       0x24 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0x30 (size before relaxing)
  .literal.bootloader_flash_read_no_decrypt
-                0x00000000400780f4        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x00000000400780e8        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0x14 (size before relaxing)
  .literal.bootloader_mmap
-                0x00000000400780f4       0x18 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x00000000400780e8       0x18 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0x50 (size before relaxing)
  .literal.bootloader_munmap
-                0x000000004007810c        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040078100        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0x14 (size before relaxing)
  .literal.bootloader_flash_read
-                0x0000000040078110        0xc /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040078104        0xc /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0x30 (size before relaxing)
  .literal.bootloader_flash_write
-                0x000000004007811c        0xc /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040078110        0xc /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0x40 (size before relaxing)
  .literal.bootloader_flash_erase_sector
-                0x0000000040078128        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x000000004007811c        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                           0x8 (size before relaxing)
  .literal.bootloader_fill_random
-                0x0000000040078128       0x14 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x000000004007811c       0x14 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
                                          0x18 (size before relaxing)
  .literal.bootloader_random_enable
-                0x000000004007813c       0x78 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x0000000040078130       0x78 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
  .literal.bootloader_random_disable
-                0x00000000400781b4       0x1c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x00000000400781a8       0x1c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
                                          0x4c (size before relaxing)
  .literal.log_invalid_app_partition
-                0x00000000400781d0       0x14 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x00000000400781c4       0x14 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x2c (size before relaxing)
  .literal.read_otadata
-                0x00000000400781e4       0x10 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x00000000400781d8       0x10 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x30 (size before relaxing)
  .literal.write_otadata
-                0x00000000400781f4        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x00000000400781e8        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x18 (size before relaxing)
  .literal.set_actual_ota_seq
-                0x00000000400781f8       0x10 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x00000000400781ec       0x10 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x24 (size before relaxing)
  .literal.try_load_partition
-                0x0000000040078208        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x00000000400781fc        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x14 (size before relaxing)
  .literal.set_cache_and_start_app
-                0x000000004007820c        0xc /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040078200        0xc /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x30 (size before relaxing)
  .literal.unpack_load_app
-                0x0000000040078218       0x1c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x000000004007820c       0x1c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x34 (size before relaxing)
  .literal.load_image
-                0x0000000040078234        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040078228        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x18 (size before relaxing)
  .literal.bootloader_utility_load_partition_table
-                0x0000000040078238       0x44 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x000000004007822c       0x44 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x90 (size before relaxing)
  .literal.bootloader_utility_get_selected_boot_partition
-                0x000000004007827c       0x10 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040078270       0x10 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x50 (size before relaxing)
  .literal.bootloader_reset
-                0x000000004007828c        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040078280        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x14 (size before relaxing)
  .literal.bootloader_utility_load_boot_image
-                0x0000000040078294        0xc /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040078288        0xc /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x74 (size before relaxing)
  .literal.bootloader_debug_buffer
-                0x00000000400782a0        0xc /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040078294        0xc /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x10 (size before relaxing)
  .literal.bootloader_sha256_start
-                0x00000000400782ac        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x00000000400782a0        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
  .literal.bootloader_sha256_data
-                0x00000000400782b4       0x20 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x00000000400782a8       0x20 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
                                          0x30 (size before relaxing)
  .literal.bootloader_sha256_finish
-                0x00000000400782d4       0x18 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x00000000400782c8       0x18 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
                                          0x4c (size before relaxing)
  .literal.should_map
-                0x00000000400782ec        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x00000000400782e0        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x10 (size before relaxing)
  .literal.verify_segment_header
-                0x00000000400782ec       0x14 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x00000000400782e0       0x14 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x28 (size before relaxing)
  .literal.verify_checksum
-                0x0000000040078300        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x00000000400782f4        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x1c (size before relaxing)
  .literal.verify_image_header
-                0x0000000040078304        0xc /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x00000000400782f8        0xc /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x30 (size before relaxing)
  .literal.process_segment_data
-                0x0000000040078310        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040078304        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x2c (size before relaxing)
  .literal.verify_simple_hash
-                0x0000000040078318       0x10 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x000000004007830c       0x10 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x38 (size before relaxing)
  .literal.should_load
-                0x0000000040078328       0x14 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x000000004007831c       0x14 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x1c (size before relaxing)
  .literal.process_segment
-                0x000000004007833c       0x3c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040078330       0x3c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x94 (size before relaxing)
  .literal.image_load
-                0x0000000040078378       0x14 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x000000004007836c       0x14 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x88 (size before relaxing)
  .literal.bootloader_load_image
-                0x000000004007838c        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040078380        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                           0x4 (size before relaxing)
  .literal.esp_partition_table_verify
-                0x000000004007838c       0x2c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+                0x0000000040078380       0x2c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
                                          0x5c (size before relaxing)
  .literal.esp_rom_spiflash_read_status
-                0x00000000400783b8        0xc /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400783ac        0xc /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x14 (size before relaxing)
  .literal.esp_rom_spiflash_wait_idle
-                0x00000000400783c4        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400783b8        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                           0xc (size before relaxing)
  .literal.esp_rom_spiflash_erase_sector_internal
-                0x00000000400783cc        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400783c0        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x18 (size before relaxing)
  .literal.esp_rom_spiflash_read_data
-                0x00000000400783d0        0xc /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400783c4        0xc /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x18 (size before relaxing)
  .literal.esp_rom_spiflash_enable_write
-                0x00000000400783dc        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400783d0        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x10 (size before relaxing)
  .literal.esp_rom_spiflash_program_page_internal
-                0x00000000400783e0        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400783d4        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x24 (size before relaxing)
  .literal.esp_rom_spiflash_read_statushigh
-                0x00000000400783e4        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400783d8        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                           0xc (size before relaxing)
  .literal.esp_rom_spiflash_write_status
-                0x00000000400783e8        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400783dc        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x14 (size before relaxing)
  .literal.esp_rom_spiflash_unlock
-                0x00000000400783e8        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400783dc        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x28 (size before relaxing)
  .literal.esp_rom_spiflash_erase_sector
-                0x00000000400783f0        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400783e4        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x20 (size before relaxing)
  .literal.esp_rom_spiflash_write
-                0x00000000400783f8        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400783ec        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x28 (size before relaxing)
  .literal.esp_rom_spiflash_write_encrypted
-                0x00000000400783f8        0xc /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400783ec        0xc /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x10 (size before relaxing)
  .literal.esp_rom_spiflash_read
-                0x0000000040078404       0x2c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400783f8       0x2c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x5c (size before relaxing)
  .literal.rtc_wdt_get_protect_status
-                0x0000000040078430        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x0000000040078424        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_wdt.o)
  .literal.rtc_wdt_protect_off
-                0x0000000040078438        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x000000004007842c        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_wdt.o)
                                           0x8 (size before relaxing)
  .literal.rtc_wdt_protect_on
-                0x000000004007843c        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x0000000040078430        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_wdt.o)
                                           0x4 (size before relaxing)
  .literal.rtc_wdt_set_stage
-                0x000000004007843c       0x20 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x0000000040078430       0x20 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_wdt.o)
                                          0x24 (size before relaxing)
  .literal.rtc_wdt_disable
-                0x000000004007845c        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x0000000040078450        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_wdt.o)
                                          0x2c (size before relaxing)
- .iram1.11      0x0000000040078464       0x14 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+ .literal.rtc_clk_32k_enable_common
+                0x0000000040078458       0x14 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x18 (size before relaxing)
+ .literal.rtc_clk_bbpll_disable
+                0x000000004007846c        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x10 (size before relaxing)
+ .literal.rtc_clk_bbpll_enable
+                0x0000000040078474        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x1c (size before relaxing)
- .iram1.0       0x0000000040078478       0x6e /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
-                0x0000000040078478                bootloader_flash_cs_timing_config
- *fill*         0x00000000400784e6        0x2 
- .iram1.2       0x00000000400784e8      0x240 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
-                0x00000000400784e8                bootloader_flash_gpio_config
- .iram1.3       0x0000000040078728       0xb0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
-                0x0000000040078728                bootloader_flash_dummy_config
- .iram1.3       0x00000000400787d8        0xe /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(cpu_util.o)
-                0x00000000400787d8                esp_cpu_in_ocd_debug_mode
- *fill*         0x00000000400787e6        0x0 
+ .literal.rtc_clk_32k_enable
+                0x000000004007847c        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x10 (size before relaxing)
+ .literal.rtc_clk_8m_enable
+                0x0000000040078484        0xc /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x10 (size before relaxing)
+ .literal.rtc_clk_8m_enabled
+                0x0000000040078490        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                          0x4 (size before relaxing)
+ .literal.rtc_clk_8md256_enabled
+                0x0000000040078490        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                          0x4 (size before relaxing)
+ .literal.rtc_clk_slow_freq_set
+                0x0000000040078490        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                          0xc (size before relaxing)
+ .literal.rtc_clk_slow_freq_get
+                0x0000000040078490        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                          0x4 (size before relaxing)
+ .literal.rtc_clk_fast_freq_set
+                0x0000000040078490        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x10 (size before relaxing)
+ .literal.rtc_clk_fast_freq_get
+                0x0000000040078490        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                          0x4 (size before relaxing)
+ .literal.rtc_clk_bbpll_configure
+                0x0000000040078490       0x10 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x40 (size before relaxing)
+ .literal.rtc_clk_xtal_freq_get
+                0x00000000400784a0        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .literal.rtc_clk_cpu_freq_mhz_to_config
+                0x00000000400784a8        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                          0x4 (size before relaxing)
+ .literal.rtc_clk_cpu_freq_get_config
+                0x00000000400784a8        0xc /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x30 (size before relaxing)
+ .literal.rtc_clk_xtal_freq_update
+                0x00000000400784b4        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                          0x8 (size before relaxing)
+ .literal.rtc_clk_apb_freq_update
+                0x00000000400784b8        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .literal.rtc_clk_cpu_freq_to_xtal
+                0x00000000400784bc       0x10 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x2c (size before relaxing)
+ .literal.rtc_clk_cpu_freq_to_pll_mhz
+                0x00000000400784cc        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x44 (size before relaxing)
+ .literal.rtc_clk_cpu_freq_to_8m
+                0x00000000400784d4        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x28 (size before relaxing)
+ .literal.rtc_clk_cpu_freq_set_config
+                0x00000000400784d8        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x30 (size before relaxing)
+ .literal.rtc_clk_apb_freq_get
+                0x00000000400784d8        0xc /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x14 (size before relaxing)
+ .iram1.11      0x00000000400784e4       0x14 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                                         0x1c (size before relaxing)
+ .iram1.0       0x00000000400784f8       0x6e /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
+                0x00000000400784f8                bootloader_flash_cs_timing_config
+ *fill*         0x0000000040078566        0x2 
+ .iram1.2       0x0000000040078568      0x240 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
+                0x0000000040078568                bootloader_flash_gpio_config
+ .iram1.3       0x00000000400787a8       0xb0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
+                0x00000000400787a8                bootloader_flash_dummy_config
+ *fill*         0x0000000040078858        0x0 
+ .iram1.3       0x0000000040078858        0x7 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(cpu_util.o)
+                0x0000000040078858                esp_cpu_in_ocd_debug_mode
  *liblog.a:(.literal .text .literal.* .text.*)
- *fill*         0x00000000400787e6        0x2 
+ *fill*         0x000000004007885f        0x1 
  .text.esp_log_early_timestamp
-                0x00000000400787e8       0x21 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/log/liblog.a(log.o)
-                0x00000000400787e8                esp_log_timestamp
-                0x00000000400787e8                esp_log_early_timestamp
- *fill*         0x0000000040078809        0x0 
+                0x0000000040078860       0x21 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/log/liblog.a(log.o)
+                0x0000000040078860                esp_log_timestamp
+                0x0000000040078860                esp_log_early_timestamp
+ *fill*         0x0000000040078881        0x0 
  *libgcc.a:(.literal .text .literal.* .text.*)
- *fill*         0x0000000040078809        0x3 
- .text          0x000000004007880c       0x26 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
-                0x000000004007880c                __bswapsi2
- *fill*         0x0000000040078832        0x0 
- *fill*         0x0000000040078832        0x2 
- .text          0x0000000040078834      0x26a /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
-                0x0000000040078834                __udivdi3
+ *fill*         0x0000000040078881        0x3 
+ .text          0x0000000040078884       0x26 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
+                0x0000000040078884                __bswapsi2
+ *fill*         0x00000000400788aa        0x0 
+ *fill*         0x00000000400788aa        0x2 
+ .text          0x00000000400788ac      0x26a /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
+                0x00000000400788ac                __udivdi3
  *libbootloader_support.a:bootloader_clock.*(.literal .text .literal.* .text.*)
- *fill*         0x0000000040078a9e        0x2 
+ *fill*         0x0000000040078b16        0x2 
  .text.bootloader_clock_configure
-                0x0000000040078aa0       0x92 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
-                                         0x96 (size before relaxing)
-                0x0000000040078aa0                bootloader_clock_configure
- *fill*         0x0000000040078b32        0x0 
+                0x0000000040078b18       0x82 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+                                         0x8e (size before relaxing)
+                0x0000000040078b18                bootloader_clock_configure
+ *fill*         0x0000000040078b9a        0x0 
  *libbootloader_support.a:bootloader_common.*(.literal .text .literal.* .text.*)
- *fill*         0x0000000040078b32        0x2 
+ *fill*         0x0000000040078b9a        0x2 
  .text.bootloader_common_ota_select_crc
-                0x0000000040078b34       0x14 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
-                0x0000000040078b34                bootloader_common_ota_select_crc
+                0x0000000040078b9c       0x14 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x0000000040078b9c                bootloader_common_ota_select_crc
  .text.bootloader_common_ota_select_valid
-                0x0000000040078b48       0x25 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x0000000040078bb0       0x25 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
                                          0x29 (size before relaxing)
-                0x0000000040078b48                bootloader_common_ota_select_valid
- *fill*         0x0000000040078b6d        0x3 
+                0x0000000040078bb0                bootloader_common_ota_select_valid
+ *fill*         0x0000000040078bd5        0x3 
  .text.bootloader_common_get_active_otadata
-                0x0000000040078b70       0x29 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x0000000040078bd8       0x29 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
                                          0x31 (size before relaxing)
-                0x0000000040078b70                bootloader_common_get_active_otadata
- *fill*         0x0000000040078b99        0x3 
+                0x0000000040078bd8                bootloader_common_get_active_otadata
+ *fill*         0x0000000040078c01        0x3 
  .text.bootloader_common_vddsdio_configure
-                0x0000000040078b9c       0x33 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x0000000040078c04       0x33 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
                                          0x37 (size before relaxing)
-                0x0000000040078b9c                bootloader_common_vddsdio_configure
- *fill*         0x0000000040078bcf        0x1 
+                0x0000000040078c04                bootloader_common_vddsdio_configure
+ *fill*         0x0000000040078c37        0x1 
  .text.bootloader_common_check_chip_validity
-                0x0000000040078bd0       0x8e /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x0000000040078c38       0x8e /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
                                          0x96 (size before relaxing)
-                0x0000000040078bd0                bootloader_common_check_chip_validity
- *fill*         0x0000000040078c5e        0x2 
+                0x0000000040078c38                bootloader_common_check_chip_validity
+ *fill*         0x0000000040078cc6        0x2 
  .text.bootloader_common_ota_select_invalid
-                0x0000000040078c60       0x24 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
-                0x0000000040078c60                bootloader_common_ota_select_invalid
- *fill*         0x0000000040078c84        0x0 
+                0x0000000040078cc8       0x24 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x0000000040078cc8                bootloader_common_ota_select_invalid
+ *fill*         0x0000000040078cec        0x0 
  .text.bootloader_common_select_otadata
-                0x0000000040078c84       0x6e /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
-                0x0000000040078c84                bootloader_common_select_otadata
- *fill*         0x0000000040078cf2        0x0 
- *fill*         0x0000000040078cf2        0x0 
- *fill*         0x0000000040078cf2        0x0 
+                0x0000000040078cec       0x6e /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x0000000040078cec                bootloader_common_select_otadata
+ *fill*         0x0000000040078d5a        0x0 
+ *fill*         0x0000000040078d5a        0x0 
+ *fill*         0x0000000040078d5a        0x0 
  *libbootloader_support.a:bootloader_flash.*(.literal .text .literal.* .text.*)
- *fill*         0x0000000040078cf2        0x2 
+ *fill*         0x0000000040078d5a        0x2 
  .text.spi_to_esp_err
-                0x0000000040078cf4       0x21 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- *fill*         0x0000000040078d15        0x3 
+                0x0000000040078d5c       0x21 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ *fill*         0x0000000040078d7d        0x3 
  .text.bootloader_flash_read_allow_decrypt
-                0x0000000040078d18       0x9d /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- *fill*         0x0000000040078db5        0x3 
+                0x0000000040078d80       0x9d /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ *fill*         0x0000000040078e1d        0x3 
  .text.bootloader_flash_read_no_decrypt
-                0x0000000040078db8       0x32 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040078e20       0x32 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0x36 (size before relaxing)
- *fill*         0x0000000040078dea        0x2 
+ *fill*         0x0000000040078e52        0x2 
  .text.bootloader_mmap
-                0x0000000040078dec       0xb7 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040078e54       0xb7 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0xbb (size before relaxing)
-                0x0000000040078dec                bootloader_mmap
- *fill*         0x0000000040078ea3        0x1 
+                0x0000000040078e54                bootloader_mmap
+ *fill*         0x0000000040078f0b        0x1 
  .text.bootloader_munmap
-                0x0000000040078ea4       0x36 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
-                0x0000000040078ea4                bootloader_munmap
- *fill*         0x0000000040078eda        0x2 
+                0x0000000040078f0c       0x36 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040078f0c                bootloader_munmap
+ *fill*         0x0000000040078f42        0x2 
  .text.bootloader_flash_read
-                0x0000000040078edc       0x8d /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
-                0x0000000040078edc                bootloader_flash_read
- *fill*         0x0000000040078f69        0x3 
+                0x0000000040078f44       0x8d /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040078f44                bootloader_flash_read
+ *fill*         0x0000000040078fd1        0x3 
  .text.bootloader_flash_write
-                0x0000000040078f6c       0x9f /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040078fd4       0x9f /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0xaf (size before relaxing)
-                0x0000000040078f6c                bootloader_flash_write
- *fill*         0x000000004007900b        0x1 
+                0x0000000040078fd4                bootloader_flash_write
+ *fill*         0x0000000040079073        0x1 
  .text.bootloader_flash_erase_sector
-                0x000000004007900c       0x12 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040079074       0x12 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0x16 (size before relaxing)
-                0x000000004007900c                bootloader_flash_erase_sector
- *fill*         0x000000004007901e        0x0 
- *fill*         0x000000004007901e        0x0 
- *fill*         0x000000004007901e        0x0 
- *fill*         0x000000004007901e        0x2 
+                0x0000000040079074                bootloader_flash_erase_sector
+ *fill*         0x0000000040079086        0x0 
+ *fill*         0x0000000040079086        0x0 
+ *fill*         0x0000000040079086        0x0 
+ *fill*         0x0000000040079086        0x2 
  .text.bootloader_mmap_get_free_pages
-                0x0000000040079020        0x7 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
-                0x0000000040079020                bootloader_mmap_get_free_pages
- *fill*         0x0000000040079027        0x0 
- *fill*         0x0000000040079027        0x0 
- *fill*         0x0000000040079027        0x0 
- *fill*         0x0000000040079027        0x0 
- *fill*         0x0000000040079027        0x0 
+                0x0000000040079088        0x7 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040079088                bootloader_mmap_get_free_pages
+ *fill*         0x000000004007908f        0x0 
+ *fill*         0x000000004007908f        0x0 
+ *fill*         0x000000004007908f        0x0 
+ *fill*         0x000000004007908f        0x0 
+ *fill*         0x000000004007908f        0x0 
  *libbootloader_support.a:bootloader_random.*(.literal .text .literal.* .text.*)
- *fill*         0x0000000040079027        0x1 
+ *fill*         0x000000004007908f        0x1 
  .text.bootloader_fill_random
-                0x0000000040079028       0x6a /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x0000000040079090       0x6a /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
                                          0x6e (size before relaxing)
-                0x0000000040079028                bootloader_fill_random
- *fill*         0x0000000040079092        0x2 
+                0x0000000040079090                bootloader_fill_random
+ *fill*         0x00000000400790fa        0x2 
  .text.bootloader_random_enable
-                0x0000000040079094      0x1d5 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
-                0x0000000040079094                bootloader_random_enable
- *fill*         0x0000000040079269        0x3 
+                0x00000000400790fc      0x1d5 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x00000000400790fc                bootloader_random_enable
+ *fill*         0x00000000400792d1        0x3 
  .text.bootloader_random_disable
-                0x000000004007926c      0x13a /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
-                0x000000004007926c                bootloader_random_disable
- *fill*         0x00000000400793a6        0x0 
- *fill*         0x00000000400793a6        0x0 
- *fill*         0x00000000400793a6        0x0 
+                0x00000000400792d4      0x13a /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x00000000400792d4                bootloader_random_disable
+ *fill*         0x000000004007940e        0x0 
+ *fill*         0x000000004007940e        0x0 
+ *fill*         0x000000004007940e        0x0 
  *libbootloader_support.a:bootloader_utility.*(.literal .text .literal.* .text.*)
- *fill*         0x00000000400793a6        0x2 
+ *fill*         0x000000004007940e        0x2 
  .text.log_invalid_app_partition
-                0x00000000400793a8       0x57 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040079410       0x57 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x5b (size before relaxing)
- *fill*         0x00000000400793ff        0x1 
+ *fill*         0x0000000040079467        0x1 
  .text.read_otadata
-                0x0000000040079400       0x7f /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040079468       0x7f /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x83 (size before relaxing)
- *fill*         0x000000004007947f        0x1 
+ *fill*         0x00000000400794e7        0x1 
  .text.write_otadata
-                0x0000000040079480       0x38 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x00000000400794e8       0x38 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x3c (size before relaxing)
  .text.set_actual_ota_seq
-                0x00000000400794b8       0x6c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040079520       0x6c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x70 (size before relaxing)
  .text.try_load_partition
-                0x0000000040079524       0x34 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x000000004007958c       0x34 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x38 (size before relaxing)
  .text.set_cache_and_start_app
-                0x0000000040079558       0xde /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- *fill*         0x0000000040079636        0x2 
+                0x00000000400795c0       0xde /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ *fill*         0x000000004007969e        0x2 
  .text.unpack_load_app
-                0x0000000040079638       0xb8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x00000000400796a0       0xb8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0xc0 (size before relaxing)
  .text.load_image
-                0x00000000400796f0       0x1e /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040079758       0x1e /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x26 (size before relaxing)
- *fill*         0x000000004007970e        0x2 
+ *fill*         0x0000000040079776        0x2 
  .text.bootloader_utility_load_partition_table
-                0x0000000040079710      0x170 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040079778      0x170 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                         0x184 (size before relaxing)
-                0x0000000040079710                bootloader_utility_load_partition_table
+                0x0000000040079778                bootloader_utility_load_partition_table
  .text.bootloader_utility_get_selected_boot_partition
-                0x0000000040079880       0xf9 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x00000000400798e8       0xf9 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                         0x109 (size before relaxing)
-                0x0000000040079880                bootloader_utility_get_selected_boot_partition
- *fill*         0x0000000040079979        0x3 
+                0x00000000400798e8                bootloader_utility_get_selected_boot_partition
+ *fill*         0x00000000400799e1        0x3 
  .text.bootloader_reset
-                0x000000004007997c       0x2b /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
-                0x000000004007997c                bootloader_reset
- *fill*         0x00000000400799a7        0x1 
+                0x00000000400799e4       0x2b /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x00000000400799e4                bootloader_reset
+ *fill*         0x0000000040079a0f        0x1 
  .text.bootloader_utility_load_boot_image
-                0x00000000400799a8       0xfb /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040079a10       0xfb /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                         0x127 (size before relaxing)
-                0x00000000400799a8                bootloader_utility_load_boot_image
- *fill*         0x0000000040079aa3        0x1 
+                0x0000000040079a10                bootloader_utility_load_boot_image
+ *fill*         0x0000000040079b0b        0x1 
  .text.bootloader_debug_buffer
-                0x0000000040079aa4       0x8a /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
-                0x0000000040079aa4                bootloader_debug_buffer
- *fill*         0x0000000040079b2e        0x2 
- .text.index_to_partition
-                0x0000000040079b30       0x4a /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- *fill*         0x0000000040079b7a        0x2 
- .text.check_anti_rollback
-                0x0000000040079b7c        0x7 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- *fill*         0x0000000040079b83        0x0 
- *fill*         0x0000000040079b83        0x0 
- *fill*         0x0000000040079b83        0x0 
- *fill*         0x0000000040079b83        0x0 
- *fill*         0x0000000040079b83        0x0 
- *fill*         0x0000000040079b83        0x0 
- *fill*         0x0000000040079b83        0x0 
- *fill*         0x0000000040079b83        0x0 
- *libbootloader_support.a:bootloader_sha.*(.literal .text .literal.* .text.*)
- *fill*         0x0000000040079b83        0x1 
- .text.bootloader_sha256_start
-                0x0000000040079b84       0x12 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
-                0x0000000040079b84                bootloader_sha256_start
+                0x0000000040079b0c       0x8a /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040079b0c                bootloader_debug_buffer
  *fill*         0x0000000040079b96        0x2 
+ .text.index_to_partition
+                0x0000000040079b98       0x4a /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ *fill*         0x0000000040079be2        0x2 
+ .text.check_anti_rollback
+                0x0000000040079be4        0x7 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ *fill*         0x0000000040079beb        0x0 
+ *fill*         0x0000000040079beb        0x0 
+ *fill*         0x0000000040079beb        0x0 
+ *fill*         0x0000000040079beb        0x0 
+ *fill*         0x0000000040079beb        0x0 
+ *fill*         0x0000000040079beb        0x0 
+ *fill*         0x0000000040079beb        0x0 
+ *fill*         0x0000000040079beb        0x0 
+ *libbootloader_support.a:bootloader_sha.*(.literal .text .literal.* .text.*)
+ *fill*         0x0000000040079beb        0x1 
+ .text.bootloader_sha256_start
+                0x0000000040079bec       0x12 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x0000000040079bec                bootloader_sha256_start
+ *fill*         0x0000000040079bfe        0x2 
  .text.bootloader_sha256_data
-                0x0000000040079b98       0xa9 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x0000000040079c00       0xa9 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
                                          0xb1 (size before relaxing)
-                0x0000000040079b98                bootloader_sha256_data
- *fill*         0x0000000040079c41        0x3 
+                0x0000000040079c00                bootloader_sha256_data
+ *fill*         0x0000000040079ca9        0x3 
  .text.bootloader_sha256_finish
-                0x0000000040079c44       0xd8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x0000000040079cac       0xd8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
                                          0xf0 (size before relaxing)
-                0x0000000040079c44                bootloader_sha256_finish
- *fill*         0x0000000040079d1c        0x0 
- *fill*         0x0000000040079d1c        0x0 
- *fill*         0x0000000040079d1c        0x0 
+                0x0000000040079cac                bootloader_sha256_finish
+ *fill*         0x0000000040079d84        0x0 
+ *fill*         0x0000000040079d84        0x0 
+ *fill*         0x0000000040079d84        0x0 
  *libbootloader_support.a:esp_image_format.*(.literal .text .literal.* .text.*)
  .text.should_map
-                0x0000000040079d1c       0x30 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040079d84       0x30 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
  .text.verify_segment_header
-                0x0000000040079d4c       0x68 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040079db4       0x68 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x70 (size before relaxing)
  .text.verify_checksum
-                0x0000000040079db4       0x93 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040079e1c       0x93 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x9b (size before relaxing)
- *fill*         0x0000000040079e47        0x1 
+ *fill*         0x0000000040079eaf        0x1 
  .text.verify_image_header
-                0x0000000040079e48       0x88 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040079eb0       0x88 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x90 (size before relaxing)
  .text.process_segment_data
-                0x0000000040079ed0       0xf2 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040079f38       0xf2 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0xfa (size before relaxing)
- *fill*         0x0000000040079fc2        0x2 
+ *fill*         0x000000004007a02a        0x2 
  .text.verify_simple_hash
-                0x0000000040079fc4       0x78 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x000000004007a02c       0x78 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x8c (size before relaxing)
  .text.should_load
-                0x000000004007a03c       0x4c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x000000004007a0a4       0x4c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x50 (size before relaxing)
  .text.process_segment
-                0x000000004007a088      0x1d4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x000000004007a0f0      0x1d4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                         0x1ec (size before relaxing)
  .text.image_load
-                0x000000004007a25c      0x30c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x000000004007a2c4      0x30c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                         0x33c (size before relaxing)
  .text.bootloader_load_image
-                0x000000004007a568       0x10 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x000000004007a5d0       0x10 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x14 (size before relaxing)
-                0x000000004007a568                bootloader_load_image
- *fill*         0x000000004007a578        0x0 
- *fill*         0x000000004007a578        0x0 
+                0x000000004007a5d0                bootloader_load_image
+ *fill*         0x000000004007a5e0        0x0 
+ *fill*         0x000000004007a5e0        0x0 
  *libbootloader_support.a:flash_encrypt.*(.literal .text .literal.* .text.*)
  *libbootloader_support.a:flash_partitions.*(.literal .text .literal.* .text.*)
  .text.esp_partition_table_verify
-                0x000000004007a578      0x141 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+                0x000000004007a5e0      0x141 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
                                         0x14d (size before relaxing)
-                0x000000004007a578                esp_partition_table_verify
+                0x000000004007a5e0                esp_partition_table_verify
  *libbootloader_support.a:secure_boot.*(.literal .text .literal.* .text.*)
  *libbootloader_support.a:secure_boot_signatures.*(.literal .text .literal.* .text.*)
  *libmicro-ecc.a:*.*(.literal .text .literal.* .text.*)
  *libspi_flash.a:*.*(.literal .text .literal.* .text.*)
- *fill*         0x000000004007a6b9        0x3 
+ *fill*         0x000000004007a721        0x3 
  .text.esp_rom_spiflash_read_status
-                0x000000004007a6bc       0x63 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
-                0x000000004007a6bc                esp_rom_spiflash_read_status
- *fill*         0x000000004007a71f        0x1 
+                0x000000004007a724       0x63 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007a724                esp_rom_spiflash_read_status
+ *fill*         0x000000004007a787        0x1 
  .text.esp_rom_spiflash_wait_idle
-                0x000000004007a720       0x32 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
-                0x000000004007a720                esp_rom_spiflash_wait_idle
- *fill*         0x000000004007a752        0x2 
+                0x000000004007a788       0x32 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007a788                esp_rom_spiflash_wait_idle
+ *fill*         0x000000004007a7ba        0x2 
  .text.esp_rom_spiflash_erase_sector_internal
-                0x000000004007a754       0x45 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- *fill*         0x000000004007a799        0x3 
+                0x000000004007a7bc       0x45 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ *fill*         0x000000004007a801        0x3 
  .text.esp_rom_spiflash_read_data
-                0x000000004007a79c       0xe4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007a804       0xe4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .text.esp_rom_spiflash_enable_write
-                0x000000004007a880       0x39 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007a8e8       0x39 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x3d (size before relaxing)
- *fill*         0x000000004007a8b9        0x3 
+ *fill*         0x000000004007a921        0x3 
  .text.esp_rom_spiflash_program_page_internal
-                0x000000004007a8bc       0xee /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007a924       0xee /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0xf2 (size before relaxing)
- *fill*         0x000000004007a9aa        0x2 
+ *fill*         0x000000004007aa12        0x2 
  .text.esp_rom_spiflash_read_statushigh
-                0x000000004007a9ac       0x21 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
-                0x000000004007a9ac                esp_rom_spiflash_read_statushigh
- *fill*         0x000000004007a9cd        0x3 
+                0x000000004007aa14       0x21 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007aa14                esp_rom_spiflash_read_statushigh
+ *fill*         0x000000004007aa35        0x3 
  .text.esp_rom_spiflash_write_status
-                0x000000004007a9d0       0x34 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007aa38       0x34 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x38 (size before relaxing)
-                0x000000004007a9d0                esp_rom_spiflash_write_status
+                0x000000004007aa38                esp_rom_spiflash_write_status
  .text.esp_rom_spiflash_unlock
-                0x000000004007aa04       0x6e /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007aa6c       0x6e /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x82 (size before relaxing)
-                0x000000004007aa04                esp_rom_spiflash_unlock
- *fill*         0x000000004007aa72        0x2 
- .text.esp_rom_spiflash_erase_sector
-                0x000000004007aa74       0x66 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
-                                         0x6a (size before relaxing)
-                0x000000004007aa74                esp_rom_spiflash_erase_sector
+                0x000000004007aa6c                esp_rom_spiflash_unlock
  *fill*         0x000000004007aada        0x2 
+ .text.esp_rom_spiflash_erase_sector
+                0x000000004007aadc       0x66 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                                         0x6a (size before relaxing)
+                0x000000004007aadc                esp_rom_spiflash_erase_sector
+ *fill*         0x000000004007ab42        0x2 
  .text.esp_rom_spiflash_write
-                0x000000004007aadc       0xda /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007ab44       0xda /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0xde (size before relaxing)
-                0x000000004007aadc                esp_rom_spiflash_write
- *fill*         0x000000004007abb6        0x2 
+                0x000000004007ab44                esp_rom_spiflash_write
+ *fill*         0x000000004007ac1e        0x2 
  .text.esp_rom_spiflash_write_encrypted
-                0x000000004007abb8       0x5a /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
-                0x000000004007abb8                esp_rom_spiflash_write_encrypted
- *fill*         0x000000004007ac12        0x2 
+                0x000000004007ac20       0x5a /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007ac20                esp_rom_spiflash_write_encrypted
+ *fill*         0x000000004007ac7a        0x2 
  .text.esp_rom_spiflash_read
-                0x000000004007ac14      0x284 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
-                0x000000004007ac14                esp_rom_spiflash_read
- *fill*         0x000000004007ae98        0x0 
- *fill*         0x000000004007ae98        0x0 
- *fill*         0x000000004007ae98        0x0 
- *fill*         0x000000004007ae98        0x0 
- *fill*         0x000000004007ae98        0x0 
- *fill*         0x000000004007ae98        0x0 
- *fill*         0x000000004007ae98        0x0 
- *fill*         0x000000004007ae98        0x0 
- *fill*         0x000000004007ae98        0x0 
- *fill*         0x000000004007ae98        0x0 
- *fill*         0x000000004007ae98        0x0 
+                0x000000004007ac7c      0x284 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007ac7c                esp_rom_spiflash_read
+ *fill*         0x000000004007af00        0x0 
+ *fill*         0x000000004007af00        0x0 
+ *fill*         0x000000004007af00        0x0 
+ *fill*         0x000000004007af00        0x0 
+ *fill*         0x000000004007af00        0x0 
+ *fill*         0x000000004007af00        0x0 
+ *fill*         0x000000004007af00        0x0 
+ *fill*         0x000000004007af00        0x0 
+ *fill*         0x000000004007af00        0x0 
+ *fill*         0x000000004007af00        0x0 
+ *fill*         0x000000004007af00        0x0 
  *libsoc.a:rtc_wdt.*(.literal .text .literal.* .text.*)
  .text.rtc_wdt_get_protect_status
-                0x000000004007ae98       0x1b /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_wdt.o)
-                0x000000004007ae98                rtc_wdt_get_protect_status
- *fill*         0x000000004007aeb3        0x1 
+                0x000000004007af00       0x1b /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x000000004007af00                rtc_wdt_get_protect_status
+ *fill*         0x000000004007af1b        0x1 
  .text.rtc_wdt_protect_off
-                0x000000004007aeb4       0x10 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_wdt.o)
-                0x000000004007aeb4                rtc_wdt_protect_off
+                0x000000004007af1c       0x10 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x000000004007af1c                rtc_wdt_protect_off
  .text.rtc_wdt_protect_on
-                0x000000004007aec4        0xf /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_wdt.o)
-                0x000000004007aec4                rtc_wdt_protect_on
- *fill*         0x000000004007aed3        0x1 
+                0x000000004007af2c        0xf /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x000000004007af2c                rtc_wdt_protect_on
+ *fill*         0x000000004007af3b        0x1 
  .text.rtc_wdt_set_stage
-                0x000000004007aed4       0xc1 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_wdt.o)
-                0x000000004007aed4                rtc_wdt_set_stage
- *fill*         0x000000004007af95        0x3 
+                0x000000004007af3c       0xc1 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x000000004007af3c                rtc_wdt_set_stage
+ *fill*         0x000000004007affd        0x3 
  .text.rtc_wdt_disable
-                0x000000004007af98       0x6a /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x000000004007b000       0x6a /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_wdt.o)
                                          0x7e (size before relaxing)
-                0x000000004007af98                rtc_wdt_disable
- *fill*         0x000000004007b002        0x0 
- *fill*         0x000000004007b002        0x0 
- *fill*         0x000000004007b002        0x0 
+                0x000000004007b000                rtc_wdt_disable
+ *fill*         0x000000004007b06a        0x0 
+ *fill*         0x000000004007b06a        0x0 
+ *fill*         0x000000004007b06a        0x0 
  *libsoc.a:rtc_clk.*(.literal .text .literal.* .text.*)
+ *fill*         0x000000004007b06a        0x2 
+ .text.rtc_clk_32k_enable_common
+                0x000000004007b06c       0x88 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .text.rtc_clk_bbpll_disable
+                0x000000004007b0f4       0x3e /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ *fill*         0x000000004007b132        0x2 
+ .text.rtc_clk_bbpll_enable
+                0x000000004007b134       0x66 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ *fill*         0x000000004007b19a        0x2 
+ .text.rtc_clk_32k_enable
+                0x000000004007b19c       0x3d /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b19c                rtc_clk_32k_enable
+ *fill*         0x000000004007b1d9        0x3 
+ .text.rtc_clk_8m_enable
+                0x000000004007b1dc       0x9c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b1dc                rtc_clk_8m_enable
+ .text.rtc_clk_8m_enabled
+                0x000000004007b278       0x1b /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b278                rtc_clk_8m_enabled
+ *fill*         0x000000004007b293        0x1 
+ .text.rtc_clk_8md256_enabled
+                0x000000004007b294       0x1c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b294                rtc_clk_8md256_enabled
+ .text.rtc_clk_slow_freq_set
+                0x000000004007b2b0       0x48 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b2b0                rtc_clk_slow_freq_set
+ .text.rtc_clk_slow_freq_get
+                0x000000004007b2f8       0x10 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b2f8                rtc_clk_slow_freq_get
+ .text.rtc_clk_fast_freq_set
+                0x000000004007b308       0x2c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b308                rtc_clk_fast_freq_set
+ .text.rtc_clk_fast_freq_get
+                0x000000004007b334       0x10 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b334                rtc_clk_fast_freq_get
+ .text.rtc_clk_bbpll_configure
+                0x000000004007b344      0x19d /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                        0x1a1 (size before relaxing)
+                0x000000004007b344                rtc_clk_bbpll_configure
+ *fill*         0x000000004007b4e1        0x3 
+ .text.rtc_clk_xtal_freq_get
+                0x000000004007b4e4       0x36 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b4e4                rtc_get_xtal
+                0x000000004007b4e4                rtc_clk_xtal_freq_get
+ *fill*         0x000000004007b51a        0x2 
+ .text.rtc_clk_cpu_freq_mhz_to_config
+                0x000000004007b51c       0x64 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b51c                rtc_clk_cpu_freq_mhz_to_config
+ .text.rtc_clk_cpu_freq_get_config
+                0x000000004007b580       0xa7 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0xb3 (size before relaxing)
+                0x000000004007b580                rtc_clk_cpu_freq_get_config
+ *fill*         0x000000004007b627        0x1 
+ .text.rtc_clk_xtal_freq_update
+                0x000000004007b628       0x2c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b628                rtc_clk_xtal_freq_update
+ .text.rtc_clk_apb_freq_update
+                0x000000004007b654       0x19 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b654                rtc_clk_apb_freq_update
+ *fill*         0x000000004007b66d        0x3 
+ .text.rtc_clk_cpu_freq_to_xtal
+                0x000000004007b670       0x87 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x8b (size before relaxing)
+                0x000000004007b670                rtc_clk_cpu_freq_to_xtal
+ *fill*         0x000000004007b6f7        0x1 
+ .text.rtc_clk_cpu_freq_to_pll_mhz
+                0x000000004007b6f8       0xa0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0xa8 (size before relaxing)
+ .text.rtc_clk_cpu_freq_to_8m
+                0x000000004007b798       0x58 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x5c (size before relaxing)
+ .text.rtc_clk_cpu_freq_set_config
+                0x000000004007b7f0       0x5c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x77 (size before relaxing)
+                0x000000004007b7f0                rtc_clk_cpu_freq_set_config
+ *fill*         0x000000004007b84c        0x0 
+ .text.rtc_clk_apb_freq_get
+                0x000000004007b84c       0x2a /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007b84c                rtc_clk_apb_freq_get
+ *fill*         0x000000004007b876        0x0 
+ *fill*         0x000000004007b876        0x0 
+ *fill*         0x000000004007b876        0x0 
+ *fill*         0x000000004007b876        0x0 
+ *fill*         0x000000004007b876        0x0 
+ *fill*         0x000000004007b876        0x0 
+ *fill*         0x000000004007b876        0x0 
+ *fill*         0x000000004007b876        0x0 
+ *fill*         0x000000004007b876        0x0 
+ *fill*         0x000000004007b876        0x0 
+ *fill*         0x000000004007b876        0x0 
  *libefuse.a:*.*(.literal .text .literal.* .text.*)
  *(.fini.literal)
  *(.fini)
  *(.gnu.version)
-                0x000000004007b002                _loader_text_end = ABSOLUTE (.)
+                0x000000004007b876                _loader_text_end = ABSOLUTE (.)
 
-.iram.text      0x0000000040080400     0x1128
+.iram.text      0x0000000040080400     0x1145
                 0x0000000040080400                . = ALIGN (0x10)
  *(.entry.text)
  *(.init.literal)
@@ -994,162 +1181,170 @@ END GROUP
                 0x0000000040080474       0x50 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0x6c (size before relaxing)
  .literal.uart_console_configure
-                0x00000000400804c4       0x1c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x00000000400804c4       0x18 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                                         0x1c (size before relaxing)
  .literal.wdt_reset_check
-                0x00000000400804e0        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x00000000400804dc        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0x30 (size before relaxing)
  .literal.update_flash_config
-                0x00000000400804e8       0x24 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x00000000400804e4       0x24 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
  .literal.bootloader_main
-                0x000000004008050c       0x2c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040080508       0x2c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0xa4 (size before relaxing)
  .literal.__assert_func
-                0x0000000040080538        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040080534        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0x10 (size before relaxing)
  .literal.bootloader_init
-                0x000000004008053c       0x48 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040080538       0x48 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0x74 (size before relaxing)
  .literal.abort
-                0x0000000040080584        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040080580        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0x10 (size before relaxing)
  .literal.bootloader_common_get_chip_revision
-                0x000000004008058c        0xc /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_efuse_esp32.o)
+                0x0000000040080588        0xc /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_efuse_esp32.o)
  .literal.bootloader_clock_get_rated_freq_mhz
-                0x0000000040080598        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_efuse_esp32.o)
+                0x0000000040080594        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_efuse_esp32.o)
                                           0x4 (size before relaxing)
  .literal.execute_flash_command
-                0x0000000040080598       0x38 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
+                0x0000000040080594       0x38 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
                                          0x3c (size before relaxing)
  .literal.bootloader_read_flash_id
-                0x00000000400805d0        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
+                0x00000000400805cc        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
                                           0xc (size before relaxing)
  .literal.rtc_vddsdio_get_config
-                0x00000000400805d8        0xc /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_init.o)
+                0x00000000400805d4        0xc /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_init.o)
                                          0x10 (size before relaxing)
  .literal.rtc_vddsdio_set_config
-                0x00000000400805e4        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_init.o)
+                0x00000000400805e0        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_init.o)
                                           0x8 (size before relaxing)
  .literal.rtc_clk_xtal_freq_estimate
-                0x00000000400805e4       0x2c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+                0x00000000400805e0       0x20 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
                                          0x4c (size before relaxing)
  .literal.rtc_clk_init
-                0x0000000040080610       0x70 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+                0x0000000040080600       0x48 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
                                          0xa8 (size before relaxing)
  .literal.rtc_clk_cal_internal
-                0x0000000040080680       0x4c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000040080648       0x4c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
                                          0x70 (size before relaxing)
  .literal.rtc_clk_cal_ratio
-                0x00000000400806cc        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000040080694        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
                                           0x8 (size before relaxing)
+ .literal.rtc_clk_wait_for_slow_cycle
+                0x0000000040080694        0x8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
+                                         0x20 (size before relaxing)
  .text.selected_boot_partition
-                0x00000000400806cc       0x1a /home/dieter/Development/M5_Projekt_Ei/build/bootloader/main/libmain.a(bootloader_start.o)
+                0x000000004008069c       0x1a /home/dieter/Development/M5_Projekt_Ei/build/bootloader/main/libmain.a(bootloader_start.o)
                                          0x1e (size before relaxing)
- *fill*         0x00000000400806e6        0x2 
+ *fill*         0x00000000400806b6        0x2 
  .text.select_partition_number
-                0x00000000400806e8       0x30 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/main/libmain.a(bootloader_start.o)
+                0x00000000400806b8       0x30 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/main/libmain.a(bootloader_start.o)
                                          0x34 (size before relaxing)
  .text.call_start_cpu0
-                0x0000000040080718       0x35 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/main/libmain.a(bootloader_start.o)
+                0x00000000400806e8       0x35 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/main/libmain.a(bootloader_start.o)
                                          0x3c (size before relaxing)
-                0x0000000040080718                call_start_cpu0
- *fill*         0x000000004008074d        0x3 
+                0x00000000400806e8                call_start_cpu0
+ *fill*         0x000000004008071d        0x3 
  .text.wdt_reset_cpu0_info_enable
-                0x0000000040080750       0x27 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- *fill*         0x0000000040080777        0x1 
+                0x0000000040080720       0x27 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+ *fill*         0x0000000040080747        0x1 
  .text.wdt_reset_info_dump
-                0x0000000040080778       0xe6 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040080748       0xe6 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0xea (size before relaxing)
- *fill*         0x000000004008085e        0x2 
+ *fill*         0x000000004008082e        0x2 
  .text.print_flash_info
-                0x0000000040080860       0xf3 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- *fill*         0x0000000040080953        0x1 
+                0x0000000040080830       0xf3 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+ *fill*         0x0000000040080923        0x1 
  .text.uart_console_configure
-                0x0000000040080954       0x3a /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- *fill*         0x000000004008098e        0x2 
+                0x0000000040080924       0x36 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                                         0x3a (size before relaxing)
+ *fill*         0x000000004008095a        0x2 
  .text.wdt_reset_check
-                0x0000000040080990       0xa2 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x000000004008095c       0xa2 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0xb2 (size before relaxing)
- *fill*         0x0000000040080a32        0x2 
+ *fill*         0x00000000400809fe        0x2 
  .text.update_flash_config
-                0x0000000040080a34       0x64 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040080a00       0x64 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
  .text.bootloader_main
-                0x0000000040080a98      0x108 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040080a64      0x108 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                         0x144 (size before relaxing)
  .text.__assert_func
-                0x0000000040080ba0       0x1f /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040080b6c       0x1f /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0x23 (size before relaxing)
-                0x0000000040080ba0                __assert_func
- *fill*         0x0000000040080bbf        0x1 
+                0x0000000040080b6c                __assert_func
+ *fill*         0x0000000040080b8b        0x1 
  .text.bootloader_init
-                0x0000000040080bc0      0x132 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040080b8c      0x132 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                         0x142 (size before relaxing)
-                0x0000000040080bc0                bootloader_init
- *fill*         0x0000000040080cf2        0x2 
- .text.abort    0x0000000040080cf4       0x2c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040080b8c                bootloader_init
+ *fill*         0x0000000040080cbe        0x2 
+ .text.abort    0x0000000040080cc0       0x2c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0x2f (size before relaxing)
-                0x0000000040080cf4                abort
- *fill*         0x0000000040080d20        0x0 
+                0x0000000040080cc0                abort
+ *fill*         0x0000000040080cec        0x0 
  .text.bootloader_common_get_chip_revision
-                0x0000000040080d20       0x4d /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_efuse_esp32.o)
-                0x0000000040080d20                bootloader_common_get_chip_revision
- *fill*         0x0000000040080d6d        0x3 
+                0x0000000040080cec       0x4d /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_efuse_esp32.o)
+                0x0000000040080cec                bootloader_common_get_chip_revision
+ *fill*         0x0000000040080d39        0x3 
  .text.bootloader_clock_get_rated_freq_mhz
-                0x0000000040080d70       0x2d /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_efuse_esp32.o)
-                0x0000000040080d70                bootloader_clock_get_rated_freq_mhz
- *fill*         0x0000000040080d9d        0x3 
+                0x0000000040080d3c       0x2d /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_efuse_esp32.o)
+                0x0000000040080d3c                bootloader_clock_get_rated_freq_mhz
+ *fill*         0x0000000040080d69        0x3 
  .text.execute_flash_command
-                0x0000000040080da0      0x18c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
+                0x0000000040080d6c      0x18c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
  .text.bootloader_read_flash_id
-                0x0000000040080f2c       0x2a /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
+                0x0000000040080ef8       0x2a /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
                                          0x2e (size before relaxing)
-                0x0000000040080f2c                bootloader_read_flash_id
- *fill*         0x0000000040080f56        0x2 
+                0x0000000040080ef8                bootloader_read_flash_id
+ *fill*         0x0000000040080f22        0x2 
  .text.rtc_vddsdio_get_config
-                0x0000000040080f58       0xd7 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_init.o)
-                0x0000000040080f58                rtc_vddsdio_get_config
- *fill*         0x000000004008102f        0x1 
+                0x0000000040080f24       0xd7 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_init.o)
+                0x0000000040080f24                rtc_vddsdio_get_config
+ *fill*         0x0000000040080ffb        0x1 
  .text.rtc_vddsdio_set_config
-                0x0000000040081030       0x46 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_init.o)
-                0x0000000040081030                rtc_vddsdio_set_config
- *fill*         0x0000000040081076        0x2 
+                0x0000000040080ffc       0x46 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_init.o)
+                0x0000000040080ffc                rtc_vddsdio_set_config
+ *fill*         0x0000000040081042        0x2 
  .text.rtc_clk_xtal_freq_estimate
-                0x0000000040081078       0xb3 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+                0x0000000040081044       0xab /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
                                          0xb7 (size before relaxing)
- *fill*         0x000000004008112b        0x1 
+ *fill*         0x00000000400810ef        0x1 
  .text.rtc_clk_init
-                0x000000004008112c      0x206 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+                0x00000000400810f0      0x1ea /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
                                         0x21e (size before relaxing)
-                0x000000004008112c                rtc_clk_init
- *fill*         0x0000000040081332        0x2 
+                0x00000000400810f0                rtc_clk_init
+ *fill*         0x00000000400812da        0x2 
  .text.rtc_clk_cal_internal
-                0x0000000040081334      0x1d4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x00000000400812dc      0x1d0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
                                         0x1dc (size before relaxing)
  .text.rtc_clk_cal_ratio
-                0x0000000040081508       0x20 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x00000000400814ac       0x20 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
                                          0x24 (size before relaxing)
-                0x0000000040081508                rtc_clk_cal_ratio
- *fill*         0x0000000040081528        0x0 
- *fill*         0x0000000040081528        0x0 
- *fill*         0x0000000040081528        0x0 
- *fill*         0x0000000040081528        0x0 
- *fill*         0x0000000040081528        0x0 
- *fill*         0x0000000040081528        0x0 
- *fill*         0x0000000040081528        0x0 
- *fill*         0x0000000040081528        0x0 
- *fill*         0x0000000040081528        0x0 
- *fill*         0x0000000040081528        0x0 
- *fill*         0x0000000040081528        0x0 
- *fill*         0x0000000040081528        0x0 
- *fill*         0x0000000040081528        0x0 
- *fill*         0x0000000040081528        0x0 
- *fill*         0x0000000040081528        0x0 
- *fill*         0x0000000040081528        0x0 
+                0x00000000400814ac                rtc_clk_cal_ratio
+ .text.rtc_clk_wait_for_slow_cycle
+                0x00000000400814cc       0x79 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x00000000400814cc                rtc_clk_wait_for_slow_cycle
+ *fill*         0x0000000040081545        0x0 
+ *fill*         0x0000000040081545        0x0 
+ *fill*         0x0000000040081545        0x0 
+ *fill*         0x0000000040081545        0x0 
+ *fill*         0x0000000040081545        0x0 
+ *fill*         0x0000000040081545        0x0 
+ *fill*         0x0000000040081545        0x0 
+ *fill*         0x0000000040081545        0x0 
+ *fill*         0x0000000040081545        0x0 
+ *fill*         0x0000000040081545        0x0 
+ *fill*         0x0000000040081545        0x0 
+ *fill*         0x0000000040081545        0x0 
+ *fill*         0x0000000040081545        0x0 
+ *fill*         0x0000000040081545        0x0 
+ *fill*         0x0000000040081545        0x0 
+ *fill*         0x0000000040081545        0x0 
  *(.iram .iram.*)
  *(.fini.literal)
  *(.fini)
  *(.gnu.version)
-                0x0000000040081528                _text_end = ABSOLUTE (.)
-                0x0000000040081528                _etext = .
+                0x0000000040081545                _text_end = ABSOLUTE (.)
+                0x0000000040081545                _etext = .
 
 .dram0.bss      0x000000003fff0000       0x18
                 0x000000003fff0000                . = ALIGN (0x8)
@@ -1173,10 +1368,12 @@ END GROUP
  .bss.words_hashed
                 0x000000003fff000c        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
  .bss.mapped    0x000000003fff0010        0x1 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ *fill*         0x000000003fff0011        0x3 
+ .bss.s_cur_pll_freq
+                0x000000003fff0014        0x4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
  *(.gnu.linkonce.b.*)
  *(COMMON)
                 0x000000003fff0018                . = ALIGN (0x8)
- *fill*         0x000000003fff0011        0x7 
                 0x000000003fff0018                _bss_end = ABSOLUTE (.)
 
 .dram0.data     0x000000003fff0018        0x4
@@ -1196,7 +1393,7 @@ END GROUP
  *(.jcr)
                 0x000000003fff001c                _data_end = ABSOLUTE (.)
 
-.dram0.rodata   0x000000003fff001c     0x1b6c
+.dram0.rodata   0x000000003fff001c     0x1c10
                 0x000000003fff001c                _rodata_start = ABSOLUTE (.)
  *(.rodata)
  .rodata        0x000000003fff001c       0x14 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
@@ -1339,45 +1536,53 @@ END GROUP
                 0x000000003fff19dc       0xdf /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
  *fill*         0x000000003fff1abb        0x1 
  .rodata.rtc_clk_cal_internal.str1.4
-                0x000000003fff1abc       0xb4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
-                                         0xb1 (size before relaxing)
+                0x000000003fff1abc       0xb1 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
+ *fill*         0x000000003fff1b6d        0x3 
  .rodata.__func__$3610
                 0x000000003fff1b70       0x15 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
+ *fill*         0x000000003fff1b85        0x3 
+ .rodata.rtc_clk_cpu_freq_to_config.str1.4
+                0x000000003fff1b88       0x3c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .rodata.rtc_clk_cpu_freq_get_config.str1.4
+                0x000000003fff1bc4       0x3b /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ *fill*         0x000000003fff1bff        0x1 
+ .rodata.rtc_clk_cpu_freq_to_pll_mhz.str1.4
+                0x000000003fff1c00       0x2c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x29 (size before relaxing)
  *(.gnu.linkonce.r.*)
  *(.rodata1)
-                0x000000003fff1b85                __XT_EXCEPTION_TABLE_ = ABSOLUTE (.)
+                0x000000003fff1c2c                __XT_EXCEPTION_TABLE_ = ABSOLUTE (.)
  *(.xt_except_table)
  *(.gcc_except_table)
  *(.gnu.linkonce.e.*)
  *(.gnu.version_r)
  *(.eh_frame)
-                0x000000003fff1b88                . = ((. + 0x3) & 0xfffffffffffffffc)
- *fill*         0x000000003fff1b85        0x3 
-                0x000000003fff1b88                __init_array_start = ABSOLUTE (.)
+                0x000000003fff1c2c                . = ((. + 0x3) & 0xfffffffffffffffc)
+                0x000000003fff1c2c                __init_array_start = ABSOLUTE (.)
  *crtbegin.*(.ctors)
  *(EXCLUDE_FILE(*crtend.*) .ctors)
  *(SORT_BY_NAME(.ctors.*))
  *(.ctors)
-                0x000000003fff1b88                __init_array_end = ABSOLUTE (.)
+                0x000000003fff1c2c                __init_array_end = ABSOLUTE (.)
  *crtbegin.*(.dtors)
  *(EXCLUDE_FILE(*crtend.*) .dtors)
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
-                0x000000003fff1b88                __XT_EXCEPTION_DESCS_ = ABSOLUTE (.)
+                0x000000003fff1c2c                __XT_EXCEPTION_DESCS_ = ABSOLUTE (.)
  *(.xt_except_desc)
  *(.gnu.linkonce.h.*)
-                0x000000003fff1b88                __XT_EXCEPTION_DESCS_END__ = ABSOLUTE (.)
+                0x000000003fff1c2c                __XT_EXCEPTION_DESCS_END__ = ABSOLUTE (.)
  *(.xt_except_desc_end)
  *(.dynamic)
  *(.gnu.version_d)
-                0x000000003fff1b88                _rodata_end = ABSOLUTE (.)
-                0x000000003fff1b88                _lit4_start = ABSOLUTE (.)
+                0x000000003fff1c2c                _rodata_end = ABSOLUTE (.)
+                0x000000003fff1c2c                _lit4_start = ABSOLUTE (.)
  *(*.lit4)
  *(.lit4.*)
  *(.gnu.linkonce.lit4.*)
-                0x000000003fff1b88                _lit4_end = ABSOLUTE (.)
-                0x000000003fff1b88                . = ALIGN (0x4)
-                [!provide]                        PROVIDE (ets_update_cpu_frequency = 0x40008550)
+                0x000000003fff1c2c                _lit4_end = ABSOLUTE (.)
+                0x000000003fff1c2c                . = ALIGN (0x4)
+                0x0000000040008550                PROVIDE (ets_update_cpu_frequency = 0x40008550)
                 0x000000004005db1c                PROVIDE (MD5Final = 0x4005db1c)
                 0x000000004005da7c                PROVIDE (MD5Init = 0x4005da7c)
                 0x000000004005da9c                PROVIDE (MD5Update = 0x4005da9c)
@@ -2531,9 +2736,9 @@ END GROUP
                 [!provide]                        PROVIDE (rom_get_rf_gain_qdb = 0x40006290)
                 [!provide]                        PROVIDE (rom_get_sar_dout = 0x40006564)
                 [!provide]                        PROVIDE (rom_i2c_readReg = 0x40004148)
-                [!provide]                        PROVIDE (rom_i2c_readReg_Mask = 0x400041c0)
-                [!provide]                        PROVIDE (rom_i2c_writeReg = 0x400041a4)
-                [!provide]                        PROVIDE (rom_i2c_writeReg_Mask = 0x400041fc)
+                0x00000000400041c0                PROVIDE (rom_i2c_readReg_Mask = 0x400041c0)
+                0x00000000400041a4                PROVIDE (rom_i2c_writeReg = 0x400041a4)
+                0x00000000400041fc                PROVIDE (rom_i2c_writeReg_Mask = 0x400041fc)
                 [!provide]                        PROVIDE (rom_index_to_txbbgain = 0x40004df8)
                 [!provide]                        PROVIDE (rom_iq_est_disable = 0x40005590)
                 [!provide]                        PROVIDE (rom_iq_est_enable = 0x40005514)
@@ -2773,7 +2978,7 @@ END GROUP
                 [!provide]                        PROVIDE (uart_tx_one_char2 = 0x4000922c)
                 [!provide]                        PROVIDE (uart_tx_switch = 0x40009028)
                 [!provide]                        PROVIDE (gpio_output_set = 0x40009b24)
-                [!provide]                        PROVIDE (gpio_output_set_high = 0x40009b5c)
+                0x0000000040009b5c                PROVIDE (gpio_output_set_high = 0x40009b5c)
                 0x0000000040009b88                PROVIDE (gpio_input_get = 0x40009b88)
                 0x0000000040009b9c                PROVIDE (gpio_input_get_high = 0x40009b9c)
                 0x0000000040009edc                PROVIDE (gpio_matrix_in = 0x40009edc)
@@ -3056,7 +3261,7 @@ END GROUP
                 [!provide]                        PROVIDE (UART2 = 0x3ff6e000)
 OUTPUT(/home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader.elf elf32-xtensa-le)
 
-.debug_frame    0x0000000000000000      0xf70
+.debug_frame    0x0000000000000000     0x1250
  .debug_frame   0x0000000000000000       0x70 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/main/libmain.a(bootloader_start.o)
  .debug_frame   0x0000000000000070      0x118 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
  .debug_frame   0x0000000000000188      0x130 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
@@ -3077,10 +3282,11 @@ OUTPUT(/home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader.elf el
  .debug_frame   0x0000000000000dd0       0x58 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_init.o)
  .debug_frame   0x0000000000000e28       0x40 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
  .debug_frame   0x0000000000000e68       0xb8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
- .debug_frame   0x0000000000000f20       0x28 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
- .debug_frame   0x0000000000000f48       0x28 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
+ .debug_frame   0x0000000000000f20      0x2e0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_frame   0x0000000000001200       0x28 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
+ .debug_frame   0x0000000000001228       0x28 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
 
-.debug_info     0x0000000000000000    0x4f3a9
+.debug_info     0x0000000000000000    0x56b8d
  .debug_info    0x0000000000000000      0xdbb /home/dieter/Development/M5_Projekt_Ei/build/bootloader/main/libmain.a(bootloader_start.o)
  .debug_info    0x0000000000000dbb     0xa72e /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
  .debug_info    0x000000000000b4e9     0x52e2 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
@@ -3096,15 +3302,16 @@ OUTPUT(/home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader.elf el
  .debug_info    0x000000000002e323     0x36c0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
  .debug_info    0x00000000000319e3     0x1aa4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/log/liblog.a(log.o)
  .debug_info    0x0000000000033487     0x3c9a /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .debug_info    0x0000000000037121     0x36ba /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(cpu_util.o)
- .debug_info    0x000000000003a7db     0x3af2 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_wdt.o)
- .debug_info    0x000000000003e2cd     0x42ac /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_init.o)
- .debug_info    0x0000000000042579     0x6cf4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
- .debug_info    0x000000000004926d     0x453d /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
- .debug_info    0x000000000004d7aa      0xb02 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
- .debug_info    0x000000000004e2ac     0x10fd /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
+ .debug_info    0x0000000000037121     0x3691 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(cpu_util.o)
+ .debug_info    0x000000000003a7b2     0x3af2 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+ .debug_info    0x000000000003e2a4     0x42ac /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_init.o)
+ .debug_info    0x0000000000042550     0x6cf4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+ .debug_info    0x0000000000049244     0x453d /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_info    0x000000000004d781     0x780d /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_info    0x0000000000054f8e      0xb02 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
+ .debug_info    0x0000000000055a90     0x10fd /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
 
-.debug_abbrev   0x0000000000000000     0x49b0
+.debug_abbrev   0x0000000000000000     0x4e48
  .debug_abbrev  0x0000000000000000      0x28e /home/dieter/Development/M5_Projekt_Ei/build/bootloader/main/libmain.a(bootloader_start.o)
  .debug_abbrev  0x000000000000028e      0x59b /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
  .debug_abbrev  0x0000000000000829      0x429 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
@@ -3120,15 +3327,16 @@ OUTPUT(/home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader.elf el
  .debug_abbrev  0x0000000000002aa2      0x404 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
  .debug_abbrev  0x0000000000002ea6      0x32f /home/dieter/Development/M5_Projekt_Ei/build/bootloader/log/liblog.a(log.o)
  .debug_abbrev  0x00000000000031d5      0x414 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .debug_abbrev  0x00000000000035e9      0x23f /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(cpu_util.o)
- .debug_abbrev  0x0000000000003828      0x337 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_wdt.o)
- .debug_abbrev  0x0000000000003b5f      0x2ce /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_init.o)
- .debug_abbrev  0x0000000000003e2d      0x3de /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
- .debug_abbrev  0x000000000000420b      0x37a /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
- .debug_abbrev  0x0000000000004585      0x1b1 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
- .debug_abbrev  0x0000000000004736      0x27a /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
+ .debug_abbrev  0x00000000000035e9      0x218 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(cpu_util.o)
+ .debug_abbrev  0x0000000000003801      0x337 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+ .debug_abbrev  0x0000000000003b38      0x2ce /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_init.o)
+ .debug_abbrev  0x0000000000003e06      0x3de /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+ .debug_abbrev  0x00000000000041e4      0x37a /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_abbrev  0x000000000000455e      0x4bf /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_abbrev  0x0000000000004a1d      0x1b1 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
+ .debug_abbrev  0x0000000000004bce      0x27a /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
 
-.debug_loc      0x0000000000000000     0x6703
+.debug_loc      0x0000000000000000     0x720a
  .debug_loc     0x0000000000000000       0xab /home/dieter/Development/M5_Projekt_Ei/build/bootloader/main/libmain.a(bootloader_start.o)
  .debug_loc     0x00000000000000ab      0x838 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
  .debug_loc     0x00000000000008e3      0x832 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
@@ -3144,15 +3352,15 @@ OUTPUT(/home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader.elf el
  .debug_loc     0x0000000000003f04      0x2c4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
  .debug_loc     0x00000000000041c8      0x462 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/log/liblog.a(log.o)
  .debug_loc     0x000000000000462a      0xba6 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .debug_loc     0x00000000000051d0       0x15 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(cpu_util.o)
- .debug_loc     0x00000000000051e5      0x39d /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_wdt.o)
- .debug_loc     0x0000000000005582      0x275 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_init.o)
- .debug_loc     0x00000000000057f7      0x22b /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
- .debug_loc     0x0000000000005a22      0x2aa /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
- .debug_loc     0x0000000000005ccc       0x25 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
- .debug_loc     0x0000000000005cf1      0xa12 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
+ .debug_loc     0x00000000000051d0      0x39d /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+ .debug_loc     0x000000000000556d      0x275 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_init.o)
+ .debug_loc     0x00000000000057e2      0x22b /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+ .debug_loc     0x0000000000005a0d      0x2aa /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_loc     0x0000000000005cb7      0xb1c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_loc     0x00000000000067d3       0x25 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
+ .debug_loc     0x00000000000067f8      0xa12 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
 
-.debug_aranges  0x0000000000000000      0x6c0
+.debug_aranges  0x0000000000000000      0x7c8
  .debug_aranges
                 0x0000000000000000       0x38 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/main/libmain.a(bootloader_start.o)
  .debug_aranges
@@ -3194,11 +3402,13 @@ OUTPUT(/home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader.elf el
  .debug_aranges
                 0x0000000000000630       0x50 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
  .debug_aranges
-                0x0000000000000680       0x20 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
+                0x0000000000000680      0x108 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .debug_aranges
-                0x00000000000006a0       0x20 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
+                0x0000000000000788       0x20 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
+ .debug_aranges
+                0x00000000000007a8       0x20 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
 
-.debug_ranges   0x0000000000000000      0x700
+.debug_ranges   0x0000000000000000      0x810
  .debug_ranges  0x0000000000000000       0x28 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/main/libmain.a(bootloader_start.o)
  .debug_ranges  0x0000000000000028       0x60 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
  .debug_ranges  0x0000000000000088       0xe0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
@@ -3219,76 +3429,80 @@ OUTPUT(/home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader.elf el
  .debug_ranges  0x00000000000005e8       0x20 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_init.o)
  .debug_ranges  0x0000000000000608       0x18 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
  .debug_ranges  0x0000000000000620       0x40 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
- .debug_ranges  0x0000000000000660       0xa0 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
+ .debug_ranges  0x0000000000000660      0x110 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_ranges  0x0000000000000770       0xa0 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
 
-.debug_line     0x0000000000000000    0x10c5b
+.debug_line     0x0000000000000000    0x1241e
  .debug_line    0x0000000000000000      0x55e /home/dieter/Development/M5_Projekt_Ei/build/bootloader/main/libmain.a(bootloader_start.o)
  .debug_line    0x000000000000055e     0x190b /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
  .debug_line    0x0000000000001e69     0x1363 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .debug_line    0x00000000000031cc      0x55e /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
- .debug_line    0x000000000000372a      0x7ce /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_line    0x0000000000003ef8      0x826 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
- .debug_line    0x000000000000471e      0x717 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_line    0x0000000000004e35     0x1e05 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_line    0x0000000000006c3a     0x1f7e /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- .debug_line    0x0000000000008bb8      0x789 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .debug_line    0x0000000000009341      0x2db /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_efuse_esp32.o)
- .debug_line    0x000000000000961c     0x11e3 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_line    0x000000000000a7ff      0xaea /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
- .debug_line    0x000000000000b2e9      0xadc /home/dieter/Development/M5_Projekt_Ei/build/bootloader/log/liblog.a(log.o)
- .debug_line    0x000000000000bdc5     0x1a23 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .debug_line    0x000000000000d7e8      0x3a0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(cpu_util.o)
- .debug_line    0x000000000000db88      0x875 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_wdt.o)
- .debug_line    0x000000000000e3fd      0x930 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_init.o)
- .debug_line    0x000000000000ed2d      0x964 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
- .debug_line    0x000000000000f691      0x8bd /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
- .debug_line    0x000000000000ff4e      0x2e2 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
- .debug_line    0x0000000000010230      0xa2b /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
+ .debug_line    0x00000000000031cc      0x54c /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .debug_line    0x0000000000003718      0x7ce /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_line    0x0000000000003ee6      0x826 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
+ .debug_line    0x000000000000470c      0x717 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_line    0x0000000000004e23     0x1e05 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_line    0x0000000000006c28     0x1f7e /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ .debug_line    0x0000000000008ba6      0x789 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_line    0x000000000000932f      0x2db /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_efuse_esp32.o)
+ .debug_line    0x000000000000960a     0x11e3 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_line    0x000000000000a7ed      0xaea /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
+ .debug_line    0x000000000000b2d7      0xadc /home/dieter/Development/M5_Projekt_Ei/build/bootloader/log/liblog.a(log.o)
+ .debug_line    0x000000000000bdb3     0x1a23 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_line    0x000000000000d7d6      0x388 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(cpu_util.o)
+ .debug_line    0x000000000000db5e      0x875 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+ .debug_line    0x000000000000e3d3      0x930 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_init.o)
+ .debug_line    0x000000000000ed03      0x964 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+ .debug_line    0x000000000000f667      0x8bd /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_line    0x000000000000ff24     0x17ed /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_line    0x0000000000011711      0x2e2 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
+ .debug_line    0x00000000000119f3      0xa2b /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
 
-.debug_str      0x0000000000000000     0x9914
+.debug_str      0x0000000000000000     0x9cc6
  .debug_str     0x0000000000000000      0x927 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/main/libmain.a(bootloader_start.o)
                                         0x9eb (size before relaxing)
- .debug_str     0x0000000000000927     0x4fd4 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+ .debug_str     0x0000000000000927     0x4fc9 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                        0x59fb (size before relaxing)
- .debug_str     0x00000000000058fb      0x69a /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .debug_str     0x00000000000058f0      0x69a /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
                                        0x2ac8 (size before relaxing)
- .debug_str     0x0000000000005f95      0x261 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .debug_str     0x0000000000005f8a      0x261 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
                                        0x3454 (size before relaxing)
- .debug_str     0x00000000000061f6     0x158d /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_str     0x00000000000061eb     0x158d /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
                                        0x4514 (size before relaxing)
- .debug_str     0x0000000000007783      0x142 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
+ .debug_str     0x0000000000007778      0x142 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32.o)
                                         0xbab (size before relaxing)
- .debug_str     0x00000000000078c5       0xb1 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_str     0x00000000000078ba       0xb1 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
                                         0x7f4 (size before relaxing)
- .debug_str     0x0000000000007976      0x3d3 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_str     0x000000000000796b      0x3d3 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                        0x1c8b (size before relaxing)
- .debug_str     0x0000000000007d49      0x2f8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ .debug_str     0x0000000000007d3e      0x2f8 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                        0x417d (size before relaxing)
- .debug_str     0x0000000000008041       0xfc /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_str     0x0000000000008036       0xfc /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
                                        0x123e (size before relaxing)
- .debug_str     0x000000000000813d       0x85 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_efuse_esp32.o)
+ .debug_str     0x0000000000008132       0x85 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_efuse_esp32.o)
                                         0x651 (size before relaxing)
- .debug_str     0x00000000000081c2      0x21a /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_str     0x00000000000081b7      0x21a /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                        0x16c4 (size before relaxing)
- .debug_str     0x00000000000083dc      0x320 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
+ .debug_str     0x00000000000083d1      0x320 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
                                        0x2002 (size before relaxing)
- .debug_str     0x00000000000086fc      0x26d /home/dieter/Development/M5_Projekt_Ei/build/bootloader/log/liblog.a(log.o)
+ .debug_str     0x00000000000086f1      0x26d /home/dieter/Development/M5_Projekt_Ei/build/bootloader/log/liblog.a(log.o)
                                        0x11db (size before relaxing)
- .debug_str     0x0000000000008969      0x3af /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_str     0x000000000000895e      0x3af /home/dieter/Development/M5_Projekt_Ei/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                        0x258c (size before relaxing)
- .debug_str     0x0000000000008d18       0xb0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(cpu_util.o)
+ .debug_str     0x0000000000008d0d       0xb0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(cpu_util.o)
                                        0x251d (size before relaxing)
- .debug_str     0x0000000000008dc8      0x37d /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+ .debug_str     0x0000000000008dbd      0x37d /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_wdt.o)
                                        0x216a (size before relaxing)
- .debug_str     0x0000000000009145       0xc0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_init.o)
+ .debug_str     0x000000000000913a       0xc0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_init.o)
                                        0x27d1 (size before relaxing)
- .debug_str     0x0000000000009205      0x2d6 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+ .debug_str     0x00000000000091fa      0x2d6 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
                                        0x4258 (size before relaxing)
- .debug_str     0x00000000000094db      0x15d /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_str     0x00000000000094d0      0x15d /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
                                        0x2370 (size before relaxing)
- .debug_str     0x0000000000009638      0x203 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
+ .debug_str     0x000000000000962d      0x3bd /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                       0x4500 (size before relaxing)
+ .debug_str     0x00000000000099ea      0x203 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
                                         0x6df (size before relaxing)
- .debug_str     0x000000000000983b       0xd9 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
+ .debug_str     0x0000000000009bed       0xd9 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
                                         0x759 (size before relaxing)
 
 .comment        0x0000000000000000       0x25
@@ -3313,6 +3527,7 @@ OUTPUT(/home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader.elf el
  .comment       0x0000000000000025       0x26 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_init.o)
  .comment       0x0000000000000025       0x26 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
  .comment       0x0000000000000025       0x26 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .comment       0x0000000000000025       0x26 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .comment       0x0000000000000025       0x26 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
  .comment       0x0000000000000025       0x26 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)
 
@@ -3338,5 +3553,6 @@ OUTPUT(/home/dieter/Development/M5_Projekt_Ei/build/bootloader/bootloader.elf el
  .xtensa.info   0x0000000000000038        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
  .xtensa.info   0x0000000000000038        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(gpio_periph.o)
  .xtensa.info   0x0000000000000038        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/dieter/Development/M5_Projekt_Ei/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .xtensa.info   0x0000000000000038        0x0 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_bswapsi2.o)
  .xtensa.info   0x0000000000000038        0x0 /home/dieter/Development/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.2.0/no-rtti/libgcc.a(_udivdi3.o)

@@ -990,36 +990,6 @@ __attribute__((__noreturn__)) void
 
 
 # 21 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h"
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 1
-# 17 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h"
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
-       
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 1 3 4
-# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
-void __assert (const char *, int, const char *)
-     __attribute__ ((__noreturn__));
-void __assert_func (const char *, int, const char *, const char *)
-     __attribute__ ((__noreturn__));
-# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-# 18 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 2
-# 21 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-
-
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h"
-       
-# 24 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-# 26 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
 # 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
 
 # 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
@@ -1417,15 +1387,29 @@ static inline void bt_rcopy(UINT8 *dst, UINT8 const *src, UINT16 len)
 # 43 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_target.h" 2
 # 2070 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_target.h"
 # 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_trace.h" 1
-# 23 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_trace.h"
+# 22 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_trace.h"
+# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
+# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
+       
+
+
+
+# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 1 3 4
+# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
+
+# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
+void __assert (const char *, int, const char *)
+     __attribute__ ((__noreturn__));
+void __assert_func (const char *, int, const char *, const char *)
+     __attribute__ ((__noreturn__));
+# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
+# 23 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_trace.h" 2
 # 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 1 3 4
 # 36 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
 # 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
 # 37 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 2 3 4
 # 61 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
 # 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 1 3 4
-# 28 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
-
 # 28 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
 typedef __uint8_t u_int8_t;
 
@@ -2884,6 +2868,21 @@ esp_err_t esp_bt_gap_pin_reply(esp_bd_addr_t bd_addr,
                                                      _Bool 
 # 613 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
                                                           accept, uint8_t pin_code_len, esp_bt_pin_code_t pin_code);
+# 628 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_set_security_param(esp_bt_sp_param_t param_type,
+                                        void *value, uint8_t len);
+# 644 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_ssp_passkey_reply(esp_bd_addr_t bd_addr, 
+# 644 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h" 3 4
+                                                             _Bool 
+# 644 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+                                                                  accept, uint32_t passkey);
+# 658 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_ssp_confirm_reply(esp_bd_addr_t bd_addr, 
+# 658 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h" 3 4
+                                                             _Bool 
+# 658 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
+                                                                  accept);
 # 676 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
 esp_err_t esp_bt_gap_set_afh_channels(esp_bt_gap_afh_channels channels);
 # 688 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
@@ -4449,7 +4448,10 @@ long a3;
 # 1 "/home/dieter/Development/esp-idf/components/xtensa/include/esp_attr.h" 1
 # 22 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h" 2
 
-
+# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h" 1
+# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h"
+       
+# 24 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h" 2
 # 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_idf_version.h" 1
 # 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_idf_version.h"
        
@@ -5169,195 +5171,6 @@ void heap_caps_dump_all(void);
 # 338 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
 size_t heap_caps_get_allocated_size( void *ptr );
 # 88 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 2
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-       
-# 61 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-typedef struct {
-    const char *name;
-    uint32_t caps[3];
-    
-# 64 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-   _Bool 
-# 64 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-        aliased_iram;
-    
-# 65 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-   _Bool 
-# 65 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-        startup_stack;
-} soc_memory_type_desc_t;
-
-
-extern const soc_memory_type_desc_t soc_memory_types[];
-extern const size_t soc_memory_type_count;
-
-
-
-typedef struct
-{
-    intptr_t start;
-    size_t size;
-    size_t type;
-    intptr_t iram_address;
-} soc_memory_region_t;
-
-extern const soc_memory_region_t soc_memory_regions[];
-extern const size_t soc_memory_region_count;
-
-
-
-
-typedef struct
-{
-    intptr_t start;
-    intptr_t end;
-} soc_reserved_region_t;
-# 136 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-size_t soc_get_available_memory_regions(soc_memory_region_t *regions);
-
-
-
-
-
-size_t soc_get_available_memory_region_max_count(void);
-
-inline static 
-# 144 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 144 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "0"))) esp_ptr_dma_capable(const void *p)
-{
-    return (intptr_t)p >= 0x3FFAE000 && (intptr_t)p < 0x40000000;
-}
-
-inline static 
-# 149 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 149 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "1"))) esp_ptr_word_aligned(const void *p)
-{
-    return ((intptr_t)p) % 4 == 0;
-}
-
-inline static 
-# 154 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 154 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "2"))) esp_ptr_executable(const void *p)
-{
-    intptr_t ip = (intptr_t) p;
-    return (ip >= 0x400D0000 && ip < 0x40400000)
-        || (ip >= 0x40080000 && ip < 0x400A0000)
-        || (ip >= 0x400C0000 && ip < 0x400C2000);
-}
-
-inline static 
-# 162 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 162 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "3"))) esp_ptr_byte_accessible(const void *p)
-{
-    intptr_t ip = (intptr_t) p;
-    
-# 165 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-   _Bool 
-# 165 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-        r;
-    r = (ip >= 0x3FF90000 && ip < 0x40000000);
-
-
-
-
-
-
-
-    return r;
-}
-
-inline static 
-# 177 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 177 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "4"))) esp_ptr_internal(const void *p) {
-    
-# 178 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-   _Bool 
-# 178 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-        r;
-    r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x400C2000);
-    r |= ((intptr_t)p >= 0x50000000 && (intptr_t)p < 0x50002000);
-    return r;
-}
-
-
-inline static 
-# 185 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 185 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "5"))) esp_ptr_external_ram(const void *p) {
-    return ((intptr_t)p >= 0x3F800000 && (intptr_t)p < 0x3FC00000);
-}
-
-inline static 
-# 189 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 189 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "6"))) esp_ptr_in_iram(const void *p) {
-
-    return ((intptr_t)p >= 0x40080000 && (intptr_t)p < 0x400A0000);
-
-
-
-}
-
-inline static 
-# 197 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 197 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "7"))) esp_ptr_in_drom(const void *p) {
-    return ((intptr_t)p >= 0x3F400000 && (intptr_t)p < 0x3F800000);
-}
-
-inline static 
-# 201 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 201 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "8"))) esp_ptr_in_dram(const void *p) {
-    return ((intptr_t)p >= 0x3FFAE000 && (intptr_t)p < 0x40000000);
-}
-
-inline static 
-# 205 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 205 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "9"))) esp_ptr_in_diram_dram(const void *p) {
-    return ((intptr_t)p >= 0x3FFE0000 && (intptr_t)p < 0x40000000);
-}
-
-inline static 
-# 209 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 209 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "10"))) esp_ptr_in_diram_iram(const void *p) {
-    return ((intptr_t)p >= 0x400A0000 && (intptr_t)p < 0x400C0000);
-}
-
-
-inline static 
-# 214 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
-             _Bool 
-# 214 "/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1" "." "11"))) esp_stack_ptr_is_sane(uint32_t sp)
-{
-
-    return !(sp < 0x3FFAE000 + 0x10 || sp > 0x40000000 - 0x10 || ((sp & 0xF) != 0));
-}
-# 93 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 2
 # 117 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h"
 typedef uint8_t StackType_t;
 typedef int BaseType_t;
@@ -5499,7 +5312,7 @@ BaseType_t xPortInterruptedFromISRContext(void);
 
 
 
-static inline uint32_t __attribute__((section(".iram1" "." "12"))) xPortGetCoreID(void) {
+static inline uint32_t __attribute__((section(".iram1" "." "0"))) xPortGetCoreID(void) {
     uint32_t id;
     __asm__ __volatile__ (
         "rsr.prid %0\n"
@@ -5516,7 +5329,7 @@ static inline
 # 221 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h" 3 4
              _Bool 
 # 221 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h"
-                  __attribute__((section(".iram1" "." "13"))) xPortCanYield(void)
+                  __attribute__((section(".iram1" "." "1"))) xPortCanYield(void)
 {
     uint32_t ps_reg = 0;
 
@@ -5845,7 +5658,7 @@ typedef enum
           TaskHandle_t * const pvCreatedTask,
           const BaseType_t xCoreID);
 # 432 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
- static inline __attribute__((section(".iram1" "." "14"))) BaseType_t xTaskCreate(
+ static inline __attribute__((section(".iram1" "." "2"))) BaseType_t xTaskCreate(
    TaskFunction_t pvTaskCode,
    const char * const pcName,
    const uint32_t usStackDepth,
@@ -6473,7 +6286,219 @@ typedef struct {
 # 31 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h" 2
 
 
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h" 1
+# 22 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdpdefs.h" 1
+# 23 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h" 2
+# 72 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+typedef void (tSDP_DISC_CMPL_CB) (UINT16 result);
+typedef void (tSDP_DISC_CMPL_CB2) (UINT16 result, void *user_data);
 
+typedef struct {
+    BD_ADDR peer_addr;
+    UINT16 peer_mtu;
+} tSDP_DR_OPEN;
+
+typedef struct {
+    UINT8 *p_data;
+    UINT16 data_len;
+} tSDP_DR_DATA;
+
+typedef union {
+    tSDP_DR_OPEN open;
+    tSDP_DR_DATA data;
+} tSDP_DATA;
+
+
+typedef void (tSDP_DISC_RES_CB) (UINT16 event, tSDP_DATA *p_data);
+
+
+typedef struct {
+    union {
+        UINT8 u8;
+        UINT16 u16;
+        UINT32 u32;
+        UINT8 array[4];
+        struct t_sdp_disc_attr *p_sub_attr;
+    } v;
+
+} tSDP_DISC_ATVAL;
+
+typedef struct t_sdp_disc_attr {
+    struct t_sdp_disc_attr *p_next_attr;
+    UINT16 attr_id;
+    UINT16 attr_len_type;
+    tSDP_DISC_ATVAL attr_value;
+} tSDP_DISC_ATTR;
+
+typedef struct t_sdp_disc_rec {
+    tSDP_DISC_ATTR *p_first_attr;
+    struct t_sdp_disc_rec *p_next_rec;
+    UINT32 time_read;
+    BD_ADDR remote_bd_addr;
+} tSDP_DISC_REC;
+
+typedef struct {
+    UINT32 mem_size;
+    UINT32 mem_free;
+    tSDP_DISC_REC *p_first_rec;
+    UINT16 num_uuid_filters;
+    tBT_UUID uuid_filters[3];
+    UINT16 num_attr_filters;
+    UINT16 attr_filters[15];
+    UINT8 *p_free_mem;
+
+    UINT8 *raw_data;
+    UINT32 raw_size;
+    UINT32 raw_used;
+
+} tSDP_DISCOVERY_DB;
+
+
+typedef struct {
+    UINT16 protocol_uuid;
+    UINT16 num_params;
+    UINT16 params[2];
+} tSDP_PROTOCOL_ELEM;
+
+typedef struct {
+    UINT16 num_elems;
+    tSDP_PROTOCOL_ELEM list_elem[3];
+} tSDP_PROTO_LIST_ELEM;
+
+
+
+
+typedef struct t_sdp_di_record {
+    UINT16 vendor;
+    UINT16 vendor_id_source;
+    UINT16 product;
+    UINT16 version;
+    BOOLEAN primary_record;
+    char client_executable_url[400];
+    char service_description[400];
+    char documentation_url[400];
+} tSDP_DI_RECORD;
+
+
+typedef struct t_sdp_di_get_record {
+    UINT16 spec_id;
+    tSDP_DI_RECORD rec;
+} tSDP_DI_GET_RECORD;
+# 187 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_InitDiscoveryDb (tSDP_DISCOVERY_DB *p_db, UINT32 len,
+                                    UINT16 num_uuid,
+                                    tBT_UUID *p_uuid_list,
+                                    UINT16 num_attr,
+                                    UINT16 *p_attr_list);
+# 202 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_CancelServiceSearch (tSDP_DISCOVERY_DB *p_db);
+# 213 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_ServiceSearchRequest (UINT8 *p_bd_addr,
+        tSDP_DISCOVERY_DB *p_db,
+        tSDP_DISC_CMPL_CB *p_cb);
+# 231 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_ServiceSearchAttributeRequest (UINT8 *p_bd_addr,
+        tSDP_DISCOVERY_DB *p_db,
+        tSDP_DISC_CMPL_CB *p_cb);
+# 249 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_ServiceSearchAttributeRequest2 (UINT8 *p_bd_addr,
+        tSDP_DISCOVERY_DB *p_db,
+        tSDP_DISC_CMPL_CB2 *p_cb, void *user_data);
+# 267 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern tSDP_DISC_REC *SDP_FindAttributeInDb (tSDP_DISCOVERY_DB *p_db,
+        UINT16 attr_id,
+        tSDP_DISC_REC *p_start_rec);
+# 282 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern tSDP_DISC_ATTR *SDP_FindAttributeInRec (tSDP_DISC_REC *p_rec,
+        UINT16 attr_id);
+# 298 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern tSDP_DISC_REC *SDP_FindServiceInDb (tSDP_DISCOVERY_DB *p_db,
+        UINT16 service_uuid,
+        tSDP_DISC_REC *p_start_rec);
+# 319 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern tSDP_DISC_REC *SDP_FindServiceUUIDInDb (tSDP_DISCOVERY_DB *p_db,
+        tBT_UUID *p_uuid,
+        tSDP_DISC_REC *p_start_rec);
+# 336 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_FindServiceUUIDInRec_128bit(tSDP_DISC_REC *p_rec, tBT_UUID *p_uuid);
+# 350 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern tSDP_DISC_REC *SDP_FindServiceInDb_128bit(tSDP_DISCOVERY_DB *p_db,
+        tSDP_DISC_REC *p_start_rec);
+# 364 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_FindProtocolListElemInRec (tSDP_DISC_REC *p_rec,
+        UINT16 layer_uuid,
+        tSDP_PROTOCOL_ELEM *p_elem);
+# 380 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_FindAddProtoListsElemInRec (tSDP_DISC_REC *p_rec,
+        UINT16 layer_uuid,
+        tSDP_PROTOCOL_ELEM *p_elem);
+# 399 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_FindProfileVersionInRec (tSDP_DISC_REC *p_rec,
+        UINT16 profile_uuid,
+        UINT16 *p_version);
+# 418 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern UINT32 SDP_CreateRecord (void);
+# 434 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_DeleteRecord (UINT32 handle);
+# 450 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern INT32 SDP_ReadRecord(UINT32 handle, UINT8 *p_data, INT32 *p_data_len);
+# 466 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddAttribute (UINT32 handle, UINT16 attr_id,
+                                 UINT8 attr_type, UINT32 attr_len,
+                                 UINT8 *p_val);
+# 485 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddSequence (UINT32 handle, UINT16 attr_id,
+                                UINT16 num_elem, UINT8 type[],
+                                UINT8 len[], UINT8 *p_val[]);
+# 502 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddUuidSequence (UINT32 handle, UINT16 attr_id,
+                                    UINT16 num_uuids, UINT16 *p_uuids);
+# 518 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddProtocolList (UINT32 handle, UINT16 num_elem,
+                                    tSDP_PROTOCOL_ELEM *p_elem_list);
+# 534 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddAdditionProtoLists (UINT32 handle, UINT16 num_elem,
+        tSDP_PROTO_LIST_ELEM *p_proto_list);
+# 550 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddProfileDescriptorList (UINT32 handle,
+        UINT16 profile_uuid,
+        UINT16 version);
+# 567 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddLanguageBaseAttrIDList (UINT32 handle,
+        UINT16 lang, UINT16 char_enc,
+        UINT16 base_id);
+# 584 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_AddServiceClassIdList (UINT32 handle,
+        UINT16 num_services,
+        UINT16 *p_service_uuids);
+# 599 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern BOOLEAN SDP_DeleteAttribute (UINT32 handle, UINT16 attr_id);
+# 613 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern UINT16 SDP_SetLocalDiRecord (tSDP_DI_RECORD *device_info,
+                                    UINT32 *p_handle);
+# 625 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern UINT16 SDP_DiDiscover (BD_ADDR remote_device,
+                              tSDP_DISCOVERY_DB *p_db, UINT32 len,
+                              tSDP_DISC_CMPL_CB *p_cb);
+# 639 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern UINT8 SDP_GetNumDiRecords (tSDP_DISCOVERY_DB *p_db);
+# 652 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern UINT16 SDP_GetDiRecord (UINT8 getRecordIndex,
+                               tSDP_DI_GET_RECORD *device_info,
+                               tSDP_DISCOVERY_DB *p_db);
+# 667 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+extern UINT8 SDP_SetTraceLevel (UINT8 new_level);
+# 679 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+UINT32 SDP_ConnOpen (UINT8 *p_bd_addr, tSDP_DISC_RES_CB *p_rcb,
+                     tSDP_DISC_CMPL_CB *p_cb);
+# 691 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+BOOLEAN SDP_WriteData (UINT32 handle, BT_HDR *p_msg);
+# 704 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+BOOLEAN SDP_ConnClose (UINT32 handle);
+# 718 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
+BOOLEAN SDP_FindServiceUUIDInRec(tSDP_DISC_REC *p_rec, tBT_UUID *p_uuid);
+# 34 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h" 2
 
 
 
@@ -7617,6 +7642,12 @@ tBTM_STATUS BTM_VendorSpecificCommand(UINT16 opcode,
                                       UINT8 param_len,
                                       UINT8 *p_param_buf,
                                       tBTM_VSC_CMPL_CB *p_cb);
+# 2098 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
+UINT8 BTM_AllocateSCN(void);
+# 2111 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
+BOOLEAN BTM_TryAllocateSCN(UINT8 scn);
+# 2125 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
+BOOLEAN BTM_FreeSCN(UINT8 scn);
 # 2140 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
 UINT8 BTM_SetTraceLevel (UINT8 new_level);
 # 2155 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
@@ -7685,6 +7716,18 @@ tBTM_INQ_INFO *BTM_InqDbNext (tBTM_INQ_INFO *p_cur);
 tBTM_STATUS BTM_ClearInqDb (BD_ADDR p_bda);
 # 2641 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
 tBTM_STATUS BTM_ReadInquiryRspTxPower (tBTM_CMPL_CB *p_cb);
+# 2660 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
+tBTM_STATUS BTM_StartDiscovery (tBTM_CMPL_CB *p_cmpl_cb,
+                                BD_ADDR_PTR p_rem_addr);
+# 2676 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
+tSDP_DISC_REC *BTM_FindAttribute (UINT16 attr_id,
+                                  tSDP_DISC_REC *p_start_rec);
+# 2692 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
+tSDP_DISC_REC *BTM_FindService (UINT16 service_uuid,
+                                tSDP_DISC_REC *p_start_rec);
+# 2708 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
+void BTM_SetDiscoveryParams (UINT16 num_uuid, tBT_UUID *p_uuid_list,
+                             UINT16 num_attr, UINT16 *p_attr_list);
 # 2725 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_api.h"
 tBTM_STATUS BTM_SetLinkPolicy (BD_ADDR remote_bda,
                                UINT16 *settings);
@@ -7906,11 +7949,7 @@ tBTM_STATUS BTM_SetAfhChannels (AFH_CHANNELS channels, tBTM_CMPL_CB *p_afh_chann
 tBTM_STATUS BTM_BleSetChannels (BLE_CHANNELS channels, tBTM_CMPL_CB *p_ble_channels_cmpl_cback);
 # 31 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h" 2
 
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h" 1
-# 22 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdpdefs.h" 1
-# 23 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h" 2
-# 33 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h" 2
+
 
 
 # 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h" 1
@@ -9549,6 +9588,16 @@ typedef UINT8 tBTA_DM_SWITCH_EVT;
 typedef void (tBTA_DM_SWITCH_CBACK)(tBTA_DM_SWITCH_EVT event, tBTA_STATUS status);
 # 1367 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
 typedef UINT8 tBTA_DM_ROUTE_PATH;
+
+
+
+
+
+typedef tSDP_DI_RECORD tBTA_DI_RECORD;
+
+typedef tSDP_DI_GET_RECORD tBTA_DI_GET_RECORD;
+
+typedef tSDP_DISCOVERY_DB tBTA_DISCOVERY_DB;
 # 1392 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
 typedef UINT8 tBTA_DM_LINK_TYPE;
 # 1423 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
@@ -9583,6 +9632,12 @@ extern void BTA_DmSearch(tBTA_DM_INQ *p_dm_inq, tBTA_SERVICE_MASK services,
                          tBTA_DM_SEARCH_CBACK *p_cback);
 # 1574 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
 extern void BTA_DmSearchCancel(void);
+# 1588 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
+extern void BTA_DmDiscover(BD_ADDR bd_addr, tBTA_SERVICE_MASK services,
+                           tBTA_DM_SEARCH_CBACK *p_cback, BOOLEAN sdp_search);
+# 1602 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
+extern void BTA_DmDiscoverUUID(BD_ADDR bd_addr, tBT_UUID *uuid,
+                               tBTA_DM_SEARCH_CBACK *p_cback, BOOLEAN sdp_search);
 # 1615 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
 tBTA_STATUS BTA_DmGetCachedRemoteName(BD_ADDR remote_device, UINT8 **pp_cached_name);
 # 1630 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
@@ -9615,6 +9670,9 @@ extern tBTA_STATUS BTA_DmRemoveDevice(BD_ADDR bd_addr, tBT_TRANSPORT transport);
 extern void BTA_GetEirService( UINT8 *p_eir, tBTA_SERVICE_MASK *p_services );
 # 1798 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
 extern UINT16 BTA_DmGetConnectionState( BD_ADDR bd_addr );
+# 1810 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
+extern tBTA_STATUS BTA_DmSetLocalDiRecord( tBTA_DI_RECORD *p_device_info,
+        UINT32 *p_handle );
 # 1829 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
 extern void BTA_DmCloseACL(BD_ADDR bd_addr, BOOLEAN remove_dev, tBTA_TRANSPORT transport);
 # 1842 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_api.h"
@@ -9821,22 +9879,14 @@ typedef enum {
     BTC_PID_BLUFI,
     BTC_PID_DM_SEC,
     BTC_PID_ALARM,
-# 74 "/home/dieter/Development/esp-idf/components/bt/common/btc/include/btc/btc_task.h"
-    BTC_PID_PROV,
-    BTC_PID_MODEL,
-    BTC_PID_HEALTH_CLIENT,
-    BTC_PID_HEALTH_SERVER,
-    BTC_PID_CONFIG_CLIENT,
-    BTC_PID_CONFIG_SERVER,
-    BTC_PID_GENERIC_CLIENT,
-    BTC_PID_LIGHTING_CLIENT,
-    BTC_PID_SENSOR_CLIENT,
-    BTC_PID_TIME_SCENE_CLIENT,
-    BTC_PID_GENERIC_SERVER,
-    BTC_PID_LIGHTING_SERVER,
-    BTC_PID_SENSOR_SERVER,
-    BTC_PID_TIME_SCENE_SERVER,
 
+    BTC_PID_GAP_BT,
+    BTC_PID_PRF_QUE,
+    BTC_PID_A2DP,
+    BTC_PID_AVRC_CT,
+    BTC_PID_AVRC_TG,
+    BTC_PID_SPP,
+# 89 "/home/dieter/Development/esp-idf/components/bt/common/btc/include/btc/btc_task.h"
     BTC_PID_NUM,
 } btc_pid_t;
 
@@ -9859,9 +9909,9 @@ _Bool
 # 19 "/home/dieter/Development/esp-idf/components/bt/common/btc/include/btc/btc_manage.h" 2
 
 
-extern void *btc_profile_cb_tab[BTC_PID_NUM];
 
 
+extern void **btc_profile_cb_tab;
 
 
 void esp_profile_cb_reset(void);
@@ -9899,6 +9949,150 @@ extern BOOLEAN utl_isintstr(const char *p_s);
 # 178 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/utl.h"
 extern BOOLEAN utl_isdialstr(const char *p_s);
 # 24 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/profile/std/include/btc_gap_bt.h" 2
+
+
+typedef enum {
+    BTC_GAP_BT_SEARCH_DEVICES_EVT = 0,
+    BTC_GAP_BT_SEARCH_SERVICES_EVT,
+    BTC_GAP_BT_SEARCH_SERVICE_RECORD_EVT,
+    BTC_GAP_BT_AUTH_CMPL_EVT,
+    BTC_GAP_BT_PIN_REQ_EVT,
+    BTC_GAP_BT_CFM_REQ_EVT,
+    BTC_GAP_BT_KEY_NOTIF_EVT,
+    BTC_GAP_BT_KEY_REQ_EVT,
+    BTC_GAP_BT_READ_RSSI_DELTA_EVT,
+    BTC_GAP_BT_CONFIG_EIR_DATA_EVT,
+    BTC_GAP_BT_SET_AFH_CHANNELS_EVT,
+    BTC_GAP_BT_READ_REMOTE_NAME_EVT,
+}btc_gap_bt_evt_t;
+
+typedef enum {
+    BTC_GAP_BT_ACT_SET_SCAN_MODE = 0,
+    BTC_GAP_BT_ACT_START_DISCOVERY,
+    BTC_GAP_BT_ACT_CANCEL_DISCOVERY,
+    BTC_GAP_BT_ACT_GET_REMOTE_SERVICES,
+    BTC_GAP_BT_ACT_GET_REMOTE_SERVICE_RECORD,
+    BTC_GAP_BT_ACT_SET_COD,
+    BTC_GAP_BT_ACT_READ_RSSI_DELTA,
+    BTC_GAP_BT_ACT_REMOVE_BOND_DEVICE,
+    BTC_GAP_BT_ACT_SET_PIN_TYPE,
+    BTC_GAP_BT_ACT_PIN_REPLY,
+    BTC_GAP_BT_ACT_SET_SECURITY_PARAM,
+    BTC_GAP_BT_ACT_PASSKEY_REPLY,
+    BTC_GAP_BT_ACT_CONFIRM_REPLY,
+    BTC_GAP_BT_ACT_CONFIG_EIR,
+    BTC_GAP_BT_ACT_SET_AFH_CHANNELS,
+    BTC_GAP_BT_ACT_READ_REMOTE_NAME,
+} btc_gap_bt_act_t;
+
+
+typedef union {
+
+    struct set_bt_scan_mode_args {
+        esp_bt_connection_mode_t c_mode;
+        esp_bt_discovery_mode_t d_mode;
+    } set_scan_mode;
+
+
+    struct start_disc_args {
+        esp_bt_inq_mode_t mode;
+        uint8_t inq_len;
+        uint8_t num_rsps;
+    } start_disc;
+
+
+    bt_bdaddr_t bda;
+
+
+    struct get_rmt_srv_rcd_args {
+        bt_bdaddr_t bda;
+        esp_bt_uuid_t uuid;
+    } get_rmt_srv_rcd;
+
+
+    struct set_cod_args {
+       esp_bt_cod_t cod;
+       esp_bt_cod_mode_t mode;
+    } set_cod;
+
+
+    struct bt_read_rssi_delta_args {
+        bt_bdaddr_t bda;
+    } read_rssi_delta;
+
+
+    struct rm_bond_device_args {
+       bt_bdaddr_t bda;
+    } rm_bond_device;
+
+
+    struct set_pin_type_args {
+        esp_bt_pin_type_t pin_type;
+        uint8_t pin_code_len;
+        esp_bt_pin_code_t pin_code;
+    } set_pin_type;
+
+
+    struct pin_reply_args {
+        bt_bdaddr_t bda;
+        
+# 110 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/profile/std/include/btc_gap_bt.h" 3 4
+       _Bool 
+# 110 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/profile/std/include/btc_gap_bt.h"
+            accept;
+        uint8_t pin_code_len;
+        esp_bt_pin_code_t pin_code;
+    } pin_reply;
+
+
+    struct set_sec_param_args {
+        esp_bt_sp_param_t param_type;
+        uint8_t len;
+        uint8_t *value;
+    } set_security_param;
+
+
+    struct passkey_reply_args {
+       bt_bdaddr_t bda;
+       
+# 125 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/profile/std/include/btc_gap_bt.h" 3 4
+      _Bool 
+# 125 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/profile/std/include/btc_gap_bt.h"
+           accept;
+       uint32_t passkey;
+    } passkey_reply;
+
+
+    struct confirm_reply_args {
+       bt_bdaddr_t bda;
+       
+# 132 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/profile/std/include/btc_gap_bt.h" 3 4
+      _Bool 
+# 132 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/profile/std/include/btc_gap_bt.h"
+           accept;
+    } confirm_reply;
+
+
+    struct config_eir_args {
+       esp_bt_eir_data_t eir_data;
+    } config_eir;
+
+
+    struct set_afh_channels_args {
+       esp_bt_gap_afh_channels channels;
+    } set_afh_channels;
+
+
+    bt_bdaddr_t rmt_name_bda;
+
+} btc_gap_bt_args_t;
+
+void btc_gap_bt_call_handler(btc_msg_t *msg);
+void btc_gap_bt_cb_handler(btc_msg_t *msg);
+void btc_gap_bt_arg_deep_copy(btc_msg_t *msg, void *p_dest, void *p_src);
+void btc_gap_bt_busy_level_updated(uint8_t bl_flags);
+
+esp_err_t btc_gap_bt_get_cod(esp_bt_cod_t *cod);
 # 23 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c" 2
 # 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/include/btc/btc_storage.h" 1
 # 40 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/include/btc/btc_storage.h"
@@ -9915,3 +10109,481 @@ int btc_storage_get_num_bt_bond_devices(void);
 # 90 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/include/btc/btc_storage.h"
 bt_status_t btc_storage_get_bonded_bt_devices_list(bt_bdaddr_t *bond_dev, int dev_num);
 # 24 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c" 2
+
+
+
+esp_err_t esp_bt_gap_register_callback(esp_bt_gap_cb_t callback)
+{
+    if (esp_bluedroid_get_status() != ESP_BLUEDROID_STATUS_ENABLED) {
+        return 0x103;
+    }
+
+    if (callback == 
+# 33 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c" 3 4
+                   ((void *)0)
+# 33 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c"
+                       ) {
+        return -1;
+    }
+
+    btc_profile_cb_set(BTC_PID_GAP_BT, callback);
+    return 0;
+}
+
+esp_err_t esp_bt_gap_set_scan_mode(esp_bt_connection_mode_t c_mode, esp_bt_discovery_mode_t d_mode)
+{
+    btc_msg_t msg;
+    btc_gap_bt_args_t arg;
+
+    if (esp_bluedroid_get_status() != ESP_BLUEDROID_STATUS_ENABLED) {
+        return 0x103;
+    }
+
+    msg.sig = BTC_SIG_API_CALL;
+    msg.pid = BTC_PID_GAP_BT;
+    msg.act = BTC_GAP_BT_ACT_SET_SCAN_MODE;
+    arg.set_scan_mode.c_mode = c_mode;
+    arg.set_scan_mode.d_mode = d_mode;
+
+    return (btc_transfer_context(&msg, &arg, sizeof(btc_gap_bt_args_t), 
+# 56 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c" 3 4
+                                                                       ((void *)0)
+# 56 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c"
+                                                                           ) == BT_STATUS_SUCCESS ? 0 : -1);
+}
+
+esp_err_t esp_bt_gap_start_discovery(esp_bt_inq_mode_t mode, uint8_t inq_len, uint8_t num_rsps)
+{
+    btc_msg_t msg;
+    btc_gap_bt_args_t arg;
+
+    if (esp_bluedroid_get_status() != ESP_BLUEDROID_STATUS_ENABLED) {
+        return 0x103;
+    }
+
+    if (mode != ESP_BT_INQ_MODE_GENERAL_INQUIRY &&
+            mode != ESP_BT_INQ_MODE_LIMITED_INQUIRY) {
+        return 0x102;
+    }
+
+    if (inq_len < (0x01) ||
+            inq_len > (0x30)) {
+        return 0x102;
+    }
+
+    msg.sig = BTC_SIG_API_CALL;
+    msg.pid = BTC_PID_GAP_BT;
+    msg.act = BTC_GAP_BT_ACT_START_DISCOVERY;
+
+    arg.start_disc.mode = mode;
+    arg.start_disc.inq_len = inq_len;
+    arg.start_disc.num_rsps = num_rsps;
+
+    return (btc_transfer_context(&msg, &arg, sizeof(btc_gap_bt_args_t), 
+# 86 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c" 3 4
+                                                                       ((void *)0)
+# 86 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c"
+                                                                           ) == BT_STATUS_SUCCESS ? 0 : -1);
+}
+
+esp_err_t esp_bt_gap_cancel_discovery(void)
+{
+    btc_msg_t msg;
+
+    if (esp_bluedroid_get_status() != ESP_BLUEDROID_STATUS_ENABLED) {
+        return 0x103;
+    }
+
+    msg.sig = BTC_SIG_API_CALL;
+    msg.pid = BTC_PID_GAP_BT;
+    msg.act = BTC_GAP_BT_ACT_CANCEL_DISCOVERY;
+
+    return (btc_transfer_context(&msg, 
+# 101 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c" 3 4
+                                      ((void *)0)
+# 101 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c"
+                                          , 0, 
+# 101 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c" 3 4
+                                               ((void *)0)
+# 101 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c"
+                                                   ) == BT_STATUS_SUCCESS ? 0 : -1);
+}
+
+esp_err_t esp_bt_gap_get_remote_services(esp_bd_addr_t remote_bda)
+{
+    btc_msg_t msg;
+    btc_gap_bt_args_t arg;
+
+    if (esp_bluedroid_get_status() != ESP_BLUEDROID_STATUS_ENABLED) {
+        return 0x103;
+    }
+
+    msg.sig = BTC_SIG_API_CALL;
+    msg.pid = BTC_PID_GAP_BT;
+    msg.act = BTC_GAP_BT_ACT_GET_REMOTE_SERVICES;
+
+    memcpy(&arg.bda, remote_bda, sizeof(bt_bdaddr_t));
+    return (btc_transfer_context(&msg, &arg, sizeof(btc_gap_bt_args_t), 
+# 118 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c" 3 4
+                                                                       ((void *)0)
+# 118 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c"
+                                                                           ) == BT_STATUS_SUCCESS ? 0 : -1);
+}
+
+esp_err_t esp_bt_gap_get_remote_service_record(esp_bd_addr_t remote_bda, esp_bt_uuid_t *uuid)
+{
+    btc_msg_t msg;
+    btc_gap_bt_args_t arg;
+
+    if (esp_bluedroid_get_status() != ESP_BLUEDROID_STATUS_ENABLED) {
+        return 0x103;
+    }
+
+    msg.sig = BTC_SIG_API_CALL;
+    msg.pid = BTC_PID_GAP_BT;
+    msg.act = BTC_GAP_BT_ACT_GET_REMOTE_SERVICE_RECORD;
+
+    memcpy(&arg.get_rmt_srv_rcd.bda, remote_bda, sizeof(bt_bdaddr_t));
+    memcpy(&arg.get_rmt_srv_rcd.uuid, uuid, sizeof(esp_bt_uuid_t));
+    return (btc_transfer_context(&msg, &arg, sizeof(btc_gap_bt_args_t), 
+# 136 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c" 3 4
+                                                                       ((void *)0)
+# 136 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c"
+                                                                           ) == BT_STATUS_SUCCESS ? 0 : -1);
+}
+
+uint8_t *esp_bt_gap_resolve_eir_data(uint8_t *eir, esp_bt_eir_type_t type, uint8_t *length)
+{
+    if (!eir) {
+        return 
+# 142 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c" 3 4
+              ((void *)0)
+# 142 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c"
+                  ;
+    }
+
+    return BTM_CheckEirData(eir, type, length);
+}
+
+esp_err_t esp_bt_gap_config_eir_data(esp_bt_eir_data_t *eir_data)
+{
+    btc_msg_t msg;
+    btc_gap_bt_args_t arg;
+
+    if (esp_bluedroid_get_status() != ESP_BLUEDROID_STATUS_ENABLED) {
+        return 0x103;
+    }
+
+    if (eir_data == 
+# 157 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c" 3 4
+                   ((void *)0)
+# 157 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c"
+                       ) {
+        return 0x102;
+    }
+
+    if (eir_data->manufacturer_len > 240
+        || eir_data->url_len > 240) {
+        return 0x102;
+    }
+
+    if ((eir_data->manufacturer_len > 0 && eir_data->p_manufacturer_data == 
+# 166 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c" 3 4
+                                                                           ((void *)0)
+# 166 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c"
+                                                                               )
+        || (eir_data->url_len > 0 && eir_data->p_url == 
+# 167 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c" 3 4
+                                                       ((void *)0)
+# 167 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c"
+                                                           )) {
+        return 0x102;
+    }
+
+    msg.sig = BTC_SIG_API_CALL;
+    msg.pid = BTC_PID_GAP_BT;
+    msg.act = BTC_GAP_BT_ACT_CONFIG_EIR;
+
+    memcpy(&arg.config_eir, eir_data, sizeof(esp_bt_eir_data_t));
+
+    return (btc_transfer_context(&msg, &arg, sizeof(btc_gap_bt_args_t), btc_gap_bt_arg_deep_copy) == BT_STATUS_SUCCESS ? 0 : -1);
+}
+
+esp_err_t esp_bt_gap_set_cod(esp_bt_cod_t cod, esp_bt_cod_mode_t mode)
+{
+    btc_msg_t msg;
+    btc_gap_bt_args_t arg;
+
+    if (esp_bluedroid_get_status() != ESP_BLUEDROID_STATUS_ENABLED) {
+        return 0x103;
+    }
+
+    switch (mode) {
+    case ESP_BT_SET_COD_MAJOR_MINOR:
+    case ESP_BT_SET_COD_SERVICE_CLASS:
+    case ESP_BT_CLR_COD_SERVICE_CLASS:
+    case ESP_BT_SET_COD_ALL:
+    case ESP_BT_INIT_COD:
+        break;
+    default:
+        return 0x102;
+        break;
+    }
+
+    msg.sig = BTC_SIG_API_CALL;
+    msg.pid = BTC_PID_GAP_BT;
+    msg.act = BTC_GAP_BT_ACT_SET_COD;
+
+    arg.set_cod.mode = mode;
+    memcpy(&arg.set_cod.cod, &cod, sizeof(esp_bt_cod_t));
+    return (btc_transfer_context(&msg, &arg, sizeof(btc_gap_bt_args_t), 
+# 207 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c" 3 4
+                                                                       ((void *)0)
+# 207 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c"
+                                                                           ) == BT_STATUS_SUCCESS ? 0 : -1);
+}
+
+
+esp_err_t esp_bt_gap_get_cod(esp_bt_cod_t *cod)
+{
+    return btc_gap_bt_get_cod(cod);
+}
+
+
+esp_err_t esp_bt_gap_read_rssi_delta(esp_bd_addr_t remote_addr)
+{
+    btc_msg_t msg;
+    btc_gap_bt_args_t arg;
+    msg.sig = BTC_SIG_API_CALL;
+    msg.pid = BTC_PID_GAP_BT;
+    msg.act = BTC_GAP_BT_ACT_READ_RSSI_DELTA;
+    memcpy(arg.read_rssi_delta.bda.address, remote_addr, sizeof(esp_bd_addr_t));
+
+    return (btc_transfer_context(&msg, &arg, sizeof(btc_gap_bt_args_t), 
+# 226 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c" 3 4
+                                                                       ((void *)0)
+# 226 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c"
+                                                                           ) == BT_STATUS_SUCCESS ? 0 : -1);
+}
+
+esp_err_t esp_bt_gap_remove_bond_device(esp_bd_addr_t bd_addr)
+{
+    btc_msg_t msg;
+    btc_gap_bt_args_t arg;
+
+    if (esp_bluedroid_get_status() != ESP_BLUEDROID_STATUS_ENABLED) {
+        return 0x103;
+    }
+
+    msg.sig = BTC_SIG_API_CALL;
+    msg.pid = BTC_PID_GAP_BT;
+    msg.act = BTC_GAP_BT_ACT_REMOVE_BOND_DEVICE;
+
+    memcpy(arg.rm_bond_device.bda.address, bd_addr, sizeof(esp_bd_addr_t));
+    return (btc_transfer_context(&msg, &arg, sizeof(btc_gap_bt_args_t), 
+# 243 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c" 3 4
+                                                                       ((void *)0)
+# 243 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c"
+                                                                           ) == BT_STATUS_SUCCESS ? 0 : -1);
+}
+
+int esp_bt_gap_get_bond_device_num(void)
+{
+    if (esp_bluedroid_get_status() != ESP_BLUEDROID_STATUS_ENABLED) {
+        return -1;
+    }
+    return btc_storage_get_num_bt_bond_devices();
+}
+
+esp_err_t esp_bt_gap_get_bond_device_list(int *dev_num, esp_bd_addr_t *dev_list)
+{
+    int ret;
+    int dev_num_total;
+
+    if (dev_num == 
+# 259 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c" 3 4
+                  ((void *)0) 
+# 259 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c"
+                       || dev_list == 
+# 259 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c" 3 4
+                                      ((void *)0)
+# 259 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c"
+                                          ) {
+        return 0x102;
+    }
+
+    if (esp_bluedroid_get_status() != ESP_BLUEDROID_STATUS_ENABLED) {
+        return 0x103;
+    }
+
+    dev_num_total = btc_storage_get_num_bt_bond_devices();
+    if (*dev_num > dev_num_total) {
+        *dev_num = dev_num_total;
+    }
+
+    ret = btc_storage_get_bonded_bt_devices_list((bt_bdaddr_t *)dev_list, *dev_num);
+
+    return (ret == BT_STATUS_SUCCESS ? 0 : -1);
+}
+
+esp_err_t esp_bt_gap_set_pin(esp_bt_pin_type_t pin_type, uint8_t pin_code_len, esp_bt_pin_code_t pin_code)
+{
+    btc_msg_t msg;
+    btc_gap_bt_args_t arg;
+
+    if (esp_bluedroid_get_status() != ESP_BLUEDROID_STATUS_ENABLED) {
+        return 0x103;
+    }
+
+    msg.sig = BTC_SIG_API_CALL;
+    msg.pid = BTC_PID_GAP_BT;
+    msg.act = BTC_GAP_BT_ACT_SET_PIN_TYPE;
+    arg.set_pin_type.pin_type = pin_type;
+    if (pin_type == ESP_BT_PIN_TYPE_FIXED){
+        arg.set_pin_type.pin_code_len = pin_code_len;
+        memcpy(arg.set_pin_type.pin_code, pin_code, pin_code_len);
+    } else {
+        arg.set_pin_type.pin_code_len = 0;
+        memset(arg.set_pin_type.pin_code, 0, 16);
+    }
+
+    return (btc_transfer_context(&msg, &arg, sizeof(btc_gap_bt_args_t), btc_gap_bt_arg_deep_copy)
+            == BT_STATUS_SUCCESS ? 0 : -1);
+}
+
+esp_err_t esp_bt_gap_pin_reply(esp_bd_addr_t bd_addr, 
+# 302 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c" 3 4
+                                                     _Bool 
+# 302 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c"
+                                                          accept, uint8_t pin_code_len, esp_bt_pin_code_t pin_code)
+{
+    btc_msg_t msg;
+    btc_gap_bt_args_t arg;
+
+    if (esp_bluedroid_get_status() != ESP_BLUEDROID_STATUS_ENABLED) {
+        return 0x103;
+    }
+
+    msg.sig = BTC_SIG_API_CALL;
+    msg.pid = BTC_PID_GAP_BT;
+    msg.act = BTC_GAP_BT_ACT_PIN_REPLY;
+    arg.pin_reply.accept = accept;
+    arg.pin_reply.pin_code_len = pin_code_len;
+    memcpy(arg.pin_reply.bda.address, bd_addr, sizeof(esp_bd_addr_t));
+    memcpy(arg.pin_reply.pin_code, pin_code, pin_code_len);
+
+    return (btc_transfer_context(&msg, &arg, sizeof(btc_gap_bt_args_t), btc_gap_bt_arg_deep_copy)
+            == BT_STATUS_SUCCESS ? 0 : -1);
+}
+
+
+esp_err_t esp_bt_gap_set_security_param(esp_bt_sp_param_t param_type,
+        void *value, uint8_t len)
+{
+    btc_msg_t msg;
+    btc_gap_bt_args_t arg;
+
+    if (esp_bluedroid_get_status() != ESP_BLUEDROID_STATUS_ENABLED) {
+        return 0x103;
+    }
+
+    msg.sig = BTC_SIG_API_CALL;
+    msg.pid = BTC_PID_GAP_BT;
+    msg.act = BTC_GAP_BT_ACT_SET_SECURITY_PARAM;
+    arg.set_security_param.param_type = param_type;
+    arg.set_security_param.len = len;
+    arg.set_security_param.value = value;
+
+    return (btc_transfer_context(&msg, &arg, sizeof(btc_gap_bt_args_t), btc_gap_bt_arg_deep_copy)
+            == BT_STATUS_SUCCESS ? 0 : -1);
+}
+
+esp_err_t esp_bt_gap_ssp_passkey_reply(esp_bd_addr_t bd_addr, 
+# 345 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c" 3 4
+                                                             _Bool 
+# 345 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c"
+                                                                  accept, uint32_t passkey)
+{
+    btc_msg_t msg;
+    btc_gap_bt_args_t arg;
+
+    if (esp_bluedroid_get_status() != ESP_BLUEDROID_STATUS_ENABLED) {
+        return 0x103;
+    }
+
+    msg.sig = BTC_SIG_API_CALL;
+    msg.pid = BTC_PID_GAP_BT;
+    msg.act = BTC_GAP_BT_ACT_PASSKEY_REPLY;
+    arg.passkey_reply.accept = accept;
+    arg.passkey_reply.passkey = passkey;
+    memcpy(arg.passkey_reply.bda.address, bd_addr, sizeof(esp_bd_addr_t));
+    return (btc_transfer_context(&msg, &arg, sizeof(btc_gap_bt_args_t), btc_gap_bt_arg_deep_copy)
+            == BT_STATUS_SUCCESS ? 0 : -1);
+}
+
+esp_err_t esp_bt_gap_ssp_confirm_reply(esp_bd_addr_t bd_addr, 
+# 364 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c" 3 4
+                                                             _Bool 
+# 364 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c"
+                                                                  accept)
+{
+    btc_msg_t msg;
+    btc_gap_bt_args_t arg;
+
+    if (esp_bluedroid_get_status() != ESP_BLUEDROID_STATUS_ENABLED) {
+        return 0x103;
+    }
+
+    msg.sig = BTC_SIG_API_CALL;
+    msg.pid = BTC_PID_GAP_BT;
+    msg.act = BTC_GAP_BT_ACT_CONFIRM_REPLY;
+    arg.confirm_reply.accept = accept;
+    memcpy(arg.confirm_reply.bda.address, bd_addr, sizeof(esp_bd_addr_t));
+    return (btc_transfer_context(&msg, &arg, sizeof(btc_gap_bt_args_t), btc_gap_bt_arg_deep_copy)
+            == BT_STATUS_SUCCESS ? 0 : -1);
+}
+
+
+
+esp_err_t esp_bt_gap_set_afh_channels(esp_bt_gap_afh_channels channels)
+{
+    btc_msg_t msg;
+    btc_gap_bt_args_t arg;
+
+    if (esp_bluedroid_get_status() != ESP_BLUEDROID_STATUS_ENABLED) {
+        return 0x103;
+    }
+
+    msg.sig = BTC_SIG_API_CALL;
+    msg.pid = BTC_PID_GAP_BT;
+    msg.act = BTC_GAP_BT_ACT_SET_AFH_CHANNELS;
+
+    memcpy(&arg.set_afh_channels.channels, channels, 10);
+    arg.set_afh_channels.channels[10 -1] &= 0x7F;
+    return (btc_transfer_context(&msg, &arg, sizeof(btc_gap_bt_args_t), 
+# 399 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c" 3 4
+                                                                       ((void *)0)
+# 399 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c"
+                                                                           ) == BT_STATUS_SUCCESS ? 0 : -1);
+}
+
+esp_err_t esp_bt_gap_read_remote_name(esp_bd_addr_t remote_bda)
+{
+    btc_msg_t msg;
+    btc_gap_bt_args_t arg;
+
+    if (esp_bluedroid_get_status() != ESP_BLUEDROID_STATUS_ENABLED) {
+        return 0x103;
+    }
+
+    msg.sig = BTC_SIG_API_CALL;
+    msg.pid = BTC_PID_GAP_BT;
+    msg.act = BTC_GAP_BT_ACT_READ_REMOTE_NAME;
+
+    memcpy(&arg.rmt_name_bda, remote_bda, sizeof(bt_bdaddr_t));
+    return (btc_transfer_context(&msg, &arg, sizeof(btc_gap_bt_args_t), 
+# 416 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c" 3 4
+                                                                       ((void *)0)
+# 416 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/esp_gap_bt_api.c"
+                                                                           ) == BT_STATUS_SUCCESS ? 0 : -1);
+}

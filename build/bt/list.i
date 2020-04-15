@@ -988,36 +988,6 @@ __attribute__((__noreturn__)) void
 
 
 # 21 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h"
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 1
-# 17 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h"
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
-       
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 1 3 4
-# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
-void __assert (const char *, int, const char *)
-     __attribute__ ((__noreturn__));
-void __assert_func (const char *, int, const char *, const char *)
-     __attribute__ ((__noreturn__));
-# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-# 18 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 2
-# 21 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-
-
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h"
-       
-# 24 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-# 26 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
 # 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
 
 # 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
@@ -1544,19 +1514,11 @@ _Bool
 # 51 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
     list_is_empty(const list_t *list)
 {
-    
+    do { if (!(list != 
 # 53 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((
+   ((void *)0)
 # 53 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   list != 
-# 53 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 53, __func__, 
-# 53 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   "list != NULL"
-# 53 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ))
-# 53 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-                       ;
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 53); }; } while (0);
     return (list->length == 0);
 }
 
@@ -1566,32 +1528,16 @@ _Bool
 # 57 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
     list_contains(const list_t *list, const void *data)
 {
-  
+  do { if (!(list != 
 # 59 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
- ((
+ ((void *)0)
 # 59 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
- list != 
-# 59 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
- ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 59, __func__, 
-# 59 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
- "list != NULL"
-# 59 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
- ))
-# 59 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-                     ;
-  
+ )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 59); }; } while (0);
+  do { if (!(data != 
 # 60 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
- ((
+ ((void *)0)
 # 60 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
- data != 
-# 60 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
- ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 60, __func__, 
-# 60 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
- "data != NULL"
-# 60 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
- ))
-# 60 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-                     ;
+ )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 60); }; } while (0);
 
   for (const list_node_t *node = list_begin(list); node != list_end(list); node = list_next(node)) {
     if (list_node(node) == data) {
@@ -1612,112 +1558,44 @@ _Bool
 
 size_t list_length(const list_t *list)
 {
-    
+    do { if (!(list != 
 # 73 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((
+   ((void *)0)
 # 73 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   list != 
-# 73 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 73, __func__, 
-# 73 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   "list != NULL"
-# 73 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ))
-# 73 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-                       ;
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 73); }; } while (0);
     return list->length;
 }
 
 void *list_front(const list_t *list)
 {
-    
+    do { if (!(list != 
 # 79 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((
+   ((void *)0)
 # 79 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   list != 
-# 79 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 79, __func__, 
-# 79 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   "list != NULL"
-# 79 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ))
-# 79 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-                       ;
-    
-# 80 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((
-# 80 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   !list_is_empty(list)
-# 80 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 80, __func__, 
-# 80 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   "!list_is_empty(list)"
-# 80 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ))
-# 80 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-                               ;
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 79); }; } while (0);
+    do { if (!(!list_is_empty(list))) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 80); }; } while (0);
 
     return list->head->data;
 }
 
 void *list_back(const list_t *list) {
-  
+  do { if (!(list != 
 # 86 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
- ((
+ ((void *)0)
 # 86 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
- list != 
-# 86 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
- ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 86, __func__, 
-# 86 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
- "list != NULL"
-# 86 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
- ))
-# 86 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-                     ;
-  
-# 87 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
- ((
-# 87 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
- !list_is_empty(list)
-# 87 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 87, __func__, 
-# 87 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
- "!list_is_empty(list)"
-# 87 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
- ))
-# 87 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-                             ;
+ )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 86); }; } while (0);
+  do { if (!(!list_is_empty(list))) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 87); }; } while (0);
 
   return list->tail->data;
 }
 
 list_node_t *list_back_node(const list_t *list) {
-  
+  do { if (!(list != 
 # 93 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
- ((
+ ((void *)0)
 # 93 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
- list != 
-# 93 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
- ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 93, __func__, 
-# 93 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
- "list != NULL"
-# 93 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
- ))
-# 93 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-                     ;
-  
-# 94 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
- ((
-# 94 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
- !list_is_empty(list)
-# 94 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 94, __func__, 
-# 94 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
- "!list_is_empty(list)"
-# 94 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
- ))
-# 94 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-                             ;
+ )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 93); }; } while (0);
+  do { if (!(!list_is_empty(list))) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 94); }; } while (0);
 
   return list->tail;
 }
@@ -1727,45 +1605,21 @@ list_node_t *list_back_node(const list_t *list) {
 _Bool 
 # 99 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
     list_insert_after(list_t *list, list_node_t *prev_node, void *data) {
-    
+    do { if (!(list != 
 # 100 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((
+   ((void *)0)
 # 100 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   list != 
-# 100 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 100, __func__, 
-# 100 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   "list != NULL"
-# 100 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ))
-# 100 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-                       ;
-    
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 100); }; } while (0);
+    do { if (!(prev_node != 
 # 101 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((
+   ((void *)0)
 # 101 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   prev_node != 
-# 101 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 101, __func__, 
-# 101 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   "prev_node != NULL"
-# 101 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ))
-# 101 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-                            ;
-    
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 101); }; } while (0);
+    do { if (!(data != 
 # 102 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((
+   ((void *)0)
 # 102 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   data != 
-# 102 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 102, __func__, 
-# 102 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   "data != NULL"
-# 102 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ))
-# 102 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-                       ;
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 102); }; } while (0);
     list_node_t *node = (list_node_t *)calloc(1, (sizeof(list_node_t)));
     if (!node) {
         {if (2 >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_OSI", "\033[0;" "31" "m" "E" " (%d) %s: " "%s osi_calloc failed.\n" "\033[0m" "\n", esp_log_timestamp(), "BT_OSI", __FUNCTION__); };};
@@ -1795,32 +1649,16 @@ _Bool
 # 118 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
     list_prepend(list_t *list, void *data)
 {
-    
+    do { if (!(list != 
 # 120 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((
+   ((void *)0)
 # 120 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   list != 
-# 120 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 120, __func__, 
-# 120 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   "list != NULL"
-# 120 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ))
-# 120 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-                       ;
-    
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 120); }; } while (0);
+    do { if (!(data != 
 # 121 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((
+   ((void *)0)
 # 121 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   data != 
-# 121 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 121, __func__, 
-# 121 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   "data != NULL"
-# 121 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ))
-# 121 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-                       ;
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 121); }; } while (0);
     list_node_t *node = (list_node_t *)calloc(1, (sizeof(list_node_t)));
     if (!node) {
         {if (2 >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_OSI", "\033[0;" "31" "m" "E" " (%d) %s: " "%s osi_calloc failed.\n" "\033[0m" "\n", esp_log_timestamp(), "BT_OSI", __FUNCTION__); };};
@@ -1854,32 +1692,16 @@ _Bool
 # 137 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
     list_append(list_t *list, void *data)
 {
-    
+    do { if (!(list != 
 # 139 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((
+   ((void *)0)
 # 139 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   list != 
-# 139 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 139, __func__, 
-# 139 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   "list != NULL"
-# 139 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ))
-# 139 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-                       ;
-    
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 139); }; } while (0);
+    do { if (!(data != 
 # 140 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((
+   ((void *)0)
 # 140 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   data != 
-# 140 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 140, __func__, 
-# 140 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   "data != NULL"
-# 140 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ))
-# 140 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-                       ;
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 140); }; } while (0);
     list_node_t *node = (list_node_t *)calloc(1, (sizeof(list_node_t)));
     if (!node) {
         {if (2 >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_OSI", "\033[0;" "31" "m" "E" " (%d) %s: " "%s osi_calloc failed.\n" "\033[0m" "\n", esp_log_timestamp(), "BT_OSI", __FUNCTION__); };};
@@ -1920,32 +1742,16 @@ _Bool
 # 159 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
     list_remove(list_t *list, void *data)
 {
-    
+    do { if (!(list != 
 # 161 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((
+   ((void *)0)
 # 161 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   list != 
-# 161 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 161, __func__, 
-# 161 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   "list != NULL"
-# 161 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ))
-# 161 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-                       ;
-    
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 161); }; } while (0);
+    do { if (!(data != 
 # 162 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((
+   ((void *)0)
 # 162 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   data != 
-# 162 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 162, __func__, 
-# 162 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   "data != NULL"
-# 162 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ))
-# 162 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-                       ;
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 162); }; } while (0);
 
     if (list_is_empty(list)) {
         return 
@@ -1990,19 +1796,11 @@ _Bool
 
 void list_clear(list_t *list)
 {
-    
+    do { if (!(list != 
 # 191 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((
+   ((void *)0)
 # 191 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   list != 
-# 191 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 191, __func__, 
-# 191 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   "list != NULL"
-# 191 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ))
-# 191 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-                       ;
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 191); }; } while (0);
     for (list_node_t *node = list->head; node; ) {
         node = list_free_node(list, node);
     }
@@ -2021,32 +1819,16 @@ void list_clear(list_t *list)
 
 list_node_t *list_foreach(const list_t *list, list_iter_cb callback, void *context)
 {
-  
+  do { if (!(list != 
 # 202 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
- ((
+ ((void *)0)
 # 202 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
- list != 
-# 202 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
- ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 202, __func__, 
-# 202 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
- "list != NULL"
-# 202 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
- ))
-# 202 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-                     ;
-  
+ )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 202); }; } while (0);
+  do { if (!(callback != 
 # 203 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
- ((
+ ((void *)0)
 # 203 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
- callback != 
-# 203 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
- ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 203, __func__, 
-# 203 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
- "callback != NULL"
-# 203 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
- ))
-# 203 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-                         ;
+ )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 203); }; } while (0);
 
   for (list_node_t *node = list->head; node; ) {
     list_node_t *next = node->next;
@@ -2064,37 +1846,21 @@ list_node_t *list_foreach(const list_t *list, list_iter_cb callback, void *conte
 
 list_node_t *list_begin(const list_t *list)
 {
-    
+    do { if (!(list != 
 # 217 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((
+   ((void *)0)
 # 217 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   list != 
-# 217 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 217, __func__, 
-# 217 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   "list != NULL"
-# 217 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ))
-# 217 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-                       ;
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 217); }; } while (0);
     return list->head;
 }
 
 list_node_t *list_end(__attribute__((unused)) const list_t *list)
 {
-    
+    do { if (!(list != 
 # 223 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((
+   ((void *)0)
 # 223 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   list != 
-# 223 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 223, __func__, 
-# 223 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   "list != NULL"
-# 223 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ))
-# 223 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-                       ;
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 223); }; } while (0);
     return 
 # 224 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
           ((void *)0)
@@ -2104,68 +1870,36 @@ list_node_t *list_end(__attribute__((unused)) const list_t *list)
 
 list_node_t *list_next(const list_node_t *node)
 {
-    
+    do { if (!(node != 
 # 229 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((
+   ((void *)0)
 # 229 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   node != 
-# 229 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 229, __func__, 
-# 229 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   "node != NULL"
-# 229 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ))
-# 229 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-                       ;
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 229); }; } while (0);
     return node->next;
 }
 
 void *list_node(const list_node_t *node)
 {
-    
+    do { if (!(node != 
 # 235 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((
+   ((void *)0)
 # 235 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   node != 
-# 235 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 235, __func__, 
-# 235 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   "node != NULL"
-# 235 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ))
-# 235 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-                       ;
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 235); }; } while (0);
     return node->data;
 }
 
 list_node_t *list_free_node(list_t *list, list_node_t *node)
 {
-    
+    do { if (!(list != 
 # 241 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((
+   ((void *)0)
 # 241 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   list != 
-# 241 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 241, __func__, 
-# 241 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   "list != NULL"
-# 241 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ))
-# 241 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-                       ;
-    
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 241); }; } while (0);
+    do { if (!(node != 
 # 242 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((
+   ((void *)0)
 # 242 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   node != 
-# 242 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 242, __func__, 
-# 242 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-   "node != NULL"
-# 242 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c" 3 4
-   ))
-# 242 "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c"
-                       ;
+   )) {esp_log_write(ESP_LOG_ERROR, "BT", "\033[0;" "31" "m" "E" " (%d) %s: " "bt host error %s %u\n" "\033[0m" "\n", esp_log_timestamp(), "BT", "/home/dieter/Development/esp-idf/components/bt/common/osi/list.c", 242); }; } while (0);
 
     list_node_t *next = node->next;
 

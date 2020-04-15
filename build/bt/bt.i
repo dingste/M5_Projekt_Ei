@@ -6503,22 +6503,7 @@ static __attribute__((section(".dram1" "." "35"))) portMUX_TYPE global_int_mux =
 
 static __attribute__((section(".dram1" "." "36"))) uint32_t btdm_lpcycle_us = 0;
 static __attribute__((section(".dram1" "." "37"))) uint8_t btdm_lpcycle_us_frac = 0;
-
-
-static __attribute__((section(".dram1" "." "38"))) esp_timer_handle_t s_btdm_slp_tmr;
-static __attribute__((section(".dram1" "." "39"))) esp_pm_lock_handle_t s_pm_lock;
-static __attribute__((section(".dram1" "." "40"))) QueueHandle_t s_pm_lock_sem = 
-# 390 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c" 3 4
-                                              ((void *)0)
-# 390 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
-                                                  ;
-
-
-static __attribute__((section(".dram1" "." "41"))) esp_pm_lock_handle_t s_light_sleep_pm_lock;
-
-static void btdm_slp_tmr_callback(void *arg);
-
-
+# 398 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
 static inline void btdm_check_and_init_bb(void)
 {
 
@@ -6530,7 +6515,7 @@ static inline void btdm_check_and_init_bb(void)
     }
 }
 # 455 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
-static void __attribute__((section(".iram1" "." "42"))) interrupt_disable(void)
+static void __attribute__((section(".iram1" "." "38"))) interrupt_disable(void)
 {
     if (xPortInIsrContext()) {
         vTaskEnterCritical(&global_int_mux);
@@ -6539,7 +6524,7 @@ static void __attribute__((section(".iram1" "." "42"))) interrupt_disable(void)
     }
 }
 
-static void __attribute__((section(".iram1" "." "43"))) interrupt_restore(void)
+static void __attribute__((section(".iram1" "." "39"))) interrupt_restore(void)
 {
     if (xPortInIsrContext()) {
         vTaskExitCritical(&global_int_mux);
@@ -6548,7 +6533,7 @@ static void __attribute__((section(".iram1" "." "43"))) interrupt_restore(void)
     }
 }
 
-static void __attribute__((section(".iram1" "." "44"))) task_yield_from_isr(void)
+static void __attribute__((section(".iram1" "." "40"))) task_yield_from_isr(void)
 {
     {; _frxt_setup_switch();};
 }
@@ -6567,7 +6552,7 @@ static void semphr_delete_wrapper(void *semphr)
 # 537 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
 }
 
-static int32_t __attribute__((section(".iram1" "." "45"))) semphr_take_from_isr_wrapper(void *semphr, void *hptw)
+static int32_t __attribute__((section(".iram1" "." "41"))) semphr_take_from_isr_wrapper(void *semphr, void *hptw)
 {
     return (int32_t)xQueueReceiveFromISR( ( QueueHandle_t ) ( semphr ), 
 # 541 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c" 3 4
@@ -6576,7 +6561,7 @@ static int32_t __attribute__((section(".iram1" "." "45"))) semphr_take_from_isr_
                    , ( hptw ) );
 }
 
-static int32_t __attribute__((section(".iram1" "." "46"))) semphr_give_from_isr_wrapper(void *semphr, void *hptw)
+static int32_t __attribute__((section(".iram1" "." "42"))) semphr_give_from_isr_wrapper(void *semphr, void *hptw)
 {
     return (int32_t)xQueueGiveFromISR( ( QueueHandle_t ) ( semphr ), ( hptw ) );
 }
@@ -6662,7 +6647,7 @@ static int32_t queue_send_wrapper(void *queue, void *item, uint32_t block_time_m
     }
 }
 
-static int32_t __attribute__((section(".iram1" "." "47"))) queue_send_from_isr_wrapper(void *queue, void *item, void *hptw)
+static int32_t __attribute__((section(".iram1" "." "43"))) queue_send_from_isr_wrapper(void *queue, void *item, void *hptw)
 {
     return (int32_t)xQueueGenericSendFromISR( ( queue ), ( item ), ( hptw ), ( ( BaseType_t ) 0 ) );
 }
@@ -6676,7 +6661,7 @@ static int32_t queue_recv_wrapper(void *queue, void *item, uint32_t block_time_m
     }
 }
 
-static int32_t __attribute__((section(".iram1" "." "48"))) queue_recv_from_isr_wrapper(void *queue, void *item, void *hptw)
+static int32_t __attribute__((section(".iram1" "." "44"))) queue_recv_from_isr_wrapper(void *queue, void *item, void *hptw)
 {
     return (int32_t)xQueueReceiveFromISR(queue, item, hptw);
 }
@@ -6695,19 +6680,19 @@ static
 # 744 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c" 3 4
       _Bool 
 # 744 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
-           __attribute__((section(".iram1" "." "49"))) is_in_isr_wrapper(void)
+           __attribute__((section(".iram1" "." "45"))) is_in_isr_wrapper(void)
 {
     return !xPortCanYield();
 }
 
-static void __attribute__((section(".iram1" "." "50"))) cause_sw_intr(void *arg)
+static void __attribute__((section(".iram1" "." "46"))) cause_sw_intr(void *arg)
 {
 
     uint32_t intr_no = (uint32_t)arg;
     do { int __interrupt = (int)((1<<intr_no)); __asm__ __volatile__("wsr.intset %0" :: "a"(__interrupt):"memory"); } while(0);
 }
 
-static int __attribute__((section(".iram1" "." "51"))) cause_sw_intr_to_core_wrapper(int core_id, int intr_no)
+static int __attribute__((section(".iram1" "." "47"))) cause_sw_intr_to_core_wrapper(int core_id, int intr_no)
 {
     esp_err_t err = 0;
 
@@ -6728,22 +6713,22 @@ static void *malloc_internal_wrapper(size_t size)
     return heap_caps_malloc(size, (1<<2)|(1<<3)|(1<<11));
 }
 
-static int32_t __attribute__((section(".iram1" "." "52"))) read_mac_wrapper(uint8_t mac[6])
+static int32_t __attribute__((section(".iram1" "." "48"))) read_mac_wrapper(uint8_t mac[6])
 {
     return esp_read_mac(mac, ESP_MAC_BT);
 }
 
-static void __attribute__((section(".iram1" "." "53"))) srand_wrapper(unsigned int seed)
+static void __attribute__((section(".iram1" "." "49"))) srand_wrapper(unsigned int seed)
 {
 
 }
 
-static int __attribute__((section(".iram1" "." "54"))) rand_wrapper(void)
+static int __attribute__((section(".iram1" "." "50"))) rand_wrapper(void)
 {
     return (int)esp_random();
 }
 
-static uint32_t __attribute__((section(".iram1" "." "55"))) btdm_lpcycles_2_us(uint32_t cycles)
+static uint32_t __attribute__((section(".iram1" "." "51"))) btdm_lpcycles_2_us(uint32_t cycles)
 {
 
 
@@ -6755,7 +6740,7 @@ static uint32_t __attribute__((section(".iram1" "." "55"))) btdm_lpcycles_2_us(u
 
 
 
-static uint32_t __attribute__((section(".iram1" "." "56"))) btdm_us_2_lpcycles(uint32_t us)
+static uint32_t __attribute__((section(".iram1" "." "52"))) btdm_us_2_lpcycles(uint32_t us)
 {
 
 
@@ -6769,7 +6754,7 @@ static
 # 814 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c" 3 4
       _Bool 
 # 814 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
-           __attribute__((section(".iram1" "." "57"))) btdm_sleep_check_duration(uint32_t *slot_cnt)
+           __attribute__((section(".iram1" "." "53"))) btdm_sleep_check_duration(uint32_t *slot_cnt)
 {
     if (*slot_cnt < (12)) {
         return 
@@ -6789,35 +6774,7 @@ static
 
 static void btdm_sleep_enter_phase1_wrapper(uint32_t lpcycles)
 {
-
-
-    uint32_t us_to_sleep = btdm_lpcycles_2_us(lpcycles);
-
-
-    
-# 831 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c" 3 4
-   ((
-# 831 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
-   us_to_sleep > (500)
-# 831 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c" 3 4
-   ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bt/controller/bt.c", 831, __func__, 
-# 831 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
-   "us_to_sleep > BTDM_MIN_TIMER_UNCERTAINTY_US"
-# 831 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c" 3 4
-   ))
-# 831 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
-                                                      ;
-
-
-    uint32_t uncertainty = (us_to_sleep >> 11);
-    if (uncertainty < (500)) {
-        uncertainty = (500);
-    }
-
-    if (esp_timer_start_once(s_btdm_slp_tmr, us_to_sleep - uncertainty) != 0) {
-        do { if ( 3 >= ESP_LOG_WARN ) do { if (ESP_LOG_WARN==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "BTDM_INIT", "\033[0;" "31" "m" "E" " (%d) %s: " "timer start failed" "\033[0m" "\n", esp_log_timestamp(), "BTDM_INIT"); } else if (ESP_LOG_WARN==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "BTDM_INIT", "\033[0;" "33" "m" "W" " (%d) %s: " "timer start failed" "\033[0m" "\n", esp_log_timestamp(), "BTDM_INIT"); } else if (ESP_LOG_WARN==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "BTDM_INIT", "D" " (%d) %s: " "timer start failed" "\033[0m" "\n", esp_log_timestamp(), "BTDM_INIT"); } else if (ESP_LOG_WARN==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "BTDM_INIT", "V" " (%d) %s: " "timer start failed" "\033[0m" "\n", esp_log_timestamp(), "BTDM_INIT"); } else { esp_log_write(ESP_LOG_INFO, "BTDM_INIT", "\033[0;" "32" "m" "I" " (%d) %s: " "timer start failed" "\033[0m" "\n", esp_log_timestamp(), "BTDM_INIT"); } } while(0); } while(0);
-    }
-
+# 843 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
 }
 
 static void btdm_sleep_enter_phase2_wrapper(void)
@@ -6826,8 +6783,8 @@ static void btdm_sleep_enter_phase2_wrapper(void)
         esp_modem_sleep_enter(MODEM_BLE_MODULE);
         esp_modem_sleep_enter(MODEM_CLASSIC_BT_MODULE);
 
-        esp_pm_lock_release(s_pm_lock);
-        semphr_give_wrapper(s_pm_lock_sem);
+
+
 
     } else if (btdm_controller_get_sleep_mode() == (2)) {
         esp_modem_sleep_enter(MODEM_BLE_MODULE);
@@ -6836,16 +6793,12 @@ static void btdm_sleep_enter_phase2_wrapper(void)
     }
 }
 
-static void __attribute__((section(".iram1" "." "58"))) btdm_sleep_exit_phase1_wrapper(void)
+static void __attribute__((section(".iram1" "." "54"))) btdm_sleep_exit_phase1_wrapper(void)
 {
 
-    if (semphr_take_from_isr_wrapper(s_pm_lock_sem, 
-# 864 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c" 3 4
-                                                   ((void *)0)
-# 864 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
-                                                       ) == ( ( BaseType_t ) 1 )) {
-        esp_pm_lock_acquire(s_pm_lock);
-    }
+
+
+
 
 }
 
@@ -6856,7 +6809,7 @@ static void btdm_sleep_exit_phase3_wrapper(void)
         esp_modem_sleep_exit(MODEM_CLASSIC_BT_MODULE);
         btdm_check_and_init_bb();
 
-        esp_timer_stop(s_btdm_slp_tmr);
+
 
     } else if (btdm_controller_get_sleep_mode() == (2)) {
 
@@ -6864,16 +6817,7 @@ static void btdm_sleep_exit_phase3_wrapper(void)
         esp_modem_sleep_exit(MODEM_BLE_MODULE);
     }
 }
-
-
-static void __attribute__((section(".iram1" "." "59"))) btdm_slp_tmr_callback(void *arg)
-{
-    if (semphr_take_wrapper(s_pm_lock_sem, 0) == ( ( BaseType_t ) 1 )) {
-        esp_pm_lock_acquire(s_pm_lock);
-    }
-}
-
-
+# 895 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
 
 # 895 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c" 3 4
 _Bool 
@@ -6897,10 +6841,10 @@ void esp_vhci_host_send_packet(uint8_t *data, uint16_t len)
 
     if (!btdm_power_state_active()) {
 
-        if (semphr_take_wrapper(s_pm_lock_sem, 0)) {
-            esp_pm_lock_acquire(s_pm_lock);
-        }
-        esp_timer_stop(s_btdm_slp_tmr);
+
+
+
+
 
         do_wakeup_request = 
 # 911 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c" 3 4
@@ -7177,38 +7121,7 @@ esp_err_t esp_bt_controller_init(esp_bt_controller_config_t *cfg)
     }
 
     do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "BTDM_INIT", "\033[0;" "31" "m" "E" " (%d) %s: " "BT controller compile version [%s]" "\033[0m" "\n", esp_log_timestamp(), "BTDM_INIT", btdm_controller_get_compile_version()); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "BTDM_INIT", "\033[0;" "33" "m" "W" " (%d) %s: " "BT controller compile version [%s]" "\033[0m" "\n", esp_log_timestamp(), "BTDM_INIT", btdm_controller_get_compile_version()); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "BTDM_INIT", "D" " (%d) %s: " "BT controller compile version [%s]" "\033[0m" "\n", esp_log_timestamp(), "BTDM_INIT", btdm_controller_get_compile_version()); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "BTDM_INIT", "V" " (%d) %s: " "BT controller compile version [%s]" "\033[0m" "\n", esp_log_timestamp(), "BTDM_INIT", btdm_controller_get_compile_version()); } else { esp_log_write(ESP_LOG_INFO, "BTDM_INIT", "\033[0;" "32" "m" "I" " (%d) %s: " "BT controller compile version [%s]" "\033[0m" "\n", esp_log_timestamp(), "BTDM_INIT", btdm_controller_get_compile_version()); } } while(0); } while(0);
-# 1138 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
-    if ((err = esp_pm_lock_create(ESP_PM_NO_LIGHT_SLEEP, 0, "btLS", &s_light_sleep_pm_lock)) != 0) {
-        goto error;
-    }
-
-    if ((err = esp_pm_lock_create(ESP_PM_APB_FREQ_MAX, 0, "bt", &s_pm_lock)) != 0) {
-        goto error;
-    }
-    esp_timer_create_args_t create_args = {
-        .callback = btdm_slp_tmr_callback,
-        .arg = 
-# 1147 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c" 3 4
-              ((void *)0)
-# 1147 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
-                  ,
-        .name = "btSlp"
-    };
-    if ((err = esp_timer_create(&create_args, &s_btdm_slp_tmr)) != 0) {
-        goto error;
-    }
-
-    s_pm_lock_sem = semphr_create_wrapper(1, 0);
-    if (s_pm_lock_sem == 
-# 1155 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c" 3 4
-                        ((void *)0)
-# 1155 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
-                            ) {
-        err = 0x101;
-        goto error;
-    }
-
-
+# 1161 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
     btdm_controller_mem_init();
 
     periph_module_enable(PERIPH_BT_MODULE);
@@ -7268,13 +7181,13 @@ esp_err_t esp_bt_controller_init(esp_bt_controller_config_t *cfg)
     }
 
 
-
-
         coex_ble_adv_priority_high_set(
-# 1202 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c" 3 4
-                                      0
-# 1202 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
-                                           );
+# 1200 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c" 3 4
+                                      1
+# 1200 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
+                                          );
+
+
 
 
     btdm_controller_status = ESP_BT_CONTROLLER_STATUS_INITED;
@@ -7282,54 +7195,7 @@ esp_err_t esp_bt_controller_init(esp_bt_controller_config_t *cfg)
     return 0;
 
 error:
-
-
-    if (s_light_sleep_pm_lock != 
-# 1212 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c" 3 4
-                                ((void *)0)
-# 1212 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
-                                    ) {
-        esp_pm_lock_delete(s_light_sleep_pm_lock);
-        s_light_sleep_pm_lock = 
-# 1214 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c" 3 4
-                               ((void *)0)
-# 1214 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
-                                   ;
-    }
-
-    if (s_pm_lock != 
-# 1217 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c" 3 4
-                    ((void *)0)
-# 1217 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
-                        ) {
-        esp_pm_lock_delete(s_pm_lock);
-        s_pm_lock = 
-# 1219 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c" 3 4
-                   ((void *)0)
-# 1219 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
-                       ;
-    }
-    if (s_btdm_slp_tmr != 
-# 1221 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c" 3 4
-                         ((void *)0)
-# 1221 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
-                             ) {
-        esp_timer_delete(s_btdm_slp_tmr);
-        s_btdm_slp_tmr = 
-# 1223 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c" 3 4
-                        ((void *)0)
-# 1223 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
-                            ;
-    }
-    if (s_pm_lock_sem) {
-        semphr_delete_wrapper(s_pm_lock_sem);
-        s_pm_lock_sem = 
-# 1227 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c" 3 4
-                       ((void *)0)
-# 1227 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
-                           ;
-    }
-
+# 1230 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
     return err;
 }
 
@@ -7342,35 +7208,6 @@ esp_err_t esp_bt_controller_deinit(void)
     btdm_controller_deinit();
 
     periph_module_disable(PERIPH_BT_MODULE);
-
-
-
-    esp_pm_lock_delete(s_light_sleep_pm_lock);
-    s_light_sleep_pm_lock = 
-# 1246 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c" 3 4
-                           ((void *)0)
-# 1246 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
-                               ;
-
-    esp_pm_lock_delete(s_pm_lock);
-    s_pm_lock = 
-# 1249 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c" 3 4
-               ((void *)0)
-# 1249 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
-                   ;
-    esp_timer_stop(s_btdm_slp_tmr);
-    esp_timer_delete(s_btdm_slp_tmr);
-    s_btdm_slp_tmr = 
-# 1252 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c" 3 4
-                    ((void *)0)
-# 1252 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
-                        ;
-    semphr_delete_wrapper(s_pm_lock_sem);
-    s_pm_lock_sem = 
-# 1254 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c" 3 4
-                   ((void *)0)
-# 1254 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
-                       ;
 # 1263 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
     free(osi_funcs_p);
     osi_funcs_p = 
@@ -7399,14 +7236,7 @@ esp_err_t esp_bt_controller_enable(esp_bt_mode_t mode)
     if (mode != btdm_controller_get_mode()) {
         return 0x102;
     }
-
-
-
-    esp_pm_lock_acquire(s_light_sleep_pm_lock);
-
-    esp_pm_lock_acquire(s_pm_lock);
-
-
+# 1294 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
     esp_phy_load_cal_and_init(PHY_BT_MODULE);
 
     if (btdm_controller_get_sleep_mode() == (0)) {
@@ -7446,9 +7276,9 @@ esp_err_t esp_bt_controller_enable(esp_bt_mode_t mode)
         esp_phy_rf_deinit(PHY_BT_MODULE);
 
 
-        esp_pm_lock_release(s_light_sleep_pm_lock);
 
-        esp_pm_lock_release(s_pm_lock);
+
+
 
         return 0x103;
     }
@@ -7494,14 +7324,7 @@ esp_err_t esp_bt_controller_disable(void)
     }
     esp_phy_rf_deinit(PHY_BT_MODULE);
     btdm_controller_status = ESP_BT_CONTROLLER_STATUS_INITED;
-
-
-
-    esp_pm_lock_release(s_light_sleep_pm_lock);
-
-    esp_pm_lock_release(s_pm_lock);
-
-
+# 1377 "/home/dieter/Development/esp-idf/components/bt/controller/bt.c"
     return 0;
 }
 

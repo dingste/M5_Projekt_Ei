@@ -6,10 +6,6 @@ common/btc/core/btc_task.o: \
  /home/dieter/Development/M5_Projekt_Ei/build/include/sdkconfig.h \
  /home/dieter/Development/esp-idf/components/log/include/esp_log.h \
  /home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
- /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h \
- /home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h \
- /home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h \
- /home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/dieter/Development/esp-idf/components/log/include/esp_log_internal.h \
  /home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/thread.h \
  /home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_api.h \
@@ -37,13 +33,14 @@ common/btc/core/btc_task.o: \
  /home/dieter/Development/esp-idf/components/esp_common/include/esp_private/crosscore_int.h \
  /home/dieter/Development/esp-idf/components/esp_common/include/esp_timer.h \
  /home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h \
+ /home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h \
  /home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h \
  /home/dieter/Development/esp-idf/components/heap/include/multi_heap.h \
- /home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h \
- /home/dieter/Development/esp-idf/components/xtensa/include/esp_attr.h \
  /home/dieter/Development/esp-idf/components/freertos/include/freertos/portbenchmark.h \
+ /home/dieter/Development/esp-idf/components/xtensa/include/esp_attr.h \
  /home/dieter/Development/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h \
+ /home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h \
  /home/dieter/Development/esp-idf/components/esp_common/include/esp_idf_version.h \
  /home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h \
  /home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h \
@@ -89,9 +86,9 @@ common/btc/core/btc_task.o: \
  /home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/def.h \
  /home/dieter/Development/esp-idf/components/lwip/lwip/src/include/lwip/ip6_zone.h \
  /home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcidefs.h \
- /home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h \
  /home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h \
  /home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdpdefs.h \
+ /home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h \
  /home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h \
  /home/dieter/Development/esp-idf/components/bt/host/bluedroid/common/include/common/bt_common_types.h \
  /home/dieter/Development/esp-idf/components/bt/common/btc/include/btc/btc_manage.h \
@@ -120,48 +117,16 @@ common/btc/core/btc_task.o: \
  /home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gatt_api.h \
  /home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/gattdefs.h \
  /home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/list.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_prov.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_access.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_types.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_types.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_trace.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_kernel.h \
- /home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/mutex.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_atomic.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_access.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_bearer_adapt.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_uuid.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_proxy.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/mesh.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/proxy_server.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_kernel.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/foundation.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_main.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_models/common/include/model_opcode.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_common.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h \
- /home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_bt_main.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_health_model.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_health_model_api.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_config_model.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_config_model_api.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_generic_model.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_lighting_model.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_sensor_model.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_sensor_model_api.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_time_scene_model.h \
- /home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_time_scene_model_api.h
+ /home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/include/btc/btc_profile_queue.h \
+ /home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/profile/std/include/btc_gap_bt.h \
+ /home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h \
+ /home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/utl.h \
+ /home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/profile/std/include/btc_spp.h \
+ /home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_spp_api.h \
+ /home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h \
+ /home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h \
+ /home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2cdefs.h \
+ /home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/rfcdefs.h
 
 /home/dieter/Development/esp-idf/components/bt/common/btc/include/btc/btc_task.h:
 
@@ -174,14 +139,6 @@ common/btc/core/btc_task.o: \
 /home/dieter/Development/esp-idf/components/log/include/esp_log.h:
 
 /home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
-
-/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h:
-
-/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h:
-
-/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h:
-
-/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h:
 
 /home/dieter/Development/esp-idf/components/log/include/esp_log_internal.h:
 
@@ -237,19 +194,21 @@ common/btc/core/btc_task.o: \
 
 /home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h:
 
+/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h:
+
 /home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h:
 
 /home/dieter/Development/esp-idf/components/heap/include/multi_heap.h:
 
-/home/dieter/Development/esp-idf/components/soc/include/soc/soc_memory_layout.h:
+/home/dieter/Development/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
 /home/dieter/Development/esp-idf/components/xtensa/include/esp_attr.h:
-
-/home/dieter/Development/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
 /home/dieter/Development/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
 
 /home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h:
+
+/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h:
 
 /home/dieter/Development/esp-idf/components/esp_common/include/esp_idf_version.h:
 
@@ -341,11 +300,11 @@ common/btc/core/btc_task.o: \
 
 /home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/hcidefs.h:
 
-/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h:
-
 /home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdp_api.h:
 
 /home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/sdpdefs.h:
+
+/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/smp_api.h:
 
 /home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/btm_ble_api.h:
 
@@ -403,87 +362,23 @@ common/btc/core/btc_task.o: \
 
 /home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/list.h:
 
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_prov.h:
+/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/include/btc/btc_profile_queue.h:
 
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_access.h:
+/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/profile/std/include/btc_gap_bt.h:
 
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_types.h:
+/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h:
 
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h:
+/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/utl.h:
 
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_types.h:
+/home/dieter/Development/esp-idf/components/bt/host/bluedroid/btc/profile/std/include/btc_spp.h:
 
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_trace.h:
+/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_spp_api.h:
 
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h:
+/home/dieter/Development/esp-idf/components/bt/host/bluedroid/bta/include/bta/bta_jv_api.h:
 
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_slist.h:
+/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2c_api.h:
 
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_util.h:
+/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/l2cdefs.h:
 
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_kernel.h:
-
-/home/dieter/Development/esp-idf/components/bt/common/osi/include/osi/mutex.h:
-
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_atomic.h:
-
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_dlist.h:
-
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_main.h:
-
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_access.h:
-
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_prov.h:
-
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_bearer_adapt.h:
-
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_uuid.h:
-
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/esp_ble_mesh_defs.h:
-
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/include/mesh_proxy.h:
-
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/mesh.h:
-
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/proxy_server.h:
-
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/net.h:
-
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_kernel.h:
-
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/foundation.h:
-
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_core/provisioner_main.h:
-
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_models/common/include/model_opcode.h:
-
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_common.h:
-
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/mesh_common/include/mesh_buf.h:
-
-/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_bt_main.h:
-
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_health_model.h:
-
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_health_model_api.h:
-
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_config_model.h:
-
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_config_model_api.h:
-
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_generic_model.h:
-
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_generic_model_api.h:
-
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_lighting_model.h:
-
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_lighting_model_api.h:
-
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_sensor_model.h:
-
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_sensor_model_api.h:
-
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/btc/include/btc_ble_mesh_time_scene_model.h:
-
-/home/dieter/Development/esp-idf/components/bt/esp_ble_mesh/api/models/include/esp_ble_mesh_time_scene_model_api.h:
+/home/dieter/Development/esp-idf/components/bt/host/bluedroid/stack/include/stack/rfcdefs.h:
 /home/dieter/Development/esp-idf/components/bt/common/btc/core/btc_task.c:

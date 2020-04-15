@@ -8,6 +8,7 @@
 #
 COMPONENT_SRCDIRS := . \
 	HAL/OLED \
+	HAL/BLE \
 	u8g2-esp-idf
 	
 COMPONENT_ADD_INCLUDEDIRS := . 
